@@ -1,0 +1,330 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "question2",
+        "title": "Spesifikasi",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Flow",
+          "title": "Flow",
+          "cellType": "radiogroup",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ]
+         },
+         {
+          "name": "Ket",
+          "title": "Ket",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Henti"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Fokus infeksi di"
+         },
+         {
+          "name": "Tindakan",
+          "title": "Tindakan",
+          "cellType": "checkbox",
+          "colCount": 4,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak perlu antibiotik"
+           }
+          ]
+         },
+         {
+          "name": "Antibiotik",
+          "title": "Antibiotik",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak perlu antibiotik"
+         }
+        ],
+        "columnColCount": 1,
+        "columnMinWidth": "1",
+        "rows": [
+         {
+          "value": "item1",
+          "text": "1. Fokus infeksi dengan gejala infeksi"
+         }
+        ],
+        "rowTitleWidth": "1"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "Spesifikasi",
+        "title": "Spesifikasi",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "correctAnswer": {
+         "item2": {
+          "flow": "ya"
+         }
+        },
+        "showHeader": false,
+        "columns": [
+         {
+          "name": "Flow",
+          "title": " Flow",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "Ket",
+          "title": "Ket",
+          "cellType": "checkbox",
+          "colCount": 4,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Henti"
+           }
+          ],
+          "otherText": "Fokus infeksi di"
+         },
+         {
+          "name": "Tindakan",
+          "title": "Tindakan",
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Antibiotik Stratifikasi Tipe III"
+           }
+          ],
+          "otherText": "Fokus infeksi di :"
+         },
+         {
+          "name": "Antibiotik",
+          "title": "Antibiotik",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         {
+          "value": "item1",
+          "text": "pilih"
+         }
+        ],
+        "columnColCount": 1,
+        "columnMinWidth": "1",
+        "rows": [
+         {
+          "value": "item2",
+          "text": "2. Klinis progresif sepsis / Septic shock /febrile neutropenia"
+         },
+         {
+          "value": "item3",
+          "text": "3. Perforasi organ"
+         },
+         {
+          "value": "item4",
+          "text": "4. Encephalopaty ec. Infeksi bakterial"
+         },
+         {
+          "value": "item5",
+          "text": "5. Immunocompromized dan / atau DM tidak terkontrol Riwayat konsumsi antibiotik < 30 hari"
+         },
+         {
+          "value": "item6",
+          "text": "6. Immunocompromized dan / atau DM tidak terkontrol Riwayat perawatan > 48 jam < 30 hari yang lalu"
+         },
+         {
+          "value": "item7",
+          "text": "7. Immunocompromized dan / atau DM tidak terkontrol Penggunaan instrumen medis atau riwayat Penggunaan instrumen medis < 30 hari yang lalu"
+         }
+        ],
+        "rowTitleWidth": "1"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question3",
+        "title": "Spesifikasi",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "correctAnswer": {
+         "item2": {
+          "flow": "ya"
+         }
+        },
+        "showHeader": false,
+        "columns": [
+         {
+          "name": "Flow",
+          "title": " Flow",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "Ket",
+          "title": "Ket",
+          "cellType": "checkbox",
+          "colCount": 4,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Henti"
+           }
+          ],
+          "otherText": "Fokus infeksi di"
+         },
+         {
+          "name": "Tindakan",
+          "title": "Tindakan",
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Antibiotik Stratifikasi Tipe II"
+           }
+          ],
+          "otherText": "Fokus infeksi di :"
+         },
+         {
+          "name": "Antibiotik",
+          "title": "Antibiotik",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         {
+          "value": "item1",
+          "text": "pilih"
+         }
+        ],
+        "columnColCount": 1,
+        "columnMinWidth": "1",
+        "rows": [
+         {
+          "value": "item8",
+          "text": "8. Immunocompromized dan / atau DM tidak terkontrol Riwayat konsumsi antibiotik < 90 hari"
+         },
+         {
+          "value": "item9",
+          "text": "9. Immunocompromized dan / atau DM tidak terkontrol Riwayat perawatan > 48 jam < 90 hari yang lalu"
+         }
+        ],
+        "rowTitleWidth": "1"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question5",
+        "title": "Spesifikasi",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "correctAnswer": {
+         "item2": {
+          "flow": "ya"
+         }
+        },
+        "showHeader": false,
+        "columns": [
+         {
+          "name": "Flow",
+          "title": " Flow",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "Ket",
+          "title": "Ket",
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Henti"
+           }
+          ],
+          "otherText": "Fokus infeksi di"
+         },
+         {
+          "name": "Tindakan",
+          "title": "Tindakan",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Antibiotik Stratifikasi Tipe II"
+           },
+           {
+            "value": "item2",
+            "text": "Anitibiotik Stratifikasi Tipe I"
+           }
+          ],
+          "otherText": "Fokus infeksi di :"
+         },
+         {
+          "name": "Antibiotik",
+          "title": "Antibiotik",
+          "cellType": "text"
+         }
+        ],
+        "columnColCount": 1,
+        "columnMinWidth": "1",
+        "rows": [
+         {
+          "value": "item10",
+          "text": "10. Immunocompromized dan / atau DM tidak terkontrol Penggunaan instrumen medis atau riwayat Penggunaan instrumen medis < 90 hari yang lalu"
+         }
+        ],
+        "rowTitleWidth": "1"
+       }
+      ],
+      "title": "RASPRO ALUR ANTIBIOTIK AWAL (RASAL)"
+     }
+    ]
+   }

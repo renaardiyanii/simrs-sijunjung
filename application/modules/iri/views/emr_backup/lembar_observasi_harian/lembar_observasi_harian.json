@@ -1,0 +1,309 @@
+{
+    "title": "LEMBAR OBSERVASI PASIEN HARIAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question5",
+        "title": "Ruangan / Unit :",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question1",
+        "title": "GRAFIK TANDA-TANDA VITAL",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal / Waktu",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "temperatur",
+            "title": "S",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "40"
+             },
+             {
+              "value": "item2",
+              "text": "39"
+             },
+             {
+              "value": "item3",
+              "text": "38"
+             },
+             {
+              "value": "item4",
+              "text": "37"
+             },
+             {
+              "value": "item5",
+              "text": "36"
+             }
+            ]
+           },
+           {
+            "name": "dj",
+            "title": "N / DJ",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "200"
+             },
+             {
+              "value": "item2",
+              "text": "160"
+             },
+             {
+              "value": "item3",
+              "text": "130"
+             },
+             {
+              "value": "item4",
+              "text": "100"
+             },
+             {
+              "value": "item5",
+              "text": "70"
+             },
+             {
+              "value": "item6",
+              "text": "40"
+             },
+             {
+              "value": "item7",
+              "text": "10"
+             }
+            ]
+           },
+           {
+            "name": "p",
+            "title": "P",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "60"
+             },
+             {
+              "value": "item2",
+              "text": "50"
+             },
+             {
+              "value": "item3",
+              "text": "40"
+             },
+             {
+              "value": "item4",
+              "text": "30"
+             },
+             {
+              "value": "item5",
+              "text": "20"
+             }
+            ]
+           },
+           {
+            "name": "td",
+            "title": "TD",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "240"
+             },
+             {
+              "value": "item2",
+              "text": "210"
+             },
+             {
+              "value": "item3",
+              "text": "180"
+             },
+             {
+              "value": "item4",
+              "text": "150"
+             },
+             {
+              "value": "item5",
+              "text": "120"
+             },
+             {
+              "value": "item6",
+              "text": "90"
+             },
+             {
+              "value": "item7",
+              "text": "60"
+             },
+             {
+              "value": "item8",
+              "text": "30"
+             }
+            ]
+           },
+           {
+            "name": "kesadaran",
+            "title": "Kesadaran",
+            "cellType": "text"
+           },
+           {
+            "name": "respirasi",
+            "title": "Respirasi",
+            "cellType": "text"
+           },
+           {
+            "name": "oksigen",
+            "title": "Oksigen (O2)",
+            "cellType": "text"
+           },
+           {
+            "name": "saturasi",
+            "title": "Saturasi oksigen",
+            "cellType": "text"
+           },
+           {
+            "name": "cvp",
+            "title": "CVP",
+            "cellType": "text"
+           },
+           {
+            "name": "lingkar",
+            "title": "Lingkar Perut / Lingkar Kepala",
+            "cellType": "text"
+           },
+           {
+            "name": "bb",
+            "title": "Berat Badan",
+            "cellType": "text"
+           },
+           {
+            "name": "tb",
+            "title": "Tinggi / panjang Badan",
+            "cellType": "text"
+           },
+           {
+            "name": "skala",
+            "title": "Skala Nyeri",
+            "cellType": "text"
+           },
+           {
+            "name": "luka",
+            "title": "Luka Skala norton",
+            "cellType": "text"
+           },
+           {
+            "name": "persalinan",
+            "title": "Persalinan",
+            "cellType": "text"
+           },
+           {
+            "name": "perut",
+            "title": "Perut",
+            "cellType": "text"
+           },
+           {
+            "name": "buah",
+            "title": "Buah Dada / Laktasi",
+            "cellType": "text"
+           },
+           {
+            "name": "luka1",
+            "title": "Luka Pembedahan ",
+            "cellType": "text"
+           },
+           {
+            "name": "fundus",
+            "title": "Fundus Uteri",
+            "cellType": "text"
+           },
+           {
+            "name": "kontraksi",
+            "title": "Kontraksi",
+            "cellType": "text"
+           },
+           {
+            "name": "perineum",
+            "title": "Perineum",
+            "cellType": "text"
+           },
+           {
+            "name": "lochia",
+            "title": "Lochia",
+            "cellType": "text"
+           },
+           {
+            "name": "flatus",
+            "title": "Flatus",
+            "cellType": "text"
+           },
+           {
+            "name": "defekasi",
+            "title": "Defekasi",
+            "cellType": "text"
+           },
+           {
+            "name": "tangis",
+            "title": "Tangis",
+            "cellType": "text"
+           },
+           {
+            "name": "infus",
+            "title": "Infus Per Intra Umbilikal",
+            "cellType": "text"
+           },
+           {
+            "name": "infus2",
+            "title": "Infus Per Perifer",
+            "cellType": "text"
+           },
+           {
+            "name": "vena",
+            "title": "Vena Sectie",
+            "cellType": "text"
+           },
+           {
+            "name": "paraf",
+            "title": "Paraf / Inisial Nama Perawat",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowLocation": "bottom",
+          "addRowText": "Tambah ",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

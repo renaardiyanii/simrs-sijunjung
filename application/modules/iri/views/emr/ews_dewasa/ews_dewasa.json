@@ -1,0 +1,651 @@
+{
+    "title": "LEMBAR OBSERVASI EARLYWARNING",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "title": "PENCATATAN OBSERVASI MENGGUNAKAN EARLY WEARNING UNTUK PASIEN DENGAN USIA > 16 TAHUN",
+        "hideNumber": true,
+        "readOnly": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Tingkat kesadaran",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Sadar (0)"
+             },
+             {
+              "value": "3",
+              "text": "V/P/U (3)"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Tekanan darah (sistolik)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "> 230"
+             },
+             {
+              "value": "3",
+              "text": "220"
+             },
+             {
+              "value": "0",
+              "text": "211"
+             },
+             {
+              "value": "0",
+              "text": "201"
+             },
+             {
+              "value": "0",
+              "text": "191"
+             },
+             {
+              "value": "0",
+              "text": "181"
+             },
+             {
+              "value": "0",
+              "text": "171"
+             },
+             {
+              "value": "0",
+              "text": "161"
+             },
+             {
+              "value": "0",
+              "text": "151"
+             },
+             {
+              "value": "0",
+              "text": "141"
+             },
+             {
+              "value": "0",
+              "text": "131"
+             },
+             {
+              "value": "0",
+              "text": "121"
+             },
+             {
+              "value": "0",
+              "text": "111"
+             },
+             {
+              "value": "1",
+              "text": "101"
+             },
+             {
+              "value": "2",
+              "text": "91"
+             },
+             {
+              "value": "3",
+              "text": "81"
+             },
+             {
+              "value": "3",
+              "text": "71"
+             },
+             {
+              "value": "3",
+              "text": "61"
+             },
+             {
+              "value": "3",
+              "text": "51"
+             },
+             {
+              "value": "3",
+              "text": "41"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "NADI",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "> 140"
+             },
+             {
+              "value": "3",
+              "text": "131"
+             },
+             {
+              "value": "2",
+              "text": "121"
+             },
+             {
+              "value": "2",
+              "text": "111"
+             },
+             {
+              "value": "1",
+              "text": "101"
+             },
+             {
+              "value": "1",
+              "text": "91"
+             },
+             {
+              "value": "0",
+              "text": "81"
+             },
+             {
+              "value": "0",
+              "text": "71"
+             },
+             {
+              "value": "0",
+              "text": "61"
+             },
+             {
+              "value": "0",
+              "text": "51"
+             },
+             {
+              "value": "0",
+              "text": "41"
+             },
+             {
+              "value": "3",
+              "text": "< 40"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "Pernafasan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "> 25"
+             },
+             {
+              "value": "2",
+              "text": "21-24"
+             },
+             {
+              "value": "0",
+              "text": "12-20"
+             },
+             {
+              "value": "1",
+              "text": "9-11"
+             },
+             {
+              "value": "3",
+              "text": "<8"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "Suhu",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "> 39,1 c"
+             },
+             {
+              "value": "1",
+              "text": "38,1 c"
+             },
+             {
+              "value": "0",
+              "text": "37,1 c"
+             },
+             {
+              "value": "0",
+              "text": "36,1 c"
+             },
+             {
+              "value": "0",
+              "text": "35,1 c"
+             },
+             {
+              "value": "0",
+              "text": "> 35 c"
+             }
+            ]
+           },
+           {
+            "name": "column7",
+            "title": "Sp02",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "> 96"
+             },
+             {
+              "value": "1",
+              "text": "94-95"
+             },
+             {
+              "value": "2",
+              "text": "92-93"
+             },
+             {
+              "value": "3",
+              "text": "< 91"
+             }
+            ]
+           },
+           {
+            "name": "column8",
+            "title": "Oksigen",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "ya"
+             }
+            ]
+           },
+           {
+            "name": "column10",
+            "title": "Skala jatuh",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Skala nyeri",
+            "cellType": "text"
+           },
+           {
+            "name": "column12",
+            "title": "Intake",
+            "cellType": "text"
+           },
+           {
+            "name": "column13",
+            "title": "Output",
+            "cellType": "text"
+           },
+           {
+            "name": "column14",
+            "title": "Diit",
+            "cellType": "text"
+           },
+           {
+            "name": "column15",
+            "title": "Nama petugas",
+            "cellType": "text"
+           },
+           {
+            "name": "column16",
+            "title": "Paraf petugas",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "allowAddPanel": false,
+        "allowRemovePanel": false,
+        "panelCount": 1
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question3",
+        "title": "PENCATATAN OBSERVASI MENGGUNAKAN EARLY WEARNING UNTUK PASIEN DENGAN USIA > 16 TAHUN",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Tingkat kesadaran",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Sadar (0)"
+             },
+             {
+              "value": "3",
+              "text": "V/P/U (3)"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Tekanan darah (sistolik)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "230",
+              "text": "> 230 (3)"
+             },
+             {
+              "value": "220",
+              "text": "220 (3)"
+             },
+             {
+              "value": "211",
+              "text": "211 (0)"
+             },
+             {
+              "value": "201",
+              "text": "201"
+             },
+             {
+              "value": "191",
+              "text": "191"
+             },
+             {
+              "value": "181",
+              "text": "181"
+             },
+             {
+              "value": "171",
+              "text": "171"
+             },
+             {
+              "value": "161",
+              "text": "161"
+             },
+             {
+              "value": "151",
+              "text": "151"
+             },
+             {
+              "value": "141",
+              "text": "141"
+             },
+             {
+              "value": "131",
+              "text": "131"
+             },
+             {
+              "value": "121",
+              "text": "121"
+             },
+             {
+              "value": "111",
+              "text": "111"
+             },
+             {
+              "value": "101",
+              "text": "101"
+             },
+             {
+              "value": "91",
+              "text": "91"
+             },
+             {
+              "value": "81",
+              "text": "81"
+             },
+             {
+              "value": "71",
+              "text": "71"
+             },
+             {
+              "value": "61",
+              "text": "61"
+             },
+             {
+              "value": "51",
+              "text": "51"
+             },
+             {
+              "value": "41",
+              "text": "41"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "NADI",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "140",
+              "text": "> 140 (3)"
+             },
+             {
+              "value": "131",
+              "text": "131 (3)"
+             },
+             {
+              "value": "121",
+              "text": "121 (2)"
+             },
+             {
+              "value": "111",
+              "text": "111"
+             },
+             {
+              "value": "101",
+              "text": "101"
+             },
+             {
+              "value": "91",
+              "text": "91"
+             },
+             {
+              "value": "81",
+              "text": "81"
+             },
+             {
+              "value": "71",
+              "text": "71"
+             },
+             {
+              "value": "61",
+              "text": "61"
+             },
+             {
+              "value": "51",
+              "text": "51"
+             },
+             {
+              "value": "41",
+              "text": "41"
+             },
+             {
+              "value": "40",
+              "text": "< 40"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "Pernafasan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "25",
+              "text": "> 25"
+             },
+             {
+              "value": "21-24",
+              "text": "21-24"
+             },
+             {
+              "value": "12-20",
+              "text": "12-20"
+             },
+             {
+              "value": "9-11",
+              "text": "9-11"
+             },
+             {
+              "value": "8",
+              "text": "<8"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "Suhu",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "39,1",
+              "text": "> 39,1 c"
+             },
+             {
+              "value": "38,1",
+              "text": "38,1 c"
+             },
+             {
+              "value": "37,1",
+              "text": "37,1 c"
+             },
+             {
+              "value": "36,1",
+              "text": "36,1 c"
+             },
+             {
+              "value": "35,1",
+              "text": "35,1 c"
+             },
+             {
+              "value": "35",
+              "text": "< 35 c"
+             }
+            ]
+           },
+           {
+            "name": "column7",
+            "title": "Sp02",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "96",
+              "text": "> 96"
+             },
+             {
+              "value": "94-95",
+              "text": "94-95"
+             },
+             {
+              "value": "92-93",
+              "text": "92-93"
+             },
+             {
+              "value": "91",
+              "text": "< 91"
+             }
+            ]
+           },
+           {
+            "name": "column8",
+            "title": "Oksigen",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "ya"
+             },
+             {
+              "value": "tidak",
+              "text": "tidak"
+             }
+            ]
+           },
+           {
+            "name": "column10",
+            "title": "Skala jatuh",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Skala nyeri",
+            "cellType": "text"
+           },
+           {
+            "name": "column12",
+            "title": "Intake",
+            "cellType": "text"
+           },
+           {
+            "name": "column13",
+            "title": "Output",
+            "cellType": "text"
+           },
+           {
+            "name": "column14",
+            "title": "Diit",
+            "cellType": "text"
+           },
+           {
+            "name": "column15",
+            "title": "Nama petugas",
+            "cellType": "text"
+           },
+           {
+            "name": "column16",
+            "title": "Paraf petugas",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<html><body><h2>Pencatatan Observasi Menggunakan Early Warning Score (EWS)</h2>... (isi tabel tetap sama)</body></html>"
+       }
+      ]
+     },
+     {
+      "name": "page2"
+     }
+    ]
+   }

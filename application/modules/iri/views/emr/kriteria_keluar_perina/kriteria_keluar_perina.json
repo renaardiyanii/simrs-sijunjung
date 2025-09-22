@@ -1,0 +1,162 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrix",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "value": "Column 1",
+            "text": "Ya"
+           },
+           {
+            "value": "Column 2",
+            "text": "Tidak"
+           }
+          ],
+          "rows": [
+           {
+            "value": "Row 1",
+            "text": "a.\tPasien dengan gagal organ tunggal dan multi organ yang beresiko terjadi komplikasi dan perburukan"
+           },
+           {
+            "value": "Row 2",
+            "text": "b.\tSistim kardiovaskuler,ancaman aritmia jantung,PJB dengan DC,Potensial gagal nafas"
+           },
+           {
+            "value": "Row 3",
+            "text": "c.\tSistem pernafasan: Transient tachypneuof newborn (TTN),Pneumonia newnatal,asfiksia,aspirasi mekonium,HMD,PPHN,ancaman gagal nafas"
+           },
+           {
+            "value": "Row 4",
+            "text": "d.\tSistem syaraf : penurunan kesadaran yang disebabkan oleh infeksi saraf pusat:meningitis purulenta, enselopati akibat gangguan metabolik"
+           },
+           {
+            "value": "Row 5",
+            "text": "e.\tSistem saluran cerna : perdarahan saluran cerna atasdan bawah dengan komplikasi sepsis"
+           },
+           {
+            "value": "Row 6",
+            "text": "f.\tSistem endokrin :diabetes neunataldengan gula darah yang belum stabil"
+           },
+           {
+            "value": "Row 7",
+            "text": "g.\tHematologi : Leukemia neunatal dengan hiper leukositosis, keganasan lain dengan perdarahan masif"
+           },
+           {
+            "value": "Row 8",
+            "text": "h.\tPasien post operatif yang memerlukan pemantauan ketat dan memerlukan resusitasi cairan dan elektrolit"
+           },
+           {
+            "value": "Row 9",
+            "text": "i.\tSistem ginjal dan saluran kemih: gagal ginjal dengan enselopati uremia, kelainan konggenital."
+           },
+           {
+            "value": "Row 10",
+            "text": "j.\tAlergi dan imunologi "
+           },
+           {
+            "value": "Row 11",
+            "text": "k.\tTranfusi "
+           },
+           {
+            "value": "Row 12",
+            "text": "l.\tBBLSR dan BBLASR"
+           },
+           {
+            "value": "Row 13",
+            "text": "m.\tNeunatus yang memerlukan nutrisi pareteraltotal / parsial"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "question2",
+          "title": "KESIMPULAN\nBerdasarkan kondisi di atas, maka memenuhi indikasi masuk HCU dengan prioritas \n",
+          "titleLocation": "left",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question3",
+          "title": "Alat transport yang digunakan ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Brancard"
+           },
+           {
+            "value": "item2",
+            "text": "Kursi roda"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "checkbox",
+          "name": "question4",
+          "title": "Pendamping selama transfer   ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Dokter"
+           },
+           {
+            "value": "item2",
+            "text": "Perawat"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "checkbox",
+          "name": "question5",
+          "title": "Perlu alat medis selama transfer ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Dokter"
+           },
+           {
+            "value": "item2",
+            "text": "Perawat"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question6",
+          "title": "Perlu alat medis selama transfer ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Ya",
+          "colCount": 2
+         }
+        ]
+       }
+      ],
+      "title": "KRITERIA MASUK NICU & PERINATOLOGI"
+     }
+    ]
+   }

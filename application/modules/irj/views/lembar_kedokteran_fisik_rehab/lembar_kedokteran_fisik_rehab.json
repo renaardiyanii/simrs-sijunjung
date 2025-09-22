@@ -1,0 +1,91 @@
+{
+    "title": "LEMBAR FORMULIR RAWAT JALAN LAYANAN KEDOKTERAN FISIK DAN REHABILITASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "anamnesa",
+            "title": "anamnesa",
+            "cellType": "comment"
+           },
+           {
+            "name": "fisik_ujifungsi",
+            "title": "Pemeriksaan fisik dan uji fungsi",
+            "cellType": "comment"
+           },
+           {
+            "name": "diagnosis",
+            "title": "Diagnosis Medis (ICD-10)",
+            "cellType": "comment"
+           },
+           {
+            "name": "diag_fungsi",
+            "title": "Diagnosis fungsi",
+            "cellType": "comment"
+           },
+           {
+            "name": "penunjang",
+            "title": "Pemeriksaan penunjang",
+            "cellType": "comment"
+           },
+           {
+            "name": "tata_laksana",
+            "title": "Tata Laksana KFR (ICD-9CM)",
+            "cellType": "comment"
+           },
+           {
+            "name": "anjuran",
+            "title": "Anjuran",
+            "cellType": "comment"
+           },
+           {
+            "name": "evaluasi",
+            "title": "Evaluasi",
+            "cellType": "comment"
+           },
+           {
+            "name": "suspek",
+            "title": "Suspek penyakit akibat kerja",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Ya"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

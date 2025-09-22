@@ -1,0 +1,253 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Pangkat / Gol   :                                              "
+           },
+           {
+            "name": "text2",
+            "title": "NRP / NIP   :                                  "
+           },
+           {
+            "name": "text3",
+            "title": "Kesatuan :"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Jenis Instruksi Perawatan :   ",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Rawat Jalan       "
+             },
+             {
+              "value": "item2",
+              "text": "IGD"
+             },
+             {
+              "value": "item3",
+              "text": "Tindakan ODC     "
+             },
+             {
+              "value": "item4",
+              "text": "Haemodialisa     "
+             },
+             {
+              "value": "item5",
+              "text": "Cuti Perawatan"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": " Ruang Rawat / Unit Kerja  :",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Diagnosa / ICD 10  :",
+            "cellType": "comment"
+           },
+           {
+            "name": "column4",
+            "title": "Tindakan / ICD 9-CM   :",
+            "cellType": "comment"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "1. Diet"
+           },
+           {
+            "name": "text2",
+            "title": "2. Obat"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "obat",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "nm_obat",
+            "title": "Nama Obat",
+            "cellType": "text"
+           },
+           {
+            "name": "dosis",
+            "title": "Dosis",
+            "cellType": "text"
+           },
+           {
+            "name": "frekuensi",
+            "title": "Frekuensi",
+            "cellType": "text"
+           },
+           {
+            "name": "cara_pemberian",
+            "title": "Cara Pemberian",
+            "cellType": "text"
+           },
+           {
+            "name": "jam",
+            "title": "Jam Pemberian",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "petunjuk",
+            "title": "Petunjuk Khusus",
+            "cellType": "comment"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "bila",
+            "title": "3.\tBila terjadi kegawat daruratan segera ke IGD RS",
+            "cellType": "text"
+           },
+           {
+            "name": "saran",
+            "title": "4.\tSaran khusus (sesuai dengan diagnosa dan kondisi pasien)",
+            "cellType": "comment"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "signaturepad",
+          "name": "question5",
+          "title": "Diserahkan (Perawat)",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question6",
+          "startWithNewLine": false,
+          "title": "Diterima (Pasien / Penanggung Jawab)",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question7",
+          "startWithNewLine": false,
+          "title": "Disetujui (Dokter yang merawat)",
+          "hideNumber": true
+         },
+         {
+          "type": "panel",
+          "name": "panel2",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question8",
+            "title": "Perawat",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question9",
+            "startWithNewLine": false,
+            "title": "Pasien / Penanggung Jawab",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question10",
+            "startWithNewLine": false,
+            "title": "Dokter yang merawat",
+            "hideNumber": true
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "question11",
+          "titleLocation": "hidden",
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "text",
+          "name": "question12",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "text",
+          "name": "question13",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "inputType": "datetime-local"
+         }
+        ]
+       }
+      ],
+      "title": "PERSIAPAN PERAWATAN DI RUMAH\n(Rawat  jalan,  IGD,   Tindakan ODC,    Haemodialisa, Cuti Perawatan)\n"
+     }
+    ]
+   }

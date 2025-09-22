@@ -1,0 +1,464 @@
+{
+    "title": "TINDAKAN KEPERAWATAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question6",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "text",
+          "name": "question7",
+          "inputType": "date"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tindakan",
+            "title": "Tindakan Keperawatan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Mengatur posisi ( fowler / semi fowler)"
+             },
+             {
+              "value": "2",
+              "text": "Memantau respirasi(pola,bunyi,jml,sputum)"
+             },
+             {
+              "value": "3",
+              "text": "Pengisapan jalan nafas : suction"
+             },
+             {
+              "value": "4",
+              "text": "Memonitor saturasi O2"
+             },
+             {
+              "value": "5",
+              "text": "Melatih batuk efektif"
+             },
+             {
+              "value": "6",
+              "text": "Memasang Gudel"
+             },
+             {
+              "value": "7",
+              "text": "Memeriksa  tanda - tanda  vital (TD,N,S dan P)"
+             },
+             {
+              "value": "8",
+              "text": "Memantau tanda vital (TD,N,S dan P)"
+             },
+             {
+              "value": "9",
+              "text": "Memonitor intake dan output cairan"
+             },
+             {
+              "value": "10",
+              "text": "Memonitor tingkat kesadaran, respon pupil"
+             },
+             {
+              "value": "11",
+              "text": "Memberikan Transfusi darah"
+             },
+             {
+              "value": "12",
+              "text": "Mengambil sampel darah arteri"
+             },
+             {
+              "value": "13",
+              "text": "Mengambil sampel darah vena"
+             },
+             {
+              "value": "14",
+              "text": "Memantau hasil laboratorium"
+             },
+             {
+              "value": "15",
+              "text": "Melakukan Tes fungsi menelan"
+             },
+             {
+              "value": "16",
+              "text": "Memonitor tanda hypovolemia"
+             },
+             {
+              "value": "17",
+              "text": "memonitor tanda dan gejala hipovolemia"
+             },
+             {
+              "value": "18",
+              "text": "Mengganti infus "
+             },
+             {
+              "value": "19",
+              "text": "Memberikan makan melalui NGT"
+             },
+             {
+              "value": "20",
+              "text": "Menimbang  berat badan"
+             },
+             {
+              "value": "21",
+              "text": "Monitor adanya mual&muntah"
+             },
+             {
+              "value": "22",
+              "text": "Memotivasi anak bermain dengan anak lain"
+             },
+             {
+              "value": "23",
+              "text": "Mendukung anak mengeekoresikan diri"
+             },
+             {
+              "value": "24",
+              "text": "Melatih pemenuhan kebutuhan mandiri"
+             },
+             {
+              "value": "25",
+              "text": "Memandikan pasien di tempat tidur"
+             },
+             {
+              "value": "26",
+              "text": "Melakukan perawatan gigi / mulut"
+             },
+             {
+              "value": "27",
+              "text": "Melakukan oral hygiene"
+             },
+             {
+              "value": "28",
+              "text": "Mencuci rambut"
+             },
+             {
+              "value": "29",
+              "text": "Mencukur kumis"
+             },
+             {
+              "value": "30",
+              "text": "Menggunting kuku"
+             },
+             {
+              "value": "31",
+              "text": "Membantu mengganti pakaian"
+             },
+             {
+              "value": "32",
+              "text": "Membantu BAB/BAK di tempat tidur"
+             },
+             {
+              "value": "33",
+              "text": "Pemberian enema / spuit gliserin"
+             },
+             {
+              "value": "34",
+              "text": "Mengidentifikasi penyebab diare"
+             },
+             {
+              "value": "35",
+              "text": "Menganjurkan makan porsi kecil tapi sering"
+             },
+             {
+              "value": "36",
+              "text": "Memonitor hasil pemeriksaan laboratorium"
+             },
+             {
+              "value": "37",
+              "text": "Memonitor kejang berulang"
+             },
+             {
+              "value": "38",
+              "text": "Memonitor nyeri :penyebab, kualitas,lokasi, intensitas,durasi"
+             },
+             {
+              "value": "39",
+              "text": "Menganjurkan bed rest sesuai kondisi pasien"
+             },
+             {
+              "value": "40",
+              "text": "Mengatur posisi miring kiri/kanan tiap 2 jam"
+             },
+             {
+              "value": "41",
+              "text": "Memonitor tanda dan gejala hiperglikemia"
+             },
+             {
+              "value": "42",
+              "text": "Membantu duduk di tempat tidur"
+             },
+             {
+              "value": "43",
+              "text": "Membantu duduk di kursi roda"
+             },
+             {
+              "value": "44",
+              "text": "Membantu pasien berdiri"
+             },
+             {
+              "value": "45",
+              "text": "Memakaikan  matras dekubitus"
+             },
+             {
+              "value": "46",
+              "text": "Perawatan kateter"
+             },
+             {
+              "value": "47",
+              "text": "Memonitor haluaran dan pengosongan urin"
+             },
+             {
+              "value": "48",
+              "text": "Memasang kondom kateter"
+             },
+             {
+              "value": "49",
+              "text": "Memonitor asupan makanan"
+             },
+             {
+              "value": "50",
+              "text": "Mengajarkan teknik relaksasi"
+             },
+             {
+              "value": "51",
+              "text": "Menganjurkan minum air yang cukup"
+             },
+             {
+              "value": "52",
+              "text": "Memeriksa dan memantau status neurologis"
+             },
+             {
+              "value": "53",
+              "text": "Memantau gejala peningatan tekanan intrakaranial"
+             },
+             {
+              "value": "54",
+              "text": "Memonitor tingkat kesadaran"
+             },
+             {
+              "value": "55",
+              "text": "Memonitor suhu tubuh"
+             },
+             {
+              "value": "56",
+              "text": "Memonitor drainage dan perdarahan"
+             },
+             {
+              "value": "57",
+              "text": "Memberikan kompres"
+             },
+             {
+              "value": "58",
+              "text": "Pemberian lingkungan yang nyaman, tenang"
+             },
+             {
+              "value": "59",
+              "text": "Memberikan dukungan kepada kelg dan orang terdekat"
+             },
+             {
+              "value": "60",
+              "text": "Mengajarkan kelg tentang proses berduka dan penanganannya"
+             },
+             {
+              "value": "61",
+              "text": "Mengganti laken"
+             },
+             {
+              "value": "62",
+              "text": "Memonitor tanda dan gejala infeksi"
+             },
+             {
+              "value": "63",
+              "text": "Mengajarkan cara mencuci tangan"
+             },
+             {
+              "value": "64",
+              "text": "Memasang penghalang tempat tidur & segitiga resiko jatuh"
+             },
+             {
+              "value": "65",
+              "text": "Mengunci roda tempat tidur"
+             },
+             {
+              "value": "66",
+              "text": "Memberikan edukasi sesuai kebutuhan"
+             },
+             {
+              "value": "67",
+              "text": "Memonitor tanda dan gejala hipoglikemia"
+             },
+             {
+              "value": "68",
+              "text": "Memonitor kadar glukosa darah"
+             },
+             {
+              "value": "69",
+              "text": "Melakukan RJP"
+             },
+             {
+              "value": "70",
+              "text": "Melakukan perawatan jenazah"
+             }
+            ]
+           },
+           {
+            "name": "psm",
+            "title": "P/S/M",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "p",
+              "text": "P"
+             },
+             {
+              "value": "s",
+              "text": "S"
+             },
+             {
+              "value": "m",
+              "text": "M"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah ",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "kolaborasi",
+            "title": "Kolaborasi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "memberikan",
+              "text": "Memberian Oksigen "
+             },
+             {
+              "value": "memberikan1",
+              "text": "Memberikan  obat oral "
+             },
+             {
+              "value": "memberikan2",
+              "text": "Memberikan obat injeksi "
+             },
+             {
+              "value": "memasang",
+              "text": "Memasang NGT"
+             },
+             {
+              "value": "memasang1",
+              "text": "Memasang infus "
+             },
+             {
+              "value": "memasang2",
+              "text": "Memasang kateter"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Detail",
+            "cellType": "text"
+           },
+           {
+            "name": "psm",
+            "title": "P/S/M",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "p",
+              "text": "P"
+             },
+             {
+              "value": "s",
+              "text": "S"
+             },
+             {
+              "value": "m",
+              "text": "M"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah ",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "dropdown",
+          "name": "pet_pagi",
+          "title": "Nama Petugas Pagi",
+          "titleLocation": "top",
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/admin/rest_all_user"
+          }
+         },
+         {
+          "type": "dropdown",
+          "name": "pet_siang",
+          "title": "Nama Petugas Siang",
+          "titleLocation": "top",
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/admin/rest_all_user"
+          }
+         },
+         {
+          "type": "dropdown",
+          "name": "pet_malam",
+          "title": "Nama Petugas Malam",
+          "titleLocation": "top",
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/admin/rest_all_user"
+          }
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah Hari"
+       }
+      ]
+     }
+    ]
+   }

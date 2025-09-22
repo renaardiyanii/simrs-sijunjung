@@ -1,0 +1,385 @@
+{
+    "title": "PASCA BEDAH",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "R",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "28"
+             },
+             {
+              "value": "item2",
+              "text": "24"
+             },
+             {
+              "value": "item3",
+              "text": "22"
+             },
+             {
+              "value": "item4",
+              "text": "20"
+             },
+             {
+              "value": "item5",
+              "text": "18"
+             },
+             {
+              "value": "item6",
+              "text": "16"
+             },
+             {
+              "value": "item7",
+              "text": "12"
+             },
+             {
+              "value": "item8",
+              "text": "8"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "N",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "180"
+             },
+             {
+              "value": "item2",
+              "text": "160"
+             },
+             {
+              "value": "item3",
+              "text": "140"
+             },
+             {
+              "value": "item4",
+              "text": "120"
+             },
+             {
+              "value": "item5",
+              "text": "100"
+             },
+             {
+              "value": "item6",
+              "text": "80"
+             },
+             {
+              "value": "item7",
+              "text": "60"
+             },
+             {
+              "value": "item8",
+              "text": "40"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "TD Sistolik",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "220"
+             },
+             {
+              "value": "item2",
+              "text": "200"
+             },
+             {
+              "value": "item3",
+              "text": "180"
+             },
+             {
+              "value": "item4",
+              "text": "160"
+             },
+             {
+              "value": "item5",
+              "text": "140"
+             },
+             {
+              "value": "item6",
+              "text": "120"
+             },
+             {
+              "value": "item7",
+              "text": "100"
+             },
+             {
+              "value": "item8",
+              "text": "80"
+             },
+             {
+              "value": "item9",
+              "text": "60"
+             },
+             {
+              "value": "item10",
+              "text": "40"
+             },
+             {
+              "value": "item11",
+              "text": "20"
+             },
+             {
+              "value": "item12",
+              "text": "0"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "TD Diastolik",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "220"
+             },
+             {
+              "value": "item2",
+              "text": "200"
+             },
+             {
+              "value": "item3",
+              "text": "180"
+             },
+             {
+              "value": "item4",
+              "text": "160"
+             },
+             {
+              "value": "item5",
+              "text": "140"
+             },
+             {
+              "value": "item6",
+              "text": "120"
+             },
+             {
+              "value": "item7",
+              "text": "100"
+             },
+             {
+              "value": "item8",
+              "text": "80"
+             },
+             {
+              "value": "item9",
+              "text": "60"
+             },
+             {
+              "value": "item10",
+              "text": "40"
+             },
+             {
+              "value": "item11",
+              "text": "20"
+             },
+             {
+              "value": "item12",
+              "text": "0"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "comment",
+        "name": "question3",
+        "title": "CATATAN",
+        "hideNumber": true
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question4",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Pemberian",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "SK"
+           },
+           {
+            "value": "item2",
+            "text": " IM. I. V"
+           },
+           {
+            "value": "item3",
+            "text": "P. Oral"
+           }
+          ]
+         },
+         {
+          "name": "column2",
+          "title": "Waktu",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "column3",
+          "title": "Efek",
+          "cellType": "text"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "multipletext",
+        "name": "question5",
+        "startWithNewLine": false,
+        "title": "Premediksi",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "1"
+         },
+         {
+          "name": "text2",
+          "title": "2"
+         },
+         {
+          "name": "text3",
+          "title": "3"
+         }
+        ]
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question6",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "O2",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "infus",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "comment",
+        "name": "question9",
+        "title": "Jumlah Medikasi :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question10",
+        "startWithNewLine": false,
+        "title": "Jumlah cairan / transf :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question11",
+        "title": "Catatan :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question12",
+        "startWithNewLine": false,
+        "title": "Perdarahan",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question13",
+        "title": "Tanda tangan",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question14",
+        "titleLocation": "hidden"
+       }
+      ],
+      "title": "PREMEDIKASI"
+     }
+    ]
+   }

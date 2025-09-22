@@ -1,0 +1,484 @@
+{
+    "title": "MONITORING INTRA SEDASI/ANESTESI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Pemberian",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "SK"
+             },
+             {
+              "value": "item2",
+              "text": " IM. I. V"
+             },
+             {
+              "value": "item3",
+              "text": "P. Oral"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Waktu",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "column3",
+            "title": "Efek",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "multipletext",
+          "name": "question5",
+          "startWithNewLine": false,
+          "title": "Premedikasi",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "1"
+           },
+           {
+            "name": "text2",
+            "title": "2"
+           },
+           {
+            "name": "text3",
+            "title": "3"
+           }
+          ]
+         }
+        ],
+        "title": "PREMEDIKASI"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question15",
+        "title": "MONITORING INTRA SEDASI / ANESTESI",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question16",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Indukasi Jam",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "column2",
+            "title": "Obat obatan",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Cairan intravena",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Darah",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Ekspander",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Konversi tindakan anestesi",
+            "cellType": "text"
+           },
+           {
+            "name": "column7",
+            "title": "Waktu bius",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "column8",
+            "title": "Waktu sayat",
+            "cellType": "text",
+            "inputType": "time"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question1",
+        "title": "MONITORING HEMODINAMIK",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question16",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column7",
+            "title": "Waktu",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "column8",
+            "title": "Spo2",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Nadi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "180"
+             },
+             {
+              "value": "item2",
+              "text": "160"
+             },
+             {
+              "value": "item9",
+              "text": "150"
+             },
+             {
+              "value": "item3",
+              "text": "140"
+             },
+             {
+              "value": "item4",
+              "text": "120"
+             },
+             {
+              "value": "item11",
+              "text": "110"
+             },
+             {
+              "value": "item5",
+              "text": "100"
+             },
+             {
+              "value": "item6",
+              "text": "80"
+             },
+             {
+              "value": "item10",
+              "text": "70"
+             },
+             {
+              "value": "item7",
+              "text": "60"
+             },
+             {
+              "value": "item8",
+              "text": "40"
+             }
+            ]
+           },
+           {
+            "name": "column10",
+            "title": "TD Sistolik",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "200"
+             },
+             {
+              "value": "item2",
+              "text": "180"
+             },
+             {
+              "value": "item3",
+              "text": "160"
+             },
+             {
+              "value": "item10",
+              "text": "150"
+             },
+             {
+              "value": "item4",
+              "text": "140"
+             },
+             {
+              "value": "item5",
+              "text": "120"
+             },
+             {
+              "value": "item11",
+              "text": "110"
+             },
+             {
+              "value": "item6",
+              "text": "100"
+             },
+             {
+              "value": "item7",
+              "text": "80"
+             },
+             {
+              "value": "item12",
+              "text": "70"
+             },
+             {
+              "value": "item8",
+              "text": "60"
+             },
+             {
+              "value": "item9",
+              "text": "40"
+             }
+            ]
+           },
+           {
+            "name": "column11",
+            "title": "TD Diastolik",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "200"
+             },
+             {
+              "value": "item2",
+              "text": "180"
+             },
+             {
+              "value": "item3",
+              "text": "160"
+             },
+             {
+              "value": "item10",
+              "text": "150"
+             },
+             {
+              "value": "item4",
+              "text": "140"
+             },
+             {
+              "value": "item5",
+              "text": "120"
+             },
+             {
+              "value": "item11",
+              "text": "110"
+             },
+             {
+              "value": "item6",
+              "text": "100"
+             },
+             {
+              "value": "item7",
+              "text": "80"
+             },
+             {
+              "value": "item12",
+              "text": "70"
+             },
+             {
+              "value": "item8",
+              "text": "60"
+             },
+             {
+              "value": "item9",
+              "text": "40"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question19",
+        "title": " ",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question16",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column2",
+            "title": "EKG",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Suhu",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Perdarahan",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Urine",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Torniquet on/off",
+            "cellType": "text"
+           },
+           {
+            "name": "column7",
+            "title": "Skor selesai",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "comment",
+        "name": "question20",
+        "title": "CATATAN KHSUSU INTRA SEDASI/ANESTESI",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "question21",
+        "title": "Total",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "CAIRAN KRITASLOID"
+         },
+         {
+          "name": "text2",
+          "title": "CAIRAN KOLOID"
+         },
+         {
+          "name": "text3",
+          "title": "DARAH"
+         },
+         {
+          "name": "text4",
+          "title": "URINE"
+         },
+         {
+          "name": "text5",
+          "title": "PERDARAHAN"
+         },
+         {
+          "name": "text6",
+          "title": "NGT/MUNTAH"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "signaturepad",
+        "name": "question22",
+        "title": "Dokter Anestesi",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question23",
+        "startWithNewLine": false,
+        "title": "Perawat Anestesi",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question24",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question25",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

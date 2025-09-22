@@ -1,0 +1,4134 @@
+{
+    "title": "ASUHAN KEPERAWATAN KEBIDANAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question1",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Tes kehamilan (+ )  (- )"
+           },
+           {
+            "value": "item5",
+            "text": "Mulai keluar darah dari kemaluan :"
+           },
+           {
+            "value": "item6",
+            "text": "Banyak darah yang keluar :"
+           },
+           {
+            "value": "item7",
+            "text": " Sifat darah : "
+           },
+           {
+            "value": "item8",
+            "text": "Badan terasa lemas "
+           },
+           {
+            "value": "item9",
+            "text": "Nyeri perut baguian bawah "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question2",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item3",
+            "text": "Hasil planotest "
+           },
+           {
+            "value": "item4",
+            "text": "Hasil USG"
+           },
+           {
+            "value": "item5",
+            "text": "Hasil inspekulo"
+           },
+           {
+            "value": "item6",
+            "text": "Hasil periksa dalam "
+           },
+           {
+            "value": "item7",
+            "text": " Ada / tidak pembukaan portio "
+           },
+           {
+            "value": "item8",
+            "text": "Besar pembukaan"
+           },
+           {
+            "value": "item9",
+            "text": "Teraba jaringan dimulut rahim (+ )  (- )"
+           },
+           {
+            "value": "item10",
+            "text": "Tampak hasil konsepsi sudah keluar "
+           },
+           {
+            "value": "item11",
+            "text": "Jumlah darah yang keluar ±"
+           },
+           {
+            "value": "item12",
+            "text": " Lama perdarahan terjadi "
+           },
+           {
+            "value": "item13",
+            "text": "TD"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "visibleIf": "{question2} anyof ['item13']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question4",
+          "title": "G        P         A         H \nGravid             minggu \ndengan ABORTUS INCOMPLIT ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Setelah diberikan cairan  parental     badan mulai segar "
+           },
+           {
+            "value": "item2",
+            "text": "Setelah diberikan obat - obatan mual dan     dan muntah berkurang    "
+           },
+           {
+            "value": "item3",
+            "text": "Setelah diberikan KIE ibu mau makan     dan minum "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question6",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Informasikan hasil pemeriksaan pada ibu      dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Libatkan keluarga untuk memberikan motivasi     dan asupan nutrisi "
+           },
+           {
+            "value": "item3",
+            "text": "Berikan KIE - Konseling tentang pentingnya      nutrisi bagi janin "
+           },
+           {
+            "value": "item4",
+            "text": "Kolaborasi dengan SpOG untuk : "
+           },
+           {
+            "value": "item5",
+            "text": "Pemberian cairan parental "
+           },
+           {
+            "value": "item6",
+            "text": "Pemberian obat oral "
+           },
+           {
+            "value": "item7",
+            "text": "Pemberian obat injeksi "
+           },
+           {
+            "value": "item8",
+            "text": "Pemeriksaan laboratorium "
+           },
+           {
+            "value": "item13",
+            "text": "Pemberian terapi dan perawatan sesuai     advis dokter "
+           },
+           {
+            "value": "item14",
+            "text": "Pemantauan TTV "
+           },
+           {
+            "value": "item15",
+            "text": "Pemantauan intake dan out put cairan  "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question7",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Nyeri kepala hebat "
+           },
+           {
+            "value": "item5",
+            "text": " Gangguan penglihatan "
+           },
+           {
+            "value": "item6",
+            "text": "Bengkak pada kaki dan tangan "
+           },
+           {
+            "value": "item7",
+            "text": "Mata tampak bengkak "
+           },
+           {
+            "value": "item8",
+            "text": "Penurunan kesadaran "
+           },
+           {
+            "value": "item9",
+            "text": "Kejang "
+           },
+           {
+            "value": "item10",
+            "text": "Berat badan meningkat "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question8",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item3",
+            "text": "TFU "
+           },
+           {
+            "value": "item4",
+            "text": " TBBJ :"
+           },
+           {
+            "value": "item5",
+            "text": " BJA : "
+           },
+           {
+            "value": "item6",
+            "text": "Pembukaan : "
+           },
+           {
+            "value": "item7",
+            "text": "Penipisan portio "
+           },
+           {
+            "value": "item8",
+            "text": "Presentasi : "
+           },
+           {
+            "value": "item9",
+            "text": "Posisi :"
+           },
+           {
+            "value": "item10",
+            "text": "Hodge : "
+           },
+           {
+            "value": "item11",
+            "text": "Ketuban : "
+           },
+           {
+            "value": "item12",
+            "text": "Kontraksi : "
+           },
+           {
+            "value": "item14",
+            "text": " Pengeluaran pervaginam  : "
+           },
+           {
+            "value": "item15",
+            "text": "Protein urin : "
+           },
+           {
+            "value": "item13",
+            "text": "TD"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question9",
+          "visibleIf": "{question8} anyof ['item13']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question10",
+          "title": "G        P       A       H  Gravid           minggu  dengan PRE EKLAMSI BERAT ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question11",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "PEB tertangani sesuai SOP "
+           },
+           {
+            "value": "item2",
+            "text": "Tidak terjadi komplikasi "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question12",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Informasikan hasil pemeriksaan pada ibu dan      dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Observasi tanda -tanda vital "
+           },
+           {
+            "value": "item3",
+            "text": "Observasi DJJ secara berkala "
+           },
+           {
+            "value": "item4",
+            "text": " Libatkan keluarga untuk dukungan moril ,    pengawasan ,istirahat dan pemenuhan nutrisi"
+           },
+           {
+            "value": "item5",
+            "text": "Kolaborasi dengan SpOG : "
+           },
+           {
+            "value": "item6",
+            "text": "Pemberian therapy "
+           },
+           {
+            "value": "item7",
+            "text": "Tindakan operatif "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question13",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Usia kehamilan cukup bulan :"
+           },
+           {
+            "value": "item5",
+            "text": "Keluar air -air :"
+           },
+           {
+            "value": "item6",
+            "text": " Kontraksi ada / tidak :"
+           },
+           {
+            "value": "item7",
+            "text": "Riwayat persalinan yang sebelumnya :"
+           },
+           {
+            "value": "item8",
+            "text": "Kelainan letak pada janin "
+           },
+           {
+            "value": "item9",
+            "text": "Anak besar : "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question14",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item3",
+            "text": "TFU "
+           },
+           {
+            "value": "item4",
+            "text": " TBBJ :"
+           },
+           {
+            "value": "item5",
+            "text": " BJA : "
+           },
+           {
+            "value": "item6",
+            "text": "Indikasi SC "
+           },
+           {
+            "value": "item7",
+            "text": "Kelainan jalan lahir  "
+           },
+           {
+            "value": "item8",
+            "text": "Bekas SC "
+           },
+           {
+            "value": "item9",
+            "text": "Malposisi "
+           },
+           {
+            "value": "item10",
+            "text": "Malpersentasi "
+           },
+           {
+            "value": "item11",
+            "text": " Tali pusat menumbung "
+           },
+           {
+            "value": "item12",
+            "text": "Plasenta previa "
+           },
+           {
+            "value": "item14",
+            "text": "Solusio plasenta "
+           },
+           {
+            "value": "item15",
+            "text": "CPD "
+           },
+           {
+            "value": "item13",
+            "text": "TD"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question15",
+          "visibleIf": "{question14} anyof ['item13']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question16",
+          "title": "G        P           A         H Gravid            minggu  dengan SEKSIO CESAREA ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel11",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question17",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Setelah dilakukan SC diharapkan kondisi ibu dan bayi bisa normal "
+           },
+           {
+            "value": "item2",
+            "text": "Setelah dilakukan SC diharapkan ibu dan bayi bisa rawat gabung"
+           },
+           {
+            "value": "item3",
+            "text": "Setelah dilakukan SC diharapkan ibu dan bayi bisa pulang tanpa      komplikasi "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel12",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question18",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Informasikan hasil pemeriksaan pada ibu dan      keluarga "
+           },
+           {
+            "value": "item2",
+            "text": " Observasi TTV dan DJJ "
+           },
+           {
+            "value": "item3",
+            "text": "Inform concent "
+           },
+           {
+            "value": "item4",
+            "text": " Persiapan seksio caesaria "
+           },
+           {
+            "value": "item5",
+            "text": "Pasang infus "
+           },
+           {
+            "value": "item6",
+            "text": "Febriding ± 20 dari area yang akan di           insisi "
+           },
+           {
+            "value": "item7",
+            "text": " Pasang foley cateter "
+           },
+           {
+            "value": "item8",
+            "text": "Skintest AB hasil : ( +)   (- ) "
+           },
+           {
+            "value": "item9",
+            "text": "Injeksi AB "
+           },
+           {
+            "value": "item10",
+            "text": " Persiapan untuk ibu "
+           },
+           {
+            "value": "item11",
+            "text": "Persiapan untuk bayi "
+           },
+           {
+            "value": "item12",
+            "text": " Persiapan BBL"
+           },
+           {
+            "value": "item13",
+            "text": "Kolaborasidengan SpOG untuk  :"
+           },
+           {
+            "value": "item14",
+            "text": "Pelaksanaan SC "
+           },
+           {
+            "value": "item15",
+            "text": " Pemberian obat analgetik "
+           },
+           {
+            "value": "item16",
+            "text": "Pemberian antibiotok injeksi dan oral "
+           },
+           {
+            "value": "item17",
+            "text": "BBL SC"
+           },
+           {
+            "value": "item18",
+            "text": "Lakukan perawaan pasient post SC sesuai     advis dokter "
+           },
+           {
+            "value": "item19",
+            "text": "Membimbing ibu untuk pemberian ASI "
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question19",
+          "visibleIf": "{question18} anyof ['item17']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "pukul "
+           },
+           {
+            "name": "text2",
+            "title": "JK"
+           },
+           {
+            "name": "text3",
+            "title": "BB"
+           },
+           {
+            "name": "text4",
+            "title": "PB"
+           },
+           {
+            "name": "text5",
+            "title": "Anus"
+           },
+           {
+            "name": "text6",
+            "title": "Vit K inj "
+           },
+           {
+            "name": "text7",
+            "title": "Salf mata : "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page4",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel13",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question20",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Mual muntah "
+           },
+           {
+            "value": "item5",
+            "text": "Muntah yang sering "
+           },
+           {
+            "value": "item6",
+            "text": "Nafsu makan tidak ada "
+           },
+           {
+            "value": "item7",
+            "text": "Kepala pusing ,badan lemas "
+           },
+           {
+            "value": "item8",
+            "text": "Susah tidur "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question21",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item3",
+            "text": "Tampak lemah "
+           },
+           {
+            "value": "item4",
+            "text": "Tampak mual "
+           },
+           {
+            "value": "item5",
+            "text": "Bibir tampak pecah - pecah"
+           },
+           {
+            "value": "item6",
+            "text": "Mata tampak cekung "
+           },
+           {
+            "value": "item7",
+            "text": " Pasien terpasang infus "
+           },
+           {
+            "value": "item13",
+            "text": "TD"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question22",
+          "visibleIf": "{question21} anyof ['item13']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel14",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question23",
+          "title": "G        P          A          H  Gravid           minggu  dengan HIPEREMISIS  GRAVIDARUM ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel15",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question24",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Setelah dilakukan SC diharapkan kondisi ibu dan bayi bisa normal "
+           },
+           {
+            "value": "item2",
+            "text": "Setelah dilakukan SC diharapkan ibu dan bayi bisa rawat gabung"
+           },
+           {
+            "value": "item3",
+            "text": "Setelah dilakukan SC diharapkan ibu dan bayi bisa pulang tanpa      komplikasi "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel16",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question25",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Informasikan hasil pemeriksaan pada ibu dan      keluarga "
+           },
+           {
+            "value": "item2",
+            "text": " Observasi TTV dan DJJ "
+           },
+           {
+            "value": "item3",
+            "text": "Inform concent "
+           },
+           {
+            "value": "item4",
+            "text": " Persiapan seksio caesaria "
+           },
+           {
+            "value": "item5",
+            "text": "Pasang infus "
+           },
+           {
+            "value": "item6",
+            "text": "Febriding ± 20 dari area yang akan di           insisi "
+           },
+           {
+            "value": "item7",
+            "text": " Pasang foley cateter "
+           },
+           {
+            "value": "item8",
+            "text": "Skintest AB hasil : ( +)   (- ) "
+           },
+           {
+            "value": "item9",
+            "text": "Injeksi AB "
+           },
+           {
+            "value": "item10",
+            "text": " Persiapan untuk ibu "
+           },
+           {
+            "value": "item11",
+            "text": "Persiapan untuk bayi "
+           },
+           {
+            "value": "item12",
+            "text": " Persiapan BBL"
+           },
+           {
+            "value": "item13",
+            "text": "Kolaborasidengan SpOG untuk  :"
+           },
+           {
+            "value": "item14",
+            "text": "Pelaksanaan SC "
+           },
+           {
+            "value": "item15",
+            "text": " Pemberian obat analgetik "
+           },
+           {
+            "value": "item16",
+            "text": "Pemberian antibiotok injeksi dan oral "
+           },
+           {
+            "value": "item17",
+            "text": "BBL SC"
+           },
+           {
+            "value": "item18",
+            "text": "Lakukan perawaan pasient post SC sesuai     advis dokter "
+           },
+           {
+            "value": "item19",
+            "text": "Membimbing ibu untuk pemberian ASI "
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question26",
+          "visibleIf": "{question25} anyof ['item17']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "pukul "
+           },
+           {
+            "name": "text2",
+            "title": "JK"
+           },
+           {
+            "name": "text3",
+            "title": "BB"
+           },
+           {
+            "name": "text4",
+            "title": "PB"
+           },
+           {
+            "name": "text5",
+            "title": "Anus"
+           },
+           {
+            "name": "text6",
+            "title": "Vit K inj "
+           },
+           {
+            "name": "text7",
+            "title": "Salf mata : "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page5",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel17",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question27",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": " Nyeri hebat pada perut bagian     kiri atau kanan bawah "
+           },
+           {
+            "value": "item5",
+            "text": " keluar darah pervaginam  ( +)  ( -)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question28",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item3",
+            "text": "Hasil USG : "
+           },
+           {
+            "value": "item4",
+            "text": "Hasil planotest : "
+           },
+           {
+            "value": "item5",
+            "text": " Hasil laboratorium : "
+           },
+           {
+            "value": "item6",
+            "text": " Syok / tidak "
+           },
+           {
+            "value": "item7",
+            "text": "TD"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question29",
+          "visibleIf": "{question28} anyof ['other', 'item7']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel18",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question30",
+          "title": "G       P         A          H   Gravid            minggu  dengan  KEHAMILAN  EKTOPIK TERGANGGU  (KET) ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel19",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question31",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Setelah ditegakkan diagnosa KET     diharapkan tindakan pertolongan     segera dilakukan "
+           },
+           {
+            "value": "item2",
+            "text": "Tidak terjadi syock "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel20",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question32",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "informasikan hasil pemeriksaan pada ibu     dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Kumpulkan data ,semua hasil pemeriksaan ibu      untuk kolaborasi dengan SpOG "
+           },
+           {
+            "value": "item3",
+            "text": " Inform concent "
+           },
+           {
+            "value": "item4",
+            "text": " Persiapkan pasien untuk tindakan operatif     sesuai advis dokter : "
+           },
+           {
+            "value": "item5",
+            "text": "Pasang infus "
+           },
+           {
+            "value": "item6",
+            "text": "Febriding / cukur "
+           },
+           {
+            "value": "item7",
+            "text": "Pasang kateter "
+           },
+           {
+            "value": "item8",
+            "text": "Skint test "
+           },
+           {
+            "value": "item9",
+            "text": " Perlengkapan ibu "
+           },
+           {
+            "value": "item10",
+            "text": "Berikan terapy dan rawatan pada ibu     sesuai advis dokter SpOG "
+           },
+           {
+            "value": "item11",
+            "text": "Berikan motifasi dan dukungan psikologis     untuk kesiapan mental ibu preoperatif     dan post opertif "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page6",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel21",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question34",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Planotest : ( +)  (- ) "
+           },
+           {
+            "value": "item5",
+            "text": "Rasa nyeri (+ )  (- ) "
+           },
+           {
+            "value": "item6",
+            "text": " keluar darah pervaginam "
+           },
+           "item7"
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question35",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item3",
+            "text": " keluar darah pervaginam "
+           },
+           {
+            "value": "item4",
+            "text": "Warna darah : "
+           },
+           {
+            "value": "item5",
+            "text": " Sifat darah encer / tidak "
+           },
+           {
+            "value": "item6",
+            "text": "Hasil USG "
+           },
+           {
+            "value": "item7",
+            "text": "Hasil planotest : "
+           },
+           {
+            "value": "item8",
+            "text": "TD"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question36",
+          "visibleIf": "{question35} anyof ['other', 'item8']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel22",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question37",
+          "title": "G        P        A          H         Gravid           minggu  dengan ABORTUS  IMMINENS ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel23",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question38",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Setelah dilakukan pemeriksaan dan      perawatan diharapkan kehamilan ibu      bisa dipertahankan "
+           },
+           {
+            "value": "item2",
+            "text": " Kondisi ibu dan janin sehat "
+           },
+           {
+            "value": "item3",
+            "text": "Darah tidak keluar lagi  "
+           },
+           {
+            "value": "item4",
+            "text": "Dengan pengbatan dan perawatan     hamil ibu bisa dilanjutkan "
+           },
+           {
+            "value": "item5",
+            "text": "Tidak ada tanda - tanda bahaya trimester I "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel24",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question39",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "informasikan hasil pemeriksaan pada ibu     dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": " Libatkan keluarga untuk pengawasan     dan pemenuhan nutrisi "
+           },
+           {
+            "value": "item3",
+            "text": "Anjurkan ibu untuk istirahat "
+           },
+           {
+            "value": "item4",
+            "text": "Observasi  tanda vital dan DJJ      secara berkala "
+           },
+           {
+            "value": "item5",
+            "text": " KIE tentang kebutuhan ibu     selam kehamilan "
+           },
+           {
+            "value": "item6",
+            "text": "Kolabrasi dengan SpOG untuk : "
+           },
+           {
+            "value": "item7",
+            "text": "Pemeriksaan USG "
+           },
+           {
+            "value": "item8",
+            "text": "Curetase "
+           },
+           {
+            "value": "item9",
+            "text": "Pemberian obat oral "
+           },
+           {
+            "value": "item10",
+            "text": "Pemasangan infus "
+           },
+           {
+            "value": "item11",
+            "text": "Pemeriksaan laboratorium "
+           },
+           {
+            "value": "item12",
+            "text": " Pemberian diet "
+           },
+           {
+            "value": "item13",
+            "text": "Pengawasan perdarahan pervaginam "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page7",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel25",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question33",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Keluar perdarahan pervaginam     tiba - tiba "
+           },
+           {
+            "value": "item5",
+            "text": "Keluar darah tanpa nyeri "
+           },
+           {
+            "value": "item6",
+            "text": "Perdarahan terjai pada saat tidur "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question40",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item4",
+            "text": " TFU :  "
+           },
+           {
+            "value": "item5",
+            "text": "Ketuban : "
+           },
+           {
+            "value": "item6",
+            "text": " TBBJ : "
+           },
+           {
+            "value": "item7",
+            "text": "BJA : "
+           },
+           {
+            "value": "item8",
+            "text": " Inspekulo : "
+           },
+           {
+            "value": "item9",
+            "text": "Pembukaan OUE ada "
+           },
+           {
+            "value": "item10",
+            "text": "Pengeluaran daarah yang       banyak  :"
+           },
+           {
+            "value": "item11",
+            "text": "Warna darah :"
+           },
+           {
+            "value": "item12",
+            "text": "TD"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question41",
+          "visibleIf": "{question40} anyof ['other', 'item12']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel26",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question42",
+          "title": "G       P        A         H Gravid         minggu  dengan PLASENTA  PREVIA ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel27",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question43",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Dengan terapy ekspektatif diharapakan janin      yang lahir tidak lahir permatur "
+           },
+           {
+            "value": "item2",
+            "text": "Dengan terapy aktif diharapakan perdarahan     pervaginam bisa teratasi "
+           },
+           {
+            "value": "item3",
+            "text": "Penyelesaian persalinan denga SC     diharapkan bisa menyelamatkan ibu     janin"
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel28",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question44",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "informasikan hasil pemeriksaan pada ibu     dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Inform consent "
+           },
+           {
+            "value": "item3",
+            "text": "Pematauan DJJ dan vital sign "
+           },
+           {
+            "value": "item4",
+            "text": "Libatakan keluarga untuk pengawasan      pengeluaran pervaginam "
+           },
+           {
+            "value": "item5",
+            "text": "Pemenuhan kebutuah nutrisi dan     istirahat ibu ( bedrest )"
+           },
+           {
+            "value": "item6",
+            "text": "Kolaborasi dengan SpOG untuk : "
+           },
+           {
+            "value": "item7",
+            "text": "Terapy koservatif "
+           },
+           {
+            "value": "item8",
+            "text": "Terapy aktif "
+           },
+           {
+            "value": "item9",
+            "text": " Pemberian cairan parental "
+           },
+           {
+            "value": "item10",
+            "text": " Pemberian obat -obatan oral  "
+           },
+           {
+            "value": "item11",
+            "text": " pemeriksaan laboratorium "
+           },
+           {
+            "value": "item12",
+            "text": "Pelaksanaan tranfusi darah "
+           },
+           {
+            "value": "item13",
+            "text": " USG "
+           },
+           {
+            "value": "item14",
+            "text": " Terminasi kehamilan "
+           },
+           {
+            "value": "item15",
+            "text": "Melaksanakan asuhan kebidanan pada     ibu sesuai advis dokter "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page8",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel29",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question45",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Usia kehamilan : "
+           },
+           {
+            "value": "item5",
+            "text": "Keluar air - air dari kemaluan sejak : "
+           },
+           {
+            "value": "item6",
+            "text": "keluar lendir campur darah     dari kemaluan sejak : "
+           },
+           {
+            "value": "item7",
+            "text": " Nyeri pinggang menjalar      ke ari -ari "
+           },
+           {
+            "value": "item8",
+            "text": " Lama kontraksi : "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question46",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item4",
+            "text": " TFU :  "
+           },
+           {
+            "value": "item6",
+            "text": " TBBJ : "
+           },
+           {
+            "value": "item7",
+            "text": "BJA : "
+           },
+           {
+            "value": "item8",
+            "text": "Kontraksi : "
+           },
+           {
+            "value": "item9",
+            "text": "Presentasi : "
+           },
+           {
+            "value": "item10",
+            "text": "Pemeriksaan dalam : "
+           },
+           {
+            "value": "item11",
+            "text": " Pembukaan : "
+           },
+           {
+            "value": "item12",
+            "text": "TD"
+           },
+           {
+            "value": "item13",
+            "text": " penipisan portio : "
+           },
+           {
+            "value": "item14",
+            "text": " Posisi :"
+           },
+           {
+            "value": "item15",
+            "text": "Hodge : "
+           },
+           {
+            "value": "item16",
+            "text": "Ketuban : "
+           },
+           {
+            "value": "item17",
+            "text": "Lakmus :"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question47",
+          "visibleIf": "{question46} anyof ['other', 'item12']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel30",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question48",
+          "title": "G        P          A         H  Gravid         minggu  dengan KETUBAN PECAH DINI  ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel31",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question49",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Setelah dilakukan perawatan dan terapy     ekspektatif dilharapkan kehamilan bisa     dilanjutkan sampai aterm ( 37 minggu ) "
+           },
+           {
+            "value": "item2",
+            "text": " Bila jumlah air ketuban kurang     ( oligohidraamnion ) dipertimbangkan untuk     terminasi kehamilan "
+           },
+           {
+            "value": "item3",
+            "text": "Peny setelah dilakukan pemberian cost costeroid     untuk merangsang maturitas janin diharapkan     janin bisa lahir normal dengan usia kehamilan > 37 mingguelesaian persalinan denga SC     diharapkan bisa menyelamatkan ibu     janin"
+           },
+           {
+            "value": "item4",
+            "text": "Jika kehamilan tidak dapat dipertahankan     persalinan dapat berjalan lancar     dan BBL bisa hidup walaupaun berat bayi     kurang dari normal "
+           },
+           {
+            "value": "item5",
+            "text": "Setelah bayi lahir diharapakan plasenta tidak      mengalami perlengketan atau banyak sisa     tertinggal "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel32",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question50",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "informasikan hasil pemeriksaan pada ibu     dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": " Libatkan keluarga untuk pengawasan dan         pemenuhan nutrisi "
+           },
+           {
+            "value": "item3",
+            "text": "Anjurkan ibu untuk istirahat "
+           },
+           {
+            "value": "item4",
+            "text": "Obervasi DJJ dan tanda - tanda vital     secara berkala "
+           },
+           {
+            "value": "item5",
+            "text": "KIE tentang kebutuhan ibu secra berkala "
+           },
+           {
+            "value": "item6",
+            "text": " Kolaborasi dengan SpOG untuk:"
+           },
+           {
+            "value": "item7",
+            "text": "Pemeriksaan USG "
+           },
+           {
+            "value": "item8",
+            "text": "Kuretase "
+           },
+           {
+            "value": "item9",
+            "text": " Pemberian Obat oral "
+           },
+           {
+            "value": "item10",
+            "text": "Pemasangan infus "
+           },
+           {
+            "value": "item11",
+            "text": "Pemeriksaan laboratorium"
+           },
+           {
+            "value": "item12",
+            "text": "Pemberian diet "
+           },
+           {
+            "value": "item13",
+            "text": "Pengawasan perdarahan pervaginam     "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page9",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel33",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question51",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": " Keluar darah pervaginam           tiba -tiba "
+           },
+           {
+            "value": "item5",
+            "text": "Keluar darah tanpa nyeri "
+           },
+           {
+            "value": "item6",
+            "text": "Perdarahan terjadi saatt tidur "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question52",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item4",
+            "text": "Tampak darah pervaginam "
+           },
+           {
+            "value": "item6",
+            "text": "Warna darah : "
+           },
+           {
+            "value": "item7",
+            "text": "Sifat darah encer / tidak "
+           },
+           {
+            "value": "item8",
+            "text": "Hasil USG : "
+           },
+           {
+            "value": "item9",
+            "text": "Hasil planotest: "
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question53",
+          "visibleIf": "{question52} anyof ['other', 'item12']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel34",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question54",
+          "title": "G      P       A         H Gravid           minggu  dengan ABORTUS IMINENS ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel35",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question55",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Setelah dilakukan pemeriksaan dan      perawatan diharapkan kehamilan ibu      bisa dipertahankan "
+           },
+           {
+            "value": "item2",
+            "text": " Kondisi ibu dan janan sehatb"
+           },
+           {
+            "value": "item3",
+            "text": " Darah tidak keluar lagi "
+           },
+           {
+            "value": "item4",
+            "text": " Dengan pengobatan dan perawatan      kehamilan ibu bisa dilanjutkan "
+           },
+           {
+            "value": "item5",
+            "text": "Tidak ada tanda - tanda bahaya trimester 1 "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel36",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question56",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "informasikan hasil pemeriksaan pada ibu     dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": " Libatkan kleuarag untuk pemberian     motivasi dan asupan nutrisi "
+           },
+           {
+            "value": "item3",
+            "text": "Berika KIE - Konseling tentang      pentingnya nutrisi bagi janin "
+           },
+           {
+            "value": "item4",
+            "text": "Kolaborasi denga Sp OG : "
+           },
+           {
+            "value": "item5",
+            "text": "Pemberian cairan parental "
+           },
+           {
+            "value": "item6",
+            "text": "Pemberian obat oral "
+           },
+           {
+            "value": "item7",
+            "text": " Pemberian obat ijeksi "
+           },
+           {
+            "value": "item8",
+            "text": "Pemeriksaan laboratorium "
+           },
+           {
+            "value": "item9",
+            "text": "Pemeriksaan USG "
+           },
+           {
+            "value": "item10",
+            "text": " Pematauan TTV "
+           },
+           {
+            "value": "item11",
+            "text": "Pemantauan intake dan out put cairan "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page10",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel37",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question57",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Keluar lendir campur darah "
+           },
+           {
+            "value": "item5",
+            "text": "keluar air -air atau     meconium dari kemaluan "
+           },
+           {
+            "value": "item6",
+            "text": "Sakit pinggang menjalar ke     ari -ari "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question58",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item4",
+            "text": "TFU : "
+           },
+           {
+            "value": "item6",
+            "text": " Posisi punggung janin : "
+           },
+           {
+            "value": "item7",
+            "text": "TBBJ : "
+           },
+           {
+            "value": "item8",
+            "text": " BJA : "
+           },
+           {
+            "value": "item9",
+            "text": "Hasil planotest: "
+           },
+           {
+            "value": "item10",
+            "text": " Pembukaan : "
+           },
+           {
+            "value": "item11",
+            "text": "Penispisan portio : "
+           },
+           {
+            "value": "item12",
+            "text": "Presentase : "
+           },
+           {
+            "value": "item13",
+            "text": "Posisi : "
+           },
+           {
+            "value": "item14",
+            "text": "Kontraksi : "
+           },
+           {
+            "value": "item15",
+            "text": "Ketuban : "
+           },
+           {
+            "value": "item16",
+            "text": "TB"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question59",
+          "visibleIf": "{question58} anyof ['other', 'item16']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel38",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question60",
+          "title": "G         P          A         H  Gravid            minggu  dengan PARTUS SUNSANG ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel39",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question61",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Diharapkan setelah dilakukan pertolongan     persalinan sunsang ,bayi lahir dengan     bugar dan ibu dalam kondisi baik "
+           },
+           {
+            "value": "item2",
+            "text": "diharapkan setelah ibu melahikan bayinya     segera dilakukan IMD  "
+           },
+           {
+            "value": "item3",
+            "text": "Diharapkan setelah ibu melewati proses     persalinan kondisi ibu segera pulih     kembali dan bayi rawat gabung "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel40",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question62",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Informasikan hasil pemeriksaan pada     ibu dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Inform consent "
+           },
+           {
+            "value": "item3",
+            "text": "Pemantauan DJJ dan vital sign "
+           },
+           {
+            "value": "item4",
+            "text": "Pemasangan O2"
+           },
+           {
+            "value": "item5",
+            "text": "Pemantauan kemajuan persalinan "
+           },
+           {
+            "value": "item6",
+            "text": "Pemantauan BJA secara berkala "
+           },
+           {
+            "value": "item7",
+            "text": "Bimbing ibu meneran "
+           },
+           {
+            "value": "item8",
+            "text": " Pertolongan persalinan : "
+           },
+           {
+            "value": "item9",
+            "text": " Cara klasik "
+           },
+           {
+            "value": "item10",
+            "text": " Cara manuver "
+           },
+           {
+            "value": "item11",
+            "text": "Cara lovset "
+           },
+           {
+            "value": "item12",
+            "text": " Melahirkan kepala bayi : "
+           },
+           {
+            "value": "item13",
+            "text": "Teknik mericeau"
+           },
+           {
+            "value": "item14",
+            "text": "Episiotomi "
+           },
+           {
+            "value": "item15",
+            "text": " Pertolongan BBL "
+           },
+           {
+            "value": "item16",
+            "text": " Injeksi oksitocyn "
+           },
+           {
+            "value": "item17",
+            "text": "Pemasangan cateter "
+           },
+           {
+            "value": "item18",
+            "text": "PTT "
+           },
+           {
+            "value": "item19",
+            "text": "Pengeluaran plasenta "
+           },
+           {
+            "value": "item20",
+            "text": " Masase fundusuteri "
+           },
+           {
+            "value": "item21",
+            "text": "Penjahitan luka jalan lahir "
+           },
+           {
+            "value": "item22",
+            "text": "Pengawasan kala IV persalinan "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page11",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel41",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question63",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Jumlah anak hidup : "
+           },
+           {
+            "value": "item2",
+            "text": "Keluhan yang dirasakan :     Lamanya : "
+           },
+           {
+            "value": "item3",
+            "text": "Nyeri didaerah perut "
+           },
+           {
+            "value": "item4",
+            "text": "Keluar darah pervaginam sejak : "
+           },
+           {
+            "value": "item5",
+            "text": "Badan lemas , kepla terasa pusing "
+           },
+           {
+            "value": "item6",
+            "text": "Nafsu makan tidak ada : "
+           },
+           {
+            "value": "item7",
+            "text": "Mual dan muntah : "
+           },
+           {
+            "value": "item8",
+            "text": "Tidak mampu berjalan sendiri "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question64",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item4",
+            "text": "Tampak lelah "
+           },
+           {
+            "value": "item6",
+            "text": "Ibu tampak kesakitan "
+           },
+           {
+            "value": "item7",
+            "text": "Tidak bisa  berjalan sendiri "
+           },
+           {
+            "value": "item8",
+            "text": "Pembesaran rahim : (+ )  (- )"
+           },
+           {
+            "value": "item9",
+            "text": "Nyeri tekan pada saat palpasi "
+           },
+           {
+            "value": "item10",
+            "text": "Pengeluaran pervaginam "
+           },
+           {
+            "value": "item11",
+            "text": "Pemeriksaan USG "
+           },
+           {
+            "value": "item16",
+            "text": "TB"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question65",
+          "visibleIf": "{question64} anyof ['other', 'item16']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel42",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question66",
+          "title": "Pasien dengan        PRO HYSTEREKTOMI ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel43",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question67",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Setelah dilakukan tindakan hysterektomi     diharapkan kondisi ibu bisa      normal kembali "
+           },
+           {
+            "value": "item2",
+            "text": "Setelah dilakukan perawatan post     operasi , diharapkan ibu bisa     pulih kemnali dan tidak ada komplikasi "
+           },
+           {
+            "value": "item3",
+            "text": "Setelah dilakauakn hysterektomi     masalah dengan uterus ibu tidak ada lagi "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel44",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question68",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Informasikan hasil pemeriksaan pada     ibu dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Observasi tanda - tanda vital dan      keadaan ibu "
+           },
+           {
+            "value": "item3",
+            "text": "Inform consent "
+           },
+           {
+            "value": "item4",
+            "text": " Persiapan hysterektomi "
+           },
+           {
+            "value": "item5",
+            "text": " Pasang infus RL "
+           },
+           {
+            "value": "item6",
+            "text": "Febriding ± 20 cm dari daerah yang          akan di insisi"
+           },
+           {
+            "value": "item7",
+            "text": "Pasang foley cateter "
+           },
+           {
+            "value": "item8",
+            "text": "Skintest Antibiotik : (+ )  ( -) "
+           },
+           {
+            "value": "item9",
+            "text": "Injeksi antibiotik "
+           },
+           {
+            "value": "item10",
+            "text": " Persiapan untuk ibu "
+           },
+           {
+            "value": "item11",
+            "text": " Transfer paseien ke OK "
+           },
+           {
+            "value": "item12",
+            "text": "Kolaborsi dengan SpOG untuk : "
+           },
+           {
+            "value": "item13",
+            "text": "Pelaksanaan hysterektomi "
+           },
+           {
+            "value": "item14",
+            "text": " Pemberian analgetik "
+           },
+           {
+            "value": "item15",
+            "text": "Pemberian antibiotik oral dan injeksi "
+           },
+           {
+            "value": "item16",
+            "text": " Pemberian tanfusi darah k/p "
+           },
+           {
+            "value": "item17",
+            "text": " Lakukan perawatan pasien post     hysterektomi "
+           },
+           {
+            "value": "item18",
+            "text": "Pemberian analgetik , antibiotik injeksi     dan oral "
+           },
+           {
+            "value": "item19",
+            "text": "Pengawasan intake out put "
+           },
+           {
+            "value": "item20",
+            "text": "Pengawasan drainnase pasien "
+           },
+           {
+            "value": "item21",
+            "text": "Pengaturan puasa dan mobilisasi pasien "
+           },
+           {
+            "value": "item22",
+            "text": "Pemberian diet pasien "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page12",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel45",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question69",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke  : "
+           },
+           {
+            "value": "item2",
+            "text": "HPHT  : "
+           },
+           {
+            "value": "item3",
+            "text": " TP :"
+           },
+           {
+            "value": "item4",
+            "text": " Usia kehamilan belum cukup bulan "
+           },
+           {
+            "value": "item5",
+            "text": " Keluar air - air dari kemaluan "
+           },
+           {
+            "value": "item6",
+            "text": " Keluar lendir campur darah     dari kemaluan "
+           },
+           {
+            "value": "item7",
+            "text": "Nyeri pinggang menjalar ke ari ari  "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question70",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item4",
+            "text": "TFU :"
+           },
+           {
+            "value": "item6",
+            "text": " TBBJ : "
+           },
+           {
+            "value": "item7",
+            "text": " BJA : "
+           },
+           {
+            "value": "item8",
+            "text": "Kontraksi : "
+           },
+           {
+            "value": "item9",
+            "text": "Presentasi : "
+           },
+           {
+            "value": "item10",
+            "text": "Pemeruiksaan dalam : "
+           },
+           {
+            "value": "item11",
+            "text": "Pembukaan : "
+           },
+           {
+            "value": "item16",
+            "text": "TB"
+           },
+           {
+            "value": "item17",
+            "text": "Penipisan portio : "
+           },
+           {
+            "value": "item18",
+            "text": " Posisi : "
+           },
+           {
+            "value": "item19",
+            "text": " Ketuban "
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question71",
+          "visibleIf": "{question70} anyof ['other', 'item16']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel46",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question72",
+          "title": "G      P        A        H  Gravid           minggu Dengan PERSALINAN PRETERM ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel47",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question73",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Setelah dilakukan pemeriksaan fisik dan     leopold diharapakn kontraksi berhenti dan     dan kehamilan bisa dilanjutkan kembali "
+           },
+           {
+            "value": "item2",
+            "text": "Jika kehamilan tidak dapat dipertahankan ,     diharapakan persalianan dapat berjalan lancar     dan BBL biasa hidup walaupun berat bayi    kurang dari normal  "
+           },
+           {
+            "value": "item3",
+            "text": " setelah bayi lahir diharapkan plasenta     tidak mengalami perlengketan atau banyak     atau banyak sisa yang tertinggal "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel48",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question74",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Informasikan hasil pemeriksaan pada     ibu dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Inform concent "
+           },
+           {
+            "value": "item3",
+            "text": "Pantau DJJ dan vital sign "
+           },
+           {
+            "value": "item4",
+            "text": "Libatkan keluarga untuk dukungan moril     dan pemenuhan nutrisis ibu "
+           },
+           {
+            "value": "item5",
+            "text": " Membimbing ibu meneran : "
+           },
+           {
+            "value": "item6",
+            "text": " Pemberian obat tokolitik "
+           },
+           {
+            "value": "item7",
+            "text": "Pemberian ciran parental "
+           },
+           {
+            "value": "item8",
+            "text": " USG "
+           },
+           {
+            "value": "item9",
+            "text": "Pemberian costriod untuk maturitas         paru janin "
+           },
+           {
+            "value": "item10",
+            "text": "Pembrian uterotonika"
+           },
+           {
+            "value": "item11",
+            "text": "Kolaborasi dengan Sp A untuk pertolongan      BBL dengan prematur "
+           },
+           {
+            "value": "item12",
+            "text": "Melakukan pertolongan pada BBL preterm     yang suadah memasuki kala II "
+           },
+           {
+            "value": "item13",
+            "text": "Melakukan manual plasenta bila perlu "
+           },
+           {
+            "value": "item14",
+            "text": "Melakuakn pengawasan pasien post     partum "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page13",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel49",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question75",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke  : "
+           },
+           {
+            "value": "item2",
+            "text": "HPHT  : "
+           },
+           {
+            "value": "item3",
+            "text": " TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Usia kehamilan 42 minggu "
+           },
+           {
+            "value": "item5",
+            "text": "Keluar air - air dari kemaluan "
+           },
+           {
+            "value": "item6",
+            "text": "Keluar darah dari kemaluan "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question76",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item4",
+            "text": "TFU :"
+           },
+           {
+            "value": "item6",
+            "text": " Ketuban : "
+           },
+           {
+            "value": "item7",
+            "text": "TBBJ : "
+           },
+           {
+            "value": "item8",
+            "text": "BJA : "
+           },
+           {
+            "value": "item9",
+            "text": "Pembukaan : "
+           },
+           {
+            "value": "item10",
+            "text": "Penipisan portio : "
+           },
+           {
+            "value": "item11",
+            "text": " Preentasi : "
+           },
+           {
+            "value": "item16",
+            "text": "TB"
+           },
+           {
+            "value": "item17",
+            "text": "Posisi : "
+           },
+           {
+            "value": "item18",
+            "text": "Kontraksi :"
+           },
+           {
+            "value": "item19",
+            "text": " Hodge :"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question77",
+          "visibleIf": "{question76} anyof ['other', 'item16']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel50",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question78",
+          "title": "G       P        A        H Gravid          minggu  dengan POST TERM  ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel51",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question79",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Setelah dilakukan pemeriksaan fisik     leopold , DJJ, Pemeriksaan dalam       diharapakan ibu cepat dilakukan proses     terminasi kehamilannya sehingga    diharapkan kondisi ibu   "
+           },
+           {
+            "value": "item2",
+            "text": "Keadaan umum ibu baik "
+           },
+           {
+            "value": "item3",
+            "text": "Vital sign "
+           },
+           {
+            "value": "item4",
+            "text": " DJJ normal dan teratur "
+           },
+           {
+            "value": "item5",
+            "text": " Ibu dalam kondisi siap untuk           terminasi kehamilan baik partus           spontan atau SC "
+           },
+           {
+            "value": "item6",
+            "text": "Bayi lahir dalam kondisi baik "
+           },
+           {
+            "value": "item7",
+            "text": "Pengeluaran plasenta secara spontan "
+           },
+           {
+            "value": "item8",
+            "text": "Pengawasan kala IV "
+           },
+           {
+            "value": "item9",
+            "text": " Tidak terjadi atinia uteri "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel52",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question80",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Informasikan hasil pemeriksaan pada     ibu dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Inform concent "
+           },
+           {
+            "value": "item3",
+            "text": "Pantau DJJ dan vital sign "
+           },
+           {
+            "value": "item4",
+            "text": " Libatkan keluarga untuk pengawasan     pengeluaran pervaginam "
+           },
+           {
+            "value": "item5",
+            "text": "Pemenuhan kebutuhan nutrisi dan     istirahat ibu "
+           },
+           {
+            "value": "item6",
+            "text": " Kolaborasi dengan SpOG untuk : "
+           },
+           {
+            "value": "item7",
+            "text": "Terapy konservatif "
+           },
+           {
+            "value": "item8",
+            "text": "Terapy aktif "
+           },
+           {
+            "value": "item9",
+            "text": "Pemberian cairan parental "
+           },
+           {
+            "value": "item10",
+            "text": "Pemberian obat oral "
+           },
+           {
+            "value": "item11",
+            "text": "Pemeriksaan laboratorium "
+           },
+           {
+            "value": "item12",
+            "text": " Pemeriksaan laboratorium "
+           },
+           {
+            "value": "item13",
+            "text": "USG "
+           },
+           {
+            "value": "item14",
+            "text": "Terminasi kehamilan "
+           },
+           {
+            "value": "item15",
+            "text": "Melaksanakan asuhan kebidana pada ibu     sesuai advis dokter "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page14",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel53",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question81",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Riwayat persalinan  : "
+           },
+           {
+            "value": "item2",
+            "text": "Lama Kala I  : "
+           },
+           {
+            "value": "item3",
+            "text": "Lama kala II : "
+           },
+           {
+            "value": "item4",
+            "text": "enis persalinan :"
+           },
+           {
+            "value": "item5",
+            "text": "Plasenta lahir pukul  : "
+           },
+           {
+            "value": "item6",
+            "text": " Cara plasenta lahir : "
+           },
+           {
+            "value": "item7",
+            "text": " Uterus tidak berkontraksi      dalam waktu  : ..........menit "
+           },
+           {
+            "value": "item8",
+            "text": " Banyak darah yang keluar "
+           },
+           {
+            "value": "item9",
+            "text": "Ibu merasa pusing dan lemas "
+           },
+           {
+            "value": "item10",
+            "text": " Ibu merasa lemas "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question82",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item4",
+            "text": "TFU :"
+           },
+           {
+            "value": "item6",
+            "text": "Kontraksi uterus : "
+           },
+           {
+            "value": "item7",
+            "text": "Darah yang keluar :"
+           },
+           {
+            "value": "item8",
+            "text": " Banyak darahyang keluar  :"
+           },
+           {
+            "value": "item9",
+            "text": " Luka jalan lahir :"
+           },
+           {
+            "value": "item10",
+            "text": "Robekan portio :"
+           },
+           {
+            "value": "item11",
+            "text": "Kandung kemih :"
+           },
+           {
+            "value": "item16",
+            "text": "TB"
+           },
+           {
+            "value": "item17",
+            "text": "Pemasangan infus : "
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question83",
+          "visibleIf": "{question82} anyof ['other', 'item16']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel54",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question84",
+          "title": "G       P        A        H   Post Partum dengan HAEMORAGE POST   PARTUM ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel55",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question85",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Diharapkan setelah dilakukan KBI dan KBE     kontraksi baik dan perdarahan berhenti "
+           },
+           {
+            "value": "item2",
+            "text": " Setelah dilakukan pemberian cairan      parental dan uterotonika perdarahan      bisa berhenti "
+           },
+           {
+            "value": "item3",
+            "text": " Setelah dilakukan penjahitan luka jalan      lahir perdrahan berhenti "
+           },
+           {
+            "value": "item4",
+            "text": "Tindakan operatif dilakukan jika KBI dan KBE     dan pemberian uterotonika tidak berhasil  "
+           },
+           {
+            "value": "item5",
+            "text": "Diharapkan kondisi ibu bisa  baik dengan     tindakan operatif kalau KBI dan -KBE tidak     berhasil dilakukan "
+           },
+           {
+            "value": "item6",
+            "text": " Diharapkan ibu bisa rawat gabung     dengan bayinya "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel56",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question86",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Informasikan hasil pemeriksaan pada     ibu dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Lakukan inform consent "
+           },
+           {
+            "value": "item3",
+            "text": "Lakukan pemsangan cairan infus dan     pemberian obat uterotonika "
+           },
+           {
+            "value": "item4",
+            "text": " Lakukan eksplorsasi kavum uteri "
+           },
+           {
+            "value": "item5",
+            "text": " Lakukan KBI  5 menit "
+           },
+           {
+            "value": "item6",
+            "text": "Lakukan KBE 5 menit "
+           },
+           {
+            "value": "item7",
+            "text": "Lakukan masase fundus uteri jika KBI dan      KBE berhasil "
+           },
+           {
+            "value": "item8",
+            "text": "Kolaborasi dengan SpOG untuk tindakan      selanjutnya "
+           },
+           {
+            "value": "item9",
+            "text": "Persiapan operatif Histerektomi kalau KBI _     KBE tidak berhasil sesuai advis dokter "
+           },
+           {
+            "value": "item10",
+            "text": "Pemeriksaan laboratorium "
+           },
+           {
+            "value": "item11",
+            "text": "Persiapan tranfusi darah bila dibutuhkan "
+           },
+           {
+            "value": "item12",
+            "text": "Lakukan perawatan dan therapy post op      sesuai advis dokter "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page15",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel57",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question87",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke : "
+           },
+           {
+            "value": "item2",
+            "text": "HPHT :  "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Sakit perut terus menerus  "
+           },
+           {
+            "value": "item5",
+            "text": " Nyeri tekan pada uterus  "
+           },
+           {
+            "value": "item6",
+            "text": " Pedarahan pervaginam :"
+           },
+           {
+            "value": "item7",
+            "text": "Pergerakan anak ada dirasakan atau tidak :"
+           },
+           {
+            "value": "item8",
+            "text": "Nyeri perut yang hebat   "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question88",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item4",
+            "text": "TFU :"
+           },
+           {
+            "value": "item6",
+            "text": " TBJ :"
+           },
+           {
+            "value": "item7",
+            "text": "BJA :"
+           },
+           {
+            "value": "item8",
+            "text": "Pembukaan serviks "
+           },
+           {
+            "value": "item9",
+            "text": "Pada palasi , perut ibu teraba tegang      seperti kontrakasi : "
+           },
+           {
+            "value": "item10",
+            "text": "Pengeluaran pervaginam : "
+           },
+           {
+            "value": "item11",
+            "text": " Ibu tampak kesakitan "
+           },
+           {
+            "value": "item16",
+            "text": "TB"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question89",
+          "visibleIf": "{question88} anyof ['other', 'item16']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel58",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question90",
+          "title": "G        P        A         H  Gravid           minggu  dengan SOLUSIO PLASENTA  ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel59",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question91",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Penatalaksanaan terhadap komplikasi     bertujuan untuk mengatasi syock"
+           },
+           {
+            "value": "item2",
+            "text": " Restorasi cairan /darah sesegera     mungkin untuk menghindari terjadinya     koagulasi "
+           },
+           {
+            "value": "item3",
+            "text": "Rsetorasi cairan untuk memperbaiki     hemodinmika dan mempertahankan     fungsi skresisisterna urina "
+           },
+           {
+            "value": "item4",
+            "text": "Ibu dan bayi dapat terselamatkan dengan    tindakan operatif "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel60",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question92",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Informasikan hasil pemeriksaan pada     ibu dan keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Observasi tanda - tanda vital "
+           },
+           {
+            "value": "item3",
+            "text": "Observasi kontraksi uterus "
+           },
+           {
+            "value": "item4",
+            "text": "Observasi BJA dengan pemasanga CTG "
+           },
+           {
+            "value": "item5",
+            "text": "Observasi pengeluaran pervaginam"
+           },
+           {
+            "value": "item6",
+            "text": " Libatkan keluarga untuk pengawasan     keadaan umum ibu "
+           },
+           {
+            "value": "item7",
+            "text": "Kolaborasi dengan SpOG untuk : "
+           },
+           {
+            "value": "item8",
+            "text": "Penatalaksanaan solosio plasenta "
+           },
+           {
+            "value": "item9",
+            "text": "Penatalaksanaan terhadap komplikasi           yang akan timbul "
+           },
+           {
+            "value": "item10",
+            "text": "Pemberian cairan parental "
+           },
+           {
+            "value": "item11",
+            "text": "Pemberian tranfusi darah "
+           },
+           {
+            "value": "item12",
+            "text": " Pemberian obat tokolitik "
+           },
+           {
+            "value": "item13",
+            "text": "Terminasi kehamilan "
+           },
+           {
+            "value": "item14",
+            "text": "Pelaksanaan seksio cesarea "
+           },
+           {
+            "value": "item15",
+            "text": "Partus pervaginam jika bayi sudah          IUFD"
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page16",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel61",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question93",
+          "title": "DS",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anak ke :"
+           },
+           {
+            "value": "item2",
+            "text": "HPHT : "
+           },
+           {
+            "value": "item3",
+            "text": "TP :"
+           },
+           {
+            "value": "item4",
+            "text": "Usia kehamilan cukup bulan :"
+           },
+           {
+            "value": "item5",
+            "text": " Keluar air air dari vaginam sejak :"
+           },
+           {
+            "value": "item6",
+            "text": "Keluar lendir campur darah     dari kemaluan sejak : "
+           },
+           {
+            "value": "item7",
+            "text": "Kontraksi uterus : ........./ 10 mnt "
+           },
+           {
+            "value": "item8",
+            "text": " Lama kontraksi : "
+           },
+           {
+            "value": "item9",
+            "text": "Pergerakan anak dirasakan  : "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question94",
+          "title": "DO",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keadaan Umum :"
+           },
+           {
+            "value": "item2",
+            "text": "Kesadaran : "
+           },
+           {
+            "value": "item3",
+            "text": "TFU "
+           },
+           {
+            "value": "item6",
+            "text": "Presentasi :  "
+           },
+           {
+            "value": "item4",
+            "text": " TBBJ :"
+           },
+           {
+            "value": "item5",
+            "text": " BJA : "
+           },
+           {
+            "value": "item7",
+            "text": "Pemeriksaan : "
+           },
+           {
+            "value": "item8",
+            "text": "Pembukaan : "
+           },
+           {
+            "value": "item9",
+            "text": "Penipisan portio  : "
+           },
+           {
+            "value": "item10",
+            "text": "Posisi bagian terbawah         janin : "
+           },
+           {
+            "value": "item11",
+            "text": "Bagian yang menumbung"
+           },
+           {
+            "value": "item12",
+            "text": "Hodge : "
+           },
+           {
+            "value": "item14",
+            "text": "Ketuban :"
+           },
+           {
+            "value": "item15",
+            "text": "Warna :"
+           },
+           {
+            "value": "item13",
+            "text": "Lakmus"
+           },
+           {
+            "value": "item16",
+            "text": "HIS"
+           },
+           {
+            "value": "item17",
+            "text": "TB"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question95",
+          "visibleIf": "{question94} anyof ['item17']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "Nadi"
+           },
+           {
+            "name": "text3",
+            "title": "Pernafasan"
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question100",
+          "visibleIf": "{question94} anyof ['item16']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "His"
+           },
+           {
+            "name": "text2",
+            "title": "Lama"
+           }
+          ]
+         }
+        ],
+        "title": "DATA"
+       },
+       {
+        "type": "panel",
+        "name": "panel62",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question96",
+          "title": "G      P       A        H  Gravid           minggu  dengan PARTUS NORMAL  ",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel63",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question97",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Diharapakan kondisi ibu sehat dan mampu      menjalani proses persalianan noormal      tanpa komplikasi "
+           },
+           {
+            "value": "item2",
+            "text": "Diharapkan janin lahir dalam kondisi      bugar ( Apgar Scor baik ) "
+           },
+           {
+            "value": "item3",
+            "text": "Episiotomi dilakuan atas indikasi "
+           },
+           {
+            "value": "item4",
+            "text": "Pengeluaran plasenta berlangsung "
+           },
+           {
+            "value": "item5",
+            "text": "Tidak terjadi haemorragik post partum "
+           },
+           {
+            "value": "item6",
+            "text": "Tidak terjadi atonia uteri "
+           },
+           {
+            "value": "item7",
+            "text": "Kondisi ibu post partum baik "
+           },
+           {
+            "value": "item8",
+            "text": "Bayi bisa rawat gabung "
+           }
+          ]
+         }
+        ],
+        "title": "TUJUAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel64",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question98",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Informasikan hasil pemeriksaan pada ibu dan      keluarga "
+           },
+           {
+            "value": "item2",
+            "text": "Libatkan keluarga untuk proses     pendampingan persalinan "
+           },
+           {
+            "value": "item3",
+            "text": "Libatkan keluaraga untuk dukungan     moril , pengawasan dan pemenuhan    nuutrisi ibu "
+           },
+           {
+            "value": "item4",
+            "text": "Aajarkan ibu ibu posisi dan cara meneran     yang baik "
+           },
+           {
+            "value": "item5",
+            "text": "Observasi TTV dan DJJ secra berkala "
+           },
+           {
+            "value": "item6",
+            "text": "Pertolongan persalinan spontan tanpa /      dengan episiotomi "
+           },
+           {
+            "value": "item7",
+            "text": "Pemasanga kateter : "
+           },
+           {
+            "value": "item8",
+            "text": "Manajement aktif  kala III : "
+           },
+           {
+            "value": "item9",
+            "text": "Injeksi oksitocin "
+           },
+           {
+            "value": "item10",
+            "text": "pengeluaran plasenta dengan PTT "
+           },
+           {
+            "value": "item11",
+            "text": "Masesase fundud uteri "
+           },
+           {
+            "value": "item12",
+            "text": " Injeksi metil ergometrin "
+           },
+           {
+            "value": "item13",
+            "text": "Penjahitan robekan jalan lahir "
+           },
+           {
+            "value": "item14",
+            "text": "Pemantauan kala I V "
+           },
+           {
+            "value": "item17",
+            "text": "BBL"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question99",
+          "visibleIf": "{question98} anyof ['item17']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "pukul "
+           },
+           {
+            "name": "text2",
+            "title": "JK"
+           },
+           {
+            "name": "text3",
+            "title": "BB"
+           },
+           {
+            "name": "text4",
+            "title": "PB"
+           },
+           {
+            "name": "text5",
+            "title": "Anus"
+           },
+           {
+            "name": "text6",
+            "title": "Vit K inj "
+           },
+           {
+            "name": "text7",
+            "title": "Salf mata : "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI",
+        "startWithNewLine": false
+       }
+      ]
+     }
+    ]
+   }

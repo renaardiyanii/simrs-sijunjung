@@ -1,0 +1,208 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "title": "Skore Hari Perawatan Ke",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Hari Ke"
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Tgl"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "title": "Skore Hari Perawatan Ke",
+          "hideNumber": true,
+          "defaultValue": [
+           {
+            "Column 8": "P",
+            "Column 5": 0
+           },
+           {
+            "Column 8": "S",
+            "Column 5": 0
+           },
+           {
+            "Column 8": "M",
+            "Column 5": 0
+           }
+          ],
+          "correctAnswer": [
+           {
+            "Column 5": 0
+           },
+           {
+            "Column 5": 0
+           },
+           {
+            "Column 5": 0
+           }
+          ],
+          "columns": [
+           {
+            "name": "Column 8",
+            "title": "P/S/M",
+            "cellType": "text",
+            "readOnly": true
+           },
+           {
+            "name": "Column 1",
+            "title": "Tidak Nyeri",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             }
+            ]
+           },
+           {
+            "name": "Column 2",
+            "title": "Face ( wajah )",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Tenang /Rileks(1)"
+             },
+             {
+              "value": "2",
+              "text": "Mengerutkan alis(2)"
+             },
+             {
+              "value": "3",
+              "text": "Kelopak mata tertutup(3)"
+             },
+             {
+              "value": "4",
+              "text": "Meringis(4)"
+             }
+            ]
+           },
+           {
+            "name": "Column 3",
+            "title": "Anggota Badan Sebelah Atas",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Tidak ada pergerakan(1)"
+             },
+             {
+              "value": "2",
+              "text": "Sebagaian ditekuk(2)"
+             },
+             {
+              "value": "3",
+              "text": "Sepenuhnya ditekuk dengan fleksi jari-jari(3)"
+             }
+            ]
+           },
+           {
+            "name": "Column 4",
+            "title": "Ventilasi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Pergerakan dapat ditoleransi(1)"
+             },
+             {
+              "value": "1",
+              "text": "Batuk dengan pergerakan(1)"
+             },
+             {
+              "value": "2",
+              "text": "Melawan ventilator(2)"
+             },
+             {
+              "value": "3",
+              "text": "Tidak dapat mengontrol ventilasi(3)"
+             }
+            ]
+           },
+           {
+            "name": "Column 5",
+            "title": "Total Skor",
+            "cellType": "expression",
+            "expression": "{row.Column 1}+{row.Column 2}+{row.Column 3}+{row.Column 4}"
+           },
+           {
+            "name": "Column 6",
+            "title": "Penilai",
+            "cellType": "dropdown",
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_userppa_iri"
+            }
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": 1,
+            "text": "Tenang /Rileks"
+           },
+           {
+            "value": 2,
+            "text": "Mengerutkan alis"
+           },
+           {
+            "value": 3,
+            "text": "Kelopak mata tertutup"
+           },
+           {
+            "value": 4,
+            "text": "Meringis"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 3,
+          "defaultRowValue": {
+           "Column 5": 0
+          }
+         }
+        ],
+        "allowRemovePanel": false,
+        "panelCount": 1,
+        "panelAddText": "Tambah Skor"
+       },
+       {
+        "type": "rating",
+        "name": "question4",
+        "title": "Untuk Pasien Yang Dapat Mengekspresikan Nyeri\n\nNumerik",
+        "hideNumber": true,
+        "rateMin": 0,
+        "rateMax": 10
+       },
+       {
+        "type": "rating",
+        "name": "question5",
+        "title": "Untuk Pasien Yang Tidak Dapat Mengekspresikan Nyeri Secara\n\nSecara Numerik\n",
+        "hideNumber": true,
+        "rateMin": 0,
+        "rateMax": 10
+       }
+      ],
+      "title": "MONITORING ASESMEN NYERI PADA PASIEN TIDAK SADAR",
+      "description": "BEHAVIORAL PAIN SCALE"
+     }
+    ]
+   }

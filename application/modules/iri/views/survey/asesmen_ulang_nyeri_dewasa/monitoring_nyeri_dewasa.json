@@ -1,0 +1,179 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "title": "Skor hari perawatan",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Hari"
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Tgl"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "title": "Skore Hari Perawatan Ke",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "defaultValue": [
+           {
+            "Column 9": "p",
+            "Column 6": 0
+           },
+           {
+            "Column 9": "S",
+            "Column 6": 0
+           },
+           {
+            "Column 9": "M",
+            "Column 6": 0
+           }
+          ],
+          "correctAnswer": [
+           {
+            "Column 6": 0
+           },
+           {
+            "Column 6": 0
+           },
+           {
+            "Column 6": 0
+           }
+          ],
+          "columns": [
+           {
+            "name": "Column 9",
+            "title": "P/S/M",
+            "cellType": "text",
+            "colCount": 2,
+            "readOnly": true
+           },
+           {
+            "name": "Column 1",
+            "title": "Tidak Nyeri",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             }
+            ]
+           },
+           {
+            "name": "Column 2",
+            "title": "Nyeri ringan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Nyeri Sangat Ringan"
+             },
+             {
+              "value": "2",
+              "text": "Nyeri Tidak Nyaman"
+             },
+             {
+              "value": "3",
+              "text": "Nyeri Dapat Ditoleransi"
+             }
+            ]
+           },
+           {
+            "name": "Column 3",
+            "title": "Nyeri sedang",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Menyusahkan"
+             },
+             {
+              "value": "5",
+              "text": "Sangat Menyusahkan"
+             },
+             {
+              "value": "6",
+              "text": "Nyeri Hebat"
+             }
+            ]
+           },
+           {
+            "name": "Column 4",
+            "title": "Nyeri Berat",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "7",
+              "text": "Sangat Hebat"
+             },
+             {
+              "value": "8",
+              "text": "Sangat Menyiksa"
+             },
+             {
+              "value": "9",
+              "text": "Tak Tertahankan"
+             },
+             {
+              "value": "10",
+              "text": "Tak Dapat Diungkapkan"
+             }
+            ]
+           },
+           {
+            "name": "Column 6",
+            "title": "Total Skor",
+            "cellType": "expression",
+            "expression": "{row.Column 1}+{row.Column 2}+{row.Column 3}+{row.Column 4}"
+           },
+           {
+            "name": "penilai",
+            "title": "Penilai",
+            "cellType": "dropdown",
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_userppa_iri"
+            }
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 3,
+          "defaultRowValue": {
+           "Column 6": 0
+          },
+          "addRowText": "ADD"
+         }
+        ],
+        "allowRemovePanel": false,
+        "panelCount": 1,
+        "panelAddText": "Tambah Skor perawatan"
+       }
+      ],
+      "title": "Asesmen Ulang Nyeri pada pasien Dewasa"
+     }
+    ]
+   }

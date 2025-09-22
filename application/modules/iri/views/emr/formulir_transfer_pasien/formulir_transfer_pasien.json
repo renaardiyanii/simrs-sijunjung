@@ -1,0 +1,1077 @@
+{
+    "title": "FORMULIR TRANSFER PASIEN ",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel11",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel1",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question35",
+            "title": "Tanggal",
+            "hideNumber": true,
+            "inputType": "datetime-local"
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question1",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Jenis kelamin",
+              "cellType": "radiogroup",
+              "choices": [
+               {
+                "value": "item1",
+                "text": "P"
+               },
+               {
+                "value": "item2",
+                "text": "L"
+               }
+              ]
+             },
+             {
+              "name": "column2",
+              "title": "Ruangan asal",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "Waktu transfer",
+              "cellType": "text",
+              "inputType": "time"
+             },
+             {
+              "name": "column4",
+              "title": "Diagnosis masuk RI",
+              "cellType": "text"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question2",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Tanggal transfer",
+              "cellType": "text",
+              "inputType": "date"
+             },
+             {
+              "name": "column2",
+              "title": "Ruangan yang dituju",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "Waktu tiba",
+              "cellType": "text",
+              "inputType": "time"
+             },
+             {
+              "name": "column4",
+              "title": "Indikasi dirawat",
+              "cellType": "text"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel2",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question3",
+            "title": "Pukul",
+            "inputType": "time"
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question4",
+            "title": "Anamnesis",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "keluhan utama",
+              "cellType": "comment"
+             },
+             {
+              "name": "column2",
+              "title": "riwayat penyakit",
+              "cellType": "comment"
+             },
+             {
+              "name": "column3",
+              "title": "riwayat alergi",
+              "cellType": "comment"
+             },
+             {
+              "name": "column4",
+              "title": "pemeriksaaan fisik",
+              "cellType": "comment"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "multipletext",
+            "name": "question5",
+            "titleLocation": "hidden",
+            "items": [
+             {
+              "name": "text1",
+              "placeHolder": "mmHg",
+              "title": "Pemeriksaan tanda tanda vital"
+             },
+             {
+              "name": "text2",
+              "placeHolder": "C",
+              "title": "Suhu"
+             },
+             {
+              "name": "text3",
+              "placeHolder": "x/mnt",
+              "title": "Nadi"
+             }
+            ],
+            "colCount": 3
+           },
+           {
+            "type": "comment",
+            "name": "question6",
+            "title": "Keadaan umum",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question7",
+            "title": "Alasan ditransfer",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question8",
+            "title": "Kebutuhan pelayanan",
+            "hideNumber": true
+           },
+           {
+            "type": "panel",
+            "name": "panel3",
+            "elements": [
+             {
+              "type": "comment",
+              "name": "question9",
+              "titleLocation": "hidden"
+             }
+            ],
+            "title": "II. PEMERIKSAAN PENUNJANG YANG SUDAH DILAKUKAN"
+           },
+           {
+            "type": "panel",
+            "name": "panel4",
+            "elements": [
+             {
+              "type": "comment",
+              "name": "question10",
+              "titleLocation": "hidden"
+             }
+            ],
+            "title": "III. TINDAKAN MEDIS YANG DILAKUKAN"
+           },
+           {
+            "type": "panel",
+            "name": "panel5",
+            "elements": [
+             {
+              "type": "comment",
+              "name": "question11",
+              "titleLocation": "hidden"
+             },
+             {
+              "type": "panel",
+              "name": "panel6",
+              "elements": [
+               {
+                "type": "comment",
+                "name": "question12",
+                "titleLocation": "hidden"
+               }
+              ],
+              "title": "V. LAIN LAIN"
+             },
+             {
+              "type": "dropdown",
+              "name": "question33",
+              "title": "Dokter pengirim",
+              "hideNumber": true,
+              "choices": [
+               "item1",
+               "item2",
+               "item3"
+              ],
+              "choicesByUrl": {
+               "url": "/admin/dokter_konsul"
+              }
+             }
+            ],
+            "title": "IV. PEMBERIAN TERAPI"
+           }
+          ],
+          "title": "I. RINGKASAN RIWAYAT PASIEN"
+         }
+        ]
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question20",
+        "title": " ",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "panel",
+          "name": "panel12",
+          "elements": [
+           {
+            "type": "panel",
+            "name": "panel13",
+            "elements": [
+             {
+              "type": "text",
+              "name": "question36",
+              "title": "Tanggal",
+              "hideNumber": true,
+              "inputType": "datetime-local"
+             },
+             {
+              "type": "matrixdynamic",
+              "name": "question21",
+              "titleLocation": "hidden",
+              "columns": [
+               {
+                "name": "column1",
+                "title": "Jenis kelamin",
+                "cellType": "radiogroup",
+                "choices": [
+                 {
+                  "value": "item1",
+                  "text": "P"
+                 },
+                 {
+                  "value": "item2",
+                  "text": "L"
+                 }
+                ]
+               },
+               {
+                "name": "column2",
+                "title": "Ruangan asal",
+                "cellType": "text"
+               },
+               {
+                "name": "column3",
+                "title": "Waktu transfer",
+                "cellType": "text",
+                "inputType": "time"
+               },
+               {
+                "name": "column4",
+                "title": "Diagnosis masuk RI",
+                "cellType": "text"
+               }
+              ],
+              "columnLayout": "vertical",
+              "choices": [
+               1,
+               2,
+               3,
+               4,
+               5
+              ],
+              "allowAddRows": false,
+              "allowRemoveRows": false,
+              "rowCount": 1
+             },
+             {
+              "type": "matrixdynamic",
+              "name": "question22",
+              "startWithNewLine": false,
+              "titleLocation": "hidden",
+              "columns": [
+               {
+                "name": "column1",
+                "title": "Tanggal transfer",
+                "cellType": "text",
+                "inputType": "date"
+               },
+               {
+                "name": "column2",
+                "title": "Ruangan yang dituju",
+                "cellType": "text"
+               },
+               {
+                "name": "column3",
+                "title": "Waktu tiba",
+                "cellType": "text",
+                "inputType": "time"
+               },
+               {
+                "name": "column4",
+                "title": "Indikasi dirawat",
+                "cellType": "text"
+               }
+              ],
+              "columnLayout": "vertical",
+              "choices": [
+               1,
+               2,
+               3,
+               4,
+               5
+              ],
+              "allowAddRows": false,
+              "allowRemoveRows": false,
+              "rowCount": 1
+             }
+            ]
+           },
+           {
+            "type": "panel",
+            "name": "panel14",
+            "elements": [
+             {
+              "type": "text",
+              "name": "question23",
+              "title": "Pukul",
+              "inputType": "time"
+             },
+             {
+              "type": "matrixdynamic",
+              "name": "question24",
+              "title": "Anamnesis",
+              "columns": [
+               {
+                "name": "column1",
+                "title": "keluhan utama",
+                "cellType": "comment"
+               },
+               {
+                "name": "column2",
+                "title": "riwayat penyakit",
+                "cellType": "comment"
+               },
+               {
+                "name": "column3",
+                "title": "riwayat alergi",
+                "cellType": "comment"
+               },
+               {
+                "name": "column4",
+                "title": "pemeriksaaan fisik",
+                "cellType": "comment"
+               }
+              ],
+              "columnLayout": "vertical",
+              "choices": [
+               1,
+               2,
+               3,
+               4,
+               5
+              ],
+              "allowAddRows": false,
+              "allowRemoveRows": false,
+              "rowCount": 1
+             },
+             {
+              "type": "multipletext",
+              "name": "question25",
+              "titleLocation": "hidden",
+              "items": [
+               {
+                "name": "text1",
+                "placeHolder": "mmHg",
+                "title": "Pemeriksaan tanda tanda vital"
+               },
+               {
+                "name": "text2",
+                "placeHolder": "C",
+                "title": "Suhu"
+               },
+               {
+                "name": "text3",
+                "placeHolder": "x/mnt",
+                "title": "Nadi"
+               }
+              ],
+              "colCount": 3
+             },
+             {
+              "type": "comment",
+              "name": "question26",
+              "title": "Keadaan umum",
+              "hideNumber": true
+             },
+             {
+              "type": "comment",
+              "name": "question27",
+              "title": "Alasan ditransfer",
+              "hideNumber": true
+             },
+             {
+              "type": "comment",
+              "name": "question28",
+              "title": "Kebutuhan pelayanan",
+              "hideNumber": true
+             },
+             {
+              "type": "panel",
+              "name": "panel15",
+              "elements": [
+               {
+                "type": "comment",
+                "name": "question29",
+                "titleLocation": "hidden"
+               }
+              ],
+              "title": "II. PEMERIKSAAN PENUNJANG YANG SUDAH DILAKUKAN"
+             },
+             {
+              "type": "panel",
+              "name": "panel16",
+              "elements": [
+               {
+                "type": "comment",
+                "name": "question30",
+                "titleLocation": "hidden"
+               }
+              ],
+              "title": "III. TINDAKAN MEDIS YANG DILAKUKAN"
+             },
+             {
+              "type": "panel",
+              "name": "panel17",
+              "elements": [
+               {
+                "type": "comment",
+                "name": "question31",
+                "titleLocation": "hidden"
+               },
+               {
+                "type": "panel",
+                "name": "panel18",
+                "elements": [
+                 {
+                  "type": "comment",
+                  "name": "question32",
+                  "titleLocation": "hidden"
+                 }
+                ],
+                "title": "V. LAIN LAIN"
+               },
+               {
+                "type": "dropdown",
+                "name": "question45",
+                "title": "Dokter pengirim",
+                "choices": [
+                 "item1",
+                 "item2",
+                 "item3"
+                ],
+                "choicesByUrl": {
+                 "url": "/admin/dokter_konsul"
+                }
+               }
+              ],
+              "title": "IV. PEMBERIAN TERAPI"
+             }
+            ],
+            "title": "I. RINGKASAN RIWAYAT PASIEN"
+           }
+          ]
+         }
+        ],
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question43",
+          "title": "Tanggal",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question13",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "Nama petugas dan pendamping",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Derajat 0"
+           },
+           {
+            "value": "item2",
+            "text": "Derajat 1"
+           },
+           {
+            "value": "item3",
+            "text": "Derajat 2"
+           },
+           {
+            "value": "item4",
+            "text": "Derajat 3"
+           }
+          ]
+         }
+        ],
+        "title": "KATEGORI DAN PENDAMPINGAN PASIEN TRANSFER"
+       },
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel9",
+          "elements": [
+           {
+            "type": "matrixdynamic",
+            "name": "question14",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "jam",
+              "cellType": "text",
+              "inputType": "time"
+             },
+             {
+              "name": "column2",
+              "title": "Keadaan umum",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "kesadaran",
+              "cellType": "text"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question16",
+            "title": "Pemeriksaan tanda tanda vital :",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "tensi",
+              "cellType": "text"
+             },
+             {
+              "name": "column2",
+              "title": "suhu",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "nadi",
+              "cellType": "text",
+              "inputType": "number"
+             },
+             {
+              "name": "column4",
+              "title": "pernafasan",
+              "cellType": "text"
+             },
+             {
+              "name": "column5",
+              "title": "skor EWS",
+              "cellType": "text"
+             },
+             {
+              "name": "column6",
+              "title": "Catatan penting",
+              "cellType": "comment"
+             },
+             {
+              "name": "column7",
+              "title": "Petugas yang menyerahkan",
+              "cellType": "signaturepad"
+             },
+             {
+              "name": "column8",
+              "title": "Nama petugas",
+              "cellType": "text"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           }
+          ],
+          "title": "Sebelum ditransfer"
+         },
+         {
+          "type": "panel",
+          "name": "panel10",
+          "elements": [
+           {
+            "type": "matrixdynamic",
+            "name": "question15",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "jam",
+              "cellType": "text",
+              "inputType": "time"
+             },
+             {
+              "name": "column2",
+              "title": "Keadaan umum",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "kesadaran",
+              "cellType": "text"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question17",
+            "title": "Pemeriksaan tanda tanda vital :",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "tensi",
+              "cellType": "text"
+             },
+             {
+              "name": "column2",
+              "title": "suhu",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "nadi",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "pernafasan",
+              "cellType": "text"
+             },
+             {
+              "name": "column5",
+              "title": "skor EWS",
+              "cellType": "text"
+             },
+             {
+              "name": "column6",
+              "title": "Catatan penting",
+              "cellType": "comment"
+             },
+             {
+              "name": "column7",
+              "title": "Petugas yang menerima",
+              "cellType": "signaturepad"
+             },
+             {
+              "name": "column8",
+              "title": "Nama petugas",
+              "cellType": "text"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           }
+          ],
+          "title": "Setelah ditransfer",
+          "startWithNewLine": false
+         }
+        ],
+        "title": "V. KONDISI PASIEN"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question37",
+        "title": " ",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "panel",
+          "name": "panel19",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question44",
+            "title": "Tanggal",
+            "hideNumber": true,
+            "inputType": "datetime-local"
+           },
+           {
+            "type": "matrixdropdown",
+            "name": "question38",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "Column 1",
+              "title": "Nama petugas dan pendamping",
+              "cellType": "text"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "rows": [
+             {
+              "value": "item1",
+              "text": "Derajat 0"
+             },
+             {
+              "value": "item2",
+              "text": "Derajat 1"
+             },
+             {
+              "value": "item3",
+              "text": "Derajat 2"
+             },
+             {
+              "value": "item4",
+              "text": "Derajat 3"
+             }
+            ]
+           }
+          ],
+          "title": "KATEGORI DAN PENDAMPINGAN PASIEN TRANSFER"
+         },
+         {
+          "type": "panel",
+          "name": "panel20",
+          "elements": [
+           {
+            "type": "panel",
+            "name": "panel21",
+            "elements": [
+             {
+              "type": "matrixdynamic",
+              "name": "question39",
+              "titleLocation": "hidden",
+              "columns": [
+               {
+                "name": "column1",
+                "title": "jam",
+                "cellType": "text",
+                "inputType": "time"
+               },
+               {
+                "name": "column2",
+                "title": "Keadaan umum",
+                "cellType": "text"
+               },
+               {
+                "name": "column3",
+                "title": "kesadaran",
+                "cellType": "text"
+               }
+              ],
+              "columnLayout": "vertical",
+              "choices": [
+               1,
+               2,
+               3,
+               4,
+               5
+              ],
+              "allowAddRows": false,
+              "allowRemoveRows": false,
+              "rowCount": 1
+             },
+             {
+              "type": "matrixdynamic",
+              "name": "question40",
+              "title": "Pemeriksaan tanda tanda vital :",
+              "columns": [
+               {
+                "name": "column1",
+                "title": "tensi",
+                "cellType": "text"
+               },
+               {
+                "name": "column2",
+                "title": "suhu",
+                "cellType": "text"
+               },
+               {
+                "name": "column3",
+                "title": "nadi",
+                "cellType": "text",
+                "inputType": "number"
+               },
+               {
+                "name": "column4",
+                "title": "pernafasan",
+                "cellType": "text"
+               },
+               {
+                "name": "column5",
+                "title": "skor EWS",
+                "cellType": "text"
+               },
+               {
+                "name": "column6",
+                "title": "Catatan penting",
+                "cellType": "comment"
+               },
+               {
+                "name": "column7",
+                "title": "Petugas yang menyerahkan",
+                "cellType": "signaturepad"
+               },
+               {
+                "name": "column8",
+                "title": "Nama petugas",
+                "cellType": "text"
+               }
+              ],
+              "columnLayout": "vertical",
+              "choices": [
+               1,
+               2,
+               3,
+               4,
+               5
+              ],
+              "allowAddRows": false,
+              "allowRemoveRows": false,
+              "rowCount": 1
+             }
+            ],
+            "title": "Sebelum ditransfer"
+           },
+           {
+            "type": "panel",
+            "name": "panel22",
+            "elements": [
+             {
+              "type": "matrixdynamic",
+              "name": "question41",
+              "titleLocation": "hidden",
+              "columns": [
+               {
+                "name": "column1",
+                "title": "jam",
+                "cellType": "text",
+                "inputType": "time"
+               },
+               {
+                "name": "column2",
+                "title": "Keadaan umum",
+                "cellType": "text"
+               },
+               {
+                "name": "column3",
+                "title": "kesadaran",
+                "cellType": "text"
+               }
+              ],
+              "columnLayout": "vertical",
+              "choices": [
+               1,
+               2,
+               3,
+               4,
+               5
+              ],
+              "allowAddRows": false,
+              "allowRemoveRows": false,
+              "rowCount": 1
+             },
+             {
+              "type": "matrixdynamic",
+              "name": "question42",
+              "title": "Pemeriksaan tanda tanda vital :",
+              "columns": [
+               {
+                "name": "column1",
+                "title": "tensi",
+                "cellType": "text"
+               },
+               {
+                "name": "column2",
+                "title": "suhu",
+                "cellType": "text"
+               },
+               {
+                "name": "column3",
+                "title": "nadi",
+                "cellType": "text",
+                "inputType": "number"
+               },
+               {
+                "name": "column4",
+                "title": "pernafasan",
+                "cellType": "text"
+               },
+               {
+                "name": "column5",
+                "title": "skor EWS",
+                "cellType": "text"
+               },
+               {
+                "name": "column6",
+                "title": "Catatan penting",
+                "cellType": "comment"
+               },
+               {
+                "name": "column7",
+                "title": "Petugas yang menerima",
+                "cellType": "signaturepad"
+               },
+               {
+                "name": "column8",
+                "title": "Nama petugas",
+                "cellType": "text"
+               }
+              ],
+              "columnLayout": "vertical",
+              "choices": [
+               1,
+               2,
+               3,
+               4,
+               5
+              ],
+              "allowAddRows": false,
+              "allowRemoveRows": false,
+              "rowCount": 1
+             }
+            ],
+            "title": "Setelah ditransfer",
+            "startWithNewLine": false
+           }
+          ],
+          "title": "V. KONDISI PASIEN"
+         }
+        ],
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

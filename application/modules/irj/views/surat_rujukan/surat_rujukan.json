@@ -1,0 +1,59 @@
+{
+    "title": "SURAT RUJUKAN",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "rumah_sakit",
+          "title": "Kepada Rumah Sakit"
+         },
+         {
+          "name": "alamat",
+          "title": "Alamat Rumah Sakit"
+         },
+         {
+          "name": "bagian",
+          "title": "Bagian"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "question2",
+        "title": "TS Yth, mohon pemeriksaan dan pengobatan lebih lanjut terhadap penderita",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "nama",
+          "title": "Nama"
+         },
+         {
+          "name": "umur",
+          "title": "Umur"
+         },
+         {
+          "name": "no_kartu",
+          "title": "Nomor Kartu"
+         },
+         {
+          "name": "diagnosa",
+          "title": "Diagnosa Sementara"
+         }
+        ],
+        "itemSize": 100
+       },
+       {
+        "type": "html",
+        "name": "question3",
+        "html": "<h5> Atas Pertolongan TS kami ucapkan terima kasih, mohon informasi selanjutnya,"
+       }
+      ]
+     }
+    ]
+   }

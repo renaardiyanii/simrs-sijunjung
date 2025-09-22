@@ -1,0 +1,181 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Nama Ahli Bedah"
+         },
+         {
+          "name": "Column 2",
+          "title": "Nama Asisten"
+         },
+         {
+          "name": "Column 3",
+          "title": "Nama Instrumen"
+         },
+         {
+          "name": "Column 4",
+          "title": "Nama Ahli Anestesi"
+         },
+         {
+          "name": "Column 5",
+          "title": "Nama Perawat Anestesi"
+         },
+         {
+          "name": "Column 6",
+          "title": "Jenis Anestesi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "UMUM",
+            "text": "Umum"
+           },
+           {
+            "value": "SPINAL",
+            "text": "Spinal"
+           },
+           {
+            "value": "EPIDURAL",
+            "text": "Epidural  "
+           },
+           {
+            "value": "LOKAL",
+            "text": "Lokal"
+           }
+          ],
+          "hasNone": true,
+          "noneText": "lain lain"
+         },
+         {
+          "name": "Column 7",
+          "title": "Jenis operasi",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 8",
+          "title": "Diagnosa Pra Bedah\t"
+         },
+         {
+          "name": "Column 9",
+          "title": "Diagnosa Pasca Bedah",
+          "cellType": "dropdown",
+          "choicesByUrl": {
+           "url": "/admin/admin/get_all_icd"
+          }
+         },
+         {
+          "name": "Column 10",
+          "title": "Komplikasi Yang di temukan"
+         },
+         {
+          "name": "Column 11",
+          "title": "Nama Operasi"
+         },
+         {
+          "name": "Column 22",
+          "title": "icd 9",
+          "cellType": "dropdown",
+          "choicesByUrl": {
+           "url": "/admin/admin/get_all_icd9"
+          }
+         },
+         {
+          "name": "Column 12",
+          "title": "Implant yang dipasang"
+         },
+         {
+          "name": "Column 13",
+          "title": "No Seri"
+         },
+         {
+          "name": "Column 14",
+          "title": "Jumlah Perdarahan"
+         },
+         {
+          "name": "Column 15",
+          "title": "Jumlah transfuse\t"
+         },
+         {
+          "name": "Column 16",
+          "title": "Jaringan yang di eks/ inc"
+         },
+         {
+          "name": "Column 17",
+          "title": "Di PA kan",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "Column 18",
+          "title": "Tanggal Operasi"
+         },
+         {
+          "name": "Column 19",
+          "title": "Jam Mulai Operasi"
+         },
+         {
+          "name": "Column 20",
+          "title": "Jam Selesai Operasi",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "Column 21",
+          "title": "Lama Operasi"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "comment",
+        "name": "question2",
+        "title": "Laporan Operasi",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question3",
+        "title": "Intruksi Pasca Bedah",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question4",
+        "title": "Obat Obatan yang diberikan",
+        "hideNumber": true
+       }
+      ],
+      "title": "Laporan Operasi"
+     }
+    ]
+   }

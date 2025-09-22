@@ -1,0 +1,14 @@
+#DB. CONF
+DBHOST=localhost
+DBUSER=example
+DBPASS=example
+DBNAME=example
+DBPORT=0000
+
+
+#B.P.J.S.
+CONSID=
+SECRETKEY=
+BASEURL=
+SERVNAME=
+USERKEY=

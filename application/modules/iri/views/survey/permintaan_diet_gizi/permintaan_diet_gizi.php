@@ -1,0 +1,224 @@
+<?php 
+$this->load->view('layout/header_form');
+
+?>
+
+
+
+
+<div class="card m-5">
+    <div class="card-header ">
+        <div class="d-flex justify-content-between">
+			<h5>Permintaan Diet Gizi</h5>
+			<div class="d-flex">
+                <!-- <button class="btn btn-primary" onclick="inputResep()"><i class="fa fa-plus"></i> Resep</button>&nbsp;&nbsp; -->
+			</div>
+		</div>
+    </div>
+	<div class="card-body">			
+            <div class="form-group row">
+                <label for="standar_diet" class="col-3 col-form-label">Permintaan Diet</label>
+                <div class="col-9">
+                    <div>
+                    <div class="md-radio">
+                        <input id="flag_permintaan_gizi1" type="radio" name="flag_permintaan_gizi" value="1" <?php if($data_pasien[0]['permintaan_gizi']==1) echo "checked"; ?> onclick="edit_permintaan_gizi(this.value)">
+                        <label for="flag_permintaan_gizi1">Aktif</label>
+                    </div>
+                    <div class="md-radio">
+                        <input id="flag_permintaan_gizi2" type="radio" name="flag_permintaan_gizi" value="0" <?php if($data_pasien[0]['permintaan_gizi']==0) echo "checked"; ?> onclick="edit_permintaan_gizi(this.value)">
+                        <label for="flag_permintaan_gizi2">Tidak Aktif</label>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <hr>
+
+        <form class="form-horizontal" method="POST" id="form_permintaan_diet">
+            <div class="form-group row">
+                <label for="standar_diet" class="col-3 col-form-label">Standar Diet</label>
+                <div class="col-9">
+                <select id="standar_diet" name="standar_diet" class="form-control select2" multiple="multiple" style="width:100%;" data-placeholder="">
+                    <?php
+                        foreach($standar_diet as $row) { ?>
+                        <option value="<?php echo $row->standar_diet; ?>"><?php echo $row->standar_diet; ?></option>
+                    <?php } ?>
+                </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="bentuk_makanan" class="col-3 col-form-label">Bentuk Makanan</label>
+                <div class="col-9">
+                <select id="bentuk_makanan" name="bentuk_makanan" class="form-control select2"  style="width:100%;" >
+                    <option value="">-- Pilih Bentuk Makanan --</option>
+                    <?php
+                        foreach($bentuk_makanan as $row) { ?>
+                        <option value="<?php echo $row->kode; ?>"><?php echo $row->kode.' ('.$row->nama.')'; ?></option>
+                    <?php } ?>
+                </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catatan" class="col-3 col-form-label">Catatan</label>
+                <div class="col-9">
+                <textarea class="form-control" id="catatan_gizi" name="catatan_gizi" rows="6"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-9 push-md-3">
+                <button type="submit" class="btn waves-effect waves-light btn-primary" id="btn-submit"><i class="fa fa-floppy-o"></i> Simpan</button>
+                </div>
+            </div>
+        </form>
+	</div>
+</div>
+
+
+
+<div class="card m-5">
+	<div class="card-header">
+		<h5>Riwayat</h5>
+	</div>
+	<div class="card-body">
+    <table id="table-history" class="display nowrap table table-hover table-bordered" cellspacing="0" width="100%">
+              <thead>
+              <tr>
+                <th class="text-center">No.</th>
+                <th>Standar Diet</th>
+                <th class="text-center">Bentuk Makanan</th>
+                <th>Catatan</th>  
+                <th class="text-center">Waktu</th>  
+                <th class="text-center">User</th>   
+                <th class="text-center">Aksi</th>            
+              </tr>
+              </thead>
+              <tbody>                
+              </tbody>
+            </table>
+	</div>
+</div>
+
+<script type="text/javascript">
+   var table_history;
+  var id_edit;
+$(document).ready(function(){
+ 
+	show_permintaan_diet('<?php echo $no_ipd; ?>');
+
+    $('.select2').select2();
+
+    table_history = $('#table-history').DataTable({ 
+      "serverSide": true,
+      "order": [],    
+      "lengthMenu": [
+        [ 10, 25, 50, -1 ],
+        [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+      ],
+      "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+      "ajax": {
+        "url": "<?php echo site_url('gizi/history_permintaan_diet_ruangan')?>",
+        "type": "POST",
+        "data": {"no_ipd" : "<?php echo $no_ipd; ?>"}
+      }
+    });
+   
+    $("#form_permintaan_diet").submit(function(event) {
+      document.getElementById("btn-submit").innerHTML = '<i class="fa fa-spinner fa-spin"></i> Loading...';
+      $.ajax({
+          type: "POST",
+          url: "<?php echo base_url('gizi/gizi/insert_permintaan_diet')?>",
+        //   url: "<?php //echo base_url().'gizi/insert_permintaan_diet'; ?>",
+          dataType: "JSON",
+          data: {"no_ipd" : "<?php echo $no_ipd; ?>","bed" : "<?php echo $data_pasien[0]['bed']; ?>","standar_diet" : $("#standar_diet").val().toString(),"catatan" : $("#catatan_gizi").val(),"bentuk_makanan" : $("#bentuk_makanan").val()},
+          success: function(result) {   
+            document.getElementById("btn-submit").innerHTML = '<i class="fa fa-floppy-o"></i> Simpan';
+            if (result.metadata.code == '200') {
+              table_history.ajax.reload(); 
+              show_permintaan_diet('<?php echo $no_ipd; ?>');
+              swal("Sukses", "Permintaan Diet Berhasil Disimpan.", "success");
+            } else if (result.metadata.code == '402') {
+              swal(result.metadata.message, "Harap isikan data jika ada perubahan permintaan diet.", "warning"); 
+            } else {
+              swal("Gagal Menyimpan Permintaan", "Silahkan COba Lagi.", "error");            
+            }
+          },
+          error:function(event, textStatus, errorThrown) { 
+            document.getElementById("btn-submit").innerHTML = '<i class="fa fa-floppy-o"></i> Simpan';                     
+            swal("Gagal Menyimpan Permintaan Diet",formatErrorMessage(event, errorThrown), "error");  
+          }
+      });
+      event.preventDefault();
+    });
+
+});
+
+function show_permintaan_diet(no_ipd){
+    // console.log(no_ipd);
+  $.ajax({
+    type: "GET",
+    // url: "<?php //echo site_url('gizi/show_permintaan_diet'); ?>/"+no_ipd,
+    url: "<?php echo base_url('gizi/gizi/show_permintaan_diet/'.$no_ipd)?>",
+    dataType: "JSON",      
+    success: function(result){    
+    console.log(result);     
+      if (result != null) {    
+        var standar_diet = result.standar.split(',');
+        $('#standar_diet').select2().select2('val', [standar_diet]);
+        $('#bentuk_makanan').val(result.bentuk).trigger('change');
+        $('#catatan').val(result.catatan);
+      }
+    },
+    error:function(event, textStatus, errorThrown) { 
+      swal("Gagal Menampilkan Data Permintaan Diet",formatErrorMessage(event, errorThrown), "error");  
+    }
+  });
+}
+
+
+function edit_permintaan_gizi(flag){
+    console.log(flag);
+    $.ajax({
+      type: "POST",
+      url: "<?php echo base_url('gizi/gizi/edit_flag_permintaan_diet'); ?>",
+      dataType: "JSON",
+      data: {"no_ipd" : "<?php echo $no_ipd; ?>","flag" : flag},
+      dataType: "JSON",      
+      success: function(result){    
+        if (result != null) {    
+          if(flag==1){
+            swal("Sukses", "Berhasil Mengaktifkan Permintaan Gizi.", "success");
+          }else{
+            swal("Sukses", "Berhasil Mematikan Permintaan Gizi.", "success");
+          }
+        }
+      },
+      error:function(event, textStatus, errorThrown) { 
+        swal("Gagal Menampilkan Data Permintaan Diet",formatErrorMessage(event, errorThrown), "error");  
+      }
+    });
+  }
+
+  function hapus_permintaan_diet(id)
+  {
+    
+          $.ajax({
+            type: "GET",
+            url: "<?php echo site_url('gizi/delete_permintaan_diet'); ?>/"+id,
+            dataType: "JSON",      
+            success: function(result){    
+            console.log(result);     
+              if (result != null) {    
+                table_history.ajax.reload();
+                new swal("Sukses", "Berhasil Menghapus Data Permintaan Diet.", "success");
+              }
+            },
+            error:function(event, textStatus, errorThrown) { 
+              new swal("Gagal Menampilkan Data Permintaan Diet",formatErrorMessage(event, errorThrown), "error");  
+            }
+          });         
+  }
+
+</script>
+

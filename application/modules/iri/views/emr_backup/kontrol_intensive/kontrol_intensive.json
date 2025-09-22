@@ -1,0 +1,151 @@
+{
+    "title": "KONTROL INTENSIVE",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "table",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "TD (TTV)",
+          "cellType": "text"
+         },
+         {
+          "name": "column2",
+          "title": "N (TTV)",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "S (TTV)",
+          "cellType": "text"
+         },
+         {
+          "name": "column4",
+          "title": "P (TTV)",
+          "cellType": "text"
+         },
+         {
+          "name": "column5",
+          "title": "I (DJJ)",
+          "cellType": "text"
+         },
+         {
+          "name": "column6",
+          "title": "II (DJJ)",
+          "cellType": "text"
+         },
+         {
+          "name": "cairan",
+          "title": "Cairan Infus / Obat yang diberikan",
+          "cellType": "text"
+         },
+         {
+          "name": "jam",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "tetesan",
+          "title": "Jumlah tetesan",
+          "cellType": "text"
+         },
+         {
+          "name": "urin",
+          "title": "Jumlah Urin",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "TD (TTV)",
+          "cellType": "text"
+         },
+         {
+          "name": "column2",
+          "title": "N (TTV)",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "S (TTV)",
+          "cellType": "text"
+         },
+         {
+          "name": "column4",
+          "title": "P (TTV)",
+          "cellType": "text"
+         },
+         {
+          "name": "column5",
+          "title": "I (DJJ)",
+          "cellType": "text"
+         },
+         {
+          "name": "column6",
+          "title": "II (DJJ)",
+          "cellType": "text"
+         },
+         {
+          "name": "cairan",
+          "title": "Cairan Infus / Obat yang diberikan",
+          "cellType": "text"
+         },
+         {
+          "name": "jam",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "tetesan",
+          "title": "Jumlah tetesan",
+          "cellType": "text"
+         },
+         {
+          "name": "urin",
+          "title": "Jumlah Urin",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

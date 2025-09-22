@@ -1,0 +1,188 @@
+{
+    "title": "SURAT RUJUKAN",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nomor Surat"
+         },
+         {
+          "name": "rumah_sakit",
+          "title": "Kepada Rumah Sakit"
+         },
+         {
+          "name": "alamat",
+          "title": "Alamat Rumah Sakit"
+         },
+         {
+          "name": "bagian",
+          "title": "Bagian"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "question2",
+        "title": "TS Yth, mohon pemeriksaan dan pengobatan lebih lanjut terhadap penderita",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "nama",
+          "title": "Nama"
+         },
+         {
+          "name": "umur",
+          "title": "Umur"
+         },
+         {
+          "name": "no_kartu",
+          "title": "Nomor Kartu"
+         },
+         {
+          "name": "diagnosa",
+          "title": "Diagnosa Sementara"
+         }
+        ],
+        "itemSize": 100
+       },
+       {
+        "type": "comment",
+        "name": "question7",
+        "title": "Catatan",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question3",
+          "html": "<h5> Atas Pertolongan TS kami ucapkan terima kasih, mohon informasi selanjutnya,"
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "title": "Tanah Badantuang, ",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "dropdown",
+          "name": "question5",
+          "useDisplayValuesInTitle": false,
+          "title": "Dokter Pengirim",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/dokter_konsul"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question8",
+        "title": "TS Yth, dikirimkan kembali penderita untuk tindak lanjut :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "nama",
+          "title": "Nama"
+         },
+         {
+          "name": "umur",
+          "title": "Umur"
+         },
+         {
+          "name": "diagnosa",
+          "title": "Diagnosa Akhir"
+         }
+        ],
+        "itemSize": 100
+       },
+       {
+        "type": "multipletext",
+        "name": "question9",
+        "title": "Tindak lanjut yang dianjurkan",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "nama",
+          "title": "Pengobatan"
+         },
+         {
+          "name": "umur",
+          "inputType": "datetime-local",
+          "title": "Kontrol kembali ke Rumah Sakit tanggal"
+         },
+         {
+          "name": "diagnosa",
+          "title": "Pelayanan / Tindakan yang telah diberikan :"
+         },
+         {
+          "name": "text1",
+          "title": "Penunjang Diagnostik :"
+         },
+         {
+          "name": "text2",
+          "title": "Tindakan :"
+         },
+         {
+          "name": "text3",
+          "title": "Perawatan :"
+         }
+        ],
+        "itemSize": 100
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question11",
+          "title": "Tanah Badantuang, ",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "dropdown",
+          "name": "question6",
+          "useDisplayValuesInTitle": false,
+          "title": "Dokter Pengirim",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/dokter_konsul"
+          }
+         }
+        ]
+       }
+      ],
+      "title": "RUJUKAN BALIK"
+     }
+    ]
+   }

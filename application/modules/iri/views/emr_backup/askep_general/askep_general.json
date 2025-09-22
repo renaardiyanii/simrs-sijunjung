@@ -1,0 +1,4436 @@
+{
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "tgl",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "diag_kep",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Ansietas\n\nDefinisi : perasaan tidak nyaman atau kekhawatiran yang samar di sertai respon autonom , perasaan takut yang disebabkan oleh atisipasi terhadap bahaya.\nBerhubungan dengan: \n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "prosedure tindakan."
+           },
+           {
+            "value": "item2",
+            "text": "penyakit yang diderita"
+           },
+           {
+            "value": "item3",
+            "text": "DS :"
+           },
+           {
+            "value": "item4",
+            "text": "Keluarga/pasien mengatakan cemas dengan"
+           },
+           {
+            "value": "item5",
+            "text": "DO :"
+           },
+           {
+            "value": "item6",
+            "text": "Gelisah     "
+           },
+           {
+            "value": "item7",
+            "text": "Insomnia    "
+           },
+           {
+            "value": "item8",
+            "text": "Agitasi"
+           },
+           {
+            "value": "item9",
+            "text": "Mengintai "
+           },
+           {
+            "value": "item10",
+            "text": "Tampak waspada                                                 "
+           },
+           {
+            "value": "item11",
+            "text": "Ketakutan "
+           },
+           {
+            "value": "item12",
+            "text": "Kontak mata yang buruk"
+           },
+           {
+            "value": "item13",
+            "text": "Kesedihan yang mendalam"
+           },
+           {
+            "value": "item14",
+            "text": "Berfokus pada diri sendiri"
+           },
+           {
+            "value": "item15",
+            "text": "Gugup senang berlebihan"
+           },
+           {
+            "value": "item16",
+            "text": "Bingung"
+           },
+           {
+            "value": "item17",
+            "text": "Ragu/ tidak percaya diri"
+           },
+           {
+            "value": "item18",
+            "text": "Wajah tegang, tremor tangan"
+           },
+           {
+            "value": "item19",
+            "text": "Penigkatan keringat"
+           },
+           {
+            "value": "item20",
+            "text": "Suara bergetar"
+           },
+           {
+            "value": "item21",
+            "text": "Anoreksia"
+           },
+           {
+            "value": "item22",
+            "text": "Diare,mulut kering"
+           },
+           {
+            "value": "item23",
+            "text": "Kesulitan bernapas"
+           },
+           {
+            "value": "item24",
+            "text": "Peningkatan deyut nadi"
+           },
+           {
+            "value": "item25",
+            "text": "Penigkatan tekanan darah"
+           },
+           {
+            "value": "item26",
+            "text": "Jantung berdebar-debar"
+           },
+           {
+            "value": "item27",
+            "text": "Wajah memerah"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "noc",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Status coping : Kecemasan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tanda –tanda vital dalam batas normal"
+           },
+           {
+            "value": "item2",
+            "text": "Postur tubuh, ekspresi wajah, bahasa tubuh  dan tingkat aktivitas menunjukkan berkurangnya cemas"
+           },
+           {
+            "value": "item3",
+            "text": "Kedalaman inspirasi normal"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "nic",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Status coping : Kecemasan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Gunakan pendekatan yang tenang dan meyakinkan"
+           },
+           {
+            "value": "item2",
+            "text": "Nyatakan dengan jelas terhadap perilaku klien"
+           },
+           {
+            "value": "item3",
+            "text": "Jelaskan semua prosedure termasuk sensasi yang dirasakan yang mungkin akan dialami klien selama prosedure"
+           },
+           {
+            "value": "item4",
+            "text": "Berikan informasi faktual terkain diagnosis, perawatan dan prognosis"
+           },
+           {
+            "value": "item5",
+            "text": "Dorong keluarga untuk mendampingi klien dengan cara yang tepat"
+           },
+           {
+            "value": "item6",
+            "text": "Dengarkan klien"
+           },
+           {
+            "value": "item7",
+            "text": "Identifikasi pada saat terjadi perubahan tingkat kecemasan"
+           },
+           {
+            "value": "item8",
+            "text": "Bantu klien mengidentifikasi situasi yang memicu kecemasan"
+           },
+           {
+            "value": "item9",
+            "text": "Dukung penggunaan makanisme koping yang sesuai"
+           },
+           {
+            "value": "item10",
+            "text": "Intruksikan klien untuk menggunakan teknik relaksasi"
+           },
+           {
+            "value": "item11",
+            "text": "Atur penggunaan obat-obatan untuk mengurangi kecemasan secara tepat"
+           },
+           {
+            "value": "item12",
+            "text": "Kaji untuk tanda verbal dan non verbal"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "title": "ASUHAN KEPERAWATAN"
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question2",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question1",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Nyeri Akut\nDefenisi:pengalaman sensori dan emosiaoanl yang tidak menyenangkan yang muncul akibat kerusakan jaringan yang aktual atau potensial atau digambarkan sedemikan rupa\nBerhubungan dengan: \n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Trauma tumpul"
+           },
+           {
+            "value": "item2",
+            "text": "Agen cidera"
+           },
+           {
+            "value": "item3",
+            "text": "Insisi pembedahan"
+           },
+           {
+            "value": "item4",
+            "text": "DS:"
+           },
+           {
+            "value": "item5",
+            "text": "DO : Meringis"
+           },
+           {
+            "value": "item6",
+            "text": "Berkaringat"
+           },
+           {
+            "value": "item7",
+            "text": "Nadi cepat"
+           },
+           {
+            "value": "item8",
+            "text": "Cemas "
+           },
+           {
+            "value": "item9",
+            "text": "Pucat"
+           },
+           {
+            "value": "item10",
+            "text": "Sikap melindungi area nyeri"
+           },
+           {
+            "value": "item11",
+            "text": "melaporkan nyeri secara verbal"
+           },
+           {
+            "value": "item12",
+            "text": "Gelisah"
+           },
+           {
+            "value": "item13",
+            "text": "Penurunan kapasitas vital"
+           },
+           {
+            "value": "item14",
+            "text": "Merengek, menangis"
+           },
+           {
+            "value": "item15",
+            "text": "Mata kurang bercahaya"
+           },
+           {
+            "value": "item16",
+            "text": "Tampak kacau"
+           },
+           {
+            "value": "item17",
+            "text": "Gerakan mata berpencar atau tetap pada satu fokus meringis"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question3",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Kontrol nyeri :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tanda-tanda vital dalam batas normal"
+           },
+           {
+            "value": "item2",
+            "text": "Nyeri berkurang"
+           },
+           {
+            "value": "item3",
+            "text": "Mampu menggunakan teknik nonfarmakologi"
+           },
+           {
+            "value": "item4",
+            "text": "Menyatakan rasa nyaman setelah nyeri berkurang"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question4",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen Nyeri",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lakukan pengkajian nyeri secara komprehensif termasuk, lokasi, karakteristik, durasi frekuensi, kualitas dan faktor presipitasi"
+           },
+           {
+            "value": "item2",
+            "text": "Observasi reaksi nonverbal dari ketidaknyamanan"
+           },
+           {
+            "value": "item3",
+            "text": "Kontrol lingkungan yang dapat mempengaruhi nyeri seperti suhu ruangan, pencahayaan dan kebisingan"
+           },
+           {
+            "value": "item4",
+            "text": "Kurangi faktor presipitasi nyeri"
+           },
+           {
+            "value": "item5",
+            "text": "Melakukan penanganan nyeri dengan nonfarmakologi"
+           },
+           {
+            "value": "item6",
+            "text": "Berikan analgetik untuk mengurangi nyeri"
+           },
+           {
+            "value": "item7",
+            "text": "Tingkatkan istirahat"
+           },
+           {
+            "value": "item8",
+            "text": "Kolaborasikan dengan dokter jika ada keluhan dan tindakan nyeri tidak berhasil"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question14",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Administrasi analgesik:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Cek intruksi dokter tentang jenis obat, dosis dan frekuensi"
+           },
+           {
+            "value": "item2",
+            "text": "Cek riwayat alergi"
+           },
+           {
+            "value": "item3",
+            "text": "Pilih rute pemberian secara IV, IM untuk pengobatan nyeri secara teratur"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor vital sign sebelum dan sesudah pemberian analgesik pertama kali"
+           },
+           {
+            "value": "item5",
+            "text": "Berikan analgesik tepat waktu terutama saat nyeri hebat"
+           },
+           {
+            "value": "item6",
+            "text": "Evaluasi efektivias analgesik, tanda dan gejala "
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman3",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question7",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Resiko Infeksi\nDefenisi : mengalami peningkatan resiko terserang organisme patogenik\n\nBerhubungan dengan : \n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "DS :"
+           },
+           {
+            "value": "item2",
+            "text": "D0 :Trauma jaringan"
+           },
+           {
+            "value": "item3",
+            "text": "Kerusakan integritas kulit"
+           },
+           {
+            "value": "item4",
+            "text": "Terpajan terhadap patogen lingkungan"
+           },
+           {
+            "value": "item5",
+            "text": "Malnutrisi"
+           },
+           {
+            "value": "item6",
+            "text": "Prosedure invasif "
+           },
+           {
+            "value": "item7",
+            "text": "Vaksinasi tidak adekuat"
+           },
+           {
+            "value": "item8",
+            "text": "Diabetes melitus"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question8",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Infection Control:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Klien bebas dari tanda dan gejala infeksi"
+           },
+           {
+            "value": "item2",
+            "text": "Mendeskripsikan proses penularan penyakit faktor yang mempengaruhi penularan serta penatalaksanaannya"
+           },
+           {
+            "value": "item3",
+            "text": "Menunjukkan kemampuan untuk mencegah timbulnya infeksi "
+           },
+           {
+            "value": "item4",
+            "text": "Menunjukkan kemampuan untuk mencegah timbulnya infeksi "
+           },
+           {
+            "value": "item5",
+            "text": "Menunjukkan perilaku hidup sehat"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question9",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Kontrol Infeksi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Bersihkan lingkungan dengan baik setelah digunakan untuk setiap pasien"
+           },
+           {
+            "value": "item2",
+            "text": "Ganti peralatan per pasien sesuai protokol institusi"
+           },
+           {
+            "value": "item3",
+            "text": "Isolasi orang yang terkena penyakit menular"
+           },
+           {
+            "value": "item4",
+            "text": "Pertahankan teknik isolasi yang sesuai"
+           },
+           {
+            "value": "item5",
+            "text": "Batasi jumlah pengunjung"
+           },
+           {
+            "value": "item6",
+            "text": "Ajarkan cara cuci tangan bagi tenaga kesehatan"
+           },
+           {
+            "value": "item7",
+            "text": "Tingakan intake nutrisi yang tepat"
+           },
+           {
+            "value": "item8",
+            "text": "Dorong intake cairan yang sesuai"
+           },
+           {
+            "value": "item9",
+            "text": "Dorong untuk beristirahat"
+           },
+           {
+            "value": "item10",
+            "text": "Berikan terapi antibiotik yang sesuai"
+           },
+           {
+            "value": "item11",
+            "text": "Anjutkan pasien untuk meminum antibiotik seperti yang diresepkan"
+           },
+           {
+            "value": "item12",
+            "text": "Ajarkan keluarga dan pasien mengenai tanda dan gejala infeksi dan kapan harus melaporkannya kepada penyedia perawatan kesehatan"
+           },
+           {
+            "value": "item13",
+            "text": "Ajarkan kepada anggta keluarga mengenai bagaimana menghindari infeksi"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman4",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question10",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question11",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Kerusakan Integritas Kulit\nDefenisi: Perubahan/gangguan epidermis dan / dermis. Gangguan permukaan kulit\nberhubungan dengan: \n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "DS :"
+           },
+           {
+            "value": "item2",
+            "text": "DO : Kelembapan"
+           },
+           {
+            "value": "item3",
+            "text": "Hipertermi"
+           },
+           {
+            "value": "item4",
+            "text": "Medikasi"
+           },
+           {
+            "value": "item5",
+            "text": "Hipotermi"
+           },
+           {
+            "value": "item6",
+            "text": "Imobilitas fisik"
+           },
+           {
+            "value": "item7",
+            "text": "Perubahan status cairan"
+           },
+           {
+            "value": "item8",
+            "text": "Perubahan pigmentasi"
+           },
+           {
+            "value": "item9",
+            "text": "Perubahan turgor"
+           },
+           {
+            "value": "item10",
+            "text": "Kondisi ketidakseimbangan nutrisi"
+           },
+           {
+            "value": "item11",
+            "text": "Penurunan imunologis"
+           },
+           {
+            "value": "item12",
+            "text": "Penurunan sirkulasi"
+           },
+           {
+            "value": "item13",
+            "text": "Kondisi gangguan metabolik"
+           },
+           {
+            "value": "item14",
+            "text": "Gangguan sensasi"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question12",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Tissue Integrity:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Integritas kulit yang baik bisa dipertahankan (sensasi,elastisitas, temperatur, hidarasi, pigmentasi)"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak ada luka/lesi pada kulit"
+           },
+           {
+            "value": "item3",
+            "text": "Perfusi jaringan baik"
+           },
+           {
+            "value": "item4",
+            "text": "Menunjukkan pemahaman dalam proses perbaikan kulit dan mencegah terjadinya cidera berulang"
+           },
+           {
+            "value": "item5",
+            "text": "Mampu melindungi kulit dan mempertahankan kelembapan kulit dan perawatan alami"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question13",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Preasssure Management:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ajarkan pasien untuk menggunakan pakaian yang longgar"
+           },
+           {
+            "value": "item2",
+            "text": "Hindari kerutan pada tempat tidur"
+           },
+           {
+            "value": "item3",
+            "text": "Jaga kebersihan kulit agar tetap bersih dan kering"
+           },
+           {
+            "value": "item4",
+            "text": "Mobilisasi pasien setiap dua jam sekali"
+           },
+           {
+            "value": "item5",
+            "text": "Monitor kulit adanya kemerahan"
+           },
+           {
+            "value": "item6",
+            "text": "Monitor aktivitas dan mobilisasi pasien"
+           },
+           {
+            "value": "item7",
+            "text": "Monitor status pasien"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question5",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Terapi Nutrisi:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lengkapi pengkajian nutrisi sesuai kebutuhan"
+           },
+           {
+            "value": "item2",
+            "text": "Monitor intake makanan/cairan dan hitung masukan kalori perhari sesuai kebutuhan"
+           },
+           {
+            "value": "item3",
+            "text": "Motivasi pasien untuk mengkonsumsi makanan yang tinggi kalsium sesuai kebutuhan ajarkan pasien dan keluarga mengenai diet yang di anjurkan"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman5",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question15",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question16",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Ketidak efektifan  perfusi jaringan perifer\nDefinisi :penurunan sirkulasidarahkeperifer yang dapat mengganggukesehatan.\nBerhubungandengan :\n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Diabetes melitus"
+           },
+           {
+            "value": "item2",
+            "text": "Gaya Hidup kurang gerak"
+           },
+           {
+            "value": "item3",
+            "text": "Kurang pengetahuan tentang faktor pemberat (misalnya : Merokok, gaya hidup monoton,trauma,obesitas,asupan garam,imobilitas)"
+           },
+           {
+            "value": "item4",
+            "text": "Kuran pengetahuan tentang proses penyakit ( Diabetes, hiperlipidemia)"
+           },
+           {
+            "value": "item5",
+            "text": "Merokok"
+           },
+           {
+            "value": "item6",
+            "text": "DS :"
+           },
+           {
+            "value": "item7",
+            "text": "D0 : Edema "
+           },
+           {
+            "value": "item8",
+            "text": "kelambatan penyembuhan luka perifer"
+           },
+           {
+            "value": "item9",
+            "text": "penurunan nadi perifer"
+           },
+           {
+            "value": "item10",
+            "text": "perubahan fungsi motorik"
+           },
+           {
+            "value": "item11",
+            "text": "perubahan warana karakteristik kulit"
+           },
+           {
+            "value": "item12",
+            "text": "perubahan tekanan darah di ekstremitas"
+           },
+           {
+            "value": "item13",
+            "text": "Tidak ada nadi perifer"
+           },
+           {
+            "value": "item14",
+            "text": "Waktu pengisian kapiler  3 detik"
+           },
+           {
+            "value": "item15",
+            "text": "Warna kulit pucat saat elevasi"
+           },
+           {
+            "value": "item16",
+            "text": "Warna tidak kembali ke tungkai 1 menit setelah tungkai diturunkan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question17",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Perfusi Jaringan  : Perifer",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pengisian kapiler jari normal"
+           },
+           {
+            "value": "item2",
+            "text": "Suhu ujung kaki dan tangan normal"
+           },
+           {
+            "value": "item3",
+            "text": "Tekanan darah sistolik normal"
+           },
+           {
+            "value": "item4",
+            "text": "Tekanan darah diastolik normal"
+           },
+           {
+            "value": "item5",
+            "text": "Nilai tekanan darah rata-rata normal"
+           },
+           {
+            "value": "item6",
+            "text": "Nyeri di ujung kaki dan tangan yang terlokalisasi  tidak ada"
+           },
+           {
+            "value": "item7",
+            "text": "Nekrosis tidak ada"
+           },
+           {
+            "value": "item8",
+            "text": "Mati Rasa tidak ada"
+           },
+           {
+            "value": "item9",
+            "text": "Muka pucat tidak ada"
+           },
+           {
+            "value": "item10",
+            "text": "Kelemahan otot tidak ada"
+           },
+           {
+            "value": "item11",
+            "text": "Kram otot tidak ada"
+           },
+           {
+            "value": "item12",
+            "text": "Kerusakan kulit tidak ada"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question18",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Perawatan sirkulasi : Insufisiensi Arteri",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lakukan pemeriksaan fisik sistem kardiovaskular atau penilaian komprehensif pada sirkulasi perifer (misalnya : memeriksa denyut nadi perifer, edema, waktu pengisian kapiler, waran dan suhu)"
+           },
+           {
+            "value": "item2",
+            "text": "Inspeksi kulit untuk adanya luka pada arteri atau kerusakan jaringan."
+           },
+           {
+            "value": "item3",
+            "text": "Monitor tingkat kenyamanan atau nyeri saat melakukan olahraga di malam hari atau saat beristirahat."
+           },
+           {
+            "value": "item4",
+            "text": "Tempatkan ujung kaki dan tangan dalam posisi tergantung dengan tepat."
+           },
+           {
+            "value": "item5",
+            "text": "Berikan obat antiplatelet atau anti koagulan dengan tepat."
+           },
+           {
+            "value": "item6",
+            "text": "Ubah posisi pasien setidaknya setiap 2 jam dengan tepat."
+           },
+           {
+            "value": "item7",
+            "text": "Dukung pasien untuk melakukan kegiatan olahraga walaupun pasien tidak suka."
+           },
+           {
+            "value": "item8",
+            "text": "Lindungi ujung jari kaki dan tangan dari cedera"
+           },
+           {
+            "value": "item9",
+            "text": "Berikan kehangatan"
+           },
+           {
+            "value": "item10",
+            "text": "Instruksikan pasien mengenai faktor faktor yang mengganggu sirkulasi darah(Misalnya : merokok, pakaian ketat, terlalu lama di dalam suhu dingin dan menyilangkan kaki)"
+           },
+           {
+            "value": "item11",
+            "text": "Instruksikan pada pasien mengenai perawatan kaki yang tepat"
+           },
+           {
+            "value": "item12",
+            "text": "Hindari menempelkan panas langsung pada ujung kaki dan tangan"
+           },
+           {
+            "value": "item13",
+            "text": "Monitor jumlah cairan yang masuk dan yang keluar"
+           },
+           {
+            "value": "item14",
+            "text": "Lakukan perawatan luka dengan tepat"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question19",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Pengecekan kulit:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Periksa kulit dan selaput lendir terkait dengan adanya kemerahan, kehangatan ekstrim, edema atau drainase."
+           },
+           {
+            "value": "item2",
+            "text": "Amati warna, kehangatan, bengkak, pulsasi, tekstur, edema dan ulserasi pada ekstremitas."
+           },
+           {
+            "value": "item3",
+            "text": "Periksa luka operasi dengan cepat."
+           },
+           {
+            "value": "item4",
+            "text": "Gunakan alat pengkajian untuk mengidentifikasi pasien yang beresiko mengalami kerusakan kulit."
+           },
+           {
+            "value": "item5",
+            "text": "Monitor warna dan suhu kulit."
+           },
+           {
+            "value": "item6",
+            "text": "Monitor kulit dan selaput lendir terhadap area perubahan warna, memar dan pecah."
+           },
+           {
+            "value": "item7",
+            "text": "Monitor kulit untuk adanya ruam dan lecet"
+           },
+           {
+            "value": "item8",
+            "text": "Monitor kulit untuk adanya kekeringan yang berlebihan dan kelembaban."
+           },
+           {
+            "value": "item9",
+            "text": "Monitor sumber tekanan dan gesekan"
+           },
+           {
+            "value": "item10",
+            "text": "Monitor infeksi, terutama di daerah edema."
+           },
+           {
+            "value": "item11",
+            "text": "Periksa pakaian yang terlalu ketat."
+           },
+           {
+            "value": "item12",
+            "text": "Dokumentasikan  perubahan membran mukosa. "
+           },
+           {
+            "value": "item13",
+            "text": "Lakukan langkah-langkah untuk mencegah kerusakan lebih lanjut (Misalnya melapisi kasur, menjadwalkan reposisi)"
+           },
+           {
+            "value": "item14",
+            "text": "Ajarkan anggota keluarga/pemberi asuhan mengenai tanda-tanda kerusakan kulit dengan tepat."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman6",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question20",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question21",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Ketidakefektifan bersihan jalan nafas\nDefenisi : ketidakmampuan membersihkan sekresi atau obstruksi darisaluran pernafasan  untuk menjaga bersihan jalan nafas\nBerhubungandengan :\n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Perokok  "
+           },
+           {
+            "value": "item2",
+            "text": "Perokok pasif                                         "
+           },
+           {
+            "value": "item3",
+            "text": "Terpajan asap                                         "
+           },
+           {
+            "value": "item4",
+            "text": "Adanya jalan nafas buatan"
+           },
+           {
+            "value": "item5",
+            "text": "Benda asing dalam jalan nafas"
+           },
+           {
+            "value": "item6",
+            "text": "Mukus berlebihan"
+           },
+           {
+            "value": "item7",
+            "text": "Penyakit paru obstruksi kronis"
+           },
+           {
+            "value": "item8",
+            "text": "Sekresi yang tertahan"
+           },
+           {
+            "value": "item9",
+            "text": "Spasme jalan nafas"
+           },
+           {
+            "value": "item10",
+            "text": "Disfungsi neuromuskular"
+           },
+           {
+            "value": "item11",
+            "text": "Jalan nafas alergik"
+           },
+           {
+            "value": "item12",
+            "text": "Infeksi"
+           },
+           {
+            "value": "item13",
+            "text": "Asma"
+           },
+           {
+            "value": "item14",
+            "text": "DS :"
+           },
+           {
+            "value": "item15",
+            "text": "DO : Batuk yang tidak efektif. "
+           },
+           {
+            "value": "item16",
+            "text": "Dispnea"
+           },
+           {
+            "value": "item17",
+            "text": "Gelisah"
+           },
+           {
+            "value": "item18",
+            "text": "Kesulitan verbalisasi"
+           },
+           {
+            "value": "item19",
+            "text": "Mata terbuka lebar"
+           },
+           {
+            "value": "item20",
+            "text": "Ortopnea"
+           },
+           {
+            "value": "item21",
+            "text": "Penurunan bunyi nafas"
+           },
+           {
+            "value": "item22",
+            "text": "Perubahan frekuensi nafas"
+           },
+           {
+            "value": "item23",
+            "text": "Perubahan pola nafas"
+           },
+           {
+            "value": "item24",
+            "text": "Sianosis"
+           },
+           {
+            "value": "item25",
+            "text": "Sputum dalam jumlah yang berlebihan"
+           },
+           {
+            "value": "item26",
+            "text": "Suara nafas tambahan"
+           },
+           {
+            "value": "item27",
+            "text": "Tidak ada batuk"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question22",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Status pernafasan : Kepatenan jalan nafas",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Frekuensi pernafasan normal"
+           },
+           {
+            "value": "item2",
+            "text": "Irama pernafasan normal"
+           },
+           {
+            "value": "item3",
+            "text": "Kedalaman inspirasi normal"
+           },
+           {
+            "value": "item4",
+            "text": "Ansietas tidak ada"
+           },
+           {
+            "value": "item5",
+            "text": "Ketakutan tidak ada"
+           },
+           {
+            "value": "item6",
+            "text": "Tersedak tidak ada"
+           },
+           {
+            "value": "item7",
+            "text": "Suara nafas tambahan tidak ada"
+           },
+           {
+            "value": "item8",
+            "text": "Pernafasan cuping hidung tidak ada"
+           },
+           {
+            "value": "item9",
+            "text": "Mendesah tidak ada"
+           },
+           {
+            "value": "item10",
+            "text": "Penggunaan otot bantu nafas tidak ada"
+           },
+           {
+            "value": "item11",
+            "text": "Batuk tidak ada"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question23",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen jalan nafas",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Buka jalan nafas dengan teknik chin lift atau jaw thrust sebagaimana mestinya"
+           },
+           {
+            "value": "item2",
+            "text": "Posisikan pasien untuk memaksimalkan ventilasi."
+           },
+           {
+            "value": "item3",
+            "text": "Identifikasi kebutuhan aktual /potensial pasien untuk memasukan alat membuka jalan nafas."
+           },
+           {
+            "value": "item4",
+            "text": "Masukan NPA atau OPA sebagaimana mestinya."
+           },
+           {
+            "value": "item5",
+            "text": "Lakukan fisioterapi dada sebagaimana mestinya"
+           },
+           {
+            "value": "item6",
+            "text": "Buang scret debgan memotivasi pasien untuk melakukan batuk atau menyedot lendir."
+           },
+           {
+            "value": "item7",
+            "text": "Motivasi pasien untuk bernafas pelan, dalam, berputar dan batuk."
+           },
+           {
+            "value": "item8",
+            "text": "Instruksikan bagaimana agar bisa melakukan batuk efektif."
+           },
+           {
+            "value": "item9",
+            "text": "Auskultasi suara  nafas, catat area yang ventilasinya menurun atau tidak dan adanya suara tambahan."
+           },
+           {
+            "value": "item10",
+            "text": "Kelola pemberian bronkodilator sebagaimana mestinya."
+           },
+           {
+            "value": "item11",
+            "text": "Ajarkan pasien bagaimana menggunakan inhaler sesuai resep sebagaimana mestinya."
+           },
+           {
+            "value": "item12",
+            "text": "Regulasi asupan cairan untuk mengoptimalkan kesimbangan cairan."
+           },
+           {
+            "value": "item13",
+            "text": "Posisikan untuk meringankan sesak nafas."
+           },
+           {
+            "value": "item14",
+            "text": "Monitor status pernafasan dan oksigenisasi sebagaimana mestinya."
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question24",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Peningkatan (manajemen) Batuk",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Dampingi pasien untuk bisa duduk pada posisi dengan kepala sedikit lurus, bahu relaks dan lutut di tekuk atau posisi fleksi. "
+           },
+           {
+            "value": "item2",
+            "text": "Dukung pasien menarik nafas dalam beberapa kali."
+           },
+           {
+            "value": "item3",
+            "text": "Dukung pasien untuk melakukan nafas dalam,tahan selama 2 detik, bungkukkan ke depan,tahan 2 detik dan batukkan 2-3 kali."
+           },
+           {
+            "value": "item4",
+            "text": "Minta pasien untuk menarik nafas dalam, bungkukkan ke depan,lakukan tiga atau empat kali hembusan (untuk membuka area glottis)."
+           },
+           {
+            "value": "item5",
+            "text": "Minta pasien untuk menarik nafas dalam beberapa kali,keluarkan perlahan dan batukkan di akhir ekshalasi (penghembusan)."
+           },
+           {
+            "value": "item6",
+            "text": "Tahan perut dibawah xiphoid dengan tangan terbuka sembari membantu pasien untuk fleksi ke depan selama batuk."
+           },
+           {
+            "value": "item7",
+            "text": "Dampingi pasien menggunakan bantal atau selimut yang dilipat untuk menahan perut saat batuk."
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question25",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Monitor pernafasan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor kecepatan,irama, kedalaman dan kesulitan bernafas."
+           },
+           {
+            "value": "item2",
+            "text": "Monitor suara nafas tambahan seperti ngorok atau mengi."
+           },
+           {
+            "value": "item3",
+            "text": "Monitor pola nafas"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor  peningkatan kelelahan,kecemasan dan kekurangan udara pada pasien."
+           },
+           {
+            "value": "item5",
+            "text": "Monitor kemampuan batuk efektif pasien."
+           },
+           {
+            "value": "item6",
+            "text": "Monitor keluhan sesak nafas pasien,termasuk kegiatan yang meningkatkan atau memperburuk sesak nafas tersebut."
+           },
+           {
+            "value": "item7",
+            "text": "Monitor hasil foto thoraks"
+           },
+           {
+            "value": "item8",
+            "text": "Berikan bantuan resusitasi jika di perlukan."
+           },
+           {
+            "value": "item9",
+            "text": "Berikan bantuan terapi nafas jika di perlukan (Misalnya nebulizer)."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman7",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question26",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question27",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Kelebihan volume cairan\nDefinisi : peningkatan retensi cairan isotonik\n\nBerhubungan dengan :\n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Gangguan mekanisme   regulasi"
+           },
+           {
+            "value": "item2",
+            "text": "Kelebihan asupan cairan"
+           },
+           {
+            "value": "item3",
+            "text": "Kelebihanasupannatrium"
+           },
+           {
+            "value": "item4",
+            "text": "DS :"
+           },
+           {
+            "value": "item5",
+            "text": "DO :  Anasarka "
+           },
+           {
+            "value": "item6",
+            "text": "Ansietas"
+           },
+           {
+            "value": "item7",
+            "text": "Asupan melebihi haluaran"
+           },
+           {
+            "value": "item8",
+            "text": "Bunyi nafas tambahan "
+           },
+           {
+            "value": "item9",
+            "text": "Dispnea"
+           },
+           {
+            "value": "item10",
+            "text": "Edema"
+           },
+           {
+            "value": "item11",
+            "text": "Efusi pleura"
+           },
+           {
+            "value": "item12",
+            "text": "Gangguan pola nafas"
+           },
+           {
+            "value": "item13",
+            "text": "Gangguan tekanan darah."
+           },
+           {
+            "value": "item14",
+            "text": "Gelisah "
+           },
+           {
+            "value": "item15",
+            "text": "Hepatomegali "
+           },
+           {
+            "value": "item16",
+            "text": "Ketidakseimbangan elektrolit "
+           },
+           {
+            "value": "item17",
+            "text": "Oliguria "
+           },
+           {
+            "value": "item18",
+            "text": "Penambahan berat badan dalam waktu yang sangat singkat"
+           },
+           {
+            "value": "item19",
+            "text": "Penurunan hematokrit"
+           },
+           {
+            "value": "item20",
+            "text": "Penurunan hemoglobin"
+           },
+           {
+            "value": "item21",
+            "text": "Perubahan status mental"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question28",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Keseimbangan cairan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tekanan darah tidak terganggu"
+           },
+           {
+            "value": "item2",
+            "text": "Denyut perifer tidak terganggu"
+           },
+           {
+            "value": "item3",
+            "text": "Keseimbangan intake dan output dalam 24 jam tidak terganggu."
+           },
+           {
+            "value": "item4",
+            "text": "Berat badan stabil"
+           },
+           {
+            "value": "item5",
+            "text": "Turgor kulit tidak terganggu"
+           },
+           {
+            "value": "item6",
+            "text": "Kelembaban membran mukosa tidak terganggu"
+           },
+           {
+            "value": "item7",
+            "text": "Hematokrit tidak terganggu"
+           },
+           {
+            "value": "item8",
+            "text": "Asites tidak ada"
+           },
+           {
+            "value": "item9",
+            "text": "Edema perifer  tidak ada"
+           },
+           {
+            "value": "item10",
+            "text": "Bola mata cekung dan lembek tidak ada."
+           },
+           {
+            "value": "item11",
+            "text": "Kehausan tidak ada"
+           },
+           {
+            "value": "item12",
+            "text": "Kram otot tidak ada"
+           },
+           {
+            "value": "item13",
+            "text": "Pusing tidak ada"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question29",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Pemantauan (monitor) Elektrolit",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor serum elektrolit                                                                                                       "
+           },
+           {
+            "value": "item2",
+            "text": "Catat kekuatan otot"
+           },
+           {
+            "value": "item3",
+            "text": "Monitor adanya mual, muntah dan diare"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor serum albumin dan kadar protein total sesuai dengan indikasi.                              "
+           },
+           {
+            "value": "item5",
+            "text": "Kenali dan laporkan adanya ketidakseimbangan elektrolit."
+           },
+           {
+            "value": "item6",
+            "text": "Monitor adanya kehilangan cairan dan elektrolit jika diperlukan."
+           },
+           {
+            "value": "item7",
+            "text": "Monitor manifestasi ketidakseimbangan elektrolit pada sistem saraf"
+           },
+           {
+            "value": "item8",
+            "text": "Monitor rekaman EKG untuk mengetahui perubahan abnormal yang berkaitan dengan kadar kalium, kalsium dan magnesium."
+           },
+           {
+            "value": "item9",
+            "text": "Catat adanya perubahan sensasi pada daerah perifer termasuk kebas dan tremor."
+           },
+           {
+            "value": "item10",
+            "text": "Monitor adanya penyakit medis yang dapat menyebabkan ketidakseimbangan elektrolit."
+           },
+           {
+            "value": "item11",
+            "text": "Monitor tanda /gejala hipokalemia, hiperkalemia, hiponatremia,hipernatremia,hipokalsemia dan hiperkalsemia."
+           },
+           {
+            "value": "item12",
+            "text": "Berikan suplemen elektrolit sesuai resep jika diperlukan"
+           },
+           {
+            "value": "item13",
+            "text": "Berikan diet yang tepat pada ketidakseimbangan elektrolit (makanan yang kaya kalium dan diet rendah natrium)."
+           },
+           {
+            "value": "item14",
+            "text": "Ajarkan kepada pasien caramencegah atau meminimalisasi ketidakseimbangan elektrolit."
+           },
+           {
+            "value": "item15",
+            "text": "Anjurkan kepada pasienatau keluarga mengenai modifikasi diet khusus jika di perlukan."
+           },
+           {
+            "value": "item16",
+            "text": "Konsultasikan kepada dokter jika ada tanda dan gejala ketidakseimbngan elektrolit dan atau elektrolit menetap atau memburuk."
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question30",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen hipervolemia",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Timbang berat badan tiap hari dengan waktu yang tetap/sama.                                  "
+           },
+           {
+            "value": "item2",
+            "text": "Berikan obat yang diresepkan untuk mengurangi preload                                           "
+           },
+           {
+            "value": "item3",
+            "text": "Monitor tanda berkurangnya preload                                                                          "
+           },
+           {
+            "value": "item4",
+            "text": "Monitor status hemodinamik."
+           },
+           {
+            "value": "item5",
+            "text": "Monitor edema perifer"
+           },
+           {
+            "value": "item6",
+            "text": "Monitor intake dan output         "
+           },
+           {
+            "value": "item7",
+            "text": "Monitor adanya efek prngobatan yang berlebihan."
+           },
+           {
+            "value": "item8",
+            "text": "Instruksikan pasien mengenai penggunaan obat untuk mengurangi preload."
+           },
+           {
+            "value": "item9",
+            "text": "Berikan infus IV secara perlahan untuk mencegah peningkatan preload yang cepat."
+           },
+           {
+            "value": "item10",
+            "text": "Hindari penggunaan cairan IV hipotonik."
+           },
+           {
+            "value": "item11",
+            "text": "Tinggikan kepala tempat tidur untuk memperbaiki ventilasi sesuai kebutuhan"
+           },
+           {
+            "value": "item12",
+            "text": "Monitor integritas kulit pada pasien yang mengalami immobilisasi sesuai dengan edama dependent"
+           },
+           {
+            "value": "item13",
+            "text": "Tingkatkan integritas kulit pada pasien yang mengalami  immobilisasi dengan edema dependent sesuai kebutuhan."
+           },
+           {
+            "value": "item14",
+            "text": "Instruksikan pasien dan keluarga penggunaan catatan asupan dan output sesuai kebutuhan"
+           },
+           {
+            "value": "item15",
+            "text": "Instruksikan pasien dan keluarga mengenai intervensi yang direncanakan untuk menangani hipervolemia."
+           },
+           {
+            "value": "item16",
+            "text": "Batasi asuapan natrium sesuai indikasi."
+           },
+           {
+            "value": "item17",
+            "text": "Tingkatkan citra dan harga diri yang positif jika pasien mengekspresikan kepedulian akibat retensi cairan yang berlebih."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman8",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question31",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question32",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Intoleran  aktivitas\nDefinisi : ketidakcukupan energi psikologis atau fisiologis untuk mempertahankan atau menyelesaikan aktivitas kehidupan sehari-hari yang harus atau yang ingin dilakukan.\nBerhubungandengan :\n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Gaya hidup kurang gerak"
+           },
+           {
+            "value": "item2",
+            "text": "Imobilitas "
+           },
+           {
+            "value": "item3",
+            "text": "Ketidakseimbangan antara suplai dan kebutuhan oksigen"
+           },
+           {
+            "value": "item4",
+            "text": "DS :"
+           },
+           {
+            "value": "item5",
+            "text": "DO :  Dispnea setelah beraktivitas"
+           },
+           {
+            "value": "item6",
+            "text": "Keletihan "
+           },
+           {
+            "value": "item7",
+            "text": "Ketidaknyamanan setelah beraktivitas"
+           },
+           {
+            "value": "item8",
+            "text": "Perubahan EKG"
+           },
+           {
+            "value": "item9",
+            "text": "Respon frekuensi jantung abnormal terhadap aktivitas"
+           },
+           {
+            "value": "item10",
+            "text": "Respon tekanan darah abnormal terhadap aktivitas"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question33",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Toleransi terhadap aktivitas :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Saturasi oksigen ketika beraktivitas  tidak terganggu"
+           },
+           {
+            "value": "item2",
+            "text": "Frekuensi nadi ketika beraktivitas tidak terganggu"
+           },
+           {
+            "value": "item3",
+            "text": "Frekuensi pernafasan ketika beraktivitas tidak terganggu"
+           },
+           {
+            "value": "item4",
+            "text": "Kemudahan bernafas ketika beraktivitas tidak terganggu"
+           },
+           {
+            "value": "item5",
+            "text": "Tekanan darah sistolik ketika beraktivitas tidak terganggu"
+           },
+           {
+            "value": "item6",
+            "text": "Tekanan darah diastolik ketika beraktivitas tidak terganggu"
+           },
+           {
+            "value": "item7",
+            "text": "Hasil EKG tidak terganggu"
+           },
+           {
+            "value": "item8",
+            "text": "Warna kulit tidak terganggu"
+           },
+           {
+            "value": "item9",
+            "text": "Kecepatan berjalan tidak terganggu"
+           },
+           {
+            "value": "item10",
+            "text": "Jarak berjalan tidak terganggu"
+           },
+           {
+            "value": "item11",
+            "text": "Toleransi dalam menaiki tangga tidak terganggu"
+           },
+           {
+            "value": "item12",
+            "text": "Kekuatan tubuh bagian atas tidak terganggu"
+           },
+           {
+            "value": "item13",
+            "text": "Kekuatan tubuh bagian bawah tidak terganggu"
+           },
+           {
+            "value": "item14",
+            "text": "Kemudahan dalam melakukan ADL tidak terganggu"
+           },
+           {
+            "value": "item15",
+            "text": "Kemampuan untuk berbicara ketika melakukan aktivitas fisik tidak terganggu"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question34",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Terapi aktivitas",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pertimbangkan kemampuan  kemampuan klien dalam berpartisipasi melalui aktivitas spesifik"
+           },
+           {
+            "value": "item2",
+            "text": "Berkolaborasi dengan ahli terapi fisik, okupasi dan terapis rekreasional dalam perencanaan dan pemantauan  program aktivitas jika memang  diperlukan"
+           },
+           {
+            "value": "item3",
+            "text": "Bantu klien untuk tetap fokus pada kekuatan (yang dimilikinya) dibandingkan dengan kelemahan (yang dimilikinya)"
+           },
+           {
+            "value": "item4",
+            "text": "Bantu dengan aktivitas fisik secara teratur sesuai dengan kebutuhan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question35",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen energi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Kaji status fisiologis pasien yang menyebabkan kelelahan sesuai dengan konteks usia dan perkembangan"
+           },
+           {
+            "value": "item2",
+            "text": "Anjurkan pasien mengungkapkan perasaan secara verbal mengenai keterbatasan yang dialami"
+           },
+           {
+            "value": "item3",
+            "text": "Tentukan jenis dan banyaknya aktivitas yang dibutuhkan untuk menjaga ketahanan"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor intake/asupan nutrisi untuk mengetahui sumber energi yang adekuat"
+           },
+           {
+            "value": "item5",
+            "text": "Konsulkan dengan ahli gizi mengenai cara meningkatkan asupan energi dari makanan"
+           },
+           {
+            "value": "item6",
+            "text": "Monitor/catat waktu dan lama istirahat/tidur pasien"
+           },
+           {
+            "value": "item7",
+            "text": "Monitor lokasi dan sumber ketidaknyamanan/nyeri yang di alami pasien selama aktivitas"
+           },
+           {
+            "value": "item8",
+            "text": "Batasi stimuli lingkungan (yang mengganggu) untuk memfasilitasi relaksasi"
+           },
+           {
+            "value": "item9",
+            "text": "Batasi jumlah dan gangguan pengunjung dengan tepat"
+           },
+           {
+            "value": "item10",
+            "text": "Tingkatkan       tirah baring/pembatasan kegiatan dengan cakupannya yaitu pada waktu istirahat yang dipilih"
+           },
+           {
+            "value": "item11",
+            "text": "Lakukan ROM aktif/pasif untuk menghilangkan ketegangan otot"
+           },
+           {
+            "value": "item12",
+            "text": "Tawarkan bantuan untuk meningkatkan tidur"
+           },
+           {
+            "value": "item13",
+            "text": "Monitor pemberian dan efek obat stimulan dan depresan"
+           },
+           {
+            "value": "item14",
+            "text": "Anjurkan aktivitas fisik sesuai dengan kemampuan (energi) pasien"
+           },
+           {
+            "value": "item15",
+            "text": "Monitor respon oksigen pasien saat perawatan maupun saat melakukan perawatan diri secara mandiri"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman9",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question36",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question37",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Ketidakefektifan pola napas\nDefinisi : inspirasi dan/atau ekspirasi yang tidak memberi  ventilasi  adekuat.\nBerhubungan dengan :\n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ansietas"
+           },
+           {
+            "value": "item2",
+            "text": "Cedera medula spinalis                             "
+           },
+           {
+            "value": "item3",
+            "text": "Deformitas dinding dada                           "
+           },
+           {
+            "value": "item4",
+            "text": "Deformitas tulang                                      "
+           },
+           {
+            "value": "item5",
+            "text": "Disfungsi neuromuskular"
+           },
+           {
+            "value": "item6",
+            "text": " Keletihan"
+           },
+           {
+            "value": "item7",
+            "text": "Nyeri "
+           },
+           {
+            "value": "item8",
+            "text": "Obesitas "
+           },
+           {
+            "value": "item9",
+            "text": "Hiperventilasi"
+           },
+           {
+            "value": "item10",
+            "text": "Gangguan muskuloskeletal"
+           },
+           {
+            "value": "item11",
+            "text": "Gangguan neurologis (misalnya : elektroensefalogram (EEG) positif, trauma kepala, gangguan kejang )"
+           },
+           {
+            "value": "item12",
+            "text": "Imaturitas neurologis"
+           },
+           {
+            "value": "item13",
+            "text": "Keletihan otot pernafasan"
+           },
+           {
+            "value": "item14",
+            "text": "Posisi tubuh yang menghambat ekspansi paru"
+           },
+           {
+            "value": "item15",
+            "text": "Sindrom hipoventilasi"
+           },
+           {
+            "value": "item16",
+            "text": "DS :"
+           },
+           {
+            "value": "item17",
+            "text": "DO :"
+           },
+           {
+            "value": "item18",
+            "text": "Bradipnea                                                                "
+           },
+           {
+            "value": "item19",
+            "text": "Fase ekspirasi memanjang                                      "
+           },
+           {
+            "value": "item20",
+            "text": "Penggunaan otot bantu pernafasan                         "
+           },
+           {
+            "value": "item21",
+            "text": "Penggunaan posisi tiga-titik                                   "
+           },
+           {
+            "value": "item22",
+            "text": "Dispnea"
+           },
+           {
+            "value": "item23",
+            "text": "Ortopnea"
+           },
+           {
+            "value": "item24",
+            "text": "Takipnea"
+           },
+           {
+            "value": "item25",
+            "text": "Pernapasan bibir"
+           },
+           {
+            "value": "item26",
+            "text": "Peningkatan diameter anterior-posterior"
+           },
+           {
+            "value": "item27",
+            "text": "Penurunan kapasitas vital"
+           },
+           {
+            "value": "item28",
+            "text": "Penurunan tekanan ekspirasi"
+           },
+           {
+            "value": "item29",
+            "text": "Penurunan tekanan inspirasi"
+           },
+           {
+            "value": "item30",
+            "text": "Pernapasan cuping hidung"
+           },
+           {
+            "value": "item31",
+            "text": "Perubahan ekskursi dada"
+           },
+           {
+            "value": "item32",
+            "text": "Pola napas abnormal (mis.irama, frekuensi,kedalaman)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question38",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Status pernafasan:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "frekuensi pernafasan normal"
+           },
+           {
+            "value": "item2",
+            "text": "irama pernafasan  normal"
+           },
+           {
+            "value": "item3",
+            "text": "kedalaman inspirasi normal"
+           },
+           {
+            "value": "item4",
+            "text": "suara auskultasi nafas normal"
+           },
+           {
+            "value": "item5",
+            "text": "kepatenan jalan nafas normal"
+           },
+           {
+            "value": "item6",
+            "text": "penggunaan otot bantu nafas tidak ada"
+           },
+           {
+            "value": "item7",
+            "text": "Retraksi dinding dada tidak ada"
+           },
+           {
+            "value": "item8",
+            "text": "Sianosis tidak ada"
+           },
+           {
+            "value": "item9",
+            "text": "Perasaan kurang istirahat tidak ada"
+           },
+           {
+            "value": "item10",
+            "text": "Mengantuk tidak ada"
+           },
+           {
+            "value": "item11",
+            "text": "Gangguan kesadaran tidak ada"
+           },
+           {
+            "value": "item12",
+            "text": "Suara nafas tambahan tidak ada"
+           },
+           {
+            "value": "item13",
+            "text": "Gangguan ekspirasi tidak ada"
+           },
+           {
+            "value": "item14",
+            "text": "Mendengkur tidak ada"
+           },
+           {
+            "value": "item15",
+            "text": "Pernafasan cuping hidung tidak ada"
+           },
+           {
+            "value": "item16",
+            "text": "Demam tidak ada"
+           },
+           {
+            "value": "item17",
+            "text": "Batuk tidak ada"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question39",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Monitor pernafasan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor kecepatan, irama, kedalaman, dan kesulitan bernafas"
+           },
+           {
+            "value": "item2",
+            "text": "Monitor suara nafas tambahan seperti ngorok atau mengi"
+           },
+           {
+            "value": "item3",
+            "text": "Monitor pola nafas"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor peningkatan kelelahan, kecemasan, dan kekurangan udara pada pasien"
+           },
+           {
+            "value": "item5",
+            "text": "Monitor kemampuan batuk efektif pada pasien"
+           },
+           {
+            "value": "item6",
+            "text": "Monitor keluhan sesak nafas pasien,termasuk kegiatan yang meningkatkan atau memperburuk sesak nafas tersebut"
+           },
+           {
+            "value": "item7",
+            "text": "Monitor hasil foto thorak"
+           },
+           {
+            "value": "item8",
+            "text": "Buka jalan nafas dengan menggunakan maneuver chin lift atau jaw thrust dengan tepat"
+           },
+           {
+            "value": "item9",
+            "text": "Berikan bantuan resusitasi jika di perlukan"
+           },
+           {
+            "value": "item10",
+            "text": "Berikan bantuan terapi nafas jika di perlukan (misalnya nebulizer)"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman10",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question40",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question41",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Diare\nDefenisi : pasase (aliran) feses yang lunak dan tidak berbentuk\nBerhubungan dengan : \n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Inflamasi gastrointestinal"
+           },
+           {
+            "value": "item2",
+            "text": "Iritasi gastrointestinal"
+           },
+           {
+            "value": "item3",
+            "text": "Kram"
+           },
+           {
+            "value": "item4",
+            "text": "Malabsorpsi"
+           },
+           {
+            "value": "item5",
+            "text": "Parasit"
+           },
+           {
+            "value": "item6",
+            "text": "Ansietas"
+           },
+           {
+            "value": "item7",
+            "text": "Tingkat stress tinggi"
+           },
+           {
+            "value": "item8",
+            "text": "Data subjektif :"
+           },
+           {
+            "value": "item9",
+            "text": "Data objektif :"
+           },
+           {
+            "value": "item10",
+            "text": "Ada dorongan untuk defekasi"
+           },
+           {
+            "value": "item11",
+            "text": "Bising usus hiperaktif"
+           },
+           {
+            "value": "item12",
+            "text": "Defekasi feses cair >3x dalam 24 jam, frekuensi …..x/hari"
+           },
+           {
+            "value": "item13",
+            "text": "Kram"
+           },
+           {
+            "value": "item14",
+            "text": "Nyeri abdomen "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question42",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Setelah dilakukan tindakan keperawatan selama ………,pasien menunjukkan pola BAB menjadi normal dibuktikan dengan kriteria hasil:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Mengenali keinginan untuk defekasi"
+           },
+           {
+            "value": "item2",
+            "text": "Mempertahankan pola pengeluaran feses yang bisa diprediksi"
+           },
+           {
+            "value": "item3",
+            "text": "Mempertahankan kontrol pengeluaran feses"
+           },
+           {
+            "value": "item4",
+            "text": "Mengeluarkan feses paling tidak 3x perhari"
+           },
+           {
+            "value": "item5",
+            "text": "Tekanan sfingter memadai untuk mengontrol BAB"
+           },
+           {
+            "value": "item6",
+            "text": "Persarafan sfingter fungsional"
+           },
+           {
+            "value": "item7",
+            "text": "Merespon keinginan untuk BAB secara tepat waktu"
+           },
+           {
+            "value": "item8",
+            "text": "Tiba di toilet antara dorongan untuk BAB dan waktu untuk mengeluarkan feses"
+           },
+           {
+            "value": "item9",
+            "text": "Menjaga lingkungan yang bebas hambatan untuk eliminasi mandiri"
+           },
+           {
+            "value": "item10",
+            "text": "Minum cairan secara adekuat"
+           },
+           {
+            "value": "item11",
+            "text": "Mengkonsumsi serat dengan jumlah adekuat"
+           },
+           {
+            "value": "item12",
+            "text": "Menggambarkan hubungan asupan makanan dengan konsistensi feses"
+           },
+           {
+            "value": "item13",
+            "text": "Memantau jumlah dan konsistensi feses"
+           },
+           {
+            "value": "item14",
+            "text": "Eliminasi secara mandiri"
+           },
+           {
+            "value": "item15",
+            "text": "Pola eliminasi normal"
+           },
+           {
+            "value": "item16",
+            "text": "Kontrol gerakan usus"
+           },
+           {
+            "value": "item17",
+            "text": "Warna feses normal"
+           },
+           {
+            "value": "item18",
+            "text": "Jumlah feses untuk diet"
+           },
+           {
+            "value": "item19",
+            "text": "Feses lembut dan berbentuk"
+           },
+           {
+            "value": "item20",
+            "text": "Kemudahan BAB"
+           },
+           {
+            "value": "item21",
+            "text": "Pengeluaran feses tanpa bantuan"
+           },
+           {
+            "value": "item22",
+            "text": "Suara bising usus normal"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question43",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen diare",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tentukan riwayat diare"
+           },
+           {
+            "value": "item2",
+            "text": "Ambil feses untuk pemeriksaan kultur dan sensisitifitas bila diare berlanjut"
+           },
+           {
+            "value": "item3",
+            "text": "Evaluasi profil pengobatan terhadap adanya efek samping pada gastrointestinal"
+           },
+           {
+            "value": "item4",
+            "text": "Ajari pasien cara penggunaan obat antidiare secara tepat"
+           },
+           {
+            "value": "item5",
+            "text": "Intruksikan pasien atau anggota keluarga untuk mencatat warna, volume, frekuensi dan konsistensi feses"
+           },
+           {
+            "value": "item6",
+            "text": "Evaluasi kandungan nutrisi dari makanan yang sudah dikonsumsi sebelumnya"
+           },
+           {
+            "value": "item7",
+            "text": "Berikan makanan dalam porsi kecil dan lebih sering serta tingkatkan porsi secara bertahap"
+           },
+           {
+            "value": "item8",
+            "text": "Anjurkan pasien menghindari makanan pedas dan yang menimbulkan gas dalam perut"
+           },
+           {
+            "value": "item9",
+            "text": "Anjurkan pasien untuk mencoba menghindari makanan yang mengandung laktosa"
+           },
+           {
+            "value": "item10",
+            "text": "Identifikasi faktor yang bisa menyebabkan diare (misalnya medikasi, bakteri dan pemberian makanan lewat selang)"
+           },
+           {
+            "value": "item11",
+            "text": "Monitor tanda dan gejala diare"
+           },
+           {
+            "value": "item12",
+            "text": "Instruksikan pasien untuk memberi tahu staf setiap kali mengalami episode diare"
+           },
+           {
+            "value": "item13",
+            "text": "Amati turgor kulit secara berkala"
+           },
+           {
+            "value": "item14",
+            "text": "Monitor kulit perineum terhadap adanya iritasi dan ulserasi"
+           },
+           {
+            "value": "item15",
+            "text": "Timbang pasien secara berkala"
+           },
+           {
+            "value": "item16",
+            "text": "Beritahu dokter jika terjadi peningkatan frekuensi atau suara perut"
+           },
+           {
+            "value": "item17",
+            "text": "Konsultasikan dengan dokter jika tanda dan gejala diare menetap"
+           },
+           {
+            "value": "item18",
+            "text": "Intruksikan diet rendah serat, tinggi protein, tinggi kalori sesuai kebutuhan"
+           },
+           {
+            "value": "item19",
+            "text": "Intruksikan untuk menghindari laksatif"
+           },
+           {
+            "value": "item20",
+            "text": "Ajari pasien cara menurunkan stress sesuai kebutuhan"
+           },
+           {
+            "value": "item21",
+            "text": "Bantu pasien untuk melakukan teknik penurunan stress"
+           },
+           {
+            "value": "item22",
+            "text": "Monitor persiapan makanan yang aman"
+           },
+           {
+            "value": "item23",
+            "text": "Lakukan tindakan untuk mengistirahatkan perut (misalnya nutrisi oral, diet cair)"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman11",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel11",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question44",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question45",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Ketidakseimbangan nutrisi : kurang dari kebutuhan tubuh\nDefenisi : asupan nutrisi tidak  mencukupi untuk keperluan metabolisme tubuh\nBerhubungan dengan : ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Faktor biologis"
+           },
+           {
+            "value": "item2",
+            "text": "Faktor ekonomi"
+           },
+           {
+            "value": "item3",
+            "text": "Gangguan psikososial"
+           },
+           {
+            "value": "item4",
+            "text": "Ketidakmampuan makan"
+           },
+           {
+            "value": "item5",
+            "text": "Ketidakmampuan untuk memasukkan atau mencerna makanan"
+           },
+           {
+            "value": "item6",
+            "text": "Ketidakmampuan mengabsorpsi nutrient"
+           },
+           {
+            "value": "item7",
+            "text": "Kurang asupan makanan"
+           },
+           {
+            "value": "item8",
+            "text": "Data subjektif :"
+           },
+           {
+            "value": "item9",
+            "text": "Data objektif :"
+           },
+           {
+            "value": "item10",
+            "text": "Diare, frekuensi …..x/hari"
+           },
+           {
+            "value": "item11",
+            "text": "Rontok rambut yang berlebih"
+           },
+           {
+            "value": "item12",
+            "text": "Kurang nafsu makan"
+           },
+           {
+            "value": "item13",
+            "text": "Bising usus berlebih"
+           },
+           {
+            "value": "item14",
+            "text": "Konjungtiva pucat"
+           },
+           {
+            "value": "item15",
+            "text": "Denyut nadi lemah"
+           },
+           {
+            "value": "item16",
+            "text": "Penurunan BB > 20 %"
+           },
+           {
+            "value": "item17",
+            "text": "Membran mukosa pucat"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question46",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Status nutrisi : nutrisi adekuat"
+           },
+           {
+            "value": "item2",
+            "text": "Status nutrisi : intake makanan dan cairan"
+           },
+           {
+            "value": "item3",
+            "text": "Kontrol Berat Badan"
+           },
+           {
+            "value": "item4",
+            "text": "Keinginan untuk makan ketika dalam keadaan sakit atau sedang dalam menjalani pengobatan"
+           },
+           {
+            "value": "item5",
+            "text": "Keadekuatan pola asupan zat gizi yang biasanya"
+           },
+           {
+            "value": "item6",
+            "text": "Kemampuan untuk mempersiapkan dan mengingesti makanan dan cairan secara mandiri dengan atau tanpa alat bantu"
+           },
+           {
+            "value": "item7",
+            "text": "Tingkat kesesuaian berat badan, otot dan lemak dengan tinggi badan, rangka tubuh, jenis kelamin dan usia"
+           },
+           {
+            "value": "item8",
+            "text": "Jumlah makanan dan cairan yang dikonsumsi tubuh selama waktu 24 jam"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question47",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen nutrisi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tentukan status gizi pasien dan kemampuan pasien untuk memenuhi kebutuhan gizi"
+           },
+           {
+            "value": "item2",
+            "text": "Identifikasi adanya alergi atau intoleransi makanan yang dimiliki pasien"
+           },
+           {
+            "value": "item3",
+            "text": "Berikan pilihan makanan sambil menawarkan bimbingan makanan yang lebih sehat"
+           },
+           {
+            "value": "item4",
+            "text": "Ciptakan lingkungan yang optimal pada saat mengkonsumsi makan (bersih, berventilasi, santai dan bebas dari bau yang menyengat)"
+           },
+           {
+            "value": "item5",
+            "text": "Lakukan atau bantu pasien terkait dengan perawatan mulut sebelum makan"
+           },
+           {
+            "value": "item6",
+            "text": "Beri obat-obatan sebelum makan (misalnya, penghilang rasa sakit, anti emetik), jika diperlukan"
+           },
+           {
+            "value": "item7",
+            "text": "Anjurkan pasien untuk duduk pada posisi tegak di kursi, jika memungkinkan"
+           },
+           {
+            "value": "item8",
+            "text": "Pastikan makanan disajikan dengan cara menarik dan pada suhu yang paling cocok untuk konsumsi secara optimal"
+           },
+           {
+            "value": "item9",
+            "text": "Anjurkan keluarga untuk membawa makanan favorit pasien sementara pasien berada di Rumah Sakit atau fasilitas perawatan"
+           },
+           {
+            "value": "item10",
+            "text": "Bantu pasien membuka kemasan makanan, memotong makanan dan makan"
+           },
+           {
+            "value": "item11",
+            "text": "Anjurkan pasien terkait dengan kebutuhan diet untuk kondisi sakit (yaitu untuk pasien dengan penyakit ginjal, pembatasan natrium, kalium, protein dan cairan)"
+           },
+           {
+            "value": "item12",
+            "text": "Anjurkan pasien terkait dengan kebutuhan makanan tertentu berdasarkan  perkembangan atau usia (misalnya peningkatan kalsium, protein, cairan dan kalori untuk wanita menyusui, peningkatan asupan serat untuk mencegah konstipasi pada orang dewasa yang lebih tua)"
+           },
+           {
+            "value": "item13",
+            "text": "Tawarkan makanan ringan yang padat gizi"
+           },
+           {
+            "value": "item14",
+            "text": "Monitor kalori dan asupan makanan "
+           },
+           {
+            "value": "item15",
+            "text": "Monitor kecenderungan terjadinya penurunan dan kenaikan berat badan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question48",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Bantuan peningkatan Berat Badan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Jika diperlukan lakukan pmeriksaan diagnostik untuk mengetahui penyebab penurunan berat badan"
+           },
+           {
+            "value": "item2",
+            "text": "Timbang pasien pada jam yang sama setiap hari"
+           },
+           {
+            "value": "item3",
+            "text": "Diskusikan kemungkinan penyebab berat badan berkurang"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor mual muntah "
+           },
+           {
+            "value": "item5",
+            "text": "Kaji penyebab mual muntah dan tangani dengan tepat"
+           },
+           {
+            "value": "item6",
+            "text": "Berikan obat-obatan untuk meredakan mual dan nyeri sebelum makan"
+           },
+           {
+            "value": "item7",
+            "text": "Dukung peningkatan asupan kalori "
+           },
+           {
+            "value": "item8",
+            "text": "Kaji makanan kesukaan pasien, baik itu kesukaan pribadi atau yang dianjukan budaya dan agama"
+           },
+           {
+            "value": "item9",
+            "text": "Bantu pasien untuk makan atau suapi pasien"
+           },
+           {
+            "value": "item10",
+            "text": "Berikan makanan yang sesuai dengan instruksi dokter untuk pasien : diet umum, teksturnya lembut, memblender atau menghaluskan makanan melalui selang NGT, atau memberikan makanan total parenteral."
+           },
+           {
+            "value": "item11",
+            "text": "Diskusikan dengan pasien dan keluarga bahwa faktor sosial ekonomi mempengaruhi nutrisi yang tidak adekuat"
+           },
+           {
+            "value": "item12",
+            "text": "Diskusikan dengan pasien dan keluarga mengenai persepsi atau faktor penghambat kemampuan atau keinginan untuk makan"
+           },
+           {
+            "value": "item13",
+            "text": "Rujuk pada lembaga di komunitas yang dapat membantu dalam memenuhi makanan"
+           },
+           {
+            "value": "item14",
+            "text": "Kenali apakah penurunan berat badan yang dialami pasien merupakan tanda penyakit terminal (misalnya kanker)"
+           },
+           {
+            "value": "item15",
+            "text": "Sediakan suplemen makanan jika diperlukan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question49",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen gangguan makan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Kolaborasi dengan  tim kesehatan lain untuk mengembangkan rencana perawatan dengan melibatkan klien dan orang-orang terdekatnya dengan tepat"
+           },
+           {
+            "value": "item2",
+            "text": "Rundingkan dengan ahli gizi dalam menentukan asupan kalori harian yang diperluakan untuk mempertahankan berat badan yang sudah ditentukan"
+           },
+           {
+            "value": "item3",
+            "text": "Monitor tanda-tanda fisiologis (tanda-tanda vital, elektrolit,) jika diperlukan"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor intake/asupan dan asupan cairan secara tepat"
+           },
+           {
+            "value": "item5",
+            "text": "Monitor asupan kalori makanan harian"
+           },
+           {
+            "value": "item6",
+            "text": "Monitor perilaku pasien yang berhubungan dengan pola makan, penambahan dan kehilangan berat badan"
+           },
+           {
+            "value": "item7",
+            "text": "Gunakan teknik modifikasi perilaku untuk meningkatkan perilaku yang berkontribusi terhadap penambahan berat badan dan batasi perilaku yang mengurangi berat badan dengan tepat"
+           },
+           {
+            "value": "item8",
+            "text": "Berikan dukungan terhadap peningkatan berat badan dan perilaku yang meningkatkan berat badan"
+           },
+           {
+            "value": "item9",
+            "text": "Batasi aktifitas fisik sesuai kebutuhan untuk meningkatkan berat badan"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman12",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel12",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question50",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question51",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Hipotermia\nDefenisi : suhu tubuh berada di bawah kisaran normal karena kegagalan termoregulasi\nBerhubungan dengan : \n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Agen farmaseutikal"
+           },
+           {
+            "value": "item2",
+            "text": "Berat badan e\tBerat badan ekstrimkstrim"
+           },
+           {
+            "value": "item3",
+            "text": "Kerusakan hipotalamus"
+           },
+           {
+            "value": "item4",
+            "text": "Konsumsi alkohol"
+           },
+           {
+            "value": "item5",
+            "text": "Kurang pengetahuan pemberi asuhan tentang pencegahan hipotermi"
+           },
+           {
+            "value": "item6",
+            "text": "Kurang suplai lemak subkutan"
+           },
+           {
+            "value": "item7",
+            "text": "Lingkungan bersuhu rendah"
+           },
+           {
+            "value": "item8",
+            "text": "Malnutrisi"
+           },
+           {
+            "value": "item9",
+            "text": "Pemakaian pakaian yang tidak adekuat"
+           },
+           {
+            "value": "item10",
+            "text": "Penurunan laju metabolisme"
+           },
+           {
+            "value": "item11",
+            "text": "Terapi radiasi"
+           },
+           {
+            "value": "item12",
+            "text": "Transfer panas (misalnya konduksi, konveksi, evaporasi, radiasi)"
+           },
+           {
+            "value": "item13",
+            "text": "Trauma"
+           },
+           {
+            "value": "item14",
+            "text": "Usia ekstrim"
+           },
+           {
+            "value": "item15",
+            "text": "Data subjektif :"
+           },
+           {
+            "value": "item16",
+            "text": "Data objektif :"
+           },
+           {
+            "value": "item17",
+            "text": "S = …….°C                              "
+           },
+           {
+            "value": "item18",
+            "text": "Bradikardia    "
+           },
+           {
+            "value": "item19",
+            "text": "Dasar kuku sianotik                    "
+           },
+           {
+            "value": "item20",
+            "text": "Akrosianosis"
+           },
+           {
+            "value": "item21",
+            "text": " Hipoksia"
+           },
+           {
+            "value": "item22",
+            "text": " Hipertensi"
+           },
+           {
+            "value": "item23",
+            "text": "Hipoglikemia"
+           },
+           {
+            "value": "item24",
+            "text": "Kulit dingin"
+           },
+           {
+            "value": "item25",
+            "text": "Menggigil"
+           },
+           {
+            "value": "item26",
+            "text": "Pengisian ulang kapiler lambat"
+           },
+           {
+            "value": "item27",
+            "text": "Peningkatan konsumsi oksigen"
+           },
+           {
+            "value": "item28",
+            "text": "Peningkatan laju metabolik"
+           },
+           {
+            "value": "item29",
+            "text": "Takikardi"
+           },
+           {
+            "value": "item30",
+            "text": "Penurunan ventilasi"
+           },
+           {
+            "value": "item31",
+            "text": "Vasokonstriksi perifer "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question52",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Setelah dilakukan tindakan keperawatan selama ……………, pasien menunjukkan :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Suhu tubuh normal"
+           },
+           {
+            "value": "item2",
+            "text": "Penurunan suhu kulit"
+           },
+           {
+            "value": "item3",
+            "text": "Sakit kepala berkurang"
+           },
+           {
+            "value": "item4",
+            "text": "Sakit otot berkurang"
+           },
+           {
+            "value": "item5",
+            "text": "Perubahan warna kulit"
+           },
+           {
+            "value": "item6",
+            "text": "Radang dingin berkurang"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question53",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Perawatan hipotermia",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor suhu pasien menggunakan alat pengukur dan rute yang paling tepat"
+           },
+           {
+            "value": "item2",
+            "text": "Bebaskan pasien dari lingkungan yang dingin"
+           },
+           {
+            "value": "item3",
+            "text": "Bebaskan pasien dari pakaian yang dingin dan basah"
+           },
+           {
+            "value": "item4",
+            "text": "Tempatkan pasien pada posisi supine/telentang, minumalkan perubahan orthostatic"
+           },
+           {
+            "value": "item5",
+            "text": "Minimalkan stimulasi pada pasien (memegang perlahan dan hindari gerakan yang berlebihan) untuk menghindari tercetusnya fibrilasi ventrikel"
+           },
+           {
+            "value": "item6",
+            "text": "Dorong pasien yang mengalami hipotermia uncomplicated  untuk mengkonsumsi cairan hangat, tinggi karbohidrat tanpa alkohol atau kafein "
+           },
+           {
+            "value": "item7",
+            "text": "Bagi panas tubuh, gunakan baju yang tidak terlalu tebal untuk memfasilitasi pemindahan panas"
+           },
+           {
+            "value": "item8",
+            "text": "Berikan pemanas pasif (misalnya selimut, penutup kepala dan pakaian hangat"
+           },
+           {
+            "value": "item9",
+            "text": "Berikan pemanas eksternal aktif (misalnya bantalan penghangat yang ditempatkan pada daerah trunkal sebelum ekstremitas, botol yang berisi air hangat, pemanas air, selimut hangat, lampu radiasi, bantalan penghangat dan pemanas udara)"
+           },
+           {
+            "value": "item10",
+            "text": "Hindari pemanas eksternal aktif pada pasien yang mengalami hipotermia berat"
+           },
+           {
+            "value": "item11",
+            "text": "Berikan pemanas internal aktif atau pemanas inti (misalnya cairan IV yang hangat, oksigen humidifier yang hangat, bypass cardiopulmonal, hemodialisa, pemanas arteri vena continu dan lavage hangat rongga tubuh"
+           },
+           {
+            "value": "item12",
+            "text": "Monitor adanya komplikasi yang berhubungan dengan pemanasan ekstra corporeal (misalnya sindrom distres pernafasan akut, gagal ginjal akut dan penoumonia)"
+           },
+           {
+            "value": "item13",
+            "text": "Lakukan RJP pada pasien tanpa sirkulasi spontan dan sadari bahwa upaya defibrilasi mungkin tidak efektif  sampai suhu inti di atas 30ºC"
+           },
+           {
+            "value": "item14",
+            "text": "Berikan pengobatan dengan hati-hati (misalnya waspada adanya metabolisme yang tidak dapat diprediksi, monitor adanya peningkatan tindakan atau toksisitas dan pertimbangkan untuk tetap menggunakan pengobatan IV sampai suhu inti diatas 30ºC)"
+           },
+           {
+            "value": "item15",
+            "text": "Monitor adanya gejala-gejala yang berhubungan dengan hipotermia ringan (misalnya takipnea, dysarthria, menggigil, hipertensi dan diuresis), hipotermia berat (misalnya oliguria, tidak adanya refleks neurologi, edema paru dan ketidaknormalan asam basa)"
+           },
+           {
+            "value": "item16",
+            "text": "Monitor adanya syok pemanasan kembali"
+           },
+           {
+            "value": "item17",
+            "text": "Monitor warna dan suhu kulit"
+           },
+           {
+            "value": "item18",
+            "text": "Identifikasi faktor medis, lingkungan, dan faktor lain yang mungkin memicu hipotermia (misalnya penggunaan air dingin, penyakit, injury trauma, status syok, imobilisasi, cuaca, umur yang ekstrim, medikasi, intosikasi alkohol, hipotiroid, diabetes dan malnutrisi)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question54",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Pengaturan suhu",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor tekanan darah, nadi dan respirasi"
+           },
+           {
+            "value": "item2",
+            "text": "Tingkatkan intake cairan dan nutrisi adekuat"
+           },
+           {
+            "value": "item3",
+            "text": "Instruksikan pasien bagaimana mencegah keluarnya panas"
+           },
+           {
+            "value": "item4",
+            "text": "Instruksi pasien, khususnya pasien lansia, mengenai tindakan untuk mencegah hipotermia karena paparan dingin"
+           },
+           {
+            "value": "item5",
+            "text": "Berikan medikasi yang tepat untuk mencegah atau mengontrol menggigil"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman13",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel13",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question55",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question56",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Hipertermia\nDefenisi:Peningkatan suhu tubuh diatas kisaran normal dikarenakan kegagalan termoregulasi\nberhubungan dengan: \n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Penyakit    "
+           },
+           {
+            "value": "item2",
+            "text": "Aktivitas yang berlebih                      "
+           },
+           {
+            "value": "item3",
+            "text": "Dehidrasi  "
+           },
+           {
+            "value": "item4",
+            "text": "Sepsis"
+           },
+           {
+            "value": "item5",
+            "text": "Trauma"
+           },
+           {
+            "value": "item6",
+            "text": "Iskemia"
+           },
+           {
+            "value": "item7",
+            "text": "Penurunan respirasi"
+           },
+           {
+            "value": "item8",
+            "text": "Peningkatan laju metabolisme"
+           },
+           {
+            "value": "item9",
+            "text": "Aktivitas yang berlebih"
+           },
+           {
+            "value": "item10",
+            "text": "Pakaian yang tidaksesuai"
+           },
+           {
+            "value": "item11",
+            "text": "Agen farmaseutikal"
+           },
+           {
+            "value": "item12",
+            "text": "DS:  Keluarga/pasen mengatakan badan terasa panas"
+           },
+           {
+            "value": "item13",
+            "text": "DO: Kenaikan suhu tubuh diatas rentang normal "
+           },
+           {
+            "value": "item14",
+            "text": "S = .........°C"
+           },
+           {
+            "value": "item15",
+            "text": "Serangan atau konvulsi (kejang)"
+           },
+           {
+            "value": "item16",
+            "text": "Kulit kemerahan "
+           },
+           {
+            "value": "item17",
+            "text": "Letargi"
+           },
+           {
+            "value": "item18",
+            "text": "Takikardi "
+           },
+           {
+            "value": "item19",
+            "text": "Kulit teraba panas/ hangat "
+           },
+           {
+            "value": "item20",
+            "text": "Apnea"
+           },
+           {
+            "value": "item21",
+            "text": "Takipnea"
+           },
+           {
+            "value": "item22",
+            "text": "Gelisah"
+           },
+           {
+            "value": "item23",
+            "text": "Vasodilatasi \t"
+           },
+           {
+            "value": "item24",
+            "text": "Postur abnormal"
+           },
+           {
+            "value": "item25",
+            "text": "Bayi tidak dapat mempertahankan menyusu"
+           },
+           {
+            "value": "item26",
+            "text": "Hipotensi"
+           },
+           {
+            "value": "item27",
+            "text": "Stupor"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question57",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Thermoregulasi :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Merasa merinding saat dingin"
+           },
+           {
+            "value": "item2",
+            "text": "Berkeringat saat panas"
+           },
+           {
+            "value": "item3",
+            "text": "Tingkat pernapasan tidak terganggu"
+           },
+           {
+            "value": "item4",
+            "text": "Tidak ada peningkatan suhu kulit "
+           },
+           {
+            "value": "item5",
+            "text": "Tidak ada hipetermia"
+           },
+           {
+            "value": "item6",
+            "text": "Tidak ada sakit kepala"
+           },
+           {
+            "value": "item7",
+            "text": "Tidak ada sakit otot"
+           },
+           {
+            "value": "item8",
+            "text": "Tidak ada dehidrasi"
+           },
+           {
+            "value": "item9",
+            "text": "Tidak ada perubahan warna kulit"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question58",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Perawatan Demam",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor TD, nadi, suhu, dan RR                                                                 "
+           },
+           {
+            "value": "item2",
+            "text": "Monitor warna dan suhu kulit                                                                     "
+           },
+           {
+            "value": "item3",
+            "text": "Tutup pasien dengan selimut atau pakaian ringan"
+           },
+           {
+            "value": "item4",
+            "text": "Berikan cairan intravena "
+           },
+           {
+            "value": "item5",
+            "text": "Monitor intake dan output"
+           },
+           {
+            "value": "item6",
+            "text": "Tingkatkan intake cairan dan nutrisi"
+           },
+           {
+            "value": "item7",
+            "text": "Mandikan pasien dengan spun hangat dengan hati-hati"
+           },
+           {
+            "value": "item8",
+            "text": "Tingkatkan sirkulasi udara"
+           },
+           {
+            "value": "item9",
+            "text": "Pantau komplikasi penyebab demam serta tanda dan gejala kondisi penyebab demam (misalnya: kejang, penurunan tingkat kesadaran, status elektrolit abnormal)"
+           },
+           {
+            "value": "item10",
+            "text": "Lembab kan bibir dan mukosa hidung yang kering"
+           },
+           {
+            "value": "item11",
+            "text": "Berika metode pendinginan eksternal (misalnya : kompres dingin pada leher, abdomen, dahi, ketiak, dan selangkangan)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question59",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen Kejang",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pertahankan jalan nafas                                                                       "
+           },
+           {
+            "value": "item2",
+            "text": "Balikkan badan klien k satu sisi                                                            "
+           },
+           {
+            "value": "item3",
+            "text": "Pandu gerakan klien untuk mencegah cidera                                      "
+           },
+           {
+            "value": "item4",
+            "text": "Monitor arah kepala dan mata saat kejang                                          "
+           },
+           {
+            "value": "item5",
+            "text": "Pasang IV line dengan benar                                                                "
+           },
+           {
+            "value": "item6",
+            "text": "Monitor status neurologis                                                                       "
+           },
+           {
+            "value": "item7",
+            "text": "Tetap disisi klien selama kejang"
+           },
+           {
+            "value": "item8",
+            "text": "Longgarkan pakaian"
+           },
+           {
+            "value": "item9",
+            "text": "Catat lama kejang"
+           },
+           {
+            "value": "item10",
+            "text": "Berikan O2 dengan benar"
+           },
+           {
+            "value": "item11",
+            "text": "Catat karakteristik kejang"
+           },
+           {
+            "value": "item12",
+            "text": "Berikan obat-obatan dengan benar"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question60",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Kontrol Infeksi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Batasi jumlah pengunjung"
+           },
+           {
+            "value": "item2",
+            "text": "Anjurkan pengunjung untuk mencuci tangan pada saat meninggalkan dan memasuki ruangan pasien"
+           },
+           {
+            "value": "item3",
+            "text": "Cuci tangan sebelum dan sesudah perawatan pasien "
+           },
+           {
+            "value": "item4",
+            "text": "Dorong untuk berisitirahat"
+           },
+           {
+            "value": "item5",
+            "text": "Kolaborasi dalam pemberian antibiotik"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question61",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen Cairan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Timbang BB setiap hari dan monitor status pasien                                          "
+           },
+           {
+            "value": "item2",
+            "text": "Jaga intake yang akurat dan catat output                                                         "
+           },
+           {
+            "value": "item3",
+            "text": "Monitor status hidrasi                                                                                         "
+           },
+           {
+            "value": "item4",
+            "text": "Pasang kateter urin"
+           },
+           {
+            "value": "item5",
+            "text": "Monitor hasil laboratorium"
+           },
+           {
+            "value": "item6",
+            "text": "Monitor status gizi"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman14",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel14",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question62",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question63",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Risiko Syok\nDefenisi : rentan mengalami ketidakcukupan aliran  darah ke jaringan tubuh, yang dapat mengakibatkan disfungsi seluler yang  mengancam  jiwa, yang dapat mengganggu kesehatan\nFaktor Risiko:\n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Sepsis "
+           },
+           {
+            "value": "item2",
+            "text": "Hipoksemia"
+           },
+           {
+            "value": "item3",
+            "text": "Hipotensi"
+           },
+           {
+            "value": "item4",
+            "text": "Hipoksia"
+           },
+           {
+            "value": "item5",
+            "text": "Hipovolemia"
+           },
+           {
+            "value": "item6",
+            "text": "Infeksi"
+           },
+           {
+            "value": "item7",
+            "text": "Sindrom respon inflamasi sistemik (systemic inflamatory response syndrome)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question64",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Keparahan : Syok Hipovolemik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak ada Penurunan tekanan  nadi perifer"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak ada melambatnya waktu pengisian kapiler"
+           },
+           {
+            "value": "item3",
+            "text": "Nadi tidak lemah dan halus"
+           },
+           {
+            "value": "item4",
+            "text": "Akral dingin tidak ada"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question65",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Pencegahan Syok",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor terhadap adanya respon kompensasi awal"
+           },
+           {
+            "value": "item2",
+            "text": "Monitor terhadap tanda - tanda respon sindroma inflamasi sistemik"
+           },
+           {
+            "value": "item3",
+            "text": "Monitor terhadap adanya tanda awal dari penurunan fungsi jantung"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor tekanan oksimetri"
+           },
+           {
+            "value": "item5",
+            "text": "berikan cairan melalui IV dan atau oral, sesuai kebutuhan "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question66",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Pencegahan Perdarahan ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor dengan ketat risiko terjadinya perdarahan pada pasien"
+           },
+           {
+            "value": "item2",
+            "text": "Catat nilai Hb, Ht sebelum dan setelah pasien kehilangan darah"
+           },
+           {
+            "value": "item3",
+            "text": "Monitor tanda dan gejala perdarahan menetap"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor TTV "
+           },
+           {
+            "value": "item5",
+            "text": "Pertahankan agar pasien tetap tirah baring jika terjadi perdarahan aktif"
+           },
+           {
+            "value": "item6",
+            "text": "Berikan produk – produk penggantian darah jika dibutuhkan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question67",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen Hipovolemik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor adanya tanda-tanda dehidrasi"
+           },
+           {
+            "value": "item2",
+            "text": "Monitor adanya tanda0tanda hipotensi dan pusing saat berdiri"
+           },
+           {
+            "value": "item3",
+            "text": "Monitor adanya bukti labor terkait kehilangan darah"
+           },
+           {
+            "value": "item4",
+            "text": "Dukung asupan cairan oral dalam 24 jam"
+           },
+           {
+            "value": "item5",
+            "text": "Kolaborasi dalam pemerian cairan isotonik "
+           },
+           {
+            "value": "item6",
+            "text": "Monitor rongga mulut dari kekeringan dan membran mukosa yang pecah"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman15",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel15",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question68",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question69",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Ikterik Neonatus\nFaktor yang berhubungan :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keterlambatan pengeluaran mekonium"
+           },
+           {
+            "value": "item2",
+            "text": "Bayi menglami kesulitan transisi kehidupan ekstra uterin"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question70",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Adaptasi Bayi Baru Lahir dengan Indikator:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Skor Apgar (sedikit menyimpang dari rentang normal)"
+           },
+           {
+            "value": "item2",
+            "text": "Saturasi Oksigen > 90% (tidak menyimpang dari rentang normal)"
+           },
+           {
+            "value": "item3",
+            "text": "Laju pernapasan (30-60) (sedikit menyimpang dari rentang normal)"
+           },
+           {
+            "value": "item4",
+            "text": "Warna kulit (sedikit menyimpang dari rentang normal)"
+           },
+           {
+            "value": "item5",
+            "text": "Tali pusat kering (tidak menyimpang dari rentang normal)"
+           },
+           {
+            "value": "item6",
+            "text": "Kadar bilirubin (tidak menyimpang dari rentang normal)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question71",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "1.\tFototerapi Neonatus",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Observasi tanda-tanda kuning"
+           },
+           {
+            "value": "item2",
+            "text": "Periksa kadar bilirubin, sesuai kebutuhan, permintaan dokter"
+           },
+           {
+            "value": "item3",
+            "text": "Kaji ulang riwayat maternal bayi mengenai adanya faktor resiko terjadinya hiperbilirubinemia"
+           },
+           {
+            "value": "item4",
+            "text": "Edukasi keluarga mengenai prosedur dan perawatan fototerapi"
+           },
+           {
+            "value": "item5",
+            "text": "Ubah posisi bayi setiap 4 jam per protokol"
+           },
+           {
+            "value": "item6",
+            "text": "Edukasi keluarga ,mengenai fototerapi dirumah, sesuai kebutuhan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question73",
+          "indent": 20,
+          "title": "Batasan karakteristik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Skera kuning"
+           },
+           {
+            "value": "item2",
+            "text": "Kulit kuning sampai orange"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question72NIC (Nursing Interventions Classification)",
+          "startWithNewLine": false,
+          "indent": 20,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "2.\tPerawatan bayi baru lahir",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Bersikan sekresi dari saluran mulut dan hidung"
+           },
+           {
+            "value": "item2",
+            "text": "Lakukan eavluasi Apgar pada menit pertama dan kelima setelah lahir"
+           },
+           {
+            "value": "item3",
+            "text": "Ukur dan timbang berat bayi baru lahir"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor suhu bayi baru lahir"
+           },
+           {
+            "value": "item5",
+            "text": "Monitor reflek menghisap bayi baru lahir selama menyusui"
+           },
+           {
+            "value": "item6",
+            "text": "Sediakan informasi tentang bayi baru lahir mengenai kebutuhan nutrisinya"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question72",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "3.\tPendidikan ortu bayi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tentukan pengetahuan , kesiapan dan kemampuan ortu dalam belajar mengenai perawatan bayi"
+           },
+           {
+            "value": "item2",
+            "text": "Ajarkan ortu keterampilan dalam merawat bayi yang baru lahir"
+           },
+           {
+            "value": "item3",
+            "text": "Ajarkan ortu cara menyiapkan susu formula dan pemilihannya"
+           },
+           {
+            "value": "item4",
+            "text": "Berikan informasi mengenai dot bayi pada ortu"
+           },
+           {
+            "value": "item5",
+            "text": "Ajarkan ortu cara merawat dan mencegah ruam popokjelaskan dan demonstrasikan kondisi bayi"
+           },
+           {
+            "value": "item6",
+            "text": "Tunjukan bagaimana teknik menenangkan bayi"
+           },
+           {
+            "value": "item7",
+            "text": "Motivasi ortu untuk memegang, memeluk, memijat dan menyentuh bayi"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman16",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel16",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question74",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question75",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Resiko Kekurangan Volume Cairan\nDefenisi: Kerentanan mengalami penurunan volume cairan intra vaskuler, interstisial, dan/atau intraseluler, yang dapat mengganggu kesehatan.\nberhubungan dengan: \n",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Kehilangan volume cairan secara aktif"
+           },
+           {
+            "value": "item2",
+            "text": "Kegagalan mekanisme pengaturan regulasi"
+           },
+           {
+            "value": "item3",
+            "text": "DS :"
+           },
+           {
+            "value": "item4",
+            "text": "DO :  Agens farmaseutkal"
+           },
+           {
+            "value": "item5",
+            "text": "Gangguan mekanisme regulasi"
+           },
+           {
+            "value": "item6",
+            "text": "Kehilangan cairan melalui rute normal"
+           },
+           {
+            "value": "item7",
+            "text": "Kurang pengetahuan tentang kebutuhan cairan"
+           },
+           {
+            "value": "item8",
+            "text": "Penyimpangan yang mempengaruhi asupan cairan"
+           },
+           {
+            "value": "item9",
+            "text": "Penyimpangan yang mempengaruhi absorpsi cairan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question76",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Keseimbangan Cairan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tekanan darah dalam batas normal"
+           },
+           {
+            "value": "item2",
+            "text": "Denyut nadi radial dalam batas normal"
+           },
+           {
+            "value": "item3",
+            "text": "Denyut perifer dalam batas normal"
+           },
+           {
+            "value": "item4",
+            "text": "Keseimbangan intake dan output dalam 24 jam"
+           },
+           {
+            "value": "item5",
+            "text": "Berat badan stabil"
+           },
+           {
+            "value": "item6",
+            "text": "Turgor kulit dalam batas normal"
+           },
+           {
+            "value": "item7",
+            "text": "Kelembaban membran mukosa "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question77",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Manajemen cairan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Timbang berat badan pasien setiap hari dan status pasien"
+           },
+           {
+            "value": "item2",
+            "text": "Pasang kateter urin"
+           },
+           {
+            "value": "item3",
+            "text": "Kontrol intake dan output pasien"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor status hidrasi"
+           },
+           {
+            "value": "item5",
+            "text": "Monitor tanda-tanda vital "
+           },
+           {
+            "value": "item6",
+            "text": "Berikan terapi IV, jika diperlukan"
+           },
+           {
+            "value": "item7",
+            "text": "Kolaborasi dalam pemberian diuretik"
+           },
+           {
+            "value": "item8",
+            "text": "Motivasi pasien untuk eningkatkan asupan oral"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question78",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "Monitor Cairan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tentukan faktor resiko yang mungkin menyebabkan ketidakseimbangan cairan (misalnya, kehilanga albumin, luka bakar,sindrom nefrotik, sepsis,infeksi,diare, dan lain-lain)"
+           },
+           {
+            "value": "item2",
+            "text": "Tentukan apakah pasien mengalami kehausan atau gejala perubahan cairan"
+           },
+           {
+            "value": "item3",
+            "text": "Periksa turgor kulit"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor warna, kuantitas, dan berat jenis urin"
+           },
+           {
+            "value": "item5",
+            "text": "Monitor tanda dan gejala asites"
+           },
+           {
+            "value": "item6",
+            "text": "Monitor intake dan output"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman17",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel17",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question79",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question80",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Ketidekefektifan Termoregulasi\n-->\tFaktor yang berhubungan :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Fluktuasi suhu lingkungan"
+           },
+           {
+            "value": "item2",
+            "text": "Penyakit "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question81",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Termoregulasi, Baru Lahir dengan indikator:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Berat badan (sedikit terganggu)"
+           },
+           {
+            "value": "item2",
+            "text": "Suhu tidak stabil (tidak terganggu)"
+           },
+           {
+            "value": "item3",
+            "text": "Hipertermia (sedikit terganggu)"
+           },
+           {
+            "value": "item4",
+            "text": "Hipotermia (sedikit terganggu)"
+           },
+           {
+            "value": "item5",
+            "text": "Nafas tidak teratur (sedikit terganggu)"
+           },
+           {
+            "value": "item6",
+            "text": "Glukosa darah tidak stabil (tidak terganggu) "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question82",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "1.\tPengaturan Suhu",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor suhu paling tidak setiap 2 jam, sesuai kebutuhan"
+           },
+           {
+            "value": "item2",
+            "text": "Monitor suhu bayi baru lahir sampai stabil"
+           },
+           {
+            "value": "item3",
+            "text": "Monitor nadi dan respirasi, sesuai kebutuhan"
+           },
+           {
+            "value": "item4",
+            "text": "Monitor suhu dan warna kulit"
+           },
+           {
+            "value": "item5",
+            "text": "Monitor dan laporkan tanda dan gejala dari hipo dan hipertermia"
+           },
+           {
+            "value": "item6",
+            "text": "Tingkatkan intake cairan dan nutrisi adekuat"
+           },
+           {
+            "value": "item7",
+            "text": "Selimuti bayi segera setelah lahir untuk mencegah kehilangan panas"
+           },
+           {
+            "value": "item8",
+            "text": "Tempatkan bayi baru lahir dibawah penghangat"
+           },
+           {
+            "value": "item9",
+            "text": "Diskusikan pentingnya termoregulasi dan kemungkinan efek negatif dari demam yang berlebihan, sesuai kebutuhan"
+           },
+           {
+            "value": "item10",
+            "text": "Sesuaikan lingkungan untuk kebutuhan pasien"
+           },
+           {
+            "value": "item11",
+            "text": "Berikan antipiretik, sesuai kebutuhan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question83",
+          "indent": 20,
+          "title": "Batasan karakteristik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Dasar kuku sianotik"
+           },
+           {
+            "value": "item2",
+            "text": "Kejang"
+           },
+           {
+            "value": "item3",
+            "text": "Kulit dingin"
+           },
+           {
+            "value": "item4",
+            "text": "Pengisian ulang kapiler yang lambat"
+           },
+           {
+            "value": "item5",
+            "text": "Peningkatan frekuensi pernapasan"
+           },
+           {
+            "value": "item6",
+            "text": "Peningkatan suhu tubuh diatas kisaran normal"
+           },
+           {
+            "value": "item7",
+            "text": "Penurunan suhu tubuh diatas kisaran normal"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question84",
+          "startWithNewLine": false,
+          "indent": 20,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "2.\tPerawatan Hipertermia",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pastikan kepatenan jalan nafas"
+           },
+           {
+            "value": "item2",
+            "text": "Monitor tanda-tanda vital"
+           },
+           {
+            "value": "item3",
+            "text": "Berikan oksigen, sesuai kebutuhan"
+           },
+           {
+            "value": "item4",
+            "text": "Pasang akses IV"
+           },
+           {
+            "value": "item5",
+            "text": "Pasang NGT"
+           },
+           {
+            "value": "item6",
+            "text": "Monitor suhu tubuh menggunakan alat yang sesuai"
+           },
+           {
+            "value": "item7",
+            "text": "Monitor hipoglikemia"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question85",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "3.\tPerawatan Demam",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pantau suhu dan tanda-tanda vital lainnya"
+           },
+           {
+            "value": "item2",
+            "text": "Monitor warna kulit dan suhu"
+           },
+           {
+            "value": "item3",
+            "text": "Monitor asupan dan keluaran, sadari perubahan cairan yang tak dirasakan"
+           },
+           {
+            "value": "item4",
+            "text": "Beri obat atau cairan IV"
+           },
+           {
+            "value": "item5",
+            "text": "Berikan oksigenasi, sesuai kebutuhan"
+           },
+           {
+            "value": "item6",
+            "text": "Tutup pasien dengan selimut, tergantung pada fase demam"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman18",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel18",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question86",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "checkbox",
+          "name": "question87",
+          "startWithNewLine": false,
+          "title": "Diagnosa Keperawatan",
+          "description": "Resiko Aspirasi\nFaktor Resiko\n\t",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Adanya slang oral/nasal"
+           },
+           {
+            "value": "item2",
+            "text": "Peningkatan residu lambung"
+           },
+           {
+            "value": "item3",
+            "text": "Penurunan reflek muntah"
+           },
+           {
+            "value": "item4",
+            "text": "Penurunan tingkat kesadaran"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question88",
+          "startWithNewLine": false,
+          "title": "NOC (Nursing Outcomes Classification)",
+          "description": "Status Pernapasan dengan indikator :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Frekuensi pernapasan (deviasi ringan dari kisaran normal)"
+           },
+           {
+            "value": "item2",
+            "text": "Retraksi dinding dada (tidak ada deviasi dari kisaran normal)"
+           },
+           {
+            "value": "item3",
+            "text": "Saturasi oksigen (tidak ada deviasi dari kisaran normal)"
+           },
+           {
+            "value": "item4",
+            "text": "Sianosis (deviasi ringan dari kisaran normal)"
+           },
+           {
+            "value": "item5",
+            "text": "Demam (deviasi ringan dari kisaran normal)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question89",
+          "startWithNewLine": false,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "1.\tPengaturan Posisi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Monitor stasus oksigenasi"
+           },
+           {
+            "value": "item2",
+            "text": "Tempatkan pasien dalam posisi terapeutik yang sudah dirancang"
+           },
+           {
+            "value": "item3",
+            "text": "Posisikan pasien sesuia dengan kesejajaran tubuh yang tepat"
+           },
+           {
+            "value": "item4",
+            "text": "Posisikan pasien untuk mengurangi dyspnea"
+           },
+           {
+            "value": "item5",
+            "text": "Sokong leher pasien dengan tepat"
+           },
+           {
+            "value": "item6",
+            "text": "Tinggikan kepala tempat tidur"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question90",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "2.\tPencegahan Aspirasi ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pertahankan kepatenan jalan nafas"
+           },
+           {
+            "value": "item2",
+            "text": "Monitor status pernapasan"
+           },
+           {
+            "value": "item3",
+            "text": "Posisikan kepala pasien tegak lurus, sama dengan atau lebih tinggi dari 30 sampai 90 derajat (pemberian makan melalui NGT)"
+           },
+           {
+            "value": "item4",
+            "text": "Jaga kepala tempat tidur ditinggikan 30 sampain 45 menit setelah pemberian makan"
+           },
+           {
+            "value": "item5",
+            "text": "Periksa posisi NGT sebelum pemberian makan"
+           },
+           {
+            "value": "item6",
+            "text": "Jangan beri makan jika residu terlalu banyak"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question91",
+          "indent": 60,
+          "title": "NIC (Nursing Interventions Classification)",
+          "description": "3.\tManajemen Muntah",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Identifikasi faktor-faktor yang dapat menyebabkan muntah"
+           },
+           {
+            "value": "item2",
+            "text": "Posisikan untuk mencegah aspirasi"
+           },
+           {
+            "value": "item3",
+            "text": "Pertahankan jalan nafas lewat mulut"
+           },
+           {
+            "value": "item4",
+            "text": "Lakukan membersihkan mulut dan hidung"
+           },
+           {
+            "value": "item5",
+            "text": "Monitor keseimbangan dan elektrolit"
+           },
+           {
+            "value": "item6",
+            "text": "Timbang secara teratur "
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

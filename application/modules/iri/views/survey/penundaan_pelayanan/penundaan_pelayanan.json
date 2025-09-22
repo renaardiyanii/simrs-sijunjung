@@ -1,0 +1,105 @@
+{
+    "title": "PENUNDAAN PELAYANAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "title": "*Pasien sendiri / keluarga pasien atau penanggung jawab pasien",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama"
+           },
+           {
+            "name": "poli",
+            "title": "Poli / Ruangan"
+           },
+           {
+            "name": "nm_dokter",
+            "title": "Nama dokter Pengirim"
+           },
+           {
+            "name": "pelayanan",
+            "title": "Pelayanan yang akan di lakukan "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question2",
+          "title": "Dengan ini menyatakan bahwa saya telah menerima informasi terhadap penundaan pelayanan dikarenakan : ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "kerusakan",
+            "text": "Kerusakan Alat"
+           },
+           {
+            "value": "kondisi",
+            "text": "Kondisi Umum Pasien"
+           },
+           {
+            "value": "penundaan",
+            "text": "Penundaan Penjadwalan "
+           },
+           {
+            "value": "pemadaman",
+            "text": "Pemadaman Instalasi Listrik"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question3",
+          "title": "Maka dengan ini saya Setuju untuk dilakukan Penundaan Pelayanan dengan alternatif yang diberikan : ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Dikembalikan kepada dokter pengirim"
+           },
+           {
+            "value": "item2",
+            "text": "Dirujuk ke Layanan kesehatan lain, ke "
+           }
+          ],
+          "hasOther": true,
+          "noneText": "Dirujuk ke Layanan kesehatan lain, ke ",
+          "otherText": "Dijadwalkan ulang dan menjadi prioritas. Jadwal yang akan datang "
+         },
+         {
+          "type": "text",
+          "name": "rujuk_ke",
+          "visibleIf": "{question3} = 'item2'",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "Saya yang bertanda tangan di bawah ini yang menerima informasi :"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+            "type": "dropdown",
+            "name": "pemberi_informasi",
+            "title": "Pemberi Informasi",
+            "hideNumber": true,
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_user_perawat_ppa"
+            }
+        }
+        ]
+       }
+      ]
+     }
+    ]
+   }

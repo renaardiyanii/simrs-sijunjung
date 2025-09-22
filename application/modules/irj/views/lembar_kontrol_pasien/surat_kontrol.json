@@ -1,0 +1,37 @@
+{
+    "title": "LEMBAR KONTROL PASIEN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "comment",
+          "name": "faskes",
+          "title": "Belum dapat dikembalikan ke fasilitas kesehatan perujuk dengan alasan :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "rencana",
+          "title": "Rencana tindak lanjut yang akan dilakukan pada kunjungan selanjutnya :",
+          "hideNumber": true
+         },
+       {
+        "type": "text",
+        "name": "kontrol1",
+        "title": "Lembar kontrol ini hanya dapat digunakan 1 (satu) kali kunjungan dengan diagnosa diatas pada tanggal",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "text",
+        "name": "kontrol2",
+        "title": "Lembar kontrol ini dapat digunakan sampai tanggal (Diisi untuk pasien HD/Fisioterapi",
+        "hideNumber": true,
+        "inputType": "date"
+       }
+       
+      ]
+     }
+    ]
+   }

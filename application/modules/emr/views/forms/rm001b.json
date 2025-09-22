@@ -1,0 +1,206 @@
+{
+    "pages": [
+     {
+      "name": "persetujuan_umum",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "identitas",
+        "title": "IDENTITAS",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "no_mec_reg",
+          "title": "No. Med.Rec :"
+         },
+         {
+          "name": "nama_lengkap",
+          "title": "Nama Lengkap :"
+         },
+         {
+          "name": "tgl_lahir",
+          "title": "Tanggal Lahir :"
+         },
+         {
+          "name": "jenis_kelamin",
+          "title": "Jenis Kelamin :"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "catatan_persetujuan",
+        "html": "I.PERSETUJUAN UNTUK PERAWATAN DAN PENGOBATAN.\n"
+       },
+       {
+        "type": "html",
+        "name": "catatan1",
+        "html": "1. Saya mengetahui bahwa saya memiliki kondisi yang membutuhkan perawatan medis, saya menginjinkan dokter dan profesional kesehatan lainnya untuk melakukan prosedur diagnostik dan untuk memberikan pengobatan medis seperti yang di perlukan dalam penilaian profesional mereka. Prosedur diagnostik dan perawatan medis termasuk teteapi tidak terbatas pada electrocardiograms, X-ray, tes darah, terapi fisik, dan pemberian obat."
+       },
+       {
+        "type": "html",
+        "name": "catatan2",
+        "html": "2. Saya sadar bahwa praktik kedokteran dan bedah bukanlah ilmu pasti dan saya mengakui bahwa tidak ada jaminan atas hasil apapun, terhadap perawatan prosedur atau pemeriksaan apapun yang di lakukan terhadapa saya."
+       },
+       {
+        "type": "html",
+        "name": "catatan3",
+        "html": "3. Saya mengakui telah mendapatkan informasi bahw pada prinsipnya setiap tindakan yang akan di lakukan terhadap diri saya yang meliputi tindakan transfusi darah, tindakan kedokteran, tindakan anastesi, hemodialisa, dan kemoterapi akan dimintakan informed consent(Pernyataan Persetujuan) kepada saya untuk saya tandatangani, dan saya sadar bahwa tindakan tersebut mengandung resiko medis."
+       },
+       {
+        "type": "html",
+        "name": "catatan4",
+        "html": "4. Saya mengetahui RSUP Dr. Mohammad Hoesin merupakan Rumah Sakit Pendidikan yang menjadi tempat praktik klinik bagi mahasiswa kedokteran dan profesi kesehatan lainnya. Terhadap itu, saya tidak keberatan dan dapat menyetujui sepanjang dilaksanankan dibawah supervisi dokter spesialis yang menjadi Dokter Penanggung Jawab Pelayanan(DPJP)."
+       },
+       {
+        "type": "html",
+        "name": "catatan5",
+        "html": "5. Apabila saya di libatkan dalam penelitian klinis, maka hal tersebut hanya dapat dilakukan dengan sepengetahuan dan persetujuan saya."
+       },
+       {
+        "type": "html",
+        "name": "catatan6",
+        "html": "6. Saya mengakui bahw untuk kepentingan pelaksanaan penyakit dalam hal ini sebagai data dasar dan evaluasi perkembangan penyakit, juga untuk kepentingan pendidikan, maka saya mengijinkan pengambilan dokumen berupa foto, video atau rekaman suara terhadap diri saya oleh petugas kesehatan selama dalam masa perawatan di rumah sakit."
+       },
+       {
+        "type": "html",
+        "name": "catatan_barang_pasien",
+        "html": "II. BARANG BARANG MILIK PASIEN"
+       },
+       {
+        "type": "html",
+        "name": "catatan_barang1",
+        "html": "1. Saya telah memahami bahwa rumah sakit tidakk bertanggung jawab atas semua kehilangan barang-barang milik saya dan saya secara pribadi bertanggung jawab atas barang barang berharga yang saya miliki termasuk namun tidak terbatas pada uang, perhiasan, buku cek, kartu kredit, handphone atau barang lainnya. Dan apabila saya membutuhkan maka saya dapat menitipkan barang barang saya kepada rumah sakit."
+       },
+       {
+        "type": "html",
+        "name": "catatan_barang2",
+        "html": "2. Saya juga mengerti bahwa saya harus memberitahu/menitipkan pada RS jika saya memiliki gigi palsu, kacamata, lensa kontak, prosthetics atau barang lainnya yang saya butuhkan untuk diamankan."
+       },
+       {
+        "type": "html",
+        "name": "catatan_hak_tanggungjawab",
+        "html": "III. HAK DAN TANGGUNG JAWAB PASIEN"
+       },
+       {
+        "type": "html",
+        "name": "catatan_hak1",
+        "html": "1. Saya memiliki hak untuk mengambil bagian dalam keputusan mengenai penyakit saya dan dalam hal perawatan medis dan rencana pengobatan."
+       },
+       {
+        "type": "html",
+        "name": "catatan_hak2",
+        "html": "2. Saya telah mendapat informasi tentang \"HAK DAN TANGGUNG JAWAB PASIEN\" di Rumah Sakit Dr. Mohammad Hoesin Palembang melalui leafet dan banner yang disediakan oleh petugas."
+       },
+       {
+        "type": "html",
+        "name": "keinginan_privasi_pasien",
+        "html": "IV. KEINGINAN PRIVASI PASIEN"
+       },
+       {
+        "type": "html",
+        "name": "catatan_privasi1",
+        "html": "1. Saya menginjinkan Rumah Sakit memberi akses bagi keluarga dan handai taulan serta orang-orang yang akan menegok / menemui saya."
+       },
+       {
+        "type": "html",
+        "name": "catatan_privasi2",
+        "html": "2. Apabila ada tamu / pengunjung yang tidak saya inginkan, maka saya akan melaporkan kepada petugas jaga."
+       },
+       {
+        "type": "html",
+        "name": "catatan_privasi3",
+        "html": "3. Saya memberi kuasa  kepada setiap dan seluruh tenaga kesehatan yang merawat saya untuk memeriksa dan atau memberitahukan informasi kesehatan saya kepada pemberi kesehatan lain yang turut merawat saya selama di rumah sakit ini."
+       },
+       {
+        "type": "html",
+        "name": "catatan_privasi4",
+        "html": "4. Saya memberi wewenang kepada rumah sakit untuk memberikan informasi tentang diagnosis hasil pelayanan dan pengobatan bila diperlukan untuk  memproses klaim asuransi, hukum, dan pendidikan."
+       },
+       {
+        "type": "html",
+        "name": "infomasi_rawat_inap",
+        "html": "V. INFORMASI RAWAT INAP"
+       },
+       {
+        "type": "html",
+        "name": "catatan_rawat_inap1",
+        "html": "1. Saya telah menerima informasi tentang peraturan yang diberlakukan oleh rumah sakit dan saya beserta keluarga bersedia untuk mematuhinya, termasuk akan mematuhi jam berkunjung pasien sesuai dengan aturan di Rumah Sakit."
+       },
+       {
+        "type": "html",
+        "name": "catatan_rawat_inap2",
+        "html": "2. Anggota keluarga saya yang menunggu saya bersedia untuk selalu memakai tand pengenal khusus yang akan mengunjungi saya di luar jam berkunjung bersedia untuk diminta/diperiksa identitasnya."
+       },
+       {
+        "type": "text",
+        "name": "catatan_tambahan",
+        "title": "Tambahan ",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "html",
+        "name": "informasi_biaya",
+        "html": "VI. INFOMASI BIAYA"
+       },
+       {
+        "type": "html",
+        "name": "catatan_informasi_biaya1",
+        "html": "Saya memahami tentang informasi biaya pengobatan atau biaya tindakan yang di jelaskan oleh petugas Rumah Sakit."
+       },
+       {
+        "type": "html",
+        "name": "catatan_informasi_biaya2",
+        "html": "Dengan ini saya menyatakan bahwa saya telah menerima dan memahami informasi sebagaimana tersebut diatas dan dapat menyetujuinya."
+       },
+       {
+        "type": "multipletext",
+        "name": "palembang",
+        "title": "Palembang,",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "tgl",
+          "title": "Tanggal"
+         },
+         {
+          "name": "pukul",
+          "title": "Pukul"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd_petugas_pemberi_informasi",
+        "title": "Petugas Pemberi Informasi",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd_nama",
+        "startWithNewLine": false,
+        "title": "Tanda Tangan dan Nama ",
+        "description": "(WALI JIKA PASIEN < 18 TAHUN)",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd_saksi_pertama",
+        "title": "Saksi Pertama",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd_saksi_kedua",
+        "startWithNewLine": false,
+        "title": "Saksi Kedua",
+        "hideNumber": true
+       }
+      ],
+      "title": "PERSETUJUAN UMUM (GENERAL CONSENT) RAWAT INAP"
+     }
+    ]
+   }

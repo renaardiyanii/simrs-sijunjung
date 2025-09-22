@@ -1,0 +1,174 @@
+{
+    "title": "PENGKAJIAN RISIKO JATUH PADA PASIEN NEONATUS",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question1",
+        "title": "Tanggal / Jam",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "text",
+        "name": "question3",
+        "title": "Ruangan",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question2",
+        "title": "Diagnosa medis\n",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question4",
+          "title": "INTERVENSI",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pasang gelang risiko jatuh"
+           },
+           {
+            "value": "item2",
+            "text": "Pasang tanda risiko jatuh pada box / incubator"
+           },
+           {
+            "value": "item3",
+            "text": "Orientasi ruangan pada orang tua / keluarga"
+           },
+           {
+            "value": "item4",
+            "text": "Dekatkan box bayi dengan ibu"
+           },
+           {
+            "value": "item5",
+            "text": "Pastikan selalu ada pendamping"
+           },
+           {
+            "value": "item6",
+            "text": "Pastikan lantai dan alas kaki tidak licin"
+           },
+           {
+            "value": "item7",
+            "text": "Kontrol rutin oleh perawat / bidan"
+           },
+           {
+            "value": "item8",
+            "text": "Bila dirawat dalam incubator, pastikan semua jendela terkunci"
+           },
+           {
+            "value": "item9",
+            "text": " Edukasi orang tua / keluarga"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question5",
+          "title": "EDUKASI YANG DIBERIKAN",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tempatkan bayi pada tempat yang aman"
+           },
+           {
+            "value": "item2",
+            "text": " Teknik menggendong bayi"
+           },
+           {
+            "value": "item3",
+            "text": "Cara membungkus bayi"
+           },
+           {
+            "value": "item4",
+            "text": "Segera istirahat apabila merasa lelah dan tempatkan bayi pada boxnya"
+           },
+           {
+            "value": "item5",
+            "text": "Libatkan keluarga untuk mendampingi atau segera panggil perawat / bidan jika dibutuhkan"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question6",
+          "title": "SASARAN EDUKASI",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ibu "
+           },
+           {
+            "value": "item2",
+            "text": "Keluarga lain  "
+           },
+           {
+            "value": "item3",
+            "text": "Bapak "
+           },
+           {
+            "value": "item4",
+            "text": "Wali"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question7",
+          "title": "EVALUASI",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Memahami dan mampu menjelaskan kembali"
+           },
+           {
+            "value": "item2",
+            "text": "Mampu mendemontrasikan"
+           },
+           {
+            "value": "item3",
+            "text": "Perlu edukasi ulang"
+           }
+          ]
+         }
+        ],
+        "title": "Semua Neonatus dikategorikan berisiko jatuh"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "question8",
+          "title": "Keluarga",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question9",
+          "titleLocation": "hidden",
+          "size": 50,
+          "placeHolder": "Nama"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

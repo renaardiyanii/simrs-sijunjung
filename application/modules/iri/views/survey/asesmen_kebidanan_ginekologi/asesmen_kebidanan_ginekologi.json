@@ -1,0 +1,3896 @@
+{
+  "locale": "id",
+  "title": "ASESMEN AWAL KEBIDANAN GINEKOLOGI RAWAT INAP",
+  "description": "(Dilengkapi 24 jam pasien masuk rawat inap)",
+  "pages": [
+   {
+    "name": "halaman1",
+    "elements": [
+     {
+      "type": "panel",
+      "name": "panel1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "tiba",
+          "inputType": "datetime-local",
+          "title": "Tiba diruangan"
+         },
+         {
+          "name": "pengkajian",
+          "inputType": "datetime-local",
+          "title": "Pengkajian"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "auto_allo",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "auto",
+          "text": "Auto Anamnesis"
+         },
+         {
+          "value": "allo",
+          "text": "Allo Anamnesis"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question3",
+        "visibleIf": "{auto_allo} = 'allo'",
+        "startWithNewLine": false,
+        "title": "Hubungan",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "placeHolder": "Hubungan"
+       },
+       {
+        "type": "radiogroup",
+        "name": "cara_masuk",
+        "title": "Cara Masuk ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "jalan",
+          "text": "Jalan"
+         },
+         {
+          "value": "kursi_roda",
+          "text": "Kursi Roda"
+         },
+         {
+          "value": "brankar",
+          "text": "Brankar"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Lain lain",
+        "colCount": 4
+       },
+       {
+        "type": "radiogroup",
+        "name": "asal_masuk",
+        "title": "Asal Masuk ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "igd",
+          "text": "IGD"
+         },
+         {
+          "value": "rajal",
+          "text": "Rawat Jalan"
+         }
+        ],
+        "otherText": "Lain lain",
+        "colCount": 4
+       }
+      ]
+     },
+     {
+      "type": "panel",
+      "name": "panel2",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question2",
+        "title": "Keluhan Utama :",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "riwayat_alergi",
+        "title": "Riwayat Alergi",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak_ada",
+          "text": "Tidak ada"
+         },
+         {
+          "value": "obat",
+          "text": "Alergi Obat"
+         },
+         {
+          "value": "makanan",
+          "text": "Alergi Makanan"
+         },
+         {
+          "value": "lainnya",
+          "text": "Alergi lainnya"
+         },
+         {
+          "value": "gelang",
+          "text": "Gelang tanda alergi dipasang (warna merah)"
+         },
+         {
+          "value": "tidak_diketahui",
+          "text": "Tidak diketahui"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "reaksi",
+        "visibleIf": "{riwayat_alergi} contains 'obat'",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "sebutkan",
+          "title": "Sebutkan"
+         },
+         {
+          "name": "reaksi",
+          "title": "Reaksi"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "reaksi2",
+        "visibleIf": "{riwayat_alergi} contains 'makanan'",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "sebutkan",
+          "title": "Sebutkan"
+         },
+         {
+          "name": "reaksi",
+          "title": "Reaksi"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "reaksi3",
+        "visibleIf": "{riwayat_alergi} contains 'lainnya'",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "sebutkan",
+          "title": "Sebutkan"
+         },
+         {
+          "name": "reaksi",
+          "title": "Reaksi"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "diberitahukan",
+        "title": "Diberitahukan ke dokter/farmasi (apoteker) / dietesien ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "ya",
+          "text": "Ya"
+         },
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "pukul",
+        "visibleIf": "{diberitahukan} = 'ya'",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "inputType": "time"
+       }
+      ],
+      "title": "Alasan Masuk"
+     },
+     {
+      "type": "panel",
+      "name": "panel3",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "question4",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "tidak_ada_nyeri",
+          "text": "Tidak ada nyeri"
+         },
+         {
+          "value": "nyeri_akut",
+          "text": "Nyeri akut"
+         },
+         {
+          "value": "nyeri_kronis",
+          "text": "Nyeri kronis"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "multipletext",
+        "name": "question5",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "p",
+          "title": "P (profokatif / penyebab)"
+         },
+         {
+          "name": "q",
+          "title": "Q ( Quality / Gambaran Nyeri)"
+         },
+         {
+          "name": "r",
+          "title": "R ( Region / Lokasi Nyeri)"
+         },
+         {
+          "name": "s",
+          "title": "S (Skala severitas )"
+         },
+         {
+          "name": "t",
+          "title": "Timing / Waktu nyeri "
+         }
+        ]
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question6",
+        "title": "Apakah nyeri yang dirasakan ?",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "menghalangi",
+          "title": "Menghalangi tidur malam anda",
+          "cellType": "radiogroup"
+         },
+         {
+          "name": "mengahalangi2",
+          "title": "Menghalangi anda beraktivitas",
+          "cellType": "radiogroup"
+         },
+         {
+          "name": "sakit",
+          "title": "Sakit dirasakan setiap hari",
+          "cellType": "radiogroup"
+         },
+         {
+          "name": "nyeri",
+          "title": {
+           "id": "Skala nyeri"
+          },
+          "cellType": "rating",
+          "rateMin": 0,
+          "rateMax": 8
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         {
+          "value": "ya",
+          "text": "Ya"
+         },
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         }
+        ],
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "skrining_gizi_matrix",
+        "title": "Skrining Gizi Awal",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "skrining_gizi_1",
+          "title": "1. Apakah pasien mengalami penurunan berat badan yang tidak direncanakan / tidak ",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak (0)"
+           },
+           {
+            "value": "2",
+            "text": "Tidak Yakin (2)"
+           },
+           {
+            "value": "0",
+            "text": {
+             "id": "Ya, ada penurunan bb"
+            }
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "skrining_gizi_3",
+          "title": {
+           "id": "Penurunan sebanyak"
+          },
+          "cellType": "dropdown",
+          "visibleIf": "{skrining_gizi_matrix.skor.skrining_gizi_1} = 0",
+          "choices": [
+           {
+            "value": "1",
+            "text": {
+             "id": "1 - 5 kg"
+            }
+           },
+           {
+            "value": "2",
+            "text": {
+             "id": "6-10 kg"
+            }
+           },
+           {
+            "value": "3",
+            "text": {
+             "id": "11-15 kg"
+            }
+           },
+           {
+            "value": "4",
+            "text": {
+             "id": "> 15 kg"
+            }
+           },
+           {
+            "value": "2",
+            "text": {
+             "id": "tidak tahu berapa penurunan nya"
+            }
+           }
+          ]
+         },
+         {
+          "name": "skrining_gizi_2",
+          "title": "2. Apakah asupan makan pasien berkurang krn penurunan nafsu makan/kesulitan menerima makanan?",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak (0)"
+           },
+           {
+            "value": "1",
+            "text": "Ya (1)"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "total_skor",
+          "title": "Total Skor",
+          "cellType": "expression",
+          "expression": "{row.skrining_gizi_1} + {row.skrining_gizi_2}  + {row.skrining_gizi_3}"
+         },
+         {
+          "name": "kategori",
+          "title": "Kategori",
+          "cellType": "expression",
+          "expression": " iif({row.total_skor} > 1,'Pasien beresiko (>2), pasien beresiko malnutrisi, konsul ke ahli gizi')"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "skor",
+          "text": "Skor"
+         }
+        ]
+       }
+      ],
+      "title": "SKRINING NYERI"
+     },
+     {
+      "type": "panel",
+      "name": "panel4",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "fungsional",
+        "title": "Skrining Gizi Awal",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "1",
+          "title": "1. Mengendalikan rangsangan defekasi (BAB)",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tak terkendali / tak teratur (perlu pencahar) (0)"
+           },
+           {
+            "value": "1",
+            "text": "Kadang kadang tak terkendali"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri (2)"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "2",
+          "title": "2. Mengendalikan rangsangan berkemih (BAK)",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tak terkendali / pakai kateter (0)"
+           },
+           {
+            "value": "1",
+            "text": "Kadang kadang tak terkendali (1x 24 jam)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri (2)"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "3",
+          "title": "3. Membersihkan diri (cuci muka, sisir rambut, sikat gigi)",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Butuh pertolongan orang lain (0)"
+           },
+           {
+            "value": "1",
+            "text": "Perlu pertolongan pada beberapa kegiatan, tetapi dapat mengerjakan sendiri kegiatan yang lain (1)"
+           }
+          ]
+         },
+         {
+          "name": "4",
+          "title": "4. Penggunaan jamban, masuk dan keluar (melepaskan, memakai, celana, membersihkan, menyiram ) ",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": {
+             "id": "Tergantung pertolongan orang (0)"
+            }
+           },
+           {
+            "value": "1",
+            "text": {
+             "id": "Perlu pertolongan pada  beberapa kegiatan, tetapi dapat mengerjakan sendiri kegiatan yang lain (1)"
+            }
+           },
+           {
+            "value": "2",
+            "text": {
+             "id": "Mandiri (2)"
+            }
+           }
+          ]
+         },
+         {
+          "name": "5",
+          "title": "5. Makan",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak mampu (0)"
+           },
+           {
+            "value": "1",
+            "text": "Perlu pertolongan memotong makanan (1)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri (2)"
+           }
+          ]
+         },
+         {
+          "name": "6",
+          "title": "6. Berubah sikap dari berbaring ke duduk ",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak mampu (0)"
+           },
+           {
+            "value": "1",
+            "text": "Perlu pertolongan memotong makanan (1)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri (2)"
+           }
+          ]
+         },
+         {
+          "name": "7",
+          "title": "7. Berpindah / berjalan",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak mampu (0)"
+           },
+           {
+            "value": "1",
+            "text": "Bisa (pindah) dengan kursi roda (1)"
+           },
+           {
+            "value": "2",
+            "text": "Berjalan dengan bantuan 1 orang (2)"
+           },
+           {
+            "value": "3",
+            "text": "Mandiri (3)"
+           }
+          ]
+         },
+         {
+          "name": "8",
+          "title": "8. Memakai Baju",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tergantung pada orang lain (0)"
+           }
+          ]
+         },
+         {
+          "name": "9",
+          "title": "9. Naik turun tangga",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak mampu (0)"
+           },
+           {
+            "value": "1",
+            "text": "Butuh pertolongan (1)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri (2)"
+           }
+          ]
+         },
+         {
+          "name": "10",
+          "title": "10. Mandi",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tergantung orang lain (0)"
+           },
+           {
+            "value": "1",
+            "text": "Mandiri (1)"
+           }
+          ]
+         },
+         {
+          "name": "total_skor",
+          "title": "Total Skor",
+          "cellType": "expression",
+          "expression": "{row.1}+{row.2}+{row.3}+{row.4}+{row.5}+{row.6}+{row.7}+{row.8}+{row.9}+{row.10}"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "masuk",
+          "text": "Saat Masuk RS"
+         },
+         {
+          "value": "keluar",
+          "text": "Saat Keluar RS"
+         }
+        ]
+       }
+      ],
+      "title": "ASESMEN FUNGSIONAL "
+     }
+    ],
+    "description": "Halaman1"
+   },
+   {
+    "name": "halaman2",
+    "elements": [
+     {
+      "type": "panel",
+      "name": "panel5",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "question8",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "tidak",
+          "text": {
+           "id": "Tidak"
+          }
+         },
+         {
+          "value": "ya",
+          "text": {
+           "id": "Ya"
+          }
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "question9",
+        "visibleIf": "{question8} = 'ya'",
+        "title": {
+         "id": "Resiko jatuh "
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "rendah",
+          "text": {
+           "id": "Rendah"
+          }
+         },
+         {
+          "value": "sedang",
+          "text": {
+           "id": "Sedang"
+          }
+         },
+         {
+          "value": "tinggi",
+          "text": {
+           "id": "Tinggi"
+          }
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "question43",
+        "title": {
+         "id": " Jika resiko jatuh sedang atau tinggi dipasang gelang resiko jatuh kuning "
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "ya",
+          "text": {
+           "id": "ya"
+          }
+         },
+         {
+          "value": "tidak",
+          "text": {
+           "id": "tidak"
+          }
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "question93",
+        "title": {
+         "id": " Diberitahukan ke dokter"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": {
+           "id": "tidak"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "ya, pukul"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question10",
+        "title": "Skrining Gizi Awal",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "1",
+          "title": {
+           "id": "Riwayat Jatuh "
+          },
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "25",
+            "text": {
+             "id": "Ya (25)"
+            }
+           },
+           {
+            "value": "0",
+            "text": {
+             "id": "Tidak (0)"
+            }
+           }
+          ]
+         },
+         {
+          "name": "2",
+          "title": {
+           "id": "Terpasang Infus "
+          },
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "20",
+            "text": {
+             "id": "Ya (20)"
+            }
+           },
+           {
+            "value": "0",
+            "text": {
+             "id": "Tidak (0)"
+            }
+           }
+          ]
+         },
+         {
+          "name": "3",
+          "title": {
+           "id": "Diagnosis Sekunder (>2 diagnosis medis) "
+          },
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "15",
+            "text": {
+             "id": "Ya (15)"
+            }
+           },
+           {
+            "value": "0",
+            "text": {
+             "id": "Tidak (0)"
+            }
+           }
+          ]
+         },
+         {
+          "name": "4",
+          "title": {
+           "id": "Gaya berjalan "
+          },
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "20",
+            "text": {
+             "id": "Terganggu (20)"
+            }
+           },
+           {
+            "value": "10",
+            "text": {
+             "id": "Lemah (10)"
+            }
+           },
+           {
+            "value": "0",
+            "text": {
+             "id": "Normal / tirah baring / imobilisasi (0)"
+            }
+           }
+          ]
+         },
+         {
+          "name": "5",
+          "title": {
+           "id": "Alat Bantu "
+          },
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "30",
+            "text": {
+             "id": "Berpegangan dengan perabot (30)"
+            }
+           },
+           {
+            "value": "15",
+            "text": {
+             "id": "Tongkat / alat penopang (15)"
+            }
+           },
+           {
+            "value": "0",
+            "text": {
+             "id": "Tidak ada/  kursi roda / tirah baring"
+            }
+           }
+          ]
+         },
+         {
+          "name": "6",
+          "title": {
+           "id": "Status mental "
+          },
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "15",
+            "text": {
+             "id": "Sering lupa akan keterbatasan (15)"
+            }
+           },
+           {
+            "value": "0",
+            "text": {
+             "id": "Sadar akan kemampuan diri sendiri (0)"
+            }
+           }
+          ]
+         },
+         {
+          "name": "total_skor",
+          "title": {
+           "id": "Total skor"
+          },
+          "cellType": "expression",
+          "expression": "{row.1}+{row.2}+{row.3}+{row.4}+{row.5}+{row.6}"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "skor",
+          "text": "Skor"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "table_resiko_jatuh_geriatri",
+        "title": {
+         "default": "Penilaian Resiko Jatuh Pasien Geriatri > 60 tahun",
+         "id": "Penilaian Resiko Jatuh Pasien Geriatri > usia 65 tahun"
+        },
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "1",
+          "title": "1. Gangguan Gaya Berjalan (diseret, menghentak, berayun)",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "4",
+            "text": "4"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "2",
+          "title": "2. Pusing / Pingsan pada posisi tegak",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "3",
+            "text": "3"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "3",
+          "title": "3. Kebingungan setiap saat",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "3",
+            "text": "3"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "4",
+          "title": "4. Nokturia/Inkontinen",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "3",
+            "text": "3"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "5",
+          "title": "5. Kebingungan Intermiten",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "3",
+            "text": "3"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "6",
+          "title": "6. Kelemahan Umum",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "3",
+            "text": "3"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "7",
+          "title": "7. Obat-obatan beresiko tinggi (diuretik, narkotik, sedatif, anti psikotik, laksatif, vasodilator, antiaritmia, anti hipertensi, obat hipoglenik, entidepresan, neuroleptik, NSAID)",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "2",
+            "text": "2"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "8",
+          "title": "8. Riwayat jatuh dalam 12 bulan sebelumnya",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "2",
+            "text": "2"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "9",
+          "title": "9. Osteoporosis",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "1",
+            "text": "1"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "10",
+          "title": "10. Gangguan Pendengaran atau penglihatan",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "1",
+            "text": "1"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "11",
+          "title": "11. Usia 70 tahun keatas",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "1",
+            "text": "1"
+           }
+          ],
+          "optionsCaption": "Pilih..."
+         },
+         {
+          "name": "total_skor",
+          "title": "Total Skor",
+          "cellType": "expression",
+          "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5} + {row.6} + {row.7} + {row.8} + {row.9} + {row.10} + {row.11}"
+         },
+         {
+          "name": "kategori",
+          "title": "Kategori",
+          "cellType": "expression",
+          "expression": "iif({row.total_skor} > 3,'Nyeri tinggi(pasang gelang resiko jatuh) (>4)',\niif({row.total_skor} < 4,'Resiko Rendah(1-3)')) "
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         {
+          "value": 1,
+          "text": "Ya"
+         },
+         {
+          "value": "0",
+          "text": "Tidak"
+         }
+        ],
+        "rows": [
+         {
+          "value": "result",
+          "text": " Skor"
+         }
+        ]
+       }
+      ],
+      "title": {
+       "id": "RESIKO CEDERA JATUH"
+      }
+     },
+     {
+      "type": "panel",
+      "name": "panel6",
+      "elements": [
+       {
+        "type": "checkbox",
+        "name": "question11",
+        "title": {
+         "id": "a) status psikologis :"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "cemas",
+          "text": {
+           "id": "Cemas"
+          }
+         },
+         {
+          "value": "takut",
+          "text": {
+           "id": "Takut"
+          }
+         },
+         {
+          "value": "marah",
+          "text": {
+           "id": "Marah"
+          }
+         },
+         {
+          "value": "sedih",
+          "text": {
+           "id": "Sedih"
+          }
+         },
+         {
+          "value": "kecenderungan",
+          "text": {
+           "id": "Kecenderungan  bunuh diri"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Lain lain, sebutkan"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "checkbox",
+        "name": "question12",
+        "title": {
+         "id": "b) status mental :"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "sadar",
+          "text": {
+           "id": "Sadar dan orientasi baik"
+          }
+         },
+         {
+          "value": "ada_masalah",
+          "text": {
+           "id": "Ada masalah perilaku"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Perilaku kekerasan yang dialami pasien, sebelumnya "
+        },
+        "colCount": 3
+       },
+       {
+        "type": "checkbox",
+        "name": "question13",
+        "title": {
+         "id": "c) status ekonomi dan sosial :"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "asuransi",
+          "text": {
+           "id": "Asuransi"
+          }
+         },
+         {
+          "value": "jaminan",
+          "text": {
+           "id": "Jaminan"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Biaya sendiri lainnya, sebutkan"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "checkbox",
+        "name": "question14",
+        "title": {
+         "id": "d) Kultural (Hubungan pasien dengan anggota keluarga :"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "baik",
+          "text": {
+           "id": "Baik"
+          }
+         },
+         {
+          "value": "tidak_baik",
+          "text": {
+           "id": "Tidak baik"
+          }
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "multipletext",
+        "name": "question15",
+        "title": {
+         "id": "Kerabat dekat yang dapat dihubungi :"
+        },
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "nama",
+          "title": {
+           "id": "Nama"
+          }
+         },
+         {
+          "name": "hubungan",
+          "title": {
+           "id": "Hubungan"
+          }
+         },
+         {
+          "name": "telepon",
+          "title": {
+           "id": "Telepon"
+          }
+         },
+         {
+          "name": "nilai",
+          "title": {
+           "id": "Nilai nilai kepercayaan yang di anut oleh pasien "
+          }
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "question16",
+        "title": {
+         "id": "e) status spiritual"
+        },
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "kegiatan_keagamaan",
+          "title": {
+           "id": "Kegiatan keagamaan yang biasa dilakukan"
+          }
+         },
+         {
+          "name": "kegiatan_spiritual",
+          "title": {
+           "id": "Kegiatan spiritual yang dibutuhkan selama perawatan "
+          }
+         }
+        ]
+       }
+      ],
+      "title": {
+       "id": "RIWAYAT PSIKOSOSIAL DAN SPIRITUAL "
+      }
+     }
+    ],
+    "description": {
+     "id": "Halaman2"
+    }
+   },
+   {
+    "name": "halaman3",
+    "elements": [
+     {
+      "type": "panel",
+      "name": "panel7",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "question17",
+        "title": {
+         "id": "Terdapat hambatan dalam pembelajaran "
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "ya",
+          "text": {
+           "id": "Ya"
+          }
+         },
+         {
+          "value": "tidak",
+          "text": {
+           "id": "Tidak"
+          }
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question18",
+        "visibleIf": "{question17} = 'ya'",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "pendengaran",
+          "text": {
+           "id": "Pendengaran"
+          }
+         },
+         {
+          "value": "penglihatan",
+          "text": {
+           "id": "Penglihatan"
+          }
+         },
+         {
+          "value": "kognitif",
+          "text": {
+           "id": "Kognitif"
+          }
+         },
+         {
+          "value": "fisik",
+          "text": {
+           "id": "Fisik"
+          }
+         },
+         {
+          "value": "budaya",
+          "text": {
+           "id": "Budaya"
+          }
+         },
+         {
+          "value": "emosi",
+          "text": {
+           "id": "Emosi"
+          }
+         },
+         {
+          "value": "bahasa",
+          "text": {
+           "id": "Bahasa"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Lainnya"
+        },
+        "colCount": 4
+       },
+       {
+        "type": "radiogroup",
+        "name": "question19",
+        "title": {
+         "id": "Dibutuhkan penerjemah "
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": {
+           "id": "Tidak"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Ya, sebutkan"
+        },
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "question20",
+        "startWithNewLine": false,
+        "title": {
+         "id": "Bahasa Isyarat"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": {
+           "id": "Tidak"
+          }
+         },
+         {
+          "value": "ya",
+          "text": {
+           "id": "Ya"
+          }
+         }
+        ],
+        "otherText": {
+         "id": "Ya, sebutkan"
+        },
+        "colCount": 2
+       },
+       {
+        "type": "html",
+        "name": "question21",
+        "html": {
+         "id": "Kebutuhan Edukasi ( Pilih Topik edukasi pada kotak yang tersedia )"
+        }
+       },
+       {
+        "type": "radiogroup",
+        "name": "question22",
+        "title": {
+         "id": "Diagnosa dan manajemen penyakit "
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "obat",
+          "text": {
+           "id": "Obat obatan / terapi "
+          }
+         },
+         {
+          "value": "diet",
+          "text": {
+           "id": "Diet dan nutrisi"
+          }
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "question23",
+        "title": {
+         "id": "Tindakan Keperawatan"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "rehabilitasi",
+          "text": {
+           "id": "Rehabilitasi "
+          }
+         },
+         {
+          "value": "manajemen_nyeri",
+          "text": {
+           "id": "Manajemen Nyeri "
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Lainnya, sebutkan"
+        },
+        "colCount": 2
+       }
+      ],
+      "title": {
+       "id": "KEBUTUHAN KOMUNIKASI DAN EDUKASI"
+      }
+     },
+     {
+      "type": "panel",
+      "name": "panel8",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "question24",
+        "title": {
+         "id": "a) Pasien tinggal dengan siap ?"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "sendiri",
+          "text": {
+           "id": "Sendiri"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Anak, lainnya sebutkan"
+        },
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "question25",
+        "title": {
+         "id": "b) Dimana letak kamar pasien dirumah ?"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "lantai",
+          "text": {
+           "id": "Lantai dasar "
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Lantai dua / tiga"
+        },
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question26",
+        "title": {
+         "id": "c) Bagaimana kondisi rumah pasien ?"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "penerangan",
+          "text": {
+           "id": "Penerangan lampu cukup terang / kurang"
+          }
+         },
+         {
+          "value": "kamar_tidur",
+          "text": {
+           "id": "Kamar tidur jauh / dekat dengan kamar"
+          }
+         },
+         {
+          "value": "wc",
+          "text": {
+           "id": "WC Jongkok / duduk"
+          }
+         }
+        ],
+        "otherText": {
+         "id": "Lantai dua / tiga"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "question27",
+        "title": {
+         "id": "d) Bagaimana Perawatan kebutuhan dasar pasien ?"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "mandiri",
+          "text": {
+           "id": "Mandiri"
+          }
+         },
+         {
+          "value": "dibantu",
+          "text": {
+           "id": "Dibantu sebagian "
+          }
+         },
+         {
+          "value": "dibantu_penuh",
+          "text": {
+           "id": "Dibantu penuh "
+          }
+         }
+        ],
+        "otherText": {
+         "id": "Lantai dua / tiga"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "question28",
+        "title": {
+         "id": "e) Apakah pasien memerlukan alat bantu khusus ?"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": {
+           "id": "Tidak"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Ya, sebutkan"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "question29",
+        "title": {
+         "id": "Apakah diet makanan pasien ?"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "bebas",
+          "text": {
+           "id": "Bebas"
+          }
+         },
+         {
+          "value": "vegetarian",
+          "text": {
+           "id": "Vegetarian"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "khusus, sebutkan"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "text",
+        "name": "question30",
+        "title": {
+         "id": "Perkiraan hari rawatan :"
+        },
+        "hideNumber": true,
+        "placeHolder": {
+         "id": "hari"
+        }
+       }
+      ],
+      "title": {
+       "id": "PERENCANAAN PULANG / DISCHARGE PLANNING :"
+      }
+     },
+     {
+      "type": "panel",
+      "name": "panel10",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question31",
+        "title": {
+         "id": "Riwayat Menstruasi "
+        },
+        "items": [
+         {
+          "name": "menarche",
+          "placeHolder": {
+           "id": "Tahun"
+          },
+          "title": {
+           "id": "Menarche :"
+          }
+         },
+         {
+          "name": "siklus",
+          "placeHolder": {
+           "id": "Hari"
+          },
+          "title": {
+           "id": "Siklus :"
+          }
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "question32",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "teratur",
+          "text": {
+           "id": "Teratur"
+          }
+         },
+         {
+          "value": "tidak_teratur",
+          "text": {
+           "id": "Tidak teratur"
+          }
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question33",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "placeHolder": {
+         "id": "Lama Hari"
+        }
+       },
+       {
+        "type": "radiogroup",
+        "name": "question34",
+        "title": {
+         "id": "Keluhan "
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "dismenorhoe",
+          "text": {
+           "id": "Dismenorhoe"
+          }
+         },
+         {
+          "value": "spotting",
+          "text": {
+           "id": "Spotting"
+          }
+         },
+         {
+          "value": "menorrhagia",
+          "text": {
+           "id": "Menorrhagia"
+          }
+         },
+         {
+          "value": "metrorhagia",
+          "text": {
+           "id": "Metrorhagia"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Lainnya"
+        },
+        "colCount": 4
+       },
+       {
+        "type": "radiogroup",
+        "name": "question35",
+        "title": {
+         "id": "2. Riwayat Perkawinan "
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "menikah",
+          "text": {
+           "id": "Menikah"
+          }
+         },
+         {
+          "value": "belum",
+          "text": {
+           "id": "Belum menikah"
+          }
+         },
+         {
+          "value": "janda",
+          "text": {
+           "id": "Janda"
+          }
+         }
+        ],
+        "otherText": {
+         "id": "Lainnya"
+        },
+        "colCount": 4
+       },
+       {
+        "type": "html",
+        "name": "question36",
+        "html": {
+         "id": "STATUS PERNIKAHAN"
+        }
+       },
+       {
+        "type": "radiogroup",
+        "name": "question37",
+        "title": {
+         "id": "Istri :"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "1",
+          "text": {
+           "id": "1x"
+          }
+         },
+         {
+          "value": "2",
+          "text": {
+           "id": "2x"
+          }
+         },
+         {
+          "value": "3",
+          "text": {
+           "id": ">2x"
+          }
+         }
+        ],
+        "otherText": {
+         "id": "Lainnya"
+        },
+        "colCount": 4
+       },
+       {
+        "type": "radiogroup",
+        "name": "question38",
+        "title": {
+         "id": "Suami :"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "1",
+          "text": {
+           "id": "1x"
+          }
+         },
+         {
+          "value": "2",
+          "text": {
+           "id": "2x"
+          }
+         },
+         {
+          "value": "3",
+          "text": {
+           "id": ">2x"
+          }
+         }
+        ],
+        "otherText": {
+         "id": "Lainnya"
+        },
+        "colCount": 4
+       },
+       {
+        "type": "radiogroup",
+        "name": "question39",
+        "title": {
+         "id": "Lama Pernikahan :"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "1",
+          "text": {
+           "id": "< 3 th"
+          }
+         },
+         {
+          "value": "2",
+          "text": {
+           "id": "3 - 5 th"
+          }
+         },
+         {
+          "value": "3",
+          "text": {
+           "id": "> 5 th "
+          }
+         }
+        ],
+        "otherText": {
+         "id": "Lainnya"
+        },
+        "colCount": 4
+       },
+       {
+        "type": "multipletext",
+        "name": "question40",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "usia",
+          "title": {
+           "id": "Usia Perkawinan"
+          }
+         },
+         {
+          "name": "tahun",
+          "title": {
+           "id": "Tahun Hubungan "
+          }
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "question41",
+        "title": {
+         "id": "Keluarga terdekat :"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "orang_tua",
+          "text": {
+           "id": "Orang tua"
+          }
+         },
+         {
+          "value": "suami",
+          "text": {
+           "id": "Suami"
+          }
+         },
+         {
+          "value": "anak",
+          "text": {
+           "id": "Anak "
+          }
+         },
+         {
+          "value": "sendiri",
+          "text": {
+           "id": "Sendiri"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Lainnya"
+        },
+        "colCount": 5
+       },
+       {
+        "type": "multipletext",
+        "name": "question42",
+        "title": {
+         "id": "3. Riwayat Kehamilan, Persalinan dan nifas yang lalu"
+        },
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "g",
+          "title": {
+           "id": "G"
+          }
+         },
+         {
+          "name": "p",
+          "title": {
+           "id": "P"
+          }
+         },
+         {
+          "name": "a",
+          "title": {
+           "id": "A"
+          }
+         },
+         {
+          "name": "h",
+          "title": {
+           "id": "H"
+          }
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question92",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": {
+           "id": "Tahun partus"
+          }
+         },
+         {
+          "name": "Column 2",
+          "title": {
+           "id": "Tempat partus"
+          }
+         },
+         {
+          "name": "Column 3",
+          "title": {
+           "id": "umur hamil"
+          }
+         },
+         {
+          "name": "Column 4",
+          "title": {
+           "id": "jenis persalinan"
+          }
+         },
+         {
+          "name": "Column 5",
+          "title": {
+           "id": "Penolong Persalinan"
+          }
+         },
+         {
+          "name": "Column 6",
+          "title": {
+           "id": "Penyulit"
+          }
+         },
+         {
+          "name": "Column 7",
+          "title": {
+           "id": "Jenis kelamin / berat lahir"
+          }
+         },
+         {
+          "name": "Column 8",
+          "title": {
+           "id": "Keadaan anak sekarang"
+          }
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowRemoveRows": false,
+        "rowCount": 1,
+        "addRowText": {
+         "id": "ADD"
+        }
+       },
+       {
+        "type": "checkbox",
+        "name": "question44",
+        "title": {
+         "id": "4. Riwayat Penyakit dahulu "
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "asma",
+          "text": {
+           "id": "Asma "
+          }
+         },
+         {
+          "value": "jantung",
+          "text": {
+           "id": "Jantung"
+          }
+         },
+         {
+          "value": "hipertensi",
+          "text": {
+           "id": "Hipertensi"
+          }
+         },
+         {
+          "value": "dm",
+          "text": {
+           "id": "DM"
+          }
+         },
+         {
+          "value": "tiroid",
+          "text": {
+           "id": "Tiroid"
+          }
+         },
+         {
+          "value": "epilepsi",
+          "text": {
+           "id": "Epilepsi"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Riwayat Operasi"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "checkbox",
+        "name": "question45",
+        "title": {
+         "id": "5. Riwayat penyakit keluarga"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "kanker",
+          "text": {
+           "id": "Kanker"
+          }
+         },
+         {
+          "value": "hipertensi",
+          "text": {
+           "id": "Hipertensi"
+          }
+         },
+         {
+          "value": "ginjal",
+          "text": {
+           "id": "Penyakit ginjal"
+          }
+         },
+         {
+          "value": "kelainan_bawaan",
+          "text": {
+           "id": "Kelainan bawaan"
+          }
+         },
+         {
+          "value": "tbc",
+          "text": {
+           "id": "TBC"
+          }
+         },
+         {
+          "value": "alergi",
+          "text": {
+           "id": "Alergi"
+          }
+         },
+         {
+          "value": "hati",
+          "text": {
+           "id": "Penyakit hati"
+          }
+         },
+         {
+          "value": "jiwa",
+          "text": {
+           "id": "Penyakit Jiwa"
+          }
+         },
+         {
+          "value": "dm",
+          "text": {
+           "id": "DM"
+          }
+         },
+         {
+          "value": "hamil_kembar",
+          "text": {
+           "id": "Hamil Kembar"
+          }
+         },
+         {
+          "value": "epilepsi",
+          "text": {
+           "id": "Epilepsi"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "lain lain"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "checkbox",
+        "name": "ginekologi",
+        "title": {
+         "id": "6. Riwayat Ginekologi"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "infertilitas",
+          "text": {
+           "id": "Infertilitas"
+          }
+         },
+         {
+          "value": "infeksi",
+          "text": {
+           "id": "Infeksi virus"
+          }
+         },
+         {
+          "value": "pms",
+          "text": {
+           "id": "PMS"
+          }
+         },
+         {
+          "value": "cervisitis",
+          "text": {
+           "id": "Cervisitis Kronis"
+          }
+         },
+         {
+          "value": "endrometrio",
+          "text": {
+           "id": "Endrometrio"
+          }
+         },
+         {
+          "value": "myoma",
+          "text": {
+           "id": "Myoma"
+          }
+         },
+         {
+          "value": "polip",
+          "text": {
+           "id": "Polip Serviks"
+          }
+         },
+         {
+          "value": "kanker_kandungan",
+          "text": {
+           "id": "Kanker kandungan"
+          }
+         },
+         {
+          "value": "operasi_kandungan",
+          "text": {
+           "id": "Operasi kandungan"
+          }
+         },
+         {
+          "value": "perkosaan",
+          "text": {
+           "id": "Perkosaan"
+          }
+         },
+         {
+          "value": "flour",
+          "text": {
+           "id": "Flour Albus (gatal)"
+          }
+         },
+         {
+          "value": "berbau",
+          "text": {
+           "id": "Berbau"
+          }
+         },
+         {
+          "value": "postcoital",
+          "text": {
+           "id": "Post Coital Bleeding"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "lain lain"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "question47",
+        "visibleIf": "{ginekologi} contains 'flour'",
+        "title": {
+         "id": "6. Riwayat Ginekologi"
+        },
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "ya",
+          "text": {
+           "id": "Ya"
+          }
+         },
+         {
+          "value": "tidak",
+          "text": {
+           "id": "Tidak"
+          }
+         }
+        ],
+        "otherText": {
+         "id": "lain lain"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "question46",
+        "visibleIf": "{ginekologi} contains 'berbau'",
+        "title": {
+         "id": "6. Riwayat Ginekologi"
+        },
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "ya",
+          "text": {
+           "id": "ya"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Tidak, Warna"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "checkbox",
+        "name": "question48",
+        "title": {
+         "id": "7. Riwayat penyakit menular"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "sipilis",
+          "text": {
+           "id": "Sipilis"
+          }
+         },
+         {
+          "value": "hiv",
+          "text": {
+           "id": "HIV"
+          }
+         },
+         {
+          "value": "hepatitis",
+          "text": {
+           "id": "Hepatitis"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Lainnya"
+        },
+        "colCount": 4
+       },
+       {
+        "type": "checkbox",
+        "name": "riwayat_kb",
+        "title": {
+         "id": "8. Riwayat KB "
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "pil",
+          "text": {
+           "id": "Pil"
+          }
+         },
+         {
+          "value": "iud",
+          "text": {
+           "id": "IUD"
+          }
+         },
+         {
+          "value": "suntik",
+          "text": {
+           "id": "Suntik"
+          }
+         },
+         {
+          "value": "implan",
+          "text": {
+           "id": "Implant"
+          }
+         },
+         {
+          "value": "kondom",
+          "text": {
+           "id": "Kondom"
+          }
+         },
+         {
+          "value": "mow",
+          "text": {
+           "id": "MOW"
+          }
+         },
+         {
+          "value": "mop",
+          "text": {
+           "id": "MOP"
+          }
+         },
+         {
+          "value": "Alami",
+          "text": {
+           "id": "Alami"
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherText": {
+         "id": "Lainnya"
+        },
+        "colCount": 4
+       },
+       {
+        "type": "text",
+        "name": "question50",
+        "visibleIf": "{riwayat_kb} contains 'pil'",
+        "titleLocation": "hidden",
+        "placeHolder": {
+         "id": "Lama / tahun"
+        }
+       },
+       {
+        "type": "text",
+        "name": "question49",
+        "visibleIf": "{riwayat_kb} contains 'iud'",
+        "titleLocation": "hidden",
+        "placeHolder": {
+         "id": "Lama / tahun"
+        }
+       },
+       {
+        "type": "text",
+        "name": "question51",
+        "visibleIf": "{riwayat_kb} contains 'suntik'",
+        "titleLocation": "hidden",
+        "placeHolder": {
+         "id": "Lama / tahun"
+        }
+       },
+       {
+        "type": "text",
+        "name": "question52",
+        "visibleIf": "{riwayat_kb} contains 'implan'",
+        "titleLocation": "hidden",
+        "placeHolder": {
+         "id": "Lama / tahun"
+        }
+       },
+       {
+        "type": "text",
+        "name": "question53",
+        "visibleIf": "{riwayat_kb} contains 'kondom'",
+        "titleLocation": "hidden",
+        "placeHolder": {
+         "id": "Lama / tahun"
+        }
+       },
+       {
+        "type": "text",
+        "name": "question54",
+        "visibleIf": "{riwayat_kb} contains 'mow'",
+        "titleLocation": "hidden",
+        "placeHolder": {
+         "id": "Lama / tahun"
+        }
+       },
+       {
+        "type": "text",
+        "name": "question55",
+        "visibleIf": "{riwayat_kb} contains 'mop'",
+        "titleLocation": "hidden",
+        "placeHolder": {
+         "id": "Lama / tahun"
+        }
+       },
+       {
+        "type": "text",
+        "name": "question56",
+        "visibleIf": "{riwayat_kb} contains 'Alami'",
+        "titleLocation": "hidden",
+        "placeHolder": {
+         "id": "Lama / tahun"
+        }
+       },
+       {
+        "type": "checkbox",
+        "name": "question57",
+        "title": {
+         "id": "Komplikasi dari KB :"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "perdarahan",
+          "text": {
+           "id": "Perdarahan"
+          }
+         },
+         {
+          "value": "pid",
+          "text": {
+           "id": "PID / Radang Pinggul "
+          }
+         }
+        ],
+        "hasOther": true,
+        "otherPlaceHolder": {
+         "id": "Lainnya"
+        },
+        "colCount": 3
+       },
+       {
+        "type": "multipletext",
+        "name": "question58",
+        "title": {
+         "id": "9. Pola eliminasi / istirahat"
+        },
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "bak",
+          "placeHolder": {
+           "id": "cc/hari"
+          },
+          "title": {
+           "id": "BAK "
+          }
+         },
+         {
+          "name": "warna",
+          "title": {
+           "id": "Warna"
+          }
+         },
+         {
+          "name": "bab",
+          "placeHolder": {
+           "id": "x/hari"
+          },
+          "title": {
+           "id": "BAB"
+          }
+         },
+         {
+          "name": "karakteristik",
+          "title": {
+           "id": "Karakteristik"
+          }
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "question94",
+        "title": {
+         "id": "Pola  istirahat"
+        },
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "malam",
+          "placeHolder": {
+           "id": "jam/hari"
+          },
+          "title": {
+           "id": "Tidur malam"
+          }
+         },
+         {
+          "name": "siang",
+          "title": {
+           "id": "Tidur siang"
+          }
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question59",
+        "title": {
+         "id": "10. Perilaku kesehatan"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "penggunaan_alkohol",
+          "text": {
+           "id": "Penggunaan Alkohol"
+          }
+         },
+         {
+          "value": "jamu",
+          "text": {
+           "id": "Jamu"
+          }
+         },
+         {
+          "value": "meroko",
+          "text": {
+           "id": "Merokok"
+          }
+         }
+        ],
+        "otherPlaceHolder": {
+         "id": "Lainnya"
+        },
+        "colCount": 3
+       }
+      ],
+      "title": {
+       "id": "ASUHAN GYNECOLOGI"
+      }
+     },
+     {
+      "type": "panel",
+      "name": "panel9",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question60",
+        "title": {
+         "id": "1. Pemeriksaan Umum"
+        },
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "keadaan_umum",
+          "title": {
+           "id": "Keadaan Umum"
+          }
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "question61",
+        "title": {
+         "id": "Kesadaran"
+        },
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "compos_mentis",
+          "text": {
+           "id": "Compos Mentis"
+          }
+         },
+         {
+          "value": "apatis",
+          "text": {
+           "id": "Apatis"
+          }
+         },
+         {
+          "value": "somnolen",
+          "text": {
+           "id": "Somnolen"
+          }
+         },
+         {
+          "value": "soporous",
+          "text": {
+           "id": "Soporous / koma"
+          }
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "multipletext",
+        "name": "question62",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "td",
+          "placeHolder": {
+           "id": "mmHg"
+          },
+          "title": {
+           "id": "TD"
+          }
+         },
+         {
+          "name": "fd",
+          "placeHolder": {
+           "id": "x/menit"
+          },
+          "title": {
+           "id": "Frekuensi Nadi"
+          }
+         },
+         {
+          "name": "suhu",
+          "placeHolder": {
+           "id": "C"
+          },
+          "title": {
+           "id": "Suhu"
+          }
+         },
+         {
+          "name": "frekuensi_pernafasan",
+          "placeHolder": {
+           "id": "x/menit"
+          },
+          "title": {
+           "id": "Frekuensi pernapasan"
+          }
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "multipletext",
+        "name": "question63",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "bb_sebelum",
+          "placeHolder": {
+           "id": "kg"
+          },
+          "title": {
+           "id": "Berat  badan sebelum hamil "
+          }
+         },
+         {
+          "name": "t_badan",
+          "placeHolder": {
+           "id": "cm"
+          },
+          "title": {
+           "id": "Tinggi Badan"
+          }
+         },
+         {
+          "name": "bb_sekarang",
+          "placeHolder": {
+           "id": "kg"
+          },
+          "title": {
+           "id": "Berat badan sekarang"
+          }
+         },
+         {
+          "name": "l_lengan",
+          "placeHolder": {
+           "id": "cm"
+          },
+          "title": {
+           "id": "Lingkar lengan"
+          }
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "panel",
+        "name": "panel11",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question64",
+          "title": {
+           "id": "Wajah Oedema"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": {
+             "id": "Ya"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak"
+            }
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question65",
+          "title": {
+           "id": "Cloasma Gravidarum"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": {
+             "id": "Ya"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak"
+            }
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question66",
+          "title": {
+           "id": "Mata"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "simetris",
+            "text": {
+             "id": "Simetris"
+            }
+           },
+           {
+            "value": "asimetris",
+            "text": {
+             "id": "Asimetris"
+            }
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question67",
+          "title": {
+           "id": "Sklrea"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ikterik",
+            "text": {
+             "id": "Ikterik"
+            }
+           },
+           {
+            "value": "non",
+            "text": {
+             "id": "Non ikterik"
+            }
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question68",
+          "title": {
+           "id": "Konjungtiva"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "anemis",
+            "text": {
+             "id": "Anemis"
+            }
+           },
+           {
+            "value": "non",
+            "text": {
+             "id": "Non Anemis"
+            }
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question69",
+          "title": {
+           "id": "Mulut "
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "mukosa_kering",
+            "text": {
+             "id": "Mukosa kering"
+            }
+           },
+           {
+            "value": "mukosa_lembab",
+            "text": {
+             "id": "Mukosa Lembab"
+            }
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question70",
+          "title": {
+           "id": "Leher"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "pembesaran_tiroid",
+            "text": {
+             "id": "Pembesaran Tyroid"
+            }
+           },
+           {
+            "value": "pembesaran",
+            "text": {
+             "id": "Pembesaran"
+            }
+           },
+           {
+            "value": "vena",
+            "text": {
+             "id": "Vena jugularis"
+            }
+           },
+           {
+            "value": "kaku",
+            "text": {
+             "id": "Kaku kuduk"
+            }
+           },
+           {
+            "value": "tidak_ada",
+            "text": {
+             "id": "Tidak ada masalah"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question71",
+          "title": {
+           "id": "Mamae Bentuk"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "simetris",
+            "text": {
+             "id": "Simetris"
+            }
+           },
+           {
+            "value": "asimetris",
+            "text": {
+             "id": "Asimetris"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question72",
+          "startWithNewLine": false,
+          "title": {
+           "id": "Puting susu"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "menonjol",
+            "text": {
+             "id": "Menonjol "
+            }
+           },
+           {
+            "value": "datar",
+            "text": {
+             "id": "Datar"
+            }
+           },
+           {
+            "value": "masuk",
+            "text": {
+             "id": "Masuk"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question73",
+          "title": {
+           "id": "Mamae Pengeluaran "
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak_ada",
+            "text": {
+             "id": "Tidak ada"
+            }
+           },
+           {
+            "value": "ada",
+            "text": {
+             "id": "Ada"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question74",
+          "visibleIf": "{question73} = 'ada'",
+          "title": {
+           "id": "Mamae Pengeluaran "
+          },
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "colostrum",
+            "text": {
+             "id": "Colostrum"
+            }
+           },
+           {
+            "value": "asi",
+            "text": {
+             "id": "Asi"
+            }
+           },
+           {
+            "value": "nanah",
+            "text": {
+             "id": "Nanah"
+            }
+           },
+           {
+            "value": "darah",
+            "text": {
+             "id": "Darah"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question75",
+          "title": {
+           "id": "Kebersihan"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "cukup",
+            "text": {
+             "id": "Cukup"
+            }
+           },
+           {
+            "value": "kurang",
+            "text": {
+             "id": "Kurang"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question76",
+          "startWithNewLine": false,
+          "title": {
+           "id": "Kelainan"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lecet",
+            "text": {
+             "id": "Lecet"
+            }
+           },
+           {
+            "value": "bengkak",
+            "text": {
+             "id": "Bengkak"
+            }
+           }
+          ],
+          "hasOther": true,
+          "otherText": {
+           "id": "Lainnya"
+          },
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question77",
+          "title": {
+           "id": "Abdomen Pembesaran sesuai dengan usia kehamilan "
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": {
+             "id": "Ya"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question78",
+          "title": {
+           "id": "Abdomen Bekas luka operasi "
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": {
+             "id": "Ya"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question79",
+          "title": {
+           "id": "Abdomen Striae gravidarum"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "livid",
+            "text": {
+             "id": "Livid"
+            }
+           },
+           {
+            "value": "albican",
+            "text": {
+             "id": "Albican"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question80",
+          "title": {
+           "id": "Abdomen Pembekakan pada perut "
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ada",
+            "text": {
+             "id": "Ada"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tifdak"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question81",
+          "title": {
+           "id": "Ekstremitas Oedema "
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": {
+             "id": "Ya"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question82",
+          "title": {
+           "id": "Ekstremitas Varises"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": {
+             "id": "Ya"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question83",
+          "title": {
+           "id": "Ekstremitas Reflek Patella"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "kiri",
+            "text": {
+             "id": "Kiri"
+            }
+           },
+           {
+            "value": "kanan",
+            "text": {
+             "id": "Kanan"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question84",
+          "title": {
+           "id": "Inspesculum Oedema"
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ada",
+            "text": {
+             "id": "Ada"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question85",
+          "title": {
+           "id": "Inspesculum Pembesaran kelenjar Bartholini "
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ada",
+            "text": {
+             "id": "Ada"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak"
+            }
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question86",
+          "title": {
+           "id": "Inspesculum Tanda tanda infeksi "
+          },
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ada",
+            "text": {
+             "id": "Ada"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak"
+            }
+           }
+          ],
+          "hasOther": true,
+          "otherPlaceHolder": {
+           "id": "Lainnya"
+          },
+          "colCount": 5
+         }
+        ],
+        "title": {
+         "id": "2. pemeriksaan fisik"
+        }
+       }
+      ],
+      "title": {
+       "id": "B. Data Objektif"
+      }
+     }
+    ],
+    "title": {
+     "id": "ASUHAN GYNECOLOGY"
+    }
+   },
+   {
+    "name": "halaman4",
+    "elements": [
+     {
+      "type": "panel",
+      "name": "panel12",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "question90",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "hamil",
+          "title": {
+           "id": "Hamil"
+          },
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "primipara",
+            "text": {
+             "id": "Primipara"
+            }
+           },
+           {
+            "value": "multipara",
+            "text": {
+             "id": "Multipara"
+            }
+           },
+           {
+            "value": "grandepara",
+            "text": {
+             "id": "Grandepara"
+            }
+           },
+           {
+            "value": "tunggal",
+            "text": {
+             "id": "Tunggal"
+            }
+           },
+           {
+            "value": "ganda",
+            "text": {
+             "id": "Ganda"
+            }
+           },
+           {
+            "value": "intrauterina",
+            "text": {
+             "id": "Intrauterina"
+            }
+           },
+           {
+            "value": "ekstrauterin",
+            "text": {
+             "id": "Ekstrauterin"
+            }
+           }
+          ]
+         },
+         {
+          "name": "usia_kehamilan",
+          "title": {
+           "id": "Usia Kehamilan"
+          },
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "pretrerm",
+            "text": {
+             "id": "Pretrerm"
+            }
+           },
+           {
+            "value": "post_term",
+            "text": {
+             "id": "Post term"
+            }
+           }
+          ]
+         },
+         {
+          "name": "posisi",
+          "title": {
+           "id": "Posisi"
+          },
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "kepala",
+            "text": {
+             "id": "Kepala"
+            }
+           },
+           {
+            "value": "sungsang",
+            "text": {
+             "id": "Sungsang"
+            }
+           },
+           {
+            "value": "lintang",
+            "text": {
+             "id": "Lintang"
+            }
+           }
+          ]
+         },
+         {
+          "name": "presentasi",
+          "title": {
+           "id": "Presentasi"
+          },
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "belakang_kepala",
+            "text": {
+             "id": "Belakang Kepala"
+            }
+           },
+           {
+            "value": "bokong",
+            "text": {
+             "id": "Bokong"
+            }
+           },
+           {
+            "value": "muka",
+            "text": {
+             "id": "Muka"
+            }
+           },
+           {
+            "value": "ekstremitas",
+            "text": {
+             "id": "Ekstremitas"
+            }
+           }
+          ]
+         },
+         {
+          "name": "keadaan_ibu",
+          "title": {
+           "id": "Keadaan Ibu"
+          },
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "baik",
+            "text": {
+             "id": "Baik"
+            }
+           },
+           {
+            "value": "tidak",
+            "text": {
+             "id": "Tidak baik"
+            }
+           }
+          ]
+         },
+         {
+          "name": "keadaan_janin",
+          "title": {
+           "id": "Keadaan Janin"
+          },
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "baik",
+            "text": {
+             "id": "Baik"
+            }
+           },
+           {
+            "value": "tidak_baik",
+            "text": {
+             "id": "Tidak baik"
+            }
+           }
+          ]
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": {
+           "id": "DIAGNOSA KEBIDANAN"
+          }
+         }
+        ]
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question87",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "masalah",
+          "title": {
+           "id": "Masalah"
+          },
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "abortus",
+            "text": {
+             "id": "Abortus"
+            }
+           },
+           {
+            "value": "kpd",
+            "text": {
+             "id": "KPD"
+            }
+           },
+           {
+            "value": "cpd",
+            "text": {
+             "id": "CPD"
+            }
+           },
+           {
+            "value": "hap",
+            "text": {
+             "id": "H.A.P"
+            }
+           },
+           {
+            "value": "hpp",
+            "text": {
+             "id": "H.P.P"
+            }
+           },
+           {
+            "value": "kehamilan_ektopik",
+            "text": {
+             "id": "Kehamilan Ektopik"
+            }
+           },
+           {
+            "value": "pprom",
+            "text": {
+             "id": "PPROM"
+            }
+           },
+           {
+            "value": "prom",
+            "text": {
+             "id": "PROM"
+            }
+           },
+           {
+            "value": "peb",
+            "text": {
+             "id": "PEB"
+            }
+           },
+           {
+            "value": "eklamsia",
+            "text": {
+             "id": "Eklamsia"
+            }
+           },
+           {
+            "value": "anemia_ringan",
+            "text": {
+             "id": "Anemia ringan"
+            }
+           },
+           {
+            "value": "anemia_sedang",
+            "text": {
+             "id": "Anemia Sedang"
+            }
+           },
+           {
+            "value": "anemia_berat",
+            "text": {
+             "id": "Anemia berat"
+            }
+           },
+           {
+            "value": "infeksi",
+            "text": {
+             "id": "Infeksi"
+            }
+           },
+           {
+            "value": "luka_jalan",
+            "text": {
+             "id": "Luka jalan lahir"
+            }
+           },
+           {
+            "value": "perdarahan",
+            "text": {
+             "id": "Perdarahan uterus abnormal"
+            }
+           },
+           {
+            "value": "retensio",
+            "text": {
+             "id": "Retensio plasenta"
+            }
+           },
+           {
+            "value": "plasenta",
+            "text": {
+             "id": "Plasenta previa"
+            }
+           },
+           {
+            "value": "mioma_uteri",
+            "text": {
+             "id": "Mioama Uteri"
+            }
+           },
+           {
+            "value": "kista",
+            "text": {
+             "id": "Kista Ovarium"
+            }
+           },
+           {
+            "value": "inversion",
+            "text": {
+             "id": "Inversion Uteri"
+            }
+           }
+          ],
+          "hasOther": true,
+          "otherText": {
+           "id": "Lainnya"
+          }
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question88",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "kebutuhan",
+          "title": {
+           "id": "Kebutuhan"
+          },
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "monitor",
+            "text": {
+             "id": "Monitor tanda tanda vital"
+            }
+           },
+           {
+            "value": "pemberian_oksigen",
+            "text": {
+             "id": "Pemberian oksigen"
+            }
+           },
+           {
+            "value": "memberikan_posisi",
+            "text": {
+             "id": "Memberikan posisi semi fowler "
+            }
+           },
+           {
+            "value": "memberikan_obat",
+            "text": {
+             "id": "Memberikan obat oral, injeksi, infus"
+            }
+           },
+           {
+            "value": "memasang_infus",
+            "text": {
+             "id": "Memasang infus"
+            }
+           },
+           {
+            "value": "pemasangan_chateter",
+            "text": {
+             "id": "Pemasangan Chateter"
+            }
+           },
+           {
+            "value": "ctg",
+            "text": {
+             "id": "Pemasangan CTG dan merekam"
+            }
+           },
+           {
+            "value": "merekam_ekg",
+            "text": {
+             "id": "Merekam EKG"
+            }
+           },
+           {
+            "value": "merekam_usg",
+            "text": {
+             "id": "Merekam USG"
+            }
+           },
+           {
+            "value": "persalinan",
+            "text": {
+             "id": "Membantu persalinan dengan tindakan"
+            }
+           },
+           {
+            "value": "jahit",
+            "text": {
+             "id": "Jahit luka"
+            }
+           },
+           {
+            "value": "memberikan",
+            "text": {
+             "id": "Memberikan pendidikan kesehatan"
+            }
+           },
+           {
+            "value": "pantauan_kemajuan",
+            "text": {
+             "id": "Pantauan kemajuan persalinan"
+            }
+           },
+           {
+            "value": "menolong_persalinan",
+            "text": {
+             "id": "Menolong persalinan spontan"
+            }
+           },
+           {
+            "value": "manual_plasenta",
+            "text": {
+             "id": "Manual Plasenta"
+            }
+           },
+           {
+            "value": "pemasangan_transfusi",
+            "text": {
+             "id": "Pemasangan transfusi darah"
+            }
+           },
+           {
+            "value": "pemasanga_monitor",
+            "text": {
+             "id": "Pemasangan monitor "
+            }
+           },
+           {
+            "value": "manajemen_nyeri",
+            "text": {
+             "id": "Manajemen Nyeri"
+            }
+           }
+          ],
+          "hasOther": true,
+          "otherText": {
+           "id": "Lainnya"
+          }
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       }
+      ],
+      "title": {
+       "id": "DAFTAR MASALAH KEBIDANAN"
+      }
+     }
+    ]
+   }
+  ]
+ }

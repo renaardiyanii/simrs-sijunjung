@@ -1,0 +1,146 @@
+{
+    "title": "PERMOHONAN CUTI PERAWATAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "title": "Saya / yang bertanggung jawab terhadapa pasien meminta kepada pihak RSUD Sijunjung untuk mengijinkan kepada pasein :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama"
+           },
+           {
+            "name": "tgl",
+            "title": "Tanggal lahir"
+           },
+           {
+            "name": "norek",
+            "title": "No. Rekam medik"
+           },
+           {
+            "name": "ruangan",
+            "title": "Rawat diruangan"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Untuk ijin pulang sementara / cuti perawatan karena kepentingan :",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "title": "Dalam waktu",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "hari",
+            "title": "Hari"
+           },
+           {
+            "name": "tgl",
+            "inputType": "date",
+            "title": "Tanggal"
+           },
+           {
+            "name": "tgl2",
+            "inputType": "date",
+            "title": "Sampai Tanggal"
+           },
+           {
+            "name": "berapa",
+            "title": "Berapa Jam"
+           },
+           {
+            "name": "jam",
+            "inputType": "time",
+            "title": "dari Jam"
+           },
+           {
+            "name": "jam2",
+            "inputType": "time",
+            "title": "sampai jam"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question4",
+          "title": "selama berada diluar RSUD Sijunjung yang bertanggung jawab terhadap pasien adalah :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama"
+           },
+           {
+            "name": "no_identitas",
+            "title": "No KTP/SIM/Paspor"
+           },
+           {
+            "name": "hubungan",
+            "title": "Hubungan dengan pasien"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "title": "Selama berada di luar RSUD Sijunjung beralamat di",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "No telepon yang bisa dihubungi",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "tanah, badantuang",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question7",
+          "title": "DPJP / Kepala Ruangan",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question9",
+          "startWithNewLine": false,
+          "title": "Pemohon",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "titleLocation": "hidden",
+          "size": 50
+         },
+         {
+          "type": "text",
+          "name": "question10",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "size": 50
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

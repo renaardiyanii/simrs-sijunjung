@@ -1,0 +1,54 @@
+{
+    "title": "ASSESMENT ULANG NYERI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Tanggal",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "column2",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "column3",
+          "title": "Tindakan",
+          "cellType": "comment"
+         },
+         {
+          "name": "column4",
+          "title": "Nama ",
+          "cellType": "text"
+         },
+         {
+          "name": "column5",
+          "title": "Paraf",
+          "cellType": "signaturepad"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

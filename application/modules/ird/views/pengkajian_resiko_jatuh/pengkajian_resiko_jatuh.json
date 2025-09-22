@@ -1,0 +1,691 @@
+{
+    "title": "PENGKAJIAN RESIKO JATUH IGD/PONEK",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question23",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "1. Riwayat jatuh yang baru atau dalam 3 bulan terakhir",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "25",
+              "text": "Ya (25)"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "2. Diagnosis sekunder (>2 diagnosis medis)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "25",
+              "text": "Ya (25)"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "3. Alat bantu jalan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "30",
+              "text": "Berpegangan pada benda-benda sekitar (30)"
+             },
+             {
+              "value": "15",
+              "text": "Tongkat/kruk/walker (15)"
+             },
+             {
+              "value": "0",
+              "text": "Tidak menggunakan alat bantu/kursi roda/perawat/bedrest (0)"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "4. Pasien terpasang infus",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "20",
+              "text": "Ya (20)"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "5. Cara berjalan/berpindah",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "20",
+              "text": "Terganggu (20)"
+             },
+             {
+              "value": "10",
+              "text": "Lemah (10)"
+             },
+             {
+              "value": "0",
+              "text": "Normal/bedrest (0)"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "6. Status mental",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "15",
+              "text": "Lupa keterbatasan/orientasi tidak baik (15)"
+             },
+             {
+              "value": "0",
+              "text": "Mengetahui kemampuan diri/orientasi baik (0)"
+             }
+            ]
+           },
+           {
+            "name": "column7",
+            "title": "Total skor",
+            "cellType": "expression",
+            "expression": "{row.column1}+{row.column2}+{row.column3}+{row.column4}+{row.column5}+{row.column6}"
+           },
+           {
+            "name": "column8",
+            "title": "Kategori",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Risiko Rendah 0 – 24"
+             },
+             {
+              "value": "item2",
+              "text": "Risiko Sedang 25 – 50"
+             },
+             {
+              "value": "item3",
+              "text": "Risiko Tinggi ≥ 51"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "SKALA / NILAI"
+           }
+          ]
+         }
+        ],
+        "title": "(PENGKAJIAN RISIKO JATUH PASIEN DEWASA)",
+        "description": "MORSE FALL SCALE"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "1. Usia",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "a.\t< 3 Tahun (4)"
+             },
+             {
+              "value": "3",
+              "text": "b.\t3 – 7 Tahun (3)"
+             },
+             {
+              "value": "2",
+              "text": "c.\t7 – 13 Tahun (2)"
+             },
+             {
+              "value": "1",
+              "text": "d.\t>13 Tahun (1)"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "2. Jenis Kelamin",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "a.\tLaki-laki (2)"
+             },
+             {
+              "value": "1",
+              "text": "b.\tPerempuan (1)"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "3. Diagnosis",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "a.\tKelainan Neurologi (4)"
+             },
+             {
+              "value": "3",
+              "text": "b.\tPerubahan dalam oksigenasi (masalah sal.nafas, dehidrasi anemia, anorexia, sinkop,dll) (3)"
+             },
+             {
+              "value": "2",
+              "text": "c.\tKelainan Psikis/Perilaku (2)"
+             },
+             {
+              "value": "1",
+              "text": "d.\tDiagnosis Lainnya (1)"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "4. Gangguan Kognitif",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "a.\tKeterbatasan daya pikir (3)"
+             },
+             {
+              "value": "2",
+              "text": "b.\tOrientasi sekitar berkurang (2)"
+             },
+             {
+              "value": "1",
+              "text": "c.\tOrientasi sekitar baik (1)"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "5. Faktor Lingkungan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "a.\tRiwayat jatuh tempat tidur saat bayi-anak/diletakkan di tempat tidur dewasa (4)"
+             },
+             {
+              "value": "3",
+              "text": "b.\tPasien menggunakan alat bantu/bayi dalam ayunan mebel (3)"
+             },
+             {
+              "value": "2",
+              "text": "c.\tPasien berada di tempat tidur (2)"
+             },
+             {
+              "value": "1",
+              "text": "d.\tDiluar ruang rawat (1)"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "6. Pembedahan/sedasi/anastesi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "a.\tDalam 24 jam (3)"
+             },
+             {
+              "value": "2",
+              "text": "b.\tDalam 48 jam (2)"
+             },
+             {
+              "value": "1",
+              "text": "c.\t>48 jam atau tidak menjalani pembedahan/sedasi/anastesi (1)"
+             }
+            ]
+           },
+           {
+            "name": "column9",
+            "title": "7. Penggunaan Medikamentosa",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "a.\tBermacam-macam obat digunakan: Obat sedatif (Kec.Pasien ICU yang menggunakan sedasi dan paralisis), hipnotik, barbiturat, fenotiazien, antidepresan, pencahar, diuretik (3)"
+             },
+             {
+              "value": "2",
+              "text": "b.\tSalah satu dari pengobatan diatas (2)"
+             },
+             {
+              "value": "1",
+              "text": "c.\tPengobatan lain/tidak ada obat (1)"
+             }
+            ]
+           },
+           {
+            "name": "column7",
+            "title": "Total skor",
+            "cellType": "expression",
+            "expression": "{row.column1}+{row.column2}+{row.column3}+{row.column4}+{row.column5}+{row.column6}+{row.column9}"
+           },
+           {
+            "name": "column8",
+            "title": "Kategori",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Risiko Rendah 7 – 11"
+             },
+             {
+              "value": "item2",
+              "text": "Risiko Tinggi ≥ 12"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "SKALA / NILAI"
+           }
+          ]
+         }
+        ],
+        "title": "(PENGKAJIAN RISIKO JATUH PASIEN ANAK 1 BULAN – 18 TAHUN)",
+        "description": "HUMPTY DUMPTY SCALE"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Riwayat Jatuh 1. a.\tApakah pasien datang ke RS karena jatuh?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "6",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Riwayat Jatuh b.\tJika tidak, apakah pasien mengalami jatuh dalam 2 bulan terakhir",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "6",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Status Mental a.\tApakah pasein delirium (tidak dapat membuat keputusan, pola pikir tidak terorganisir, gangguan daya ingat)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "14",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "Status Mental b.\tApakah pasien disorientasi? (salah menyebut waktu, tempat atau orang)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "14",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "Status Mental c. Apakah pasien mengalami agitasi ? (ketakutan, gelisah dan cemas)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "14",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "Penglihatan a.\tApakah pasien memakai kacamata?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "tidak"
+             },
+             {
+              "value": "1",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column7",
+            "title": "Penglihatan  b. Apakah pasien mengeluh adanya penglihatan buram?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "tidak"
+             },
+             {
+              "value": "1",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column8",
+            "title": "Penglihatan  c.\tApakah pasien mempunyai glaukoma, katarak, atau kerusakan penglihatan berat lainnya?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "tidak"
+             },
+             {
+              "value": "1",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column9",
+            "title": "Kebiasaan berkemih Apakah terdapat perubahan perilaku berkemih? (frekuensi, urgensi, inkontinensia, noktural)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "tidak"
+             },
+             {
+              "value": "2",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column10",
+            "title": "Transfer (dari tempat tidur ke kursi dan kembali ke tempat tidur)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "a.\tMandir (boleh menggunakan alat bantu jalan) (0)"
+             },
+             {
+              "value": "1",
+              "text": "b.\tMemerlukan sedikit bantuan (1 orang)/dalam pengawasan (2)"
+             },
+             {
+              "value": "2",
+              "text": "c.\tMemerlukan bantuan yang nyata (2 orang) (2)"
+             },
+             {
+              "value": "3",
+              "text": "d.\tTidak dapat duduk dengan seimbang, perlu bantuan total (3)"
+             }
+            ]
+           },
+           {
+            "name": "column11",
+            "title": "Mobilitas",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "a.\tMandiri (boleh menggunakan alat bantu jalan) (0)"
+             },
+             {
+              "value": "1",
+              "text": "b.\tBerjalan dengan bantuan 1 orang (verbal/fisik) (1)"
+             },
+             {
+              "value": "2",
+              "text": "c.\tMenggunakan kursi roda (2)"
+             },
+             {
+              "value": "3",
+              "text": "d.\tImmobile (tidak bisa bergerak sendiri) (3)"
+             }
+            ]
+           },
+           {
+            "name": "column12",
+            "title": "Total skor",
+            "cellType": "expression",
+            "expression": "{row.column1}+{row.column2}+{row.column3}+{row.column4}+{row.column5}+{row.column6}+{row.column7}+{row.column8}+{row.column9}+{row.column10}+{row.column11}"
+           },
+           {
+            "name": "column13",
+            "title": "Kategori",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Risiko Rendah 0 – 5"
+             },
+             {
+              "value": "item2",
+              "text": "Risiko Sedang 6 – 16"
+             },
+             {
+              "value": "item3",
+              "text": "Risiko Tinggi 17 – 30"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "ITEM PENILAIAN / NILAI"
+           }
+          ]
+         }
+        ],
+        "title": "PENGKAJIAN RISIKO JATUH PASIEN LANSIA > 65 TAHUN",
+        "description": "SKALA ONTARIO MODIFIED STRATIFY"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "1.\tApakah pasien mengalami penurunan BB yang tidak diinginkan dalam 6 bulan terakhir?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "a.\tTidak ada penurunan BB"
+             },
+             {
+              "value": "2",
+              "text": "b.\tTidak yakin/tidak tahu/terasa baju longgar"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Jika Ya, berapa penurunan BB tersebut",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "1-5 Kg (1)"
+             },
+             {
+              "value": "2",
+              "text": "6-10 Kg (2)"
+             },
+             {
+              "value": "3",
+              "text": "11-15 Kg (3)"
+             },
+             {
+              "value": "4",
+              "text": ">15 Kg (4)"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "2.\tApakah asupan makan berkurang karena tidak nafsu makan?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "tidak (0)"
+             },
+             {
+              "value": "1",
+              "text": "ya (1)"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "Total skor",
+            "cellType": "expression",
+            "expression": "{row.column1}+{row.column2}+{row.column3}"
+           },
+           {
+            "name": "column5",
+            "title": "Kategori",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak berisiko 0-1"
+             },
+             {
+              "value": "item2",
+              "text": "Berisiko ≥ 2 (Dilakukan pengkajian lanjut oleh ahli gizi)"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "PARAMETER"
+           }
+          ]
+         }
+        ],
+        "title": "BERDASARKAN MALNUTRISION TOOL (MST)",
+        "description": "6.\tSkrining Gizi"
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,526 @@
+{
+    "locale": "id",
+    "title": {
+     "default": "LEMBAR MONITORING PENCEGAHAN PASIEN JATUH (HUMPTY DUMPTY SCALE)",
+     "id": "MONITORING ASSESMENT PASIEN JATUH ANAK ANAK (HUMPTY DUMPTY SCALE)"
+    },
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "html",
+        "name": "identitas_baru"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "resiko_jatuh",
+          "title": "PENILAIAN RESIKO JATUH& (HUMPTY DUMPTY SCALE)",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "hari",
+            "title": "Hari ke :",
+            "cellType": "text"
+           },
+           {
+            "name": "tgl",
+            "title": "Tanggal & Waktu",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "1",
+            "title": "Umur",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": {
+               "default": "< 3 tahun",
+               "id": "Dibawah 3 tahun"
+              }
+             },
+             {
+              "value": "3",
+              "text": {
+               "default": "3-6 tahun",
+               "id": "3-7 tahun"
+              }
+             },
+             {
+              "value": "2",
+              "text": "7-13 tahun"
+             },
+             {
+              "value": "1",
+              "text": {
+               "default": "> 13 tahun",
+               "id": ">13 tahun"
+              }
+             }
+            ]
+           },
+           {
+            "name": "detail_umur",
+            "title": "Detail Umur",
+            "cellType": "text",
+            "visibleIf": "{resiko_jatuh[0].1} anyof [4, 3, 2, 1]"
+           },
+           {
+            "name": "2",
+            "title": "Jenis Kelamin",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Laki-laki"
+             },
+             {
+              "value": "1",
+              "text": "Perempuan"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Diagnosis",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": {
+               "default": "Diagnosa neurologi",
+               "id": "Kelainan neurologi"
+              }
+             },
+             {
+              "value": "3",
+              "text": {
+               "default": "Gangguan oksigenisasi (diag.pernafasan, dehidrasi,anemia,anorexia,pingsan,pusing,dll)",
+               "id": "Perubahan dalam oksigen (Masalah Saluran Nafas, Dehidrasi, Anemia, Anoreksia, Sinkop / sakit kepala, dll)"
+              }
+             },
+             {
+              "value": "2",
+              "text": {
+               "default": "Gangguan perilaku/jiwa",
+               "id": "Kelainan Psikis / Perilaku"
+              }
+             },
+             {
+              "value": "1",
+              "text": {
+               "default": "Diagnosa lain-lain",
+               "id": "Diagnosis Lain"
+              }
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Gangguan Kongnitif",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": {
+               "default": "Tidak waspada terhadap keterbatasan",
+               "id": "Tidak sadar terhadap keterbatasan"
+              }
+             },
+             {
+              "value": "2",
+              "text": {
+               "default": "Lupa akan keterbatasannya",
+               "id": "Lupa keterbatasan"
+              }
+             },
+             {
+              "value": "1",
+              "text": {
+               "default": "Berorientasi terhadap kemampuan diri",
+               "id": "Mengetahui kemampuan diri"
+              }
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Faktor Lingkungan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": {
+               "default": "Riwayat jatuh/bayi/anak-anak berada di tempat tidur dewasa",
+               "id": "Riwayat jatuh dari tempat tidur saat bayi anak"
+              }
+             },
+             {
+              "value": "3",
+              "text": {
+               "default": "Pasien menggunakan bantuan alat/bayi/anak-anak berada dlm tempat tidur bayi/kursi",
+               "id": "Pasien menggunakan alat bantu atau box atau mebel"
+              }
+             },
+             {
+              "value": "2",
+              "text": "Pasien berada di tempat tidur"
+             },
+             {
+              "value": "1",
+              "text": {
+               "default": "Area rawat jalan",
+               "id": "Di luar ruang rawat"
+              }
+             }
+            ]
+           },
+           {
+            "name": "6",
+            "title": "Respon Terhadap Aanestesi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "Dalam 24 jam"
+             },
+             {
+              "value": "2",
+              "text": {
+               "default": "Dalam 48 jam",
+               "id": "Dalam 48 jam Riwayat Jatuh"
+              }
+             },
+             {
+              "value": "1",
+              "text": {
+               "default": "> 48 jam/tidak",
+               "id": ">48 jam"
+              }
+             }
+            ]
+           },
+           {
+            "name": "7",
+            "title": {
+             "default": "Gangguan obat obatan",
+             "id": "Penggunaan Obat"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": {
+               "default": "Penggunaan : Sedatives, Hypnotics, Penggunaan : Sedatives, Hypnotics, Laxatives, Diurites,Narcotics,Pasien ICU",
+               "id": "Bermacam-macam obat yang digunakan : Obat sedative (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hipnotik, Barbiturat, Fenotiazin, Antidepresan, Laksans / Diuretika, Narkotik"
+              }
+             },
+             {
+              "value": "2",
+              "text": {
+               "default": "Satu dari obat tersebut diatas",
+               "id": "Salah satu dari pengobatan di atas"
+              }
+             },
+             {
+              "value": "1",
+              "text": {
+               "default": "Obat-obatan lainnya",
+               "id": "Pengobatan lain"
+              }
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": {
+             "id": "Skor"
+            },
+            "cellType": "expression",
+            "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5} + {row.6} + {row.7}"
+           },
+           {
+            "name": "rr",
+            "title": {
+             "id": "Kategori"
+            },
+            "cellType": "expression",
+            "expression": "iif({row.total_skor} > 11,'Berisiko Tinggi (>= 12)', iif({row.total_skor} < 12,'Berisiko Rendah (7 - 11)'))"
+           },
+           {
+            "name": "nama",
+            "title": "Nama Petugas",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": {
+           "id": "Tambah Penilaian Resiko Jatuh"
+          },
+          "removeRowText": {
+           "id": "Hapus Penilaian Resiko Jatuh"
+          }
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": {
+         "id": "tambah"
+        },
+        "panelRemoveText": {
+         "id": "hapus"
+        }
+       }
+      ],
+      "title": {
+       "default": "LEMBAR MONITORING PENCEGAHAN PASIEN JATUH",
+       "id": "Halaman 1"
+      }
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "title": {
+           "id": "Resiko Rendah : 7-11"
+          },
+          "titleLocation": "top",
+          "columns": [
+           {
+            "name": "column1",
+            "title": {
+             "id": "Tanggal"
+            },
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": {
+             "id": "Pastikan tempat tidur / box terkunci"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column3",
+            "title": {
+             "id": "Dekatkan bel dan pastikan bel terjangkau"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column4",
+            "title": {
+             "id": "Pasang pengaman tempat tidur"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column5",
+            "title": {
+             "id": "Posisikan tempat tidur / box pada posisi terendah jika memungkinkan "
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column6",
+            "title": {
+             "id": "Singkirkan barang yang berbahaya terutama pada malam hari"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column7",
+            "title": {
+             "id": "Minta persetujuan pasien agar lampu malam tetap menyala"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column8",
+            "title": {
+             "id": "Pastikan selalu ada orang tua / keluarga"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column9",
+            "title": {
+             "id": "Pastikan lantai dan alas kaki tidak licin"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column10",
+            "title": {
+             "id": "Kontrol / observasi rutin oleh perawat (setiap  2 jam)"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column11",
+            "title": {
+             "id": "Bila dirawat dalam inkubator, pastikan semua jendela terkunci"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column12",
+            "title": {
+             "id": "Edukasi orangtua/keluarga"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column13",
+            "title": {
+             "id": "Initial Perawat"
+            },
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "item1",
+            "text": {
+             "id": "✓ "
+            }
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "panelAddText": {
+         "id": "Tambah"
+        },
+        "panelRemoveText": {
+         "id": "Hapus"
+        }
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question4",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "title": {
+           "id": "Resiko Tinggi : 12 -  23"
+          },
+          "titleLocation": "top",
+          "columns": [
+           {
+            "name": "column1",
+            "title": {
+             "id": "Tanggal"
+            },
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": {
+             "id": "Lakukan tindakan pencegahan seperti skala rendah ( skala 7-11)"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column3",
+            "title": {
+             "id": "Pasang gelang risiko jatuh warna kuning"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column4",
+            "title": {
+             "id": "Pasang tanda risiko jatuh pada pintu atas kamar"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column5",
+            "title": {
+             "id": "Lakukan observasi setiap 1 jam"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column6",
+            "title": {
+             "id": "Tempatkan pasien dikamar yang paling dekat dengan Nurse Station (jika memungkinkan)"
+            },
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column7",
+            "title": {
+             "id": "Initial perawat"
+            },
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "item1",
+            "text": {
+             "id": "✓ "
+            }
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "panelAddText": {
+         "id": "Tambah"
+        },
+        "panelRemoveText": {
+         "id": "Hapus"
+        }
+       }
+      ],
+      "title": {
+       "id": "INTERVENSI RESIKO JATUH PADA PASIEN ANAK (SKALA HUMPTY DUMPTY)"
+      }
+     }
+    ],
+    "showQuestionNumbers": "off",
+    "questionTitleLocation": "left",
+    "showProgressBar": "bottom",
+    "pagePrevText": "Sebelumnya",
+    "pageNextText": "Selanjutnya",
+    "completeText": "Selesai"
+   }

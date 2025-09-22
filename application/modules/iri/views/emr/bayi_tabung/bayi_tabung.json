@@ -1,0 +1,243 @@
+{
+    "title": "PERSETUJUAN BAYI TABUNG",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Ruang / Poli :"
+           },
+           {
+            "name": "text2",
+            "title": "Diagnosa Klinis         :                                                                           "
+           },
+           {
+            "name": "text3",
+            "title": "Rencana Tindakan   :                                                                       "
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "title": "PENJELASAN PROGRAM BAYI TABUNG",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "jelas",
+            "title": "Jelas",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "√"
+             }
+            ]
+           },
+           {
+            "name": "ttd",
+            "title": "TTD Pemberi Informasi",
+            "cellType": "signaturepad",
+            "width": 150,
+            "height": 150
+           },
+           {
+            "name": "ttd2",
+            "title": "TTD Penerima Infromasi",
+            "cellType": "signaturepad",
+            "width": 150,
+            "height": 150
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "1. Pengertian Bayi Tabung"
+           },
+           {
+            "value": "item2",
+            "text": "2. Pengertian Simpan Beku Embrio"
+           },
+           {
+            "value": "item3",
+            "text": "3. Pengertian Simpan Beku Sperma"
+           },
+           {
+            "value": "item4",
+            "text": "4. Pengertian Pencairan Embrio"
+           },
+           {
+            "value": "item5",
+            "text": "5. Pengertian Pencairan Sperma"
+           },
+           {
+            "value": "item6",
+            "text": "6. Diagnosa dan Indikasi tondakan"
+           },
+           {
+            "value": "item7",
+            "text": "7. Komplikasi dan Prognosis"
+           },
+           {
+            "value": "item8",
+            "text": "8. Alternatif / Risiko"
+           }
+          ]
+         }
+        ],
+        "title": "ISI INFORMASI"
+       },
+       {
+        "type": "checkbox",
+        "name": "question3",
+        "title": "JENIS TINDAKAN :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Ovum Pick Up"
+         },
+         {
+          "value": "item2",
+          "text": "Simpan Beku Embrio"
+         },
+         {
+          "value": "item3",
+          "text": "Simpan Beku Sperma"
+         },
+         {
+          "value": "item4",
+          "text": "Embrio Transfer"
+         },
+         {
+          "value": "item5",
+          "text": "Pencairan Embrio"
+         },
+         {
+          "value": "item6",
+          "text": "Pencairan Sperma"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "multipletext",
+        "name": "question4",
+        "title": "Yang bertanda tangan dibawah ini saya sebagai suami dari nama pasien tersebut diatas :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "1.\tNama\t:\t"
+         },
+         {
+          "name": "text2",
+          "title": "2.\tNo. KTP\t:\t"
+         },
+         {
+          "name": "text3",
+          "title": "3.\tPekerjaan\t:"
+         },
+         {
+          "name": "text4",
+          "title": "4.\tAlamat\t:          "
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "html",
+        "name": "question5",
+        "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        \n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<H4><center>PERSETUJUAN</ccenter></h4>\n<p>Setelah mendapatkan penjelasan dan diskusi mengenai Teknologi Reproduksi Berbantu (Bayi Tabung),  maka dengan ini saya mengerti dan memahami untuk dilakukan tindakan tersebut diatas kami <b>MENYETUJUI </b>jenis tindakan "
+       },
+       {
+        "type": "comment",
+        "name": "question6",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "html",
+        "name": "question7",
+        "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        \n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n\n<p>terhadap kami, dan kami bertanggung jawab atas segala risiko dan komplikasi yang mungkin terjadi.\t\t"
+       },
+       {
+        "type": "text",
+        "name": "question8",
+        "title": "Tanah Badantuang, ",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question9",
+        "title": "Istri",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question10",
+        "startWithNewLine": false,
+        "title": "Dokter",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question13",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question14",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question11",
+        "title": "Suami",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question12",
+        "startWithNewLine": false,
+        "title": "Saksi",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question15",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question16",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

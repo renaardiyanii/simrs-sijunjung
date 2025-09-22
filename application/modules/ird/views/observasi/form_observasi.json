@@ -1,0 +1,301 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "nm_petugas",
+            "title": "Nama Petugas  pendamping",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "derajat0",
+            "text": "Derajat 0"
+           },
+           {
+            "value": "derajat1",
+            "text": "Derajat 1"
+           },
+           {
+            "value": "derajat2",
+            "text": "Derajat 2"
+           },
+           {
+            "value": "derajat3",
+            "text": "Derajat 3"
+           }
+          ]
+         }
+        ],
+        "title": "KATEGORI PENDAMPING PASIEN TRANSFER"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "jam",
+            "title": "Jam",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "gcs",
+            "title": "GCS",
+            "cellType": "text"
+           },
+           {
+            "name": "td",
+            "title": "TD",
+            "cellType": "text"
+           },
+           {
+            "name": "hr",
+            "title": "HR",
+            "cellType": "text"
+           },
+           {
+            "name": "rr",
+            "title": "RR",
+            "cellType": "text"
+           },
+           {
+            "name": "muntah",
+            "title": "Muntah",
+            "cellType": "text"
+           },
+           {
+            "name": "kejang",
+            "title": "Kejang",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "jam",
+            "title": "Jam",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "gcs",
+            "title": "GCS",
+            "cellType": "text"
+           },
+           {
+            "name": "td",
+            "title": "TD",
+            "cellType": "text"
+           },
+           {
+            "name": "hr",
+            "title": "HR",
+            "cellType": "text"
+           },
+           {
+            "name": "rr",
+            "title": "RR",
+            "cellType": "text"
+           },
+           {
+            "name": "muntah",
+            "title": "Muntah",
+            "cellType": "text"
+           },
+           {
+            "name": "kejang",
+            "title": "Kejang",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah"
+         }
+        ],
+        "title": "V. KONDISI PASIEN SELAMA PASIEN TRANSFER"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "seb_rujuk",
+          "title": "Sebelum dirujuk",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "jam",
+            "inputType": "time",
+            "title": "Jam"
+           },
+           {
+            "name": "keadaan_umum",
+            "title": "Keadaan umum"
+           },
+           {
+            "name": "kesadaran",
+            "title": "Kesadaran"
+           },
+           {
+            "name": "pemeriksaan",
+            "title": "Pemeriksaan tanda tanda vital"
+           },
+           {
+            "name": "tensi",
+            "title": "Tensi"
+           },
+           {
+            "name": "suhu",
+            "title": "Suhu"
+           },
+           {
+            "name": "nadi",
+            "title": "Nadi"
+           },
+           {
+            "name": "skor",
+            "title": "Skor EWS"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "sesudah_rujuk",
+          "startWithNewLine": false,
+          "title": "Sesudah dirujuk",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "jam",
+            "inputType": "time",
+            "title": "Jam"
+           },
+           {
+            "name": "keadaan_umum",
+            "title": "Keadaan umum"
+           },
+           {
+            "name": "kesadaran",
+            "title": "Kesadaran"
+           },
+           {
+            "name": "pemeriksaan",
+            "title": "Pemeriksaan tanda tanda vital"
+           },
+           {
+            "name": "tensi",
+            "title": "Tensi"
+           },
+           {
+            "name": "suhu",
+            "title": "Suhu"
+           },
+           {
+            "name": "nadi",
+            "title": "Nadi"
+           },
+           {
+            "name": "skor",
+            "title": "Skor EWS"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "catatan",
+          "title": "Catatan penting :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question4",
+          "startWithNewLine": false,
+          "title": "Catatan penting :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "title": "Perkembangan pasien selama proses rujukan (dalam perjalanan transportasi)",
+          "hideNumber": true
+         }
+        ],
+        "title": "V. KONDISI PASIEN"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question6",
+        "title": "Petugas yang menyerahkan pasien",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question7",
+        "startWithNewLine": false,
+        "title": "Petugas yang menerima pasien",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question8",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question9",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ],
+      "title": "FORMULIR OBSERVASI"
+     }
+    ]
+   }

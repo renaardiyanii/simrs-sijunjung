@@ -1,0 +1,221 @@
+{
+    "title": "PERNYATAAN PEMERIKSAAN RADIONUKLIR MENGGUNAKAN BAHAN KONTRAS / RADIOFARMAKA",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "title": "Diagnosa",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question15",
+          "startWithNewLine": false,
+          "title": "Pemeriksaan",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question14",
+          "title": "MENGGUNAKAN KONTRAS / RADIOFARMAKA JENIS\t",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "title": "PENJELASAN TRANSFUSI",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "jelas",
+            "title": "Jelas",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "√"
+             }
+            ]
+           },
+           {
+            "name": "ttd",
+            "title": "TTD Pemberi Informasi",
+            "cellType": "signaturepad",
+            "width": 150,
+            "height": 150
+           },
+           {
+            "name": "ttd2",
+            "title": "TTD Penerima Infromasi",
+            "cellType": "signaturepad",
+            "width": 150,
+            "height": 150
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "1. Pengertian Bahan Kontras / Radiofarmaka"
+           },
+           {
+            "value": "item2",
+            "text": "2. Fungsi Bahan Kontras / Radiofarmaka"
+           },
+           {
+            "value": "item3",
+            "text": "3. Kemungkinan terjadi Komplikasi : a.\tKomplikasi Ringan"
+           },
+           {
+            "value": "item4",
+            "text": "b.\tKomplikasi Sedang"
+           },
+           {
+            "value": "item5",
+            "text": "c.\tKomplikasi Berat"
+           }
+          ]
+         }
+        ],
+        "title": "ISI INFORMASI"
+       },
+       {
+        "type": "checkbox",
+        "name": "question4",
+        "title": "Yang bertanda tangan dibawah ini saya sebagai WALI : ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Anak"
+         },
+         {
+          "value": "item2",
+          "text": "Istri"
+         },
+         {
+          "value": "item3",
+          "text": "Suami"
+         }
+        ],
+        "hasOther": true,
+        "otherPlaceHolder": "dari nama pasien tersebut diatas",
+        "otherText": "Lainnya",
+        "colCount": 3
+       },
+       {
+        "type": "multipletext",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama"
+         },
+         {
+          "name": "text2",
+          "title": "No KTP"
+         },
+         {
+          "name": "text3",
+          "title": "Alamat"
+         },
+         {
+          "name": "text4",
+          "title": "Pekerjaan"
+         },
+         {
+          "name": "text5",
+          "title": "Jenis kelamin"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "question5",
+        "title": "Setelah mendapatkan penjelasan dan diskusi mengenai pemeriksaan Radionuklir menggunakan bahan kontras / Radiofarmaka, maka dengan ini saya mengerti dan menyatakan    ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Menyetujui"
+         },
+         {
+          "value": "item2",
+          "text": "Menolak"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question6",
+        "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<p>untuk dilakukan pemberian bahan kontras / Radiofarmaka  tersebut serta segala risiko dan komplikasi yang mungkin terjadi.\t"
+       },
+       {
+        "type": "text",
+        "name": "question7",
+        "title": "Tanah Badantuan,",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question8",
+        "title": "Dokter",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question9",
+        "startWithNewLine": false,
+        "title": "Petugas / Saksi",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question10",
+        "startWithNewLine": false,
+        "title": "Pasien / Keluarga ",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question11",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question12",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question13",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

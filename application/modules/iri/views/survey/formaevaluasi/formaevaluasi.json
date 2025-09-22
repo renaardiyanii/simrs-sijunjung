@@ -1,0 +1,518 @@
+{
+   "title": " FORMULIR A –EVALUASI AWAL MPP",
+   "pages": [
+    {
+     "name": "page1",
+     "elements": [
+      {
+       "type": "panel",
+       "name": "panel1",
+       "elements": [
+        {
+         "type": "text",
+         "name": "tgl_keluar",
+         "title": "Tanggal Keluar :",
+         "titleLocation": "left",
+         "hideNumber": true,
+         "inputType": "date"
+        },
+        {
+         "type": "text",
+         "name": "tgl_masuk",
+         "startWithNewLine": false,
+         "title": "Tanggal Masuk :",
+         "titleLocation": "left",
+         "hideNumber": true,
+         "inputType": "date"
+        },
+        {
+         "type": "dropdown",
+         "name": "kelas_rawatan",
+         "title": "Kelas Rawatan",
+         "titleLocation": "left",
+         "hideNumber": true,
+         "choices": [
+          {
+           "value": "VIP",
+           "text": "VIP"
+          },
+          {
+           "value": "I",
+           "text": "I"
+          },
+          {
+           "value": "II",
+           "text": "II"
+          },
+          {
+           "value": "III",
+           "text": "III"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "name": "ruangan",
+         "startWithNewLine": false,
+         "title": "Ruangan :",
+         "titleLocation": "left",
+         "hideNumber": true
+        }
+       ]
+      },
+      {
+       "type": "panel",
+       "name": "panel2",
+       "elements": [
+        {
+         "type": "matrixdynamic",
+         "name": "diagnosa2",
+         "titleLocation": "hidden",
+         "columns": [
+          {
+           "name": "item_diag",
+           "title": "Diagnosa",
+           "cellType": "dropdown",
+           "renderAs": "select2",
+           "choicesByUrl": {
+            "url": "/admin/get_all_icd"
+           }
+          },
+          {
+           "name": "ket",
+           "title": "Ket",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "Utama",
+             "text": "Utama"
+            },
+            {
+             "value": "Tambahan",
+             "text": "Tambahan"
+            }
+           ]
+          }
+         ],
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "rowCount": 1,
+         "addRowText": "Tambah Diagnosa",
+         "removeRowText": "Hapus"
+        },
+        {
+         "type": "comment",
+         "name": "tindakan",
+         "title": "Tindakan :",
+         "hideNumber": true
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "nama_mpp",
+       "title": "Nama MPP :",
+       "titleLocation": "left",
+       "hideNumber": true
+      },
+      {
+       "type": "text",
+       "name": "tgl_jam",
+       "title": "Tanggal / Jam ",
+       "titleLocation": "left",
+       "hideNumber": true,
+       "inputType": "datetime-local"
+      },
+      {
+       "type": "html",
+       "name": "question2",
+       "html": "<h5> Bila skor ditemukan 1 pada kriteria mayor dan total skor ≥ 15 pada kriteria minor,\n<p><p> Maka dilakukan asesmen Management Pelayanan Pasien"
+      },
+      {
+       "type": "html",
+       "name": "question1",
+       "html": "<h5> Identifikasi /Skrining Pasien"
+      },
+      {
+       "type": "matrixdropdown",
+       "name": "table_identitas",
+       "titleLocation": "hidden",
+       "columns": [
+        {
+         "name": "1",
+         "title": "1. Pasien dengan Discharge Planning",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          }
+         ]
+        },
+        {
+         "name": "2",
+         "title": "2. Isu Sosial seperti terlantar, napi, tinggal sendiri, narkoba, krisis keluarga",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          }
+         ]
+        },
+        {
+         "name": "3",
+         "title": "3. Upaya bunuh diri",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          }
+         ]
+        },
+        {
+         "name": "4",
+         "title": "4. Potensi complain tinggi",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          }
+         ]
+        },
+        {
+         "name": "total_skor",
+         "title": "Total Skor :",
+         "cellType": "expression",
+         "expression": "{row.1} + {row.2} + {row.3} + {row.4}"
+        }
+       ],
+       "columnLayout": "vertical",
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "rows": [
+        {
+         "value": "result",
+         "text": "Skor"
+        }
+       ]
+      },
+      {
+       "type": "html",
+       "name": "question3",
+       "html": "<h5> Identifikasi / Skrining Pasien Kategori Minor"
+      },
+      {
+       "type": "matrixdropdown",
+       "name": "table_kategori_minor",
+       "titleLocation": "hidden",
+       "columns": [
+        {
+         "name": "1",
+         "title": "1. Usia ",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "2",
+         "title": "2. Fungsi kognitif rendah",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "3",
+         "title": "3. penyakitkronis, katastropik, terminal, multiple DPJP",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "4",
+         "title": "4. Status fungsional rendah, kebutuhan ADL (activity daily living) yang tinggi",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "5",
+         "title": "5. Riwayat penggunaan peralatan medis di masa lalu",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "6",
+         "title": "6. Riwayat gangguan mental",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "7",
+         "title": "7. Sering masuk IGD, readmisi RS",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "8",
+         "title": "8. Perkiraan asuhan dengan biaya tinggi",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "9",
+         "title": "9. Kemungkinan system pembiayaan yang kompleks, adanya masalah finanasial",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "10",
+         "title": "10. Kasus yang melebihi rata-rata lama rawat",
+         "cellType": "dropdown",
+         "choices": [
+          {
+           "value": "0",
+           "text": "0"
+          },
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          }
+         ]
+        },
+        {
+         "name": "total_skor",
+         "title": "Total Skor :",
+         "cellType": "expression",
+         "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5} + {row.6} + {row.7} + {row.8} + {row.9} + {row.10}"
+        }
+       ],
+       "columnLayout": "vertical",
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "rows": [
+        {
+         "value": "result",
+         "text": "Skor"
+        }
+       ]
+      },
+      {
+       "type": "comment",
+       "name": "asesment_managemen_pelayanan",
+       "title": "Asesmen untuk Manajemen Pelayanan Pasien :",
+       "hideNumber": true
+      },
+      {
+       "type": "comment",
+       "name": "identifikasi_masalah",
+       "title": "Identifikasi Masalah – Resiko – Kesempatan :",
+       "hideNumber": true
+      },
+      {
+       "type": "comment",
+       "name": "perencanaan_manajemen",
+       "title": "Perencanaan Manajemen Pelayanan Pasien :",
+       "hideNumber": true
+      },
+      {
+       "type": "comment",
+       "name": "kelanjutan_pelayanan",
+       "title": "Kelanjutan Pelayanan Pasien :",
+       "hideNumber": true
+      }
+     ]
+    }
+   ],
+   "showCompletedPage": false
+  }

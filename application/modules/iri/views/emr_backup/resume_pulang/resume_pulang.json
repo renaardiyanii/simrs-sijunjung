@@ -1,0 +1,304 @@
+{
+    "title": "RESUME PASIEN PULANG RANAP",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "date",
+            "title": "Tanggal Masuk"
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Tanggal Keluar :"
+           },
+           {
+            "name": "text3",
+            "title": "Ruangan"
+           },
+           {
+            "name": "text4",
+            "title": "Cara bayar"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "ANAMNESIS / KELUHAN UTAMA : "
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "RIWAYAT PERJALANAN PENYAKIT :"
+         },
+         {
+          "type": "comment",
+          "name": "question4",
+          "title": "PEMERIKSAAN FISIK :"
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "title": "PEMERIKSAAN PENUNJANG (LAB, RONTGEN, USG DLL) :"
+         },
+         {
+          "type": "comment",
+          "name": "question6",
+          "title": "DIAGNOSIS UTAMA :"
+         },
+         {
+          "type": "comment",
+          "name": "question7",
+          "title": "DIAGNOSIS SEKUNDER : "
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question8",
+        "title": "DIAGNOSIS KOMPLIKASI :"
+       },
+       {
+        "type": "comment",
+        "name": "question9",
+        "title": "TINDAKAN UTAMA :"
+       },
+       {
+        "type": "comment",
+        "name": "question10",
+        "title": "TINDAKAN TAMBAHAN :"
+       },
+       {
+        "type": "comment",
+        "name": "question11",
+        "title": "OBAT/TERAPI  SELAMA DI RUMAH SAKIT :"
+       },
+       {
+        "type": "text",
+        "name": "question12",
+        "title": "KONDISI PADA SAAT PULANG :"
+       },
+       {
+        "type": "comment",
+        "name": "question13",
+        "title": " ANJURAN / RENCANA KONTROL SELANJUTNYA :"
+       },
+       {
+        "type": "radiogroup",
+        "name": "question14",
+        "title": "ALASAN PULANG :",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Dapat Berobat Jalan  "
+         },
+         {
+          "value": "item2",
+          "text": "Sembuh "
+         },
+         {
+          "value": "item3",
+          "text": "Pindah rs lain"
+         },
+         {
+          "value": "item4",
+          "text": "meninggal"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Pulang atas Permintaan, Jelaskan :",
+        "colCount": 3
+       }
+      ]
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question15",
+        "title": "TERAPI PULANG :",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Nama obat",
+          "cellType": "text"
+         },
+         {
+          "name": "column2",
+          "title": "Jumlah",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "Dosis",
+          "cellType": "text"
+         },
+         {
+          "name": "column4",
+          "title": "Frekuensi",
+          "cellType": "text"
+         },
+         {
+          "name": "column5",
+          "title": "Cara pemberian",
+          "cellType": "text"
+         },
+         {
+          "name": "column6",
+          "title": "Jam pemberian",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "column7",
+          "title": "Petunjuk khusus",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question16",
+        "title": "TARIF PELAYANAN:",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "satuan",
+          "cellType": "text"
+         },
+         {
+          "name": "column2",
+          "title": "jumlah",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "total tarif",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "1. Prosedur Non Bedah"
+         },
+         {
+          "value": "item2",
+          "text": "2. Tenaga Ahli"
+         },
+         {
+          "value": "item3",
+          "text": "3. Radiologi"
+         },
+         {
+          "value": "item4",
+          "text": "4. Rehabilitasi"
+         },
+         {
+          "value": "item5",
+          "text": "5. Obat"
+         },
+         {
+          "value": "item6",
+          "text": "6. Prosedur Bedah"
+         },
+         {
+          "value": "item7",
+          "text": "7. Keperawatan"
+         },
+         {
+          "value": "item8",
+          "text": "8. Laboratorium"
+         },
+         {
+          "value": "item9",
+          "text": "9. Kamar/Akomodasi"
+         },
+         {
+          "value": "item10",
+          "text": "10. Sewa Alat"
+         },
+         {
+          "value": "item11",
+          "text": "11. Alat Kesehatan"
+         },
+         {
+          "value": "item12",
+          "text": "12. Konsultasi"
+         },
+         {
+          "value": "item13",
+          "text": "13. Penunjang Lainnya"
+         },
+         {
+          "value": "item14",
+          "text": "14. Pelayanan Darah"
+         },
+         {
+          "value": "item15",
+          "text": "15. Rawat Intensif"
+         },
+         {
+          "value": "item16",
+          "text": "16. BMHP"
+         },
+         {
+          "value": "item17",
+          "text": "17. lai lain"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question17",
+        "title": "Tanah badantuang",
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question18",
+        "title": "Dokter Yang Merawat"
+       },
+       {
+        "type": "text",
+        "name": "question19",
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

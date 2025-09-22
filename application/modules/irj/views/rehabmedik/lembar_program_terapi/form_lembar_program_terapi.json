@@ -1,0 +1,78 @@
+{
+    "title": "LEMBAR PROGRAM TERAPI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "terapi",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "diagnosa",
+          "title": "Diagnosa"
+         },
+         {
+          "name": "program_terapi",
+          "title": "Program Terapi"
+         }
+        ]
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "table",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "program",
+          "title": "Program",
+          "cellType": "comment"
+         },
+         {
+          "name": "tgl",
+          "title": "Tanggal",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "ttd",
+          "title": "Ttd Pasien",
+          "cellType": "signaturepad",
+          "width": "300",
+          "height": 100,
+          "penColor": "black"
+         },
+         {
+          "name": "ttd2",
+          "title": "Ttd Dokter",
+          "cellType": "signaturepad",
+          "width": "300",
+          "height": 100,
+          "penColor": "black"
+         },
+         {
+          "name": "ttd3",
+          "title": "Ttd Terapis",
+          "cellType": "signaturepad",
+          "width": "300",
+          "height": 100,
+          "penColor": "black"
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnMinWidth": "100",
+        "rowCount": 1,
+        "minRowCount": 1
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,106 @@
+{
+    "title": "LEMBAR KONSULTASI",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "yth",
+          "title": "Yth: Dr",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "bagian_sub",
+          "startWithNewLine": false,
+          "title": "Bagian / Sub Bagian yang diminta",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "tanggal",
+          "startWithNewLine": false,
+          "title": "Tanggal",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "multipletext",
+          "name": "penderita",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "penderita1",
+            "title": "Penderita Kami rawat dengan"
+           },
+           {
+            "name": "diagnosis",
+            "title": "Diagnosis Kerja"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "ikhtisar",
+          "title": "(Ikhtisar Klinis)",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "kesimpulan",
+          "title": "Kesimpulan",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "konsul",
+          "title": "Konsul yang diminta",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "konsulen",
+          "title": "KONSULEN DIHARAPKAN",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "pendapat",
+            "text": "Memberikan pendapat dibidang TS"
+           },
+           {
+            "value": "pendapat",
+            "text": "Memberikan pendapat dibidang TS"
+           },
+           {
+            "value": "alih_pengobatan",
+            "text": "Mengambil Alih Pengobatan"
+           },
+           {
+            "value": "rawat_bersama",
+            "text": "Rawat Bersama"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "<H4>DEMIKIANLAH HARAPAN KAMI, SEMOGA TS MAKLUM <P>\n<BR>ATAS PERHATIAN DAN KERJA SAMA DIUCAPKAN TERIMA KASIH."
+         }
+        ],
+        "title": "TANDA PEMERIKSAAN KAMI TEMUKAN :"
+       }
+      ]
+     }
+    ]
+   }

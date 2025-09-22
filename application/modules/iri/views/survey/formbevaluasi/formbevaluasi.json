@@ -1,0 +1,43 @@
+{
+    "title": "FORMULIR B –CATATAN IMPLEMENTASI",
+    "showCompletedPage":false,
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Date",
+          "title": "Tanggal",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "Time",
+          "title": "Waktu",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "catatan",
+          "title": "CATATAN (Pelaksanaan Rencana Manajemen Pelayanan Pasien, Monitoring , (Fasilitas, Koordinasi, Komunikasi, dan Kolaborasi), Advokasi, Hasil Pelayanan, Terminasi Manajemen Pelayanan Pasien)",
+          "cellType": "comment"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1
+       }
+      ]
+     }
+    ]
+   }

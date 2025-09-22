@@ -1,0 +1,358 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl_pembedahan",
+        "startWithNewLine": false,
+        "title": "Tgl Pembedahan:",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "text",
+        "name": "jam",
+        "minWidth": "300",
+        "startWithNewLine": false,
+        "title": "Jam:",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "inputType": "time"
+       },
+       {
+        "type": "text",
+        "name": "ahli_bedah",
+        "title": "Ahli Bedah:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "asisten",
+        "minWidth": "350px",
+        "startWithNewLine": false,
+        "title": "Asisten:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "instrumentator",
+        "startWithNewLine": false,
+        "title": "Instrumentator:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "macam_pembedahan",
+        "title": "Macam Pembedahan:",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "kecil",
+          "text": "Kecil"
+         },
+         {
+          "value": "sedang",
+          "text": "Sedang"
+         },
+         {
+          "value": "besar",
+          "text": "Besar"
+         },
+         {
+          "value": "khusus_1",
+          "text": "Khusus 1"
+         },
+         {
+          "value": "khusus_2",
+          "text": "Khusus 2"
+         },
+         {
+          "value": "gawat_darurat",
+          "text": "Gawat Darurat"
+         },
+         {
+          "value": "berencana",
+          "text": "Berencana"
+         },
+         {
+          "value": "bersih",
+          "text": "Bersih"
+         },
+         {
+          "value": "bersih_tercemar",
+          "text": "Bersih Tercemar"
+         },
+         {
+          "value": "tercemar",
+          "text": "Tercemar"
+         },
+         {
+          "value": "kotor",
+          "text": "Kotor"
+         }
+        ],
+        "colCount": 5
+       },
+       {
+        "type": "text",
+        "name": "diagnosa_pra_bedah",
+        "title": "Diagnosa Pra Bedah:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "tindakan_pembedahan",
+        "title": "Tindakan Pembedahan:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "diagnosa_pasca_bedah",
+        "title": "Diagnosa Pasca Bedah:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "nama_implant",
+        "title": "Nama Implant",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "lokasi_pemasangan",
+        "startWithNewLine": false,
+        "title": "Lokasi Pemasangan",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "kode_produk",
+        "startWithNewLine": false,
+        "title": "Kode Produk / Barcode",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "keterangan",
+        "startWithNewLine": false,
+        "title": "Keterangan",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "ahli_bius",
+        "maxWidth": "250px",
+        "title": "Ahli Bius:",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "cara_pembiusan",
+        "maxWidth": "250px",
+        "startWithNewLine": false,
+        "title": "Cara Pembiusan:",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "posisi_pasien:",
+        "startWithNewLine": false,
+        "title": "Posisi Pasien:",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "mulai",
+        "minWidth": "10px",
+        "maxWidth": "100px",
+        "startWithNewLine": false,
+        "title": "Mulai",
+        "hideNumber": true,
+        "inputType": "time",
+        "size": 0
+       },
+       {
+        "type": "text",
+        "name": "selesai",
+        "minWidth": "10px",
+        "maxWidth": "100px",
+        "startWithNewLine": false,
+        "title": "Selesai",
+        "hideNumber": true,
+        "inputType": "time",
+        "size": 0
+       },
+       {
+        "type": "text",
+        "name": "lama_pembedahan",
+        "minWidth": "200px",
+        "startWithNewLine": false,
+        "title": "Lama Pembedahan",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "ok",
+        "startWithNewLine": false,
+        "title": "OK",
+        "hideNumber": true,
+        "size": 13
+       },
+       {
+        "type": "comment",
+        "name": "uraian_pembedahan:",
+        "title": "Uraian Pembedahan",
+        "hideNumber": true,
+        "placeHolder": " Uraian dimulai dari bagian tubuh yang dibedah, cara penemuan tindakan yang dilakukan,    explorasi, indikasi dan tindakan macam penutupan luka, dengan lengkap dan jelas, jaringan yang dikeluarkan drainage, darah yang keluar."
+       },
+       {
+        "type": "text",
+        "name": "komplikasi",
+        "title": "KOMPLIKASI",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "perdarahan",
+        "title": "PERDARAHAN:",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "jaringan_dikirim_patologi",
+          "title": "Jaringan dikirim ke Patologi:",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ya",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "asal_jaringan",
+          "title": "Asal Jaringan:",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "question1",
+          "title": "Ahli Bedah",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "ahli_bedah1",
+          "title": "Ahli Bedah",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "placeHolder": "Nama Jelas   : Prof / DR / dr. ………………………………"
+         }
+        ],
+        "startWithNewLine": false
+       }
+      ],
+      "title": "LAPORAN PEMBEDAHAN"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "lanjutan_uraian_pembedahan",
+        "title": "Lanjutan Uraian Pembedahan:",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "komplikasi2",
+        "title": "Komplikasi:",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "perdarahan2",
+        "title": "Perdarahan:\n",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question2",
+          "title": "Jaringan dikirim ke Patologi:",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ya",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question3",
+          "title": "Asal Jaringan:",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "question4",
+          "title": "Ahli Bedah",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question5",
+          "title": "Ahli Bedah",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "placeHolder": "Nama Jelas   : Prof / DR / dr. ………………………………"
+         }
+        ],
+        "startWithNewLine": false
+       }
+      ]
+     }
+    ]
+   }

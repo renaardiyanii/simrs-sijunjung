@@ -1,0 +1,261 @@
+{
+    "title": "LEMBAR OBSERVASI MODIFIED EARLY OBSTERTIC WARNING SYSTEM (MEOWS)",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "title": "PENCATATAN OBSERVASI MENGGUNAKAN MODIFIED EARLY OBSTERTIC WARNING SYSTEM (MEOWS)",
+        "description": "UNTUK PASIEN IBU HAMIL DENGAN USIA KANDUNGAN 20 MINGGU SAMPAI 6 MINGGU SETELAH MELAHIRKAN",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Tingkat kesadaran",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Sadar (0)"
+             },
+             {
+              "value": "3",
+              "text": "V/P/U (3)"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Tekanan darah (sistolik)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "> 160 (3)"
+             },
+             {
+              "value": "2",
+              "text": "151-160 (2)"
+             },
+             {
+              "value": "1",
+              "text": "141-150 (1)"
+             },
+             {
+              "value": "0",
+              "text": "90-140 (0)"
+             },
+             {
+              "value": "3",
+              "text": "< 90 (3)"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "Tekanan Darah (Diastolik)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "> 110 (3)"
+             },
+             {
+              "value": "2",
+              "text": "101-110 (2)"
+             },
+             {
+              "value": "1",
+              "text": "91-100 (1)"
+             },
+             {
+              "value": "0",
+              "text": "60-90 (0)"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "NADI",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "> 120 (3)"
+             },
+             {
+              "value": "2",
+              "text": "111-120 (2)"
+             },
+             {
+              "value": "1",
+              "text": "101-110 (1)"
+             },
+             {
+              "value": "0",
+              "text": "61-100 (0)"
+             },
+             {
+              "value": "2",
+              "text": "50-60 (2)"
+             },
+             {
+              "value": "3",
+              "text": "< 50 (3)"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "Pernafasan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "> 25 (3)"
+             },
+             {
+              "value": "2",
+              "text": "21-24 (2)"
+             },
+             {
+              "value": "0",
+              "text": "12-20 (0)"
+             },
+             {
+              "value": "3",
+              "text": "< 12 (3)"
+             }
+            ]
+           },
+           {
+            "name": "column7",
+            "title": "Suhu",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "> 37,7 (3)"
+             },
+             {
+              "value": "1",
+              "text": "37,5 - 37,7 (1)"
+             },
+             {
+              "value": "0",
+              "text": "36,1 - 37,2 (0)"
+             },
+             {
+              "value": "1",
+              "text": "< 36 (1)"
+             }
+            ]
+           },
+           {
+            "name": "column8",
+            "title": "Sp02",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "> 95 (0)"
+             },
+             {
+              "value": "2",
+              "text": "92-95 (2)"
+             },
+             {
+              "value": "3",
+              "text": "< 92 (3)"
+             }
+            ]
+           },
+           {
+            "name": "column9",
+            "title": "Oksigen",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Normal (0)"
+             },
+             {
+              "value": "3",
+              "text": "Abnormal (3)"
+             }
+            ]
+           },
+           {
+            "name": "column10",
+            "title": "Pengeluaran Lochea",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Normal (0)"
+             },
+             {
+              "value": "3",
+              "text": "Abnormal (3)"
+             }
+            ]
+           },
+           {
+            "name": "column11",
+            "title": "Protein Urine",
+            "cellType": "text"
+           },
+           {
+            "name": "column12",
+            "title": "Total EWS",
+            "cellType": "expression",
+            "expression": "{row.column2}+{row.column3}+{row.column4}+{row.column5}+{row.column6}+{row.column7}+{row.column8}+{row.column9}+{row.column10}"
+           },
+           {
+            "name": "column13",
+            "title": "Paraf",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column14",
+            "title": "Nama",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1
+       },
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<table width=\"100%\" id=\"data\" border=\"1\">\n    <tr>\n        <td>SKOR</td>\n        <td>Monitoring Frekuensi</td>\n        <td>Petugas</td>\n        <td>Respon klinis</td>\n    </tr>\n    <tr>\n        <td>1 s/d 4</td>\n        <td>4 jam</td>\n        <td>bidan / perawat jaga, dokter jaga</td>\n        <td>1. meningkatkan frekuensi monitoring jika ada perubahan kondisi pasien \n            <br>2. jika perlu menghubungi dokter jaga jika pasien mengalami pre eklampsia(sakit kepala, pandangan kabur, nyeri perut)\n            <br>3. tingkat pengawasan\n        </td>\n    </tr>\n    <tr>\n        <td>4 s/d 6 </td>\n        <td>1 jam</td>\n        <td>bidan / perawat jaga, dokter jaga, Dokter Sp.OG</td>\n        <td>1. lapor bidan / perawat jaga\n            <br>2. bidan / perawat segera monitoring ulang pasien\n            <br>3. menghubungi dokter spesialis kandungan dan segera konsultasikan\n            <br>4. meningkatkan frekuensi monitoring, jika pasien mengalami pre eklampsia (sakir kepala, pandangan kabur, nyeri perut)\n            <br>5. tingkat pengawasan\n        </td>\n    </tr>\n    <tr>\n        <td>7+ </td>\n        <td>Berlanjutan </td>\n        <td>Panggilan darurat </td>\n        <td>1. menghubungi dokter Sp.OG\n            <br>2. menghubungi tim emergency\n            <br>3. melanjutkan TTV secara berkelanjutan\n            <br>4. mempertimbangkan pemindahan ke ruangan ICU\n           \n        </td>\n    </tr>\n</table>\n"
+       }
+      ]
+     }
+    ]
+   }

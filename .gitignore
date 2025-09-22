@@ -1,0 +1,6 @@
+/application/config/database.php
+/application/logs/*
+/application/libraries/Vclaim.php
+/application/config/hooks.php
+!/application/logs/.gitkeep
+.venv

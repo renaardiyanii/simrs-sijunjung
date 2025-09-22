@@ -1,0 +1,269 @@
+{
+    "title": "LAPORAN ECHOCARDIOGRAPHY",
+    "description": "(ECHOCARDIOGRAPHY)",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Tanggal/Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "multipletext",
+          "name": "question7",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "placeHolder": "mmHg",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "placeHolder": "x/i",
+            "title": "HR"
+           },
+           {
+            "name": "text3",
+            "placeHolder": "kg",
+            "title": "BB"
+           },
+           {
+            "name": "text4",
+            "placeHolder": "cm",
+            "title": "TB"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "comment",
+          "name": "diagnosis",
+          "title": "Diagnosis",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "obat",
+          "title": "Pengobatan",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question8",
+          "title": "Aorta",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "root",
+            "placeHolder": "20-37 mm",
+            "title": "Root diam"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question9",
+          "title": "Atrium Kiri",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "dimension",
+            "placeHolder": "15-40 mm",
+            "title": "Dimension"
+           },
+           {
+            "name": "la",
+            "placeHolder": "< 1,33",
+            "title": "LA/Ao Ratio"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question10",
+          "title": "Ventrikel kanan",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "placeHolder": "< 30 mm",
+            "title": "Dimension"
+           },
+           {
+            "name": "text2",
+            "placeHolder": "< 3 cm2",
+            "title": "M.V.A"
+           },
+           {
+            "name": "text3",
+            "placeHolder": "> 16 mm",
+            "title": "TAPSE"
+           },
+           {
+            "name": "text4",
+            "title": "E/A"
+           },
+           {
+            "name": "text5",
+            "title": "E/e"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question11",
+          "title": "Katup",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "K. Mitral"
+           },
+           {
+            "name": "text2",
+            "title": "K. Trikuspid"
+           }
+          ]
+         }
+        ],
+        "title": "Pengukuran / Measurement"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question12",
+          "title": "Ventrikel Kiri",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "placeHolder": "35 - 52 mm",
+            "title": "EDD"
+           },
+           {
+            "name": "text2",
+            "placeHolder": "26 - 36 mm",
+            "title": "ESD"
+           },
+           {
+            "name": "text3",
+            "placeHolder": "7 - 11 mm",
+            "title": "IVS Diastole"
+           },
+           {
+            "name": "text4",
+            "title": "IVS Systole"
+           },
+           {
+            "name": "text5",
+            "title": "EF"
+           },
+           {
+            "name": "text6",
+            "placeHolder": "7 - 11 mm",
+            "title": "PW Diastole"
+           },
+           {
+            "name": "text7",
+            "title": "PW Systole"
+           },
+           {
+            "name": "text8",
+            "placeHolder": "< 10 mm",
+            "title": "EPSS"
+           },
+           {
+            "name": "text9",
+            "title": "K.Aorta"
+           },
+           {
+            "name": "text10",
+            "title": "K.pulmonal"
+           }
+          ]
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "question2",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question4",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question3",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "LV Wall Motion / Gerakan Dinding Jantung"
+       },
+       {
+        "type": "radiogroup",
+        "name": "question13",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "normokinetik"
+         },
+         {
+          "value": "item2",
+          "text": "hipokinetik"
+         },
+         {
+          "value": "item3",
+          "text": "akinetik"
+         },
+         {
+          "value": "item4",
+          "text": "diskinetik"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "comment",
+        "name": "question5",
+        "title": "Kesimpulan / Conclusion",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question6",
+        "title": "Saran / Recommendation",
+        "hideNumber": true
+       }
+      ]
+     }
+    ]
+   }

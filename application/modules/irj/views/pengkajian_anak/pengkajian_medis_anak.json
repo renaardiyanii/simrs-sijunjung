@@ -1,0 +1,146 @@
+{
+    "title": "PENGKAJIAN MEDIS ANAK",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "a. Keluhan utama",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "b. Riwayat penyakit sekarang",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question4",
+          "title": "c. Riwayat penyakit dahulu",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hipertensi",
+            "text": "hipertensi"
+           },
+           {
+            "value": "diabetes",
+            "text": "diabetes"
+           },
+           {
+            "value": "jantung",
+            "text": "jantung"
+           },
+           {
+            "value": "stroke",
+            "text": "stroke"
+           },
+           {
+            "value": "ginjal",
+            "text": "ginjal"
+           },
+           {
+            "value": "asma",
+            "text": "asma"
+           },
+           {
+            "value": "kejang",
+            "text": "kejang"
+           },
+           {
+            "value": "hati",
+            "text": "hati"
+           },
+           {
+            "value": "kanker",
+            "text": "kanker"
+           },
+           {
+            "value": "tb",
+            "text": "TB"
+           },
+           {
+            "value": "glaukoma",
+            "text": "glaukoma"
+           },
+           {
+            "value": "pms",
+            "text": "PMS"
+           },
+           {
+            "value": "perdarahan",
+            "text": "perdarahan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 5
+         }
+        ],
+        "title": "1. ANAMNESIS"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question5",
+          "title": "a. Tanda Vital",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question6",
+          "title": "b. status gizi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question7",
+          "title": "c. pemeriksaan umum",
+          "hideNumber": true
+         }
+        ],
+        "title": "2. PEMERIKSAAN FISIK"
+       }
+      ]
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question8",
+          "title": "3. PEMERIKSAAN PENUNJANG",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question9",
+          "title": "4. DIAGNOSA",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question10",
+          "title": "5. TATALAKSANA / TERAPI",
+          "hideNumber": true
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,926 @@
+{
+    "title": "FORMULIR TRIASE",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "rating",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "rateValues": [
+         {
+          "value": "merah",
+          "text": "Merah"
+         },
+         {
+          "value": "kuning",
+          "text": "Kuning"
+         },
+         {
+          "value": "hijau",
+          "text": "Hijau"
+         },
+         {
+          "value": "hitam",
+          "text": "Hitam"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "cara_datang",
+          "title": "Cara datang",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "sendiri",
+            "text": "Sendiri"
+           },
+           {
+            "value": "ambulance",
+            "text": "Ambulance"
+           },
+           {
+            "value": "diantar_polisi",
+            "text": "Diantar polisi"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lain lain",
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "asruk",
+          "title": "Asal rujukan",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "doa",
+          "title": "DOA",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak_nafas",
+            "text": "Tidak ada nafas spontan / bunyi nafas"
+           },
+           {
+            "value": "reflek_kornea",
+            "text": "Reflek kornea"
+           },
+           {
+            "value": "tida_ada_nadi",
+            "text": "Tidak ada nadi/Bunyi jantung"
+           },
+           {
+            "value": "dolls_eys",
+            "text": "Dools eyes tidak bergerak"
+           },
+           {
+            "value": "reflek_cahaya",
+            "text": "Reflek cahaya tidak ada"
+           },
+           {
+            "value": "ekg_datar",
+            "text": "EKG Datar"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lain lain",
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "jam",
+          "title": "Jam datang :",
+          "hideNumber": true,
+          "inputType": "time"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "jalan_nafas",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "skala1",
+            "title": "SKALA TRIASE 1 (0 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "sumbatan",
+              "text": "Sumbatan / risiko sumbatan"
+             }
+            ]
+           },
+           {
+            "name": "skala2",
+            "title": "SKALA TRIASE 2 (10 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "bebas",
+              "text": "Bebas / Ancaman"
+             }
+            ]
+           },
+           {
+            "name": "skala3",
+            "title": "SKALA TRIASE 3 ( 30 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "bebas",
+              "text": "Bebas"
+             }
+            ]
+           },
+           {
+            "name": "skala4",
+            "title": "SKALA TRIASE 4 (60 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "bebas",
+              "text": "Bebas"
+             }
+            ]
+           },
+           {
+            "name": "skala5",
+            "title": "SKALA TRIASE 5 (120 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "bebas",
+              "text": "Bebas"
+             }
+            ]
+           },
+           {
+            "name": "tanda_vital",
+            "title": "Tanda Vital",
+            "cellType": "comment",
+            "placeHolder": "mmHg"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "jalan_nafas",
+            "text": "JALAN NAFAS"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "pernafasan",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "skala1",
+            "title": "SKALA TRIASE 1 (0 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "henti",
+              "text": "Henti / Ancaman henti nafas"
+             },
+             {
+              "value": "bradipnea",
+              "text": "Bradipnea (<10)"
+             },
+             {
+              "value": "distres",
+              "text": "Distres  / Ekstrim"
+             },
+             {
+              "value": "sianosis",
+              "text": "Sianosis / hipoventilasi"
+             }
+            ]
+           },
+           {
+            "name": "skala2",
+            "title": "SKALA TRIASE 2 (10 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "takipnea",
+              "text": "Takipnea"
+             },
+             {
+              "value": "mengi",
+              "text": "Mengi"
+             },
+             {
+              "value": "distres",
+              "text": "Distres nafas berat"
+             }
+            ]
+           },
+           {
+            "name": "skala3",
+            "title": "SKALA TRIASE 3 ( 30 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "mengi",
+              "text": "Mengi / sesak nafas sedang"
+             },
+             {
+              "value": "saturas",
+              "text": "Saturasi 02 (90-95%)"
+             }
+            ]
+           },
+           {
+            "name": "skala4",
+            "title": "SKALA TRIASE 4 (60 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "rr",
+              "text": "RR normal"
+             },
+             {
+              "value": "aspirasi",
+              "text": "Aspirasi tanpa distres nafaas"
+             },
+             {
+              "value": "cedera",
+              "text": "Cedera dada tanpa distres nafas"
+             },
+             {
+              "value": "sulit_menelan",
+              "text": "Sulit menelan tanpa distres nafas"
+             }
+            ]
+           },
+           {
+            "name": "skala5",
+            "title": "SKALA TRIASE 5 (120 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "normal",
+              "text": "Normal"
+             }
+            ]
+           },
+           {
+            "name": "tanda_vital",
+            "title": "Tanda Vital",
+            "cellType": "comment",
+            "placeHolder": "suhu, nadi, nafas sa02"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "pernafasan",
+            "text": "PERNAFASAN"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "sirkulasi",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "skala1",
+            "title": "SKALA TRIASE 1 (0 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "henti_jantung",
+              "text": "Henti jantung"
+             },
+             {
+              "value": "nadi",
+              "text": "Nadi tidak teraba"
+             },
+             {
+              "value": "akral_dingin",
+              "text": "Akral dingin"
+             },
+             {
+              "value": "crt",
+              "text": "CRT > 2 Detik"
+             }
+            ]
+           },
+           {
+            "name": "skala2",
+            "title": "SKALA TRIASE 2 (10 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "nadi_lemah",
+              "text": "Nadi lemah"
+             },
+             {
+              "value": "bradikardi",
+              "text": "Bradikardi / <50"
+             },
+             {
+              "value": "takikardi",
+              "text": "Takikardi / >150"
+             },
+             {
+              "value": "pucat",
+              "text": "Pucat / Lembab"
+             }
+            ]
+           },
+           {
+            "name": "skala3",
+            "title": "SKALA TRIASE 3 ( 30 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "nadi_kuat",
+              "text": "Nadi kuat"
+             },
+             {
+              "value": "takikardia",
+              "text": "Takikardia"
+             },
+             {
+              "value": "sistol",
+              "text": "Sistol > 160"
+             },
+             {
+              "value": "diastol",
+              "text": "Diastol > 100"
+             },
+             {
+              "value": "perdarahan",
+              "text": "Perdarahan"
+             }
+            ]
+           },
+           {
+            "name": "skala4",
+            "title": "SKALA TRIASE 4 (60 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "nadi_kuat",
+              "text": "Nadi kuat"
+             },
+             {
+              "value": "frekuensi",
+              "text": "frekuensi nadi normal"
+             },
+             {
+              "value": "sistol_normal",
+              "text": "Sistol normal"
+             },
+             {
+              "value": "diastol_normal",
+              "text": "Diastol normal"
+             }
+            ]
+           },
+           {
+            "name": "skala5",
+            "title": "SKALA TRIASE 5 (120 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "normal",
+              "text": "Normal"
+             }
+            ]
+           },
+           {
+            "name": "tanda_vital",
+            "title": "Tanda Vital",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "ada",
+              "text": "Ada"
+             },
+             {
+              "value": "tidak_ada",
+              "text": "Tida ada"
+             },
+             {
+              "value": "tidak_tahu",
+              "text": "Tidak tahu"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "sirkulasi",
+            "text": "SIRKULASI"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "disabilitas",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "skala1",
+            "title": "SKALA TRIASE 1 (0 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "gcs",
+              "text": "GCS < 8 (3/4/5/6/7/8/)"
+             },
+             {
+              "value": "tidak_ada",
+              "text": "Tidak ada respon hanya atas nyeri"
+             },
+             {
+              "value": "kejang",
+              "text": "Kejang"
+             },
+             {
+              "value": "amuk",
+              "text": "Amuk / gangguan tingkah laku berat"
+             }
+            ]
+           },
+           {
+            "name": "skala2",
+            "title": "SKALA TRIASE 2 (10 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "gcs",
+              "text": "GCS 9-12 (9/10/11/12)"
+             },
+             {
+              "value": "gelisah",
+              "text": "Gelisah"
+             },
+             {
+              "value": "nyeri_dada",
+              "text": "Nyeri dada khas"
+             },
+             {
+              "value": "hermi",
+              "text": "Hermi paresis akut"
+             },
+             {
+              "value": "disfasia",
+              "text": "Disfasia berat"
+             },
+             {
+              "value": "nyer_hebat",
+              "text": "Nyeri hebat (9/10)"
+             },
+             {
+              "value": "nyeri_mengarah",
+              "text": "Nyeri mengarah PE/AAA/KET"
+             },
+             {
+              "value": "agresif",
+              "text": "Agresif / ancaman"
+             },
+             {
+              "value": "perlu_hebat",
+              "text": "Perlu hebat"
+             },
+             {
+              "value": "agitas_berat",
+              "text": "Agitasi berat"
+             }
+            ]
+           },
+           {
+            "name": "skala3",
+            "title": "SKALA TRIASE 3 ( 30 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "gcs",
+              "text": "GCS > 12 (13/14)"
+             },
+             {
+              "value": "kejang",
+              "text": "Kejang GCS 15"
+             },
+             {
+              "value": "cedera_kepala",
+              "text": "Cedera kepala, pernah tidak sadar"
+             },
+             {
+              "value": "nyeri_berat",
+              "text": "Nyeri berat (7/8)"
+             },
+             {
+              "value": "nyeri_dada",
+              "text": "Nyeri dada non kadiak sedang"
+             },
+             {
+              "value": "nyeri_abdomen",
+              "text": "Nyeri abdomen sedang tanpa resiko"
+             },
+             {
+              "value": "nyeri_usia",
+              "text": "Nyeri usia >65 tahun"
+             },
+             {
+              "value": "sensasi",
+              "text": "Sensasi berubah"
+             }
+            ]
+           },
+           {
+            "name": "skala4",
+            "title": "SKALA TRIASE 4 (60 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "gcs",
+              "text": "GCS 15"
+             },
+             {
+              "value": "cedera_kepala",
+              "text": "Cedera Kepala, tanpa sadar, tidak sadar"
+             },
+             {
+              "value": "nyeri_sedang",
+              "text": "Nyeri sedang (4/5/6) dengan risiko"
+             },
+             {
+              "value": "nyeri_perut",
+              "text": "Nyeri perut tidak khas"
+             },
+             {
+              "value": "psikiatri",
+              "text": "psikiatri ringan / dalam observasi"
+             }
+            ]
+           },
+           {
+            "name": "skala5",
+            "title": "SKALA TRIASE 5 (120 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "gcs",
+              "text": "GCS 15"
+             }
+            ]
+           },
+           {
+            "name": "tanda_vital",
+            "title": "Tanda Vital",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "batuk",
+              "text": "Batuk lebih dari 2 minggu dengan demam dan sesak"
+             },
+             {
+              "value": "rujukan",
+              "text": "Rujukan dengan suspek/konfirmasi airbone disease"
+             },
+             {
+              "value": "perjalanan_luar",
+              "text": "Perjalanan luar negri"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "disabilitas",
+            "text": "DISABILITAS"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "lainnya",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "skala1",
+            "title": "SKALA TRIASE 1 (0 MENIT)",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "skala2",
+            "title": "SKALA TRIASE 2 (10 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "gd",
+              "text": "GD <36 mg/dl/<20mmol /I"
+             },
+             {
+              "value": "demam",
+              "text": "Demam dengan letargi"
+             },
+             {
+              "value": "asam",
+              "text": "Asam / basa pada mata"
+             },
+             {
+              "value": "trauma",
+              "text": "Trauma multiple major"
+             },
+             {
+              "value": "trauma_lokal",
+              "text": "Trauma lokal major / amputasi"
+             },
+             {
+              "value": "riwayat_resiko",
+              "text": "Riwayat resiko tinggi setelah sedaktif"
+             },
+             {
+              "value": "sengatan",
+              "text": "Sengatan / gigitan binatang berbahaya"
+             }
+            ]
+           },
+           {
+            "name": "skala3",
+            "title": "SKALA TRIASE 3 ( 30 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "gd",
+              "text": "GD > 288 mg/dI atau >16mmol/I"
+             },
+             {
+              "value": "immunodepresan",
+              "text": "immunodepresan + demam"
+             },
+             {
+              "value": "muntah",
+              "text": "Muntah persiten"
+             },
+             {
+              "value": "dehidrasi",
+              "text": "Dehidrasi"
+             },
+             {
+              "value": "cedera",
+              "text": "Cedera sedang / deformitas / laserasi berat / crush"
+             },
+             {
+              "value": "trauma_sedang",
+              "text": "Trauma sedang riwayat resiko tinggi"
+             },
+             {
+              "value": "neonatus_stabil",
+              "text": "Neonatus stabil"
+             },
+             {
+              "value": "anak_risiko",
+              "text": "Anak dengan risiko"
+             },
+             {
+              "value": "psikiatri",
+              "text": "Psikiatri sedang"
+             }
+            ]
+           },
+           {
+            "name": "skala4",
+            "title": "SKALA TRIASE 4 (60 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "muntah",
+              "text": "Muntah mencret tanpa dehidrasi"
+             },
+             {
+              "value": "inflamasi",
+              "text": "Inflamasi / benda asing mata dengan vinus normal"
+             },
+             {
+              "value": "sprain",
+              "text": "Sprain faktur / laserasi tanpa nyeri ringan TTV"
+             },
+             {
+              "value": "cast",
+              "text": "Cast ketat, neurovaskuler normal"
+             }
+            ]
+           },
+           {
+            "name": "skala5",
+            "title": "SKALA TRIASE 5 (120 MENIT)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "kronis",
+              "text": "Kronis"
+             },
+             {
+              "value": "minor",
+              "text": "Minor"
+             },
+             {
+              "value": "administratif",
+              "text": "Administratif"
+             }
+            ]
+           },
+           {
+            "name": "tanda_vital",
+            "title": "Tanda Vital",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "marah",
+              "text": "Marah"
+             },
+             {
+              "value": "takut",
+              "text": "Takut"
+             },
+             {
+              "value": "cemas",
+              "text": "cemas"
+             },
+             {
+              "value": "depresi",
+              "text": "depresi"
+             },
+             {
+              "value": "gelisah",
+              "text": "gelisah"
+             },
+             {
+              "value": "tidak_masalah",
+              "text": "Tidak masalah"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Lainnya"
+           }
+          ],
+          "rows": [
+           {
+            "value": "lainya",
+            "text": "Lain - lain"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "intervensi",
+        "title": "Intervensi dan Resposnya",
+        "description": "tindakan / medikamentosa",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "jalan_nafas1",
+          "title": "Jalan Nafas"
+         },
+         {
+          "name": "pernafasan1",
+          "title": "Pernafasan"
+         },
+         {
+          "name": "sirkulasi1",
+          "title": "Sirkulasi"
+         },
+         {
+          "name": "disabilitas1",
+          "title": "Disabilitas"
+         },
+         {
+          "name": "lainya1",
+          "title": "Lain lain"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "ditreskan",
+        "title": "Diteruskan",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "resusitas",
+          "text": "Resusitasi"
+         },
+         {
+          "value": "medikal",
+          "text": "Medikal"
+         },
+         {
+          "value": "anak",
+          "text": "Anak"
+         },
+         {
+          "value": "surgikal",
+          "text": "Surgikal"
+         },
+         {
+          "value": "obgin",
+          "text": "Obgin"
+         },
+         {
+          "value": "forensik",
+          "text": "Forensik"
+         }
+        ],
+        "colCount": 5
+       },
+       {
+        "type": "text",
+        "name": "serah",
+        "title": "Serah terima jam",
+        "hideNumber": true,
+        "inputType": "time"
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd1",
+        "title": "Dokter TRIASE",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd2",
+        "startWithNewLine": false,
+        "title": "Perawat TRIASE",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd3",
+        "startWithNewLine": false,
+        "title": "DPJP",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "nm_ttd",
+        "titleLocation": "hidden",
+        "size": 50
+       },
+       {
+        "type": "text",
+        "name": "question2",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "size": 50
+       },
+       {
+        "type": "text",
+        "name": "question1",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "size": 50
+       }
+      ]
+     }
+    ]
+   }

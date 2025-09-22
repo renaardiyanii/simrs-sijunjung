@@ -1,0 +1,1307 @@
+<script src="<?= base_url('assets/js/barcode/barcode.js'); ?>"></script>
+<?php 
+// var_dump($data_pasien_irj);
+ 
+ $data_formjson = isset($telaah_obat[0]->formjson)?json_decode($telaah_obat[0]->formjson):'';
+//  var_dump($data_formjson);
+// var_dump($resep_pasien);
+// var_dump($data_pasien);
+// var_dump($pemeriksaan_fisik);
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+       #div1 {
+           position: relative;
+       }
+   
+       .header-parent {
+           display: flex;
+           justify-content: space-between;
+   
+       }
+   
+       .right {
+           display: flex;
+           align-items: flex-end;
+           flex-direction: column;
+           /* font-size: 12px; */
+       }
+       .text_sub_judul{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+       }
+       .text_body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+       }
+
+       label{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;  
+       }
+       input{
+        padding: 0;
+        margin:0;
+        margin-right:2px;
+        margin-left:2px;
+        vertical-align: bottom;
+        position: relative;
+        top: -1px;
+       }
+       .text_isi{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+        font-weight: bold;
+       }
+       .text_judul{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14pt;
+        font-weight: bold;
+        text-decoration: underline;
+       }   
+       .patient-info {
+           border: 1px solid black;
+           padding: 1em;
+           display: flex;
+           border-radius: 10px;
+       }
+   
+       #date {
+           display: flex;
+           justify-content: space-between;
+       }
+   
+       .nomr {
+           font-weight: bold;
+           display: inline;
+   
+       }
+       .margin-left-3px{
+           margin-left:3px;
+       }
+
+       .margin-right-3px{
+           margin-right:3px;
+       }
+   
+       .kotak {
+           float: left;
+           text-align:center;
+           /* margin-top:10px; */
+           width: 20px;
+           height: 25px;
+           /* margin-left:px; */
+
+           border: 1px solid black;
+       }
+
+       .tanpa-kotak {
+           border: 1px solid black;
+           padding: 5px;
+       }
+       .kotakin {
+           /* border: 1px solid black; */
+           padding: 5px;
+       }
+       
+       .judul {
+           font-weight: bold;
+           /* border: 1px solid black; */
+           /* width: 400px; */
+           /* height: 50px; */
+           padding:0px 10px;
+           font-size: 12px;
+           text-align: center;
+           
+       }
+   
+       .content {
+           border: 1px solid black;
+           padding-left: 15px;
+           padding-top: 15px;
+           padding-bottom: 15px;
+           /* font-size: 6pt!important; */
+       }
+   
+       .ttd {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: flex-end;
+           margin-right: 50px;
+           font-size: 11px;
+       }
+   
+       #childttd {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           /* font-size: 11px; */
+       }
+       .center{
+           width:100%;
+           margin:auto;
+           text-align: center;
+           /* background-color: aquamarine; */
+       }
+       td {line-height: 1; vertical-align:top;font-size:small;}
+       header td {line-height: 1.5; vertical-align:top;font-size:small;}
+       .padding-fix-10mm {padding-top:0mm; padding-left: 10mm;padding-right: 10mm;}
+
+       .table tr td{
+           font-size:8.5pt!important;
+       }
+       tr.border_bottom td{
+           border-bottom:1px solid black;
+       }
+       .hr{
+           height:2px;
+           background-color:black;
+       }
+       .row{
+           display:flex;
+       }
+       .row .text-body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+       }
+       .row .text-sub_judul{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+       }
+       table{
+        border-collapse: collapse;
+       }
+       .table_nama{
+            border-collapse: separate;
+            border-radius:8px;
+            border:2px solid black;
+            background:#fff;
+       }
+       table .side_table td{
+        line-height: 1.5; vertical-align:center;
+       }
+   </style>
+<body>
+    <header>
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 10%;">
+                    <img src="<?= base_url("assets/img/$logo_header"); ?>" alt="img" height="80px" width="100px" style="padding-right:15px;">
+                </td>
+                <td style="width: 40%;font-size:18px;font-weight:bold;" align="left">
+                    <p> RS. OTAK DR. Drs. M.HATTA</p>
+                    <p> BUKITTINGGI</p>
+                </td>
+                <td style="width: 50%;">
+                    <label for="" style="font-weight:bold;font-size:12px;text-align: right;display:block;margin-right:5px"><?= isset($kode_document)?$kode_document!=""?$kode_document->result()[0]->kode_rm:"":""; ?></label>
+                    <table class="table_nama" style="width: 100%;">
+                        <tr>
+                            <td width="33%">Nama</td>
+                            <td width="2%">:</td>
+                            <td width="35%"><?php echo $data_pasien[0]->nama??""; ?></td>
+                            <td width="30%"></td>
+                        </tr>
+                        <tr>
+                            <td>NIK</td>
+                            <td>:</td>
+                            <td><?php echo $data_pasien[0]->no_identitas??""; ?></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>No. RM</td>
+                            <td>:</td>
+                            <td><?php echo $data_pasien[0]->no_cm??""; ?></td>
+                            <td>(<?php echo $data_pasien[0]->sex??""; ?>)</td>
+                        </tr>
+                        <tr>
+                            <td>Tgl Lahir</td>
+                            <td>:</td>
+                            <td><?php echo $data_pasien[0]->tgl??"";//substr($data_pasien[0]->tgl_lahir,0,10); ?></td>
+                            <td>
+                            <barcode code="<?= $data_pasien[0]->no_cm??""; ?>" type="EAN13" height="0.5"/>                            
+                            <!-- <svg class="barcode"
+                                jsbarcode-format="code128"
+                                jsbarcode-height="30"
+                                jsbarcode-width="1"
+                                jsbarcode-displayValue="false"
+                                jsbarcode-value="<?= $data_pasien[0]->no_cm??""; ?>"
+                                jsbarcode-textmargin="0"
+                                jsbarcode-margin="0"
+                                jsbarcode-marginTop="5"
+                                jsbarcode-marginRight="5"
+                                jsbarcode-fontoptions="bold">
+                                </svg>
+
+                            <script>JsBarcode(".barcode").init();</script> -->
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <hr>
+    <br>
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 70%;">
+                <span class="text_isi"><?= isset($resep_pasien[0]->bed)?$resep_pasien[0]->bed:''; ?></span><br><br>
+
+                <?php 
+                if($resep_pasien){
+
+                
+                foreach($resep_pasien as $data){
+                ?>
+                <table border="1" width="100%">
+                    <tr>
+                        <td width="40%">
+                            <table borde="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <span class="text_body">Jenis : </span><span class="text_isi"><?= ($data->racikan)?'racikan':'Non-Racikan'; ?></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="text_isi"><?php
+                                            echo ($data->nama_obat)?$data->nama_obat:'-'; 
+                                            if ($data->racikan == '1') {
+                                                foreach ($data_tindakan_racik as $row1) {
+                                                    if ($data->id_resep_pasien == $row1->id_resep_pasien) {
+                                                        echo '<br>- ' . $row1->nm_obat . ' Dosis '.$row1->dosis.' mg (' . $row1->qty . ')';
+                                                    }
+                                                }
+                                            }
+                                        ?></span> 
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="text_body">Jumlah : </span><span class="text_isi"><?= ($data->qty)?$data->qty:'0'; ?></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="60%">
+                            <p></p>
+                            <table border="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <table border="0" width="100%" style="margin:2px;">
+                                            <tr>
+                                                <td>
+                                                    <span class="text_isi">Aturan Pakai</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="text_body"><?= ($data->signa)?$data->signa:'-'; ?></span>
+                                                </td>
+                                            </tr>
+                                        </table>                                           
+                                    </td>
+                                </tr>
+                            </table>
+                            <p></p>
+                            <table border="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <table border="0" width="100%" style="margin:2px;">
+                                            <tr>
+                                                <td>
+                                                    <span class="text_isi">Keterangan:</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="text_body"></span>
+                                                </td>
+                                            </tr>
+                                        </table>                                           
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <?php 
+                }
+                }else{
+                ?>
+                <table border="1" width="100%">
+                    <tr>
+                        <td width="40%">
+                            <table borde="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <span class="text_body">Jenis : </span><span class="text_isi">-</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="text_isi">-</span> 
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="text_body">Jumlah : </span><span class="text_isi">-</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="60%">
+                            <p></p>
+                            <table border="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <table border="0" width="100%" style="margin:2px;">
+                                            <tr>
+                                                <td>
+                                                    <span class="text_isi">Aturan Pakai</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="text_body">-</span>
+                                                </td>
+                                            </tr>
+                                        </table>                                           
+                                    </td>
+                                </tr>
+                            </table>
+                            <p></p>
+                            <table border="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <table border="0" width="100%" style="margin:2px;">
+                                            <tr>
+                                                <td>
+                                                    <span class="text_isi">Keterangan:</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="text_body"></span>
+                                                </td>
+                                            </tr>
+                                        </table>                                           
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <?php
+                }
+                ?>
+
+                <table border="0" width="100%">
+                <tr>
+                <td ></td>
+                <td width="60%"><br>
+                <label><b><span class="text_body"> Dokter Penanggung Jawab Pasien</b></span></label><br>
+                <?php 
+                if(isset($resep_pasien[0]->ttd)){
+                ?>
+                    <label><span class="text_body"> <img width="120px" src="<?= $resep_pasien[0]->ttd; ?>" alt=""></span></label><br>
+                    <label><b><span class="text_body"> <?= $resep_pasien[0]->nm_dokter; ?><b></span></label>
+                    <label><b><span class="text_body"> No.Sip<?= $resep_pasien[0]->nm_dokter; ?><b></span></label>
+                <?php }else{ ?>
+                    <br><br>
+                <?php } ?>
+                
+                </td>
+                </tr>
+                
+                </table>
+                
+            </td>
+            <td style="width: 30%;">
+                <table border="0" width="100%">
+                    <tr>
+                        <td>
+                            <table border="0" width="100%">
+                                <tr>
+                                    <td><span class="text_body">Tanggal : <?= ($resep_pasien)?date('d-m-Y',strtotime($resep_pasien[0]->tgl_kunjungan)):'-'; ?></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="text_body">Dokter : <?= ($resep_pasien)?$resep_pasien[0]->nm_dokter?$resep_pasien[0]->nm_dokter:'-':'-'; ?></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="text_body">SIP : <?= isset(    $sip_dokter)?$sip_dokter->nipeg:'-'; ?></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="text_body">Riwayat Alergi Obat : <?= ($pemeriksaan_fisik)?$pemeriksaan_fisik[0]->reaksi_alergi?$pemeriksaan_fisik[0]->reaksi_alergi:'Tidak Ada':'-'; ?></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr><td><hr color="black"></td></tr>
+                    <tr>
+                        <td>
+                            <table border="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <table class="side_table" border="0" width="100%" >
+                                            <thead>
+                                                <tr class="border_bottom">
+                                                    <td width="60%"><span class="text_isi">Telaah Resep</span></td>
+                                                    <td width="20%"><span class="text_isi">Ya</span></td>
+                                                    <td width="20%"><span class="text_isi">Tidak</span></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Tulisan jelas</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->tulisan_jelas)?($data_formjson->telaah_resep->tulisan_jelas == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->telaah_resep->tulisan_jelas)?($data_formjson->telaah_resep->tulisan_jelas == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Benar nama obat</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->benar_nama_obat)?($data_formjson->telaah_resep->benar_nama_obat == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->benar_nama_obat)?($data_formjson->telaah_resep->benar_nama_obat == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Benar kekuatan obat</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->benar_kekuatan_obat)?($data_formjson->telaah_resep->benar_kekuatan_obat == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->telaah_resep->benar_kekuatan_obat)?($data_formjson->telaah_resep->benar_kekuatan_obat == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Benar frekuensi</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->benar_frekuensi)?($data_formjson->telaah_resep->benar_frekuensi == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->telaah_resep->benar_frekuensi)?($data_formjson->telaah_resep->benar_frekuensi == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Pemberian</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->pemberian)?($data_formjson->telaah_resep->pemberian == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->telaah_resep->pemberian)?($data_formjson->telaah_resep->pemberian == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Benar rute</span></td>
+                                                    <td><input type="radio"  value="1_y"  <?php echo isset($data_formjson->telaah_resep->benar_rute)?($data_formjson->telaah_resep->benar_rute == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t"  <?php echo isset($data_formjson->telaah_resep->benar_rute)?($data_formjson->telaah_resep->benar_rute == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Ada duplikasi</span></td>
+                                                    <td><input type="radio"  value="1_y"   <?php echo isset($data_formjson->telaah_resep->ada_duplikasi)?($data_formjson->telaah_resep->ada_duplikasi == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t"  <?php echo isset($data_formjson->telaah_resep->ada_duplikasi)?($data_formjson->telaah_resep->ada_duplikasi == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Ada interaksi</span></td>
+                                                    <td><input type="radio"  value="1_y"  <?php echo isset($data_formjson->telaah_resep->ada_interaksi)?($data_formjson->telaah_resep->ada_interaksi == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t"  <?php echo isset($data_formjson->telaah_resep->ada_interaksi)?($data_formjson->telaah_resep->ada_interaksi == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Item > 7</span></td>
+                                                    <td><input type="radio"  value="1_y"  <?php echo isset($data_formjson->telaah_resep->item)?($data_formjson->telaah_resep->item == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t"  <?php echo isset($data_formjson->telaah_resep->item)?($data_formjson->telaah_resep->item == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="side_table" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <span class="text_body"> Apoteker/Ass. Apt</span>
+                                    </td>
+                                    <td>
+                                        <span class="text_body"> Disetujui Dokter</span>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                <?php 
+                                if(isset($telaah_obat[0]->ttd_apoteker)){
+                                ?>
+                                    <td><img width="120px" src="<?= $telaah_obat[0]->ttd_apoteker; ?>" alt=""></td>
+                                    
+                                <?php }else{ ?>
+                                    <td><br><br></td>
+                                <?php } ?>
+                                <?php
+                                if(isset($resep_pasien[0]->ttd)){
+                                ?>
+                                    <td><img width="120px" src="<?= $resep_pasien[0]->ttd; ?>" alt=""></td>
+
+                                <?php } ?>
+                                </tr>
+
+                                
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="side_table" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <span class="text_body"> Perubahan Resep</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <table border="1" width="100%">
+                            <tr>
+                                <td>
+                                    <table class="side_table" border="0" width="100%" >
+                                        <thead>
+                                            <tr class="border_bottom">
+                                                <td width="50%"><span class="text_isi">Tertulis</span></td>
+                                                <td width="50%"><span class="text_isi">Menjadi</span></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <table class="side_table" border="0" width="100%" >
+                                            <thead>
+                                                <tr class="border_bottom">
+                                                    <td width="70%"><span class="text_isi">Verif Penyerahan Obat</span></td>
+                                                    <td width="15%"><span class="text_isi">Ya</span></td>
+                                                    <td width="15%"><span class="text_isi">Tidak</span></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Nama Pasien</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->nama_pasien)?($data_formjson->verif_penyerahan_obat->nama_pasien == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->nama_pasien)?($data_formjson->verif_penyerahan_obat->nama_pasien == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Nama Obat</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->nama_obat)?($data_formjson->verif_penyerahan_obat->nama_obat == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->nama_obat)?($data_formjson->verif_penyerahan_obat->nama_obat == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Bentuk Sediaan</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->bentuk_sediaan)?($data_formjson->verif_penyerahan_obat->bentuk_sediaan == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->bentuk_sediaan)?($data_formjson->verif_penyerahan_obat->bentuk_sediaan == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Kekuatan</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->kekuatan)?($data_formjson->verif_penyerahan_obat->kekuatan == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->kekuatan)?($data_formjson->verif_penyerahan_obat->kekuatan == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Rute Pembelian</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->rute_pembelian)?($data_formjson->verif_penyerahan_obat->rute_pembelian == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->rute_pembelian)?($data_formjson->verif_penyerahan_obat->rute_pembelian == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Frek Pembelian</span></td>
+                                                    <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->frek_pembelian)?($data_formjson->verif_penyerahan_obat->frek_pembelian == "ya" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                    <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->frek_pembelian)?($data_formjson->verif_penyerahan_obat->frek_pembelian == "tidak" ? "checked='checked'" : "disabled='disabled'"):'';?>></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <table class="side_table" border="0" width="100%" >
+                                            <thead>
+                                                <tr class="border_bottom">
+                                                    <td width="50%"><span class="text_isi">Kegiatan</span></td>
+                                                    <td width="20%"><span class="text_isi">Jam</span></td>
+                                                    <td width="30%"><span class="text_isi">Status</span></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Terima</span></td>
+                                                    <td><span class="text_isi"></span></td>
+                                                    <td><span class="text_isi"></span></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Harga</span></td>
+                                                    <td><span class="text_isi"></span></td>
+                                                    <td><span class="text_isi"></span></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Racik</span></td>
+                                                    <td><span class="text_isi"></span></td>
+                                                    <td><span class="text_isi"></span></td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td><span class="text_body">Periksa</span></td>
+                                                    <td><span class="text_isi"></span></td>
+                                                    <td><span class="text_isi"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+   <!--<!DOCTYPE html>
+   <html>
+   
+   <head>
+       <title></title>
+   </head>
+    <link href="<?php echo site_url('assets/plugins/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+   <style>
+       #div1 {
+           position: relative;
+       }
+   
+       .header-parent {
+           display: flex;
+           justify-content: space-between;
+   
+       }
+   
+       .right {
+           display: flex;
+           align-items: flex-end;
+           flex-direction: column;
+           /* font-size: 12px; */
+       }
+       .text_sub_judul{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+       }
+       .text_body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+       }
+
+       label{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;  
+       }
+       input{
+        padding: 0;
+        margin:0;
+        margin-right:2px;
+        margin-left:2px;
+        vertical-align: bottom;
+        position: relative;
+        top: -1px;
+       }
+       .text_isi{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+        font-weight: bold;
+       }
+       .text_judul{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14pt;
+        font-weight: bold;
+        text-decoration: underline;
+       }   
+       .patient-info {
+           border: 1px solid black;
+           padding: 1em;
+           display: flex;
+           border-radius: 10px;
+       }
+   
+       #date {
+           display: flex;
+           justify-content: space-between;
+       }
+   
+       .nomr {
+           font-weight: bold;
+           display: inline;
+   
+       }
+       .margin-left-3px{
+           margin-left:3px;
+       }
+
+       .margin-right-3px{
+           margin-right:3px;
+       }
+   
+       .kotak {
+           float: left;
+           text-align:center;
+           /* margin-top:10px; */
+           width: 20px;
+           height: 25px;
+           /* margin-left:px; */
+
+           border: 1px solid black;
+       }
+
+       .tanpa-kotak {
+           border: 1px solid black;
+           padding: 5px;
+       }
+       .kotakin {
+           /* border: 1px solid black; */
+           padding: 5px;
+       }
+       
+       .judul {
+           font-weight: bold;
+           /* border: 1px solid black; */
+           /* width: 400px; */
+           /* height: 50px; */
+           padding:0px 10px;
+           font-size: 12px;
+           text-align: center;
+           
+       }
+   
+       .content {
+           border: 1px solid black;
+           padding-left: 15px;
+           padding-top: 15px;
+           padding-bottom: 15px;
+           /* font-size: 6pt!important; */
+       }
+   
+       .ttd {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: flex-end;
+           margin-right: 50px;
+           font-size: 11px;
+       }
+   
+       #childttd {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           /* font-size: 11px; */
+       }
+       .center{
+           width:100%;
+           margin:auto;
+           text-align: center;
+           /* background-color: aquamarine; */
+       }
+       td {line-height: 1; vertical-align:top;font-size:small;}
+       header td {line-height: 1.5; vertical-align:top;font-size:small;}
+       .padding-fix-10mm {padding-top:0mm; padding-left: 10mm;padding-right: 10mm;}
+
+       .table tr td{
+           font-size:8.5pt!important;
+       }
+       tr.border_bottom td{
+           border-bottom:1px solid black;
+       }
+       .hr{
+           height:2px;
+           background-color:black;
+       }
+       .row{
+           display:flex;
+       }
+       .row .text-body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+       }
+       .row .text-sub_judul{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+       }
+       table{
+        border-collapse: collapse;
+       }
+       .table_nama{
+            border-collapse: separate;
+            border-radius:8px;
+            border:2px solid black;
+            background:#fff;
+       }
+       table .side_table td{
+        line-height: 1.5; vertical-align:center;
+       }
+   </style>
+   <link href="<?php echo base_url('assets/style_print.css'); ?>" rel="stylesheet">
+   <link rel="stylesheet" href="<?= base_url('assets/css/paper.css') ?>">
+   
+   <body class="A4" >
+       <div class="A4 sheet  padding-fix-10mm">
+       <?php $this->load->view('emedrec/header_print') ?>
+<hr>
+        <br>
+        <table border="0" width="100%">
+            <tr>
+                <td width="70%">
+                    <span class="text_isi"><?= isset($resep_pasien[0]->bed)?$resep_pasien[0]->bed:''; ?></span><br><br>
+
+                    <?php 
+                    if($resep_pasien){
+
+                    
+                    foreach($resep_pasien as $data){
+                    ?>
+                    <table border="1" width="100%">
+                        <tr>
+                            <td width="40%">
+                                <table borde="1" width="100%">
+                                    <tr>
+                                        <td>
+                                            <span class="text_body">Jenis : </span><span class="text_isi"><?= ($data->racikan)?'racikan':'Non-Racikan'; ?></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="text_isi"><?php
+                                                echo ($data->nama_obat)?$data->nama_obat:'-'; 
+                                                if ($data->racikan == '1') {
+                                                    foreach ($data_tindakan_racik as $row1) {
+                                                        if ($data->id_resep_pasien == $row1->id_resep_pasien) {
+                                                            echo '<br>- ' . $row1->nm_obat . ' Dosis '.$row1->dosis.' mg (' . $row1->qty . ')';
+                                                        }
+                                                    }
+                                                }
+                                            ?></span> 
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="text_body">Jumlah : </span><span class="text_isi"><?= ($data->qty)?$data->qty:'0'; ?></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="60%">
+                                <p></p>
+                                <table border="1" width="100%">
+                                    <tr>
+                                        <td>
+                                            <table border="0" width="100%" style="margin:2px;">
+                                                <tr>
+                                                    <td>
+                                                        <span class="text_isi">Aturan Pakai</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="text_body"><?= ($data->signa)?$data->signa:'-'; ?></span>
+                                                    </td>
+                                                </tr>
+                                            </table>                                           
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p></p>
+                                <table border="1" width="100%">
+                                    <tr>
+                                        <td>
+                                            <table border="0" width="100%" style="margin:2px;">
+                                                <tr>
+                                                    <td>
+                                                        <span class="text_isi">Keterangan:</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="text_body"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>                                           
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <?php 
+                    }
+                    }else{
+                    ?>
+                    <table border="1" width="100%">
+                        <tr>
+                            <td width="40%">
+                                <table borde="1" width="100%">
+                                    <tr>
+                                        <td>
+                                            <span class="text_body">Jenis : </span><span class="text_isi">-</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="text_isi">-</span> 
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="text_body">Jumlah : </span><span class="text_isi">-</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="60%">
+                                <p></p>
+                                <table border="1" width="100%">
+                                    <tr>
+                                        <td>
+                                            <table border="0" width="100%" style="margin:2px;">
+                                                <tr>
+                                                    <td>
+                                                        <span class="text_isi">Aturan Pakai</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="text_body">-</span>
+                                                    </td>
+                                                </tr>
+                                            </table>                                           
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p></p>
+                                <table border="1" width="100%">
+                                    <tr>
+                                        <td>
+                                            <table border="0" width="100%" style="margin:2px;">
+                                                <tr>
+                                                    <td>
+                                                        <span class="text_isi">Keterangan:</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="text_body"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>                                           
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <?php
+                    }
+                    ?>
+
+                    <table border="0" width="100%">
+                    <tr>
+                    <td ></td>
+                    <td width="60%"><br>
+                    <label><b><span class="text_body"> Dokter Penanggung Jawab Pasien</b></span></label><br>
+                    <?php 
+                    if(isset($resep_pasien[0]->ttd)){
+                    ?>
+                        <label><span class="text_body"> <img width="120px" src="<?= $resep_pasien[0]->ttd; ?>" alt=""></span></label><br>
+                        <label><b><span class="text_body"> <?= $resep_pasien[0]->nm_dokter; ?><b></span></label>
+                        <label><b><span class="text_body"> No.Sip<?= $resep_pasien[0]->nm_dokter; ?><b></span></label>
+                    <?php }else{ ?>
+                        <br><br>
+                    <?php } ?>
+                    
+                    </td>
+                    </tr>
+                    
+                    </table>
+                   
+                </td>
+                <td width="30%">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td>
+                                <table border="0" width="100%">
+                                    <tr>
+                                        <td><span class="text_body">Tanggal : <?= ($resep_pasien)?date('d-m-Y',strtotime($resep_pasien[0]->tgl_kunjungan)):'-'; ?></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text_body">Dokter : <?= ($resep_pasien)?$resep_pasien[0]->nm_dokter?$resep_pasien[0]->nm_dokter:'-':'-'; ?></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="text_body">SIP : <?= isset(    $sip_dokter)?$sip_dokter->nipeg:'-'; ?></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="text_body">Riwayat Alergi Obat : <?= ($pemeriksaan_fisik)?$pemeriksaan_fisik[0]->reaksi_alergi?$pemeriksaan_fisik[0]->reaksi_alergi:'Tidak Ada':'-'; ?></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr><td><hr color="black"></td></tr>
+                        <tr>
+                            <td>
+                                <table border="1" width="100%">
+                                    <tr>
+                                        <td>
+                                            <table class="side_table" border="0" width="100%" >
+                                                <thead>
+                                                    <tr class="border_bottom">
+                                                        <td width="60%"><span class="text_isi">Telaah Resep</span></td>
+                                                        <td width="20%"><span class="text_isi">Ya</span></td>
+                                                        <td width="20%"><span class="text_isi">Tidak</span></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Tulisan jelas</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->tulisan_jelas)?($data_formjson->telaah_resep->tulisan_jelas == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->telaah_resep->tulisan_jelas)?($data_formjson->telaah_resep->tulisan_jelas == "tidak" ? "checked" : "disabled"):'';?>></td>
+
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Benar nama obat</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->benar_nama_obat)?($data_formjson->telaah_resep->benar_nama_obat == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->benar_nama_obat)?($data_formjson->telaah_resep->benar_nama_obat == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Benar kekuatan obat</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->benar_kekuatan_obat)?($data_formjson->telaah_resep->benar_kekuatan_obat == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->telaah_resep->benar_kekuatan_obat)?($data_formjson->telaah_resep->benar_kekuatan_obat == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Benar frekuensi</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->benar_frekuensi)?($data_formjson->telaah_resep->benar_frekuensi == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->telaah_resep->benar_frekuensi)?($data_formjson->telaah_resep->benar_frekuensi == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Pemberian</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->telaah_resep->pemberian)?($data_formjson->telaah_resep->pemberian == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->telaah_resep->pemberian)?($data_formjson->telaah_resep->pemberian == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Benar rute</span></td>
+                                                        <td><input type="radio"  value="1_y"  <?php echo isset($data_formjson->telaah_resep->benar_rute)?($data_formjson->telaah_resep->benar_rute == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t"  <?php echo isset($data_formjson->telaah_resep->benar_rute)?($data_formjson->telaah_resep->benar_rute == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Ada duplikasi</span></td>
+                                                        <td><input type="radio"  value="1_y"   <?php echo isset($data_formjson->telaah_resep->ada_duplikasi)?($data_formjson->telaah_resep->ada_duplikasi == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t"  <?php echo isset($data_formjson->telaah_resep->ada_duplikasi)?($data_formjson->telaah_resep->ada_duplikasi == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Ada interaksi</span></td>
+                                                        <td><input type="radio"  value="1_y"  <?php echo isset($data_formjson->telaah_resep->ada_interaksi)?($data_formjson->telaah_resep->ada_interaksi == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t"  <?php echo isset($data_formjson->telaah_resep->ada_interaksi)?($data_formjson->telaah_resep->ada_interaksi == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Item > 7</span></td>
+                                                        <td><input type="radio"  value="1_y"  <?php echo isset($data_formjson->telaah_resep->item)?($data_formjson->telaah_resep->item == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t"  <?php echo isset($data_formjson->telaah_resep->item)?($data_formjson->telaah_resep->item == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="side_table" border="0" width="100%">
+                                    <tr>
+                                        <td>
+                                            <span class="text_body"> Apoteker/Ass. Apt</span>
+                                        </td>
+                                        <td>
+                                            <span class="text_body"> Disetujui Dokter</span>
+                                        </td>
+                                    </tr>
+                                  
+                                    <tr>
+                                    <?php 
+                                    if(isset($telaah_obat[0]->ttd_apoteker)){
+                                    ?>
+                                        <td><img width="120px" src="<?= $telaah_obat[0]->ttd_apoteker; ?>" alt=""></td>
+                                       
+                                    <?php }else{ ?>
+                                        <td><br><br></td>
+                                    <?php } ?>
+                                    <?php
+                                    if(isset($resep_pasien[0]->ttd)){
+                                    ?>
+                                        <td><img width="120px" src="<?= $resep_pasien[0]->ttd; ?>" alt=""></td>
+
+                                    <?php } ?>
+                                    </tr>
+
+                                    
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="side_table" border="0" width="100%">
+                                    <tr>
+                                        <td>
+                                            <span class="text_body"> Perubahan Resep</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <table border="1" width="100%">
+                                <tr>
+                                    <td>
+                                        <table class="side_table" border="0" width="100%" >
+                                            <thead>
+                                                <tr class="border_bottom">
+                                                    <td width="50%"><span class="text_isi">Tertulis</span></td>
+                                                    <td width="50%"><span class="text_isi">Menjadi</span></td>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="1" width="100%">
+                                    <tr>
+                                        <td>
+                                            <table class="side_table" border="0" width="100%" >
+                                                <thead>
+                                                    <tr class="border_bottom">
+                                                        <td width="70%"><span class="text_isi">Verif Penyerahan Obat</span></td>
+                                                        <td width="15%"><span class="text_isi">Ya</span></td>
+                                                        <td width="15%"><span class="text_isi">Tidak</span></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Nama Pasien</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->nama_pasien)?($data_formjson->verif_penyerahan_obat->nama_pasien == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->nama_pasien)?($data_formjson->verif_penyerahan_obat->nama_pasien == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Nama Obat</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->nama_obat)?($data_formjson->verif_penyerahan_obat->nama_obat == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->nama_obat)?($data_formjson->verif_penyerahan_obat->nama_obat == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Bentuk Sediaan</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->bentuk_sediaan)?($data_formjson->verif_penyerahan_obat->bentuk_sediaan == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->bentuk_sediaan)?($data_formjson->verif_penyerahan_obat->bentuk_sediaan == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Kekuatan</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->kekuatan)?($data_formjson->verif_penyerahan_obat->kekuatan == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->kekuatan)?($data_formjson->verif_penyerahan_obat->kekuatan == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Rute Pembelian</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->rute_pembelian)?($data_formjson->verif_penyerahan_obat->rute_pembelian == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->rute_pembelian)?($data_formjson->verif_penyerahan_obat->rute_pembelian == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Frek Pembelian</span></td>
+                                                        <td><input type="radio"  value="1_y" <?php echo isset($data_formjson->verif_penyerahan_obat->frek_pembelian)?($data_formjson->verif_penyerahan_obat->frek_pembelian == "ya" ? "checked" : "disabled"):'';?>></td>
+                                                        <td><input type="radio"  value="1_t" <?php echo isset($data_formjson->verif_penyerahan_obat->frek_pembelian)?($data_formjson->verif_penyerahan_obat->frek_pembelian == "tidak" ? "checked" : "disabled"):'';?>></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="1" width="100%">
+                                    <tr>
+                                        <td>
+                                            <table class="side_table" border="0" width="100%" >
+                                                <thead>
+                                                    <tr class="border_bottom">
+                                                        <td width="50%"><span class="text_isi">Kegiatan</span></td>
+                                                        <td width="20%"><span class="text_isi">Jam</span></td>
+                                                        <td width="30%"><span class="text_isi">Status</span></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Terima</span></td>
+                                                        <td><span class="text_isi"></span></td>
+                                                        <td><span class="text_isi"></span></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Harga</span></td>
+                                                        <td><span class="text_isi"></span></td>
+                                                        <td><span class="text_isi"></span></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Racik</span></td>
+                                                        <td><span class="text_isi"></span></td>
+                                                        <td><span class="text_isi"></span></td>
+                                                    </tr>
+                                                    <tr class="border_bottom">
+                                                        <td><span class="text_body">Periksa</span></td>
+                                                        <td><span class="text_isi"></span></td>
+                                                        <td><span class="text_isi"></span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <footer>
+        </footer>
+    </div>    
+   </body>
+   
+   </html>
+   
+    -->

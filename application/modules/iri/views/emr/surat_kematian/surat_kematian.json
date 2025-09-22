@@ -1,0 +1,105 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Nomor",
+          "titleLocation": "left",
+          "hideNumber": true
+         },
+         {
+          "type": "html",
+          "name": "question2",
+          "html": "Yang bertanda tangan di bawah ini Direktur Rumah Sakit Umum Daerah Ahmd Syafii Maarif dengan ini menerangkan bahwa :"
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Umur"
+           },
+           {
+            "name": "text3",
+            "title": "Jenis Kelamin"
+           },
+           {
+            "name": "text4",
+            "title": "Pekerjaan"
+           },
+           {
+            "name": "text5",
+            "title": "Alamat"
+           },
+           {
+            "name": "text6",
+            "title": "No. RM"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question4",
+          "html": "Telah meninggal dunia di RSUD Ahmad syafii maarif pada :"
+         },
+         {
+          "type": "multipletext",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Hari"
+           },
+           {
+            "name": "text2",
+            "title": "Tanggal"
+           },
+           {
+            "name": "text3",
+            "title": "Pukul"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question6",
+          "html": "Demikianlah surat keterangan ini diberikan untuk dapat dipergunakan seperlunya."
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "title": "Tanah Badantung,",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question8",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question9",
+          "titleLocation": "hidden"
+         }
+        ]
+       }
+      ],
+      "title": "SURAT KETERANGAN KEMATIAN"
+     }
+    ]
+   }

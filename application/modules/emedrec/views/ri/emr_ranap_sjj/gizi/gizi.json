@@ -1,0 +1,85 @@
+{
+    "title": "DAFTAR PEMBERIAN MAKANAN PASIEN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column2",
+          "title": "Nama pasien",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "Tanggal lahir",
+          "cellType": "text"
+         },
+         {
+          "name": "column4",
+          "title": "Umum / Bpjs",
+          "cellType": "text"
+         },
+         {
+          "name": "column5",
+          "title": "Kelas Rawatan",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "VIP"
+           },
+           {
+            "value": "item2",
+            "text": "I"
+           },
+           {
+            "value": "item3",
+            "text": "II"
+           },
+           {
+            "value": "item4",
+            "text": "III"
+           }
+          ]
+         },
+         {
+          "name": "column6",
+          "title": "Diet",
+          "cellType": "text"
+         },
+         {
+          "name": "column7",
+          "title": "Diagnosa",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rowCount": 1
+       },
+       {
+        "type": "signaturepad",
+        "name": "question2",
+        "title": "Perawat Ruangan",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question3",
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

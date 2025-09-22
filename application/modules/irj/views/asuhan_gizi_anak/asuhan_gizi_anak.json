@@ -1,0 +1,194 @@
+{
+    "title": "ASUHAN GIZI ANAK",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Tanggal",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Diagnosa",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "title": "Antropometri",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Umur"
+           },
+           {
+            "name": "text2",
+            "title": "BB/U"
+           },
+           {
+            "name": "text3",
+            "title": "TB"
+           },
+           {
+            "name": "text4",
+            "title": "TB/U"
+           },
+           {
+            "name": "text5",
+            "title": "LLA"
+           },
+           {
+            "name": "text6",
+            "title": "BB/TB"
+           },
+           {
+            "name": "text7",
+            "title": "LK"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "comment",
+          "name": "question4",
+          "title": "Biokimia",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "title": "Klinik/Fisik",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrix",
+          "name": "question6",
+          "title": "Alergi Makanan",
+          "hideNumber": true,
+          "columns": [
+           {
+            "value": "Column1",
+            "text": "Ya"
+           },
+           {
+            "value": "Column2",
+            "text": "Tidak"
+           }
+          ],
+          "rows": [
+           {
+            "value": "Row1",
+            "text": "Telur"
+           },
+           {
+            "value": "Row2",
+            "text": "Susu sapi & produk olahannya"
+           },
+           {
+            "value": "Row3",
+            "text": "Kacang kedelai / tanah"
+           }
+          ]
+         },
+         {
+          "type": "matrix",
+          "name": "question7",
+          "startWithNewLine": false,
+          "title": " ",
+          "hideNumber": true,
+          "columns": [
+           {
+            "value": "Column1",
+            "text": "Ya"
+           },
+           {
+            "value": "Column2",
+            "text": "Tidak"
+           }
+          ],
+          "rows": [
+           {
+            "value": "Row1",
+            "text": "Gluten / gandum"
+           },
+           {
+            "value": "Row2",
+            "text": "Udang"
+           },
+           {
+            "value": "Row3",
+            "text": "Ikan"
+           }
+          ]
+         }
+        ],
+        "title": "RIWAYAT ALERGI"
+       },
+       {
+        "type": "comment",
+        "name": "question8",
+        "title": "Pola Makan",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question9",
+          "title": "Pola Makan",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question10",
+          "title": "Diagnosa gizi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question11",
+          "title": "Intervensi gizi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question12",
+          "title": "Monitoring dan evaluasi",
+          "hideNumber": true
+         }
+        ],
+        "title": "RIWAYAT PERSONAL"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question13",
+        "title": "Ahli gizi",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question14",
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

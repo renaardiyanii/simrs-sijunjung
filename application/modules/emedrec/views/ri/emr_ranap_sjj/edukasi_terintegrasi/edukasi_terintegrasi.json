@@ -1,0 +1,3199 @@
+{
+    "title": "CATATAN PEMBERIAN INFORMASI DAN EDUKASI PASIEN DAN KELUARGA TERINTEGRASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel2",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "question1",
+            "title": "Bahasa yang digunakan ",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Indonesia"
+             },
+             {
+              "value": "item2",
+              "text": "Isyarat"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Daerah",
+            "colCount": 3
+           },
+           {
+            "type": "radiogroup",
+            "name": "question9",
+            "startWithNewLine": false,
+            "title": "Keterbatasan fisik dan kognitif",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak ada"
+             },
+             {
+              "value": "item2",
+              "text": "penglhatan terganggu"
+             },
+             {
+              "value": "item3",
+              "text": "pendengaran terganggu"
+             },
+             {
+              "value": "item4",
+              "text": "gangguan bicara"
+             },
+             {
+              "value": "item5",
+              "text": "fisik lemah"
+             },
+             {
+              "value": "item6",
+              "text": "kognitif terbatas"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Lainnya",
+            "colCount": 4
+           },
+           {
+            "type": "radiogroup",
+            "name": "question8",
+            "title": "Bahasa yang digunakan ",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Indonesia"
+             },
+             {
+              "value": "item2",
+              "text": "Isyarat"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Daerah",
+            "colCount": 3
+           },
+           {
+            "type": "radiogroup",
+            "name": "question10",
+            "startWithNewLine": false,
+            "title": "Hambatan emosional dan motivasi",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak ada"
+             },
+             {
+              "value": "item2",
+              "text": "motivasi kurang"
+             },
+             {
+              "value": "item3",
+              "text": "emosional terganggu"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "lain lain",
+            "colCount": 3
+           },
+           {
+            "type": "radiogroup",
+            "name": "question2",
+            "title": "Kebutuhan penterjemah",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "otherText": "Daerah",
+            "colCount": 3
+           },
+           {
+            "type": "radiogroup",
+            "name": "question3",
+            "title": "Agama pasien",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "islam"
+             },
+             {
+              "value": "item2",
+              "text": "kristen"
+             },
+             {
+              "value": "item3",
+              "text": "katolik"
+             },
+             {
+              "value": "item4",
+              "text": "hindu"
+             },
+             {
+              "value": "item5",
+              "text": "budha"
+             },
+             {
+              "value": "item6",
+              "text": "konghucu"
+             }
+            ],
+            "otherText": "Daerah",
+            "colCount": 4
+           },
+           {
+            "type": "radiogroup",
+            "name": "question4",
+            "title": "Pendidikan pasien",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "SD"
+             },
+             {
+              "value": "item2",
+              "text": "SMP"
+             },
+             {
+              "value": "item3",
+              "text": "SMA"
+             },
+             {
+              "value": "item4",
+              "text": "PT"
+             },
+             {
+              "value": "item5",
+              "text": "Tidak sekola"
+             }
+            ],
+            "otherText": "Daerah",
+            "colCount": 4
+           },
+           {
+            "type": "radiogroup",
+            "name": "question5",
+            "title": "Kesedian menerima informasi",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Bersedia"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Tidak bersedia , alasan nya",
+            "colCount": 4
+           },
+           {
+            "type": "radiogroup",
+            "name": "question6",
+            "title": "Kemampuan membaca",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "baik"
+             },
+             {
+              "value": "item2",
+              "text": "kurang"
+             },
+             {
+              "value": "item3",
+              "text": "tidak bisa"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Tidak bersedia , alasan nya",
+            "colCount": 4
+           },
+           {
+            "type": "text",
+            "name": "question7",
+            "title": "Keyakinan dan nilai nilai",
+            "hideNumber": true
+           }
+          ],
+          "title": "Pengkajian umum"
+         }
+        ],
+        "title": "ASESMEN KEMAMPUAN, KEMAUAN BELAJA",
+        "description": "INTRUKSI : beri tanda checklis pada kotak yang sesuai dengan kondisi dan kebutuhan pasien dan isi titik titik dengan hasil asesmen yang sesuai"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question11",
+          "title": "pilih nomor sesuai kebutuhan pasien ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "1. asuhan medis"
+           },
+           {
+            "value": "item2",
+            "text": "2. asuhan keperawatan"
+           },
+           {
+            "value": "item3",
+            "text": "3. pengobatan"
+           },
+           {
+            "value": "item4",
+            "text": "4. asuhan gizi"
+           },
+           {
+            "value": "item5",
+            "text": "5. manajemen nyeri"
+           },
+           {
+            "value": "item6",
+            "text": "6. rehabilitas"
+           },
+           {
+            "value": "item7",
+            "text": "7. penggunaan alat alat medis "
+           },
+           {
+            "value": "item8",
+            "text": "8. hand hygiene"
+           },
+           {
+            "value": "item9",
+            "text": "9. rohani"
+           },
+           {
+            "value": "item10",
+            "text": "10. pendaftaran dan admisi"
+           },
+           {
+            "value": "item11",
+            "text": "11. prosedur dan perawatan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "12. lainnya, sebutkan",
+          "colCount": 5
+         }
+        ],
+        "title": "ASESMEN KEBUTUHAN EDUKASI "
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question12",
+          "title": "Metode",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "1. diskusi"
+           },
+           {
+            "value": "item2",
+            "text": "2. ceramah"
+           },
+           {
+            "value": "item3",
+            "text": "3. demontrasi"
+           }
+          ],
+          "otherText": "12. lainnya, sebutkan"
+         },
+         {
+          "type": "checkbox",
+          "name": "question13",
+          "startWithNewLine": false,
+          "title": "Medis",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "1. leaflet"
+           },
+           {
+            "value": "item2",
+            "text": "2. lembar balik"
+           },
+           {
+            "value": "item3",
+            "text": "3. audio visual"
+           }
+          ],
+          "otherText": "12. lainnya, sebutkan"
+         },
+         {
+          "type": "checkbox",
+          "name": "question14",
+          "startWithNewLine": false,
+          "title": "Evaluasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "1. sudah mengerti"
+           },
+           {
+            "value": "item2",
+            "text": "2. Re- edukasi"
+           },
+           {
+            "value": "item3",
+            "text": "3. Re- demonstrasi"
+           }
+          ],
+          "otherText": "12. lainnya, sebutkan"
+         },
+         {
+          "type": "checkbox",
+          "name": "question15",
+          "startWithNewLine": false,
+          "title": "Penerima edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "1. Pasien"
+           },
+           {
+            "value": "item2",
+            "text": "2. Keluarga"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         }
+        ],
+        "title": "PERENCANAAN EDUKASI"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question53",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "hak hak pasien"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question16",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "aturan umum RS"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question17",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "Tanggung jawab RS menjaga barang pasien"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question20",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "Perkiraan biaya rawatan"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question18",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "Alasan penundaan pelayanan"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question21",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "Alasan keterlambatan pelayanan"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question19",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "Alternatif yang tersedia jika pelayanan tertunda atau terlambat"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question23",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "alur pelayanan pengaduan / komplain"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question22",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "informasi rujukan"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question24",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "Lain lain"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "PENDAFTARAN DAN ADMISI"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question26",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hasil assesmen"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question27",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Diagnosa dan rencana asuhan"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question28",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hasil pemeriksaan diagnostik"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question29",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Proses asuhan"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question30",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Perkembangan kondisi pasien"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question31",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hasil asuhan dan pengobatan"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question34",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Resiko medis akibat asuhan medis yang belum lengkap (AMA dan APS)"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question35",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "manajemen nyeri"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question32",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lain lain"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "DOKTER"
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question33",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hasil assesmen"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question36",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Diagnosa dan rencana asuhan"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question37",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pencegahan infeksi di RS dengan cuci tangan yang benar"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question38",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pencegahan infeksi di RS dengan etika baru"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question39",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Manejemen nyeri"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question40",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "batuk efektif"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question41",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pencegahan resiko jatuh"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question42",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pengawasan pasien"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question43",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Penggunaan APD (masker, sarung  tangan) dll"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question44",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Personal hygiene"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question47",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Perawatan luka"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question46",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pemenuhan kebutuhan cairan"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question45",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "perawatan kaki diabetes"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question48",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Mobilitas / ROM"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question49",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Inisisai menyusui dini (IMD)"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question50",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "ASI EKsklusif"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question51",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Perawatan metode kanguru"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question52",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "TanggaL",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "Topik edukasi",
+            "cellType": "checkbox",
+            "colCount": 1
+           },
+           {
+            "name": "column3",
+            "title": "Metode",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Media edukasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nama penerima",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Paraf penerima",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column7",
+            "title": "Evaluasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Nama pemberi",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Paraf pemberi",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "column10",
+            "title": "Verifikasi ",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Evaluasi lanjutan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Perawatan tali pusat"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "PERAWAT / BIDAN"
+       }
+      ]
+     }
+    ]
+   }

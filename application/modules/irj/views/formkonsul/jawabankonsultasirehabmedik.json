@@ -1,0 +1,155 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "Judul",
+          "html": "<h4> Terdapat Hal Hal Sebagai Berikut"
+         },
+         {
+          "type": "comment",
+          "name": "subjective",
+          "title": "Subjective",
+          "hideNumber": true
+         },
+         {
+          "type": "matrix",
+          "name": "komunikasi",
+          "title": "Komunikasi",
+          "hideNumber": true,
+          "columns": [
+           {
+            "value": "plus",
+            "text": "PLUS(+)"
+           },
+           {
+            "value": "minus",
+            "text": "MINUS(-)"
+           }
+          ],
+          "rows": [
+           {
+            "value": "distagia",
+            "text": "Distagia"
+           },
+           {
+            "value": "disatria",
+            "text": "Disatria"
+           }
+          ]
+         },
+         {
+          "type": "matrix",
+          "name": "mobilisasi",
+          "title": "Mobilisasi",
+          "hideNumber": true,
+          "columns": [
+           {
+            "value": "plus",
+            "text": "PLUS(+)"
+           },
+           {
+            "value": "minus",
+            "text": "MINUS(-)"
+           }
+          ],
+          "rows": [
+           {
+            "value": "sitting_balance",
+            "text": "Sitting Balance"
+           },
+           {
+            "value": "standing_balance",
+            "text": "Standing Balance"
+           },
+           {
+            "value": "gait",
+            "text": "Gait"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "dextra",
+            "title": "DEXTRA",
+            "cellType": "rating",
+            "rateMin": 0
+           },
+           {
+            "name": "sinistra",
+            "title": "SINISTRA",
+            "cellType": "rating",
+            "rateMin": 0
+           }
+          ],
+          "rows": [
+           {
+            "value": "upper_extremity",
+            "text": "UPPER EXTREMITY"
+           },
+           {
+            "value": "lower_extremity",
+            "text": "LOWER EXTREMITY"
+           }
+          ]
+         },
+         {
+          "type": "matrix",
+          "name": "umn_signn",
+          "title": "Mobilisasi",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "value": "plus",
+            "text": "PLUS(+)"
+           },
+           {
+            "value": "minus",
+            "text": "MINUS(-)"
+           }
+          ],
+          "rows": [
+           {
+            "value": "umn_sign",
+            "text": "UMN SIGN"
+           },
+           {
+            "value": "ulkus",
+            "text": "ULKUS"
+           },
+           {
+            "value": "kontraktur",
+            "text": "KONTRAKTUR"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "assesment",
+          "title": "Assesment",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "planning",
+          "title": "Planning",
+          "hideNumber": true
+         }
+        ]
+       }
+      ],
+      "title": "Jawaban Konsul Rehab medik"
+     }
+    ]
+   }

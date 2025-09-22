@@ -1,0 +1,81 @@
+{
+    "title": "INSTRUKSI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "title": "Bila Kesakitan",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Bila Mual/ muntah",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "Obat-obatan lain",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "title": "Minum",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question5",
+          "title": "Infus",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "question6",
+        "title": "Monitor :      ",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Tensi     "
+         },
+         {
+          "name": "text2",
+          "title": "Nadi              "
+         },
+         {
+          "name": "text3",
+          "title": "Nafas               "
+         },
+         {
+          "name": "text4",
+          "title": "Setiap :"
+         },
+         {
+          "name": "text5",
+          "title": "Selama :"
+         }
+        ],
+        "colCount": 5
+       },
+       {
+        "type": "comment",
+        "name": "question7",
+        "title": "Lain lain",
+        "hideNumber": true
+       }
+      ]
+     }
+    ]
+   }

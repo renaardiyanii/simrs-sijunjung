@@ -1,0 +1,1357 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama Pewawancara"
+         },
+         {
+          "name": "text2",
+          "inputType": "date",
+          "title": "Tanggal Wawancara"
+         },
+         {
+          "name": "text3",
+          "title": "Pendidikan\tPasien"
+         },
+         {
+          "name": "text4",
+          "inputType": "time",
+          "title": "Jam mulai"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question3",
+          "title": "Fungsi",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "1",
+            "title": "1. Menggunakann telepon",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0 = Tidak mampu (termasuk yang tidak/memiliki telepon)"
+             },
+             {
+              "value": "1",
+              "text": "1 = Sebagian dibantu (mampu menjawab telepon, tapi tidak dapat mengoperasikannya)"
+             },
+             {
+              "value": "2",
+              "text": "2 = Mampu mengoperasikan telepon"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "2. Berbelanja",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0 = Tidak mampu"
+             },
+             {
+              "value": "1",
+              "text": "1 = Mampu belanja sendiri untuk keperluan terbatas (3buah/kurang, selebihnya perlu bantuan orang lain)"
+             },
+             {
+              "value": "2",
+              "text": "2 = Mandiri"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "3. Menyiapkan makanan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0 = Tidak mampu"
+             },
+             {
+              "value": "1",
+              "text": "1 = Mampu menyiapkan makanan bila telah disediakan bahan-bahannya atau menghangatkan makanan yang telah dimasak"
+             },
+             {
+              "value": "2",
+              "text": "2 = Mandiri"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "4. Mengurus rumah",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0 = Tidak mampu"
+             },
+             {
+              "value": "1",
+              "text": "1 = Mampu mengerjakan tugas harian yang ringan, dengan hasil yang kurang rapi atau tidak bersih"
+             },
+             {
+              "value": "2",
+              "text": "2 = Mandiri"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "5. Mencuci pakaian",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0 = Tidak mampu"
+             },
+             {
+              "value": "1",
+              "text": "1 = Mampu mencuci/menyetrika jenis pakaian yang ringan, lainnya perlu bantuan orang lain"
+             },
+             {
+              "value": "2",
+              "text": "2 = Mandiri (termasuk yang menggunakan mesin cuci)"
+             }
+            ]
+           },
+           {
+            "name": "6",
+            "title": "6. Mengadakan transportasi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0 = Tidak mampu bepergian dengan sarana transportasi apapun"
+             },
+             {
+              "value": "1",
+              "text": "1 = Bepergian dengan transportasi umum/taksi atau mobil pribadi, bila dibantu/ditemani orang lain"
+             },
+             {
+              "value": "2",
+              "text": "2 = Mandiri"
+             }
+            ]
+           },
+           {
+            "name": "7",
+            "title": "7. Tanggung jawab pengobatan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0 = Butuh pertolongan orang lain untuk mengkonsumsi obat-obatan"
+             },
+             {
+              "value": "1",
+              "text": "1 = Mampu, bila obat sudah dipersiapkan sebelumnya"
+             },
+             {
+              "value": "2",
+              "text": "2 = Mandiri"
+             }
+            ]
+           },
+           {
+            "name": "8",
+            "title": "8. Mengatur keuangan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0 = Tidak Mampu"
+             },
+             {
+              "value": "1",
+              "text": "1 = Mampu atur belanja harian, tapi butuh pertolongan dalam urusan bank/pembelian dalam jumlah besar"
+             },
+             {
+              "value": "2",
+              "text": "2 = Mampu mengatur masalah keuangan (anggaran rumah tangga, membayar sewa, kwitansi, urusan bank) atau memantau penghasilan"
+             }
+            ]
+           },
+           {
+            "name": "total",
+            "title": "total",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}+{row.3}+{row.4}+{row.5}+{row.6}+{row.7}+{row.8}"
+           },
+           {
+            "name": "keterangan",
+            "title": "NILAI IADL : \t9-16 -> Mandiri/tidak perlu bantuan \t\t\t\t1-8 -> Perlu bantuan \t\t\t\t0 -> Tidak dapat melakukan apa-apa",
+            "cellType": "expression"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Keterangan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Catatan: Tidak berlaku apabila tidak pernah melakukan aktivitas di atas"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "title": "INSTRUMENTAL ACTIVITIES OF DAILY LIVING (IADL)"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question5",
+        "title": "29.11.2019.RM.RJ.14   ",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama Pewawancara"
+         },
+         {
+          "name": "text2",
+          "inputType": "date",
+          "title": "Tanggal Wawancara"
+         },
+         {
+          "name": "text3",
+          "title": "Pendidikan Pasien"
+         },
+         {
+          "name": "text4",
+          "inputType": "time",
+          "title": "Jam Mulai"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question6",
+          "title": "JENIS KEGIATAN",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "1",
+            "title": "Mengendalikan rangsang pembuangan tinja",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "Mengendalikan rangsang berkemih",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Membersihkan diri",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Menggunakan jamban",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Makan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "6",
+            "title": "Berubah sikap dari berbaring ke duduk",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "7",
+            "title": "Berpindah atau berjalan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "8",
+            "title": "Memakai baju",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "9",
+            "title": "Naik turun tangga",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "10",
+            "title": "Mandi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "1",
+              "text": "l"
+             },
+             {
+              "value": "2",
+              "text": "ll"
+             },
+             {
+              "value": "3",
+              "text": "lll"
+             },
+             {
+              "value": "4",
+              "text": "lV"
+             }
+            ]
+           },
+           {
+            "name": "total",
+            "title": "total",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}+{row.3}+{row.4}+{row.5}+{row.6}+{row.7}+{row.8}+{row.9}+{row.10}"
+           },
+           {
+            "name": "keterangan",
+            "title": "Kesan: NILAI ADL:\t20 -> Mandiri.\t5-8 -> Ketergantungan berat. 12-19 -> Ketergantungan ringan. 0-4 -> Ketergantungan total. 9-11\t-> Ketergantungan sedang",
+            "cellType": "expression",
+            "expression": "iif({row.total} > 20,'Mandiri',\n iif({row.total} > 11,'Ketergantungan ringan',\n iif({row.total} > 8,'Ketergantungan sedang',\n iif({row.total} > 4 ,'Ketergantungan berat',\n iif({row.total} < 4,'Ketergantungan total'))"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "ADL Barthel"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question7",
+          "html": "<h5>Keterangan:<p>\n<p>I\t: Penilaian sebelum sakit\n<p>II  \t: Penilaian saat masuk rumah sakit\n<p>III\t: Setelah 1 minggu perawatan\n<p>IV\t: Saat pasien mau pulang\n"
+         }
+        ]
+       }
+      ],
+      "questionTitleLocation": "top",
+      "title": "29.11.2019.RM.RJ.14   "
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question18",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama Pewawancara"
+         },
+         {
+          "name": "text2",
+          "inputType": "date",
+          "title": "Tanggal Wawancara"
+         },
+         {
+          "name": "text3",
+          "title": "Pendidikan\tPasien\t"
+         },
+         {
+          "name": "text4",
+          "inputType": "time",
+          "title": "Jam Mulai"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question8",
+          "title": "Orientasi",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": " Sekarang hari, tanggal, bulan, tahun berapa? Musim apa?"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question10",
+          "minWidth": "",
+          "maxWidth": "",
+          "title": "Sekarang kita berada di mana? (jalan, nomor rumah, kota, kabupaten, provinsi)",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "Sekarang kita berada di mana? (jalan, nomor rumah, kota, kabupaten, provinsi)"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question11",
+          "title": "Registrasi",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "Pewawancara menyebutkan nama 3 buah benda, 1 detik untuk tiap benda. Kemudian mintalah manula mengulang ke 3 nama benda tersebut. Berikan 1 angka untuk setiap jawaban yang benar. Bila masih salah, ulanglah penyebutan ke 3 nama benda tersebut sampai ia dapat mengulangnya dengan benar. Hitunglah jumlah percobaan dan catatlah. (misal: bola, kursi, sepatu)"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question12",
+          "title": "Atensi dan Kalkulasi",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "Hitunglah berturut-turut selang 7 mulai dari 100 ke bawah. Berilah 1 angka untuk setiap jawaban yang benar. Berhenti setelah 5 hitungan (93,86, 79, 72, 65). Kemungkinan lain, ejalah kata “dunia” dari akhir ke awal (a, i, n, u, d). Satu nilai untuk setiap jawaban yang benar."
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question13",
+          "title": "Mengingat",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "Tanyalah kembali 3 nama benda yang telah disebutkan di atas. Berilah 1 angka untuk setiap jawaban yang benar."
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question14",
+          "title": "Bahasa",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "a.\tApakah nama benda-benda ini? Perlihatkan arloji dan pensil (2 nilai)"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question15",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number",
+            "step": 1
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number",
+            "step": 1
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "b.\tUlanglah kalimat berikut: “Jika Tidak, dan Atau Tapi” (1 nilai)"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question16",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "c.\tLaksanakanlah 3 buah perintah ini: “peganglah selembar kertas dengan tangan kananmu, lipatlah kertas itu pada pertengahan, dan letakkan di lantai” (3 nilai)"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question17",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "d.\tBacalah dan laksanakan perintah berikut: “PEJAMKAN MATA ANDA” (1 nilai)"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question19",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Skor Maximum",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2",
+            "title": "Skor Responden",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Jumlah Nilai",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "e.\tTulislah sebuah kalimat! (1 nilai)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "imagepicker",
+        "name": "question25",
+        "indent": 1,
+        "title": "f.\tTirulah gambar ini!",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item2",
+          "imageLink": "data:image/png;base64,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"
+         }
+        ]
+       },
+       {
+        "type": "signaturepad",
+        "name": "question24",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question27",
+        "title": "Tandai tingkat kesadaran manula pada garis aksis di bawah ini dengan huruf \"x\"",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Sadar",
+          "title": "Sadar",
+          "cellType": "text"
+         },
+         {
+          "name": "Somnolen",
+          "title": "Somnolen ",
+          "cellType": "text"
+         },
+         {
+          "name": "Stupor",
+          "title": "Stupor",
+          "cellType": "text"
+         },
+         {
+          "name": "Koma",
+          "title": "Koma",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "question26",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "inputType": "time",
+          "title": "Jam selesai\t"
+         },
+         {
+          "name": "text2",
+          "title": "Tempat wawancara"
+         }
+        ]
+       }
+      ],
+      "title": "MINI MENTAL STATE EXAMINATION (MMSE)"
+     },
+     {
+      "name": "page4",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "question9",
+        "useDisplayValuesInTitle": false,
+        "maxWidth": "",
+        "titleLocation": "hidden",
+        "defaultValue": {
+         "item1": {
+          "0": " 1",
+          "6": "0",
+          "11": "0",
+          "total": 1
+         }
+        },
+        "correctAnswer": {
+         "item1": {
+          "0": " 1",
+          "6": "0",
+          "11": "0",
+          "total": 1
+         }
+        },
+        "columns": [
+         {
+          "name": "0",
+          "title": "1. Apakah anda sebenarnya puas dengan kehidupan anda ?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "defaultValue": " 1",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "1",
+          "title": "2. Apakah anda telah meninggalkan banyak kegiatan dan minat atau kesenangan anda?\t",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "2",
+          "title": "3. Apakah anda merasa kehidupan anda kosong?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ],
+          "noneText": "Tidak"
+         },
+         {
+          "name": "3",
+          "title": "4. Apakah anda sering merasa bosan?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "4",
+          "title": "5. Apakah anda mempunyai semangat yang baik setiap saat?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "5",
+          "title": "6. Apakah anda takut bahwa sesuatu yang buruk akan terjadi pada anda?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "6",
+          "title": "7. Apakah anda merasa bahagia dalam sebagian besar hidup anda?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "defaultValue": "0",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "7",
+          "title": "8. Apakah anda sering merasa tidak berdaya?\t",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "8",
+          "title": "9. Apakah anda lebih senang tinggal di rumah daripada pergi keluar dan\t melakukan sesuatu yang baru?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "9",
+          "title": "10. Apakah anda merasa mempunyai banyak masalah dengan daya ingat\t anda dibandingkan dengan kebanyakan orang?\t",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ],
+          "otherText": "Tidak"
+         },
+         {
+          "name": "10",
+          "title": "11.\tApakah anda pikir bahwa kehidupan anda sekarang menyenangkan?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "11",
+          "title": "12. Apakah anda merasa tidak berharga seperti perasaan anda saat ini?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "defaultValue": "0",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ],
+          "otherText": "Tidak"
+         },
+         {
+          "name": "12",
+          "title": "13. Apakah anda merasa penuh semangat?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "13",
+          "title": "14. Apakah anda merasa bahwa keadaan anda tidak ada harapan?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "14",
+          "title": "15.\tApakah anda pikir bahwa orang lain, lebih baik keadaannya \t\t daripada anda?",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ya"
+           },
+           {
+            "value": "0",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "total",
+          "title": "Total Skor",
+          "cellType": "expression",
+          "width": "0",
+          "expression": "{row.0}+{row.1}+{row.2}+{row.3}+{row.4}+{row.5}+{row.6}+{row.7}+{row.8}+{row.9}+{row.10}+{row.11}+{row.12}+{row.13}+{row.14}"
+         }
+        ],
+        "columnLayout": "vertical",
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Pilihlah jawaban yang paling tepat untuk menggambarkan bagaimana perasaan anda selama satu minggu terakhir!"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question20",
+        "html": "<p>Skor: hitung jumlah jawaban yang bercetak tebal<br>\n•\tSetiap jawaban bercetak tebal mempunyai nilai 1<br>\n•\tSkor 5-9 menunjukkan kemungkinan besar depresi<br>\n•\tSkor 10 atau lebih menunjukkan depresi\n</p>"
+       }
+      ],
+      "title": "29.11.2019.RM.RJ.14   "
+     }
+    ]
+   }

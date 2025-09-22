@@ -1,0 +1,409 @@
+{
+    "title": "RENCANA PENERAPAN BUNDLES     PENCEGAHAN INFEKSI  RUMAH SAKIT /HAIS                                                                                                                 (Monitoring Harian)",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "pencegahan_plebiitis",
+        "title": "Pencegahan Plebitis ",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "table1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "kebersihan",
+            "title": "Kebersihan tangan",
+            "cellType": "text"
+           },
+           {
+            "name": "apd",
+            "title": "APD",
+            "cellType": "text"
+           },
+           {
+            "name": "teknik",
+            "title": "Teknik Aseptik (peralatan steril)",
+            "cellType": "text"
+           },
+           {
+            "name": "antiseptik",
+            "title": "Antiseptik kulit",
+            "cellType": "text"
+           },
+           {
+            "name": "slang",
+            "title": "Slang infus ganti sebelum 24 jam (pemberian lipid, protein)",
+            "cellType": "text"
+           },
+           {
+            "name": "slang1",
+            "title": "Slang infus ganti sebelum 72 jam (pemberian cairan/elektrolit)",
+            "cellType": "text"
+           },
+           {
+            "name": "dressing",
+            "title": "Dressing tempat insersi tiap 3 hari/sewaktu bila kotor",
+            "cellType": "text"
+           },
+           {
+            "name": "alat_suntik",
+            "title": "Alat suntik seril (1 obat 1 syringe)",
+            "cellType": "text"
+           },
+           {
+            "name": "injeksi",
+            "title": "Injeksi via needle port",
+            "cellType": "text"
+           },
+           {
+            "name": "alkohol",
+            "title": "Alkoholisasi needle port",
+            "cellType": "text"
+           },
+           {
+            "name": "ttd",
+            "title": "Paraf petugas",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "pencegahan_infeksi",
+        "title": "Pencegahan Infeksi Saluran Kemih (ISK)",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "table2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "kebersihan",
+            "title": "Kebersihan tangan",
+            "cellType": "text"
+           },
+           {
+            "name": "apd",
+            "title": "APD",
+            "cellType": "text"
+           },
+           {
+            "name": "teknik",
+            "title": "Teknik aseptik (pemasangan, pengambilan sampel)",
+            "cellType": "text"
+           },
+           {
+            "name": "jelly",
+            "title": "Pemasangan dengan jelly steril",
+            "cellType": "text"
+           },
+           {
+            "name": "meatus",
+            "title": "Kebersihan meatus uretra",
+            "cellType": "text"
+           },
+           {
+            "name": "sistem",
+            "title": "Sistem drainase tertutup",
+            "cellType": "text"
+           },
+           {
+            "name": "isi_balon",
+            "title": "Isi balon sesuai rekomendasi produsen",
+            "cellType": "text"
+           },
+           {
+            "name": "fikasi",
+            "title": "Fiksasi kateter",
+            "cellType": "text"
+           },
+           {
+            "name": "posisi",
+            "title": "Posisi urine bag rendah dari vesika urinaria, tidak menyentuh lantai",
+            "cellType": "text"
+           },
+           {
+            "name": "alkohol",
+            "title": "Alkoholisasi needle port",
+            "cellType": "text"
+           },
+           {
+            "name": "ttd",
+            "title": "Paraf petugas",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question1",
+        "title": "Pencegahan HAP",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "table2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "kebersihan",
+            "title": "Kebersihan tangan",
+            "cellType": "text"
+           },
+           {
+            "name": "apd",
+            "title": "APD",
+            "cellType": "text"
+           },
+           {
+            "name": "posisi1",
+            "title": "Posisi pasien 30-40 ⁰ (Head up)",
+            "cellType": "text"
+           },
+           {
+            "name": "sikat",
+            "title": "Sikat gigi setiap 12 jam",
+            "cellType": "text"
+           },
+           {
+            "name": "oral",
+            "title": "Oral hygiene tiap 2-4 jam (klorheksidin 0,2 %)",
+            "cellType": "text"
+           },
+           {
+            "name": "jarak",
+            "title": "Jarak antar Tempat Tidur lebih dari meter",
+            "cellType": "text"
+           },
+           {
+            "name": "ttd",
+            "title": "Paraf petugas",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question2Pencegahan Ulkus Dekubitus",
+        "title": "Pencegahan Ulkus Dekubitus",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "table2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "kebersihan",
+            "title": "Kebersihan tangan",
+            "cellType": "text"
+           },
+           {
+            "name": "apd",
+            "title": "APD (sesuai indikasi)",
+            "cellType": "text"
+           },
+           {
+            "name": "posisi1",
+            "title": "Posisi pasien 30-40 ⁰ (Head up)",
+            "cellType": "text"
+           },
+           {
+            "name": "perubahan",
+            "title": "Perubahan posisi tiap 2 jam (mika-miki)",
+            "cellType": "text"
+           },
+           {
+            "name": "mesage",
+            "title": "Massage area penekanan (lotion, minyak zaitun)",
+            "cellType": "text"
+           },
+           {
+            "name": "support",
+            "title": "Support daerah tonjolan tulang",
+            "cellType": "text"
+           },
+           {
+            "name": "tekni2",
+            "title": "Teknik aseptik, alat/instrumen steril (perawatan luka)",
+            "cellType": "text"
+           },
+           {
+            "name": "ttd",
+            "title": "Paraf petugas",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question2",
+          "title": "Tanggal",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "comment",
+          "name": "diagnosa",
+          "title": "Diagnosa",
+          "hideNumber": true
+         }
+        ],
+        "title": "PENGKAJIAN RESIKO TERHADAP INFEKSI\nBERHUBUNGAN DENGAN \nTIRAH BARING & PROSEDUR INVASIF\n"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question4",
+        "title": "FAKTOR RESIKO",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "title": "ALAT / TINDAKAN",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "hari",
+            "title": "Hari pemakaian",
+            "cellType": "rating",
+            "rateMax": 20
+           },
+           {
+            "name": "ivl",
+            "title": "IVL / Injection Port",
+            "cellType": "text"
+           },
+           {
+            "name": "uc",
+            "title": "UC / Kateter Urine",
+            "cellType": "text"
+           },
+           {
+            "name": "bedres",
+            "title": "Bedrest / Tirah baring",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,136 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "lokasi_nyeri",
+        "title": "Lokasi Nyeri",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "defaultValue": [
+         {
+          "kategori": "( O ) ONSET",
+          "pertanyaan": "Kapan mulai terjadinya nyeri? "
+         },
+         {
+          "pertanyaan": "Berapa Lama?"
+         },
+         {
+          "pertanyaan": "Seberapa sering terjadinya nyeri?"
+         },
+         {
+          "kategori": "( p ) PRPVOCATING/ PALLIATING",
+          "pertanyaan": "Apa yang menjadi pencetus/ memperberat timbulnya nyeri?"
+         },
+         {
+          "pertanyaan": "Apa yang dapat meredakan nyeri?"
+         },
+         {
+          "kategori": "( Q ) QUALITY",
+          "pertanyaan": "Seperti apa nyeri yang dirasakan?"
+         },
+         {
+          "kategori": "( R ) REGION/ RADIATION",
+          "pertanyaan": "Apakah nyerinya menyebar?"
+         },
+         {
+          "pertanyaan": "Menyebar ke daerah tubuh bagian mana?"
+         },
+         {
+          "kategori": "( S ) SEVERITY",
+          "pertanyaan": "Seberapa berat nyerinya dirasakan? Menggunakan Numerik Rating Scale, Wong Bacer Face, FLacc, Cries, atau Comfort Pain scale"
+         },
+         {
+          "kategori": "( T ) TREATMENT",
+          "pertanyaan": "Apakah pengobatan/ perawatan yang sudah dilakukan?"
+         },
+         {
+          "kategori": "( U ) UNDERTANDING/ IMPACT ON YOU",
+          "pertanyaan": "Apa yang anda percayai yang menyebabkan timbulnya nyeri?"
+         },
+         {
+          "pertanyaan": "Bagaimana gejala ini mempengaruhi anda dan/ atau keluarga anda?"
+         },
+         {
+          "kategori": "( V )VALUES",
+          "pertanyaan": "Apa tujuan/ harapan anda terhadap nyeri yang dapat anda rasakan?"
+         },
+         {
+          "pertanyaan": "Seberapa kenyamanan / tingkat yang dapat anda terima (menggunakan skala nyeri)"
+         },
+         {
+          "pertanyaan": "Apakah ada pandangan lain atau perasaan anda mengenai nyeri yang anda rasakan?"
+         },
+         {
+          "pertanyaan": "Seberapa penting bagi anda dan / keluarga anda?"
+         }
+        ],
+        "columns": [
+         {
+          "name": "kategori",
+          "title": "Kategori",
+          "readOnly": true
+         },
+         {
+          "name": "pertanyaan",
+          "title": "Pertanyaan",
+          "cellType": "comment",
+          "readOnly": true
+         },
+         {
+          "name": "jawaban",
+          "title": "Jawaban",
+          "cellType": "comment"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 16
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "tgl_pengkajian",
+          "title": "Tanggal dan Jam Pengkajian",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "ttd_perawat",
+          "title": "Nama dan paraf perawat yang mengkaji",
+          "hideNumber": true,
+          "penColor": "#111212"
+         },
+         {
+          "type": "text",
+          "name": "nm_pengkaji",
+          "titleLocation": "hidden",
+          "size": 38
+         }
+        ]
+       }
+      ],
+      "title": "PENGKAJIAN NYERI KOMPREHENSIF"
+     }
+    ]
+   }

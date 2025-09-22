@@ -1,0 +1,246 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel1",
+          "elements": [
+           {
+            "type": "multipletext",
+            "name": "question1",
+            "titleLocation": "hidden",
+            "items": [
+             {
+              "name": "dokter",
+              "title": "Dokter Pelaksana Tindakan"
+             },
+             {
+              "name": "informasi",
+              "title": "Pemberi Informasi"
+             },
+             {
+              "name": "penerima",
+              "title": "Penerima Informasi"
+             }
+            ]
+           },
+           {
+            "type": "matrixdropdown",
+            "name": "question2",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "iform",
+              "title": "Isi Informasi",
+              "cellType": "text"
+             },
+             {
+              "name": "ceklist",
+              "title": "Tanda ()",
+              "cellType": "radiogroup",
+              "choices": [
+               {
+                "value": "ckls",
+                "text": " "
+               }
+              ]
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "rows": [
+             {
+              "value": "diagnosis",
+              "text": "1. Diagnosis (WD dan DD)"
+             },
+             {
+              "value": "dasar",
+              "text": "2. Dasar Diagnosis"
+             },
+             {
+              "value": "tindakan",
+              "text": "3. Tindakan"
+             },
+             {
+              "value": "indikasi",
+              "text": "4. Indikasi Tindakan"
+             },
+             {
+              "value": "tata_cara",
+              "text": "5. Tata cara tindakan"
+             },
+             {
+              "value": "tujuan_tindakan",
+              "text": "6. Tujuan Tindakan"
+             },
+             {
+              "value": "komplikasi",
+              "text": "7. Komplikasi"
+             },
+             {
+              "value": "prognosis",
+              "text": "8. Prognosis"
+             },
+             {
+              "value": "alternatif",
+              "text": "9. Alternatif & Risiko"
+             }
+            ]
+           },
+           {
+            "type": "html",
+            "name": "question3",
+            "html": "<h4> Dengan ini menyatakan bahwa saya telah menerangkan hal - hal diatas secara benar dan jelas serta memberi kesempatan untuk bertanya dan atau berdiskusi"
+           },
+           {
+            "type": "signaturepad",
+            "name": "ttd_dokter",
+            "title": "Tanda tangan Dokter",
+            "hideNumber": true,
+            "penColor": "#111212"
+           },
+           {
+            "type": "html",
+            "name": "question4",
+            "html": "<h4> Dengan ini menyatakan bahwa saya telah menerima informasi sebagaimana diatas dan telah memahaminya."
+           },
+           {
+            "type": "signaturepad",
+            "name": "ttd_pasien",
+            "title": "Tanda tangan Pasien",
+            "hideNumber": true,
+            "penColor": "#1c1c1c"
+           }
+          ],
+          "title": "PENOLAKAN TINDAKAN MEDIS"
+         }
+        ],
+        "title": "PEMBERIAN INFORMASI"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "bertanda_tangan",
+          "title": "Yang bertanda tangan di bawah ini, ",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama"
+           },
+           {
+            "name": "umur",
+            "title": "Umur"
+           },
+           {
+            "name": "alamat",
+            "title": "Alamat"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question5",
+          "title": "Dengan ini menyatakan MENOLAK untuk dilakukan :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "tindakan",
+            "title": "Tindakan"
+           },
+           {
+            "name": "terhadap",
+            "title": "Terhadap saya, "
+           },
+           {
+            "name": "bernama",
+            "title": "yang bernama"
+           },
+           {
+            "name": "tgl_lahir",
+            "title": "Tanggal Lahir"
+           },
+           {
+            "name": "alamat",
+            "title": "Alamat"
+           },
+           {
+            "name": "dirawat",
+            "title": "Dirawat di"
+           },
+           {
+            "name": "norm",
+            "title": "No.RM"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question6",
+          "html": "<h4> saya memahami perlunya tindakan sebagaimana telah dijelaskan kepada saya, termasuk resiko dan komplikasi yang mungkin terjadi.<p>\n<br> saya juga menyadari oleh karena itu kedokteran bukanlah ilmu pasti, maka keberhasilan tindakan kedokteran bukanlah keniscayaan, melainkan sangat bergantung kepada izin Tuhan Yang Maha Esa."
+         }
+        ],
+        "title": "PENOLAKAN"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel5",
+          "elements": [
+           {
+            "type": "signaturepad",
+            "name": "ttd1",
+            "title": "Saksi",
+            "hideNumber": true,
+            "penColor": "#121212"
+           },
+           {
+            "type": "signaturepad",
+            "name": "ttd2",
+            "startWithNewLine": false,
+            "title": "Yang menyatakan pasien/wali",
+            "hideNumber": true,
+            "penColor": "#161818"
+           },
+           {
+            "type": "signaturepad",
+            "name": "ttd3",
+            "startWithNewLine": false,
+            "title": "Dokter",
+            "hideNumber": true,
+            "penColor": "#161818"
+           },
+           {
+            "type": "signaturepad",
+            "name": "question7",
+            "startWithNewLine": false,
+            "title": "Saksi",
+            "hideNumber": true,
+            "penColor": "#161818"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

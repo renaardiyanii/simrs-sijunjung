@@ -1,0 +1,115 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+	class Mmruang extends CI_Model{
+		function __construct(){
+			parent::__construct();
+		}
+
+		//master ruang
+		function get_all_ruang(){
+			return $this->db->query("SELECT
+			ruang.*,
+			jt.tarif 
+		FROM
+			ruang
+			JOIN (
+				SELECT 
+					RIGHT(idtindakan, 4) AS idrg_match, 
+					tarif 
+				FROM 
+					jenis_tindakan_new
+				WHERE 
+					idtindakan LIKE '1A%'
+			) jt ON jt.idrg_match = ruang.idrg 
+		
+		ORDER BY
+			ruang.idrg;
+		");
+		}
+
+		function get_data_ruang($id_ruang){
+			return $this->db->query("SELECT * FROM ruang WHERE idrg='$id_ruang'");
+		}
+
+		function get_data_bed($bed){
+			return $this->db->query("SELECT ruang.idrg, ruang.nmruang, bed.kelas, RIGHT(bed, 2) AS no_bed, bed.isi, bed.bed, bed.status, (Select count(*) from pasien_iri where bed=bed.bed and tgl_keluar is null) as aktif
+ FROM ruang, bed WHERE ruang.idrg=bed.idrg AND bed.bed='$bed'");
+		}
+
+		function insert_ruang($data){
+			$this->db->insert('ruang', $data);
+			return true;
+		}
+
+		function insert_tindakan($data){
+			$this->db->insert('jenis_tindakan_new', $data);
+			return true;
+		}
+
+		function insert_tarif($data){
+			$this->db->insert('tarif_tindakan', $data);
+			return true;
+		}
+
+		//master bed
+		function get_all_bed(){
+			return $this->db->query("SELECT ruang.idrg, ruang.nmruang, bed.kelas, RIGHT(bed, 2) AS no_bed, bed.isi, bed.bed, bed.status,bed.aktif FROM ruang, bed WHERE ruang.idrg=bed.idrg ORDER BY bed.bed");
+		}
+
+		function get_all_kelas(){
+			return $this->db->query("SELECT * from kelas ORDER BY urutan");
+		}
+
+		function get_banyak_bed($idrg, $kelas){
+			return $this->db->query("SELECT count(*) as banyak FROM bed WHERE idrg='$idrg' and kelas='$kelas' GROUP BY idrg, kelas");
+		}
+
+		function insert_bed($data){
+			$this->db->insert('bed', $data);
+			return true;
+		}
+
+		function edit_ruang($id_ruang, $data){
+			$this->db->where('idrg', $id_ruang);
+			$this->db->update('ruang', $data); 
+			return true;
+		}
+
+		function edit_bed($bed, $data){
+			$this->db->where('bed', $bed);
+			$this->db->update('bed', $data); 
+			return true;
+		}
+
+		function delete_bed($bed){
+			return $this->db->query("DELETE FROM bed WHERE bed.bed='$bed'");
+		}
+
+		function nonaktif_bed($bed,$isi)
+		{
+			return $this->db->where('bed',$bed)->update('bed',['aktif'=>$isi==''?NULL:$isi]);
+		}
+
+		function soft_delete_ruang($id_ruang,$data){
+			$this->db->where('id_ruang',$id_ruang);
+			$this->db->update('ruang',$data);
+			return true;
+		}
+
+		function active_ruang($id_ruang,$data){
+			$this->db->where('id_ruang',$id_ruang);
+			$this->db->update('ruang',$data);
+			return true;
+		}
+
+		function get_all_ruang_aktif()
+		{
+			return $this->db->where('aktif','Active')->get('ruang');
+		}
+
+		function get_all_bed_aktif()
+		{
+			return $this->db->select('bed.bed,bed.kelas,bed.kelasjkn,ruang.nmruang')->from('bed')->join('ruang','ruang.idrg = bed.idrg')->where('bed.aktif',null)->get();
+		}
+	}
+?>

@@ -1,0 +1,433 @@
+{
+    "title": "ASUHAN GIZI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl",
+        "title": "Tanggal :",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "text",
+        "name": "jam",
+        "startWithNewLine": false,
+        "title": "Jam :",
+        "hideNumber": true,
+        "inputType": "time"
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "antropometri",
+          "title": "Antropometri",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tinggi_lutut1",
+            "title": "Tinggi Lutut",
+            "cellType": "text"
+           },
+           {
+            "name": "lla1",
+            "title": "LLA",
+            "cellType": "text"
+           },
+           {
+            "name": "berat_badan",
+            "title": "BB (kg)",
+            "cellType": "text",
+            "inputType": "number",
+            "step": 1
+           },
+           {
+            "name": "tinggi_badan",
+            "title": "TB (cm)",
+            "cellType": "text",
+            "inputType": "number",
+            "step": 1
+           },
+           {
+            "name": "imt",
+            "title": "IMT",
+            "cellType": "expression",
+            "expression": "pembulatan({row.berat_badan}/(({row.tinggi_badan}/100)*({row.tinggi_badan}/100)))",
+            "displayStyle": "decimal"
+           },
+           {
+            "name": "status_gizi",
+            "title": "Status Gizi",
+            "cellType": "expression",
+            "expression": "iif({row.imt}>27.1,'Gemuk tingkat berat, IMT > 27.1',iif({row.imt}>25.1,'Gemuk tingkat ringan, IMT 25,1 - 27',iif({row.imt}>18.5,'Normal, IMT 18,5 - 25',iif({row.imt>17},'Kurus tingkat ringan, IMT 17,0 - 18,4','Kurus tingkat berat, IMT < 17'))))"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "row",
+            "text": " "
+           }
+          ]
+         }
+        ],
+        "title": "Antropometri"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel3",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "gula_darah",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "glukosa_darah",
+              "text": "Glukosa Darah"
+             }
+            ],
+            "otherText": "Lainnya"
+           },
+           {
+            "type": "text",
+            "name": "check_guladarah",
+            "visibleIf": "{gula_darah} = ['glukosa_darah']",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "placeHolder": "mg/dL (N < 140 mg/dL)"
+           },
+           {
+            "type": "checkbox",
+            "name": "ureum",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "ureum",
+              "text": "Ureum"
+             }
+            ],
+            "otherText": "Lainnya"
+           },
+           {
+            "type": "text",
+            "name": "check_ureum",
+            "visibleIf": "{ureum} = ['ureum']",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "placeHolder": "mg/dL (N = 20-50 mg/dL)"
+           },
+           {
+            "type": "checkbox",
+            "name": "kreatinim",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "kreatinim",
+              "text": "Kreatinim"
+             }
+            ],
+            "otherText": "Lainnya"
+           },
+           {
+            "type": "text",
+            "name": "check_kreatinim",
+            "visibleIf": "{kreatinim} = ['kreatinim']",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "placeHolder": "mg/dL (N = 0,5-1,5 mg/dL)"
+           },
+           {
+            "type": "checkbox",
+            "name": "lainnya",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "lainnya",
+              "text": "Lainnya"
+             }
+            ],
+            "otherText": "Lainnya"
+           },
+           {
+            "type": "text",
+            "name": "check_lainnya",
+            "visibleIf": "{lainnya} = ['lainnya']",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "placeHolder": "Lainnya"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel4",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "sgpt",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "sgpt",
+              "text": "SGPT "
+             }
+            ],
+            "otherText": "Lainnya"
+           },
+           {
+            "type": "text",
+            "name": "check_sgpt",
+            "visibleIf": "{sgpt} = ['sgpt']",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "placeHolder": "U/L (N < 40 U/L)"
+           },
+           {
+            "type": "checkbox",
+            "name": "sgot",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "sgot",
+              "text": "SGOT"
+             }
+            ],
+            "otherText": "Lainnya"
+           },
+           {
+            "type": "text",
+            "name": "check_sgot",
+            "visibleIf": "{sgot} = ['sgot']",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "placeHolder": "U/L (N < 35U/L)"
+           },
+           {
+            "type": "checkbox",
+            "name": "albumin",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "albumin",
+              "text": "Albumin"
+             }
+            ],
+            "otherText": "Lainnya"
+           },
+           {
+            "type": "text",
+            "name": "check_albumin",
+            "visibleIf": "{albumin} = ['albumin']",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "placeHolder": "gr/dL (N=3,5-5,0 gr/dL)"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "comment",
+          "name": "klinik_fisik",
+          "title": "Klinik / Fisik ",
+          "hideNumber": true
+         }
+        ],
+        "title": "Biokimia"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "table_alergi",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "telur",
+            "title": "Telur",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "susu_sapi",
+            "title": "Susu Sapi & produk olahan",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "kacang",
+            "title": "Kacan kedelai / tanah",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "gulten",
+            "title": "Gluten / gandum",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "udang",
+            "title": "Udang",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "ikan",
+            "title": "Ikan",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "comment",
+          "name": "pola_makanan",
+          "title": "Pola Makanan ",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_personal",
+          "title": "Riwayat Personal",
+          "hideNumber": true
+         }
+        ],
+        "title": "Riwayat Alergi "
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "diagnosis_gizi",
+        "title": "Diagnosis Gizi",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "text",
+          "name": "nm_dpjp",
+          "title": "DPJP / dr. Sp.GK",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "kebutuhan_gizi",
+          "title": "Kebutuhan Gizi :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "energi",
+            "placeHolder": "kalori",
+            "title": "Energi"
+           },
+           {
+            "name": "protein",
+            "placeHolder": "gr",
+            "title": "Protein"
+           },
+           {
+            "name": "lemak",
+            "placeHolder": "gr",
+            "title": "Lemak"
+           },
+           {
+            "name": "karbohidrat",
+            "placeHolder": "gr",
+            "title": "Karbohidrat"
+           },
+           {
+            "name": "diit",
+            "title": "Diit "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "monitoring",
+          "title": "Monitoring",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Asupan Selama Dirawat"
+           },
+           {
+            "value": "item2",
+            "text": "Data Biokimia"
+           },
+           {
+            "value": "item3",
+            "text": "Data Fisik/Klinis"
+           },
+           {
+            "value": "item4",
+            "text": "Kepatuhan Diet"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "checkbox",
+          "name": "evaluasi",
+          "title": "Evaluasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Asupan Selama Dirawat"
+           },
+           {
+            "value": "item2",
+            "text": "Data Biokimia"
+           },
+           {
+            "value": "item3",
+            "text": "Data Fisik/Klinis"
+           },
+           {
+            "value": "item4",
+            "text": "Kepatuhan Diet"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "Intervensi Gizi"
+       }
+      ]
+     }
+    ]
+   }

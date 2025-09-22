@@ -1,0 +1,125 @@
+{
+    "title": "SURAT PERNYATAAN JANGAN DILAKUKAN RESUSITASI",
+    "description": "(DO NOT RESUCITATE) ",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "title": "Yang bertanda tangan dibawah ini saya: ",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama "
+           },
+           {
+            "name": "tgl",
+            "title": "Tanggal Lahir"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question2",
+          "html": "<h5> Dengan ini saya menyatakan bahwa saya membuat keputusan dan menyetujui perintah do not resuscitate (jangan di resusitasi)\n</br></p>\n<br> Saya menyatakan bahwa jika jantung saya berhenti berdetak atau jika saya berhenti bernapas , tidak ada prosedur medis untuk mengembalikan bernapas atau berfungsi kembali jantung akan dilakukan oleh staf Rumah sakit,  namun tidak terbatas pada staf layanan medis darurat.</br></p>\n<br><p>Saya memahami bahwa keputusan ini tidak akan mencegah saya menerima pelayanan kesehatan lainnya seperti pemberian maneuver Heimlich atau pemberian oksigen dan langkah-langkah perawatan untuk meningkatkan kenyamanan lainnya</br></p>\n<br><p>Saya memberikan izin agar informasi ini diberikan kepada seluruh staf rumah sakit, Saya memahami bahwa saya dapat mencabut pernyataan ini setiap saat </br></p>"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question3",
+          "title": "Yang menyatakan             ",
+          "hideNumber": true,
+          "penColor": "#0a0b0b"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question4",
+          "startWithNewLine": false,
+          "title": "Saksi I",
+          "hideNumber": true,
+          "penColor": "#0a0b0b"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question5",
+          "startWithNewLine": false,
+          "title": "Saksi II",
+          "hideNumber": true,
+          "penColor": "#0a0b0b"
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "Nama Lengkap",
+          "titleLocation": "bottom",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "startWithNewLine": false,
+          "title": "Nama Lengkap",
+          "titleLocation": "bottom",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "startWithNewLine": false,
+          "title": "Nama Lengkap",
+          "titleLocation": "bottom",
+          "hideNumber": true
+         }
+        ]
+       }
+      ],
+      "description": "halaman1"
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question9",
+          "html": "<h5>Formulir ini adalah perintah dokter penanggung jawab pelayanan kepada seluruh                                                                                   staf klinis rumah sakit, agar tidak dilakukan resusitasi pada pasien ini bila terjadi henti jantung (bila tak ada denyut nadi) dan henti nafas <p> (tak ada pernafasan spontan). \n<p>Formulir ini juga memberikan perintah kepada staf medis untuk tetap melakukan intervensi atau pengobatan, atau tata laksana lainnya sebelum terjadinya henti jantung atau henti nafas. \n"
+         },
+         {
+          "type": "multipletext",
+          "name": "question10",
+          "title": "Yang bertanda tangan dibawah ini saya: ",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama "
+           },
+           {
+            "name": "tgl",
+            "title": "Tanggal Lahir"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question11",
+          "html": "<h5>Perintah/ Pernyataan dokter penanggung jawab pelayanan : \n<p><br> Saya dokter yang bertanda tangan dibawah ini menginstruksikan kepada seluruh staf medis dan staf klinis lainnya untuk melakukan hal-hal tertulis dibawah ini: </p>\n<p>•Usaha komprehensif untuk mencegah henti jantung atau henti nafas tanpa melakukan intubasi. DO NOT RESUCITATE TIDAK DILAKUKAN RESUSITASI JANTUNG PARU (RJP) \n<p>\n•Usaha suportif sebelum terjadi henti nafas atau henti jantung yang meliputi pembukaan jalan nafas non invasive, mengontrol perdarahan, memposisikan pasien dengan nyaman, pemberian oat-obatan anati nyeri. <p>TIDAK MELAKUKAN RJP (RESUSITASI JANTUNG PARU) bila henti nafas atau henti jantung terjadi. \n<br><br><p>Saya dokter yang bertanda tangan dibawah ini menyatakan bahwa keputusan DNR diatas diambil setelah pasien diberikan penjelasan dan informed consent diperoleh dari salah satu : \n<p>\n•\tPasien \n<p>•\tTenaga kesehatan yang ditunjuk pasien \n<p>•\tWali yang sah atas pasien (termasuk yang ditunjuk oleh pengadilan) \n<p>•\tAnggota keluarga pasien \n<p><br>Jika yang diatas tidak dimungkinkan maka dokter yang bertanda tangan dibawah ini memberikan perintah DNR berdasarkan pada : \n<p>•Instruksi pasien sebelumnya atau \n<p>•Keputusan dua orang dokter yang menyatakan bahwa Resusitasi jantung paru (RJP) akan mendatangkan hasil yang tidak efektif.\n"
+         }
+        ],
+        "title": "DO NOT RESUCITATE (JANGAN DILAKUKAN RESUSITASI)"
+       }
+      ],
+      "description": "halaman 2"
+     }
+    ]
+   }

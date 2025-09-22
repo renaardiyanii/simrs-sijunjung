@@ -1,0 +1,412 @@
+{
+    "title": "PENGKAJIAN RISIKO JATUH PADA PASIEN GERIATRI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question1",
+        "title": "Tanggal dan Jam",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "comment",
+        "name": "question4",
+        "title": "Diagnosa",
+        "hideNumber": true
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question3",
+        "title": "Skrining",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "column2",
+            "title": "Riwayat jatuh = Apakah  pasien datang ke rumah sakit karena jatuh?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "6",
+              "text": "Ya"
+             },
+             {
+              "value": "0",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Riwayat jatuh = Jika tidak apakah pasien mengalami jatuh dalam 2 bulan terakhir ini?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "6",
+              "text": "Ya"
+             },
+             {
+              "value": "0",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "Status mental = Apakah pasien delirium? (tidak dapat membuat keputusan, pola pikir teroganisir, gangguan daya ingat)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "14",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "Status mental = Apakah pasien disorientasi? (salah menyebutkan waktu, tempat, atau orang)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "14",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "Status mental = Apakah pasien mengalami agitasi? (ketakutan, gelisah, dan cemas)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "14",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column7",
+            "title": "Penglihatan = Apakah pasien memakai kacamata?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "1",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column8",
+            "title": "Penglihatan = Apakah pasien mengeluh adanya penglihatan buram?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "1",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column9",
+            "title": "Penglihatan = Apakah pasien mempunyai glaucoma, katarak, atau degenerasi makula?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "1",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column10",
+            "title": "Kebiasaan berkemih = Apakah terdapat perubahan perilaku berkemih? (frekuensi, urgensi, inkonentisia, nokturia)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak"
+             },
+             {
+              "value": "2",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "column11",
+            "title": "Transfer (dari tempat tidur ke kursi dan kembali ke tempat tidur",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Mandiri (boleh menggunakan alat bantu jalan) (0)"
+             },
+             {
+              "value": "1",
+              "text": "Memerlukan sedikit bantuan (1 orang)/dalam pengawasan (1)"
+             },
+             {
+              "value": "2",
+              "text": "Memerlukan sedikit bantuan yang nyata (2 orang) (2)"
+             },
+             {
+              "value": "3",
+              "text": "Tidak dapat duduk seimbang, perlu bantuan totai (3)"
+             }
+            ]
+           },
+           {
+            "name": "column14",
+            "title": "Mobilitas ",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "Pasien imobilitas (3)"
+             },
+             {
+              "value": "2",
+              "text": "Pasien menggunakan kursi roda (2)"
+             },
+             {
+              "value": "4",
+              "text": "Pasien berjalan dengan bantuan 1 orang (verbal atau fisik) (1)"
+             },
+             {
+              "value": "0",
+              "text": "pasien mandiri (0)"
+             }
+            ]
+           },
+           {
+            "name": "column12",
+            "title": "Skor",
+            "cellType": "expression",
+            "expression": "{row.column2}+{row.column3}+{row.column4}+{row.column5}+{row.column6}+{row.column7}+{row.column8}+{row.column9}+{row.column10}+{row.column11}+{row.column14}"
+           },
+           {
+            "name": "column13",
+            "title": "Nama perawat",
+            "cellType": "text"
+           },
+           {
+            "name": "column15",
+            "title": "Paraf perawat",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Jawaban"
+           }
+          ]
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "question5",
+        "title": "Resiko Rendah",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": "1. Lakukan orientasi rawat inap kepada pasien",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column2",
+          "title": "2. posisikan tempat tidur serendah mungkin , roda terkunci, kedua sisi pegangan tempat tidur terpasang dengan baik",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column3",
+          "title": "3. Ruangan rapi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column4",
+          "title": "4. benda benda pribadi dalam jangkauan (telepon genggam, tombol panggilan , air minum, kaca mata)",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column5",
+          "title": "5. pencahayaan yang adekuat",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column6",
+          "title": "6. alat bantu dalam jangkauan",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column7",
+          "title": "7. optimalisasi penggunaan kaca mata dan alat bantu dengar",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column8",
+          "title": "8. pantau efek obat obatan ",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column9",
+          "title": "9. sediakan dukungan emosional dan psikologis",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column10",
+          "title": "10. beri edukasi mengenai pencegahan jatuh pada pasien dan keluarga",
+          "cellType": "checkbox"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         {
+          "value": 1,
+          "text": "✓"
+         }
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Ceklis"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question6",
+        "title": "Resiko Sedang",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": "1. lakukan tindakan pencegahan jatuh no 1-10",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column2",
+          "title": "2. pasangkan stiker jatuh warna kuning sebagai penanda resiko",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column3",
+          "title": "3. beri tanda resiko jatuh pada tempat tidur atau pintu kamar pasien",
+          "cellType": "checkbox"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         {
+          "value": 1,
+          "text": "✓"
+         }
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Ceklis"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question7",
+        "title": "Resiko Tinggi >14",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": "1. Lakukan tindakan pencegahan resiko jatuh no 1-13",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column2",
+          "title": "2. kunjungi dan monitor pasien setiap 1 jam ",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column3",
+          "title": "3. tempatkan pasien di kamar yang palinh dekat dengan nurse stasion (jika memungkinkan)",
+          "cellType": "checkbox"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         {
+          "value": 1,
+          "text": "✓"
+         }
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Ceklis"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question8",
+        "html": "<p>Keterangan skor :\t\n<p>0 – 5\t = risikio rendah\n<p>6 – 13\t = risiko sedang\n<p>> 14\t = risiko tinggi"
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,1031 @@
+{
+    "title": "INTRUKSI HARIAN HCU / ICU",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "date",
+            "title": "Tanggal masuk"
+           },
+           {
+            "name": "text2",
+            "title": "Diagnosa"
+           },
+           {
+            "name": "text3",
+            "title": "Dr. HCU"
+           },
+           {
+            "name": "text4",
+            "title": "Hari ke :"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question2",
+          "title": "Cara bayar",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Umum"
+           },
+           {
+            "value": "item2",
+            "text": "BPJS"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Masuk dari"
+           },
+           {
+            "name": "text2",
+            "title": "Keluar ke"
+           }
+          ]
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "ENTERAL",
+            "cellType": "comment"
+           },
+           {
+            "name": "column2",
+            "title": "PARENTERAL",
+            "cellType": "comment"
+           },
+           {
+            "name": "column3",
+            "title": "TH/02",
+            "cellType": "comment"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "comment",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "multipletext",
+          "name": "question5",
+          "width": "300px",
+          "maxWidth": "300px",
+          "title": "ENTERAL",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Volume"
+           },
+           {
+            "name": "text2",
+            "title": "Kalori"
+           },
+           {
+            "name": "text3",
+            "title": "Protein"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question6",
+          "width": "300px",
+          "maxWidth": "300px",
+          "startWithNewLine": false,
+          "title": "PARENTERAL",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Volume"
+           },
+           {
+            "name": "text2",
+            "title": "Kalori"
+           },
+           {
+            "name": "text3",
+            "title": "Protein"
+           }
+          ]
+         }
+        ],
+        "title": "INTAKE"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question7",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "ENTERAL/LAIN2",
+            "cellType": "comment"
+           },
+           {
+            "name": "column2",
+            "title": "PARENTERAL",
+            "cellType": "comment"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "comment",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "OBAT",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question11",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "FOTO THORAX",
+            "cellType": "comment"
+           },
+           {
+            "name": "column2",
+            "title": "LAIN LAIN",
+            "cellType": "comment"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "comment",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "LAB",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question9",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "KES",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "PUPIL",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "REF",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "GCS",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "07"
+           },
+           {
+            "value": "item2",
+            "text": "08"
+           },
+           {
+            "value": "item3",
+            "text": "09"
+           },
+           {
+            "value": "item4",
+            "text": "10"
+           },
+           {
+            "value": "item5",
+            "text": "11"
+           },
+           {
+            "value": "item6",
+            "text": "12"
+           },
+           {
+            "value": "item7",
+            "text": "13"
+           },
+           {
+            "value": "item8",
+            "text": "14"
+           },
+           {
+            "value": "item9",
+            "text": "15"
+           },
+           {
+            "value": "item10",
+            "text": "16"
+           },
+           {
+            "value": "item11",
+            "text": "17"
+           },
+           {
+            "value": "item12",
+            "text": "18"
+           },
+           {
+            "value": "item13",
+            "text": "19"
+           },
+           {
+            "value": "item14",
+            "text": "20"
+           },
+           {
+            "value": "item15",
+            "text": "21"
+           },
+           {
+            "value": "item16",
+            "text": "22"
+           },
+           {
+            "value": "item17",
+            "text": "23"
+           },
+           {
+            "value": "item18",
+            "text": "24"
+           }
+          ]
+         }
+        ],
+        "title": "SSP"
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question8",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "BP",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "MAP",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "HR",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Sat02",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "CVP",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "07"
+           },
+           {
+            "value": "item2",
+            "text": "08"
+           },
+           {
+            "value": "item3",
+            "text": "09"
+           },
+           {
+            "value": "item4",
+            "text": "10"
+           },
+           {
+            "value": "item5",
+            "text": "11"
+           },
+           {
+            "value": "item6",
+            "text": "12"
+           },
+           {
+            "value": "item7",
+            "text": "13"
+           },
+           {
+            "value": "item8",
+            "text": "14"
+           },
+           {
+            "value": "item9",
+            "text": "15"
+           },
+           {
+            "value": "item10",
+            "text": "16"
+           },
+           {
+            "value": "item11",
+            "text": "17"
+           },
+           {
+            "value": "item12",
+            "text": "18"
+           },
+           {
+            "value": "item13",
+            "text": "19"
+           },
+           {
+            "value": "item14",
+            "text": "20"
+           },
+           {
+            "value": "item15",
+            "text": "21"
+           },
+           {
+            "value": "item16",
+            "text": "22"
+           },
+           {
+            "value": "item17",
+            "text": "23"
+           },
+           {
+            "value": "item18",
+            "text": "24"
+           }
+          ]
+         }
+        ],
+        "title": "KARDIOVASKULER"
+       },
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question10",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "ENT",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "PAR",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "TRANF",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "07"
+           },
+           {
+            "value": "item2",
+            "text": "08"
+           },
+           {
+            "value": "item3",
+            "text": "09"
+           },
+           {
+            "value": "item4",
+            "text": "10"
+           },
+           {
+            "value": "item5",
+            "text": "11"
+           },
+           {
+            "value": "item6",
+            "text": "12"
+           },
+           {
+            "value": "item7",
+            "text": "13"
+           },
+           {
+            "value": "item8",
+            "text": "14"
+           },
+           {
+            "value": "item9",
+            "text": "15"
+           },
+           {
+            "value": "item10",
+            "text": "16"
+           },
+           {
+            "value": "item11",
+            "text": "17"
+           },
+           {
+            "value": "item12",
+            "text": "18"
+           },
+           {
+            "value": "item13",
+            "text": "19"
+           },
+           {
+            "value": "item14",
+            "text": "20"
+           },
+           {
+            "value": "item15",
+            "text": "21"
+           },
+           {
+            "value": "item16",
+            "text": "22"
+           },
+           {
+            "value": "item17",
+            "text": "23"
+           },
+           {
+            "value": "item18",
+            "text": "24"
+           }
+          ]
+         }
+        ],
+        "title": "CAIRAN MASUK"
+       },
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question12",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "URIN",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "NGT",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "LAIN",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "07"
+           },
+           {
+            "value": "item2",
+            "text": "08"
+           },
+           {
+            "value": "item3",
+            "text": "09"
+           },
+           {
+            "value": "item4",
+            "text": "10"
+           },
+           {
+            "value": "item5",
+            "text": "11"
+           },
+           {
+            "value": "item6",
+            "text": "12"
+           },
+           {
+            "value": "item7",
+            "text": "13"
+           },
+           {
+            "value": "item8",
+            "text": "14"
+           },
+           {
+            "value": "item9",
+            "text": "15"
+           },
+           {
+            "value": "item10",
+            "text": "16"
+           },
+           {
+            "value": "item11",
+            "text": "17"
+           },
+           {
+            "value": "item12",
+            "text": "18"
+           },
+           {
+            "value": "item13",
+            "text": "19"
+           },
+           {
+            "value": "item14",
+            "text": "20"
+           },
+           {
+            "value": "item15",
+            "text": "21"
+           },
+           {
+            "value": "item16",
+            "text": "22"
+           },
+           {
+            "value": "item17",
+            "text": "23"
+           },
+           {
+            "value": "item18",
+            "text": "24"
+           }
+          ]
+         }
+        ],
+        "title": "CAIRAN KELUAR"
+       },
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question13",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "RR",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "SUHU",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "GDR",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "MASALAH",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "INTRUKSI CITO",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "PPO",
+            "cellType": "text"
+           },
+           {
+            "name": "column7",
+            "title": "HASIL LAB",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "TINDAKAN & RESPON",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "PARAF",
+            "cellType": "signaturepad"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "07"
+           },
+           {
+            "value": "item2",
+            "text": "08"
+           },
+           {
+            "value": "item3",
+            "text": "09"
+           },
+           {
+            "value": "item4",
+            "text": "10"
+           },
+           {
+            "value": "item5",
+            "text": "11"
+           },
+           {
+            "value": "item6",
+            "text": "12"
+           },
+           {
+            "value": "item7",
+            "text": "13"
+           },
+           {
+            "value": "item8",
+            "text": "14"
+           },
+           {
+            "value": "item9",
+            "text": "15"
+           },
+           {
+            "value": "item10",
+            "text": "16"
+           },
+           {
+            "value": "item11",
+            "text": "17"
+           },
+           {
+            "value": "item12",
+            "text": "18"
+           },
+           {
+            "value": "item13",
+            "text": "19"
+           },
+           {
+            "value": "item14",
+            "text": "20"
+           },
+           {
+            "value": "item15",
+            "text": "21"
+           },
+           {
+            "value": "item16",
+            "text": "22"
+           },
+           {
+            "value": "item17",
+            "text": "23"
+           },
+           {
+            "value": "item18",
+            "text": "24"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question16",
+        "title": " ",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question14",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "KE",
+            "cellType": "rating",
+            "rateValues": [
+             {
+              "value": "item1",
+              "text": "7"
+             },
+             {
+              "value": "item2",
+              "text": "8"
+             },
+             {
+              "value": "item3",
+              "text": "9"
+             },
+             {
+              "value": "item4",
+              "text": "10"
+             },
+             {
+              "value": "item5",
+              "text": "11"
+             },
+             {
+              "value": "item6",
+              "text": "12"
+             },
+             {
+              "value": "item7",
+              "text": "13"
+             },
+             {
+              "value": "item8",
+              "text": "14"
+             },
+             {
+              "value": "item9",
+              "text": "15"
+             },
+             {
+              "value": "item10",
+              "text": "16"
+             },
+             {
+              "value": "item11",
+              "text": "17"
+             },
+             {
+              "value": "item12",
+              "text": "18"
+             },
+             {
+              "value": "item13",
+              "text": "19"
+             },
+             {
+              "value": "item14",
+              "text": "20"
+             },
+             {
+              "value": "item15",
+              "text": "21"
+             },
+             {
+              "value": "item16",
+              "text": "22"
+             },
+             {
+              "value": "item17",
+              "text": "23"
+             },
+             {
+              "value": "item18",
+              "text": "24"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "JENIS CAIRAN",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question15",
+          "title": "KESEIMBANGAN CAIRAN",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Masuk",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "Keluar",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "IWL",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Balans",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1
+       },
+       {
+        "type": "panel",
+        "name": "panel11",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question17",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "PAGI",
+            "cellType": "comment"
+           },
+           {
+            "name": "column2",
+            "title": "SIANG",
+            "cellType": "comment"
+           },
+           {
+            "name": "column3",
+            "title": "SORE",
+            "cellType": "comment"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "CATATAN PERAWAT"
+       }
+      ]
+     }
+    ]
+   }

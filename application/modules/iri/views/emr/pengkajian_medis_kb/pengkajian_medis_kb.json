@@ -1,0 +1,259 @@
+{
+    "title": " PENGKAJIAN MEDIS PASIEN  RAWAT INAP  OBSTETRI DAN GINEKOLOGI",
+    "description": "Dilengkapi dalam 24 jam pertama pasien masuk ruang rawat)",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel7",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question8",
+            "title": "KU ",
+            "hideNumber": true
+           },
+           {
+            "type": "checkbox",
+            "name": "question9",
+            "startWithNewLine": false,
+            "title": "Kesadaran",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Composmentis"
+             },
+             {
+              "value": "item2",
+              "text": "Apatis"
+             },
+             {
+              "value": "item3",
+              "text": "Somnolent"
+             },
+             {
+              "value": "item4",
+              "text": "Soporo "
+             },
+             {
+              "value": "item5",
+              "text": "Soporocoma"
+             },
+             {
+              "value": "item6",
+              "text": "Koma"
+             }
+            ],
+            "colCount": 4
+           },
+           {
+            "type": "text",
+            "name": "question10",
+            "title": "Tekanan Darah :",
+            "hideNumber": true,
+            "placeHolder": "mmHg"
+           },
+           {
+            "type": "radiogroup",
+            "name": "question11",
+            "startWithNewLine": false,
+            "title": "Nadi ",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "Tidak teratur"
+             }
+            ],
+            "hasOther": true,
+            "otherPlaceHolder": "x/mnt",
+            "otherText": "Teratur",
+            "colCount": 4
+           },
+           {
+            "type": "text",
+            "name": "question12",
+            "title": "Suhu Tubuh",
+            "hideNumber": true,
+            "placeHolder": "C"
+           },
+           {
+            "type": "radiogroup",
+            "name": "question13",
+            "startWithNewLine": false,
+            "title": "Pernafasan ",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item2",
+              "text": "Tidak teratur"
+             }
+            ],
+            "hasOther": true,
+            "otherPlaceHolder": "x/mnt",
+            "otherText": "Teratur",
+            "colCount": 4
+           },
+           {
+            "type": "multipletext",
+            "name": "question14",
+            "titleLocation": "hidden",
+            "items": [
+             {
+              "name": "text1",
+              "placeHolder": "cm",
+              "title": "TB "
+             },
+             {
+              "name": "text2",
+              "placeHolder": "kg",
+              "title": "BB"
+             },
+             {
+              "name": "text3",
+              "title": "IMT"
+             }
+            ],
+            "colCount": 3
+           }
+          ],
+          "title": "1. PEMERIKSAAN UMUM"
+         }
+        ],
+        "title": "ASESMEN MEDIS "
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "2. PEMERIKSAAN FISIK"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Inspeksi"
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "Palpasi"
+         },
+         {
+          "type": "comment",
+          "name": "question4",
+          "title": "Auskultasi"
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "startWithNewLine": false,
+          "title": " TBJ"
+         },
+         {
+          "type": "comment",
+          "name": "question6",
+          "title": "Inspekulo"
+         },
+         {
+          "type": "comment",
+          "name": "question7",
+          "title": "Periksa dalam"
+         }
+        ],
+        "title": "3. STATUS OBSTETRI DAN GINEKOLOGI"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question15",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "4. PELVIMETRI KLINIK (khusus ibu hamil 34-36 minggu atau inpartu)"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question16",
+        "title": "5. PEMERIKSAAN PENUNJANG DIAGNOSTIK(CTG, USG ,LAB )  :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question17",
+        "title": "6. DIAGNOSIS KERJA :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question18",
+        "title": "7. PENATALAKSANAAN:",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question19",
+          "title": "a. Rencana Diagnostik",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question20",
+          "title": "b. Rencana Edukasi",
+          "hideNumber": true
+         }
+        ],
+        "title": "8. PERENCANAAN"
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question21",
+          "titleLocation": "hidden",
+          "hideNumber": true
+         }
+        ],
+        "title": "9. PROGNOSIS\t:"
+       },
+       {
+        "type": "text",
+        "name": "question22",
+        "title": "Tanggal / Jam",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       }
+      ]
+     }
+    ]
+   }

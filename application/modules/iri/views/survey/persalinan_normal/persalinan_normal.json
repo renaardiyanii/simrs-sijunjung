@@ -1,0 +1,444 @@
+{
+    "title": "PERSALINAN NORMAL",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "noreg",
+            "title": "No.Register"
+           },
+           {
+            "name": "ibu",
+            "title": "Nama Ibu"
+           },
+           {
+            "name": "umur",
+            "title": "Umur"
+           },
+           {
+            "name": "g",
+            "title": "G"
+           },
+           {
+            "name": "p",
+            "title": "P"
+           },
+           {
+            "name": "a",
+            "title": "A"
+           },
+           {
+            "name": "puskesmas",
+            "title": "No.Puskesmas"
+           },
+           {
+            "name": "tgl",
+            "title": "Tanggal"
+           },
+           {
+            "name": "jam",
+            "inputType": "time",
+            "title": "Jam"
+           },
+           {
+            "name": "alamat",
+            "title": "Alamat"
+           },
+           {
+            "name": "ketuban",
+            "inputType": "time",
+            "title": "Ketuban pecah sejak jam"
+           },
+           {
+            "name": "mules",
+            "inputType": "time",
+            "title": "Mules sejak jam"
+           }
+          ],
+          "colCount": 3
+         }
+        ],
+        "title": "PARTOGRAF"
+       },
+       {
+        "type": "panel",
+        "name": "panel2"
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "200"
+         },
+         {
+          "name": "Column 2",
+          "title": "190"
+         },
+         {
+          "name": "Column 3",
+          "title": "180"
+         },
+         {
+          "name": "Column 4",
+          "title": "170"
+         },
+         {
+          "name": "Column 5",
+          "title": "160"
+         },
+         {
+          "name": "Column 6",
+          "title": "150"
+         },
+         {
+          "name": "Column 7",
+          "title": "140"
+         },
+         {
+          "name": "Column 8",
+          "title": "130"
+         },
+         {
+          "name": "Column 9",
+          "title": "120"
+         },
+         {
+          "name": "Column 10",
+          "title": "110"
+         },
+         {
+          "name": "Column 11",
+          "title": "100"
+         },
+         {
+          "name": "Column 12",
+          "title": "90"
+         },
+         {
+          "name": "Column 13",
+          "title": "80"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       },
+       {
+        "type": "multipletext",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "air_ketuban",
+          "title": "Air Ketuban "
+         },
+         {
+          "name": "penyusutan",
+          "title": "Penyusutan"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1"
+           },
+           {
+            "name": "2"
+           },
+           {
+            "name": "3"
+           },
+           {
+            "name": "4"
+           },
+           {
+            "name": "5"
+           },
+           {
+            "name": "6"
+           },
+           {
+            "name": "7"
+           },
+           {
+            "name": "8"
+           },
+           {
+            "name": "9"
+           },
+           {
+            "name": "10"
+           },
+           {
+            "name": "11"
+           },
+           {
+            "name": "12"
+           },
+           {
+            "name": "13"
+           },
+           {
+            "name": "14"
+           },
+           {
+            "name": "15"
+           },
+           {
+            "name": "16"
+           }
+          ],
+          "horizontalScroll": true,
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "rows": [
+           "1",
+           "2",
+           "3",
+           "4",
+           "5",
+           "6",
+           "7",
+           "8",
+           "9",
+           "10"
+          ]
+         },
+         {
+          "type": "text",
+          "name": "question5",
+          "title": "Waktu / Jam",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "time"
+         }
+        ],
+        "title": "Pembukaan serviks (cm) beri tanda  / turunya kepala beri tanda o"
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question6",
+        "title": "Kontraksi tiap 0 menit",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": "(5)"
+         },
+         {
+          "name": "column2",
+          "title": "< 20 (4)"
+         },
+         {
+          "name": "column3",
+          "title": "20-40 (3)"
+         },
+         {
+          "name": "column4",
+          "title": "> 40 (2)"
+         },
+         {
+          "name": "column5",
+          "title": "(dok) 1"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       },
+       {
+        "type": "multipletext",
+        "name": "question7",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "oksilosin",
+          "title": "Oksilosin U/L"
+         },
+         {
+          "name": "tetes",
+          "title": "Tetes / menit"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "obat",
+        "title": "Obat dan cairan IV ",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question8",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "180"
+           },
+           {
+            "name": "column2",
+            "title": "170"
+           },
+           {
+            "name": "column3",
+            "title": "160"
+           },
+           {
+            "name": "column4",
+            "title": "150"
+           },
+           {
+            "name": "column5",
+            "title": "150"
+           },
+           {
+            "name": "column6",
+            "title": "140"
+           },
+           {
+            "name": "column7",
+            "title": "130"
+           },
+           {
+            "name": "column8",
+            "title": "120"
+           },
+           {
+            "name": "column9",
+            "title": "110"
+           },
+           {
+            "name": "column10",
+            "title": "100"
+           },
+           {
+            "name": "column11",
+            "title": "90"
+           },
+           {
+            "name": "column12",
+            "title": "80"
+           },
+           {
+            "name": "column13",
+            "title": "70"
+           },
+           {
+            "name": "column14",
+            "title": "60"
+           },
+           {
+            "name": "column15",
+            "title": "Suhu (C)",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "Nadi & Tekanan darah "
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question9",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "protein",
+            "title": "Protein"
+           },
+           {
+            "name": "aseton",
+            "title": "Aseton"
+           },
+           {
+            "name": "volume",
+            "title": "Volume"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "URINE"
+       }
+      ]
+     }
+    ]
+   }

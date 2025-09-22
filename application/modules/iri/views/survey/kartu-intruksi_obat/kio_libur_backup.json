@@ -1,0 +1,307 @@
+{
+    "title": "KARTU INTRUKSI OBAT",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question3",
+        "title": "Tgl Diberikan",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question2",
+        "width": "1200px",
+        "minWidth": "1200px",
+        "maxWidth": "1200px",
+        "title": " ",
+        "hideNumber": true,
+        "requiredErrorText": "Jangan lupa Tambahkan obat ",
+        "validators": [
+         {
+          "type": "expression"
+         }
+        ],
+        "columns": [
+         {
+          "name": "nm_obat",
+          "title": "Nama Obat",
+          "cellType": "dropdown",
+          "renderAs": "select2",
+          "choicesByUrl": {
+           "url": "/admin/admin/master_obat"
+          }
+         },
+         {
+          "name": "dosis",
+          "title": "Dosis",
+          "cellType": "text",
+          "requiredErrorText": "Jangan lupa Dosis ",
+          "width": "100"
+         },
+         {
+          "name": "frekuensi",
+          "title": "Frek",
+          "cellType": "dropdown",
+          "requiredErrorText": "Jangan lupa Tambahkan Frekuensi",
+          "width": "300px",
+          "choices": [
+           {
+            "value": "1",
+            "text": "1 X 1"
+           },
+           {
+            "value": "2",
+            "text": "2 X 1"
+           },
+           {
+            "value": "3",
+            "text": "3 X 1"
+           },
+           {
+            "value": "4",
+            "text": "4 X 1"
+           },
+           {
+            "value": "5",
+            "text": "5 X 1"
+           },
+           {
+            "value": "6",
+            "text": "6 X 1"
+           },
+           {
+            "value": "7",
+            "text": "7 X 1"
+           },
+           {
+            "value": "8",
+            "text": "8 X 1"
+           },
+           {
+            "value": "9",
+            "text": "9 X 1"
+           },
+           {
+            "value": "10",
+            "text": "10 X 1"
+           }
+          ],
+          "choicesByUrl": {
+           "valueName": "id",
+           "titleName": "frekuensi"
+          },
+          "otherText": "Lainnya"
+         },
+         {
+            "name": "cara_pakai",
+            "title": "Cara Pakai",
+            "cellType": "dropdown",
+            "choicesByUrl": {
+             "url": "/admin/admin/cara_pakai"
+            }
+           },
+         {
+          "name": "rute",
+          "title": "Rute",
+          "cellType": "text",
+          "requiredErrorText": "Jangan lupa Tambahkan Cara Pemberian",
+          "width": "150px"
+         },
+         {
+          "name": "paraf_dok",
+          "title": "Paraf Dokter",
+          "cellType": "dropdown",
+          "width": "35",
+          "choicesByUrl": {
+           "url": "/admin/admin/dokter"
+          }
+         },
+         {
+          "name": "stop",
+          "title": "Stop",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "1",
+            "text": " "
+           }
+          ]
+         }
+        ],
+        "detailElements": [
+         {
+          "type": "panel",
+          "name": "panel_ttd",
+          "width": "1200px"
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnMinWidth": "100px",
+        "rowCount": 1,
+        "addRowText": "Tambah Obat",
+        "removeRowText": "Hapus Obat",
+        "detailPanelShowOnAdding": true
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "matriks_telaah_obat",
+        "state": "expanded",
+        "width": "1200px",
+        "minWidth": "1200px",
+        "maxWidth": "1200px",
+        "title": "Telaah Obat",
+        "columns": [
+         {
+          "name": "telaah_obat",
+          "title": "Telaah Obat",
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "identifikasi_pasien",
+            "text": "Identifikasi Pasien"
+           },
+           {
+            "value": "nm_obat",
+            "text": "Nama Obat"
+           },
+           {
+            "value": "dosis",
+            "text": "Dosis"
+           },
+           {
+            "value": "waktu",
+            "text": "Waktu Pemberian"
+           },
+           {
+            "value": "dokumentasi",
+            "text": "Dokumentasi"
+           }
+          ]
+         },
+         {
+          "name": "disiapkan",
+          "title": "Disiapkan Oleh",
+          "cellType": "dropdown",
+          "choicesByUrl": {
+           "url": "/admin/admin/dokter"
+          }
+         },
+         {
+          "name": "diterima",
+          "title": "Diterima Oleh",
+          "cellType": "dropdown",
+          "choicesByUrl": {
+           "url": "/admin/admin/dokter"
+          }
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnMinWidth": "250px",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1,
+        "addRowText": "Tambah Telaah Obat",
+        "removeRowText": "Hapus Telaah Obat"
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "state": "expanded",
+        "width": "1200px",
+        "minWidth": "1200px",
+        "maxWidth": "1200px",
+        "title": "Telaah Resep",
+        "columns": [
+         {
+          "name": "telaah_resep",
+          "title": "Telaah Resep",
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "nm_dpjp",
+            "text": "Nama DPJP"
+           },
+           {
+            "value": "no_sip",
+            "text": "Nomor SIP"
+           },
+           {
+            "value": "tgl_resep",
+            "text": "Tanggal Resep"
+           },
+           {
+            "value": "paraf_dokter",
+            "text": "Paraf Dokter"
+           },
+           {
+            "value": "nm_obat",
+            "text": "Nama Obat"
+           },
+           {
+            "value": "aturan_pakai",
+            "text": "Aturan Pakai"
+           },
+           {
+            "value": "duplikasi_pengobatan",
+            "text": "Duplikasi Pengobatan"
+           },
+           {
+            "value": "interaksi_obat",
+            "text": "Interaksi Obat"
+           },
+           {
+            "value": "berat_badan",
+            "text": "Berat Badan"
+           }
+          ]
+         },
+         {
+          "name": "nama_petugas",
+          "title": "Petugas",
+          "cellType": "dropdown",
+          "choicesByUrl": {
+           "url": "/admin/admin/dokter"
+          }
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnMinWidth": "250px",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1,
+        "addRowText": "Tambah Telaah Obat",
+        "removeRowText": "Hapus Telaah Obat"
+       }
+      ],
+      "title": "Halaman 1 - 1"
+     }
+    ]
+   }

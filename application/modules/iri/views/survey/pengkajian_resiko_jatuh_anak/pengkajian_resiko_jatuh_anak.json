@@ -1,0 +1,203 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Tgl",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "2",
+            "title": "Umur",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Di bawah 3 tahun"
+             },
+             {
+              "value": "3",
+              "text": "3 – 7 tahun"
+             },
+             {
+              "value": "2",
+              "text": "7 – 13 tahun"
+             },
+             {
+              "value": "1",
+              "text": ">13 tahun"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Jenis Kelamin",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Laki – laki"
+             },
+             {
+              "value": "1",
+              "text": "Perempuan"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Diagnosa",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Kelainan Neurologi"
+             },
+             {
+              "value": "3",
+              "text": "Perubahan dalam oksigen (Masalah Saluran Nafas, Dehidrasi, Anemia, Anoreksia, Sinkop / sakit kepala, dll)"
+             },
+             {
+              "value": "2",
+              "text": "Kelainan Psikis / Perilaku"
+             },
+             {
+              "value": "1",
+              "text": "Diagnosis Lain"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Gangguan Kognitif",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "Tidak sadar terhadap keterbatasan"
+             },
+             {
+              "value": "2",
+              "text": "Lupa keterbatasan"
+             },
+             {
+              "value": "1",
+              "text": "Mengetahui kemampuan diri"
+             }
+            ]
+           },
+           {
+            "name": "6",
+            "title": "Faktor Lingkungan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Riwayat jatuh dari tempat tidur saat bayi anak"
+             },
+             {
+              "value": "3",
+              "text": "Pasien menggunakan alat bantu atau box atau mebel"
+             },
+             {
+              "value": "2",
+              "text": "Pasien berada di tempat tidur"
+             },
+             {
+              "value": "1",
+              "text": "Di luar ruang rawat"
+             }
+            ]
+           },
+           {
+            "name": "7",
+            "title": "Respon Terhadap Operasi / Obat Penenang / Efek Anestesi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "Dalam 24 jam"
+             },
+             {
+              "value": "2",
+              "text": "Dalam 48 jam Riwayat Jatuh"
+             },
+             {
+              "value": "1",
+              "text": ">48 jam"
+             }
+            ]
+           },
+           {
+            "name": "8",
+            "title": "Penggunaan Obat",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "Bermacam-macam obat yang digunakan : Obat sedative (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hipnotik, Barbiturat, Fenotiazin, Antidepresan, Laksans / Diuretika, Narkotik"
+             },
+             {
+              "value": "2",
+              "text": "Salah satu dari pengobatan di atas"
+             },
+             {
+              "value": "1",
+              "text": "Pengobatan lain"
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Total Skor",
+            "cellType": "expression",
+            "expression": "{row.2}+{row.3}+{row.4}+{row.5}+{row.6}+{row.7}+{row.8}+{row.9}+{row.10}"
+           },
+           {
+            "name": "Column 10",
+            "title": "Initial Perawat",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "add skoring"
+         }
+        ],
+        "allowRemovePanel": false,
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "add score"
+       },
+       {
+        "type": "html",
+        "name": "question2",
+        "html": "Tingkat risiko dan tindakan :<br>\n1.\tSkor  7 – 11\t:   Risiko Rendah Untuk Jatuh\t\t* Skor Minimal\t:    7<br>\n2.\tSkor  ≥ 12 \t:   Risiko Tinggi Untuk Jatuh\t\t* Skor Maksimal\t:   23<br>\nCATATAN:<br>\n•\tKolaborasikan untuk mengatasi area masalah pasien dengan tim kesehatan lain<br>\n•\tKomunikasikan status resiko tinggi pasien setiap pergantian shift dan setiap pindah keruangan lain<br>\n•\tBerikan perhatian khusus terhadap hasil penilaian resiko jatuh pasien\n"
+       }
+      ],
+      "title": "PENGKAJIAN RESIKO JATUH PADA PASIEN ANAK (SKALA HUMPTY DUMTY)"
+     }
+    ]
+   }

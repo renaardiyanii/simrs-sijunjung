@@ -1,0 +1,719 @@
+{
+   "title": "ASESMEN PRA ANESTESI/SEDASI",
+   "pages": [
+    {
+     "name": "page1",
+     "elements": [
+      {
+       "type": "matrixdynamic",
+       "name": "question1",
+       "titleLocation": "hidden",
+       "columns": [
+        {
+         "name": "kesadaran",
+         "title": "Kesadaran"
+        },
+        {
+         "name": "bb",
+         "title": "Berat Badan "
+        },
+        {
+         "name": "td",
+         "title": "Tekanan Darah "
+        },
+        {
+         "name": "fn",
+         "title": "Frekuensi Nadi "
+        },
+        {
+         "name": "fna",
+         "title": "Frekuensi Napas "
+        },
+        {
+         "name": "suhu",
+         "title": "Suhu"
+        },
+        {
+         "name": "cvp",
+         "title": "CVP SpO2, dan lain-lain"
+        }
+       ],
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "cellType": "text",
+       "allowAddRows": false,
+       "allowRemoveRows": false,
+       "rowCount": 1,
+       "addRowText": "Tambah",
+       "removeRowText": "Hapus"
+      },
+      {
+       "type": "matrixdynamic",
+       "name": "question2",
+       "titleLocation": "hidden",
+       "columns": [
+        {
+         "name": "riwayat_operasi",
+         "title": "Riwayat Operasi / Anestesi :"
+        },
+        {
+         "name": "komplikasi",
+         "title": "Riwayat komplikasi anestesi pada pasien",
+         "cellType": "radiogroup",
+         "choices": [
+          {
+           "value": "ada",
+           "text": "Ada"
+          },
+          {
+           "value": "tidak_ada",
+           "text": "Tidak ada"
+          }
+         ]
+        },
+        {
+         "name": "detilkomplikasi",
+         "title": " ",
+         "cellType": "text",
+         "visibleIf": "{question2[0].komplikasi} = 'ada'"
+        },
+        {
+         "name": "gigi",
+         "title": "Gigi",
+         "cellType": "radiogroup",
+         "choices": [
+          {
+           "value": "tampak",
+           "text": "Tampak normal    "
+          },
+          {
+           "value": "goyah",
+           "text": "Goyah"
+          },
+          {
+           "value": "gigi_palsu",
+           "text": "Gigi Palsu"
+          }
+         ]
+        },
+        {
+         "name": "detilgigi",
+         "title": "Detil Goyah",
+         "cellType": "checkbox",
+         "visibleIf": "{row.gigi} = 'goyah'",
+         "choices": [
+          {
+           "value": "semua ",
+           "text": "Semua "
+          },
+          {
+           "value": "atas",
+           "text": "Atas"
+          },
+          {
+           "value": "bawah",
+           "text": "Bawah"
+          },
+          {
+           "value": "sebagian",
+           "text": "Sebagian"
+          }
+         ]
+        },
+        {
+         "name": "detilgigi1",
+         "title": "Detil gigi palsu ",
+         "cellType": "checkbox",
+         "visibleIf": "{row.gigi} = 'gigi_palsu'",
+         "choices": [
+          {
+           "value": "semua ",
+           "text": "Semua"
+          },
+          {
+           "value": "atas",
+           "text": "Atas"
+          },
+          {
+           "value": "bawah ",
+           "text": "Bawah"
+          },
+          {
+           "value": "sebagian",
+           "text": "Sebagian"
+          }
+         ]
+        },
+        {
+         "name": "jalan_nafas",
+         "title": "Jalan Nafas",
+         "cellType": "radiogroup",
+         "choices": [
+          {
+           "value": "tidak_ada",
+           "text": "Tidak ada masalah yang terlihat "
+          }
+         ]
+        }
+       ],
+       "columnLayout": "vertical",
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "cellType": "text",
+       "allowAddRows": false,
+       "allowRemoveRows": false,
+       "rowCount": 1
+      },
+      {
+       "type": "panel",
+       "name": "panel2",
+       "elements": [
+        {
+         "type": "image",
+         "name": "question3",
+         "imageLink": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEA3ADcAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCACqAYYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9UqTHvR/hRigA2n1paTmuJ+MnxO0/4P8Aw81fxRqTYgsoWdV/vNjhfxNAGt4v8c6P4HsftWq3awgnasfV2J6ALXB2XxC8a+NpJ20Hw+ulWAGIrzVekn+0AD0+orC+C/hA+KNDs/iL42uFvdQvE+126zN+5tIW+ZMD12nvXm/xp+PHivx5qlz4c+F1rcGLTJlN3dRxlRcp/EkTYxnn9KAPUU0jxet3dT678QbOwgZceXZyKojb23Vm2Pgu/kvEMfxk1Cc7s+X58WDznHSvOPif+zdq/wAVvB9lZaPYTaRqcjxz3F5qEpYFgMlSAe5zXR2nwB1O2tbHTpvC2lCfydkupWu9SrAYDDLdcigD0HxZot2um7ZfiTdaYF5MsEiF/wAsV55dfDnSdZ1Gy+yfGPWrLVm/ehjJGvnY55yvT6Vn+Afgn4m+GLai+t6D/wAJzPdXO6GbzMCGMnhcE9hVLxR4D1mb4vPr3irwWs/g6KyWGzjtid9rIAQzEA9+PyoA7p7z4v8AwvhiubeW3+Imih/3nln/AEvaD1B+70rsPh7+0p4X8b6mNHujJoGvH/mHagNjnHoehrwK88UeKPAvjaL/AIQW41CTQbe2NxNpupRMyzEjPlxnHDfU1101n4F/bK8OGMpL4Z8c6TyNv7q6tJex9wSKAPqoHcMg5Bo/Gvmb4E/GDWvCXi6b4V/EScnXbQf6BqknCX0XYg/3hX0z1+nagBce9HpSYqpqmqW2i6fcX15MsFtboZJJHOAAOSTQBYmmjt4mkldY415LMcAfjXnev/tAeC/D9w9vJqouLlTjyrdGcn8QK8OvviZqHx6uNbvLnUP+EY+FmnyeX9uyUlvmBOQh/umqHg/4zeHdU8QXPhr4WeGrVp7AKtxqOpKEHI4bDHJz7UAe0yftOeFYbgRTJeRDqWNu5AB79K6Kw+OHgzUtPlvIdZiMEf3yyspH4EV4H4P+IXjXxT4q8V+HdX17w5pmp6bIghxDiNo2Xkk+vI71znxo17W/hL4dfVJYvC+v3Err+7ggZnkyQM4B7f0oA+i734+6MbpbfSbK81mVv+feMgdOuSK5rXv2kNa8MkT6h8ONcjsN+1rhdjBQT94jPSuE03Vtc8SaRZXU/j3RdCR4VdbaxXYUyM7Tn0rnPDXxm+Jek+JdUg0+4074heGdOH78wkC5yD8wAJ5wPQUAfSXgT47eEPiDlNO1RI7lTte3uAY3DemCBk16Ap3AEHIr5+0fTPhr+0x4Zu73R0hsdbX5ZZLf5Lm0mHqPUGue+G3xO8XfBr4hWnw4+I0jajZXxI0jxAAdsmOkbn+9zQB9Sc+tJto9PzooAXB9aOfWkwaMGgBaTBrzb4z/AB48NfBHR4brWpzJeXDeXa2MA3TTt2CqK5Dw/wCL/iv8RP8AT7PS7Pwxo1xEGgXUAWm5HBODQB7xg+tLj3r521mP4x+G7jzLbxP4dvtqMWtZ1ZWJ7Y5q3ofxV+Klra41PwKNRfAP2iynQRn1IyaAPfcdaMH1rwi4+IPxK1yYf2fYaXokeMt9umD4PocHrUq6l8ZRbtcxNoN+ijIjgVsv7A560Ae54PrRj3rwrwv+0p9j1QaN4+0W48J6mWEccsw3QzHPUMOB+Ne329xHdQpLC6yxMMqynIIPQigCX8aXHvTaXmgBeaMe9JtNABoAXHvSYPrRzTWZY1JZgo65OMUAPwfWk/Gs248R6VaKTNqNtEOnzSKB/OpbfWbG6x5N5DLkZG1waAL2PejHvWbqHiLTNJQtd39vbgDP7yQCqen+OtA1NQ1tq9pJngASrnj8aAN7HvRj3pkciyqGRg6noQeKdzQAbaKMGigA59KMk0ZFLmgBOa+eP26reO8+Bk9vOoeGW8hR1bowJOa+h8j8a+U/21tYfWtX8CeCYuY7zUF1C82tjFvCwL5Hpg0AM8SSav8AFG18NfCfwvO2maTFpsEms30WQY4tgIhU+rKa+k/C/g/TPCOi2WnWFpHFFbRLErKoBOABkn1NeQ/sqaRCvh3XPFDsu/Urt0EhcMPKiJRCD6bQKxPi1+2Bpuga5F4e8LwNql1NIYJ9XA/0OybB+Z36YGOc0AfSElzDbyIjyKjNwqkgZ9qrHWrQX7WZf9+q7yuO3rX41fFT/gph8SfCvj6XTre90/V/7LlMa3kKgxy89RX6N/sZ/tJaX+098N4tfeGGDXof3F5Cp+bdjkgehoA9yt/FGn3VvczRy5S3yJDjpUlrrmn6laxTJNGY5jhN+Bux2Ap8ljp+n2ty5gjih2lpeABgDJzX5YftB/8ABUy48L/EbVvDnhrw9bvpmk3DQxTEgEupILDjoTQB+q7WNtJgtBGSORlBXy7+014Il+F/i7SvjD4Yh8i4sZFi1iGEYE1sSAzN7gV5Z+xj/wAFCNY+L2l6zceNNMS207T5VV9Sh+7EGJ2hh6ADk19i+OE0v4k/CvV0s5YtT0++sn2PC25XBUkYNAHkX7S3gu1+M/wVtvGvh4tFr+mwrqem3UHD5ADFSfTGa9I/Zz+JL/Fb4Q+H/EEyNHczQ7ZlbqHX5T+ZBrzT9lfxNFqn7M97aTysJ9NS7tpfO427SwUE+mAK2v2I2DfAfSipyplmII6f6xulAHv1fMP7WviS/wDFev8Ahb4VaNcNBPr82+/kU4KW6fMwJ9GAIr6cZgqk5wAM18B/Ezx0NQ8cfF/4ieY0Fp4fsBomn3OchbokqxU+p3CgDQn8IzftFePIvAnhC6Gk+AfAzLHKyqdl3cKcbT6gEV7rYfsn6BPqy61qs8h1jaI2ksj5Sso4AIpf2MPA0fg34EaBPJEBqGqQi+u5ictJI/JYmr/7RX7Vngv9nPwrLqmt38U93nbFYRPmV29MdhQB1Fx8CfBV1ERJoluZ2AD3GCHfAwMmtCH4T+EoViDaLaymNditIu449K+HdP8A+Ctfw71hpIdQW9skuiFBjQnyM4BOa+1/AfiDRPil4X0TxFoOrtfacyB45Y5OH4Iww9R7+lAD5Pgn4FmkZ38NWLM3X5P/AK9cX4w/ZW8M6ss9x4bkn8I6jIu03GlsY93+8O9L8QPFOj/AvTda1jVvGUdjNd/vIIr+XcF9lUnp9K8h+GP/AAUo+HvjT4iWPgt7pnuZU2nUtu2JpAen0xQBgXP7Mnjr9nHxHc/Ejwfq/wDahiXdqekKpH2yMcs5H9/Ga9e1rVNF/a5+Bcuo+HpPs2t2o8+3zxLa3UeSFPphh+lfQcM1vqVmskbpPbyrkMvKspFfIml6fB+zf+1xBptnM0Phrx3FJN9l52Q3CYyR/vFjQB7b+zf8SpPiP8NrSW9bGs6ezWF9Gx+bzYztLEe5Br1XPtXzz8H/AA9ceCP2iviPYw7YdG1EW91bQ5yd2wmRgPcmvob8aADnNef/ABe+MWlfCfQxPc5udTuP3dnYQ/NLNIegA9M4rofHnjKw+H/hLU/EGpy+VZWMLSu30HA/Ovh7QPGrQ2N/8ZvFXmanrOvTtb+E9HkywQEkKyr68+lAEmt6svhnxs/jzx8sfiH4hXFs0uieFVYFbNQpIJH97HtXoWg614w+LXw9XVdQutU0bV721Yw6fZo0QiYqdoJx24ruvgL8AY7PT4vFvjm2i1bxtqB+0SzTru+z7hxGnoAK97jhht4wqokaKOAAABQB8SfDH4dar/Ysdl8SLLxA2ss8i/bo7gvuQH5TwOuKb8Q9N8T+BLzw1YeCLjxHfaLLdY1JZ2YskJ67Tj0r7LuvEmlw27ziaO4WNxG3k4cqxPQ1BqHiixsLu1t5LeZ2uOVaOHcoz6mgD5t8aeHdAsPh3qttp1lr8+o3CeZG3zmTccZAbH1rn/AfhOZfC1lL4b8e6toWrxQ73tdcZigYHJGD24r63fxBp66ounOpE5Xd9z5cfWmXnhbQdf3Sz2Frdb1Kl9oPB4IoA+WbX4+WPiqxu/DvxU0CKXTPMNvH4itVD20sg4DAj7uD6ntWv8GfGeqfCL4kReAtY1M6v4U1hftGgatJJuyDz5Rb2ArtfEX7Len3lpqemaRfGw0TUI2WbT3TfGrHOWQdjXyn4o8O614Hi1X4Y6levdah4Tij1rw7qRJ8xolbLR5/3QfzoA/SLPGetLn2riPgz46T4kfDPQPECnD3lqjyL6NjkfnXb5FAB+FJk+lGR06mvKv2kvixP8I/hvc6lp8P2rWblha2FuBkyTNwAB+f5UAa/jn4v6Z4TvF0q0B1XXpOI7C3+Zvq3oK4XVrjWtXjabxRqklhJndHpOmNmbaRwGxXl2hTaz4b1CysNF0z+3/iHqkS3GuX8j4FpG3O1T2IBHFdPpfwX8bTfFi08X2F1JpMUMHkXEV3KZhP3yB2+tAFLUfFWgw+LND8G3vg67vL/VkeS3+0TclVGST74rotattO8J6Xe6/c6Hqel2+m27NKtvMSBGgJJA+gNbPiL9na68ZeMLPxbqeuSQa7YxNHaPbgqsWRgkjvmtST4N6/qnhmfQtV8UyXlncK0c58vDMjDBXP0JoA818M+JfD3jixttbPhbVtUs5lWSL7ZuI2kZBAx6VsQ3nwk1/XpNDayfQtVhjBfajRiPPP3vWuq8L/AAZ8TeA7C203Q/FWNMhdQsN1EHYRjqoNchoPwO8VeCfGfijVrtbXxjZaxIJRHdAK0OARtU+nNAGv/wAIb4v8HfadU8CeJP8AhI7HIP8AZt5KJDx1Ctnjiur+Hfx+0vxbrsnhzVLeTQvEsQ+axuht3467D/F+FfP/AIq8TeLvhP4+hl8M6JfWFq0ZmurJg0sEoB5VT2OPSu11a40L9qT4ct4i8OI2keOdI/eRZHl3MMqclGHUg4PX1oA+oP1orzL9n34mT/ErwFFc6jF9n1mxkNlfwn+CZQNwooA9O/lR3NY/irxbpHgjQ7jWNcv4dN023G6W4nbaq+5NSeG/E2meMNFtdW0e8iv9Oul3xXELblYexoA088Hmvhu61JviF+0N8V9du3F1pPhfSDaQKpyyF0IcAepIr7jf7jfT+lfn18EbePxHcftK6RbQNHqDSyK11vOXzuwMdse1AHY+JNe1XVNN8EfBX4fySaRNrFt9u1PUFHNvanBdQf7zBhXE/wDBRPWLL9mv9maDwl4b0dAus4tLjUCnzcg7mLf3iQe/etXxh4u/4Zz8SeBPi3dxzaj4W/sX+ydR+zLvaOcKqpz3+6c1qap8JfEn/BQrwRZ6h44R/BvhD7R9o0/T4V3TyqDhXfPTI9+9AH4eMxZiScmvZf2af2pfFv7MnieTVfDswkgnG2ezkPyOM5/Ovub4uf8ABGO4TZP4B8SiY/x2+oAIB9D3r5xuv+CW/wAb7fXP7OXSrWUHpcrKfK/E4oA7/wCK/wDwV08e+OvCM2jaNpNvoMtzCYp7lW3sQRg49K+Cb69m1K8mubmRpZ5nLvIxyWYnqa+6/D3/AAR8+LmqWglvbzSrF92PLack49eld2v/AARc8TfYwzeLLcXOzOzA27sdM46UAec/8Er9F0Px18Std8Ia9cXD2mpWbE2McpVJdoPLc8kZr9APCPh+b9l/4wReBtM1O5v/AAhr9lNcw2t05Y2RQEYViehz+lfMXwC/Y3+I37DnxUt/iHqOmx+K9Ghgkgnh0pjJOisPvhcdhXvnxL+Lfh34neMNP8ceHr+O5ttF0S6F5aOcSwu2AEcdmzn8qAOe8M+MYvDv7KvxJvre8jha51GWCGTdgMWlKkA+uCa+vv2fvB9r4F+EPhvS7TmJbVZNx4JLDcf518e+OPDMPhP9kHwf/aUEcMFzq4u5+Pl2ySbgWP4jrX3h4TaJ/DOlNBtMJtYyu3pjaMUAP8TSNH4d1R0bay2shDDt8hNfl/BZNqn7N13Y3lw1rBqvjlmu5rhuJFEiHJPoa/Sn4p30mnfDfxNcxOElj06dkY9A3lnFfnR40+Fuu69/wThTUZ5H/tM3H9qbrccsrOMt9QAenpQB9JeIPiT4o8Z6hp3w7+EEULaVYRLBqOvEjyYVAAKIcYLdelcN8YP+CaQ+NzWk/iDxtctPboRGohB+Y8kk55r3P9izw/o+ifs7+En0kM5urRJ55pB88khA3Fj65r3XPtQB+O3j7/gjR4y0uGSTwx4ittWIyRHcYi+gzX0n+xLeeOv2a/hnc+CPF3grVbi5s7j9zPZRtNG6kEkg49T0Ffev50bR6UAflH+1h+zV8ZP2xvjBDqel6ZPpPhqJPIjTUXMW0ZyW2461Z+DP/BKbxx8M/Gtn4hPiGxMtvkeW8ayKcjB4Pev1UxjoKKAPj/wX468b/sy+Nrbw18QGk1jwjq0wTT9XhTItZGOBG/oM4HJrZ/al8m4+L3wgnVVbN4SsmATgsp4Ndv8AtjWOn33wR1Nb6XyJBLGbWT0n3fJz9cV5L4rtdU8R/EL4DaDc7X1GGwa9urhjx+7VSR9TQB1XwJ8X3Hj79p/4rXJikGn6V9mtLd2HGdhD4PuRX1BXyr+wb4Wk07R/H+u3F1Jcz6r4iu8iQcqscrqAD6YNfVXagD5B/wCCiXji4h8G+HfA2nB5b3xNqMdrJHGCT5e4E8fhXNWlnb6h+1n4G8E3Nso0nwzosd1awbcKJiu0sR61r/tl2M7fHf4M3IhY266qFMmPlBweCapftBarqXgT9q7wtrWn6dvivtGmhe4VeSyRswAPrkCgD6c8YfF/RfCt0NMt9+q6ywwun2Q8yReOCwHQV478TPh58ZPjrptxaQ+Ik+H+kTx5SO1Aec/VuoNM/YRtYvEXw9v/ABffwmbXdSv5nmuLjLSLzwoJ6Ae1fUVAHwf8Nf2Sfjj8A5Z7rw98QV8Vxzv5k9hqygq5z2Yk4J9q9ms/jb8R9DXy/Evw2dpYcKZNNdpg3qRxX0Vn2owO4oA+Z/Gnxk+JfiCJIvAfw6b7fKNrXWsZgEeR245Fec2+j/tdeHby21aGXQrqy3GS50XeoGOThXx1PtX29j2o9qAPEvgn+0nafEbUH8N+IdPk8LeN7dN02k3Xylx03Rk/eFeQ/tH6XJqX7SmgR28iW7yaRdI7MB8wMTAAn0Bqb9u+HTvAOufD34i26Pa63Zaqlq1zb8NJG5C7G9Rls1T+P3iCLTv2ivCF5PDJNbTaPO8hUZ2gxE5P1zQB6V+wzrZ1b4IwQGNEOn3ctmTG2VbY2Mivofn0rwz9jvQdP0X4QwSaZFJDbX1xJdhZMg/Mckivc6AAttGe1fHXxI8Tw/Fn46XNybhh4P8Ahyv2i6k6xzX2MoM+gB/SvrbXp3tdFvpk4dIXYfXBxX59eA9D8QW/7KN/fQS/b9R8Va9KbjYo3PGszLtJ+i/pQB9Wfs0+FZ7fw/f+LNVX/ib+IJ2upNw5RASFUegwBXpWteOtA8O5Go6ta2ZH8MkgB+lfP3hLx9rvxo1q88GeE5ZPD2geHo47W/1RYwzyShATGo9OvINev6F8E/DOkRxme0bU7lTuaa8cylm7nBNAF5vi/wCEo4o5ZNZtooZMbZGcBTmug0zxJpetQCexv7e6i/vxuCKrXXgvQby1+zS6PZvDjG3yFwPpxXIat+z94S1SNEWG7slVw+20upIhwc4wDQB02q/Ebwxoc/kX+u2NnN/clmCmq9v8WPB11MsUPiTTpJG4CrOpNZbfAnwZKq+fpQumUY3TuXb8zTR8BPA6g7dEhjJGNyEg8+hoA7SP+z9ahSVRDeRdVYYYfhXzP8erNPgn8VvB3jzSm/s/S766+w6vbwqBG6sMKzD13EVpeMvhL4q+DMr+J/hnqNxdWVuDJd+HbyRpEmQctsY5IOM8VR+LXjfS/j1+y3ea7bW0izwyQySWTD95FMkikoR2ORQBJ4B1xfh7+0R470QStJZajZxa2kaDCq0r7f5CiuN0PVZ9a/aEur+5t2tJ5/B1gzwnqh81hj9KKAIP2uvG1x8Tvihonwr0vSbzXdGtf9M8QLYKSRHyBGffOKtfsc+PrvwL468QfCzWtLu9Es/M+16El8pDGE4AjH0wa+s9P8I6RpetXmrWtjDFqN5/r7hVAd/Ymlu/COkX2uW2sz2ML6nbDEVyVG9QewNAGuy7lI9q+Nv2bdHsfA/7Uvxg8MTeZLLqjR3i+YoAKsCSB6gZr7L/ACr49/aZ0u5+Dfx08IfFywjmfT5pBp2r+WPlVHICu30ANAHK+NPCcvib9prw18GtRZr3wJbrJrr2+PvzK4ZUb/ZBY19x2NhBplnDaWsSwW8KBI40GAqgYAxXzV8P5tK8dftca94g0y/huRpumRwsqsGz5qKykH2Ar6e5oASj1pfxo70AJto/z0pefWigBkkayxsjqGVhghhkH6ivz08ffB66X9sKTwl4ZiS38M+JEW91q3VQo2pjIBx3zX6GsdoyelfH3wx1S/8AHn7cvjPUYGWTRtDsltA2DkO4zj8xQB6H+114fsNN/Zn1qwitoxbWcMKQqwB2YZQCPwr1r4a/8iDoA/6cYf8A0AV4/wDtXa8fEFjo/wAOtPRbq/8AEFysc8Y5MUIIJc/iMV7p4d0tdE0OwsF+7bQrF/3yAP6UAeU/thXBtf2cfG0gmkgIsWHmRnDemPxrgfg5p1vrH7AejwXaedE3hliQ3fCMQT+NevftEeFYfGnwV8X6VOWEcunysdnX5VLD+VeI/s0eKrTxN+wssNorIdN0aexkVuoZEYHI/GgDV/4J1a9d67+zfpn2ptwtbmW2i9o1OAK+n8V8y/8ABPPw1eeGf2dtOivAA9xcy3CY/uscivpv1oAMUUc0c+tACbaMUvPrRz60AeDfthtYX3w70/R724+zPf6parG2AeQ4ryG31KXUPFnxF8YR3En9k+E9DaxtZMc+asZDlT9QOlbv/BRC8vl8EeGrLRfm1+61SJbNQpPzBh834Vb+IvgW7+H/AOzHF4egmUa5r88UN4xHM0kxxIPoSaAPSv2SNEudH+B+iPeFXnvi98XXqwlO8E++DXsn+elc98PdB/4RfwNoWk7BGbOzihK9gVQAj8xXRc0AfI//AAUMbUtP8L+BtX00+U2n67DLLPj/AFangkn05rO/bImg0+H4TeK57uSOCO8SGaSMZDLLGFOT6HdXo/7dGgQax+zr4innaRRYhLlfLGT8rAn9BUVv4R0n9ob9lTS7ZCGE2nJLaTtjdHMigq2fUECgDK/YwePQX8eeFjcFjZazJNbwtjKwPgqfxOa+m8V8Zf8ABOXwP4i0XS/G2reL7mW78RPqkllJM+CHjQjaQfTmvs7mgBMUtHOaPSgBMe9GPel5owaAPlv9uezg1Cx+H9vcxiaB9bTdG3Q4AIrjfjxpcfjT43XGnWz7F0Xw3JcXBU8qrRsFA98irn/BRD4hf8ISnw3RNKm1e5uNXPkwQjLFwuQB+OK6PQ/A8ngv4T+NviB4qiKeJdfsJDKrZJt42T5Yh7A/zoA7/wDZD1KfUfgP4aM5BaGHygQAMgdM+9ez4968c/ZI0ifSPgV4aWbBM0Hmrj+63Ir2TmgDN8RxtJoOoKgyzQOAP+A18P8Awh8cabZ/szeH3knkgbSPEFxHdR45DNLIQD7HIr7tusfZ5c8jaf5V+fnwJ8B3niD4a/HlZRutrjWGnsVUAmPYCSQPXINAHrH7E/iGFfE3xN0K52xatHqouGj4BMbIMEe2CK+r/wAa+CP2WvHvhrVv2pbyfS5t13qehqLpQckTIwU7h64FffFACY96Me9LzRzQAmPeiloGaAI5YlmjdG5VgQfxGK+D7jxE/gGz+MukWi5s4dcheNcZ275EBwPTBr7uvLgWdrNO5wkaM5PsATXw9YzHxFea1q9npsVzH4k8RmMsxyrQxgMXA9ip/KgD0P4T2I8X/tBeN72/tlK2em29hC6/3FbIB/Oitn9lC6bVtY+Jt+UDRHX5YoJgMh4wFwB+tFAH0Vz6UtGfak5oAPwrH8VeFtN8ZaDd6Rq1sl3ZXKFJI3Geo7e9bNJ+dAH5x/sZeE4vh1+3B8SfDdhc3UunQ2+5EuWJIyAQPoBX6Oc+lfGnjjS4vgH+2lp3j69U/wBg+M4V0ya46LBccLGCfcA/lX2SkiyoroQysMgjkGgB34Uc0e1HfpQAvPpSfhR+dLQBm+ItWg0HQr/ULp1it7eFpHdjgAAV8MfsvfFW8Nr4v1Dwv4cvNa8T61qkxe4dCsSorkI2SOQAe1e+/tReIpb9fDvgGxlYX3iK6VZkTqbZTiX9DXrvg3wXpHgXQbTStIsobS2t0CKI0AJxwSTQBw/wn+F15pl9L4p8WNHe+LLsYaRR8sCHoieler/hSfnS0AQ3VtHeW8sEyB4pFKOp7gjBFfCnjrwf4y/ZUvPH48O6FceI/h54it5p/stsRusZnU7iB/d6dK+8PWq2pWEOqWM9pOgeKZGRlI7EYoA8E/YT8UQ+Kv2d9CuIYnhaHdBJHJwVZTg19C5NfIf7Pep3XwI+NHib4X63KsGkalO2o6LNJhVfeSWjB9R7V9d9cUALz6Uc+lJ6Uv4frQAUc+lH4UlAHy9+2JrN94V8XfDTW0hjl0u31LyrvzcYUOQA2faul0e4Px0+J9rqkD+b4S8PkrHx8tzceo/3SP1ryX9r9Lv9oT4reGfg7oczLBE4vtYuocnyYwQVXPYnBr608A+CNO+HfhWw0LTIhFbWsapnuxAALE+pxQB0XpxSnvRSUAct8UfDKeMPh9r2kSKHW6tJEAIzztOP1r5E/Yt+JlzZ/s/+OfC92PK1bwmbq3WFj820KxUkV9xsoZSpGQa+Jv2jP2ffEXwp1jxN8SvhhA15JqtrLHrGjZ+WZWUguo9Rn9KAPbP2O9MNv8ENI1GSZpp9W3XspfkhmJyP0r2/n0r5F/4Jt/FWLxx8C4NGu7jbrejytbz2M3yyxKDxlfTJIr65oAXmjn0oz7UfhQAn4Uv4frSfnRnGaAPl3x1cf8LF/bF8MeG5bBbyw8NWP9qtI4yEkcsmcflXYftNaxNrHh+28D6PGt1q+syrEYhyEhz87MPpmvL9O+JmmaZ+098Qdftt15qFrZLosNhB87Syq4bJx0HI6+le+fDTwLLbzv4p12HPiO+XLq/P2deoRfp/WgDq/BHhuLwf4R0rRYB+6sbdYV/AVt8+lH50UAMmUvC6gZ3KR+lfH37FFneaX44+NvhPV7hTJDrGY7XIJWN0ySB6c19ifma+N/iET+zL+1RD48ltXfwl4yC2mpXS8i2uMgKze2B3oA8I8EfBW8/Zl/4KE6bb27m40fxPvkgPP7sEklT+Oa/T8Z9K+Qf22LeTRtQ+HPxO0RPtUul6lHukjIIaF8DOfTmvrTS7o3mm2lwRgzQrJ+ag/wBaALfPpRz6Un1o/OgBeaOfSk/OjmgDifjTq7aD8LvEl8svkGKzkPmemVIr4x/Z78/4geEdA16AtY+FPC9lc3E1w+VFxdMrhh9MEV9B/tseJjpnwen0S3O6/wBemjsYI15ZssMgD6ZrmvEfhmSHwD4a+EXg63hja5ijOqyQjAtogAzFh6kgj8aAOp/Yt0GbTPhAL2QhotUu5L2Ekc7GPGfyNFez+FvDlp4T8O2Gj2UYitbOJYkVfQUUAa35UtFLQAm6gHNGfaigDyP9qL4QyfGj4R6potmVTV4f9K0+Rv4LhBlDntzWF+yd8ck+KHgldG1df7P8Y6Dix1LTpvlkDINocA9QwAOfevecV4t8SP2a9O8UeKG8XeHb+bwv4tZdj31qSFmHpIo+9260Ae0+lJ61886T4t+NfgdWtNc8N2nimCN9keoWsyxM6gcEpjrXbxfE7xJJohuX8JTJe4z9m8zP4ZxQB6jVPVNUtdHs5by8njtraJdzySMFAGO5ryC3+IPxS1xgbPwRBZwMCvmXF4uVPrjFQWfwZ8UeNtWi1Dx74hN1YryNGs1McXtvOfmH1FAGb8NPDtx8T/jHf/Ey93DSrNGsdHik9OkjgejYGK+g6q6dptrpNnFaWcCW1tEu1I4wAoA7AVaoAKKKKAClpKWgDyP9oL4E2fxk8PxPDJ9g8Saa3n6bqEfDxSDkAn+6SBxXJfBf4/X9ndJ4K+J8P9heLrcmKO4l+WC9UHAdH6ZI7Zr6IrjPiZ8JfDvxU0n7FrlmsjpzBdR/LNA3Yo3Y0AdijrIoZSGU9COace1fPuj+B/ip8JWe20TU4/GWj5/c2t8+yaJR0BkJ5rb8N/Er4l3l7f2Wq+Ao7KWIZglW8DJJx06etAHs+fwryL4t/GR9Hjn8PeD0XWvGcy7IbWJgywE8b5D2A64NZVzafFzx8z2V0tr4NsGG15oZBNIwz/CQeDiuu+FPwS0H4VxXM1mJL3V7s7rrUrpi80p7/Me1AGH+z/8ABV/hvptzq+uSrqPjHVj5uo32P4jzsX0UV7BRRQAUHpS0lABTJI1mjZHUMjDBVhkGn0UAfN3xP/Zrl8O+Kn+I/wALDHofiyKMm5sEXFvqCgZ2so/i68+9dl8Hvj9aePNMhtfEVqfCnihSY5tLvmCsWHdCfvA+1ev1x/jb4U+G/H00VxqlgpvoRiK9i+WaP/dagDrwytgg5FG4eteIt8CfFOk3Ev8AYXj28trVzkRXoacj2BJrnrn4NfGz+1t0HxStE0/P+rbT8tj0zuoA+h77ULXTbd57u4jtoV+9JK4VR9Sa8q8cfF+TVJm8O+BI11nXLgbTdR/Nb2ynqzP0yOeM1kWP7NNzrTTnxn4t1LXkk58iGVoYvxXNereEPA2ieBdNWy0awisoQOdigM3ux7mgDkvhT8CvD/w1he8Szhu/EN03nXuqSIDLLIepzXpdOpPzoAKKPeigArmviF4B0j4l+FL7w/rdstzY3UZRgRyvowPqK6WloA+CPj/8Pfit8M/gtqPg/S9Ol8caFAVlsr/zQLi2VWDbWB5bAHavpv8AZj+LFn8WPhTot8syjVIYFhvrRuJIJFGCrL2PFesuqyKVYBlPBBr558a/s66t4X8VXXjH4W6imh6zctvvNPkXNtdeuVyAGPrQB9D0teJn4mfEnw54ejn1nwQt1eqcOtnchsgfxAAUtr+0FqE2lzXMng3VI502gQ+U2Tnrg47UAe1EmkdljUsxCqoySeK8T1D9oXUrXREu4fBeqT3LA/6P5bA8dATjvXLQX3xV+PgNu1m3w/8ADbrtlkZt9xNzyB3XjNAHB/F3SPHf7QXx10e58DPZxeHfCk2J7y6AkjkmII3IM84BPT0r6S+E/wAKYfh1Y3M1zdNqeuXz+be30mSXY9Qvotb3gPwLpnw98O22kaXD5cMQ+Zv4pG7s3uTXR0AFFH4UUAIPpRtpfxpPx/WgBaT60v6Un40AH50vUUdaSgBTSf4UfjR60ALgGkwPWvAfjB+0vffDHxxoGh/8IzdTWmpXYtm1CQYiXJAGD3PNe+Rt5kat03DNADzRRRigBMflQcetHNH+etAC4HSik59aPSgAalFJ/nrS496ADPHWjApHbapPYDNfPHif9qDVbHVtaXSPBuoXmk6O226vJF2q+BklPXjP5UAfRFIcetcj8K/iVpfxc8D6d4n0cv8AYrxcqsgwykEgg/iDXX496AD39qKKMe9ABRR+NHagBOnej8aWigBOtH+FLR+NABR1oooATt60V5p8ZPiZrngOHToPD/h+XW7+8k2Z5EUS92duwFch8Gv2iNR8efEfVvBes6VDBqNhB57XFjIXh6gbSfWgD3rbQcdKKPx/WgA/io/Gj8f1pce9ACY+al4Peko/H9aAFo4ajik/GgA64o2j0pfxrlPiR8SdE+Ffhm51vXLkQW0QwqZy8jHoqjuSaAOq2j070bR24rzr4G/GzSPjx4N/4SLRoLi2tfPkgMd0u1wytg5FejfjQAUnfrS0fpQAUUfjRQAn15pTSZo3UALRSZo/CgBaO2KT86M+1AA1LQTSZ5oA8I/ag+HGueP5PBx0a388WOpRzz57KGBJ/IGvdIFKwxqeCFA/Sn5pSaAClpM0bqAE9aWjNJuoAX1pP89aM0u6gA5oozSZoASRiqMcbuM4r4h8bap43+I3xD12w8TeFte03wNZzeXa2WlIq/bhgZdznp16V9v7qa0aNyVBP0oA434P6bpej+ANKs9G0WbQdOiTEdjOAHj5PX/Peu15xTVwoAAwKdn2oADRRmjNAAaO3rSZFLnrQADPeg0m72pc8UAFFGetGfagApabuoz+FAHj3x6Hj6zbS77wjaw6rp6vs1DTnyHkjOc7T615f+z38I/Eei/G7W/FsWit4T8O3lvsk0+Vi0k8xIO8kngY9D2r6xzS7qAE9KXrSZpd1ABRSbqM/wCc0ALRn2ozSbqAFopN1H60ALXy58Zvgh8RPHnxpsPEcc+m6p4V0uMNZ6PeswXzscuwHXBA619RbqM0AfNH7DOgeJ/D/gnxJB4m02PTJ31u6kjijBAIaVjkD+76V9M1GkaRghVCgnPyjFO3UALRRmk3UALRSbqKAFzRXjaftWeB7i8vre0nvL37FL5M8lvau6q3BxkD0NejeDvGukePNJXUtHu1urYnaSvBUjsR2NAG4zhFJY4A7niiORZV3IwZfVTmq2qWK6pp9zaO7IkyGMshwwyMcGvm+68FfFz4LzST+FdSHjPQzK0jadfMTcKp52q/TAFAH01+NLmvn/S/2oNRZXj1TwNqun3ceA0eN4z3wRWta/tBajqkRbTvBupXDq21lb5OvfJFAHtP40v414J4m+M3jGzhdE0i10q8B3LDcTK7FMdcA1zGhftMeIkkuJNTtoZ4IkztgiYEsO2aAPqH8aX+deCaT+061y1tHdaBLE8kfmMTIo2jHH51ct/2l0mnCf8ACMalsPRxESPw4oA9vz70mfevHH+MHinxDZyjw74PuXlOQk1ywRRjuQe1S+HPCPxD1jxBp2s+INdjsbeH/WaZaqQG9Nx6UAev/jR+NC0jMVUkcmgBfWk/GvJrr9oTSvD/AInvdH8QafeaQYWxDcPGWjlGcZDAcV3mneOtA1SzS6ttWtXhfo3mr+R96AN78aKqx6paTLuS5iYYzkMDUFx4g021Cma/t4t33d8gGaANH8aDWb/wkeln/mIW/wD38FOt/EGm3UpihvreWQclFkBNAGhR+NIHB5BBFG4c80AKaPxrlPE3xQ8N+E43a/1OFXThoo23OP8AgIrZ0HXbbxJpcGoWZY20w3IzqVJH0oA0s0UtJQAfjRmoI763muHgSZHmT7yKwJH1qegA+lH40dqKADNFFHagBPxpfxpM0UALRmik3DIGeaAF/Gk/GlooAM0Z96KM0AGaTPvS5pM9jQAfjS5ozRmgBM8dcUuaKKACj8aKWgBKKKKAPzi+B5k09PG9rc+KX8Nedqjf6LLbkkjywMg+le9fsPWN9oOleLdKeOa504am80GpSqVFxkDkD0r3+4+Hfhm7naabQ7GSVzlmaFST71tafptrpNstvZ28dtAvSONQoFAFqsDxT4Zl8RLbql/PZLG25vIbaW9jW/8AhSUAeF614T8Z/DPxFN4h0m9l8SaK4zc6XcHc6AdWQn0HauN8XfHzWvFWqLpHheKSwkbCXELWpM0eRzx2+tfSup+IdM0e4tre+vYLaa6YJCkzbTIx6Aepr5/+Nnh3xJ8OPihpfxL8L2X9o6d5f2XWdPiTLvGSMyL6kAUAZh8O6xok2nSf2RELu7lEbX+qOJpHyMnA7DrXzzY/GK88R/tTa78OBrtjb2FvESjW1rkmRRllznoAK9E+OX7YXhVfCniXxZp+oKs+iwG1s7C4+WRrplzkL7An8q/LD9nn4yXvh/8AaU0fxdfy+dLeX224aRuCsjYOT7A0AfsLJ4H8aWOnQanp9ppvi/RJocsixCKcAA9G9RS/DD4saPZyX88cevNd2LLDNpE0LSBGJIADY6ZrorX4sWvgrQdR0DSbuHVNdum3abaWzByqyABWI9AT+lemfCTwX/whvhyGLVnhn1+9JuLuTA3NI3JH0BoA5W/8WfE7X7Y3Og+HbfTIh8yLcsC0qn1HY4r17RZLybSbR9QjEV60amZFOQGxyB+NXeBwOBS0AGPeik/lS5oAwvF1tov9jz3Gt2sM9lENz+agYfWvJ9E0H4T/ABIM2l6LLDBOrea1vbP5b9eoGenFe33lnBf27wXESzQuMNG4yD9a8X+Kv7Pmn6s1trvhOePwt4nsfnguoFCrJjkq46EUAb0nw78LeH4WE2szWkf3D5l1gfSuO8ReHfhlJLBHc65NeyQtlY4LgucnnkD1rza78Q6xqMw07XvDP9r7WzeahY3ZkAYdwnua5jxZ4/1jwHNrlzYaLHa2VnY+bazNp4aSWXblVHrigD3PT/HHw0nuksY7O9Dg7N0ls4HHGSfwpbPw58NNburq/s9dm02e4+Qlbjyjwew+tflXff8ABTD4y6ZrD29zZ6fEFkw0cmnhX256EeuK+svBvxi1fx5cQ3r6HJf+H73T/tEUcGl7HimBAMZbtk5/OgD60vPh7dNCTo3jyWJJHDKZpt42gAYHNb0vw0vZltJbzxRdiOFfnMchUPkdTXzn4VtZvG1raOPCGreH9Ykl8tILq9eKJcchgPTgV7j4b+Fur+IYSvirxJJdFF8v7JZSFBH6AkHk0AdJ4X+DfhHS5JruO3TVbmZtz3V03mt+dd/b28drCkUSLHGowqKMAD2rlPh18NrD4a6fcWen3N5cQzSmX/S5jIwyegJ7V2FABRRRQB498Qvhb4gi8Vx+LvB2qtbaio/0ixmJMVwo7AdjSaZ8eLnTQ0Pirw5faVPGdrNDGZUOO+QOlesalqlpo9q9ze3Edrbr96SRgFH1NefeOvi7ovhmzS6uLOTVNIf/AFt1ax+aqA929hQA8/H7wjHp8V5NdzW8MhwvnRlT+VWbX43eFr/T5Ly2upJ4I+pjjJP0ArL8QeLvh8vhvStVuLK31LT74brXyYRJu4zwPWsGw8UPd2E//CP+CoNNsuT5uoKIB9cEUAdvH8YNGlW3dIL5kmG5W+ztgfXio7X42eF5r17WW6ks5U6/aUKD9a83t/jAui6eTrvijwzpcocoIzcpgYPA+tc3qfxSsNauIl03VPCPiq45Mtv9pjV2X0HvQB9EW/xC8NXSp5Wt2T+Z93EwyfpzTr3x74f09gs2rWyuxwF8wZPfpmvEPBuj/DjxxGbzUNNHh3U7U4ktGkKKvPVeeRXoMej/AA70PS21aRrGa2tzj7RMwb5sdAfXmgCzrHxisobYHSbK61W4kGI1iiO0noMt9aq/D/w74r1TWj4j8UXrWzsuINLhb5I1PTd6nBq34H+JnhfW76fTdOtpNO8kZX7RB5SOM4Gw9/wr0PjAx0oAWsDxp420rwDo51TWJmgslcI0mCQpPc+1b3+FUNc0Kw8R6bNYalaR3lpMMPFMu5T+FACaH4g0/wASafFe6bdx3ltKu5ZImBBzWjivGpv2eY/D91Hd+DtZutDkjff9nLl4PpszWT4q8ZfFz4e6bLdL4etvFqRjP7mTy3PPGFA9KAPe6SvmHw5+1J4x1zT9914Ji0e+zj7PfXBjIPvxXUR/FLxrrliyWtvotlqStloPtofC+p4oA93/ABox715M+ueLptPTbqumwXRUFvmBAPcCuf8A+Fj+N9Fvp4LqXRb51TMMP2pY2kx1OKAPefxox714NeftV6V4W+yw+JdPmtbuZSfLsgZhxjIBFdBZ/tBWOu2LyaNoerXM+MpHNatGGz7+lAHrHGOTgUKQ3Q5ryIaV8RfG0yPd3kPh3TnGWt4RvcjPTd2OK9O0TSV0XT4rVZZJtgwXkbcT75oA0PxooooAPxopD96lbpQAYrH8VWup3ug3kWj3a2WpMhEEzKGAbtkfWtmk/ioA+UvH2n+M9c0GHSviD4Xk1UWknmw6xobsZkYZKsFA4I64zXM6X+15f/Ch4LPxpZ3ms+Hpplt4dRFvieJSMASJ7AdzX2kwBU5FYV/4d0m8hlW40uznXdnElujD9RQB86a1pv7Nfxw0uSa+m0NkmO6RFdYnDEdWA714bpP7BP7NGleMJNZfxdbS2SyebHZfasLHg5ADA9q+h/E/hXRLPVrwW+j2EA8zpHaov8hWb/wj+l8/8S2z6f8APBP8KAOY0n41fBT4d65e2ngOKHWdfhjEf2p2MiKAMAB/8K6jwz8TLttabxJ/ZGueItduYtkUcMBFrCMHIBB68+lenfDTwX4eh0+WSPQtMjkZ+WWzjBP47a9OsbOC1hCQQRwp/djQKP0oA4fwHq3jbXtSe913T7fStLeMGK2Vy0m7H8X416D/AJ6UjUvrQAUc+tI1KaACue8aeDLXxpphtLmaaAjlZIZCpB9eK6H1o9KAPB9Y/ZXs9X09bf8At++tGDBjJbMULYPG7HWrWkfs+6rok0SxeLJLmyTrb3lssu7Hua9uPSloA+XfFX7JN14g12a/3aMdzZUtpsWfx4rvdH+EPiiz8M/2aPEdtp82cCW0sI1AAGAMYr2WkbpQB4Vov7MbQ3y32s+KtS1e7D+ZuZigBI7AHj8K9U8I+CdP8G20kViZmMjbneaQuxP1NdFRQAnNLSHtS0AFJS0lAGfruhWfiTTZrC/iWe2mGGQ968r1T9mfQ2tbiHSL680xJ0ZJIzK0sZDA5+UnFey0UAfK/hr9l7xx8L9FuNM8LeNlvLPe09tb6jao4hcnJCk9B9KwNT+CvxJ1qyeX4h3M3iiQybVt9MuGtlEZOBnZ3Ar7GpaAPzt+IP8AwTp8IeMI/Ps7HXNMfG94mnkmG7qcZPWqvg//AIJt+DdFtY5ntde+29fOjleNvYYBr9HKKAPi+z/Zp8U6Pod1B4WeZL1l8qGbVZWcheuSW+nete1/ZN8e+Lp9Em8X+OhFbac4mGm2NsgieQDGWPcV9c0UAec+H/gppGk3i311LNfXyniRnKqMdAFzivRFXaoA6Cl9KD0oAOfWjmk9adQAlBXPXmg0HvQBmX3hrS9SYtc2FvM5/iaME/nWF/wqfw19vkvFsFjuJBhmQ4rsaT+KgDlf+FZ6H/z7H/vo1FH8KfDSakl+dPV7pVKq7ndXYUUAYH/CC6Azq76Vayuv3WkiDEfTita3sbe1UCGCOIYx8igVP/hS/wCFAB+lHPrS030oAX/PSilooA//2Q=="
+        },
+        {
+         "type": "rating",
+         "name": "malampati",
+         "titleLocation": "hidden",
+         "rateMax": 4
+        },
+        {
+         "type": "matrixdynamic",
+         "name": "question4",
+         "titleLocation": "hidden",
+         "columns": [
+          {
+           "name": "respirasi",
+           "title": "Respirasi : ",
+           "cellType": "radiogroup",
+           "colCount": 0,
+           "choices": [
+            {
+             "value": "asma",
+             "text": "Asma "
+            },
+            {
+             "value": "ppok",
+             "text": " PPOK     "
+            },
+            {
+             "value": "ispa",
+             "text": " ISPA     "
+            },
+            {
+             "value": "riwayat_ispa",
+             "text": "Riwayat ISPA    "
+            },
+            {
+             "value": "sleep",
+             "text": "Sleep Apneu"
+            },
+            {
+             "value": "merokok",
+             "text": "Merokok"
+            },
+            {
+             "value": "riwayat",
+             "text": "Riwayat Merokok "
+            },
+            {
+             "value": "normal",
+             "text": "Normal "
+            }
+           ],
+           "hasOther": true,
+           "otherText": "Lainnya"
+          },
+          {
+           "name": "batang",
+           "title": "Batang/ bungkus ",
+           "cellType": "text",
+           "visibleIf": "{question4[0].respirasi} = 'merokok'"
+          },
+          {
+           "name": "thn",
+           "title": "tiap hari selama /thn",
+           "cellType": "text",
+           "visibleIf": "{question4[0].respirasi} = 'merokok'"
+          },
+          {
+           "name": "batang1",
+           "title": "Batang/bungkus",
+           "cellType": "text",
+           "visibleIf": "{question4[0].respirasi} = 'riwayat'"
+          },
+          {
+           "name": "thn2",
+           "title": "tiap hari selama / thn",
+           "cellType": "text",
+           "visibleIf": "{question4[0].respirasi} = 'riwayat'"
+          },
+          {
+           "name": "berhenti",
+           "cellType": "text",
+           "visibleIf": "{question4[0].respirasi} = 'riwayat'"
+          },
+          {
+           "name": "kardiovaskular",
+           "title": "Kardiovaskular ",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "angina ",
+             "text": "Angina "
+            },
+            {
+             "value": "dislipidemia",
+             "text": "Dislipidemia"
+            },
+            {
+             "value": "normal",
+             "text": "Normal"
+            },
+            {
+             "value": "cad",
+             "text": "CAD"
+            },
+            {
+             "value": "mci",
+             "text": " MCI"
+            },
+            {
+             "value": "chf",
+             "text": "CHF"
+            },
+            {
+             "value": "pacemaker",
+             "text": "Pacemaker"
+            },
+            {
+             "value": "disritmia",
+             "text": "Disritmia"
+            },
+            {
+             "value": "penyakit",
+             "text": "Penyakit Katup"
+            },
+            {
+             "value": "hipertensi ",
+             "text": "Hipertensi "
+            },
+            {
+             "value": "normal ",
+             "text": "normal "
+            }
+           ],
+           "hasOther": true,
+           "noneText": "Lainnya",
+           "otherText": "lainnya"
+          },
+          {
+           "name": "sistem_pencernaan",
+           "title": "Sistem Pencernaan :",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "penyakit",
+             "text": "Penyakit Liver "
+            },
+            {
+             "value": "mual",
+             "text": "Mual / Muntah "
+            },
+            {
+             "value": "normal",
+             "text": "Normal"
+            },
+            {
+             "value": "drug",
+             "text": "Drug/Alcohol Abuse "
+            }
+           ],
+           "hasOther": true,
+           "otherText": "Lainnya"
+          },
+          {
+           "name": "neuro",
+           "title": "Neuro / Musculoskeletal :",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "art",
+             "text": "Artritis"
+            },
+            {
+             "value": "kejang",
+             "text": "Kejang"
+            },
+            {
+             "value": "normal",
+             "text": "Normal "
+            },
+            {
+             "value": "cva",
+             "text": "CVA / TIA "
+            },
+            {
+             "value": "lumpuh",
+             "text": "Kelumpuhan "
+            },
+            {
+             "value": "neuromuskular",
+             "text": "Penyakit Neuromuskular "
+            }
+           ],
+           "hasOther": true,
+           "otherText": "lain -lain"
+          },
+          {
+           "name": "ginjal",
+           "title": "Ginjal / Endokrin :",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "dm",
+             "text": "DM "
+            },
+            {
+             "value": "riwayat",
+             "text": "Riwayat Steroid           "
+            },
+            {
+             "value": "normal",
+             "text": "Normal"
+            },
+            {
+             "value": "gagal",
+             "text": "Gagal Ginjal / dialisis"
+            },
+            {
+             "value": "tiroid",
+             "text": "Penyakit tiroid             "
+            }
+           ],
+           "hasOther": true,
+           "otherText": "lainnya"
+          },
+          {
+           "name": "lainlain",
+           "title": "Lain-lain :",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "koagulopati",
+             "text": "Koagulopati"
+            },
+            {
+             "value": "kehamilan",
+             "text": "Kehamilan"
+            },
+            {
+             "value": "tidak",
+             "text": "Tidak ada"
+            },
+            {
+             "value": "obesitas",
+             "text": " Obesitas "
+            },
+            {
+             "value": "normal",
+             "text": " normal "
+            },
+            {
+             "value": "prikiatri",
+             "text": "Riwayat Psikiatri "
+            }
+           ]
+          }
+         ],
+         "columnLayout": "vertical",
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "allowAddRows": false,
+         "allowRemoveRows": false,
+         "rowCount": 1
+        }
+       ],
+       "title": "Skor Mallampati     "
+      }
+     ],
+     "title": "Halaman 1"
+    },
+    {
+     "name": "page2",
+     "elements": [
+      {
+       "type": "multipletext",
+       "name": "question5",
+       "titleLocation": "hidden",
+       "items": [
+        {
+         "name": "diagnosa",
+         "title": "Diagnosa"
+        },
+        {
+         "name": "tindakan",
+         "title": "Rencana Tindakan"
+        },
+        {
+         "name": "obat",
+         "title": "Obat yang sedang dikonsumsi : "
+        },
+        {
+         "name": "alergi",
+         "title": "Alergi obat / makanan : "
+        }
+       ]
+      },
+      {
+       "type": "panel",
+       "name": "panel3",
+       "elements": [
+        {
+         "type": "multipletext",
+         "name": "question6",
+         "title": "Pemeriksaan Lab ",
+         "titleLocation": "hidden",
+         "hideNumber": true,
+         "items": [
+          {
+           "name": "hb",
+           "title": "Hb :"
+          },
+          {
+           "name": "ht",
+           "title": "Ht :"
+          },
+          {
+           "name": "leukosit",
+           "title": "Leukosit :"
+          },
+          {
+           "name": "trombosit",
+           "title": "Trombosit: "
+          },
+          {
+           "name": "gds",
+           "title": "GDS "
+          },
+          {
+           "name": "hbs",
+           "title": "HBs Ag :"
+          },
+          {
+           "name": "anti",
+           "title": "Anti HIV: "
+          },
+          {
+           "name": "Lainlain",
+           "title": "Lain - lain: "
+          }
+         ],
+         "colCount": 2
+        }
+       ],
+       "title": "Pemeriksaan Lab"
+      },
+      {
+       "type": "panel",
+       "name": "panel1",
+       "elements": [
+        {
+         "type": "radiogroup",
+         "name": "rontgen",
+         "title": "Rontgen",
+         "hideNumber": true,
+         "choices": [
+          {
+           "value": "ada",
+           "text": "Ada "
+          },
+          {
+           "value": "tidak",
+           "text": "Tidak Ada"
+          }
+         ],
+         "colCount": 2
+        },
+        {
+         "type": "radiogroup",
+         "name": "ekg",
+         "title": "EKG",
+         "hideNumber": true,
+         "choices": [
+          {
+           "value": "ada",
+           "text": "Ada "
+          },
+          {
+           "value": "tidak",
+           "text": "Tidak Ada"
+          }
+         ],
+         "colCount": 2
+        }
+       ],
+       "title": "Radiologi  dan \nPenunjang lain\n"
+      },
+      {
+       "type": "multipletext",
+       "name": "question7",
+       "title": "Puasa :",
+       "hideNumber": true,
+       "items": [
+        {
+         "name": "minum",
+         "inputType": "time",
+         "title": "Minum Terakhir Jam "
+        },
+        {
+         "name": "makan",
+         "inputType": "time",
+         "title": "Makan Terakhir jam"
+        }
+       ],
+       "colCount": 2
+      },
+      {
+       "type": "matrixdynamic",
+       "name": "rencana",
+       "title": "Rencana Anestesi : ",
+       "hideNumber": true,
+       "columns": [
+        {
+         "name": "asa",
+         "title": "ASA",
+         "cellType": "radiogroup",
+         "choices": [
+          {
+           "value": "1",
+           "text": "1"
+          },
+          {
+           "value": "1E",
+           "text": "1E"
+          },
+          {
+           "value": "2",
+           "text": "2"
+          },
+          {
+           "value": "2E",
+           "text": "2E"
+          },
+          {
+           "value": "3",
+           "text": "3"
+          },
+          {
+           "value": "3E",
+           "text": "3E"
+          },
+          {
+           "value": "4",
+           "text": "4"
+          },
+          {
+           "value": "4E",
+           "text": "4E"
+          },
+          {
+           "value": "5",
+           "text": "5"
+          },
+          {
+           "value": "5E",
+           "text": "5E"
+          }
+         ]
+        },
+        {
+         "name": "rencana",
+         "title": "Rencana ",
+         "cellType": "radiogroup",
+         "choices": [
+          {
+           "value": "ga",
+           "text": "GA"
+          },
+          {
+           "value": "reg",
+           "text": "REG"
+          },
+          {
+           "value": "tiva",
+           "text": " TIVA "
+          },
+          {
+           "value": "lma",
+           "text": "LMA"
+          }
+         ]
+        }
+       ],
+       "columnLayout": "vertical",
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "cellType": "text",
+       "allowAddRows": false,
+       "allowRemoveRows": false,
+       "rowCount": 1
+      },
+      {
+       "type": "matrixdynamic",
+       "name": "premedikas",
+       "title": "Premedikasi : ",
+       "hideNumber": true,
+       "columns": [
+        {
+         "name": "obat",
+         "title": "Obat ",
+         "cellType": "text"
+        },
+        {
+         "name": "waktu",
+         "title": "Waktu",
+         "cellType": "text",
+         "inputType": "time"
+        }
+       ],
+       "columnLayout": "vertical",
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "cellType": "text",
+       "allowAddRows": false,
+       "allowRemoveRows": false,
+       "rowCount": 1
+      }
+     ],
+     "title": "Halaman 2"
+    }
+   ]
+  }

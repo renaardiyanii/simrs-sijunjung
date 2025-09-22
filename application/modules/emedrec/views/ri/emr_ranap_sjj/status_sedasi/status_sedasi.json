@@ -1,0 +1,792 @@
+{
+    "title": "STATUS SEDASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question21",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Pangkat / Gol",
+          "cellType": "text"
+         },
+         {
+          "name": "column2",
+          "title": "NRP / NIP",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "Kesatuan / Alamat",
+          "cellType": "text"
+         },
+         {
+          "name": "column4",
+          "title": "Diagnosis",
+          "cellType": "text"
+         },
+         {
+          "name": "column5",
+          "title": "Alergi",
+          "cellType": "text"
+         },
+         {
+          "name": "column6",
+          "title": "Mallampati",
+          "cellType": "rating",
+          "rateMax": 4
+         },
+         {
+          "name": "column7",
+          "title": "ASA",
+          "cellType": "rating"
+         },
+         {
+          "name": "column8",
+          "title": "Penyulit"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Tgl Prosedur",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "column2",
+          "title": "Nama Prosedur",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "Pelaku Prosedur",
+          "cellType": "text"
+         },
+         {
+          "name": "column4",
+          "title": "Rencana Sedasi",
+          "cellType": "text"
+         },
+         {
+          "name": "column5",
+          "title": "Pelaku Sedasi",
+          "cellType": "text"
+         },
+         {
+          "name": "column6",
+          "title": "Asisten Sedasi",
+          "cellType": "text"
+         },
+         {
+          "name": "column7",
+          "title": "Jam Mulai",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "column8",
+          "title": "Jam selesai",
+          "cellType": "text",
+          "inputType": "time"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "checkbox",
+        "name": "question2",
+        "title": "PEMANTAUAN (Monitoring) :",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "EKG Lead"
+         },
+         {
+          "value": "item2",
+          "text": "NIBP"
+         },
+         {
+          "value": "item3",
+          "text": "SpO2"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Lainnya",
+        "colCount": 4
+       },
+       {
+        "type": "checkbox",
+        "name": "question3",
+        "title": "CHECK LIST PERSIAPAN SEDASI :",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Penilaian Prasedasi"
+         },
+         {
+          "value": "item2",
+          "text": "Obat-obatan Sedasi"
+         },
+         {
+          "value": "item3",
+          "text": "Persetujuan Tindakan Medis"
+         },
+         {
+          "value": "item4",
+          "text": "Perlengkapan Emergensi"
+         },
+         {
+          "value": "item5",
+          "text": "Time Out"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Lainnya",
+        "colCount": 4
+       },
+       {
+        "type": "checkbox",
+        "name": "question4",
+        "title": "PENILAIAN PRA TINDAKAN,",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tekanan Darah"
+         },
+         {
+          "value": "item2",
+          "text": "Frekuensi Napas"
+         },
+         {
+          "value": "item3",
+          "text": "Frekuensi Nadi\t\t"
+         },
+         {
+          "value": "item4",
+          "text": "Suhu"
+         },
+         {
+          "value": "item5",
+          "text": "SpO2"
+         },
+         {
+          "value": "item6",
+          "text": "Kesadaran"
+         }
+        ],
+        "otherText": "Lainnya",
+        "colCount": 4
+       },
+       {
+        "type": "comment",
+        "name": "question5",
+        "title": "AKSES INTRAVENA, TEMPAT DAN UKURAN "
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question6",
+        "title": "5. OBAT DAN PEMANTAUAN SELAMA PROSEDUR DENGAN SEDASI :",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question14",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "obat",
+            "title": "Obat - obatan",
+            "cellType": "text"
+           },
+           {
+            "name": "waktu",
+            "title": "Waktu",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "derajat",
+            "title": "Derajat kedalaman sedasi",
+            "cellType": "text"
+           },
+           {
+            "name": "spO2",
+            "title": "SpO2",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "100"
+             },
+             {
+              "value": "item2",
+              "text": "95"
+             },
+             {
+              "value": "item3",
+              "text": "90"
+             },
+             {
+              "value": "item4",
+              "text": "85"
+             },
+             {
+              "value": "item5",
+              "text": "80"
+             },
+             {
+              "value": "item6",
+              "text": "75"
+             },
+             {
+              "value": "item7",
+              "text": "70"
+             },
+             {
+              "value": "item8",
+              "text": "65"
+             },
+             {
+              "value": "item9",
+              "text": "60"
+             }
+            ]
+           },
+           {
+            "name": "r",
+            "title": "R",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "60"
+             },
+             {
+              "value": "item2",
+              "text": "55"
+             },
+             {
+              "value": "item3",
+              "text": "50"
+             },
+             {
+              "value": "item4",
+              "text": "45"
+             },
+             {
+              "value": "item5",
+              "text": "40"
+             },
+             {
+              "value": "item6",
+              "text": "35"
+             },
+             {
+              "value": "item7",
+              "text": "30"
+             },
+             {
+              "value": "item8",
+              "text": "25"
+             },
+             {
+              "value": "item9",
+              "text": "20"
+             },
+             {
+              "value": "item10",
+              "text": "15"
+             },
+             {
+              "value": "item11",
+              "text": "10"
+             },
+             {
+              "value": "item12",
+              "text": "5"
+             }
+            ]
+           },
+           {
+            "name": "n",
+            "title": "N",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "180"
+             },
+             {
+              "value": "item2",
+              "text": "160"
+             },
+             {
+              "value": "item3",
+              "text": "140"
+             },
+             {
+              "value": "item4",
+              "text": "120"
+             },
+             {
+              "value": "item5",
+              "text": "100"
+             },
+             {
+              "value": "item6",
+              "text": "80"
+             },
+             {
+              "value": "item7",
+              "text": "60"
+             }
+            ]
+           },
+           {
+            "name": "td",
+            "title": "TD",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "220"
+             },
+             {
+              "value": "item2",
+              "text": "200"
+             },
+             {
+              "value": "item3",
+              "text": "180"
+             },
+             {
+              "value": "item4",
+              "text": "160"
+             },
+             {
+              "value": "item5",
+              "text": "140"
+             },
+             {
+              "value": "item6",
+              "text": "120"
+             },
+             {
+              "value": "item7",
+              "text": "100"
+             },
+             {
+              "value": "item8",
+              "text": "80"
+             },
+             {
+              "value": "item9",
+              "text": "60"
+             },
+             {
+              "value": "item10",
+              "text": "40"
+             },
+             {
+              "value": "item11",
+              "text": "20"
+             },
+             {
+              "value": "item12",
+              "text": "0"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "radiogroup",
+        "name": "question7",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "mulai sedasi"
+         },
+         {
+          "value": "item2",
+          "text": "selesai sedasi"
+         },
+         {
+          "value": "item3",
+          "text": "mulai prosedur"
+         },
+         {
+          "value": "item4",
+          "text": "selesai prosedur"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "html",
+        "name": "question8",
+        "html": "<p>0\t=\tSadar penuh\t\t\t\n<p>1\t=\tSedasi minimal (mengantuk, respon percakapan adekuat)\n<p>2\t=\tSedasi sedang (mengantuk / tidur, terbangun dengan rangsang sentuh)\n<p>3\t=\tSedasi dalam (tidur dalam, terbangun dengan rangsang fisik bermakna)\t\n<p>4\t=\tTidak dapat dibangunkan"
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question9",
+          "title": "Jam masuk ruang pulih :",
+          "hideNumber": true,
+          "inputType": "time"
+         }
+        ],
+        "title": "6. PEMANTAUAN PASCA SEDASI :"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question10",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question14",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "r",
+            "title": "R",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "60"
+             },
+             {
+              "value": "item2",
+              "text": "55"
+             },
+             {
+              "value": "item3",
+              "text": "50"
+             },
+             {
+              "value": "item4",
+              "text": "45"
+             },
+             {
+              "value": "item5",
+              "text": "40"
+             },
+             {
+              "value": "item6",
+              "text": "35"
+             },
+             {
+              "value": "item7",
+              "text": "30"
+             },
+             {
+              "value": "item8",
+              "text": "25"
+             },
+             {
+              "value": "item9",
+              "text": "20"
+             },
+             {
+              "value": "item10",
+              "text": "15"
+             },
+             {
+              "value": "item11",
+              "text": "10"
+             },
+             {
+              "value": "item12",
+              "text": "5"
+             }
+            ]
+           },
+           {
+            "name": "n",
+            "title": "N",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "180"
+             },
+             {
+              "value": "item2",
+              "text": "160"
+             },
+             {
+              "value": "item3",
+              "text": "140"
+             },
+             {
+              "value": "item4",
+              "text": "120"
+             },
+             {
+              "value": "item5",
+              "text": "100"
+             },
+             {
+              "value": "item6",
+              "text": "80"
+             },
+             {
+              "value": "item7",
+              "text": "60"
+             }
+            ]
+           },
+           {
+            "name": "td",
+            "title": "TD",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "220"
+             },
+             {
+              "value": "item2",
+              "text": "200"
+             },
+             {
+              "value": "item3",
+              "text": "180"
+             },
+             {
+              "value": "item4",
+              "text": "160"
+             },
+             {
+              "value": "item5",
+              "text": "140"
+             },
+             {
+              "value": "item6",
+              "text": "120"
+             },
+             {
+              "value": "item7",
+              "text": "100"
+             },
+             {
+              "value": "item8",
+              "text": "80"
+             },
+             {
+              "value": "item9",
+              "text": "60"
+             },
+             {
+              "value": "item10",
+              "text": "40"
+             },
+             {
+              "value": "item11",
+              "text": "20"
+             },
+             {
+              "value": "item12",
+              "text": "0"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel3",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "question11",
+            "title": "15 menit pertama\t",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": " 0  Muntah\t"
+             },
+             {
+              "value": "item2",
+              "text": "2  Tidak Muntah"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question12",
+            "title": "15 menit kedua",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": " 0  Muntah\t"
+             },
+             {
+              "value": "item2",
+              "text": "2  Tidak Muntah"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "multipletext",
+            "name": "question13",
+            "titleLocation": "hidden",
+            "items": [
+             {
+              "name": "text1",
+              "inputType": "time",
+              "title": "Jam keluar ruang pulih\t"
+             },
+             {
+              "name": "text2",
+              "title": "Aldrete Skor"
+             }
+            ]
+           }
+          ],
+          "title": "a. Skor muntah\t:"
+         }
+        ],
+        "title": "7. UNTUK PASIEN RAWAT JALAN DEWASA DAN ANAK :"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question16",
+          "title": "Obat-obatan\t\t:\t",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question17",
+          "title": "Mobilisasi\t\t:\t",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question19",
+          "title": "Diet dan Nutrisi\t:\t",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question22",
+          "title": "Edukasi & Follow Up\t:\t",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question23",
+          "title": "Lainnya\t\t:\t",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question25",
+          "title": "Tanah badantuang,",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question27",
+          "title": "Dokter pemeriksa",
+          "hideNumber": true
+         }
+        ],
+        "title": "8. INSTRUKSI PASCA SEDASI :"
+       }
+      ]
+     }
+    ]
+   }

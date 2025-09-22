@@ -1,0 +1,140 @@
+{
+    "title": "PENGKAJIAN MEDIS RAWAT JALAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "anamnesis",
+          "elements": [
+           {
+            "type": "matrixdropdown",
+            "name": "question1",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "anamnesis1",
+              "title": " ",
+              "cellType": "comment"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "rows": [
+             {
+              "value": "kel_utama",
+              "text": "KELUHAN UTAMA"
+             },
+             {
+              "value": "anamnesis",
+              "text": "ANAMNESIS KHUSUS"
+             }
+            ]
+           }
+          ],
+          "title": "ANAMNESI"
+         },
+         {
+          "type": "panel",
+          "name": "panel2",
+          "elements": [
+           {
+            "type": "multipletext",
+            "name": "question2",
+            "titleLocation": "hidden",
+            "items": [
+             {
+              "name": "td",
+              "placeHolder": "mmHg",
+              "title": "Tekanan Darah"
+             },
+             {
+              "name": "nadi",
+              "placeHolder": "x/menit",
+              "title": "Nadi"
+             },
+             {
+              "name": "pernafasan",
+              "placeHolder": "x/menit",
+              "title": "Pernafasan"
+             },
+             {
+              "name": "suhu",
+              "placeHolder": "c",
+              "title": "Suhu"
+             }
+            ],
+            "colCount": 2
+           }
+          ],
+          "title": "PEMERIKSAAN FISIK"
+         },
+         {
+          "type": "comment",
+          "name": "question7",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "panel",
+          "name": "panel3",
+          "elements": [
+           {
+            "type": "comment",
+            "name": "question3",
+            "titleLocation": "hidden"
+           }
+          ],
+          "title": "PEMERIKSAAN PENUNJANG"
+         },
+         {
+          "type": "panel",
+          "name": "panel4",
+          "elements": [
+           {
+            "type": "comment",
+            "name": "question4",
+            "titleLocation": "hidden"
+           }
+          ],
+          "title": "DIAGNOSIS"
+         },
+         {
+          "type": "panel",
+          "name": "panel5",
+          "elements": [
+           {
+            "type": "comment",
+            "name": "question5",
+            "titleLocation": "hidden"
+           }
+          ],
+          "title": "PENGOBATAN"
+         },
+         {
+          "type": "panel",
+          "name": "panel6",
+          "elements": [
+           {
+            "type": "comment",
+            "name": "question6",
+            "titleLocation": "hidden"
+           }
+          ],
+          "title": "PERENCANAAN"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

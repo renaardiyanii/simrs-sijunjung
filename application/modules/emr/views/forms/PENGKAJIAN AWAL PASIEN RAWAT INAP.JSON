@@ -1,0 +1,99 @@
+{
+    "pages": [
+     {
+      "name": "pengkajian_awal_pasien_rawat_inap",
+      "elements": [
+       {
+        "type": "html",
+        "name": "catatan_pengkajian1",
+        "html": "(Untuk pasien dewasa / usia lanjut)"
+       },
+       {
+        "type": "html",
+        "name": "catatan_pengkajian2",
+        "html": "(Harus dilengkapi dalam waktu 24 jam pertama pasien masuk ruang rawat inap)"
+       },
+       {
+        "type": "multipletext",
+        "name": "identitas",
+        "title": "IDENTITAS",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "no_mec_reg",
+          "title": "No. Med.Rec :"
+         },
+         {
+          "name": "nama_lengkap",
+          "title": "Nama Lengkap :"
+         },
+         {
+          "name": "tgl_lahir",
+          "title": "Tanggal Lahir :"
+         },
+         {
+          "name": "jenis_kelamin",
+          "title": "Jenis Kelamin :"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "catatan_identitas",
+        "html": "(Mohon diisi atau ditempelkan stiker jika ada)"
+       },
+       {
+        "type": "text",
+        "name": "ruang_rawat",
+        "title": "Ruang Rawat : ",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "Tgl_Masuk",
+        "title": "Tanggal Masuk Rawat Inap",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "tgl_masuk_rawat_inap",
+          "title": "Tgl Masuk Rawat Inap"
+         },
+         {
+          "name": "pukul",
+          "title": "Pukul"
+         },
+         {
+          "name": "tgl_assesment",
+          "title": "Tgl Assesment"
+         },
+         {
+          "name": "pukul",
+          "title": "Pukul"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question1",
+        "title": "Penggunaan Obat sebelum admisi :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak menggunakan oabat sebelum admisi"
+         },
+         {
+          "value": "item2",
+          "text": "Ya, dengan rincian sebagai berikut :"
+         }
+        ],
+        "colCount": 2
+       }
+      ],
+      "title": "PENGKAJIAN AWAL PASIEN RAWAT INAP"
+     }
+    ]
+   }

@@ -1,0 +1,144 @@
+{
+    "title": "SKRIINING TRIASE / POLIKLINIK PASIEN COVID-19",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "identitas",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "alamat",
+          "title": "Alamat :"
+         },
+         {
+          "name": "tanggal",
+          "inputType": "date",
+          "title": "Tanggal Pemeriksaan"
+         }
+        ]
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "table_skrining",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "odp",
+          "title": "ODP",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "demam",
+            "text": "Demam > 38° C"
+           },
+           {
+            "value": "batuk",
+            "text": "Batuk"
+           },
+           {
+            "value": "pilek",
+            "text": "Pilek"
+           },
+           {
+            "value": "nyeri_tenggorokan",
+            "text": "Nyeri Tenggorokan"
+           },
+           {
+            "value": "kontak_erat",
+            "text": "Kontak Erat pasien COVID-19"
+           }
+          ]
+         },
+         {
+          "name": "pdp",
+          "title": "PDP",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "demam",
+            "text": "Demam > 38° C"
+           },
+           {
+            "value": "batuk",
+            "text": "Batuk"
+           },
+           {
+            "value": "pilek",
+            "text": "Pilek"
+           },
+           {
+            "value": "nyeri_tenggorokan",
+            "text": "Nyeri Tenggorokan"
+           },
+           {
+            "value": "sesak_nafas_ringan",
+            "text": "Sesak nafas ringan (Sa02 > 93%)"
+           },
+           {
+            "value": "sesak_nafas_berat",
+            "text": "Sesak nafas berat (Sa02 ≤ 93 %)"
+           },
+           {
+            "value": "kontak_erat",
+            "text": "Kontak Erat pasien COVID-19"
+           }
+          ]
+         },
+         {
+          "name": "otg",
+          "title": "OTG",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "kontak_erat",
+            "text": "Kontak Erat pasien COVID-19"
+           }
+          ]
+         }
+        ],
+        "columnColCount": 1,
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "radiogroup",
+        "name": "status_vaksinasi",
+        "title": "Status Vaksinasi :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "belum_vaksin",
+          "text": "Belum Vaksin"
+         },
+         {
+          "value": "dosis1",
+          "text": "Dosis 1"
+         },
+         {
+          "value": "dosis2",
+          "text": "Dosis 2"
+         },
+         {
+            "value": "dosis3",
+            "text": "Dosis 3"
+        },
+        {
+            "value": "dosis4",
+            "text": "Dosis 4"
+        }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "html",
+        "name": "question3",
+        "html": "<h5> Catatan\n<p>\n<p> 1. Wajib diisi bila melakukan rapid antigen\n<p> 2. Pengisian dengan ceklist\n<p> 3. Wajib menulis tanggal terakhir kontak\n<p> 4. Kontak s/d pemeriksaan dihitung dari hari terakhir riwayat kontak hingga tanggal pemeriksaan saat ini.\n<p> 5. Rapid antigen tidak perlu di ulang dalam waktu 48 jam.\n\n"
+       }
+      ]
+     }
+    ]
+   }

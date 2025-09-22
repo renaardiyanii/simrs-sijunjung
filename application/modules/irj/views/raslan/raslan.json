@@ -1,0 +1,235 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "question1",
+        "title": "Spesifikasi",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "flow",
+          "title": "Flow",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ya",
+            "text": "Ya"
+           }
+          ]
+         },
+         {
+          "name": "ket",
+          "title": "Ket",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Henti ( Isi AB awal - AB lanjut )"
+           }
+          ],
+          "hasOther": true,
+          "noneText": "Fokus infeksi dengan gejala infeksi",
+          "otherText": "Fokus infeksi dengan gejala infeksi"
+         },
+         {
+          "name": "tindakan",
+          "title": "Tindakan",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "De-eskalasi sesuai kultur / step down antibiotik ke stratifikasi yang lebih rendah / ganti AB IV ke oral atau stop"
+           }
+          ]
+         },
+         {
+          "name": "antibiotik",
+          "title": "Antibiotik Awal",
+          "cellType": "text"
+         },
+         {
+          "name": "antibiotik_akhir",
+          "title": "Antibiotik Lanjut",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnColCount": 1,
+        "rows": [
+         {
+          "value": "item1",
+          "text": "1. Gejala infeksi masih ada"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question23",
+        "title": "Spesifikasi\n",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "showHeader": false,
+        "columns": [
+         {
+          "name": "flow",
+          "title": "Flow",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ya",
+            "text": "Ya"
+           }
+          ]
+         },
+         {
+          "name": "Ket",
+          "title": "Ket",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Henti (Isi AB awal - AB lanjut)"
+           }
+          ],
+          "otherText": "(Isi AB awal - AB lanjut)"
+         },
+         {
+          "name": "Tindakan",
+          "title": "Tindakan",
+          "cellType": "radiogroup",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ekskalasi antibiotik ke stratifikasi tipe III"
+           }
+          ]
+         },
+         {
+          "name": "Antibiotik Awal",
+          "title": "Antibiotik Awal",
+          "cellType": "text"
+         },
+         {
+          "name": "Antibiotik Akhir",
+          "title": "Antibiotik akhir",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         "item1"
+        ],
+        "columnColCount": 1,
+        "rows": [
+         {
+          "value": "item1",
+          "text": "2. Klinis progresif sepsis/\tYa\tHenti\tEkskalasi antibiotik ke stratifikasi tipe III\t\t \tSeptic shock /\t\t(Isi AB awal - AB lanjut)\t\t\t \tFebrile neutropenia "
+         },
+         {
+          "value": "item2",
+          "text": "3. Komplikasi perforasi organ"
+         },
+         {
+          "value": "item3",
+          "text": "4. Komplikasi ensefalopati\tYa\tHenti\tEkskalasi antibiotik ke stratifikasi tipe III\t\t \tec. Infeksi bakteri\t\t(Isi AB awal - AB lanjut)"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question6",
+        "title": "Spesifikasi\n",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "showHeader": false,
+        "columns": [
+         {
+          "name": "flow",
+          "title": "Flow",
+          "cellType": "radiogroup",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ya",
+            "text": "Ya"
+           }
+          ]
+         },
+         {
+          "name": "Ket",
+          "title": "Ket",
+          "cellType": "radiogroup",
+          "colCount": 0,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Henti (Isi AB awal - AB lanjut)"
+           }
+          ],
+          "otherText": "(Isi AB awal - AB lanjut)"
+         },
+         {
+          "name": "Tindakan",
+          "title": "Tindakan",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ekskalasi antibiotik ke stratifikasi yang lebih tinggi / tambahkan AB sesuai panduan"
+           },
+           {
+            "value": "item2",
+            "text": "De-eskalasi sesuai kultur / step down antibiotik ke stratifikasi yang lebih rendah / ganti AB IV ke oral atau stop"
+           }
+          ]
+         },
+         {
+          "name": "Antibiotik Awal",
+          "title": "Antibiotik Awal",
+          "cellType": "text"
+         },
+         {
+          "name": "Antibiotik Akhir",
+          "title": "Antibiotik akhir",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         "item1"
+        ],
+        "columnColCount": 1,
+        "rows": [
+         {
+          "value": "item5",
+          "text": "5. Gejala infeksi perbaikan  pasca \tTidak\tHenti\tEkskalasi antibiotik ke stratifikasi yang lebih tinggi / tambahkan AB sesuai panduan\t\t \t3-7 hari pemberian antibiotik\t\t(Isi AB awal - AB lanjut)\t\t\t"
+         }
+        ]
+       }
+      ],
+      "title": "RASPRO ALUR ANTIBIOTIK LANJUTAN (RASLAN)"
+     }
+    ]
+   }

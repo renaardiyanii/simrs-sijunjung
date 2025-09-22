@@ -1,0 +1,203 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       { 
+        "type": "paneldynamic",
+        "name": "question2",
+        "title": "Skor hari perawatan",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Hari"
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Tgl"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "title": "Skore Hari Perawatan Ke",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "defaultValue": [
+           {
+            "Column 9": "p",
+            "Column 6": 0
+           },
+           {
+            "Column 9": "S",
+            "Column 6": 0
+           },
+           {
+            "Column 9": "M",
+            "Column 6": 0
+           }
+          ],
+          "correctAnswer": [
+           {
+            "Column 6": 0
+           },
+           {
+            "Column 6": 0
+           },
+           {
+            "Column 6": 0
+           }
+          ],
+          "columns": [
+            {
+                "name": "Column 9",
+                "title": "P/S/M",
+                "cellType": "text",
+                "colCount": 2,
+                "readOnly": true
+            },
+           {
+            "name": "Column 1",
+            "title": "Face ( Wajah )",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak ada ekspresi tertentu atau senyum, kontak mata(0)"
+             },
+             {
+              "value": "1",
+              "text": "Kadang meringis atau mengerutkan kening, menarik diri, tidak tertarik, wajah terlihat cemas, alais diturunkan, mata sebagaian tertutup, pipi terangkat mulut mengerucut(1)"
+             },
+             {
+              "value": "2",
+              "text": "Sering cemberut,konstan,rahang terkatup dagu bergetar, kerutan yang dalam di dahi, mata tertutup, mulut terbuka, garis yang dalam disekitar hidung/bibir.(2)"
+             }
+            ]
+           },
+           {
+            "name": "Column 2",
+            "title": "Leg ( kaki )",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Posisi normal atau santai(0)"
+             },
+             {
+              "value": "1",
+              "text": "Tidak nyaman, gelisah, tegang, tonus meningkat, kaku fleksi/ekstensi anggota badan intermiten(1)"
+             },
+             {
+              "value": "2",
+              "text": "Menendang atau kaki disusun, hipertonis fleksi/ekstensi anggota badan secara berlebihan, tremor(2)"
+             }
+            ]
+           },
+           {
+            "name": "Column 3",
+            "title": "Activity ( Aktivitas )",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Berbaring dengan tenang posisi normal, bergerak dengan bebas dan mudah(0)"
+             },
+             {
+              "value": "1",
+              "text": "Mengeliat, menggeser maju mundur, tegang, ragu-ragu untuk bergerak, menjaga, tekanan pada bagian tubuh(1)"
+             },
+             {
+              "value": "2",
+              "text": "Melengkung, kaku atau menyentak, posisi tetap, goyang gerakan kepala dari sisi ke sisi, menggosok bagaian tubuh.(2)"
+             }
+            ]
+           },
+           {
+            "name": "Column 4",
+            "title": "Cry ( menangis )",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak ada teriakan/erangan ( terjaga/tertidur )(0)"
+             },
+             {
+              "value": "1",
+              "text": "Erangan/rengekan, sekali menangis/sekali mengeluh(1)"
+             },
+             {
+              "value": "2",
+              "text": "Terus menerus mengangis, menjerit, isak tangis mengeram, sering mengeluh(2)"
+             }
+            ]
+           },
+           {
+            "name": "Column 5",
+            "title": "Consolability",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tenang,sanatai, tidak perlu dihibur(0)"
+             },
+             {
+              "value": "1",
+              "text": "Perlu keyakinan dengan sekali-kali menyentuh, sekali-sekali memeluk, atau berbicara, perhatian beralih(1)"
+             },
+             {
+              "value": "2",
+              "text": "Sulit untuk dibujuk atau dibuat nyaman(2)"
+             }
+            ]
+           },
+           {
+            "name": "Column 6",
+            "title": "Total Skor",
+            "cellType": "expression",
+            "expression": "{row.Column 1}+{row.Column 2}+{row.Column 3}+{row.Column 4}+{row.Column 5}"
+           },
+           {
+            "name": "Column 7",
+            "title": "Nama Petugas",
+            "cellType": "dropdown",
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_userppa_iri"
+            }
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 3,
+          "defaultRowValue": {
+           "Column 6": 0
+          },
+          "addRowText": "ADD"
+         }
+        ],
+        "allowRemovePanel": false,
+        "panelCount": 1,
+        "panelAddText": "Tambah Skor perawatan"
+       }
+      ],
+      "title": "MONITORING ASESMEN NYERI PADA PASIEN ANAK 1 – 7 TAHUN",
+      "description": "( FLACC PAIN SCALE/FPS)"
+     }
+    ]
+   }

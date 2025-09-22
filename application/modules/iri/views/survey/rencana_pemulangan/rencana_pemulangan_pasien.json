@@ -1,0 +1,434 @@
+{
+    "title": "RENCANA PEMULANGAN PASIEN ",
+    "description": "(DISCHARGE PLANNING)",
+    "pages": [
+     {
+      "name": "rencana_pemulangan_pasien.",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tanggal_perencanaan_pemulangan",
+        "title": "Tanggal Perencanaan Pemulangan Pasien (Discharge Planning) :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "text",
+        "name": "question4",
+        "title": "Jam Perencanaan Pemulangan Pasien (Discharge Planning) :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "inputType": "time"
+       },
+       {
+        "type": "text",
+        "name": "question11",
+        "title": "Alasan Masuk RS",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "estimasi_tanggal",
+        "title": "Estimasi tanggal pemulangan pasien:",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<h4>Keterangan Renacana Pemulangan \n"
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question2",
+          "html": "<h5> 1. Pengaruh rawat inap terhada :"
+         },
+         {
+          "type": "radiogroup",
+          "name": "pasien_keluarga_pasien",
+          "title": "-> Pasien dan Keluarga Pasien ",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "pekerjaan",
+          "title": "-> Pekerjaan",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "keuangan",
+          "title": "-> Keuangan",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "antisipasi_terhadap_masalah",
+        "title": "2. Antisipasi terhadap masalah saat pulang",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "check_antisipasi",
+        "visibleIf": "{antisipasi_terhadap_masalah} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       },
+       {
+        "type": "checkbox",
+        "name": "question3",
+        "title": "3. Bantuan diperlukan dalam hal :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "minum_obat",
+          "text": "Minum Obat"
+         },
+         {
+          "value": "makan",
+          "text": "Makan"
+         },
+         {
+          "value": "menyiapkan_makanan",
+          "text": "Menyiapkan Makanan "
+         },
+         {
+          "value": "edukasi_kesehatan",
+          "text": "Edukasi Kesehatan"
+         },
+         {
+          "value": "mandi",
+          "text": "Mandi"
+         },
+         {
+          "value": "diet",
+          "text": "Diet"
+         },
+         {
+          "value": "berpakaian",
+          "text": "Berpakaian"
+         },
+         {
+          "value": "transport",
+          "text": "Transport"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "radiogroup",
+        "name": "adakah_yang_membantu",
+        "title": "4. Adakah yang membantu keperluan tersebut diatas?",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "check_adakah_yang_membantu",
+        "visibleIf": "{adakah_yang_membantu} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       },
+       {
+        "type": "radiogroup",
+        "name": "apakah_pasien_tinggal",
+        "title": "5. Aapakah pasien hidup / tinggal sendiri setelah keluar dari rumah sakit ?",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "check_apakah_pasien",
+        "visibleIf": "{apakah_pasien_tinggal} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       },
+       {
+        "type": "radiogroup",
+        "name": "apakah_pasien_menggunakan",
+        "title": "6. Apakah pasien menggunakan peralatan medis di rmah setelah keluar rumah sakit (ceteter, NGT, double lumen, oksigen)",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question5",
+        "visibleIf": "{apakah_pasien_menggunakan} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       },
+       {
+        "type": "radiogroup",
+        "name": "apakah_pasien_memerlukan",
+        "title": "7. Apakah pasien memerlukan alat bantu setelah keluar dari RS(ttongkat, kursi roda, walker ) ?",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question7",
+        "visibleIf": "{apakah_pasien_memerlukan} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       },
+       {
+        "type": "radiogroup",
+        "name": "apakah_memerlukan",
+        "title": "8. Apakah memerlukan bantuan / perawatan khusus dirumah setelah keluar RS (Homecare, home visit)?",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question6",
+        "visibleIf": "{apakah_memerlukan} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       },
+       {
+        "type": "radiogroup",
+        "name": "apakah_pasien_bermasalah",
+        "title": "9. Apakah pasien bermasalah dalam memenuhi kebutuhan pribadinya setelah keluar dari rumah sakit (",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question8",
+        "visibleIf": "{apakah_pasien_bermasalah} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       },
+       {
+        "type": "radiogroup",
+        "name": "apakah_pasien_memiliki",
+        "title": "10. Apakah Pasien memiliki nyeri kronis dan kelelahan setekah keluar dari rumah sakit ?",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question10",
+        "visibleIf": "{apakah_pasien_memiliki} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       },
+       {
+        "type": "radiogroup",
+        "name": "apakah_pasien_keluarga",
+        "title": "11. Apakah Pasien dan keluarga memerlukan edukasi kesehatan setelah keluar dari rumah sakit ( obat - obatan, nyeri, diit, mencari pertolongan, follow up )",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question9",
+        "visibleIf": "{apakah_pasien_keluarga} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       },
+       {
+        "type": "radiogroup",
+        "name": "apakah_pasien_keluarga1",
+        "title": "12. Apakah Pasien dan keluarga memerlukan keterampilan khusus setelah keluar dari rumah (perawatan luka, injeksi, perawatan bayi dll)",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "rencana_pemulangan_pasien",
+        "visibleIf": "{apakah_pasien_keluarga1} = 'ya'",
+        "titleLocation": "hidden",
+        "size": 35,
+        "placeHolder": "Penjelasan"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "table_rencana_pemulangan",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Date",
+          "title": "Tgl / Jam",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "catatan",
+          "title": "Catatan"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rowCount": 1
+       }
+      ]
+     }
+    ]
+   }

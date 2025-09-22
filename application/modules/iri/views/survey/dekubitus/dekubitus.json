@@ -1,0 +1,165 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "assesment_dekubitis",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Kondisi umum ",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Baik ( skor 4)"
+             },
+             {
+              "value": "3",
+              "text": "Cukup (skor 3)"
+             },
+             {
+              "value": "2",
+              "text": "Lemah (Skor 2)"
+             },
+             {
+              "value": "1",
+              "text": "Sangat Lemah (skor 1)"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "Kondisi mental",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Sadar(4)"
+             },
+             {
+              "value": "3",
+              "text": "Apatis (Skore 3)"
+             },
+             {
+              "value": "2",
+              "text": "Bingung (Skor 2)"
+             },
+             {
+              "value": "1",
+              "text": "Tak sadar (Skor 1)"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Aktivitas",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Ambulasi Baik(4)"
+             },
+             {
+              "value": "3",
+              "text": "Jalan Perlu Bantuan (3)"
+             },
+             {
+              "value": "2",
+              "text": "Tak bisa pindah bed (2)"
+             },
+             {
+              "value": "1",
+              "text": "Tak Bergerak (Skore 1)"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Mobilitas",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Penuh (Skore 4)"
+             },
+             {
+              "value": "3",
+              "text": "Terbatas (Skore 3)"
+             },
+             {
+              "value": "2",
+              "text": "Sangat Terbatas (Skore 2)"
+             },
+             {
+              "value": "1",
+              "text": "Imobilitas (1)"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Inkontinensia",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Kontinen/Kateter (Skore 4)"
+             },
+             {
+              "value": "3",
+              "text": "Kadang inkontinen (Skore 3)"
+             },
+             {
+              "value": "2",
+              "text": "Inkontinen BAK (Skore 2)"
+             },
+             {
+              "value": "1",
+              "text": "Inkontinen BAB & BAK (skore 1)"
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Total Skor :",
+            "cellType": "expression",
+            "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5}"
+           },
+           {
+            "name": "kategori",
+            "title": "Kategori",
+            "cellType": "expression",
+            "expression": "iif({row.total_skor} > 18,'Rendah ( > 18 )', \niif({row.total_skor} > 15,'sedang ( 15-18 )', iif({row.total_skor} < 10,'Sangat tinggi ( <10)','Tinggi (10-14)'))\n"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "result",
+            "text": "Skor"
+           }
+          ]
+         }
+        ],
+        "title": "PENGKAJIAN DEKUBITUS",
+        "description": " Berikan tanda (✔) sesuai kondisi pasien skore"
+       }
+      ]
+     }
+    ]
+   }

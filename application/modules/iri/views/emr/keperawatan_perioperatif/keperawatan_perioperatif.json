@@ -1,0 +1,1754 @@
+{
+    "title": "CATATAN KEPERAWATAN                    PERI OPERATIF",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "inputType": "datetime-local",
+          "title": "Tanggal / Jam"
+         },
+         {
+          "name": "text2",
+          "title": "Ruangan"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "comment",
+        "name": "question3",
+        "title": "Diagnosa",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Sifat Operasi    : "
+         },
+         {
+          "name": "text2",
+          "title": "  Jenis Operasi       :"
+         },
+         {
+          "name": "text3",
+          "title": "Dokter Bedah  :    "
+         },
+         {
+          "name": "text4",
+          "title": " Tehnik Anestesi   :"
+         },
+         {
+          "name": "text5",
+          "title": "   Dokter Anestesi   : "
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "title": "A. CHECK LIST PERSIAPAN OPERASI"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question4",
+        "title": "Persiapan Administrasi",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "RI / RJ",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column2",
+          "title": "Ruangan Penerimaan Sebelum Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column3",
+          "title": "Kamar Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column4",
+          "title": "Keterangan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         {
+          "value": "item1",
+          "text": " "
+         }
+        ],
+        "cellType": "checkbox",
+        "rows": [
+         {
+          "value": "item1",
+          "text": " Surat izin operasi"
+         },
+         {
+          "value": "item2",
+          "text": "Lembaran Pernyataan / Persetujan tindakan Anestesi dan Sedasi"
+         },
+         {
+          "value": "item3",
+          "text": "Form Anestesi dan Sedasi"
+         },
+         {
+          "value": "item4",
+          "text": "SJPK / Askes / Administrasi Keuangan"
+         },
+         {
+          "value": "item5",
+          "text": "Status pasien (Rawat Inap dan Rawat Jalan)"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question5",
+        "title": "Verifikasi Pasien",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "RI / RJ",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column2",
+          "title": "Ruangan Penerimaan Sebelum Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column3",
+          "title": "Kamar Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column4",
+          "title": "Keterangan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         {
+          "value": "item1",
+          "text": " "
+         }
+        ],
+        "cellType": "checkbox",
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Identifikasi Pasien"
+         },
+         {
+          "value": "item2",
+          "text": "Periksa gelang identitas / gelang alergi / gelang risiko jatuh"
+         },
+         {
+          "value": "item3",
+          "text": "Lokasi pembedahan / site marking"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question6",
+        "title": "Persiapan Fisik Pasien / Hasil Pemeriksaan",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "RI / RJ",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column2",
+          "title": "Ruangan Penerimaan Sebelum Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column3",
+          "title": "Kamar Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column4",
+          "title": "Keterangan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         {
+          "value": "item1",
+          "text": " "
+         }
+        ],
+        "cellType": "checkbox",
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Rontgen"
+         },
+         {
+          "value": "item2",
+          "text": "EKG / Jantung"
+         },
+         {
+          "value": "item3",
+          "text": "Penyakit dalam / Pulmonologi"
+         },
+         {
+          "value": "item4",
+          "text": "Echo"
+         },
+         {
+          "value": "item5",
+          "text": "Lab : Hb, HT, BT / CT, PT / APTT, Ureum / Cretinin, OT / PT"
+         },
+         {
+          "value": "item6",
+          "text": "Lainnya"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question7",
+        "title": "Persiapan Fisik Pasien",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "RI / RJ",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column2",
+          "title": "Ruangan Penerimaan Sebelum Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column3",
+          "title": "Kamar Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column4",
+          "title": "Keterangan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         {
+          "value": "item1",
+          "text": " "
+         }
+        ],
+        "cellType": "checkbox",
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Puasa / makan dan minum terakhir"
+         },
+         {
+          "value": "item2",
+          "text": "Pengosongan kandung kemih / clysma"
+         },
+         {
+          "value": "item3",
+          "text": "Protese luar dilepas (pace maker, implant, dll)"
+         },
+         {
+          "value": "item4",
+          "text": "Perhiasan dilepas / cat kuku dibersihkan"
+         },
+         {
+          "value": "item5",
+          "text": "Vaskuler akses (CVP, Cimino, dll)"
+         },
+         {
+          "value": "item6",
+          "text": "Obat-obat yang diberikan"
+         },
+         {
+          "value": "item7",
+          "text": "Obat-obat yang disertakan"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question8",
+        "title": "Riwayat Penyakit dan Terapi",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "RI / RJ",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column2",
+          "title": "Ruangan Penerimaan Sebelum Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column3",
+          "title": "Kamar Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column4",
+          "title": "Keterangan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         {
+          "value": "item1",
+          "text": " "
+         }
+        ],
+        "cellType": "checkbox",
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Diabetes Melitus (GD terakhir)"
+         },
+         {
+          "value": "item2",
+          "text": "Hipertensi"
+         },
+         {
+          "value": "item3",
+          "text": "Asthma"
+         },
+         {
+          "value": "item4",
+          "text": "Jantung"
+         },
+         {
+          "value": "item5",
+          "text": "Ginjal "
+         },
+         {
+          "value": "item6",
+          "text": "Alergi obat / makanan"
+         },
+         {
+          "value": "item7",
+          "text": "Lainnya"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question9",
+        "title": "Persiapan Tambahan",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "RI / RJ",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column2",
+          "title": "Ruangan Penerimaan Sebelum Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column3",
+          "title": "Kamar Operasi",
+          "cellType": "checkbox"
+         },
+         {
+          "name": "column4",
+          "title": "Keterangan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         {
+          "value": "item1",
+          "text": " "
+         }
+        ],
+        "cellType": "checkbox",
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Darah / jenis"
+         },
+         {
+          "value": "item2",
+          "text": "Cairan infuse / jenis"
+         },
+         {
+          "value": "item3",
+          "text": "Lainnya"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question10",
+          "title": "Tanda-tanda vital",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "title": "RR"
+           },
+           {
+            "name": "text3",
+            "title": "Suhu"
+           },
+           {
+            "name": "text4",
+            "title": "Skor nyeri"
+           },
+           {
+            "name": "text5",
+            "title": "BB"
+           },
+           {
+            "name": "text6",
+            "title": "TB"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "checkbox",
+          "name": "question11",
+          "title": "Status Mental",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Compos mentis"
+           },
+           {
+            "value": "item2",
+            "text": "Delirium"
+           },
+           {
+            "value": "item3",
+            "text": "Apatis"
+           },
+           {
+            "value": "item4",
+            "text": "Koma"
+           },
+           {
+            "value": "item5",
+            "text": "Somnolent"
+           },
+           {
+            "value": "item6",
+            "text": "Sopor"
+           },
+           {
+            "value": "item7",
+            "text": "Soporo koma"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question12",
+          "title": "Nilai GCS",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "E"
+           },
+           {
+            "name": "text2",
+            "title": "V"
+           },
+           {
+            "name": "text3",
+            "title": "M"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "signaturepad",
+          "name": "question13",
+          "title": "Perawat ruangan\n",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question14",
+          "startWithNewLine": false,
+          "title": "Perawat kamar bedah",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question15",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question16",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "7. Kondisi Pasien saat ini"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question17",
+          "title": "1. Time Out",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question18",
+          "visibleIf": "{question17} anyof ['item2']",
+          "title": "Jam\n",
+          "hideNumber": true,
+          "inputType": "time"
+         }
+        ],
+        "title": "B. CATATAN KEPERAWATAN INTRA OPERASI\n"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question19",
+          "title": "Instrument",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question20",
+          "visibleIf": "{question19} anyof ['item2']",
+          "title": "Jam\n",
+          "hideNumber": true,
+          "inputType": "time"
+         }
+        ],
+        "title": "2. Cek ketersediaan & fungsinya"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question21",
+          "title": "Protese / implant / mesh",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question22",
+          "visibleIf": "{question21} anyof ['item2']",
+          "title": "Jam\n",
+          "hideNumber": true,
+          "inputType": "time"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question23",
+        "title": "Mulai jam",
+        "hideNumber": true,
+        "inputType": "time"
+       },
+       {
+        "type": "text",
+        "name": "question24",
+        "startWithNewLine": false,
+        "title": "Selesai Jam :",
+        "hideNumber": true,
+        "inputType": "time"
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question25",
+          "title": "1. Dilakukan operasi",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "question26",
+          "title": "2. Tipe operasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Elektif"
+           },
+           {
+            "value": "item2",
+            "text": "Darurat"
+           },
+           {
+            "value": "item3",
+            "text": " Operasi Sehari"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question27",
+          "title": "3. Tipe pembiusan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Umum"
+           },
+           {
+            "value": "item2",
+            "text": "Lokal"
+           },
+           {
+            "value": "item3",
+            "text": "Regional"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question28",
+          "title": "4. Tingkat kesadaran waktu masuk kamar operasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Terjaga"
+           },
+           {
+            "value": "item2",
+            "text": " Mudah dibangunkan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question29",
+          "title": "5. Status emosi waktu masuk K.O",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Rileks"
+           },
+           {
+            "value": "item2",
+            "text": "Gelisah"
+           },
+           {
+            "value": "item3",
+            "text": "Tidak ada respon"
+           },
+           {
+            "value": "item4",
+            "text": "Tangan kiri"
+           },
+           {
+            "value": "item5",
+            "text": "Tangan kanan"
+           },
+           {
+            "value": "item6",
+            "text": "Arteial line"
+           },
+           {
+            "value": "item7",
+            "text": " Kaki kiri"
+           },
+           {
+            "value": "item8",
+            "text": "Kaki kanan"
+           },
+           {
+            "value": "item9",
+            "text": "CVP"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question30",
+          "title": "6. Posisi kanula intravena",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Kaki kiri"
+           },
+           {
+            "value": "item2",
+            "text": "Kaki kanan"
+           },
+           {
+            "value": "item3",
+            "text": "CVP"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question31",
+          "title": "7. Posisi operasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Terlentang"
+           },
+           {
+            "value": "item2",
+            "text": "Lithotomy"
+           },
+           {
+            "value": "item3",
+            "text": "Tengkurap"
+           },
+           {
+            "value": "item4",
+            "text": "Lateral kiri"
+           },
+           {
+            "value": "item5",
+            "text": " Lateral kanan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question32",
+          "title": "8. Posisi lengan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lengan terentang kiri"
+           },
+           {
+            "value": "item2",
+            "text": "Lengan terentang kanan"
+           },
+           {
+            "value": "item3",
+            "text": "lengan terlipat kiri"
+           },
+           {
+            "value": "item4",
+            "text": " Lengan terlipat kanan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question33",
+          "title": "9. Posisi alat bantu yang digunakan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Papan lengan penyangga"
+           },
+           {
+            "value": "item2",
+            "text": "Papan kaki penyangga"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question34",
+          "title": "10. Memakai kateter urin",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": " Dalam Kamar Operasi"
+           },
+           {
+            "value": "item3",
+            "text": "Diruangan"
+           },
+           {
+            "value": "item4",
+            "text": "Ke urimeter"
+           },
+           {
+            "value": "item5",
+            "text": "Kantong urin tertutup"
+           },
+           {
+            "value": "item6",
+            "text": "Ke traksi"
+           },
+           {
+            "value": "item7",
+            "text": "Dijepit"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question35",
+          "title": "11. Persiapan kulit",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Chlorhexidine / spirit 70%"
+           },
+           {
+            "value": "item2",
+            "text": " Providone-iodine"
+           },
+           {
+            "value": "item3",
+            "text": "Chlorhexidine / centrimide"
+           },
+           {
+            "value": "item4",
+            "text": "Hibiscrub"
+           },
+           {
+            "value": "item5",
+            "text": "Chlorhexidine aqueous 0,1%"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 3
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question36",
+          "title": "Lokasi dari dispersive elektrofde",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Monopolar"
+           },
+           {
+            "value": "item3",
+            "text": "Bipolar"
+           },
+           {
+            "value": "item4",
+            "text": " Bokong kiri"
+           },
+           {
+            "value": "item5",
+            "text": "Bokong Kanan"
+           },
+           {
+            "value": "item6",
+            "text": "Paha kiri"
+           },
+           {
+            "value": "item7",
+            "text": "Paha kanan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question37",
+          "title": "Pemeriksaan kondisi kulit sebelum operasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Utuh"
+           },
+           {
+            "value": "item4",
+            "text": "Menggelembung"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question38",
+          "title": "Pemeriksaan kondisi kulit sesudah operasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Utuh"
+           },
+           {
+            "value": "item4",
+            "text": "Menggelembung"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         }
+        ],
+        "title": "12. Pemakaian diatermi"
+       }
+      ]
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question39",
+          "title": "13. Unit pemanasan / pendingin operasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "multipletext",
+          "name": "question40",
+          "visibleIf": "{question39} anyof ['item2']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text4",
+            "title": "Kode unit"
+           },
+           {
+            "name": "text1",
+            "title": "Pengatur temperature"
+           },
+           {
+            "name": "text2",
+            "inputType": "time",
+            "title": "Jam mulai"
+           },
+           {
+            "name": "text3",
+            "inputType": "time",
+            "title": "Jam selesai"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question41",
+          "title": "14. Pemakaian tourniquet",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Lengan kanan"
+           },
+           {
+            "value": "item2",
+            "text": " Lengan kiri"
+           },
+           {
+            "value": "item3",
+            "text": "Paha kanan"
+           },
+           {
+            "value": "item4",
+            "text": "Paha kiri"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question42",
+          "visibleIf": "{question41} anyof ['item2', 'item1', 'item4', 'item3']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text4",
+            "title": "diawasi oleh"
+           },
+           {
+            "name": "text2",
+            "inputType": "time",
+            "title": "Jam mulai"
+           },
+           {
+            "name": "text3",
+            "inputType": "time",
+            "title": "Jam selesai"
+           },
+           {
+            "name": "text1",
+            "title": "Tekanan"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question44",
+          "title": "15. Pemakaian laser",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text4",
+            "title": "diawasi oleh"
+           },
+           {
+            "name": "text2",
+            "inputType": "time",
+            "title": "Kode model"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel11",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question43",
+          "title": "16. Pemakaian implant",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question45",
+          "visibleIf": "{question43} anyof ['item2', 'other', 'item3']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text4",
+            "title": "Jenis"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel12",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question46",
+          "title": "17. Pemakaian drain",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Redivac"
+           },
+           {
+            "value": "item2",
+            "text": "Haemovac"
+           },
+           {
+            "value": "item3",
+            "text": "Corrugated"
+           },
+           {
+            "value": "item4",
+            "text": "Yeates"
+           },
+           {
+            "value": "item5",
+            "text": "Thoracic"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question47",
+          "title": "18 Irigasi Luka",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Sodium Chloride 0,9%"
+           },
+           {
+            "value": "item2",
+            "text": "Antibiotic Spray"
+           },
+           {
+            "value": "item3",
+            "text": "Hydrogen peroxide"
+           },
+           {
+            "value": "item4",
+            "text": "Antibiotic"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel13",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question48",
+          "title": "19. Pemakaian cairan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Glycine "
+           },
+           {
+            "value": "item2",
+            "text": "Air untuk irigasi"
+           },
+           {
+            "value": "item3",
+            "text": "Sodium Chloride 0,9%"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question49",
+          "visibleIf": "{question48} anyof ['item1']",
+          "title": "Jenis",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question57",
+          "visibleIf": "{question48} anyof ['item2']",
+          "title": "Jenis",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question56",
+          "visibleIf": "{question48} anyof ['item3']",
+          "title": "Jenis",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel14",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question50",
+          "title": "20. Alat-alat terbungkus",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question51",
+          "visibleIf": "{question50} anyof ['item2', 'other', 'item3']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text4",
+            "title": "Jenis"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel15",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question52",
+          "title": "21. Balutan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question53",
+          "visibleIf": "{question52} anyof ['item2', 'other', 'item3']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text4",
+            "title": "Jenis"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel17",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question55",
+          "title": "22. Spesimen ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Histology"
+           },
+           {
+            "value": "item2",
+            "text": "Cytology"
+           },
+           {
+            "value": "item3",
+            "text": "Kultur"
+           },
+           {
+            "value": "item4",
+            "text": "Frozen Section"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question58",
+          "visibleIf": "{question55} anyof ['item1']",
+          "title": "Jenis",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question59",
+          "visibleIf": "{question55} anyof ['item2']",
+          "title": "Jenis",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question60",
+          "visibleIf": "{question55} anyof ['item3']",
+          "title": "Jenis",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question54",
+          "visibleIf": "{question55} anyof ['item4']",
+          "title": "Jenis",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question61",
+          "title": "Jumlah total jaringan / cairan pemeriksaan",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "question62",
+        "title": "Spesimen untuk pasien",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Jenis dari jaringan :"
+         },
+         {
+          "name": "text2",
+          "title": "Jumlah dari jaringan :"
+         }
+        ]
+       },
+       {
+        "type": "comment",
+        "name": "question63",
+        "title": "Keterangan",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question64",
+        "title": "Perawat Instrument",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question65",
+        "startWithNewLine": false,
+        "title": "Perawat Sirkulasi",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question66",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question67",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ]
+     },
+     {
+      "name": "page4",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel16",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question68",
+          "visibleIf": "{question41} anyof ['item2', 'item1', 'item4', 'item3']",
+          "title": "Pengkajian Sesudah Operasi",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text4",
+            "title": "Ruang Pulih Sadar"
+           },
+           {
+            "name": "text2",
+            "inputType": "time",
+            "title": "Masuk Jam"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question69",
+          "title": "1. Tingkat Kesadaran",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Terjaga"
+           },
+           {
+            "value": "item2",
+            "text": "Mudah dibangunkan"
+           },
+           {
+            "value": "item3",
+            "text": "Tidak ada respon / sedasi"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question70",
+          "title": "2. Jalan Napas",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak dibantu"
+           },
+           {
+            "value": "item2",
+            "text": "Obat"
+           },
+           {
+            "value": "item3",
+            "text": "Nassal"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question71",
+          "title": "3. Terapi Oksigen",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Oral"
+           },
+           {
+            "value": "item3",
+            "text": " Kanula Hidung"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question72",
+          "title": "4. Kulit",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Kering / lembab"
+           },
+           {
+            "value": "item2",
+            "text": "Merah muda"
+           },
+           {
+            "value": "item3",
+            "text": "Kebiru-biruan"
+           },
+           {
+            "value": "item4",
+            "text": "Hangat"
+           },
+           {
+            "value": "item5",
+            "text": "Dingin"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question73",
+          "title": "5. Sirkulasi Anggota Badan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Merah muda"
+           },
+           {
+            "value": "item2",
+            "text": " Kebiru-biruan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question74",
+          "title": "6. Posisi Pasien",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lateral kiri"
+           },
+           {
+            "value": "item2",
+            "text": "Lateral kanan"
+           },
+           {
+            "value": "item3",
+            "text": "Tersanggah ke atas"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question75",
+          "title": "7. Tanda - tanda Vital",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "placeHolder": "mmHg",
+            "title": "TD"
+           },
+           {
+            "name": "text2",
+            "placeHolder": "x/mnt",
+            "title": "Nadi"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question76",
+          "title": "8. Cairan Infus",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Jenis "
+           },
+           {
+            "name": "text2",
+            "placeHolder": "ml",
+            "title": "Jumlah"
+           },
+           {
+            "name": "text3",
+            "inputType": "time",
+            "title": "Jam "
+           },
+           {
+            "name": "text4",
+            "title": "Darah "
+           },
+           {
+            "name": "text5",
+            "title": "Gol Darah "
+           },
+           {
+            "name": "text6",
+            "placeHolder": "ml",
+            "title": "Jumlah "
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "C. CATATAN KEPERAWATAN SESUDAH OPERASI (diisi oleh perawat Ruang Pulih Sadar)"
+       },
+       {
+        "type": "panel",
+        "name": "panel18",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question77",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "time",
+            "title": "Jam pemberitahuan Perawat Ruangan"
+           },
+           {
+            "name": "text2",
+            "inputType": "time",
+            "title": "Jam Perawat Ruangan datang"
+           },
+           {
+            "name": "text3",
+            "title": "Nama Perawat Ruangan"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "9. Keterangan:"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question78",
+        "title": "Perawat Ruang Pulih",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question79",
+        "titleLocation": "hidden",
+        "size": 50
+       }
+      ]
+     }
+    ]
+   }

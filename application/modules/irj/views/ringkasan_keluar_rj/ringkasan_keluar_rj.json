@@ -1,0 +1,53 @@
+{
+    "title": "RINGKASAN KELUAR PASIEN RAWAT JALAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question2",
+        "title": "Anamnesa",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa",
+        "title": "Diagnosa Utama",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa_sekunder",
+        "title": "Diagnosa Sekunder",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "tindakan",
+        "title": "Tindakan Yang Dilakukan",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question3",
+        "title": "Terapi yang diberikan",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "anjuran",
+        "title": "Anjuran / Rencana / Kontrol Selanjutnya",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question1",
+        "title": "Tanggal kontrol",
+        "hideNumber": true,
+        "inputType": "date"
+       }
+      ]
+     }
+    ]
+   }

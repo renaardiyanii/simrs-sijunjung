@@ -1,0 +1,408 @@
+{
+    "title": "PENGKAJIAN MEDIS PASIEN RAWAT INAP ANAK",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question3",
+          "title": "Tanggal  / Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "title": "Sumber informasi",
+          "hideNumber": true
+         },
+         {
+          "type": "panel",
+          "name": "panel9",
+          "elements": [
+           {
+            "type": "comment",
+            "name": "keluhan_utama",
+            "title": "a. Keluhan Utama",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "riwayat_penyakit_sekarang",
+            "title": "b. Riwayat Penyakit Sekarang",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "riwayat_dahulu",
+            "title": "c. Riwayat Penyakit Dahulu",
+            "hideNumber": true
+           }
+          ],
+          "title": "1. ANAMNESIS"
+         },
+         {
+          "type": "radiogroup",
+          "name": "penyakit_keluarga",
+          "title": "d. Riwayat Imunisasi :",
+          "descriptionLocation": "underTitle",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lengkap"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak Lengkap"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 5
+         },
+         {
+          "type": "checkbox",
+          "name": "question5",
+          "title": "e. Riwayat Persalinan",
+          "descriptionLocation": "underTitle",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Normal "
+           },
+           {
+            "value": "item2",
+            "text": "Vacum"
+           },
+           {
+            "value": "item3",
+            "text": "Forceps"
+           },
+           {
+            "value": "item4",
+            "text": "SC"
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question6",
+          "title": "Ditolong oleh",
+          "descriptionLocation": "underTitle",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Dokter"
+           },
+           {
+            "value": "item2",
+            "text": "Bidan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 5
+         },
+         {
+          "type": "multipletext",
+          "name": "question7",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "BB"
+           },
+           {
+            "name": "text2",
+            "title": "PB"
+           },
+           {
+            "name": "text3",
+            "title": "LK "
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question8Keadaan saat lahir",
+          "title": "Keadaan saat lahir",
+          "descriptionLocation": "underTitle",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Segera menangis"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak segera menangis"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 5
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_nutrisi",
+          "title": "f. Riwayat Nutrisi:",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_tumbuh_kembang",
+          "title": "g. Riwayat Tumbuh Kembang",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "question8",
+          "title": "h. Riwayat Alergi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "comment",
+          "name": "question9",
+          "title": "i. Penilaian Nyeri",
+          "hideNumber": true
+         }
+        ]
+       }
+      ],
+      "title": "ANAMNESA",
+      "maxTimeToFinish": 8
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "title": "a. Tanda-tanda Vital:",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Keadaan Umum"
+           },
+           {
+            "name": "text2",
+            "title": "  Kesadaran :\t"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "placeHolder": "mmHg",
+            "title": "Tekanan darah :"
+           },
+           {
+            "name": "text2",
+            "placeHolder": "C",
+            "title": "Suhu"
+           },
+           {
+            "name": "text3",
+            "placeHolder": "x/mnt",
+            "title": "Nadi"
+           },
+           {
+            "name": "text4",
+            "title": "Isi"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question10",
+          "title": "Teratur ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question11",
+          "startWithNewLine": false,
+          "title": "Respirasi ",
+          "hideNumber": true,
+          "placeHolder": "x/mnt"
+         },
+         {
+          "type": "text",
+          "name": "question12",
+          "title": "Saturasi Oksigen",
+          "hideNumber": true,
+          "placeHolder": "%"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question13",
+          "startWithNewLine": false,
+          "title": "Pada",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Udara Ruangan"
+           },
+           {
+            "value": "item2",
+            "text": "Sungkup"
+           },
+           {
+            "value": "item3",
+            "text": "Nasal Prong"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question14",
+          "title": "Antropometri ",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "BB"
+           },
+           {
+            "name": "text2",
+            "title": "TB"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "comment",
+          "name": "question15",
+          "title": "b.  Pemeriksaan Umum :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question16",
+          "title": "Status Gizi :",
+          "hideNumber": true
+         }
+        ],
+        "title": "3. PEMERIKSAAN FISIK / SKALA NYERI :"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question17",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "4. PEMERIKSAAN PENUNJANG :"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question18",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "5. DIAGNOSA  :"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question19",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "MASALAH / DIAGNOSA MEDIS",
+            "cellType": "comment"
+           },
+           {
+            "name": "column2",
+            "title": "RENCANA / TATALAKSANA MEDIS",
+            "cellType": "comment"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "6. DAFTAR MASALAH MEDIS PRIORITAS"
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question20",
+          "title": "Tanah Badantuang,",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

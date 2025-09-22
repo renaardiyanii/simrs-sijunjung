@@ -1,0 +1,126 @@
+{
+  "pages": [
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "comment",
+      "name": "question3",
+      "title": "Untuk izin pulang sementara (cuti perawatan) karena kepentingan :",
+      "hideNumber": true
+     },
+     {
+      "type": "text",
+      "name": "question4",
+      "title": "Dalam waktu ………. hari ",
+      "hideNumber": true,
+      "inputType": "number"
+     },
+     {
+      "type": "text",
+      "name": "question5",
+      "title": "(mulai tanggal",
+      "hideNumber": true,
+      "inputType": "date"
+     },
+     {
+      "type": "text",
+      "name": "question6",
+      "title": "s/d tanggal)",
+      "hideNumber": true,
+      "inputType": "date"
+     },
+     {
+      "type": "multipletext",
+      "name": "question7",
+      "title": "Selama berada di luar Rumah Sakit Otak DR. Drs. M. Hatta Bukittinggi yang bertanggung jawab terhadap pasien adalah :",
+      "hideNumber": true,
+      "items": [
+       {
+        "name": "text1",
+        "title": "Nama"
+       },
+       {
+        "name": "text2",
+        "inputType": "text",
+        "title": "No KTP / SIM"
+       },
+       {
+        "name": "text3",
+        "title": "Hubungan dengan pasien"
+       },
+       {
+        "name": "text4",
+        "title": "Alamat"
+       }
+      ]
+     },
+     {
+      "type": "matrixdropdown",
+      "name": "question8",
+      "titleLocation": "hidden",
+      "showHeader": false,
+      "columns": [
+       {
+        "name": "column1",
+        "cellType": "text"
+       }
+      ],
+      "choices": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "rows": [
+       {
+        "value": "item1",
+        "text": "Selama berada di luar Rumah Sakit Otak DR. Drs. M. Hatta Bukittinggi pasien berada "
+       }
+      ]
+     },
+     {
+      "type": "matrixdropdown",
+      "name": "question9",
+      "titleLocation": "hidden",
+      "showHeader": false,
+      "columns": [
+       {
+        "name": "column1",
+        "cellType": "text",
+        "inputType": "text"
+       }
+      ],
+      "choices": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "rows": [
+       {
+        "value": "item1",
+        "text": "No telepon yang bisa dihubungi "
+       }
+      ]
+     },
+     {
+      "type": "signaturepad",
+      "name": "question11",
+      "title": " \n",
+      "description": "PEMOHON",
+      "hideNumber": true
+     },
+     {
+      "type": "text",
+      "name": "question12",
+      "titleLocation": "hidden",
+      "size": 30
+     }
+    ],
+    "title": "PERMOHONAN IZIN PULANG DALAM JANGKA WAKTU TERTENTU / CUTI PERAWATAN"
+   }
+  ]
+ }

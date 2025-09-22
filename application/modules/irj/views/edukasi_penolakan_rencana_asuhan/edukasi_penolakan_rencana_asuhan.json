@@ -1,0 +1,77 @@
+{
+  "pages": [
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "multipletext",
+      "name": "question3",
+      "titleLocation": "hidden",
+      "items": [
+       {
+        "name": "text1",
+        "title": "Rencana Asuhan Yang Disetujui / Ditolak :"
+       },
+       {
+        "name": "text2",
+        "title": "Alasan Persetujuan /Penolakan :"
+       }
+      ]
+     },
+     {
+      "type": "matrixdynamic",
+      "name": "question1",
+      "titleLocation": "hidden",
+      "hideNumber": true,
+      "columns": [
+       {
+        "name": "Column 1",
+        "title": "Tanggal/jam",
+        "cellType": "text",
+        "inputType": "datetime-local"
+       },
+       {
+        "name": "Column 2",
+        "title": "Materi Edukasi Resiko Persetujuan / Penolakan",
+        "cellType": "comment"
+       },
+       {
+        "name": "Column 3",
+        "title": "Ttd Pasien",
+        "cellType": "signaturepad",
+        "width": 50,
+        "height": 100,
+        "penColor": "#141414"
+       },
+       {
+        "name": "Column 4",
+        "title": "Ttd Keluarga (Hubungan)",
+        "cellType": "signaturepad",
+        "width": 50,
+        "height": 100,
+        "penColor": "#141414"
+       },
+       {
+        "name": "Column 5",
+        "title": "Ttd Staf RS",
+        "cellType": "signaturepad",
+        "width": 50,
+        "height": 100,
+        "penColor": "#141414"
+       }
+      ],
+      "choices": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "cellType": "text",
+      "rowCount": 1
+     }
+    ],
+    "title": "EDUKASI PERSETUJUAN / PENOLAKAN RENCANA ASUHAN "
+   }
+  ]
+ }

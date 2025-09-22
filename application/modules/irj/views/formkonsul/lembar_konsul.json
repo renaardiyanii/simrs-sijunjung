@@ -1,0 +1,119 @@
+{
+    "title": "LEMBAR KONSUL",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "identitas",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nm_pasien",
+            "title": "Nama Pasien"
+           },
+           {
+            "name": "tgl_surat",
+            "title": "Tanggal surat rujukan dari FKTP"
+           },
+           {
+            "name": "tgl_lahir",
+            "title": "Tanggal Lahir"
+           },
+           {
+            "name": "no_rekam",
+            "title": "No Rekam Medik"
+           },
+           {
+            "name": "diagnosa",
+            "title": "Diagnosa Utama"
+           },
+           {
+            "name": "terapi",
+            "title": "Terapi"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "belum_dapat",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "belum",
+            "title": "Belum dapat di kembalikan ke fasilitas kesehatan perujuk dengan alasan :",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowRemoveRows": false,
+          "addRowText": "Tambah"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "rencana",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "rencana1",
+            "title": "Rencana tindak lanjut yang akan dilakukan pada kunjungan selanjutnya",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowRemoveRows": false,
+          "addRowText": "Tambah"
+         },
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Lembar kontrol ini hanya di gunakan 1 (satu) kali kunjungan dengan diagnosa diatas pada tanggal,",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "text",
+          "name": "question2",
+          "title": "Lembar kontrol ini dapat digunakan sampai tanggal",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "text",
+          "name": "tempat",
+          "maxWidth": "100px",
+          "title": "Tanah Badantuang,",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "ttd",
+          "titleLocation": "hidden"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

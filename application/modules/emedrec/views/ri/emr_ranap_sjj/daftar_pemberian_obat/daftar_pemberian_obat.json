@@ -1,0 +1,96 @@
+{
+    "title": "DAFTAR PEMBERIAN TERAPI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "tgl",
+          "title": "Tanggal",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "nm_obat",
+          "title": "Nama Obat",
+          "cellType": "dropdown",
+          "choices": [
+           "Amoxcilin",
+           "Paracetamol",
+           "Capcam",
+           "Neurodex"
+          ]
+         },
+         {
+          "name": "cara",
+          "title": "Cara pemberian",
+          "cellType": "text"
+         },
+         {
+          "name": "frekuensi",
+          "title": "Frekuensi",
+          "width": "100"
+         },
+         {
+          "name": "Dokter",
+          "cellType": "dropdown",
+          "choices": [
+           "dr. ruhaya",
+           "dr. ayuna",
+           "dr. fifi"
+          ]
+         },
+         {
+          "name": "Farmasi",
+          "cellType": "dropdown",
+          "choices": [
+           "armal",
+           "dede",
+           "rahmi"
+          ]
+         },
+         {
+          "name": "psm",
+          "title": "P/S/S/M",
+          "cellType": "checkbox"
+         }
+        ],
+        "choices": [
+         {
+          "value": "Amoxcili",
+          "text": "P"
+         },
+         {
+          "value": "Paracetamo",
+          "text": "S"
+         },
+         {
+          "value": "Sore",
+          "text": "S"
+         },
+         {
+          "value": "Malam",
+          "text": "M"
+         },
+         {
+          "value": "item1",
+          "text": "Stop"
+         }
+        ],
+        "cellType": "text",
+        "allowRemoveRows": false,
+        "rowCount": 1
+       }
+      ]
+     },
+     {
+      "name": "page2"
+     }
+    ]
+   }

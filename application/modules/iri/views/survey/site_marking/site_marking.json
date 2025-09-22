@@ -1,0 +1,19 @@
+{
+    "title": "SITE MARKING (Penandaan Operasi)",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "signaturepad",
+        "name": "imagesite",
+        "titleLocation": "hidden",
+        "height": 300,
+        "penColor": "#0b0e0e",
+        "image": "/assets/images/site_marking.png"
+       }
+       
+      ]
+     }
+    ]
+   }

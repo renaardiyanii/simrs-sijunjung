@@ -1,0 +1,61 @@
+{
+	"title": "Grafik Pemantauan Laporan Anestesi",
+	"elements": [{
+		"type": "matrixdynamic",
+		"name": "questiongraphic",
+		"title": "Grafik Pemantauan",
+		"titleLocation": "hidden",
+		"hideNumber": true,
+		"columns": [{
+				"name": "jam",
+				"title": "Jam",
+				"cellType": "text",
+				"inputType": "time",
+				"defaultValueExpression": "currentTime()",
+				"isRequired": true
+			}, {
+				"name": "column2",
+				"title": "Sistolik",
+				"cellType": "text",
+				"inputType": "number"
+			}, {
+				"name": "column3",
+				"title": "Diastolik",
+				"cellType": "text",
+				"inputType": "number"
+			},
+			{
+				"name": "column4",
+				"title": "Nadi",
+				"cellType": "text",
+				"inputType": "number"
+			},
+			{
+				"name": "column5",
+				"title": "Saturasi",
+				"cellType": "text",
+				"inputType": "number"
+			},
+			{
+				"name": "column6",
+				"title": "Anestesi",
+				"cellType": "text",
+				"inputType": "number"
+			},
+			{
+				"name": "column7",
+				"title": "Operasi",
+				"cellType": "text",
+				"inputType": "number"
+			}
+		],
+		"choices": [{
+			"value": "item1",
+			"text": " "
+		}],
+		"allowRemoveRows": true,
+		"rowCount": 1,
+		"addRowText": "Tambah",
+		"removeRowText": "Hapus"
+	}]
+}

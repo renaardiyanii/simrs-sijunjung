@@ -1,0 +1,229 @@
+{
+    "title": "CATATAN GRAFIK TANDA VITAL",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "title": "Diagnosa",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question2",
+          "startWithNewLine": false,
+          "title": "Ruangan",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": "FP",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "70"
+             },
+             {
+              "value": "item2",
+              "text": "60"
+             },
+             {
+              "value": "item3",
+              "text": "50"
+             },
+             {
+              "value": "item4",
+              "text": "40"
+             },
+             {
+              "value": "item5",
+              "text": "20"
+             },
+             {
+              "value": "item6",
+              "text": "10"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Suhu",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "41"
+             },
+             {
+              "value": "item2",
+              "text": "40"
+             },
+             {
+              "value": "item3",
+              "text": "39"
+             },
+             {
+              "value": "item4",
+              "text": "38"
+             },
+             {
+              "value": "item5",
+              "text": "37"
+             },
+             {
+              "value": "item6",
+              "text": "36"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "FN",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "160"
+             },
+             {
+              "value": "item2",
+              "text": "140"
+             },
+             {
+              "value": "item3",
+              "text": "120"
+             },
+             {
+              "value": "item4",
+              "text": "100"
+             },
+             {
+              "value": "item5",
+              "text": "80"
+             },
+             {
+              "value": "item6",
+              "text": "60"
+             },
+             {
+              "value": "item7",
+              "text": "40"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "TD",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "320"
+             },
+             {
+              "value": "item2",
+              "text": "270"
+             },
+             {
+              "value": "item3",
+              "text": "220"
+             },
+             {
+              "value": "item4",
+              "text": "170"
+             },
+             {
+              "value": "item5",
+              "text": "120"
+             },
+             {
+              "value": "item6",
+              "text": "70"
+             },
+             {
+              "value": "item7",
+              "text": "20"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1
+       },
+       {
+        "type": "multipletext",
+        "name": "question5",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "INFEKSI NOSOKOMIAL"
+         },
+         {
+          "name": "text2",
+          "title": "BERAT BADAN"
+         },
+         {
+          "name": "text3",
+          "title": "TINGGI BADAN"
+         },
+         {
+          "name": "text4",
+          "title": "B A B"
+         },
+         {
+          "name": "text5",
+          "title": "CAIRAN MASUK"
+         },
+         {
+          "name": "text6",
+          "title": "CAIRAN KELUAR"
+         },
+         {
+          "name": "text7",
+          "title": "DIET"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

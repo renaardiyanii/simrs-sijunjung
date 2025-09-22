@@ -1,0 +1,131 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "penanggung_jawab_pasien",
+          "title": "Saya yang bertanda tangan dibawah ini :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama"
+           },
+           {
+            "name": "no_identitas",
+            "title": "No KTP"
+           },
+           {
+            "name": "umur",
+            "title": "Umur"
+           },
+           {
+            "name": "Alamat",
+            "title": "Alamat"
+           },
+           {
+            "name": "adalah",
+            "title": "Adalah",
+            "size": 50
+           }
+          ],
+          "itemSize": 50
+         },
+         {
+          "type": "html",
+          "name": "question4",
+          "html": "dari pasien"
+         },
+         {
+          "type": "multipletext",
+          "name": "identitas_pasien",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama"
+           },
+           {
+            "name": "no_identitas",
+            "title": "No KTP"
+           },
+           {
+            "name": "alamat",
+            "title": "Alamat"
+           },
+           {
+            "name": "no_register",
+            "title": "No. Register Asal",
+            "size": 50
+           },
+           {
+            "name": "no_cm",
+            "title": "No CM",
+            "size": 50
+           },
+           {
+            "name": "no_ipd",
+            "title": "No. IPD",
+            "size": 50
+           }
+          ],
+          "itemSize": 50
+         },
+         {
+          "type": "html",
+          "name": "question6",
+          "html": "Dengan ini menyatakan bahwa pembiayaan pengobatan terhadap pasien menggunakan :"
+         },
+         {
+          "type": "html",
+          "name": "question7",
+          "html": "1. Biaya Umum"
+         },
+         {
+          "type": "html",
+          "name": "question8",
+          "html": "2. BPJS Kesehatan"
+         },
+         {
+          "type": "html",
+          "name": "question9",
+          "html": "a. Saya telah mendapatkan informasi tentang prosedur penjamin pasien rawat inap bagi peserta JKN-KIS bahwa status penjaminan pasien harus dipastikan sejak awal masuk, pasien / keluarga / wali pasien diberikan kesempatan dalam 3 hari kerja sejak yang bersangkutan dirawat atau sebelum pasien pulang ( bila pasien dirawat kurang dari 3 hari ) untuk menunjukan nomor identitas peserta JKN-KIS sebagai syarat penerbitan Surat Eligibilitas Peserta (SEP)."
+         },
+         {
+          "type": "html",
+          "name": "question10",
+          "html": "b. Jika dalam waktu 3 hari kerja saya tidak dapat melengkapi syarat administratif sebagaimana poin no 1, maka pasien bersedia dinyatakan sebagai pasien umum."
+         },
+         {
+          "type": "html",
+          "name": "question11",
+          "html": "3. Asuransi lainnya :"
+         },
+         {
+          "type": "html",
+          "name": "question12",
+          "html": "Demikianlah surat pernyataan ini dibuat dengan sebenarnya, dalam keadaan sadar dan tanpa ada paksaan dari pihak manapun dan untuk dipergunakan sebagaimana mestinya."
+         },
+         {
+          "type": "signaturepad",
+          "name": "ttd_1",
+          "maxWidth": "300px",
+          "title": "Bukit Tinggi",
+          "description": "Yang menyatakan",
+          "hideNumber": true,
+          "height": 250,
+          "penColor": "#131515"
+         }
+        ]
+       }
+      ],
+      "title": "SURAT PERSETUJUAN"
+     }
+    ]
+   }

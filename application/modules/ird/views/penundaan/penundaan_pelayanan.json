@@ -1,0 +1,66 @@
+{
+    "title": "PENUNDAAN PELAYANAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "table",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tgl/Jam",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "pelayanan",
+            "title": "Pelayanan",
+            "cellType": "comment"
+           },
+           {
+            "name": "alasan",
+            "title": "Alasan penundaan",
+            "cellType": "comment"
+           },
+           {
+            "name": "rencana",
+            "title": "Rencana berikutnya",
+            "cellType": "comment"
+           },
+           {
+            "name": "profesi",
+            "title": "Profesi pemberi penjelasan",
+            "cellType": "signaturepad",
+            "height": 150
+           },
+           {
+            "name": "penerima",
+            "title": "Penerima penjelasan",
+            "cellType": "signaturepad",
+            "height": 150
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

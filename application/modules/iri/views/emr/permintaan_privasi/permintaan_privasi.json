@@ -1,0 +1,155 @@
+{
+    "title": "PERMINTAAN PRIVASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama Lengkap Pasien "
+           },
+           {
+            "name": "text2",
+            "title": "No. RM "
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "title": "Yang bertandatangan di bawah ini saya :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Alamat                    "
+           },
+           {
+            "name": "text3",
+            "title": "No. Telp/Hp        "
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question3",
+          "title": "Hubungan dengan pasien ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "diri sendiri "
+           },
+           {
+            "value": "item2",
+            "text": "orang tua "
+           },
+           {
+            "value": "item3",
+            "text": "anak "
+           },
+           {
+            "value": "item4",
+            "text": "wali "
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "Dengan ini menyatakan bahwa ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Menginjinkan"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak mengizinkan"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question4",
+          "title": "RSUD Sijunjung memberikan akses bagi keluarga  ",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Bernama"
+           },
+           {
+            "name": "text2",
+            "title": "Kerabat"
+           },
+           {
+            "name": "text3",
+            "title": "Yang menengok"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question6",
+          "title": "Privasi Khusus ?",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Mengizinkan"
+           },
+           {
+            "value": "item2",
+            "text": "tidak mengizinkan "
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "html",
+          "name": "question7",
+          "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<p>a.\tPada saat wawancara klinis\n<p>b.\tPada saat pemeriksaan fisik \n<p>c.\tPada saat perawatan      "
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "title": "Tanah Badantuan, ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question9",
+          "title": "Pasien / Keluarga / Wali",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question10",
+          "titleLocation": "hidden",
+          "size": 50
+         }
+        ],
+        "description": "(diisi oleh pasien/keluarga)"
+       }
+      ]
+     }
+    ]
+   }

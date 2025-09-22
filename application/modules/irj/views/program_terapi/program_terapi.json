@@ -1,0 +1,93 @@
+{
+    "title": "PROGRAM TERAPI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "minWidth": "",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "diagnosa",
+          "title": "Diagnosa"
+         },
+         {
+          "name": "permintaan_terapi",
+          "title": "Permintaan terapi"
+         }
+        ],
+        "itemSize": 90
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "program",
+            "title": "Program",
+            "cellType": "comment"
+           },
+           {
+            "name": "tanggal",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "ttd_pasien",
+            "title": "TTD Pasien",
+            "cellType": "signaturepad",
+            "minWidth": "50",
+            "width": "120",
+            "penColor": "#202222"
+           },
+           {
+            "name": "ttd_dokter",
+            "title": "TTD Dokter",
+            "cellType": "signaturepad",
+            "minWidth": "50",
+            "width": "120",
+            "penColor": "#202222"
+           },
+           {
+            "name": "ttd_terapis",
+            "title": "TTD Terapis",
+            "cellType": "signaturepad",
+            "minWidth": "50",
+            "width": "120",
+            "penColor": "#202222"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

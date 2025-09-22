@@ -1,0 +1,429 @@
+{
+    "title": "PENGAJUAN PEMBEDAHAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "pangkat",
+            "title": "Pangkat / Gol Pasien :                                                     "
+           },
+           {
+            "name": "nrp",
+            "title": "NRP / NIP  Pasien :"
+           }
+          ],
+          "colCount": 2
+         }
+        ]
+       },
+       {
+        "type": "comment",
+        "name": "question2",
+        "title": "Diagnosa",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "rencana",
+          "title": "Rencana pembedahan"
+         },
+         {
+          "name": "tgl",
+          "inputType": "datetime-local",
+          "title": "Tanggal/Jam"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "question4",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "bedah",
+          "title": "Ahli bedah"
+         },
+         {
+          "name": "assisten",
+          "title": "Assisten Bedah"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question5",
+        "title": "Anastesi yang diinginkan ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Umum"
+         },
+         {
+          "value": "item2",
+          "text": "Regional"
+         },
+         {
+          "value": "item3",
+          "text": "Neurolep"
+         },
+         {
+          "value": "item4",
+          "text": "Lokal"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "checkbox",
+        "name": "question6",
+        "title": "Jenis Kasus",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Bersih"
+         },
+         {
+          "value": "item2",
+          "text": "Bersih tercemar"
+         },
+         {
+          "value": "item3",
+          "text": "Tercemar"
+         },
+         {
+          "value": "item4",
+          "text": "Kotor"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "multipletext",
+        "name": "question7",
+        "title": "DATA MEDIS",
+        "items": [
+         {
+          "name": "text1",
+          "placeHolder": "mmHg",
+          "title": "TD"
+         },
+         {
+          "name": "text2",
+          "placeHolder": "x/menit",
+          "title": "Nadi"
+         },
+         {
+          "name": "text3",
+          "placeHolder": "x/menit",
+          "title": "P"
+         },
+         {
+          "name": "text4",
+          "placeHolder": "C",
+          "title": "Suhu"
+         },
+         {
+          "name": "text5",
+          "placeHolder": "kg",
+          "title": "Berat Badan"
+         }
+        ],
+        "colCount": 5
+       },
+       {
+        "type": "radiogroup",
+        "name": "question8",
+        "title": "a.\tRiwayat alergi ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak"
+         },
+         {
+          "value": "item2",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "question9",
+        "visibleIf": "{question8} anyof ['item2']",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Obat"
+         },
+         {
+          "name": "text2",
+          "title": "Makanan"
+         },
+         {
+          "name": "text3",
+          "title": "Lainnya"
+         },
+         {
+          "name": "text4",
+          "title": "Reaksi"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question10",
+        "title": "b.\tPenyakit penyerta",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Diabetes Melitus"
+         },
+         {
+          "value": "item2",
+          "text": "Gangguan Fungsi Hepar"
+         },
+         {
+          "value": "item3",
+          "text": "Hipertensi\t"
+         },
+         {
+          "value": "item4",
+          "text": "Gangguan Fungsi Ginjal"
+         },
+         {
+          "value": "item5",
+          "text": "Dekompensasi\t Kordis"
+         },
+         {
+          "value": "item6",
+          "text": "Gangguan Fungsi Paru"
+         },
+         {
+          "value": "item7",
+          "text": "Pasca Infrak Jantung\t"
+         },
+         {
+          "value": "item8",
+          "text": "Gangguan Pembekuan Darah"
+         },
+         {
+          "value": "item9",
+          "text": "Insufiensi Koroner"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Lainnya",
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "question11",
+        "title": "PEMERIKSAAN TAMBAHAN",
+        "items": [
+         {
+          "name": "text1",
+          "title": "a.\tE.K.G ((rutin) 40 tahun)"
+         },
+         {
+          "name": "text2",
+          "title": "b.\tThorax photo"
+         },
+         {
+          "name": "text3",
+          "title": "c.\tTes Fungsi Paru"
+         },
+         {
+          "name": "text4",
+          "title": "d.\tHasil Konsultasi I K A"
+         },
+         {
+          "name": "text5",
+          "title": "e.\tHasil Konsultasi Kardiologi"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question12",
+          "title": "a.\tHasil laboratorium rutin (harus diperiksa)",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Hb :"
+           },
+           {
+            "name": "text2",
+            "title": "Gol. Darah : "
+           },
+           {
+            "name": "text3",
+            "title": "Gula Darah : "
+           },
+           {
+            "name": "text4",
+            "title": "Masa perdarahan :"
+           },
+           {
+            "name": "text5",
+            "title": "Masa pembekuan : "
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "multipletext",
+          "name": "question13",
+          "title": "b.\tHasil laboratorium tambahan",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Ureum : "
+           },
+           {
+            "name": "text2",
+            "title": "Lab. Lain : "
+           },
+           {
+            "name": "text3",
+            "title": "Creatinine : "
+           }
+          ],
+          "colCount": 3
+         }
+        ],
+        "title": "3.\tHASIL LABORATORIUM"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question14",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Obat Hipertensi"
+           },
+           {
+            "value": "item2",
+            "text": "Obat Jantung\t"
+           },
+           {
+            "value": "item3",
+            "text": "Sedatine / Hypnotik"
+           },
+           {
+            "value": "item4",
+            "text": "Obat D.M"
+           },
+           {
+            "value": "item5",
+            "text": "Corti Costeroid"
+           }
+          ],
+          "colCount": 3
+         }
+        ],
+        "title": "4. PENGOBATAN SAAT INI"
+       },
+       {
+        "type": "radiogroup",
+        "name": "question16",
+        "title": "Persetujuan persediaan darah\t:",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak"
+         },
+         {
+          "value": "item2",
+          "text": "Ya"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question15",
+        "visibleIf": "{question16} anyof ['item2']",
+        "title": "Jumlah",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "question17",
+        "title": "Diisi oleh petugas Anestesi / Bedah Sentral",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Premedikasi : "
+         },
+         {
+          "name": "text2",
+          "title": "Rencana Anestesi : "
+         },
+         {
+          "name": "text3",
+          "title": "Kamar Operasi : "
+         }
+        ]
+       },
+       {
+        "type": "signaturepad",
+        "name": "question18",
+        "title": "Persetujuan Konsulen",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question20",
+        "startWithNewLine": false,
+        "title": "Dokter yang mengajukan",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question19",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question21",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

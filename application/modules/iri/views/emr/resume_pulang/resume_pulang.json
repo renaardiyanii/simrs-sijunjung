@@ -1,0 +1,545 @@
+{
+  "title": "RESUME PASIEN PULANG RAWAT INAP",
+  "pages": [
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "panel",
+      "name": "panel1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "inputType": "date",
+          "title": "Tanggal Masuk"
+         },
+         {
+          "name": "text5",
+          "inputType": "time",
+          "title": "Jam Masuk"
+         },
+         {
+          "name": "text2",
+          "inputType": "date",
+          "title": "Tanggal Keluar :"
+         },
+         {
+          "name": "text6",
+          "inputType": "time",
+          "title": "Jam Keluar :"
+         },
+         {
+          "name": "text3",
+          "title": "Ruangan"
+         },
+         {
+          "name": "text4",
+          "title": "Cara bayar"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "comment",
+        "name": "question2",
+        "title": "ANAMNESIS / KELUHAN UTAMA : "
+       },
+       {
+        "type": "comment",
+        "name": "question3",
+        "title": "RIWAYAT PERJALANAN PENYAKIT :"
+       },
+       {
+        "type": "comment",
+        "name": "question4",
+        "title": "PEMERIKSAAN FISIK :"
+       },
+       {
+        "type": "comment",
+        "name": "question5",
+        "title": "PEMERIKSAAN PENUNJANG (LAB, RONTGEN, USG DLL) :"
+       },
+       {
+        "type": "comment",
+        "name": "question6",
+        "title": "DIAGNOSIS UTAMA :"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question24",
+        "startWithNewLine": false,
+        "title": "ICD 10",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": " ",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": " "
+         },
+         {
+          "value": "item2",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "comment",
+        "name": "question7",
+        "title": "DIAGNOSIS SEKUNDER : "
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question25",
+        "startWithNewLine": false,
+        "title": "ICD 10",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": " ",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": " "
+         },
+         {
+          "value": "item2",
+          "text": " "
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "page2",
+    "elements": [
+     {
+      "type": "comment",
+      "name": "question8",
+      "title": "DIAGNOSIS KOMPLIKASI :"
+     },
+     {
+      "type": "matrixdropdown",
+      "name": "question26",
+      "startWithNewLine": false,
+      "title": "ICD 10",
+      "hideNumber": true,
+      "columns": [
+       {
+        "name": "Column 1",
+        "title": " ",
+        "cellType": "text"
+       }
+      ],
+      "choices": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "rows": [
+       {
+        "value": "item1",
+        "text": " "
+       },
+       {
+        "value": "item2",
+        "text": " "
+       }
+      ]
+     },
+     {
+      "type": "comment",
+      "name": "question9",
+      "title": "TINDAKAN UTAMA :"
+     },
+     {
+      "type": "matrixdropdown",
+      "name": "question27",
+      "startWithNewLine": false,
+      "title": "ICD 9",
+      "hideNumber": true,
+      "columns": [
+       {
+        "name": "Column 1",
+        "title": " ",
+        "cellType": "text"
+       }
+      ],
+      "choices": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "rows": [
+       {
+        "value": "item1",
+        "text": " "
+       },
+       {
+        "value": "item2",
+        "text": " "
+       }
+      ]
+     },
+     {
+      "type": "comment",
+      "name": "question10",
+      "title": "TINDAKAN TAMBAHAN :"
+     },
+     {
+      "type": "matrixdropdown",
+      "name": "question28",
+      "startWithNewLine": false,
+      "title": "ICD 9",
+      "hideNumber": true,
+      "columns": [
+       {
+        "name": "Column 1",
+        "title": " ",
+        "cellType": "text"
+       }
+      ],
+      "choices": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "rows": [
+       {
+        "value": "item1",
+        "text": " "
+       },
+       {
+        "value": "item2",
+        "text": " "
+       }
+      ]
+     },
+     {
+      "type": "comment",
+      "name": "question11",
+      "title": "OBAT/TERAPI  SELAMA DI RUMAH SAKIT :"
+     },
+     {
+      "type": "comment",
+      "name": "question12",
+      "title": "KONDISI PADA SAAT PULANG :"
+     },
+     {
+      "type": "comment",
+      "name": "question13",
+      "title": " ANJURAN / RENCANA KONTROL SELANJUTNYA :"
+     },
+     {
+      "type": "radiogroup",
+      "name": "question14",
+      "title": "ALASAN PULANG :",
+      "choices": [
+       {
+        "value": "item1",
+        "text": "Dapat Berobat Jalan  "
+       },
+       {
+        "value": "item2",
+        "text": "Sembuh "
+       },
+       {
+        "value": "item3",
+        "text": "Pindah rs lain"
+       },
+       {
+        "value": "item4",
+        "text": "meninggal"
+       }
+      ],
+      "hasOther": true,
+      "otherText": "Pulang atas Permintaan, Jelaskan :",
+      "colCount": 3
+     }
+    ]
+   },
+   {
+    "name": "page3",
+    "elements": [
+     {
+      "type": "text",
+      "name": "question16",
+      "title": "Tanggal Obat Pulang",
+      "titleLocation": "left",
+      "hideNumber": true,
+      "inputType": "date"
+     },
+     {
+      "type": "matrixdynamic",
+      "name": "question15",
+      "title": "TERAPI PULANG :",
+      "columns": [
+       {
+        "name": "column1",
+        "title": "Nama obat",
+        "cellType": "dropdown",
+        "choicesByUrl": {
+         "url": "/admin/master_obat"
+        }
+       },
+       {
+        "name": "column2",
+        "title": "Jumlah(QTY)",
+        "cellType": "text"
+       },
+       {
+        "name": "column3",
+        "title": "Dosis",
+        "cellType": "text"
+       },
+       {
+        "name": "column4",
+        "title": "Frekuensi",
+        "cellType": "text"
+       },
+       {
+        "name": "column5",
+        "title": "Cara pemberian",
+        "cellType": "text"
+       },
+       {
+        "name": "column6",
+        "title": "Jam pemberian",
+        "cellType": "text",
+        "inputType": "time"
+       },
+       {
+        "name": "column7",
+        "title": "Petunjuk khusus",
+        "cellType": "text"
+       }
+      ],
+      "choices": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "rowCount": 1
+     },
+     {
+      "type": "paneldynamic",
+      "name": "question19",
+      "title": "Obat Racikan",
+      "hideNumber": true,
+      "templateElements": [
+       {
+        "type": "matrixdynamic",
+        "name": "obat_racikan_header",
+        "minWidth": "1200px",
+        "maxWidth": "2000px",
+        "title": " ",
+        "hideNumber": true,
+        "requiredErrorText": "Jangan lupa Tambahkan obat ",
+        "validators": [
+         {
+          "type": "expression"
+         }
+        ],
+        "columns": [
+         {
+          "name": "nama_racikan",
+          "title": "Nama Racikan",
+          "cellType": "text"
+         },
+         {
+          "name": "qty_total",
+          "title": "Qty",
+          "cellType": "text"
+         },
+         {
+          "name": "signa_racikan",
+          "title": "Aturan Pakai",
+          "cellType": "text",
+          "requiredErrorText": "Jangan lupa Signa ",
+          "width": "100"
+         },
+         {
+          "name": "jam_racikan",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         }
+        ],
+        "detailElements": [
+         {
+          "type": "panel",
+          "name": "panel_ttd",
+          "width": "1200px"
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnMinWidth": "100px",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1,
+        "addRowText": "Tambah Obat",
+        "removeRowText": "Hapus Obat",
+        "detailPanelShowOnAdding": true
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "item_racikan",
+        "minWidth": "1200px",
+        "maxWidth": "2000px",
+        "title": " ",
+        "hideNumber": true,
+        "requiredErrorText": "Jangan lupa Tambahkan obat ",
+        "validators": [
+         {
+          "type": "expression"
+         }
+        ],
+        "columns": [
+         {
+          "name": "nm_obatracikan",
+          "title": "Nama Obat",
+          "cellType": "dropdown",
+          "renderAs": "select2",
+          "choicesByUrl": {
+           "url": "/admin/master_obat"
+          }
+         },
+         {
+          "name": "qty_item_racikan",
+          "title": "Dosis",
+          "cellType": "text",
+          "requiredErrorText": "Jangan lupa qty ",
+          "width": "100"
+         }
+        ],
+        "detailElements": [
+         {
+          "type": "panel",
+          "name": "panel_ttd",
+          "width": "1200px"
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnMinWidth": "100px",
+        "rowCount": 1,
+        "addRowText": "Tambah Obat",
+        "removeRowText": "Hapus Obat",
+        "detailPanelShowOnAdding": true
+       }
+      ]
+     },
+     {
+      "type": "dropdown",
+      "name": "question30",
+      "title": "Dokter 2",
+      "hideNumber": true,
+      "choices": [
+       "item1",
+       "item2",
+       "item3"
+      ],
+      "choicesByUrl": {
+       "url": "/admin/dokter_konsul"
+      }
+     },
+     {
+      "type": "dropdown",
+      "name": "question18",
+      "startWithNewLine": false,
+      "title": "Dokter 3",
+      "hideNumber": true,
+      "choices": [
+       "item1",
+       "item2",
+       "item3"
+      ],
+      "choicesByUrl": {
+       "url": "/admin/dokter_konsul"
+      }
+     },
+     {
+      "type": "dropdown",
+      "name": "question17",
+      "startWithNewLine": false,
+      "title": "Dokter 4",
+      "hideNumber": true,
+      "choices": [
+       "item1",
+       "item2",
+       "item3"
+      ],
+      "choicesByUrl": {
+       "url": "/admin/dokter_konsul"
+      }
+     },
+     {
+      "type": "dropdown",
+      "name": "question20",
+      "startWithNewLine": false,
+      "title": "Dokter 5",
+      "hideNumber": true,
+      "choices": [
+       "item1",
+       "item2",
+       "item3"
+      ],
+      "choicesByUrl": {
+       "url": "/admin/dokter_konsul"
+      }
+     }
+    ]
+   }
+  ]
+ }

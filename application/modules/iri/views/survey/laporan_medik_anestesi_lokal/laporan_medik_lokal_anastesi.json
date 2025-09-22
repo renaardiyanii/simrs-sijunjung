@@ -1,0 +1,381 @@
+{
+    "title": "LAPORAN MEDIK DENGAN LOKAL ANESTESI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "signaturepad",
+        "name": "ttd",
+        "width": 200,
+        "title": "Dokter Operator",
+        "hideNumber": true,
+        "height": 150,
+        "penColor": "#050505"
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd2",
+        "width": 200,
+        "startWithNewLine": false,
+        "title": "Asisten Bedah I",
+        "hideNumber": true,
+        "height": 150,
+        "penColor": "#050505"
+       },
+       {
+        "type": "signaturepad",
+        "name": "instrumenter",
+        "width": 200,
+        "startWithNewLine": false,
+        "title": "Instrumenter",
+        "hideNumber": true,
+        "height": 150,
+        "penColor": "#050505"
+       },
+       {
+        "type": "text",
+        "name": "nama1",
+        "title": "Nama Lengkap",
+        "titleLocation": "bottom",
+        "hideNumber": true,
+        "size": 30
+       },
+       {
+        "type": "text",
+        "name": "question1",
+        "startWithNewLine": false,
+        "title": "Nama Lengkap",
+        "titleLocation": "bottom",
+        "hideNumber": true,
+        "size": 30
+       },
+       {
+        "type": "text",
+        "name": "question2",
+        "startWithNewLine": false,
+        "title": "Nama Lengkap",
+        "titleLocation": "bottom",
+        "hideNumber": true,
+        "size": 30
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "table2",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Diagnosa Pra Bedah\t"
+         },
+         {
+          "name": "column2",
+          "title": "Diagnosa Pasca Bedah"
+         },
+         {
+          "name": "column3",
+          "title": "Nama Operasi"
+         },
+         {
+          "name": "column4",
+          "title": "Jenis Operasi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "cito",
+            "text": "Cito"
+           },
+           {
+            "value": "elektif",
+            "text": "Elektif"
+           }
+          ]
+         },
+         {
+          "name": "column5",
+          "title": " Golongan Operasi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "kecil",
+            "text": "Kecil"
+           },
+           {
+            "value": "sedang",
+            "text": "Sedang"
+           },
+           {
+            "value": "besar",
+            "text": "Besar"
+           },
+           {
+            "value": "besar1",
+            "text": "Besar Khusus"
+           }
+          ]
+         },
+         {
+          "name": "column6",
+          "title": "Jenis Anestesi",
+          "cellType": "text"
+         },
+         {
+          "name": "column7",
+          "title": "Lokal Anestesi"
+         },
+         {
+          "name": "column8",
+          "title": "Nama Obat "
+         },
+         {
+          "name": "column9",
+          "title": "Dosis"
+         },
+         {
+          "name": "column10",
+          "title": "Dikirim untuk Pemeriksaan PA",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "column11",
+          "title": "Perdarahan",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "ada",
+            "text": "Ada"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "detil",
+          "title": "detil ada",
+          "cellType": "text",
+          "visibleIf": "{row.column11} = 'ada'"
+         },
+         {
+          "name": "column12",
+          "title": "Komplikasi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ]
+         },
+         {
+          "name": "column13",
+          "title": "Konfirmasi Dokter Anestesi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "sudah",
+            "text": "Sudah"
+           },
+           {
+            "value": "belum",
+            "text": "Belum"
+           }
+          ]
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "text",
+        "name": "jaringan",
+        "title": "Jaringan yang di Eksisi / Insisi :",
+        "hideNumber": true
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "table",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Tanggal Operasi",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "Column 2",
+          "title": "Jam Operasi di Mulai",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "Column 3",
+          "title": "Jam Operasi Selesai",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "Column 4",
+          "title": "Lamanya Operasi",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "table1",
+        "title": "Operasi -> N -> ORO -> Sisi -> Divisi",
+        "hideNumber": true,
+        "defaultValue": [
+         {
+          "column1": "36",
+          "column3": "220"
+         },
+         {
+          "column1": "32",
+          "column3": "200"
+         },
+         {
+          "column1": "28",
+          "column3": "180"
+         },
+         {
+          "column1": "24",
+          "column2": "180",
+          "column3": "160"
+         },
+         {
+          "column1": "20",
+          "column2": "160",
+          "column3": "140"
+         },
+         {
+          "column1": "16",
+          "column2": "140",
+          "column3": "120"
+         },
+         {
+          "column1": "12",
+          "column2": "120",
+          "column3": "100"
+         },
+         {
+          "column1": "8",
+          "column2": "100",
+          "column3": "80"
+         },
+         {
+          "column2": "80",
+          "column3": "60"
+         },
+         {
+          "column2": "60",
+          "column3": "40"
+         },
+         {
+          "column2": "40",
+          "column3": "20"
+         }
+        ],
+        "columns": [
+         {
+          "name": "column1",
+          "title": "R",
+          "readOnly": true
+         },
+         {
+          "name": "column2",
+          "title": "N",
+          "readOnly": true
+         },
+         {
+          "name": "column3",
+          "title": "TD",
+          "readOnly": true
+         },
+         {
+          "name": "column4",
+          "title": "-"
+         },
+         {
+          "name": "column5",
+          "title": "-"
+         },
+         {
+          "name": "column6",
+          "title": "-"
+         },
+         {
+          "name": "column7",
+          "title": "-"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 11
+       },
+       {
+        "type": "text",
+        "name": "jam",
+        "title": "Jam Penulisan Laporan",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "inputType": "time"
+       },
+       {
+        "type": "comment",
+        "name": "laporan_operasi",
+        "title": "Laporan Operasi\n( Jika perlu di lanjutkan di halaman berikutnya )",
+        "hideNumber": true
+       }
+      ]
+     }
+    ]
+   }

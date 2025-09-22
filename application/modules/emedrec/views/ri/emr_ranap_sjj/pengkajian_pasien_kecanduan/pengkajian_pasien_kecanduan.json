@@ -1,0 +1,664 @@
+{
+    "title": "PENGKAJIAN MEDIS PASIEN KETERGANTUNGAN OBAT / NARKOTIKA / ALKOHOL",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl",
+        "title": "Tanggal/Jam pengkajian",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "checkbox",
+          "name": "question2",
+          "title": "a.\tKeadaan Umum",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Baik"
+           },
+           {
+            "value": "item2",
+            "text": "Sedang"
+           },
+           {
+            "value": "item3",
+            "text": "Lemah"
+           },
+           {
+            "value": "item4",
+            "text": "Jelek"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question3",
+          "title": "b.\tGizi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Baik"
+           },
+           {
+            "value": "item2",
+            "text": "Sedang"
+           },
+           {
+            "value": "item3",
+            "text": "Kurang"
+           },
+           {
+            "value": "item4",
+            "text": "Buruk"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question4",
+          "title": "c.\tGCS",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "E"
+           },
+           {
+            "name": "text2",
+            "title": "M"
+           },
+           {
+            "name": "text3",
+            "title": "V"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "d.\tTindakan Resusitasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "e.\tSaturasi O2",
+          "hideNumber": true,
+          "placeHolder": "%"
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "title": "f.\tNasal Canule",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "title": "g.\tLainnya",
+          "hideNumber": true
+         }
+        ],
+        "title": "KELUHAN UTAMA\n"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question9",
+          "title": "a.\tRiwayat Penyakit lalu",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question10",
+          "visibleIf": "{question9} anyof ['item2']",
+          "startWithNewLine": false,
+          "title": "Penyakit",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "question11",
+          "visibleIf": "{question9} anyof ['item2']",
+          "title": "Pernah dirawat",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question12",
+          "visibleIf": "{question11} anyof ['item2']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Diagnosa"
+           },
+           {
+            "name": "text2",
+            "title": "Kapan"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question13",
+          "visibleIf": "{question9} anyof ['item2']",
+          "title": "Pernah di operasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question14",
+          "visibleIf": "{question13} anyof ['item2']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Jenis operasi "
+           },
+           {
+            "name": "text2",
+            "title": "Kapan"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question15",
+          "visibleIf": "{question9} anyof ['item2']",
+          "title": "Masih dalam pengobatan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question16",
+          "visibleIf": "{question15} anyof ['item2']",
+          "title": "Obat",
+          "hideNumber": true
+         }
+        ],
+        "title": "1. RIWAYAT KESEHATAN\n"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question17",
+          "title": "b.\tRiwayat penyakit keluarga :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question18",
+          "visibleIf": "{question17} anyof ['item2']",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hipertensi,"
+           },
+           {
+            "value": "item2",
+            "text": "Jantung"
+           },
+           {
+            "value": "item3",
+            "text": "Paru"
+           },
+           {
+            "value": "item4",
+            "text": "DM"
+           },
+           {
+            "value": "item5",
+            "text": "Ginjal"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 5
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question19",
+          "title": "c.\tKetergantungan terhadap :\t",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question20",
+          "visibleIf": "{question19} anyof ['item2']",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Obat–obatan\t"
+           },
+           {
+            "value": "item2",
+            "text": "Rokok"
+           },
+           {
+            "value": "item3",
+            "text": "Alkohol "
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 5
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question21",
+          "title": "d.\tRiwayat pekerjaan ( apakah berhubungan dengan zat – zat berbahaya )\t:\t",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question22",
+          "visibleIf": "{question21} anyof ['item2']",
+          "title": "Sebutkan",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question23",
+          "title": "e.\tRiwayat alergi : ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "checkbox",
+          "name": "question24",
+          "visibleIf": "{question23} anyof ['item2']",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Obat "
+           },
+           {
+            "value": "item2",
+            "text": "Makanan "
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 5
+         },
+         {
+          "type": "text",
+          "name": "question25",
+          "visibleIf": "{question24} anyof ['item1']",
+          "title": "Obat",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question26",
+          "visibleIf": "{question24} anyof ['item2']",
+          "title": "Makanan",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question27",
+          "visibleIf": "{question23} anyof ['item2']",
+          "title": "Reaksi",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question28",
+          "titleLocation": "hidden",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question30",
+          "title": "a.\tPemeriksaan Sinar Tembus (atau indikasi)",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question29",
+          "title": "b.\tPemeriksaan Lain (atau indikasi)",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question31",
+          "title": "c.\tHasil Pemeriksaan Mental / Psikiatris (jika ada indikasi)",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question32",
+          "title": "d.\tHasil Tes Psikologis (jika perlu)",
+          "hideNumber": true
+         }
+        ],
+        "title": "2.\tSTATUS GENERALIS (Terutama injecting site and soft tissue infection, liver condition, limfadenopati)"
+       }
+      ]
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question33",
+          "title": "a. Lab",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Urine Drug Screen\t:"
+           },
+           {
+            "name": "text2",
+            "title": "Tes Fungsi Hati\t:"
+           },
+           {
+            "name": "text3",
+            "title": "Tes Kehamilan\t:"
+           },
+           {
+            "name": "text4",
+            "title": "Tes HIV\t\t:"
+           },
+           {
+            "name": "text5",
+            "title": "Tes Hepatitia B & C\t:"
+           },
+           {
+            "name": "text6",
+            "title": "b. Ekg"
+           },
+           {
+            "name": "text7",
+            "title": "c. X-Ray\t:"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "question34",
+          "title": "4. TERAPI / TINDAKAN",
+          "hideNumber": true
+         }
+        ],
+        "title": "3.\tHASIL PEMERIKSAAN PENUNJANG (tidak wajib, namun dapat menjadi pertimbangan bila ada indikasi)"
+       },
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question35",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Boleh Pulang"
+           },
+           {
+            "value": "item2",
+            "text": "Dirawat diruang"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question36",
+          "visibleIf": "{question35} anyof ['item1']",
+          "title": "Tanggal dan jam keluar",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question38",
+          "visibleIf": "{question35} anyof ['item1']",
+          "title": "Kontrol poli ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question39",
+          "visibleIf": "{question38} anyof ['item2']",
+          "title": "Tanggal",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question37",
+          "visibleIf": "{question35} anyof ['item2']",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Intensif"
+           },
+           {
+            "value": "item2",
+            "text": "Paviliun Amino"
+           },
+           {
+            "value": "item3",
+            "text": "Ruang "
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         }
+        ],
+        "title": "5.\tDISPOSISI"
+       },
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question40",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "masalah",
+            "title": "MASALAH / DIAGNOSA MEDIS",
+            "cellType": "comment"
+           },
+           {
+            "name": "rencana",
+            "title": "RENCANA / TATA LAKSANA MEDIS",
+            "cellType": "comment"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "1.\tDAFTAR MASALAH MEDIS PRIORITAS"
+       }
+      ]
+     }
+    ]
+   }

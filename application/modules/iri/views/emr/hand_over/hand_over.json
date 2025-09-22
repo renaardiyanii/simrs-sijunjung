@@ -1,0 +1,616 @@
+{
+    "title": "FORMULIR SERAH TERIMA (HAND OVER) ANTAR SHIFT",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question25",
+        "title": " ",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Tanggal & Jam",
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "panel",
+          "name": "panel4",
+          "elements": [
+           {
+            "type": "matrixdynamic",
+            "name": "question26",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Situation",
+              "cellType": "comment"
+             },
+             {
+              "name": "column2",
+              "title": "Baground",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "Dx medis DPJP",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "Assesment kesadaran ",
+              "cellType": "text"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "multipletext",
+            "name": "question27",
+            "title": "TTV ",
+            "hideNumber": true,
+            "items": [
+             {
+              "name": "text1",
+              "placeHolder": "mmhg",
+              "title": "TD"
+             },
+             {
+              "name": "text2",
+              "placeHolder": "x/mnt",
+              "title": "NADI"
+             },
+             {
+              "name": "text3",
+              "placeHolder": "C",
+              "title": "SUHU"
+             },
+             {
+              "name": "text4",
+              "placeHolder": "x/mnt",
+              "title": "RR"
+             },
+             {
+              "name": "text5",
+              "title": "VAS"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "multipletext",
+            "name": "question28",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "items": [
+             {
+              "name": "text1",
+              "placeHolder": "L/mnt",
+              "title": "OKSIGEN"
+             },
+             {
+              "name": "text2",
+              "placeHolder": "tts/mnt",
+              "title": "INFUS"
+             },
+             {
+              "name": "text3",
+              "placeHolder": "tts/1",
+              "title": "TRANSFUSI"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question29",
+            "title": "Katheter",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question30",
+            "startWithNewLine": false,
+            "title": "NGT",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question31",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Makan / minum",
+              "cellType": "comment"
+             },
+             {
+              "name": "column2",
+              "title": "Toileting",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "Aktifitas Gerak",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "Skore jatuh",
+              "cellType": "text"
+             },
+             {
+              "name": "column5",
+              "title": "Recommendation",
+              "cellType": "comment"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "signaturepad",
+            "name": "question32",
+            "width": 150,
+            "title": "Pemberi",
+            "hideNumber": true,
+            "height": 150
+           },
+           {
+            "type": "signaturepad",
+            "name": "question33",
+            "width": 150,
+            "title": "Penerima",
+            "hideNumber": true,
+            "height": 150
+           }
+          ],
+          "title": "PAGI"
+         },
+         {
+          "type": "panel",
+          "name": "panel7",
+          "elements": [
+           {
+            "type": "matrixdynamic",
+            "name": "question50",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Situation",
+              "cellType": "comment"
+             },
+             {
+              "name": "column2",
+              "title": "Baground",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "Dx medis DPJP",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "Assesment kesadaran ",
+              "cellType": "text"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "multipletext",
+            "name": "question51",
+            "title": "TTV ",
+            "hideNumber": true,
+            "items": [
+             {
+              "name": "text1",
+              "placeHolder": "mmhg",
+              "title": "TD"
+             },
+             {
+              "name": "text2",
+              "placeHolder": "x/mnt",
+              "title": "NADI"
+             },
+             {
+              "name": "text3",
+              "placeHolder": "C",
+              "title": "SUHU"
+             },
+             {
+              "name": "text4",
+              "placeHolder": "x/mnt",
+              "title": "RR"
+             },
+             {
+              "name": "text5",
+              "title": "VAS"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "multipletext",
+            "name": "question52",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "items": [
+             {
+              "name": "text1",
+              "placeHolder": "L/mnt",
+              "title": "OKSIGEN"
+             },
+             {
+              "name": "text2",
+              "placeHolder": "tts/mnt",
+              "title": "INFUS"
+             },
+             {
+              "name": "text3",
+              "placeHolder": "tts/1",
+              "title": "TRANSFUSI"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question53",
+            "title": "Katheter",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question54",
+            "startWithNewLine": false,
+            "title": "NGT",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question55",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Makan / minum",
+              "cellType": "comment"
+             },
+             {
+              "name": "column2",
+              "title": "Toileting",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "Aktifitas Gerak",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "Skore jatuh",
+              "cellType": "text"
+             },
+             {
+              "name": "column5",
+              "title": "Recommendation",
+              "cellType": "comment"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "signaturepad",
+            "name": "question56",
+            "width": 150,
+            "title": "Pemberi",
+            "hideNumber": true,
+            "height": 150
+           },
+           {
+            "type": "signaturepad",
+            "name": "question57",
+            "width": 150,
+            "title": "Penerima",
+            "hideNumber": true,
+            "height": 150
+           }
+          ],
+          "title": "SORE",
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel8",
+          "elements": [
+           {
+            "type": "matrixdynamic",
+            "name": "question58",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Situation",
+              "cellType": "comment"
+             },
+             {
+              "name": "column2",
+              "title": "Baground",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "Dx medis DPJP",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "Assesment kesadaran ",
+              "cellType": "text"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "multipletext",
+            "name": "question59",
+            "title": "TTV ",
+            "hideNumber": true,
+            "items": [
+             {
+              "name": "text1",
+              "placeHolder": "mmhg",
+              "title": "TD"
+             },
+             {
+              "name": "text2",
+              "placeHolder": "x/mnt",
+              "title": "NADI"
+             },
+             {
+              "name": "text3",
+              "placeHolder": "C",
+              "title": "SUHU"
+             },
+             {
+              "name": "text4",
+              "placeHolder": "x/mnt",
+              "title": "RR"
+             },
+             {
+              "name": "text5",
+              "title": "VAS"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "multipletext",
+            "name": "question60",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "items": [
+             {
+              "name": "text1",
+              "placeHolder": "L/mnt",
+              "title": "OKSIGEN"
+             },
+             {
+              "name": "text2",
+              "placeHolder": "tts/mnt",
+              "title": "INFUS"
+             },
+             {
+              "name": "text3",
+              "placeHolder": "tts/1",
+              "title": "TRANSFUSI"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question61",
+            "title": "Katheter",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question62",
+            "startWithNewLine": false,
+            "title": "NGT",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question63",
+            "titleLocation": "hidden",
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Makan / minum",
+              "cellType": "comment"
+             },
+             {
+              "name": "column2",
+              "title": "Toileting",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "Aktifitas Gerak",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "Skore jatuh",
+              "cellType": "text"
+             },
+             {
+              "name": "column5",
+              "title": "Recommendation",
+              "cellType": "comment"
+             }
+            ],
+            "columnLayout": "vertical",
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 1
+           },
+           {
+            "type": "signaturepad",
+            "name": "question64",
+            "width": 150,
+            "title": "Pemberi",
+            "hideNumber": true,
+            "height": 150
+           },
+           {
+            "type": "signaturepad",
+            "name": "question65",
+            "width": 150,
+            "title": "Penerima",
+            "hideNumber": true,
+            "height": 150
+           }
+          ],
+          "title": "MALAM",
+          "startWithNewLine": false
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,748 @@
+{
+    "title": "RESUME KEPERAWATAN PASIEN  PULANG RAWAT INAP",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "masuk",
+            "inputType": "date",
+            "title": "Tanggal Masuk"
+           },
+           {
+            "name": "keluar",
+            "inputType": "date",
+            "title": "Tanggak Keluar"
+           },
+           {
+            "name": "ruangan",
+            "title": "Ruangan"
+           }
+          ],
+          "colCount": 3
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "title": "Keadaan saat pulang",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "placeHolder": "C",
+            "title": "Suhu "
+           },
+           {
+            "name": "text2",
+            "placeHolder": "x/mnt",
+            "title": "Nadi "
+           },
+           {
+            "name": "text3",
+            "placeHolder": "x/mnt",
+            "title": "RR "
+           },
+           {
+            "name": "text4",
+            "placeHolder": "mmHg",
+            "title": "TD "
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "checkbox",
+          "name": "question3",
+          "title": "Diet / Nutrisi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Oral"
+           },
+           {
+            "value": "item2",
+            "text": "NGT"
+           },
+           {
+            "value": "item4",
+            "text": "Diet Khusus"
+           },
+           {
+            "value": "item3",
+            "text": "Batasan cairan"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "visibleIf": "{question3} anyof ['item4']",
+          "title": "Jelaskan",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question5",
+          "title": "BAB",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Normal"
+           },
+           {
+            "value": "item2",
+            "text": "Ileostomy / Colostomy"
+           },
+           {
+            "value": "item3",
+            "text": "inkontensia Urine"
+           },
+           {
+            "value": "item4",
+            "text": "Inkontensia Alvi"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "panel",
+          "name": "panel3",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "question6",
+            "title": "BAB",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Normal"
+             },
+             {
+              "value": "item2",
+              "text": " Kateter"
+             }
+            ],
+            "colCount": 4
+           },
+           {
+            "type": "text",
+            "name": "question7",
+            "visibleIf": "{question6} anyof ['item2']",
+            "title": "tanggal pemasangan terakhir",
+            "hideNumber": true,
+            "inputType": "date"
+           }
+          ]
+         }
+        ],
+        "title": "1. KEADAAN UMUM"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question8",
+          "title": "Luka / Luka Operasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Bersih"
+           },
+           {
+            "value": "item2",
+            "text": "Kering"
+           },
+           {
+            "value": "item3",
+            "text": "Ada cairan luka"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question9",
+          "visibleIf": "{question8} anyof ['item3']",
+          "title": "Jelaskan ",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "question10",
+          "title": "Transfer & Mobilisasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Mandiri"
+           },
+           {
+            "value": "item2",
+            "text": "Dibantu sebagian"
+           },
+           {
+            "value": "item3",
+            "text": "Dibantu penuh"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question11",
+          "title": "Alat bantu\t:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tongkat"
+           },
+           {
+            "value": "item2",
+            "text": "Kursi Roda"
+           },
+           {
+            "value": "item3",
+            "text": "Trolley / Kereta dorong"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question12",
+          "title": "Kontra uterus",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question14",
+          "visibleIf": "{question12} anyof ['item2']",
+          "title": "Tinggi Fundus Uteri",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "question13",
+          "title": "Vulva",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Bersih"
+           },
+           {
+            "value": "item2",
+            "text": "Kering"
+           },
+           {
+            "value": "item3",
+            "text": "Bengkak"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question16",
+          "startWithNewLine": false,
+          "title": "Vulva",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Kering"
+           },
+           {
+            "value": "item2",
+            "text": "Basah"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question15",
+          "title": "Lochea",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Banyak"
+           },
+           {
+            "value": "item2",
+            "text": "Sedikit"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question17",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Warna"
+           },
+           {
+            "name": "text2",
+            "title": "Bau"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "Diisi oleh Bidan (Khusus Pasien Kebidanan)"
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question18",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Penyakit dan Pengobatannya"
+           },
+           {
+            "value": "item2",
+            "text": "Perawatan dirumah"
+           },
+           {
+            "value": "item3",
+            "text": "Perawatan Ibu dan bayi"
+           },
+           {
+            "value": "item4",
+            "text": "Mengatasi Nyeri"
+           },
+           {
+            "value": "item5",
+            "text": "Perawatan Luka"
+           },
+           {
+            "value": "item6",
+            "text": "Nasehat Keluarga Berencana"
+           },
+           {
+            "value": "item7",
+            "text": "Persiapan Lingkungan dan fasilitas Untuk Perawatan dirumah"
+           }
+          ],
+          "colCount": 3
+         }
+        ],
+        "title": "2. EDUKASI / PENYULUHAN KESEHATAN YANG SUDAH DIBERIKAN"
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question19",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "a"
+           },
+           {
+            "name": "text2",
+            "title": "b"
+           },
+           {
+            "name": "text3",
+            "title": "c"
+           },
+           {
+            "name": "text4",
+            "title": "d"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "3. DIAGNOSA KEPERAWATAN SELAMA DIRAWAT"
+       },
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question20",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "a"
+           },
+           {
+            "name": "text2",
+            "title": "b"
+           },
+           {
+            "name": "text3",
+            "title": "c"
+           },
+           {
+            "name": "text4",
+            "title": "d"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "4. ANJURAN PERAWATAN KHUSUS SETELAH PULANG"
+       },
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question21",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Obat yang diminum / anti nyeri\t"
+           },
+           {
+            "name": "text2",
+            "title": "Efek samping yang mungkin timbul\t    "
+           },
+           {
+            "name": "text3",
+            "title": "Bila nyeri bertambah berat segera ke RS  "
+           }
+          ]
+         }
+        ],
+        "title": "5. MANAJEMEN NYERI"
+       },
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question22",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "placeHolder": "lembar",
+            "title": "a. Hasil lab\t"
+           },
+           {
+            "name": "text2",
+            "placeHolder": "lembar",
+            "title": "b. Foto Rontgen"
+           },
+           {
+            "name": "text3",
+            "placeHolder": "lembar",
+            "title": "CT Scan\t\t"
+           },
+           {
+            "name": "text4",
+            "placeHolder": "lembar",
+            "title": "MRI / MRA"
+           },
+           {
+            "name": "text5",
+            "placeHolder": "lembar",
+            "title": "c. Hasil USG"
+           },
+           {
+            "name": "text6",
+            "placeHolder": "lembar",
+            "title": "d. Surat Keterangan Sakit"
+           },
+           {
+            "name": "text7",
+            "title": "e. lainnya"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel11",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "question23",
+            "title": "f. Surat Asuransi\t",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak"
+             },
+             {
+              "value": "item2",
+              "text": "Ya"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question24",
+            "title": "g. Resume Pasien Pulang",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak"
+             },
+             {
+              "value": "item2",
+              "text": "Ya"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question26",
+            "title": "h. Buku Bayi\t",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak"
+             },
+             {
+              "value": "item2",
+              "text": "Ya"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question25",
+            "title": "i. Kartu Gol. Draah Bayi\t",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak"
+             },
+             {
+              "value": "item2",
+              "text": "Ya"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "question27",
+            "title": "j. Surat Keterangan lahir",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak"
+             },
+             {
+              "value": "item2",
+              "text": "Ya"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "question29",
+            "title": "k. Bayi diserahkan oleh",
+            "hideNumber": true
+           }
+          ],
+          "startWithNewLine": false
+         }
+        ],
+        "title": "6. BARANG DAN HASIL PEMERIKSAAN YANG DISERAHKAN PADA PASIEN / KELUARGA"
+       },
+       {
+        "type": "panel",
+        "name": "panel15",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question28",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "hari",
+            "title": "Hari",
+            "cellType": "text"
+           },
+           {
+            "name": "jam",
+            "title": "Jam",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "poli",
+            "title": "Poliklinik yang dituju",
+            "cellType": "text"
+           },
+           {
+            "name": "bagian",
+            "title": "Bagian",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "7. RENCANA KONTROL SELANJUTNYA"
+       },
+       {
+        "type": "panel",
+        "name": "panel12",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question32",
+          "title": "Tanggal / Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question30",
+          "title": "Diserahkan perawat",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question31",
+          "titleLocation": "hidden",
+          "placeHolder": "nama"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel14",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question36",
+          "title": "Tanggal / Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question37",
+          "title": "Diterima pasien / penanggung jawab",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question38",
+          "titleLocation": "hidden",
+          "placeHolder": "nama"
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel13",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question33",
+          "title": "Tanggal / Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question34",
+          "title": "Disetuju dokter yang merawat\n",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question35",
+          "titleLocation": "hidden",
+          "placeHolder": "nama"
+         }
+        ],
+        "startWithNewLine": false
+       }
+      ]
+     }
+    ]
+   }

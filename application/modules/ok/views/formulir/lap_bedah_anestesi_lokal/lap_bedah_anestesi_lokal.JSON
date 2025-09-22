@@ -1,0 +1,522 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl_pembedahan",
+        "startWithNewLine": false,
+        "title": "Tgl/Jam Pembedahan:",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "text",
+        "name": "ahli_bedah",
+        "title": "Ahli Bedah:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "asisten",
+        "minWidth": "350px",
+        "startWithNewLine": false,
+        "title": "Asisten:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "instrumentator",
+        "startWithNewLine": false,
+        "title": "Instrumentator:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "macam_pembedahan",
+        "title": "Macam Pembedahan:",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "kecil",
+          "text": "Kecil"
+         },
+         {
+          "value": "sedang",
+          "text": "Sedang"
+         },
+         {
+          "value": "besar",
+          "text": "Besar"
+         },
+         {
+          "value": "khusus_1",
+          "text": "Khusus 1"
+         },
+         {
+          "value": "khusus_2",
+          "text": "Khusus 2"
+         },
+         {
+          "value": "gawat_darurat",
+          "text": "Gawat Darurat"
+         },
+         {
+          "value": "berencana",
+          "text": "Berencana"
+         },
+         {
+          "value": "bersih",
+          "text": "Bersih"
+         },
+         {
+          "value": "bersih_tercemar",
+          "text": "Bersih Tercemar"
+         },
+         {
+          "value": "tercemar",
+          "text": "Tercemar"
+         },
+         {
+          "value": "kotor",
+          "text": "Kotor"
+         }
+        ],
+        "colCount": 5
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa_pra_bedah",
+        "title": "Diagnosa Pra Bedah:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "tindakan_pembedahan",
+        "title": "Tindakan Pembedahan:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa_pasca_bedah",
+        "title": "Diagnosa Pasca Bedah:",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "ahli_bius",
+        "maxWidth": "250px",
+        "title": "Ahli Bius:",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "text",
+          "name": "cara_pembiusan",
+          "maxWidth": "250px",
+          "startWithNewLine": false,
+          "title": "Cara Pembiusan:",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "maxWidth": "250px",
+          "startWithNewLine": false,
+          "title": "Posisi Pasien:",
+          "hideNumber": true
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "text",
+        "name": "mulai",
+        "minWidth": "10px",
+        "maxWidth": "100px",
+        "startWithNewLine": false,
+        "title": "Mulai",
+        "hideNumber": true,
+        "inputType": "time",
+        "size": 0
+       },
+       {
+        "type": "text",
+        "name": "selesai",
+        "minWidth": "10px",
+        "maxWidth": "100px",
+        "startWithNewLine": false,
+        "title": "Selesai",
+        "hideNumber": true,
+        "inputType": "time",
+        "size": 0
+       },
+       {
+        "type": "text",
+        "name": "lama_pembedahan",
+        "minWidth": "200px",
+        "startWithNewLine": false,
+        "title": "Lama Pembedahan",
+        "hideNumber": true,
+        "inputType": "number"
+       },
+       {
+        "type": "text",
+        "name": "ok",
+        "startWithNewLine": false,
+        "title": "OK",
+        "hideNumber": true,
+        "size": 13
+       },
+       {
+        "type": "comment",
+        "name": "uraian_pembedahan:",
+        "title": "Uraian Pembedahan",
+        "hideNumber": true,
+        "placeHolder": " Uraian dimulai dari bagian tubuh yang dibedah, cara penemuan tindakan yang dilakukan,    explorasi, indikasi dan tindakan macam penutupan luka, dengan lengkap dan jelas, jaringan yang dikeluarkan drainage, darah yang keluar."
+       },
+       {
+        "type": "comment",
+        "name": "komplikasi",
+        "title": "KOMPLIKASI",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "jaringan_dikirim_patologi",
+          "title": "Jaringan dikirim ke Patologi:",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ya",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "asal_jaringan",
+          "title": "Asal Jaringan:",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "question1",
+          "title": "Ahli Bedah",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "ahli_bedah1",
+          "title": "Ahli Bedah",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "placeHolder": "Nama Jelas   : "
+         }
+        ],
+        "startWithNewLine": false
+       }
+      ],
+      "title": "LAPORAN PEMBEDAHAN DENGAN PENDAMPING ANESTESI LOKAL"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question2",
+          "title": "Profilaksi ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           },
+           {
+            "value": "item2",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question3",
+          "title": "Jenis Antibiotik : ",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "title": "Waktu pemberian :",
+          "description": "Jam sebelum operasi\n",
+          "hideNumber": true,
+          "inputType": "time"
+         }
+        ]
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "table",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "r",
+          "title": "R",
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "28"
+           },
+           {
+            "value": "item2",
+            "text": "20"
+           },
+           {
+            "value": "item3",
+            "text": "16"
+           },
+           {
+            "value": "item4",
+            "text": "12"
+           }
+          ]
+         },
+         {
+          "name": "n",
+          "title": "N",
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "180"
+           },
+           {
+            "value": "item2",
+            "text": "160"
+           },
+           {
+            "value": "item3",
+            "text": "140"
+           },
+           {
+            "value": "item4",
+            "text": "120"
+           },
+           {
+            "value": "item5",
+            "text": "100"
+           },
+           {
+            "value": "item6",
+            "text": "80"
+           },
+           {
+            "value": "item7",
+            "text": "60"
+           }
+          ]
+         },
+         {
+          "name": "td",
+          "title": "TD",
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "220"
+           },
+           {
+            "value": "item2",
+            "text": "200"
+           },
+           {
+            "value": "item3",
+            "text": "180"
+           },
+           {
+            "value": "item4",
+            "text": "160"
+           },
+           {
+            "value": "item5",
+            "text": "140"
+           },
+           {
+            "value": "item6",
+            "text": "120"
+           },
+           {
+            "value": "item7",
+            "text": "100"
+           },
+           {
+            "value": "item8",
+            "text": "80"
+           },
+           {
+            "value": "item9",
+            "text": "60"
+           },
+           {
+            "value": "item10",
+            "text": "40"
+           },
+           {
+            "value": "item11",
+            "text": "20"
+           },
+           {
+            "value": "item12",
+            "text": "0"
+           }
+          ]
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       },
+       {
+        "type": "radiogroup",
+        "name": "question5",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Mulai Anastesi"
+         },
+         {
+          "value": "item2",
+          "text": "Mulai pembedahan"
+         },
+         {
+          "value": "item3",
+          "text": "Selesai pembedahan"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "multipletext",
+        "name": "question7",
+        "title": "Teknik anestesi lokal",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Jenis"
+         },
+         {
+          "name": "text2",
+          "title": "Lokasi"
+         },
+         {
+          "name": "text3",
+          "title": "Obat-obatan"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "question8",
+        "title": "Respon Hipersensitivitas  :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak"
+         },
+         {
+          "value": "item2",
+          "text": "Ya"
+         }
+        ],
+        "otherText": "Ya, ket",
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question9",
+        "visibleIf": "{question8} anyof ['item2']",
+        "title": "Keterangan",
+        "hideNumber": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "question10",
+        "title": "Kejadian Toksikasi            ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak"
+         },
+         {
+          "value": "item2",
+          "text": "Ya"
+         }
+        ],
+        "otherText": "Ya, ket",
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "question11",
+        "visibleIf": "{question10} anyof ['item2']",
+        "title": "Keterangan",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question12",
+        "title": "Tanah Badantuan,",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       }
+      ]
+     }
+    ]
+   }

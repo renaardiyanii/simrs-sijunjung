@@ -1,0 +1,266 @@
+{
+    "locale": "id",
+    "title": {
+     "default": "ASESMEN ULANG RISIKO JATUH SKALA MORSE",
+     "id": " ASESMEN ULANG RESIKO JATUH ORANG DEWASA(MORSE FALL SCALE)"
+    },
+    "pages": [
+     {
+      "name": "asesment_ulang_risiko_jatuh_skala_morse",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "title": {
+         "id": "Skor hari perawatan ke"
+        },
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "title": {
+           "id": "TGL"
+          },
+          "titleLocation": "left",
+          "inputType": "date"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question9",
+          "title": {
+           "default": "PENILAIAN RESIKO JATUH (SKALA MORSE)",
+           "id": "Skor hari perawatan ke"
+          },
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "defaultValue": [
+           {
+            "7": "P",
+            "total_skor": 0,
+            "kategori": "tidak beresiko ( 0-24)perawatan yang baik\n"
+           },
+           {
+            "7": "S",
+            "total_skor": 0,
+            "kategori": "tidak beresiko ( 0-24)perawatan yang baik\n"
+           },
+           {
+            "7": "M",
+            "total_skor": 0,
+            "kategori": "tidak beresiko ( 0-24)perawatan yang baik\n"
+           }
+          ],
+          "correctAnswer": [
+           {
+            "total_skor": 0,
+            "kategori": "tidak beresiko ( 0-24)perawatan yang baik\n"
+           },
+           {
+            "total_skor": 0,
+            "kategori": "tidak beresiko ( 0-24)perawatan yang baik\n"
+           },
+           {
+            "total_skor": 0,
+            "kategori": "tidak beresiko ( 0-24)perawatan yang baik\n"
+           }
+          ],
+          "columns": [
+           {
+            "name": "7",
+            "title": {
+             "id": "P/S/M"
+            },
+            "cellType": "text",
+            "readOnly": true
+           },
+           {
+            "name": "1",
+            "title": "1.Riwayat Jatuh",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "25",
+              "text": "Ya (25)"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": {
+             "default": "2.Diagnosa Sekunder",
+             "id": "2.Penyakit penyerta (diagnosa sekunder ≥ 2)"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "15",
+              "text": "Ya (15)"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": {
+             "default": "3.Bantuan Ambulasi",
+             "id": "3. Alat bantu jalan :tidak ada/bed rest/dibantu perawat,penopang/tongkat/walker,berpegang dengan perabot"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": {
+               "default": "Tidak ada / bed rest / bantuan perawat (0)",
+               "id": "Tanpa alat bantu(0)"
+              }
+             },
+             {
+              "value": "15",
+              "text": {
+               "default": "Kruk / tongkat / alat bantuan perawat (15)",
+               "id": "Tidak dapat jalan(15)"
+              }
+             },
+             {
+              "value": "30",
+              "text": {
+               "default": "Meja / Kursi",
+               "id": "kursi(30)"
+              }
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": {
+             "default": "4. Terpasang infus / heparin lock",
+             "id": "4. Pemakaian terapi heparin/intra vena/infus"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "20",
+              "text": "Ya (20)"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": {
+             "default": "5. Cara / Gaya berjalan",
+             "id": "5. Cara Berjalan  / Berpindah"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": {
+               "default": "Normal / bed rest / kursi roda (0)",
+               "id": "Normal/Bedrest/Immobilisasi(0)"
+              }
+             },
+             {
+              "value": "10",
+              "text": {
+               "default": "Lemah (15)",
+               "id": "Lemah (10)"
+              }
+             },
+             {
+              "value": "20",
+              "text": {
+               "default": "Terganggu (20)",
+               "id": "Terganggu  (20)"
+              }
+             }
+            ]
+           },
+           {
+            "name": "6",
+            "title": "6. Status Mental",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": {
+               "default": "Berorientasi pada kemampuannya (0)",
+               "id": "Orientasi Sesuai Kemampuan Diri (0)"
+              }
+             },
+             {
+              "value": "15",
+              "text": {
+               "default": "lupa akan keterbatasannya. (15)",
+               "id": "Lupa keterbatasan diri (15)"
+              }
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Total Skor:",
+            "cellType": "expression",
+            "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5} + {row.6}\n"
+           },
+           {
+            "name": "kategori",
+            "title": "Kategori",
+            "cellType": "expression",
+            "expression": "iif({row.total_skor} > 49,'Beresiko Tinggi ( 51 )lakukan intervensi jatuh resiko tinggi', iif({row.total_skor} <25,'tidak beresiko ( 0-24)perawatan yang baik\n','resiko rendah (25-50)lakukan intervensi jatuh standar\n'))"
+           },
+           {
+            "name": "nama",
+            "title": "Nama Perawat",
+            "cellType": "dropdown",
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_userppa_iri"
+            }
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 3,
+          "defaultRowValue": {
+           "total_skor": 0,
+           "kategori": "tidak beresiko ( 0-24)perawatan yang baik\n"
+          },
+          "addRowText": "Tambah Penilaian Resiko",
+          "removeRowText": "Hapus Penilaian Resiko"
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": {
+         "id": "Tambah Skor"
+        }
+       }
+      ]
+     }
+    ]
+   }

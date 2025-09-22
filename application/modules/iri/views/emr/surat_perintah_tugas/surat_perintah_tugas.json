@@ -1,0 +1,157 @@
+{
+    "title": "SURAT PERINTAH TUGAS",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "<p> DASAR\n<P> 1. Peraturan Daerah No 6 Tahun 2016 tentang SOTK RSUD Sijunjung\n<p>2. DPA-OPD RSUD Sijunjung TA 20"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "title": "MENUGASKAN",
+          "description": "KEPADA",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Nama",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "NIP",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Pangkat / Gol",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Jabatan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "rowCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question3",
+          "title": "Untuk merujuk pasien",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "UMUM"
+           },
+           {
+            "value": "item2",
+            "text": "JKN"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama Pasien"
+           },
+           {
+            "name": "text2",
+            "title": "Nomor kartu"
+           },
+           {
+            "name": "text3",
+            "inputType": "date",
+            "title": "Hari / Tanggal"
+           },
+           {
+            "name": "text4",
+            "inputType": "time",
+            "title": "Jam berangkat"
+           },
+           {
+            "name": "text5",
+            "title": "Tujuan"
+           },
+           {
+            "name": "text6",
+            "inputType": "time",
+            "title": "Jam sampai ditujuan"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question5",
+          "html": "<p> Demikianlah surat perintah tugas ini dibuat untuk dapat dilaksanakan dengan penuh tanggung jawab"
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "Ditetapkan di tanah badantuang, pada tanggal",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question7",
+          "title": "an. Direktur RSUD Sijunjung",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question9",
+          "title": "TTD Pasien",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question10",
+          "startWithNewLine": false,
+          "title": "TTD Pejabat berwenang faskes rujukan",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question11",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question12",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

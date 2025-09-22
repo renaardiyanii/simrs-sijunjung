@@ -1,0 +1,108 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrix",
+        "name": "telaah_resep",
+        "title": "TELAAH RESEP",
+        "hideNumber": true,
+        "isRequired": true,
+        "columns": [
+         {
+          "value": "ya",
+          "text": "Ya"
+         },
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         }
+        ],
+        "rows": [
+         {
+          "value": "tulisan_jelas",
+          "text": "Tulisan Jelas"
+         },
+         {
+          "value": "benar_nama_obat",
+          "text": "Benar Nama Obat"
+         },
+         {
+          "value": "benar_kekuatan_obat",
+          "text": "Benar kekuatan obat"
+         },
+         {
+          "value": "benar_frekuensi",
+          "text": "Benar frekuensi"
+         },
+         {
+          "value": "pemberian",
+          "text": "Pemberian"
+         },
+         {
+          "value": "benar_rute",
+          "text": "Benar Rute"
+         },
+         {
+          "value": "ada_duplikasi",
+          "text": "Ada duplikasi"
+         },
+         {
+          "value": "ada_interaksi",
+          "text": "Ada interaksi"
+         },
+         {
+          "value": "item",
+          "text": "Item > 7"
+         }
+        ]
+       },
+       {
+        "type": "matrix",
+        "name": "verif_penyerahan_obat",
+        "startWithNewLine": false,
+        "title": "VERIF PENYERAHAN OBAT",
+        "hideNumber": true,
+        "columns": [
+         {
+          "value": "ya",
+          "text": "Ya"
+         },
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         }
+        ],
+        "rows": [
+         {
+          "value": "nama_pasien",
+          "text": "Nama Pasien"
+         },
+         {
+          "value": "nama_obat",
+          "text": "Nama Obat"
+         },
+         {
+          "value": "bentuk_sediaan",
+          "text": "Bentuk Sediaan"
+         },
+         {
+          "value": "kekuatan",
+          "text": "Kekuatan"
+         },
+         {
+          "value": "rute_pembelian",
+          "text": "Rute Pembeliaan"
+         },
+         {
+          "value": "frek_pembelian",
+          "text": "Frek Pembeliaan"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "showTitle": false
+   }

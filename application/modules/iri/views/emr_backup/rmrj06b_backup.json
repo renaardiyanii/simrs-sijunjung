@@ -1,0 +1,811 @@
+{
+    "title": "ASSESMENT AWAL KEPERAWATAN POLIKLINIK MATA",
+    "description": "(Dilengkapi dalam waktu 2 jam pertama pasien masuk ruanga rawat jalan)",
+    "pages": [
+        {
+            "name": "data_umum",
+            "elements": [
+                {
+                    "type": "panel",
+                    "name": "panel1",
+                    "elements": [
+                        {
+                            "type": "text",
+                            "name": "hari_tgl",
+                            "startWithNewLine": false,
+                            "title": "Hari/Tanggal",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "inputType": "date"
+                        },
+                        {
+                            "type": "text",
+                            "name": "jam_datang",
+                            "startWithNewLine": false,
+                            "title": "Jam Datang",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "inputType": "time"
+                        },
+                        {
+                            "type": "text",
+                            "name": "jam_pemeriksaan",
+                            "startWithNewLine": false,
+                            "title": "Jam Pemeriksaan",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "inputType": "time"
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "sumber_data",
+                            "title": "Sumber Data",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "pasien",
+                                    "text": "Pasien"
+                                },
+                                {
+                                    "value": "keluarga",
+                                    "text": "Keluarga"
+                                }
+                            ],
+                            "hasOther": true,
+                            "otherText": "lainnya,",
+                            "colCount": 3
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "name": "panel2",
+                    "elements": [
+                        {
+                            "type": "checkbox",
+                            "name": "agama",
+                            "title": "Agama",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "islam",
+                                    "text": "Islam"
+                                },
+                                {
+                                    "value": "kristen_katolik",
+                                    "text": "Kristen Katolik"
+                                },
+                                {
+                                    "value": "kristen_protestan",
+                                    "text": "Kristen Protestan"
+                                },
+                                {
+                                    "value": "hindu",
+                                    "text": "Hindu"
+                                },
+                                {
+                                    "value": "budha",
+                                    "text": "Budha"
+                                }
+                            ],
+                            "hasOther": true,
+                            "otherText": "Lainnya,",
+                            "colCount": 5
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "status_pasien",
+                            "title": "Status Pasien",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "baru",
+                                    "text": "Baru"
+                                },
+                                {
+                                    "value": "lama",
+                                    "text": "Lama"
+                                }
+                            ],
+                            "otherText": "Lainnya,",
+                            "colCount": 5
+                        },
+                        {
+                            "type": "text",
+                            "name": "alamat",
+                            "title": "Alamat",
+                            "titleLocation": "left",
+                            "hideNumber": true
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "name": "panel3",
+                    "elements": [
+                        {
+                            "type": "html",
+                            "name": "riwayat_kesehatan",
+                            "html": "RIWAYAT KESEHATAN"
+                        },
+                        {
+                            "type": "editor",
+                            "name": "riwayat_kesehatan_sekarang",
+                            "title": "Riwayat Kesehatan Sekarang",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "html",
+                            "name": "pemeriksaan_fisik",
+                            "html": "PEMERIKSAAN FISIK"
+                        },
+                        {
+                            "type": "text",
+                            "name": "kesadaran",
+                            "title": "Kesadaran :",
+                            "titleLocation": "left",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "text",
+                            "name": "keadaan_umum",
+                            "startWithNewLine": false,
+                            "title": "Keadaan Umum",
+                            "titleLocation": "left",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "text",
+                            "name": "td",
+                            "title": "TD :",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "placeHolder": "mmHG"
+                        },
+                        {
+                            "type": "text",
+                            "name": "hr",
+                            "startWithNewLine": false,
+                            "title": "HR :",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "placeHolder": "x/i "
+                        },
+                        {
+                            "type": "text",
+                            "name": "suhu",
+                            "startWithNewLine": false,
+                            "title": "Suhu :",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "placeHolder": "°C"
+                        },
+                        {
+                            "type": "text",
+                            "name": "rr",
+                            "startWithNewLine": false,
+                            "title": "RR :",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "placeHolder": "x/i "
+                        },
+                        {
+                            "type": "html",
+                            "name": "status_oftalmik",
+                            "html": "STATUS OFTALMIK :"
+                        },
+                        {
+                            "type": "multipletext",
+                            "name": "visus",
+                            "title": "VISUS :",
+                            "hideNumber": true,
+                            "items": [
+                                {
+                                    "name": "od",
+                                    "title": "OD :"
+                                },
+                                {
+                                    "name": "os",
+                                    "title": "OS :"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "multipletext",
+                            "name": "kacamata",
+                            "startWithNewLine": false,
+                            "title": "KACAMATA",
+                            "hideNumber": true,
+                            "items": [
+                                {
+                                    "name": "od",
+                                    "title": "OD :"
+                                },
+                                {
+                                    "name": "os",
+                                    "title": "OS :"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "riwayat_alergi",
+                            "title": "RIWAYAT ALERGI",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "tidak",
+                                    "text": "Tidak"
+                                }
+                            ],
+                            "hasOther": true,
+                            "otherText": "Ya, Sebutkan",
+                            "colCount": 2
+                        },
+                        {
+                            "type": "text",
+                            "name": "reaksi",
+                            "startWithNewLine": false,
+                            "title": "Reaksi :",
+                            "titleLocation": "left",
+                            "hideNumber": true
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "name": "panel4",
+                    "elements": [
+                        {
+                            "type": "html",
+                            "name": "assesment_nyeri",
+                            "html": "ASSESMENT NYERI"
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "nyeri",
+                            "title": "NYERI :",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "tidak",
+                                    "text": "Tidak"
+                                },
+                                {
+                                    "value": "ya, bersifat",
+                                    "text": "Ya, Bersifat"
+                                },
+                                {
+                                    "value": "akut",
+                                    "text": "Akut"
+                                },
+                                {
+                                    "value": "panas_terbakar",
+                                    "text": "Panas / Terbakar"
+                                }
+                            ],
+                            "colCount": 4
+                        },
+                        {
+                            "type": "image",
+                            "name": "question1", "imageFit": "contain","imageHeight": 300,"imageWidth": 400,
+                            "imageLink": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAC6ApADASIAAhEBAxEB/8QAHQAAAQQDAQEAAAAAAAAAAAAAAAYHCAkCBAUDAf/EAFoQAAAFAwIDBAUIBgUDEAsAAAIDBAUGAAcSAQgTFCIRIzJCCRUhM1IWJDFDUWFichc0QVNxgiVjkZKTRHOiGCY1NkVUVVZ0gYOElKGxsic3ODlkZrO1wcLw/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAIBAwT/xAAmEQEBAAECBgICAwEAAAAAAAAAAhIDIgERMkJi8CExQVETM9Fh/9oADAMBAAIRAxEAPwC1OiiigKKK4cqlsdhjQe+SZ1TIERAMxmmjwoO5RUNJPvwXTN2NjG3CFqZUuAPDmBg7mlGyWg3H3FCnf53c1ZGB55jbEngoJKHSBjSi4ZzqmAL7BHV8BJGEYsC3hIIX2cbSkCz2LaUyfB5dVLko/ejr3WWOj5xXzRUemN+MAqBcaIm4a0TwmSptVRxQCdVAQA1GIkA+3DL4esX9tdSovSHbzfNkdzZLB72OZxQPaBpN8A6Reu8q59mn4ph3F21ObW3wAdkgM9BgoJq0Uirb3agl12Qp/g7+mckxnlAPrBS1oCiiigKKKKAoopmr4bp7SWFbeYlz4E5aPoJQpO9OGOgeWvBUsSoyuOqPAUD4h1DVgvdug3ALA/IOCaxuKKvA7Ha4HU5EM24XCRjOPnd4nJ+Ad/k4/ACgfL5Uxz/hpH/jaVsJnlqXCwSuCc4X2AHSIBZGKgAEGZ/s/HSalW3g9ySmgis1XsKgfgOJ8lA9dFQ+eI1u4sgg0XRmQDuOUV1mgWezorsWi33wSXvIYXcJCdEpGDoGSrBgTn+eglTRWqjWJVxAFSFQA4oenSMoeYa2qAooooPmWlY5/dWdFAUVpL3JE1JRrnFWUmTk+M00eANKirdHf3EW18HAbNM58wleeACSQdx/foJb1oLHtqQCwVuKckX2DHUUkEH3a3pTp10tlx1ug55jTIfOD4KduPWC0RlFfKeXL3s4APenUDlfKiOf8NJP8auiQpIUhzIPAMH4abw6yMYGSIBYzgD+POm0mm2u56heB1gl7XVn4H+SA8Bv4KCSlFQrdtx+4yxDoAi7FudXKLl/7rJtcx1IKz24y118GsK6FP5IzfOkOHgcCgdKiiigKKKKAooooCikBdC9lubOs43mcyNMjAD6Cs++H/AFRnTbtr33ueRt1gbYjOYs8Buyvo6KCaBqgJIMzNQAD9ohVz9ZMwAFgN4R6a/56o+xfbteJa66yKb3pczgKev1YD3ZNOclsbHCiu+POON+POgXKaQMa03gpHVMaZ8ITa6VNM92IQKSs4++rGpRhhxQU1L9bDdBatOofIBP1M2F4ymxX0UErM/urOoZwDf6Q0vYIPuLhymGPozOCAYQdpI6l0yPzPJG4p1Y3FOsSHAzAaUPPSg6VFFFAUUUUBRRXgccWQWI48YAAB5xUHvRUary74LX21XjizCeORyUzoLRpOsGdI6PLd3N/U41DiX+jpqU/qxpI+vCgl0sdW1B+urSSfzjrU+VMc/4aR/42lNHBtubwyN4Es0uM5SQ3zmqKVv6E4r/AF39+gXqZckWB4iRSWcH8Iq2aj9M9t0wciv9Y923OPDBrmDhaU2UiuHuy2/jKE6xb5bRpL+uOHb3lBM6imKspu+tDenQLa1PHIvQPfIFmnCGEf2U+WeVBnRRRQFFFFAUUUnpfOYrA2g58lTymQJCAZjGaOgUNYZ41DZ43szC5buOO7bIAdIevgjXKA4ABSha7EbiJqsSSCY3lXshXjOaU/goJLGSRgKFwzHdIEX2cbSguSMBouGW7pBC+zjaUgGqxDMmI7HFyUrDv3ox1m5WLY1JHDQuKlGd+9BQOaAYBhzBXpUV3iwW4GHr1EjhV6XJ1B9S0qPBSTQ7153aZyAx7k7ens5WeAHFOHMA6CalFJWBXIh1y2FPIoc9pnBIoBmDUofVSqoCiiigKKK5EmkjVEmJZI3tSBMhRE6nHDF+ygSN6r2QuxsOVy6YORJICAdynz6zh/ZVecPbb3+kKuGodZIrWMlt0p3QSDMGYKRD85Tv0hG50DGhVnAh7CpwOB9SMj46tgt9AI7bSKoolGUJadEhKw00AHxUDUrFlk9oENRMDMxkkqjAYI05JPfrDPz1uQacXgumg9ajjB0PT6+5Cp84Pjp2HmKxp+OTqnhkSLjkvuRnk54V9UyqMtpnKqnlISMHkzoOJHE07b3PUiQLgLknkGAFbcyBLTgFERg8BIvOOlEQoIUlAPIMCMofgEGg5QQmKEepMAAAPEIVA1UkPvDEG015SDBIRkgz5QoHjpKRK8dtb+ANtlcWK6N7+pBgc0qysx6fz09yaWxleoCkSvaY40f0AAOsQQ+LgevlEBhQ+s/998HTjf3/AKaCum8u226GzqSqLzbenVYdGs+MsZs8+DUqNpe7mI7lY52FD9XyRCD543G+PT8dP46tiF5QHtTiQA5KqBwzihfQMFVLbordSDYxfhFeW3gzk0XdDs1IAef8FBbtRTe2RuszXmt01ThnGD56SAZwPgHThUBWFZ1FvfZueSWCtooRM6sGsldyRkoivPQIfeTvm/R6vBaGzRfriZuA+CPl+vlq0trux89YaVdrcQoNfpGtHzJKRSPMBNIf0cG1hU5DUbiLokDXubodx0HN9YwVY9oDGgQc6mae2jQSlj8aGtN+pRJAYVzY3LbkydF6xVxU5k/+HO8dOQNGlOMAeYQAYweAYq2aDjR454OTC9cl4DrQezpSBZg1F91SoooGclV2Z9DHNOlVW5WOTeMffLifATSevltetfuXhvGNbgtbqYDiJl6cGBxY6f8ANJKPAIo4Ogwj8oqxJJITF8MgsAA6eUNBWLbjcDeLZRcUqzt8NVLlEjDsEDib8H56soisqY5oxJJHHFwFjetBmSaD9tNTuq23xXcVbddHHVKEDgQSMaBQDxgHUI9iW4SU2Tuqr2y3RVDAn43AQDOH7mgtLorzAYAYQjALII/or0oCk3OZzHbdRpbKpOuAkQogZjGMfirunGlpihnHDwADrGKqnd5l8pPulvM37frbHqRshCzlVg0/x/joO3JLqXw9IPcg2AWuPWMNuUJ2CxcDozqc9hdsFtrBsBSRjaylDrqD5y4nhzGYOt7bnYiM2Bt2hiTGhABRwQDWnB+uOpwpMwp5MzKWNWrPTFKgYZpx4DoNJ5n8TYdBetHckGHw651kwTuLSbHRmdC1Go/o00pMQCx0RgaNQkAYpeOOLtGNxHxh13QW4jKV5JfEKTkzSAdmBPQCgVlJR4uXC2RRyjk+EgN+ClOMOYBApKNdsYk3KVCobcBWcpHnqNR10GwS7wueIDUPHRuKUwOAyTQVB/dFsuk1vVo74bXl6lqdm75ypbCh9B1Szme3+JS90SOoHFyZxpR54Nx3BAOnKSpC0yItFrqIwBYMOrzUERdl291uvUg+Q9wh6NU1bu5OJO6OMOpiVWD6QfbY7WokqTcnZ4saBSQdmqKT/vPjHUvdmm4lDuBtQidjFARvTeDgrwf1lBIGiiigKi/vC3mxjbgyAb0ZfrKRre0tMmJ6xlD++nI3JXuZ7D2wdZq5Hh0NLKwTA+0dV6bMLMyPdnd9wv3eIByxsblOaMk33J3wUC/277TJ/uOlX6f9zTqsUol3fIGYY+7w/JVhsdjDBE2spojrWmQJCQYALKBh2VupUaVAmKSJCQEkEgwAAPkpqr13ie4GemjMSiSx1e3QGCY0AMySfz0DsGqSCNO+OAD8w6wRuKJdlyigBnZ8NMRGLHTuYAKf7yy1SB18fLNZ2BNPUwx1DHkoUqLMXZ5h0Gz62buPyvNAAb8Aq2ixgGHoHnSPmdr2ebEmAVrViMZn1qYeA6ZeUtd7LBcJ4hSscniSUfasQnda0f5KB0bxWFt1etgOZpcwpjDTA9yrCVpxixfnqvRykl8/R03LAQuPWSG2K0fgHmPggqy23U1LuDF08jLaVbbx/wDJ1HjBWjde10Wu7DV8RlDaSqJVEjAAYweAdB42gu7FL0wlDNImrAcmVgzGDPrKpe1UDZ+czHYhubW2ykZ6n5GOKnDM7wAzH5KtuaHVC+NiV4bTuKmWFAOKF9oKDoUUUUGk5uaFnQnuTioAnSpgcQ00WvsBpVcG4ndtcm/lwP0Cba+MNOePlV7gT8Hx51s+kZ3SvimRItuFslQ9HN06FKgofj/BUhNj+1WP7freEOK1Jx5M9A5laoNB3gPwUHptj2UwGxrYW7vaf17LVXWrXK++xM+6pLgAAAcAAxDQMegA6jH4ajxejck4oHFPALJJC5DKFR3BGMHWSj/PQSLorgQkMpBF28E0MTDeuD881T+DOu/QFeB5BKooRJ5ITSh+IAg0irxKbmIoWrW2rLRnPRIMwEqQ+OkZY7cO3zlKnis6wZJmT3alCd0cUf4KBpdz2xNmm5o7i2dUDjMuSd9806AKaQW1XfBI2KX/AKAdx5A21+Sj5ZG4HfXVYNUGfSIbTy7gRz9LcDScGUMnfDGV4xgoJwknFnACcWMAwD8Ig/tr1qFHo7905l1YhpbqaqNQSVk7gADfGMAKmvQFFFJqfzNmt9E3KXPastMkbyRmajH8VAg9xu5CFbdYafIJErANeMHzND5zh1B+2Ntb2b9Zb+kK6jksZ4KlOzTJAZg4wPgpuoe3zT0iO5Ebq/8AGBDGRZ3xPwAAOrbItF2eGsKKOMCUCZChJ0JJAGg5kAtjDLYsidhhzImQJyAYZAB1ipW0U2F974sFkImN8ci+ZcDxYIG8GvWpHQOfRSOtfJ3uYQ1vkz428gocAcblh+MAK97jyB3isPcJAxoOcVoS+Ny4fPQKqkrOrdQ65bIoYJiyJl6Q8GA9DQdVJKwV94/fKMauqEvRG5JRjJWN4/GTrTr0FY13bS3e2LSr9JVllyxfCTzs1jd4+CCpobZ9zcK3Gw0l5Y1QSXUgHz9CLxkjp1JBHmiUMypgfEoFKFaVwTih/t0qpG6kYmHo+NxyeaRU87WHPazMCYHnzHQXB0UkrZT5ludC2yYMioBydcSAfT5R0raAqCHpS72mQq3CS3rco1AokQ+CbjU76p031Pyu8G8JPa7X9VQnEcEf89BML0aVjf0Y2XTyJ5QlgeHjr4uvj4NTJpNW7aC2GDMLKWDAKJAQV/YDSlLQRr3bX0fYMoj9sIL1yaXncBMIHjJpcW0sciYYcFtmKob26qQZqVajxhHUc9xvzDe9adcu6E/G8Y/BU05ImdVjEtSsivRKvOJ1AnN+Af20EPSZPONqV9E8Zk0jUutv5R3wFasf6h+AFZnzeb7ob/rYPFnZSzQmI8M5SoT/AOWUit/LJKirXx+Kvcg9cSM9SAYMPfV29p6R8fY5K4dDnz1JKEqYjNR5wUEkrkWIbpPCxs8WcTmR1IK+bLk3j0HTe7QL3yaWnyC1Fwv9sEQU8rzA/GpB8dSHjKN0b2FAhfV/NryCQAUqP3o/tqIFmuA67wpcrZ+slKMwCkZXx0E1qZXdnZxqvNZl7j65uApVpU41KDL9h9PVXkaSA4oRJmmQR/TQVcei/u67QadvO3qYnjGuOOGYAAvqatMqlyTrFdhN+6t/PBwU7o6gITfzjq5huP5xAmVafWlAH/3dtBkqVEIExqpQPAokGYxVTbc5yfN4e9kmFqh/MWFf82w85GdWlbk5IZFrJS11SmYKNEAwEi/HVeXooYSXLZ893YefnLqlGeRxh0FokTj7dEY43x1tIASnQkgJAAP7K7VFeB+fAMw8eNBGOc36mE8vKCyFpyADTkg/pV0AP9WpdSG0c7Rx/jxy4TmpdUoMwAOH0HDphNjJyUm9t4Ejj2gcxuw8AG+Ph1L6ao5SrSE6RhdyxuguugY6zm6rRyYZMhu0QSzyCIgMMUp/3xAPrK5lmZVdncmqcJi6qjY1FCTsWcaTxqQfbUSdy3Nr7+zv5P5ncCN/Pxp/BnUzdrCZ/WWdtkqjLoAlkIbcF5IPjoOde5wu1t5SjubGXFTJ2RLh6yRqfGAv8FPlau4jNdOEtsxZjACJXEgGMGn1Q/grwvUpbUdr5Gc8GEgS6IB58bwUwno4CXYmyjkY4gGAsx7PGmz/AHNBLSqsfSjWdVQ2ZMl7YcWYmVqlIOcUFeSrTqjP6QiNkPe2aULhkZmtxPHBQK/aZdVPd2ybFIwHcY4kkCU4fxjBT01XT6IeYHn28XQswemJHf4DF11YtQR43wXf0tFYx7XIVXBdVpPBR1Fj0Utn/W4Hi/T4lzVugxlg4vx1zPS+Sc5SshkZTn4AApBxg/z1NXaHCEMHsVHEKEnACpKBT2UD2VwJtM2SARpbKpEq0JQogZmDrv1FP0jg3gG35Z6tz5fmiOZw+DOg7drrk3T3ADUPiVEBgiXGwRqAe+OrmXRvBdrbtIW9xkjUB5t+ccAlSuB1qSR06VnhkgsLHTIeAkY/UhPA0B++4en/AOa413Mx7epB+knggUcmZ73955KDm3d3UxiGR9kHETAPD7K8PU6MP1ldRkj94ZCwhkz+5AbXsYMwNxI+5qBGz9HncaCGXGzzAvP9T8xVm7cplvyvWpViT+h8O4N++gZS3G5WRI7pDstellJZ5Aq7xqNJ9ypJqSlQp3rkoQXZt+rZxg+UwDgcHDx8HOplNvE9XJuP4+EDL+yg4NyIU23EhDvD3IkAyXFMMjq08NVPbSJmu2x7tni1C5WMliGpGlHxfAMdXF1UD6SiJoYNuah8gbi+CNxWEKThg89BbwSaWcWA0vwj0zr2pIWskGknt8xPP79IX/5K7UmddGSPuDr/AL1TjN/soKpfSQ3VW3SvUxWgjyo45vIVARrE5NWRbfLXNVobUMcOaiwgAnTAEYL7R1VjtsQEXR3/ALsrV/OQDOGq66uXADEAQfDQelMBuA3JN1rntvhUZRJ3KYOmmRJI/ASD8dP/AFWtKIOuuVvjUR2QPA2pRgZywx/XEfBQOisvZemVSUEftWX6ykBHWvB/kQPyDpybJ7l3d7lThai8rSQxTBrJ5g7D3IyadWJQOJWdio0MZaMCSdMxi8Rhw6ghvsk650lShbbZKMEo5DA7hePgUD1Srczd65Ujd2LbjFky9tjxnAdFyn/9K4zVuWuEgbjT24jmXND/ALKt7j0D/Hwa7WySTxyMWPTnmEcZ4POB6y4IOvj/AI6dK9+3yM3LazpE3H+pJAQmGNM4ldGHR56BT2Uu1FrxxAEkjOugOGPgq0+HuT6cWoF+jVA+oD5kzDPGsb0rgcAavyHHdtT0oIHelLsShmVuE9z0oeEtjQ+OPD66lV6NK+Ku6Vk07M/q9BubP0aB1/c1Iu98STze1kijasjjBVIx6YVWR6Mt+PiG5aWw4w/BF1pQE/BQW50g71XCSWutk/TVUYAAG5MMf89LyoTelGnhcbswVGePgN7HwQA+OgjFsEt2qv1uJfbsTQvVe3pVI1qA03yGVbn2YA6KhT6KqCnxjb0U6uSTgq1qkf8AcqbNAy12Y5LZKlXHvcuHGI+hBxhqEg+sYKZrbstdJw8uB1r4sSgi5J3KnPx360pH8dO/vIQSJy28ypJFgDG4jJBwwBpj7Hbi2xutIyW0tY1euJsWTgvTgB7k746Bc3pu1PttWhLyevTP7OYP5yUaP5yAHx4UpJNvEtkyWcRXYIVcYDoDsRpPOM77KbhhsvICo/N7m7lVZa1fqgP5DmDuhNpwx9FQ4gbIuJ/RY/ypCcOH+tTwDz8GGdBYFZOYT+/cXHMXV8TNQs/myRCd5Px019yF/qG4KdmvKwJmH1gPgNUpQ++rsSyylxrcygm4u2Mz+hRpuZObAHZgWfgpqd224aM3cso2xVxazmu4RL2lANrw6yDM6CZFroxO4ZoUzK5B8oGcfWBcoH32FOUsRpV6U1ErJAcUcDAYBeek5axM5I7ex9K66j5otAToZl+TSlbQU03ORvmzzeqVI23uUT8v+bAB4OBVv8cekkiYUD4lHmUtJAcCq8PS4QMnkGK5pHQrawYAHUnNhUwVzPbTF3FxOzVAJwHlQSKqun0rd5VyBoZ7JsZwwK5D19Hx1YtVL+4pyVXy3uFRQ5UPBheAA/06Cf8A6P6yYLS2MbD3JCAl9dwcZYP46kutXIkBPNLlJScoHnNHhpWuxIyW5kRICAYgITlg/wBCteUxVnmDWNmfCBnJDPGAA8aBhdxm8uH2fCnjMZB6+lrp0IEifrBnSFge2e6F1HwF4b7vODwDvm1mAPuU3wUhLtQCF2l3lQR5VtXBi/J9ZqjrAAdPBeXcrNH4BsL20xs6QvPQBSuADoTAoCPbrVUGuwVZe8pKBAuV9DaNIPx/nrYlW635U3aHZO0oES91I6F41A/B+Soy7orRAiqC265yVDcrtujqAaw4A8xgrDbHaIiWuVzR80Ntuq1r80CgY8BjoHwuLthubAHn9MVjHnCR++cmzPuVNLTbnvOit11CiGTQv1BMmroXpTugHb91cqzW5KfxkZML3NRw5hcBjGSjcxg6FP56auAwaF3c3tyt1QNvHjXq33qfoAMygnwicELiRzKBWUoK+MoeelR432WWIvBYx40QoAKXprJ46AQqfaJxJkhjUBmYCBkpAeAAh51vuqMtwbVSE7TIB5Iwa0Fc3oorwOINHmxL6cMSpk7zr+OrJqpctKsXWE30GsZZ/wDtheBg/kzq6OgKppuv/wC8eB/ymrlqpp3UAHbTfv8AK5cDBv4wMBj/AD0FxLR/sYl/zIP/AArdrixJxLd4y0upA8gqkZI/9Cm33Q3LnVprZHTGCNSVesSqS9TgKPBwPPQczdDt8HeliROkcWgQS1hHx2pZ8Gtc6D3cuhHIp6qnFuXJe5tCbA5YT4FOFOfaKfJLoW/aZokGQPRcT18LwZ+eu1MI/wDK2LuUc0cDkPrBOMnmSfGVQRmglqXW/V2k987hH4ImjuUDN+5/PXjci0smsXdVXfq2R4BonQYC3Vp/fV0bTILqbaQLo5NCDpJHxnZo1afrVD/PW7ddTdTcI0p4fAW45hYloweslasGCkn8lB3ZXee5DzEySYfbV1Jc3orgkqB+BNn566W2nb4RZZrcHR1Vc/JZCdzTqp+0ynIt5EhwaHtsYMdVDkJuJ4PMHeMdKBUqKRpzFR48QEgzHQe9FRzsFuBml37szZgMbUYIowj4aBWV4zqkZQU7ekUTJE26eKDS+MbkQMf9+rbISccpiDKeo96YgIz/ALlU87hFP6Zt8JUcahjOEyPAM/79XJtBOiZoRJdPqU5YP9CgZHe72/6n+QY/uR1Fr0OH+1CXf8sH/wCeph7r4/pIbCy1ODTIwlAYcCoLeiDlpDcskEOPMwUKjhn8IfjorsWk0UUUSjddfblIg3DSXhs06ktD6D9fJH4FIKUstuJP9Ir6uSNfqd4PBw9Fqj3eg6eymL3N2RlF121sdYZJlLa8MJ3HTJ8+4U/noNGy+15gh8Xe/lgYB7eJVxPWCsf7QDpL21gU627y9RGGN8JeIkebxkzSD35NLCK3tk0baUsdn8KchvZIeCYNIT3NJWN2muvc28ZN2546mMLe0d22oUg8eMD8dBvXdgF09xIyYrxxxuH5g9ZEj98pp9IPDWOARhvijAlCSibyQEl/ipQh8OlfaApsdx5JB1lpQA8gBgOSH0jpzqYXe7KTIpttlq9OZgoGm4ZP8aCBvooTTw7i5wkAYMCcCMeBPkq2yqyfRGRIanR7uMen75aDAZtWbUFPnpT16tTehpSGD7ohYRh/fq1G0IAE2wipYP2NCX/6elVselzYfVstiT4MgAALVIOv4+urB9tb6nkNlYurIP42paABQhULOlSbnkJZLiRVfEn9KA5CuJwHpSkooI02rgN2tv6o2OgVfKGJZZo04PeE1zLqQOabm5Akiqt8AyRJEcA5e359+cMFSmGHMNRZS2vu1ZS67tO444jkMXezuMsJUjzPJ/JQKK9G1mOSuNR9VDlQGF7huA2pX4AA/PXbhM+uMmioG54avXbqQDg88m8AzK48zu5NLgMK6LWvh6xM7ng4PGcScC9KUW26zb3Z6HnIJFJlLs4uJ3NKdBjzASP4AUCFtptuljtdc69l7Hst1diNexnSA8CUmpOUUUHzX6Kqj9Lp/wCuC3X+a1/8atc1+iqkfSmvJEi3AwViTjz5UwCfo+/Wio+1ie1XXKxca111y+bUqruGmJrZSU8gjijA3H4g+32Vz7ERzSK2pj7P192jALqpSzZtG7RN3bifGpSDBp/ZRKqz0bLa1OW557kbj82eAAPABP8Agq3CqcdmZ3yM39OrcuPwADjkDq46gKYG/wBtzVXBfmy5MBciWeatHuVY/OD4Kf6igZYmd3GaIgJukzH2PBYOCNcL3Ofx0j7EbalCCUOt3rpvCaQyB7BgTwvcAIpz78WrWXcgKuKt0gWM6kfWScnHh103tu7gXFtNFU8VuvGVK9Qi15ZGobic8yfjHQJhNZaR2EuqrkdvHxGOLyI7jr2FR4xj/BS1uoXeG67COLQQgcYCqBgpUqPgpEza3t19yU5ZnTmzorEGs7jZh6FQ/wAFSpRJ+TRkJOIIfBAAGYvPQICxdl45Y6FExViBoM0Y+OsUa/XH+cdOVRRQc95LLNZ1xZ3gGnMz/uVT5sqOGj3pSsCUjjA9angq2y4r0Qwwl6dlQ8AEJB61VR6OlrHJ920zdiPdFqRn50Fv1Vo+mUH2NFvev/dDWrLqgN6WS3vyntsySrr/ANbxwz6B7tiH/s+s9SLqIHoxZyrm229IeuAWA9Kp1JxB8FS/oNVYjIXpjUqoARlHAwGAVRyatqB1q5usmNkHJG0jdR5rwKwZ1JeigjnLbOTS6CwqK3TuEjOZxj43Ioeg4dOE/wBiLbvdtf0XqmcBLIQDudAeMrX46ai4VoroQe7Iby29dROqQfsWtysfgB+Clm93skjwyHN0Ohy8D6MGAObJ7nOg58HtxcyItpzBCLjIFjOlBgjCd3wya04/tMY3W4xV27pcm6yNL7nlwYA/n+2t7bbZCY26Mc5VPJGcseHoeY0gB9yTT+UGAAAADAGnTWdFFBCb0ryYke3BQq1B2jLO6a6Hov1h5231ClM8BHgpv/S4S1Imtwih3N/O1vWSn+Onl9HGwns+2CNnLUOqY1UDPr8dBJ1R+rG/kHVNdpQAO9Ic+8cvP5/5/wA9XNeIP8apdng11it+quRvheCR7eAATYfnoLnyvdB/LXpWo2ngVIEyovwmkgFp/ZW3QNbf+11trnQVQguUeBG3p++53LAZP89NlZu379HIUcG0VxWBwZNehM4Ydf8AOOurvljdwJhZBbHICQM5StNwVAB4uDTMbLrJ3NRWsmFpZaNeyMSoHY2qAdB4B0D62429sAp2dd+YvgJPKOzggO0HmmJ/JWd0NvcZWTlJdeKvgIzKyOgB2eBJ356TNoBXM2+t6iHTttOe2kkWaBWkBmcP89eF2m26e4xSiisZSHMMaAcA9SrN6DqBJbwHKcQmzZzrcV4Z3VJ5+CT32H4KXOwsdqHWyaKQWxQjJKVD+ciUa5HZ1uX02qx+6VvmGKv8uOJTx4GHGUD99+eu/tc25RzbrDDo5G3ka9KqO4/i6KB76wH4BVnXgpM4JBo/gDlQU93yAWD0i0SwBh/SoKuLqlwZy68G/psdY/3wGR777+/V0dAVWt6Wq0bs4NsfuUwIcyUR2bkd8GFWU0iLw21aru28eII8AzTOhOGtA0uxC8qG79impWQdmoawcqYGn3lUca5dH18ceCAGpHAkZJmlVLbY5/INk+5ZdaedkHJo+6HcqmAPwYfHVu6Bekc0ZTg3HgPTngzKNB56CFlnZG8bRLmqLLT7ighTupzjzj5ADH9OdTVTKU6xOBWlOAaUZpmAYBdI6TNw7Yw66bEKPzFqApI+kA+zsGVr9oB00bVErz2O1GBgVHTCOg04aZs+sJ0oJFCDlp2UBDjp2U3ceu4QciCOYtRzCr85J3krdWXaioCuG3HjWKB+AkAKBc1GLdTfdU2oAWotYUB4l0g+aiAn6+WIH49R13n6RX2uUaNgjEfPh6ft7fWZ3tzBSis5t3h1phqHgssblIHHvFzgo69Rj/B9lBntwswgspbtKwaa6HOan5yvUecZg6716pylt1bN/lSpUAkSRGPg5+cdLnwVWJ6RbcAuunKG/bha9UNScNT86OT/AB/BQIf0eUJdrzbk3i+DilzbyDh8bP8AeVbtTA7OdviDb/ahEzcDB1cAAUuH+cp/qDmvzQlkLMsZFoO1OtJGSP8AhVO1unUe1vfauLdSBpmo9ZyqYAvAPOrm6gN6THbMvmMeT3pgjcM5+j3WMokHWP8AHQTvRqSl6MhWRrkUcAAwa15uq8DU3KHEYBjAQDPAFRM9HxufQ3gtynhz+uwlDCDgKQG+MdS9GAAw4DBkGgbm2F+IJddQ4N0fXDJcGs7gqUijoM0pyqYW6+2lO+vhU/tg7fJiWkD4nMladBv8QVsw+5l2mtbrHJxAFJwEXQN2B4DqB7sAfBWdIsF2YXj86ceCL4BhrVdbrNQE4xxwgbqow6CgUC5GYAkAhmDwCH6RCpuGe+sOklw1Fuo6Ma9alLzUqCvcg/npvZCivve4AWsgg+BtXgWZ+NSCnPtTZ2H2jYtGqNoe+H1qVRvWccP89Av6rm9LBeNQ2MTDa5gO4prodw15IPGDQdTkuxc2O2lg7lNJKuAmTIiR6hz846qzsREJhvb3SKLuSNCcCMtynrAMHQMvPooJyej8s0fZqwTa2rhZKHT551fBUna1ESJO2oyESQGBCcGAA/hrboIh+kltCnuJY5Q/loeZcI936bDyUgPRSXg0f7ZKbZvjiM56ax8bAfj4dTpe2dDIWlWzOJADkqokZJgBftqoaWskq2Dbr/lOWYd8l3tTxjlAPBwB+SguLopOwSbMdw4o3zCOKwKULiTxixgFSioPPMGXDz6q9KRz5FpMsP5pnkXJm/wrn/Je5v8Ax4K/w6BfYAB9AKzpvvktc3/jwT/g0fJe5v8Ax4K/w6Be5gy4efVXpSWjkYdW1VqudHkaw4fjpU0HMfndJHWZa9rh4J0RIzhiF+yqb48jV7sd8ygszM5sSr+aJGDwAAAdS49I/uiSwmK/oeha7mZQ/AwOTk+Ph12fRybZR2ht98tJMi/px778AjfGUAdBMdvTARoyEpfhJKADStuiigpv3bxh122bw2+ftuowFSFeBVn5AAq2yASpumcQapM1qgHJ1qYA9BgphN+O20q/tpFmjOWWXIGwHGTKPPh9lMB6NHcYez8xt0uKqGjcWofBbQKB+OgseornPaxchbTlTck5lQDwFU1PyWvfJnIDifMAM7ePxoeH10DtDdG4AsDHJMAfwiOBpWI3dn007x1R/wAxwKRoLNxtSIKp4MUqVennAbhQssjBF5XDUJFmOef6xQLILq1Y9Dqk/wAYFeqZeiU6fNVRR3+bMzpGk2ahBJXALSrMP+UVz1loz2pKbpBH89qUj8AzRZ0DmUU00SJvDE1hSGVLvlIUeP8AWAAwwpxnt8bo6zqnt2PCnSIytTjhi/ZpQRh9I1dxHb2w7gwFquC4SEHATU1/opLQLY9b5Xcl7S6gXvHRmPz1He6b7Ld/G6JPFYxxlMPaFmHGB4CcB1bDb2EtNvIe2RJqIABOgTgI6fNQKimb3Z21OuvYqSxRID50cmyJ/jTyV5jLAYEQBhyCOgqw9FndRXCZ8/WMkZnLJ0XQSI3zn1anVSm+Czr/ALZ74Nm4KDpDvU41PNHEp/3lWM7eb1sV9batUyalBfMHEA5xOAXuR0DpUnJdOIxB28blJHQlMUWDw6j6xfwBWU4mDdA4q4Sp11+bt5OY8aift5i0j3KzFwvnc3mQMpBwyGdpHpgD89BIZjvWxy1OFXFUKxSV5xnE4V0wTxdxRaeox0q0ra3owYJUSckP9UToCtjgk/uQf3KBs3m/UViphSeVJViUR4uzMBOYKXrDIWaTIAuLG4krE4/OUPPSvjrH2d7SmpHRuTHlHAwHoMqocS0D/s1uykkTONaptvKFOCxP77ljx0E3KwzxrUanFO8Nyd1SjyTqigGg1/j7aj3vd3HNNg7SuBhasPrt0K1TIwBH1g/HQQD3qzAzchu2YoXESxrBxteBKcAHwZ1bPb6MJIZC2eOpC9ABSJgAx/Hh7ar49GntvfHV7V7jLjEDG5rR/NuMD3346suoCqtvSpWudWKbxq9LUl/o9CPjKR/1lWk02W4O0TTeq17vB3UgJvMEjET+eg4W0y6hF3LJR+TlqQDUcsAo8Onk1p6qqW2VXpf9rV8HPb7dDNM3rVOBIzfAT8FWwplJCwgCpKYEZRwcwDD+2g2KQsvu/A4OMKV5dwCUftTpO+MD/JpTdbrb+qbTRsmOQ4vRZMH4fKoEwPGDPz1qbcNtZEGR6zu4Ssx6mr1px1ilQLMAM/JhQOSiumQ9JwrmNqOOT/GcDCs1NzfVSMTk6sxxKUvx4gpalokpIcAJSgB/CCsjEyY4HDMIKEH4RAoIG75txnyggLfGbcq1hOroMfGHhgcD8lOl6POVzyR2NKJniZYWqQqOCSNWDAYwUt7+bcI7dBr0d2hIQhkzYDNtUhB0aD+8FJ3ahfRdMS3C187ayWqXR0fBGSAGHMkg+soJJU0e6G5yS1Fl5FKjFHCNLTDATr+OnVONLIKEccPABemYhVVLvwvi/wC4e8TbtztiMalIQpwOGT1gO+Og2fRbW4XzO6slvS5EZt6ofGJH/X1axTRbYrGMVgrVNsKaEvBNwAcs+86ndoCiiigjBvM2gR/cbFzHBuLCjlDeDNGrB4x1Hrahu8ltkZKVtz3NJTm04gfBanNQHsAMFWSU0F+Nslr9wDVysvZwAcC/1ZxKB3xNA6Ta5N7uiKcmpUUpSnBzLOKF0DrdqBMbtjur2nvAi4i5fLODgF7lQPIwkFPZbDeRC5zqNueWB4YV5A8DtFabAFA/axnanAWa1vJOF+MFeRMfY0ouIQ0JgC+0JNcxPcWCqQhGCWtWQ/KJUCszrgwdN7+XNQP+sgoFJXkaYAkAjDBhAAPiEKmVuFuvtxACs+AveDdegAG4njUxUne9125431HFWrWHwxV41w+5VYUGG8ve8CNlitLY/T17K3T5tkk6+DWex/ZKOAC/TLd7Xn5s7/OcDfqKdvb5sutnY4HrU4j19Ixj4g3Nb1mZ1ImgKKKKArVXoErmjNQrSQHEnAwGAX7a2qKCr7chtauNtvuqHcLYEBw28s7jqUKf/TzqXu2Hd/ANwbIUmIXAQyUgOCxuO6B6D+6n6WI0q9MakVkAOIOBgMAvPUQ717B2d2kA7k2PdRxKUA68E/QScOgmNXmMABhwGDINQnjO5K/tjeCx7iYGpXogdyS4NZPGGOpGwfcHbmdIylSVxE3cbyLtOCOgXA4xHRizMZkgv+hrYTMjUjFmlbk5QvtCCueCdwsX0Spr/wC1ArRcrnwRrTDPMk6E7UHlJPAMdAraStw7ixO2MaVSmYOhKNClBnrqMfipgJtvQGvWK4jaGDurq+kjwAcoTfNqa1BtDvtuNlBUt3NSo5taiB8YlkQndFAy9y5Vdv0idyE8St6lUoIIhU/OVA/AMFWOWOsxFbGQNBDIyhLBoQV3x2PWcOu1b22cMtcyFMEKY0zakB4tCgeOlbQFFFFAU024bb3DNwkIURWTpQcXD5so+AdOzRQVU2luvdTYLcUdsrppViyAq1GCVYIHQTVm8Nm0Zn7EnkcSeE7k3qgZgOJH9NcS6lnYDeOOqI5N2NMtJPBgEYwdYKhwPa9uM2rvejrtskHr6OajzOaXAfgBQWA0VF2B70W1S4kxG40OeGd9098MKb5tT6oLowJcl5suVNpQP61SAFAraKTw59CweOVtP/awUh7hbkrcW9bRuSpUpdQg+kDcDjUDs1GjdRvFh9jWdQyMisDpMFIOGlQptcxgHTYS++253cDr6ksDChsjEq6DnFxDwjgApZWK2HRWEu4J9dBxOlsrP6zjVfWAA6CPu0bZzMbuT4e4zcEQp4o1PNIEKjx1ZeQSQlKCQQAICgdAABoJKLIKCSSAIAA6QBDXvQFFFFB5jBoMOoB+GoBb0dlrr67/ANUDYwA00jbh80pSJ/rvyVYDWHjoId7Pd7TVchvLt9dQ4LJM2/uRgVdHGqYlRj3E7F7c3pPLkbGcZFZMlHxinBv6NRD++m6h9wd1G2r+g7sMHyqi6X3Lim14yoYKCclFMzbrdJbW4SApcWNYz6GeRxBwcKcQE+g53u5a1j/6yCgUVFJZVcqBpU41RstaxAB8CoAqZa4e9CIxlZ8n4zHHh7dT+hNyybMnOgkA9PbVHGtQ8vi4lGiTAzOONF0Aqtjcrubne62VfoI27pVJzFxuC5OZPnpw3KzO6TdotHpdt2HD4ePwJEI8BnAqU9lNvttrDxxOwQdjJJEWDsOVjB3x38aBG7S9qsZ22w0CRIQA59WgzXqftHUgaKKAooooEfc63EZutDXCFypEBSiXFYa5h8Gvx1WS3tt5fRx3cFw0ix7to6He9B1gJBVs1cOWQ+OThmPYJU1J17efp1lGgoEtbW6Nur9Q0p5j6tI5JFQO+SD7B4fcMFLhtbG5nSAQtSIlInL8BRQMA6VBuYbIrk2ilo7h7YpipTdfGGxnD7kdK6H71JTElRUVv9bl1QPAx8HmG5NmTQTDopEMt34A9ogKi5EjTaD8ig7Addgc7hgAcQyVNQQ/bzYKDv1zHhhZpAl5B7a0y4jLPhqCswZf89JCUXut5FUQ1Z72Su4YM8Eg+MOo8Srdbde6xStk2529W8xp3PNuhOH84KB3txO5W3O22FqXZ9Xp+dJJwRthXjGPydgKgpZaxt1N8l0P02XwLUo4oQdmgbh+AYKfW12wRVJJCnuVuWkB0hfc+N6vEPMkFTRamduYkBTUzoiUaQgGBJJQOgFB5x6PNMWZ0rAxpAJkSIvAkoPl0rqUUUBRRRQRD3wbMUF+2bSYQ4AEEwa++JUA8Z1NVs83mOsGVFWB3FkKWp+RHcqmXKPAOrEaZG/u0619+0AvXjaBA8A9y5pwd8Cg6jlYK3Mxue1XuWmHLnNCT2I9eLmRhTtVAuLRvd/tWVGoUowTeFJ9egZw8ziSafe3W76ATY31a5NbqyLQdB3PJsAZ0D+0UnSp9CDg9pcqa/8AtIKBz6EFe8lTVp/1kFAoqapwsTb0q6A72GjORvJabhnDAPAGoPx0l7obwbe28KEWQ3uz2qH0Egbk3G66YOTEbvN1+gG1IQCEwxV4zg9B4yaDX3gb11T2aosRt3TqXiTOA+VOVpPATS42ObLi7JoDp9cLBymDv33FO6xpqdLb9tHtlYVAE9tQgcn0ftOdFIMztR0+9AUUUUBRRRQFFFFBgMGVJ16gEPkBWDswpDPxBLwpS0UDQOu3myDbm/urEAkBIOs4akfspsYqfs6uJMhxJj7D3dCLDhmiGAH9tfPSFTB2j1r2dnZ1BiYTq8EEnGg/YCkvunhMVtRZaO3KirUSgdWTlR8wnBgM7PDx0Ep4/auCRjqZmBMX+YGdKsskBQMCwBAH8NJq2jwdILfR19Vad6tbSDh/84KVNAUUUUBRRRQFFFFAUUUUGqqRJVgOGqSknA/rQZ0jX6ydtpIbx3GOE5/1XRS8riypM+LWBaljS4CNyML7Exow+wA6BoFNtNuDXKAQg5EWB4PBxAJ+YHnSqQbc7SNqjmkka14v2jOHUKrbRO5MN35Cbrpy0EhclbeWqJNK06AAqySg5TXHGNkKCQ1NSZMDT9gCq6tFFAUUUUBRRRQFFFFAUUUUHFdYrHXsoQXRnTH9vmEV1U3UlsFY1MkPdZEzEpkwOswY1GAKd+mT3R2WlN9IOkhsYkw2QIF5KpSaAfjADyUDeRhw2bTuUDhbPkY4JejA3MAP79PtH7OW6jIA6NUcTaf53rqJ+5ttgKBojtpbUkJvl6QYSACtEDrBh48x1MmDJHJDDmVC9mcRwIQElqRfjw9tB2EyYhKDBKmKKB8IAYVsUUUBRRRQFFFFAUUUUBXgamIUgwPJAMHwiBXvRQIuQWit7JtP6VjqfXX7Suimvn1u9tNo2ocjlyDkydPhOGMev8lSEpg7m2dbXa5H6V7gyMnWJM6PIbcd1A7fjoOZayH7XLooxu0ASAVcQeYwGnDAZ/cp8GeExaPlaAamRIR+LQnTKoi2CXwC5e5BdPLOPhKaNNxI0pyEnoAcP48KmzQfPCH+FfaKKAooooCiiigKKKKArnuLK0OpYi3FuTKQj+nQ0rQddCigbJ8272okAs3GM56559BuoabiQxvaizzlutI78AEgd+hMhCpHnTtXduM1WxiB765HgLOH3KPQfnP8lV7ILeyNn3m2vuVOF3GfZKpGMYBnZgJB5KCf7HYW1sfPCrbY4XmD6MxZ0t0TY3t4MESNOnB/VA0BW7RQFFFFAUUUUBRRRQFFFFB5jAAYcBgyDScf7dQuTgweWFMZ+IIMKU9FBGO7aPadZERKu4JIkRyrwBCIYx15WoJ2m3sVHfIBCpWnJfHxeMTTW7jXiTg3Sg4lpFM5ZETaAZKcJOYOPTzbcLxW+mTirj5FsyoJJSPeN4yQAMH/AGUDxsFtYXGC8GZhSF/eIGf/AI0pgFgLBgWDEP4a9KKAooooCiiigKKKKAooooCiim1ku4ewsOfFkamV7YCwPKLUAVLc5SVGlVE6iBoMOgyjB6DB0DALT2fQKgS+7azS681sgNLPqD1g1rC3BN/EFMNIZPP9yRTLZMyAOTUnaBkAeVasnuDsPgqVbfey1T9oxnxu4TI+kSd1MZGo9oVgXpj1paUxSMnjEZgBqEkkY+vXT/SBW9NrkQm2iNC4zaQJGYh3dUrKh1Ua9g1a1SPQBJJQA9oxj17P2eQAx+AGuugdyMMaeOR9vYU2vdN6ctMD+ANOyutRSUj9wYbJ5JIYlHn5MtdYsMkl3Tp9dR8mYcHUYCxj8GeHtx7emgVdFFFAUVgMHbWdAUUV8Dp2adlB9ooooCiiighdIorKjfSCo5EXG1g2fRmLL53Duc6mjXG1fGL1opYtHdHq4o04FyhJzIOMSSPUYAGjD4wAFgZ1/R0C+zWvBHMYq5JWdS3SVqUFSIHGZjSlpIwOIMM80+ug++Dh19Hb0e2gUFFcZ3fWZhIAteXdG3pjFJCUJqpSAkAjzzAFkg01H5xjGEAAfSIYtNOzt1rs0BRRRQFFFFAUUUk0FybducjcYe1zpgXSBnw0cWlO5kjWpMsceMToLMHjB49NPFQKyiikdOLkwi2yZA4TaRo2ch3dUzMh1Udug1a08egCiSQB7RjHr9mnl0GPXoDrroCxqOW924VzIFaU3W1kfWObstHwR8oDtGWTTrPV1bfRpc/tb9J07cZFWoh7dxqwjLJRojhngLOGcLsB7RJTvZll0fR1g7e9Hn9pk7G3yFmU80gc0xSxIbqAQdRkjBmWPEfV7aCu+xd7mC0CBIrW2Gm71JVQwcy5q0YxnAGOrFmJ10emZE7CSDTc4QA7gm+MGf7K5UWm0WmDWY+R1046IpwVNYzhECJ7FaZUJMeDrCH28YAwfi8vbWvcS5UGtbD3Gbz+UJGBjbCtRqFqkWugQ/YAAQ6ZjGLyABpqMfb2B0oFb09lFeZSkB5QDi/aAYcw0lW+5sGcp2stk3ShGpkzYjLXrmsoWRyMgeumgBnfBnkHsCLsF7e376M8iurOk29zSOxlzYmh5cNSFkoXjbWongjHx1ICDlIwdAdce5JOH19mnTWtB7jwi46VzcIPIEzwlZ3I9oVqEmuZIVRPZxCwj+geOX0go0raKKKAooooCiikpNbm23tqlTLbkT6ORUhWPgpzXp1IQgOM007dQAEcMOWv7aBU6aa9tRjvLP7qW0na9XIIWOVW1WpsORSEcY/OpEMz20SNpSvbG6JnJsXEgUpVaU4BpKgkftAMAwdoRhFp9/7a05jMYpAY6vl01ekjMyNoNDlSxYMICSgfR9P/APeKnPAniihtxto5P14v0yxaHfIqKakjL9UjI4QxmVM6uYyPbbIWdE9tB+hyNyTlqk5uPZoMsYcwD/spGGX1tKSQ0q/lqnL0fpGoi7cEZJwRrXMg8ac4gANQZjwMJM01H2YdHbnj7aIz25HJor5RRb7RRRQFFFFAUUUUBRXyvtA0m4Hb3HNwkbKjEjdV6BOQPjAGkH151CmebOZHEtydt2pqlUte2c87vnM4efJgqzGsOjKg1W1J6tQJ0WpwzuAUEGY/GLsrdoooCiiigKKKKAopMTOfwW3LUF+uDNWONNwjgpgrXhxJRkCOFoLUAOIaIIM9cBa9n09Ov2Vpya6tr4YwopTMriRlhZnPAKByc3dOlTKsgZg4Jxg9AD7QdemOvt09tAs6K0UDghdEZDg3qilCRSWA4o4oeYDQD8Agi/bW9QFFfO3Sk8xzGPyZ1fmpkXiUK4uvA2OpfBGDUhSIgpTh2jD2C7k8kfR2+P7aBi7kXAunZ27KiTqoWN7hSpNgD1cTmq4lJyzsGk107/D3HurSqYkJCYaRMhUAxGOpbCwHR0AoM6K+V9oCiivAJ5OpoiNDA6mhDkIGgurSg96KKKAooooCiivmv0UGH7dKaS+TYkQMMfElJwGpnceUnC+MfrEmna+ym/uTZuCXfKbE07SvSkppVAcEmjfIXBt0ApAMAyzvmZxOYyxlgGAY+3UGvtB2VPeipzmpJ24ThK4nc62xcXekTeyyqTqk0jQ+rdBqXIfqhSMsfHGPTQkAOVJ7dAAzHqAHX2ZAG0Fy3mZXWt+suYCfrUDMhuW3MREWAhR8twG+TpkeZ4xk81zIziRndBwAAAMsGHsGMciZRaqITRyi7s/FPBqqHK9VzQNO+L0vBP1BhmYAk4Gh+uGYO+z6BjB9YPSk5KdstlJk5PS6Tw85UVIlRKx3bwu60psclBIyxAPPQAN5U47uSe0Yy9Riw9tVbrFTGJurz3KncYnGjzDp1InFsbJRHmV0am9oavUzWBSpRgMJXnKfnpykwCrUYOSH3WgyOIT5zsJvM1Mf3AyiFpHFzihs1SRtvJlpIUfBQq83DAnvgHacycAGBPEJwH24ZgHwQDcqR7arOSla6qniPOhejuNMetTt8ic0KYZ6bg8uq0TJlACQKQcsRoA4AONpoUDr9la0l2uWZmBkn0lbI+OpMySkInwlVKnYZCskkwBpHYTzOAMBgD1Ax8/t6x9qU1urI57OkWNrYlblzwudj05ICjlqsBID1A/jHwQABn+QAAe2uxXEjzAgjLOlY2o5xNSowaElGODipXqf5zjxjOH/ADjrt0GA6zrAdZ0BRRRQfKZvc5G5VKrbAaok1tT8tLc0i02NuqvVKlkiYgfFObBmfRpxgAH2cQAydcO+BqTnTyafRSTmUObpyUhROKt2RDbF4HFIoblg0xxKgAB6AHmDXrB1692LtLH4BgGDUYNYqMyUeLd3mgEKi8uWsFuJLb5+ZxtDStgS1nUjA1HnqhpiTkCVHmWejGcMz2ogd9wRj7Mx12GHchN0EQlKiUxlQuc2l1Z2mPuCmKPETRvZzoeBMQDUlzAM4ngnj74YBndGA/NhS7Tbe48sbZARN5ZK5e6yRMlSqXtzOTplqchMMZyUtPyBKYongnGDOAYAHE4g/aMWANAbimyqGQwt1g9xprKJiB1MKEF0XjSpVqMRI+KQNONvTpgEjKOBocA7DiZ9naMWINNK7sqTEmtgken0X3D3TWuKGDPEocYMyLeYbG05kSOZ3MuQAc32jWDAPoADPvugAOiuAqm8JisJ2634l0WZ2M4lqGE71C0jLTICTmU4Y0xPb+rI+IEHvhgJBoDMYwdmdPCy2BKZZM4zlddm4D3JXCO/J31ktWIwakkaGHDLHolITEoxnAGePAZxI/4e0eem37Ym5A12+ZA3Wmyptt0UYlSI1BTSMlxIGWMkZKzTkOsHAGInow6Nfj662dk4q1MbcufvF4Y1bticpu1W4lalwmDESsAJrPSEtyM9xTAAMkgZ6nmVhYx5gHxiQAH2D6+H17UAUXOVblbmJHyboF0YRoWYSBq0ZBlHoyzgHagLAdop185Zgx5k9efs1LCDQFeLZtTStFrm+0aG99x/UTQ4ol7aaeNqOUogJjtDiEwBjQ9mpIDiyR4GaD9yAHg7QauIgtshQXIcblJJE9aKXdCmRLG7ilckcMjUfBU691xs9Czhgw4nB/Bn11VeJRe0UUVIKKKKDAzTo7Khy1fLS0JkcZZ9DGKfWgOlJDpGZqzlgJc2JUtXZphuCMenfDGct4PMpuvDQYzgZjqY3ZlprTXo9vtqEDq3uSGNqSimg4CtE2AeFujSBSAeeir1dxeTEfxO+4wic+N3mefXpncyunE17bc2+8ruAhkMViE2FFyZWqYHFOfrGgsfq8laejMUgHzPrPmQDAAfwdGHB9udJu5TzMrq2/WXNLn65AyorltzERFgIUmqXgIpOmR5njGTzPMjOJGd0HAAAAywYewYxyDLs3A0s1PniFtckjqpUarlRKR6WkN6tVhoDmT0ADtEpx3SDvhkiM7sHt6AdnClO2OykwXvKySQ85UTIVRKx3bQu60pscFBIyxAPPQAO5U47uSe0Yy9Rjw9utT4LjZWbmHPs3VXWuhDpBIUbhHUsSa3FrbiW3QrVHxxuBZ/GM1MGM4Y+WB8AOzDTQvxjGkNsEofrkMkeCmmD5FgwmNtLeth6gpAdqrGciyIcFHcjO0JH268HUlVgPgdeAwHE6Om5WGtw6Pr9IFCR+JVSRnLY1/KSRyTEiRF9mBBJJKkJZGgev3QAa94Z8Y8tBi2zWijcjYJcytUgId4w1+om1Z8qnUQwN3GGdypuSnsPJzH24HZ6dANPIDsvbkm5mryn36MlJzLnTi0kKUyW7D0jfEV2z2dS4x9IkSFKQEvSlMT83PKOBgABYMADz8AM+NTx7rgjJ2pXXAM8ZowQl3BxBeMfzMz210k+3e1SSGqYMS3Pw2dS7evNOLKXUaklw4+h3HJVDU8ckfG0z7sYOsY/jHSgm1t4dcCDL7cSdtVGx5yT8oqRpF6lDoMj2dpOaYwA9C9dOwOGguwQe0HtD21M7bqvfwV/bl2meuzPLuqpEfby0bTNeeZY4idy1cbBHjSDT1OqkBJawDqpAPVN2pfoTYD19vfArWWIbgTi+rEZrIFVv3lxtmQc6Cb0yNcsRqOdAMZBJx2hyXoMzAPXA7MHgw8dOk92NgMg0ZS1xMhKVR9J6uQuaGTOiJy5XoyJNXkKAKTwdoQD1CcYPIYNB1tyqzNv5ovQOLs2uiRS2JhoUxrQ9r2gXLdHzc3VEcTxie0GndmZg9n0VlTvy9/LnU5ziamNXOuzIE9k3hdIWpMlf5G6R+Rp0jX2+t+WSufBUkHcYfAIGNGA7Dx9YNM+zQZY0p62nsOUT+csM4OQNyK7ze3ms5TemGBeUsPbEynmTjtBj8B3RweDh2dfGqQT1Z+BvpsQPNZ1iQuCnlnsCZpdFjclRjADAHcJjSyTAaF93gMAwYDGDswGPTVMOG1ezrigdWtSklo0708EPzgDScPYNDnAnrLP7ec6OzXDwfAT+5Lwrj1TXv3wdMZrH39nnB4KzrxTFaElBLBqLsBpj1Cyr2rQV81+ivtFBj+yma3Yaf+ilPr/wDNsU/++oqebs0+ikFcu00Nu42JWWbFvJyFEoLWElN76va++LGEYBj5M4rUeoBgAMGfgGDt07NamlRWFZPS7M8Jtvb2QSvQrU9U1tS1wTJdNNNeYGQQM7s9owfBr5w0yCV5vspbLhI50yTMMUWQxcrSKZRpHCzU7gAAs0yYDSoM1GmEWP2cYAxg4Xvh56djvRqxdvIo7nP6cmQuq0aE9t0HIJQ6vnDSnah1OLLAvUnaA0Hwy88PHhp217w2ylvYGnVNkeZ1wm9Yn1Scm4PC1xSJk2ns0TJiVJwy0xPZ9SSAAOgGnZ0Arnq6ec0cfngaO2LhcqFfogbls5C9tk4YeSOahNaYgloGmbOMSqS4d/we7wOAccd1nl8Pgg6K4Dw93JlVm4sfJJc3rpMlu3o1+stWjgpdOVfTySOxMAfboDhlg+uz+MY/bT9QaytvrbK9FsXa3DVSWm1QEKHJ5XOhqNL0/Nkw1hxo0xOuANdSicAa4A7dOgNJ0W120XyfIiY08u9XJ3schIACcPYTgOAx5jUcbnOJ2565+PszGMfjHrrr11d/D39uE6eGj/F79PWzD9KzXu5ELk8tcJMZDZGSiRuTgmTEqRJj25Gp0AdypZRI9QGHnfQWDow+nxau/SGhlqofAn+SyeNp3cLlLFQFzsNY+r1wFCgGmGgwEqThgJ6MAdGOmAAA8AAUua104eLOiivgfoo19ooooCiiigiNfRA4Re77jciYWJU3ShhiBIiKdY8PmZFBzy9B5jSpvfA43HJO4yMYDwYajH4Ca37pX0kNtbVtkztfNos6x1uhxL0jJUMLm9OT2WAnUehnzUYOQTcMBfzw4BwMzuvDDrduSWjPd3dze4xcmZw5e9mE+sTWdSkOLPASVqSWDQlanUEkezzkgAaP2Zj10ADQCWftp8HdW9WwMMllMVY3CJkQlxbGlQmMJXNZADwJgDGpJOOAMnRSd1gGDUfb151sdPyzlNVlTCTXJvYuvAmtxBUMHQM7jEjH8l5dhrFiok4BwAdaMvggGDrww44PHnn0cEes3Xqnc3hNpVUY+T8eebnNPOjcHNKeub0SgCQCgaUtOE5MaccPvsO+B2AJMH1413dLALAypFLyr1zwtyRRsyNAHoUz6hMIH2d+P5h77MADvgzBp0YZgG2dzLMRiI28g9mJM43OeoSyJjyy3NHEkEmHmXweVSqUAWtSAfRxsD+V6OD1nZmdg+XHnj8e/P8AjI83uzXe3Bn22TSSUS23TY8Gvb03jChhzs6GqAIVQ0xZaNsTLBqVmfCGcM4A+5L09pI9MzgfQ3FuvclftymkalbNH0MxRHuDs0nNJyso0/Vu1OHpnzBQ+gHFAD7BjzHoPDQFda2Vl5A9IWSQu80mDDpGhKmiLGFNba2rTowdqk+ZrEgEnAIzGjDqDgkpjyiOCAeA9DKVLHtrZY/GYFFUFwZfoXbpSIbQsEaj5kaMRIyRojR8t7rUkeGYAgO9mmvGz666WXvnYeuvtFFFCiiigSV1dADtlLQDBlp6kXez/oB1G89UPbXIWmyLwesHAJjIWs23y47qLalvrAkZzEMXkB4zkufk4hP1IKktNYOzT+OKonIxOeras0xPCgdFTccMHb7QcZMYA3HXTxaaD6v+6vLWBRY2PN0Wc0h7m3tB6VUj9Zqzl5wT0xwDiDhnnjGcMYDAAFmMfb9FJxis1cK5GfkspnECuzK2mYXLdDGOWsfMQIjk0BIUDloYEg5GAzlu+O4p6YZPGGPPQwzTAfB1HXIuFKr6oHLS1MHVzx9ksbjKJ0UPzIjjQNHFafzIAc4S4HE/NtRptehKAA/64FO07tY55PGsp/t+4JEEIcvWza7LTEoyVqoaU4kI0wSThnBwAcdoPjAJ9uoMM/2bE1tHCrgOSN7kCZ1KdUBJpKZwZXtazrAEj1DqMjmERxJwyhjLAPAQ8NdQA9nsqOPak1mj1faV3eYYufOi4c2u0HIfljSiaEyxUgcQKSOMXzQxnEmeMYOkGoMO3DrwOpcWefZ05ym6TRM5AkdtWGVFo2rRK3cmBMiG2IlICcOIMY+wZw9cxj6/b2YAwLB2gWgg4LhI7oJUzqVIG1Dq2J9Sn1eBEBLhhwOTAdolw9nb7nxhAPxg01raitsYpB3+TSOPkuwXCWLfWDoNU9LVhZp+gdAaDLJOOGWTrhgDuQA6AAB9AAaaVp7Y3e/KInHI1Uyn05Yb+tjU/SWTx+LqnJKiazUqFArjjjmWSAaJedwRrUTgM9T3OYwEnYEgB1jHXIVXJnjZe6Ihap9J5JFJFLHGOLOxoaSWBLqQlWj5NOP2OZiokaMGZ2ZxAx8YHQPuQO0ZZC35s5U3F9XvAnlStIXqSxPi/wBXHqiCCySTxt/G5IZoAEk4D1J6BlgHp1g01rmKNtlpT3st8CxPBCoh7+UaYBEnciSUbgPU7iHJyAKeCRxOOdxgFgCA7iC4mg6mdi6M+ZPb8tiaUy98u8nUpIvdBujidrb44mTEqUCpagJOJUjOEcYPAtV3PBMJHnoPMZ2YAA9txtzZyzvE0jTBfHW3spb2xMfAGUpO2nDlig4GvRgtTHDPO5kGpGhCbAYO0sY9B8YHY5y/avZxxQOrWqRy0ZD28EvzgXpOHsGhzgT1ln/rnR2a4eD4Cf3JeCJn8Ck7nM5AWRam461Q48FKyvseucqZ2sJOiYBJZjkADiSdxgGaGZmASqR6l8Ps4g+ismeOM+P+EuZcu4VyYK/IFzBdGZyMlhkMbjz6kJZ2MDYj0VHogHeszhgAccsOApGP+j8AE5kZkgB1nK+3EdkKTdDdh0OuNJ3BDybKYWzqhpRoytTAH9AO54wAAw6MB9nWPPMddEva3bx4ZtC7gavL88L07eJ+XJ39yQluTgjATgv5ZMeAkCrNMTrocAGh2mgdOul8itvEEE2FcNI3qtH49CW2HKROKgZYySdR4DGSIfBGcHQYwaH6g42Axgzw110rojrktKKKKLFFFFAUUUUBTX3BvbH7cSuNQpwjMtd3mV6H6NhbKynKSRmEgy4Yz/YSVl9HWPQANOswQAaZ05uH300lzojc96uhbuVRJoi6lni6xUe5CcHk9Iq1ApJGm14JYEhwB6gAPPTMYM/B0eOoocty3LsaCExma6W6mSkp/kYooenJJQBOaHDmxpMFghqgEgBxy8NBgGMAuj4wdqwcLnp21+kDOvij8QmjwUWLj2JhpnE5V28NMmwO42p2eANQGAB4weQeg6a+OwFxiVip3F9wydia2x+eHddqKPOilxHpo6LRnEkldqMk4azjKQEkgJAMwY8MOsYAVvJbTOt19tKBglUjjcnkEjJbpEpdVCMlyZ3JcAZKknMkHdno+wkknoH1kefPXOr4M49W10Xnc/FoxDJLLJfBZyyqoiqIIdmETWBa5E6HaZEn/MjjiREjB297xsO0sYO3QfRWbxcxodZjbhrema5saXOcmXENRAUmhSNdoS3KTM3AYBDL0TDL1zLIGMB/GLL7SQcEzBIOdgZR+hmZRKBWNs3AH+T6EojEjAuMJRnEgHlxzlRLcSMY+seBXB6Pj6+hwLgxW6UpeLWPjUxxcI409euH8g99Ul6k8REcmGWmGFIPmcOZMH18HPgg8GfQjq3Jmd536KwwrOi2A6zoooCiiigKKKKBrJduFtDCJcbb5/mhOkqAh1cwMSFOcvcTiP6tKmAM4Y8O0zAAM8ADH4ADHp7/AKeLXaO0LYiZApUqbiJPWEZGmaligheRwwmcTjAJ4JOmAwC7wYPHSSk4LgIdwnysa7TSR8Y0kNXNejgiVtQAHKhnFqQEAAerAd18HUvMYAgzEDt6OsCCIZH2ObWIGwyVEVGLqQFuSL420Orog5lU4ohEpOASMk4YBkqhqSUfQPP5+WDoGMAK56W+cr9+w+ortwXkn5ZqtdP9bTkJpWleo14TjFWgNB8FMTqTxFgsB6DBywTM9PBXIWbkLItcfZ5W83CRNqF/dfUiH1gUcjUDcAGYDTDTnACcSMA9OwYBgBh5+ztpM3PtRKXmCREwlO6vLqwPOjy9omJ+VMKp0MOJPAq5VSSoJ4Q81JhgADOAAegAEjGDTXMCSe7eSNggTBpb2xk7GeqniGUujY4SlM4uRQUphOZylStcjADMHoT0AJPH5M8Out3ovLHYcxnunFZddKNMMbucIo1ZGXB3OiShlMTLVJeipKAtafxgAPR4D4wOCMAONqcPX6mncpoZGgmBm4qEvSaCOiqPo448N656KUowpkxyoxGMsAwDOAeP9TH7QEj074H48He9nZXTtleLOiiisBRRRQFFFFAUVhh99GH30DSS+/rNFLhGWqQwScSGSDZxPJJDUy/NTiwDxEACw8ZSUA/bl1nAB7MMuMMBY/BPuIYVjnbBM2RCVLEN1kvMs7oFOlISp9eW5ngqdTjgDAdwMx6AAAeeBmHbgPs8JRELvCvhpcOMxyIrmUiLrWUrRfIlKNUNSYYWcDURYEJwAAzJCDUWY+geeHRgNLlWlnMc2gIILICW9PM7fMhCpnUMJypxBq4theg0pwAAJJOHqMZIMyAF9eYwdedRpZY7w5YrtF8s9j1gMn5puej2NuQ6cnx348AM80QuZwwwz6zhk4YDzwwpMrdz8JaI21SB1ikyJUuki+Sp7WUyDWLG1x4mHDU8tqMkH0g6gDHnmDDOtGd2ZabqWrhQWbWHT31EpIkafSQpSVjNJBnEGBOMNGAAwB44FJxwDywDwMGAeAwaalj47zZadpIFGmi2NpbTRRUhlqaTOTI1uhyBtBqlGDDA4ht784zhgzGMgGHg68NB0pF5Y7CrbLiNshvPEWZa03Djr8qiTo4epl5IQNXB5pGAfMjLGMg5YDow4Jw8AHDz96Dteemtf4lPld+YjNkDbHxRhoYnRsXHHuh4F/GWGJh9yn5YZYwA5Iv64Hvh/B1uppXSuO2VivtFFYCiiigKKK+Y6UGNJ6by9BA4q6y50SOClI0phqjiUCMatSMAPgJB1j1pQY+3spMXCa5C7Qp8aoslQKnVcgOSpSnBYNMnzGDDtGcAk4YPp+AdcdXLGsSSEgu4lkuEubELNBpmj9ex86Rshzo3kpPWhBPA4xZYBnZljANSSDvwEgHnmSMwvrr7EdwaWaQFnuC0WxmuhT2+jj5bUeBvAvSHAOMJOOPL5zAACxkj0GDPjAwH0Uk4La++DJMrSur6xwkDZCYgujboJJJVh5uozhptAmkAGgBn0IStdeIMOvaePT6nQZ3UtyxIF1+505xx7VmsTeMhWpZzUBxIUkkO0OTqh5nA07NeWSpjggB4wLeZ6wKSRj9G3mjtkrVt6WdtmKBiUxmQhZ3RyEyp5LoUm9V6uPX8199zOeZYwcTgcHPozz9lcRk3GR2WGSEhpg9xOQjSpxbnVw+Tx4NE5yYAB9BP60fnoPo4JIx9HXoDMGaUjO2hBGLnnuIrLWgeER8iPkaeYq28AJEjGcdqp4fC5MehxgDsgAU80TqAsYO7GMnvlXa2I3dimlyT5CwRPQ+RPSl7ZCkUhUnAMGYSAvgKRjQg4HuS+sGh3vB9HR18t3P3/hWWUlRYtzbXmz0IeGZyka9EtYUJ6VXJDgHOxxQyAagGsGD2DP8Ab1/j7acLXs+jWm4sLFZRBLQQ+ETEtpKdo81EtSnRsWDUJzOADhgGAYySR9YQaC17Qezt19o/Hq43ZppXTU6tq2VfA/RX2isBRRRQFFYYffRh99BwZdLI5BI6ul8ueEjWythI1KxaqHgAkv7daRkN3EWmn54EsNlA3jU9oMfUhqdrWDJXoy8AGjSm8HhqhgGYAAwE6jGAYsBgCPppS3ERuiuCyFM1NyhyXHtiotKiJGWAxQdqSPQBYBGiADIfboHtGMAPb7ddNO2mOt4zXWSTeyZrxZuTtbfFoO4R57VnL2kRKRUPkgAyASsGMwHzAY+7AP3xP48OcZZVkHNYtwNrJNCGi5TC6PSyPP7mBpQKwRlzzNUmGcIGnB5fiABn0cYYOH+OukovDb9FM0sAWPSkDwtNElTGDbVXIGqtADHywVvC5bmMAD14PE4nRr0U3dq2fmrrSEcKfmh2tmA8iWt429SBQEl6cycziADJHhoVqSPnuzXLP1sAfgwpPsVjFqK4Y26VwKePgCZaokzVIybgK/UBBY1g1hPGbRuAOGcXqMZPCKRjJHiAeYNBj0L6I3nHRbmLIvhjwnZLlIDwsg1pLm4FFGiQNpiYGgzuZU4cAn2C6Mx6Z4DwzwH2Ke0bz8pLWxGQGTP5X+sWVEp0fvV3IetcyQD5rlvqOJ254eTt7KQNnUk+YS7prH+1UhbhrpCpeWkg1Y2DG6kjIAAACeEsMAAfcfXcEHeA/HgoNubPJo5Y+FRiXRtZH3llZErUsQqzkxxgDCC9CctBpjTC9QDw1GHsH5/oB4NJjlWll3bWxz7jqaV9r5jpRjpVKfaKKKAoor5jpQY6Ujbsp3E228mLaJAuZVnqpSMleg0BzKceheuuYMwDD2/ya0suz6KTFwmt+dYQ+NUWSIFTstQHJUha9YNMRmYDDrOAScIH0/TgOvNrzV6dTCp6jX2DvQCTs0Ihz4wylO4OcOIeU7w7lAAQ7aElpQKjAZj5kAwGKQe+JKzzzBmDrrvkXhQyiREQQlmlkdDJUSoyOyM0pHyzjoAARjMS9ZwwDAAeYAKSQaDw16BgpDwu1F526U2qWSdjhhLVC4atjDsNFJFh5wzDtEwOKQWNAABgcERPsGMGvaeP9z32VjttaS1L61phWYtEkDHCTCW+as6ABT+sLw4IOMTyYOAcMkevGOAqMz1CPoBxu79FY1ThpzUactPbvfISaAwhjm6WdLzHhYqZgS92Tg5ZS580owTGjz42QwA0wO0J5X2gAA7PsBTj/prTlT5FCnW28za07q6KmVrf1yZMS3rFpJBxwywA5jmsMCDsDhkAJHh0D1zLzRURstcYtojltZbrFiYlEZB69JXolxyle8akqhqUpY0w0wC0WBwyBjGA9T7nDz5g4K+wN2Vl0I/PnBhgD27RiaKXomRrnVUB1WMh4VoC2/8AUx6IwJgKicCCxjJOGSIevBGMQ6mfJcTt3HCspdmXXPfZ42yG3LpGyo3ITmpGcpVojyTSywE+ztJOGPje3i+DAGhwAaDHqDtp5O39tNfa2DzOGzCemu/qgbC/vxj03GplBw1hmpxJABgOAMAAE4cH2YDOzz+pwwG6Ps+ik9M5MjLuZUUUVaxRXwX0V9oCiiigKKKKAooooOHLZlGYM0GvsqdSUCIjxmm61zoFdGBXOQauUFkqN3Tl+IROvbjUXrzOY7j7zIpaF1MGOOFt4z1iQfgOHWq7ktW37djEorCyOQbZkPAaEnwAoJsUUUUBRRRQFFFFAUUUUHzLSsc/urOigwz+6uYsamxwUtqpwa0Sk1rUaqkJpycIxpTuCMniFa6+7HwzzgZh8gxg82tdaue8FK1LWqIbTAAVDJGAkQv2D7KBJSO+NrIk/ExiQTFAjcjxYATjH7aWqZSQrTgVJTAGlGaZgEDzVAuVWWbbNWDnDle95Rus1elJ5zIozzOB8ACakns/JlRO36KFzTmfWfLdfMeOgebP7qM/urOigKKKKAooooCiiigKKKKAooprb53R1gEfKRNSfVY9vB2iJGnK16+vz0CmZ7mwOQyhwhbPJkat6a/1pIAfWVSsqu7ZtBn+DbubgM8kPGpchg5o44fj66sRoCiiigKKKKAooooCiiigKKKKApATu+VrbaLk7bNZejbVCr3YB60o5i7mMUXdHgn3qRMMwFVx2fu7b14j8jkd6beus2cD3g9LzACeMBGRQWUM721yBAU6s60lWkPDkA0rXt01roUzu26PQRniJqu37+qcGxwHxwEqB58p+CnioCiiigKwzH8FZ0UBWHkrOig+ZaV9oooCsM/urOig4aVKyRdtP0TJEbYi0PULDgllAIL0OPNGccdrpp7MxmjGMY9faIYxj1+nXWkiw7iLOyeRmxVjnaBS5kDwGnBr7aTW7xmkb3ZtcljjryBoDgDUm5fUeeolzlTtwOtvF0tspU1IJ2M4ADlZI++z8+dBZBl2+CjP7q4UHArBDmQC5UFSp0QEcU34x4aUoKDDP7qM/urOig+ZaV9oooMMx/BWdFFAUUUUBXgcoJTECUHjCAoAcxDFXvUdN4TPuIeoWoSWZdWpA38sP1kNR77D8FA88On8RuCgNdIc+JnVKQdqnNNT69ugB1yZ/ei2VsTU5E4liNqGp1wLAdrUbfRkAGz7dHLRd1q0zwq1Uj+MdcXbfGGfcVLbqyC5KEDwFudRokAFHXwfHQTWZXtrkDaS7sy0pWkPBkA0v6BV0KiNsylqpNO7gWg1VHHIYod2J8/J11LmgKKKKAooooCiiigKKKKAooooIm38gMlhV/2HckxMax0bGRAMDqQkJzHoX5x/3K4cDAq3P34arxER9Ygj8XH8zGrJwGMdTOooCiiigKKKKAooooCiiigKKKKArnvCw5sa1S5KlNUmElDGAkoGQxj+6uhRQVctm4+Py+6jlNNxEKk6kDIvGW1NIEYxkA+AdWOW4mbbP4g3ypnblKNEuJzJKUFYDwpVUUBRRRQFFFFAUUUUBRRRQFFFFAVHXcNtScb3TZkmrVc11jCpnBgAKT9tSKooK6LD7Yr1x7eA/vL5IJb6naQAM9fLEYwJnj8AB+AdWL0UUBRRRQFFFFAUUUUBRRRQFFFFBypI1FvzEvZjNelanGTrULbFts625w6WQGXWVk8gUO7mqUI1DQynLCDCx+DMYAdFTnooI5bObRy62bDInGUlnphyFfzqZEo0wGmL+DDyVI2iigKKKKAooooCiiigKKKKAooooGU3ZW6mNzrQrozB1YyHAZwDewHjNL84KiDMLHsMgtMGBwvbHLGq4BYyO14UsKkCbQYPGMB2GFWU0UCNtLH3uLW3j8dkx/GckKEBKrXPPrpZUUUBRRRQFFFFAUUUUBRRRQFJW5adargj0kbkpylQckGWAooGYx60qqKCKvo/YbLorZp4Z5vEnhhVHvaowCdzRjTHDAPz4DpKwFonu1mW3ACC2cpk7ZKl5i1ANkajlnDH5M8AVNSigjbtQtRIo04Sm5kuZjmt2lx3EGmUFYHABp8YKklRRQFFFFAUUUUH/9k="
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "kualitas_nyeri",
+                            "title": "1.Kualitas Nyeri :",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "nyeri_tumpul",
+                                    "text": "Nyeri Tumpul"
+                                },
+                                {
+                                    "value": "nyeri_tajam",
+                                    "text": "Nyeri Tajam"
+                                },
+                                {
+                                    "value": "panas_terbakar",
+                                    "text": "Panas / Terbakar"
+                                }
+                            ],
+                            "colCount": 3
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "menjalar",
+                            "title": "2. Menjalar :",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "tidak",
+                                    "text": "Tidak"
+                                }
+                            ],
+                            "hasOther": true,
+                            "otherText": "Ya, ke",
+                            "colCount": 3
+                        },
+                        {
+                            "type": "text",
+                            "name": "skor_nyeri",
+                            "title": "3. Skor Nyeri",
+                            "titleLocation": "left",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "frekuensi_nyeri",
+                            "title": "4. Frekuensi Nyeri :",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "jarang",
+                                    "text": "Jarang"
+                                },
+                                {
+                                    "value": "hilang_timbul",
+                                    "text": "Hilang Timbul"
+                                },
+                                {
+                                    "value": "terus_menerus",
+                                    "text": "Terus Menerus"
+                                }
+                            ],
+                            "otherText": "Ya, ke",
+                            "colCount": 3
+                        },
+                        {
+                            "type": "text",
+                            "name": "lamanya_nyeri",
+                            "title": "5. Lamanya Nyeri :",
+                            "titleLocation": "left",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "text",
+                            "name": "lokasi_nyeri",
+                            "title": "6. Lokasi Nyeri :",
+                            "titleLocation": "left",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "faktor_faktor",
+                            "title": "7. Faktor Faktor yang mengurangi / menghilangkan nyeri ",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "minum_obat",
+                                    "text": "Minum Obat"
+                                },
+                                {
+                                    "value": "istirahat",
+                                    "text": "Istirahat"
+                                },
+                                {
+                                    "value": "mendengar_musik",
+                                    "text": "Mendengar Musik"
+                                },
+                                {
+                                    "value": "berubah_posisi_tidur",
+                                    "text": "Berubah Posisi/Tidur"
+                                }
+                            ],
+                            "colCount": 4
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "name": "panel5",
+                    "elements": [
+                        {
+                            "type": "html",
+                            "name": "skrining_gizi",
+                            "html": "SKRINING GIZI (Berdasarkan Malnutrition Screening Tool / MST)"
+                        },
+                        {
+                            "type": "radiogroup",
+                            "name": "apakah_pasien",
+                            "title": "1. Apakah Pasien mengalami penuruna berat badan yang tidak drencanakan / tidak diinginkan dalam waktu 6 bulan terkahir ?",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "tidak",
+                                    "text": "Tidak"
+                                },
+                                {
+                                    "value": "tidak_yakin",
+                                    "text": "Tidak Yakin (ada tanda : baju menjadi longgar)"
+                                },
+                                {
+                                    "value": "ya",
+                                    "text": "Ya, ada penurunan berat badan sebanyak"
+                                },
+                                {
+                                    "value": "1",
+                                    "text": "1-5 Kg"
+                                },
+                                {
+                                    "value": "2",
+                                    "text": "6-10 Kg"
+                                },
+                                {
+                                    "value": "3",
+                                    "text": "11-15 Kg"
+                                },
+                                {
+                                    "value": "4",
+                                    "text": ">15 Kg"
+                                },
+                                {
+                                    "value": "tidak_tahu",
+                                    "text": "Tidak Tahu Berapa banyak penurunannya"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "radiogroup",
+                            "name": "apakah_asupan",
+                            "title": "2. Apakah asupan makanan pasien berkurang karena penurunan nafsu makan/kesulitan menerima makanan ?",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "tidak",
+                                    "text": "Tidak"
+                                },
+                                {
+                                    "value": "ya",
+                                    "text": "Ya"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "name": "panel6",
+                    "elements": [
+                        {
+                            "type": "html",
+                            "name": "status_psikososial",
+                            "html": "STATUS PSIKOSOSIAL"
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "hubungan",
+                            "title": "Hubungan dengan anggota keluarga",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "baik",
+                                    "text": "Baik"
+                                },
+                                {
+                                    "value": "tidak_baik",
+                                    "text": "Tidak Baik"
+                                }
+                            ],
+                            "colCount": 2
+                        },
+                        {
+                            "type": "html",
+                            "name": "status_psikologis",
+                            "html": "STATUS PSIKOLOGIS"
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "tenang",
+                            "title": "Hubungan dengan anggota keluarga",
+                            "titleLocation": "hidden",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "tenang",
+                                    "text": "Tenang"
+                                },
+                                {
+                                    "value": "cemas",
+                                    "text": "Cemas"
+                                },
+                                {
+                                    "value": "takut",
+                                    "text": "Takut"
+                                },
+                                {
+                                    "value": "marah",
+                                    "text": "Marah"
+                                },
+                                {
+                                    "value": "sedih",
+                                    "text": "Sedih"
+                                }
+                            ],
+                            "hasOther": true,
+                            "hasNone": true,
+                            "noneText": "Lain-lain, sebutkan",
+                            "otherText": "Kecenderungan bunuh diri di laporkan ke ",
+                            "colCount": 5,
+                            "hasSelectAll": true
+                        },
+                        {
+                            "type": "html",
+                            "name": "status_sosial_ekonomi",
+                            "html": "STATUS SOSIAL EKONOMI"
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "status_pernikahan",
+                            "title": "Status Pernikahan",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "single",
+                                    "text": "Single"
+                                },
+                                {
+                                    "value": "menikah",
+                                    "text": "Menikah"
+                                },
+                                {
+                                    "value": "janda_duda",
+                                    "text": "Janda / Duda"
+                                }
+                            ],
+                            "noneText": "Lain-lain, sebutkan",
+                            "otherText": "Kecenderungan bunuh diri di laporkan ke ",
+                            "colCount": 5
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "pekerjaan",
+                            "title": "Pekerjaan",
+                            "titleLocation": "left",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "pns",
+                                    "text": "PNS"
+                                },
+                                {
+                                    "value": "swasta",
+                                    "text": "Swasta"
+                                },
+                                {
+                                    "value": "tni_polri",
+                                    "text": "TNI / POLRI"
+                                }
+                            ],
+                            "noneText": "Lain-lain, sebutkan",
+                            "otherText": "Kecenderungan bunuh diri di laporkan ke ",
+                            "colCount": 5,
+                            "hasSelectAll": true
+                        },
+                        {
+                            "type": "html",
+                            "name": "skrining_risiko_cedera",
+                            "html": "SKRINING RISIKO CEDERA / JATUH"
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "skor",
+                            "title": "Skor :",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "resiko_rendah",
+                                    "text": "Resiko Rendah"
+                                },
+                                {
+                                    "value": "resiko_tinggi",
+                                    "text": "Resiko Tinggi"
+                                },
+                                {
+                                    "value": "tidak_beresiko",
+                                    "text": "Tidak Beresiko"
+                                },
+                                {
+                                    "value": "pasang_gelang",
+                                    "text": "Pasang Gelang resiko jatuh warna kuning"
+                                }
+                            ],
+                            "colCount": 3
+                        },
+                        {
+                            "type": "html",
+                            "name": "assesment_fungsional",
+                            "html": "ASESMENT FUNGSIONAL"
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "mandiri",
+                            "titleLocation": "hidden",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "mandiri",
+                                    "text": "Mandiri"
+                                },
+                                {
+                                    "value": "ketergantungan",
+                                    "text": "Ketergantungan, total, di laporkan ke dokter jam...........WIB"
+                                },
+                                {
+                                    "value": "kekuatan _otot",
+                                    "text": "Kekuatan Otot"
+                                }
+                            ],
+                            "hasOther": true,
+                            "otherText": "Perlu bantuan, sebutkan",
+                            "colCount": 2
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "name": "panel7",
+                    "elements": [
+                        {
+                            "type": "checkbox",
+                            "name": "masalah_keperawatan",
+                            "title": "MASALAH KEPERAWATAN",
+                            "hideNumber": true,
+                            "choices": [
+                                {
+                                    "value": "nyeri",
+                                    "text": "Nyeri (Akut/Kronis)"
+                                },
+                                {
+                                    "value": "ketidakseimbangan",
+                                    "text": "Ketidak seimbangan nutrisi kurang dari kebutuhan tubuh"
+                                },
+                                {
+                                    "value": "bersihan_jalan_nafas",
+                                    "text": "Bersihan Jalan Nafas"
+                                },
+                                {
+                                    "value": "pola_nafas",
+                                    "text": "Pola Nafas Tidak Efektif"
+                                },
+                                {
+                                    "value": "hipertermia",
+                                    "text": "Hipertermia"
+                                },
+                                {
+                                    "value": "diare",
+                                    "text": "Diare"
+                                },
+                                {
+                                    "value": "resiko",
+                                    "text": "Resiko infeksi, pembedahan"
+                                },
+                                {
+                                    "value": "gangguan",
+                                    "text": "Gangguan citra tubuh"
+                                },
+                                {
+                                    "value": "gangguan_menelan",
+                                    "text": "Gangguan menelan"
+                                },
+                                {
+                                    "value": "penurunan",
+                                    "text": "Penurunan Curah Jantung"
+                                },
+                                {
+                                    "value": "intoleransi",
+                                    "text": "Intoleransi aktifitas"
+                                },
+                                {
+                                    "value": "gangguan_mobilitas",
+                                    "text": "Gangguan Mobilitas fisik"
+                                },
+                                {
+                                    "value": "hambatan_komunikasi",
+                                    "text": "Hambatan komunikasi verbal"
+                                },
+                                {
+                                    "value": "diskontiunitas",
+                                    "text": "Diskontiunitas Jaringan"
+                                },
+                                {
+                                    "value": "ketidakstabilan",
+                                    "text": "Ketidakstabilan Kadar Gula darah"
+                                },
+                                {
+                                    "value": "...........",
+                                    "text": "...................."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "name": "panel8",
+                    "elements": [
+                        {
+                            "type": "html",
+                            "name": "kebutuhan_edukasi",
+                            "html": "KEBUTUHAN EDUKASI"
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "list_kebutuhan",
+                            "titleLocation": "hidden",
+                            "choices": [
+                                {
+                                    "value": "pengetahuan",
+                                    "text": "Pengetahuan tentang penyakitnya"
+                                },
+                                {
+                                    "value": "perawatan",
+                                    "text": "Perawatan di rumah tentang penyakitnya"
+                                },
+                                {
+                                    "value": "cara_minum",
+                                    "text": "Cara Minum Obat"
+                                },
+                                {
+                                    "value": "diet",
+                                    "text": "Diet"
+                                },
+                                {
+                                    "value": "kontrol_ulang",
+                                    "text": "Kontrol Ulang"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "name": "panel9",
+                    "elements": [
+                        {
+                            "type": "multipletext",
+                            "name": "bukit_tinggi",
+                            "titleLocation": "hidden",
+                            "hideNumber": true,
+                            "items": [
+                                {
+                                    "name": "bukit_tinggii",
+                                    "title": "Bukit Tinggi,"
+                                },
+                                {
+                                    "name": "jam",
+                                    "inputType": "time",
+                                    "title": "Jam :"
+                                }
+                            ],
+                            "colCount": 2
+                        },
+                        {
+                            "type": "signaturepad",
+                            "name": "ttd_perawat",
+                            "title": "Perawat yang mengkaji",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "html",
+                            "name": "nama_jelas",
+                            "html": "(Nama Jelas & Tanda Tangan)"
+                        }
+                    ]
+                }
+            ],
+            "title": "Data Umum"
+        }
+    ]
+}

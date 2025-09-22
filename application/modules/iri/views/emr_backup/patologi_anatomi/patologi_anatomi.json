@@ -1,0 +1,243 @@
+{
+    "title": "PATOLOGI ANATOMI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Tanggal diterima / Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "nm_dokter",
+            "title": "Nama dokter",
+            "cellType": "text"
+           },
+           {
+            "name": "rs",
+            "title": "Rumah sakit",
+            "cellType": "text"
+           },
+           {
+            "name": "bagian",
+            "title": "Bagian",
+            "cellType": "text"
+           },
+           {
+            "name": "di",
+            "title": "Di",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "status",
+            "title": "Status",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "kawin",
+              "text": "Kawin"
+             },
+             {
+              "value": "bk",
+              "text": "Belum kawin"
+             },
+             {
+              "value": "item1",
+              "text": "Janda"
+             },
+             {
+              "value": "item2",
+              "text": "Duda"
+             }
+            ]
+           },
+           {
+            "name": "anak",
+            "title": "Jumlah anak",
+            "cellType": "text"
+           },
+           {
+            "name": "alamat",
+            "title": "Alamat",
+            "cellType": "text"
+           },
+           {
+            "name": "no_hp",
+            "title": "No Hp",
+            "cellType": "text"
+           },
+           {
+            "name": "tgl",
+            "title": "Tgl. Mensis Terakhir     ",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "hs_lab",
+          "title": "Hasil Laboratorium :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "hs_rad",
+          "startWithNewLine": false,
+          "title": "Hasil Radiologi :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "terdahulu",
+          "title": "Pemeriksaan terdahulu :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "sample",
+          "startWithNewLine": false,
+          "title": "No sample",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question4",
+          "title": "Jaringan Tubuh Didapat dengan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Eksis Percobaan             "
+           },
+           {
+            "value": "item2",
+            "text": "Kerokan              "
+           },
+           {
+            "value": "item3",
+            "text": "Operasi                               "
+           },
+           {
+            "value": "item4",
+            "text": "Seksi"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question5",
+          "title": "Lokasi jaringan yang di ambil",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "Cairan Fiksasi",
+          "hideNumber": true,
+          "placeHolder": "Formalin 10 % Alkohol Absolut"
+         },
+         {
+          "type": "comment",
+          "name": "question7",
+          "title": "Pengobatan yang diberikan ",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "diagnosa",
+          "title": "Diagnosa Klinik",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "keterangan",
+          "title": "Keterangan Klinik",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "sketsa",
+          "title": "Sketsa Lokalisasi",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question9",
+          "title": "Tanah badantuang, ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question8",
+          "title": "Dokter yang merawat",
+          "hideNumber": true
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

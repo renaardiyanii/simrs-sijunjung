@@ -1,0 +1,147 @@
+{
+ "pages": [
+  {
+   "name": "page1",
+   "elements": [
+    {
+     "type": "multipletext",
+     "name": "question2",
+     "titleLocation": "hidden",
+     "items": [
+      {
+       "name": "text1",
+       "title": "Nama Dokter"
+      },
+      {
+       "name": "text2",
+       "title": "Ruangan"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "question3",
+     "title": "Jaringan tubuh didapat dengan",
+     "hideNumber": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "Eksisi percobaan"
+      },
+      {
+       "value": "item2",
+       "text": "Kerokan"
+      },
+      {
+       "value": "item3",
+       "text": "Operasi"
+      },
+      {
+       "value": "item4",
+       "text": "Seksi"
+      }
+     ],
+     "colCount": 4
+    },
+    {
+     "type": "matrixdropdown",
+     "name": "question4",
+     "titleLocation": "hidden",
+     "showHeader": false,
+     "columns": [
+      {
+       "name": "column1",
+       "cellType": "text"
+      }
+     ],
+     "choices": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rows": [
+      {
+       "value": "item1",
+       "text": "Jaringan yang diambil"
+      }
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "question1",
+     "title": "Cairan Fiksasi",
+     "titleLocation": "left",
+     "hideNumber": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "Formalin 10 %"
+      }
+     ]
+    },
+    {
+     "type": "multipletext",
+     "name": "question6",
+     "titleLocation": "hidden",
+     "items": [
+      {
+       "name": "text1",
+       "title": "Diagnosa Klinik"
+      },
+      {
+       "name": "text2",
+       "title": "Keterangan Klinik"
+      },
+      {
+       "name": "text3",
+       "title": "Hasil Laboratorium "
+      },
+      {
+       "name": "text4",
+       "title": "Pemeriksaan Radiologi "
+      },
+      {
+       "name": "text5",
+       "title": "Ongkos Pembayaran "
+      }
+     ]
+    },
+    {
+     "type": "html",
+     "name": "question7",
+     "html": "<h5>Sketsa Lokalisasi"
+    },
+    {
+     "type": "matrixdropdown",
+     "name": "question8",
+     "title": "Bukitinggi",
+     "titleLocation": "hidden",
+     "showHeader": false,
+     "columns": [
+      {
+       "name": "column1",
+       "cellType": "text",
+       "inputType": "date"
+      }
+     ],
+     "choices": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rows": [
+      {
+       "value": "item1",
+       "text": "Bukitinggi"
+      }
+     ]
+    }
+   ],
+   "title": "FORMULIR PATOLOGI KLINIK"
+  }
+ ]
+}

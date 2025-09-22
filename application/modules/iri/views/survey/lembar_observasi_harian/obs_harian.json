@@ -1,0 +1,107 @@
+{
+    "title": "LEMBAR OBSERVASI PASIEN HARIAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question5",
+        "title": "Ruangan / Unit :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "title": "Tgl/Waktu",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Tgl/ Waktu",
+          "cellType": "text",
+          "inputType": "datetime-local"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "width": "800",
+          "height":"500",
+          "image": "/assets/images/lembar_observasi_harian.PNG"
+         }
+        ],
+        "title": "Temperatur Tekanan darah dan Nadi"
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "frekuensi",
+          "title": "Frekuensi Pernafasan"
+         },
+         {
+          "name": "saturasi",
+          "title": "Saturasi oksigen"
+         },
+         {
+          "name": "cvp",
+          "title": "CVP"
+         },
+         {
+          "name": "beratbadan",
+          "title": "Berat Badan"
+         },
+         {
+          "name": "skala",
+          "title": "Skala Nyeri"
+         },
+         {
+          "name": "lukaskala",
+          "title": "Luka Skala Norton"
+         },
+         {
+          "name": "column1",
+          "title": "Nama Perawat",
+          "cellType": "dropdown",
+          "choicesByUrl": {
+           "url": "/admin/admin/rest_userppa_iri"
+          }
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rowCount": 1,
+        "addRowLocation": "bottom",
+        "addRowText": "Tambah ",
+        "removeRowText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

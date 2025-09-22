@@ -1,0 +1,204 @@
+{
+    "title": "DAFTAR PEMBERIAN TERAPI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "readOnly": true,
+        "columns": [
+         {
+          "name": "tgl",
+          "title": "Tanggal",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "nm_obat",
+          "title": "Nama Obat",
+          "cellType": "text"
+         },
+         {
+          "name": "cara",
+          "title": "Cara pemberian",
+          "cellType": "text"
+         },
+         {
+          "name": "frekuensi",
+          "title": "Frekuensi",
+          "cellType": "text",
+          "width": "100"
+         },
+         {
+          "name": "Dokter",
+          "title": "Dokter",
+          "cellType": "text"
+         },
+         {
+          "name": "petugas",
+          "title": "Petugas",
+          "cellType": "text"
+         },
+         {
+          "name": "psm",
+          "title": "P/S/S/M",
+          "cellType": "radiogroup"
+         },
+         {
+          "name": "column1",
+          "title": "Jam",
+          "cellType": "text",
+          "visibleIf": "{question1[0].psm} anyof ['Amoxcili', 'Paracetamo', 'Malam', 'Sore']",
+          "inputType": "time"
+         }
+        ],
+        "choices": [
+         {
+          "value": "Amoxcili",
+          "text": "P"
+         },
+         {
+          "value": "Paracetamo",
+          "text": "S"
+         },
+         {
+          "value": "Sore",
+          "text": "S"
+         },
+         {
+          "value": "Malam",
+          "text": "M"
+         },
+         {
+          "value": "item1",
+          "text": "Stop"
+         }
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "matriks_resep_obat",
+        "minWidth": "",
+        "maxWidth": "",
+        "title": "Daftar pemberian terapi",
+        "hideNumber": true,
+        "requiredErrorText": "Jangan Lupa isi tanggal",
+        "columns": [
+         {
+          "name": "nama_obat",
+          "title": "Nama obat",
+          "cellType": "text"
+         },
+         {
+          "name": "column1",
+          "title": "Cara pemberian",
+          "cellType": "text"
+         },
+         {
+          "name": "column2",
+          "title": "Frekuensi",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "Dokter",
+          "cellType": "text"
+         },
+         {
+          "name": "column4",
+          "title": "Petugas",
+          "cellType": "text"
+         }
+        ],
+        "detailElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "state": "collapsed",
+          "width": "1200px",
+          "minWidth": "1200px",
+          "maxWidth": "1200px",
+          "title": " Tanggal",
+          "hideNumber": true,
+          "requiredErrorText": "Jangan lupa Tambahkan obat ",
+          "validators": [
+           {
+            "type": "expression"
+           }
+          ],
+          "columns": [
+           {
+            "name": "column3",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           }
+          ],
+          "detailElements": [
+           {
+            "type": "matrixdynamic",
+            "name": "question1",
+            "title": "Jam pemberian",
+            "columns": [
+             {
+              "name": "Column 1",
+              "title": "Jam pemberian",
+              "cellType": "text",
+              "inputType": "time"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "rowCount": 1,
+            "addRowText": "Tambah jam",
+            "removeRowText": "Hapus jam"
+           }
+          ],
+          "detailPanelMode": "underRowSingle",
+          "horizontalScroll": true,
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "columnMinWidth": "100px",
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah tanggal",
+          "removeRowText": "Hapus tanggal"
+         }
+        ],
+        "detailPanelMode": "underRow",
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnColCount": 1,
+        "columnMinWidth": "250",
+        "rowCount": 1,
+        "addRowText": "Tambah obat",
+        "removeRowText": "Hapus obat"
+       }
+      ]
+     }
+    ]
+   }

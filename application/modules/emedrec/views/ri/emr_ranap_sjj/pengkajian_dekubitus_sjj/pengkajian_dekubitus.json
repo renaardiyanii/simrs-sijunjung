@@ -1,0 +1,202 @@
+{
+    "title": "PENGKAJIAN DECUBITUS",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Tgl masuk RS:",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "text",
+          "name": "question3",
+          "startWithNewLine": false,
+          "title": "Ruangan",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Diagnosa medik",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "KONDISI UMUM",
+            "cellType": "radiogroup",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "1",
+              "text": "Baik (1)"
+             },
+             {
+              "value": "2",
+              "text": "Cukup (2)"
+             },
+             {
+              "value": "3",
+              "text": "Lemah (3)"
+             },
+             {
+              "value": "4",
+              "text": "Sangat lemah (4)"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "KONDISI MENTAL",
+            "cellType": "radiogroup",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "1",
+              "text": "Waspada (1)"
+             },
+             {
+              "value": "2",
+              "text": "Apatis (2)"
+             },
+             {
+              "value": "3",
+              "text": "Bingung (3)"
+             },
+             {
+              "value": "4",
+              "text": "Tak sadar (4)"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "AKTIVITAS",
+            "cellType": "radiogroup",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "1",
+              "text": "Ambulasi baik (1)"
+             },
+             {
+              "value": "2",
+              "text": "Perlu bantuan (2)"
+             },
+             {
+              "value": "3",
+              "text": "Tak bisa pindah bed (3)"
+             },
+             {
+              "value": "4",
+              "text": "Tak bergerak (4)"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "MOBILITAS",
+            "cellType": "radiogroup",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "1",
+              "text": "Penuh (1)"
+             },
+             {
+              "value": "2",
+              "text": "Terbatas (2)"
+             },
+             {
+              "value": "3",
+              "text": "Sangan terbatas (3)"
+             },
+             {
+              "value": "4",
+              "text": "Imobilisasi (4)"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "INKONTINENSIA",
+            "cellType": "radiogroup",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "1",
+              "text": "Kontinen (1)"
+             },
+             {
+              "value": "2",
+              "text": "Kadang inkontinen (2)"
+             },
+             {
+              "value": "3",
+              "text": "Inkontinen bak (3)"
+             },
+             {
+              "value": "4",
+              "text": "Inkonkontinen BAB & BAK (4)"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "TOTAL SKOR",
+            "cellType": "expression",
+            "expression": "{row.column1} + {row.column2} + {row.column3} + {row.column4} + {row.column5}"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "html",
+          "name": "question6"
+         },
+         {
+          "type": "html",
+          "name": "question7",
+          "html": "<b><p>KETERANGAN :\n<p>5\t=\tTidak berisiko\n<p>6 – 10\t=\tRisiko sedang\n<p>11 – 15\t=\tRisiko tinggi\n<p>16 – 20\t=\tSangat berisiko"
+         }
+        ],
+        "title": "Berikan tanda ( √ ) pada setiap kondisi pasien dibawah ini :"
+       },
+       {
+        "type": "text",
+        "name": "question5",
+        "title": "Tanah Badantuang,",
+        "hideNumber": true,
+        "inputType": "date"
+       }
+      ]
+     }
+    ]
+   }

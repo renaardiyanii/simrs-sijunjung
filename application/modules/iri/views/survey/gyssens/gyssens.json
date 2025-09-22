@@ -1,0 +1,128 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "title": "Analisa Kualitatif Penggunaan Antibiotika",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "0",
+            "title": "Kategori 0 Penggunaan Antibiotik Tepat / Bijak",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "1",
+            "title": "Kategori I Penggunaan Antibiotik Tidak Tepat Waktu",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2a",
+            "title": "Kategori IIA Penggunaan Antibiotik Tidak Tepat Dosis",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2b",
+            "title": "Kategori IIB Penggunaan Antibiotik Tidak Tepat Interval Pemberian",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "2c",
+            "title": "Kategori IIC Penggunaan Antibiotik Tidak Tepat Cara / Rute Pemberian",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "3a",
+            "title": "Kategori IIIA Penggunaan Antibiotik Terlalu Lama",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "3b",
+            "title": "Kategori IIIB Penggunaan Antibiotik Terlalu Singkat",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "4a",
+            "title": "Kategori IVA Ada Antibiotik Lain yang Lebih Efektif",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "4b",
+            "title": "Kategori IVB Ada Antibiotik Lain yang Kurang Toksik / Lebih Aman",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "4c",
+            "title": "Kategori IVC Ada Antibiotik Lain yang Lebih Murah",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "4d",
+            "title": "Kategori IVD Ada Antibiotik Lain yang Spektrumnya Lebih Sempit",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "5",
+            "title": "Kategori V Tidak Ada Indikasi Penggunaan Antibiotik",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "6",
+            "title": "Kategori VI Data Rekam Medik Tidak Lengkap dan Tidak Dapat Dievaluasi",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "%",
+            "title": "Persentase",
+            "cellType": "text",
+            "inputType": "number"
+           },
+           {
+            "name": "total",
+            "title": "Total kasus",
+            "cellType": "expression",
+            "expression": "{row.0}+{row.1}+{row.2a}+{row.2b}+{row.2c}+{row.3a}+{row.3b}+{row.4a}+{row.4b}+{row.4c}+{row.4d}+{row.5}+{row.6}+{row.%}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "1",
+            "text": "Jumlah Kasus"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "title": "EVALUASI PEMAKAIAN ANTIBIOTIK (GYSSENS)"
+     }
+    ]
+   }

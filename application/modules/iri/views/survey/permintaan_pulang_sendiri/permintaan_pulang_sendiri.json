@@ -1,0 +1,95 @@
+{
+    "title": "PULANG ATAS PERMINTAAN SENDIRI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "suami",
+            "text": "suami"
+           },
+           {
+            "value": "istri",
+            "text": "istri"
+           },
+           {
+            "value": "ibu",
+            "text": "ibu"
+           },
+           {
+            "value": "anak",
+            "text": "anak"
+           },
+           {
+            "value": "saudara",
+            "text": "saudara"
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "multipletext",
+          "name": "identitas",
+          "title": "Dari pasien",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama"
+           },
+           {
+            "name": "umur",
+            "title": "Umur"
+           },
+           {
+            "name": "no_rm",
+            "title": "No RM"
+           },
+           {
+            "name": "dirawat",
+            "title": "Dirawat di Ruang"
+           },
+           {
+            "name": "alasan_pulang",
+            "title": "Alasan Pulang"
+           }
+          ]
+         }
+        ],
+        "title": "Saya yang bertanda tangan di tangan dibawah ini  dari pasien/ pasien sendiri  "
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "yg_menyatakan",
+          "startWithNewLine": false,
+          "title": "Yang Menyatakan",
+          "hideNumber": true,
+          "penColor": "#0a0b0b"
+         },
+         {
+          "type": "text",
+          "name": "question2",
+          "title": "Nama lengkap",
+          "titleLocation": "bottom",
+          "hideNumber": true
+         }
+        ],
+        "title": "Menyatakan  telah melanggar nasehat Dokter untuk dirawat sesuai dengan rencana dan meminta pulang atas kemauan sendiri, dengan menanggung segala akibatnya."
+       }
+      ]
+     }
+    ]
+   }

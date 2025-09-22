@@ -1,0 +1,264 @@
+{
+    "title": "PENGKAJIAN MEDIS ANAK",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "keluhan",
+            "title": "a. Keluhan Utama",
+            "cellType": "comment"
+           },
+           {
+            "name": "sekarang",
+            "title": "b. Riwayat penyakit sekarang",
+            "cellType": "comment"
+           },
+           {
+            "name": "dulu",
+            "title": "c. Riwayat penyakit dahulu",
+            "cellType": "comment"
+           },
+           {
+            "name": "imunisasi",
+            "title": "d. Riwayat imunisasi",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Lengkap"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak Lengkap"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Lainnya"
+           },
+           {
+            "name": "persalinan",
+            "title": "e. RIwayat persalinan",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Normal"
+             },
+             {
+              "value": "item2",
+              "text": "Vacum"
+             },
+             {
+              "value": "item3",
+              "text": "Forceps"
+             },
+             {
+              "value": "item4",
+              "text": "Dokter"
+             },
+             {
+              "value": "item5",
+              "text": "Bidan"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Lainnya"
+           },
+           {
+            "name": "bb",
+            "title": "BB",
+            "cellType": "text"
+           },
+           {
+            "name": "pb",
+            "title": "PB",
+            "cellType": "text"
+           },
+           {
+            "name": "lk",
+            "title": "LK",
+            "cellType": "text"
+           },
+           {
+            "name": "keadaan",
+            "title": "Keadaan saat lahir ",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Segera menangis"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak segera menangis"
+             }
+            ]
+           },
+           {
+            "name": "nutrisi",
+            "title": "f. Riwayat nutrisi",
+            "cellType": "comment"
+           },
+           {
+            "name": "tumbuh",
+            "title": "g. RIwayat tumbuh kembang",
+            "cellType": "comment"
+           },
+           {
+            "name": "alergi",
+            "title": "h. Riwayat alergi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak"
+             },
+             {
+              "value": "item2",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "nyeri",
+            "title": "Penilaian nyeri",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "1. ANAMNESIS"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "title": "a. Tanda tanda vital",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ku",
+            "title": "keadaan umum",
+            "cellType": "text"
+           },
+           {
+            "name": "kesadaran",
+            "title": "kesadaran",
+            "cellType": "text"
+           },
+           {
+            "name": "td",
+            "title": "tekanan darah",
+            "cellType": "text"
+           },
+           {
+            "name": "suhu",
+            "title": "Suhu",
+            "cellType": "text"
+           },
+           {
+            "name": "nadi",
+            "title": "nadi",
+            "cellType": "text"
+           },
+           {
+            "name": "isi",
+            "title": "isi",
+            "cellType": "text"
+           },
+           {
+            "name": "teratur",
+            "title": "Teratur",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak"
+             },
+             {
+              "value": "item2",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "respirasi",
+            "title": "Respirasi",
+            "cellType": "text"
+           },
+           {
+            "name": "saturasi",
+            "title": "Saturasi oksigen",
+            "cellType": "text"
+           },
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "udara ruangan"
+             },
+             {
+              "value": "item2",
+              "text": "sungkup"
+             },
+             {
+              "value": "item3",
+              "text": "nasal prong"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Lainnya"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "2. PEMERIKSAAN FISIK/SKALA NYERI"
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,287 @@
+{
+    "title": "ASESMEN AWAL GIZI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "Tanggal",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "text",
+        "name": "Jam",
+        "startWithNewLine": false,
+        "hideNumber": true,
+        "inputType": "time"
+       },
+       {
+        "type": "text",
+        "name": "dignosis_medis",
+        "title": "Diagnosis Medis",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "hasil_skrining",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "1",
+            "text": "> 20 kg/m2"
+           },
+           {
+            "value": "2",
+            "text": "18,5 - 20 kg/2"
+           },
+           {
+            "value": "3",
+            "text": "< 18.5 kg/m2"
+           }
+          ]
+         }
+        ],
+        "title": "1. Hasil Skrining Gizi berdasarakan IMT, Kondisi pasien termasuk kategori "
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "alergi_makanan",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "telur",
+            "title": "Telur",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "susu_sapi",
+            "title": "Susu Sapi dan produk olahan",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "kacang_kedelai",
+            "title": "Kacang Kedelai / kacang tanah",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "gluten_gandum",
+            "title": "Gluten / Gandum",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "udang",
+            "title": "Udang",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "ikan",
+            "title": "Ikan",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "2. Alergi Makanan "
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "kabiasaan_makanan",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "suka_makanan_asin",
+            "title": "Suka makanan asin (ikan asin, kerupuk, biscuit, Msg)  ≥ 3 kali seminggu",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "suka_makanan_lemak",
+            "title": "Suka Makanan Lemak (Jeroan, gulai yang dipanaskan , seafood ) ≥ 3 kali seminggu",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "suka_makan_makanan",
+            "title": "Suka Makan Makanan yang manis ≥ 5 kali seminggu ",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "3. Kebiasaan Makan"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "riwayat_penyakit",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "hipertensi",
+            "text": "Hipertensi"
+           },
+           {
+            "value": "diabetes",
+            "text": "Diagbetes Melitus"
+           },
+           {
+            "value": "jantung",
+            "text": "Jantung"
+           },
+           {
+            "value": "kolesterol",
+            "text": "Kolesterol "
+           },
+           {
+            "value": "asam_urat",
+            "text": "Asam Urat"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainya"
+         }
+        ],
+        "title": "4. Riwayat Penyakit Terdahulu"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "hasil_total_skrining",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "berisiko_rendah",
+            "text": "0 Berisiko Rendah, ualng skrining setiap 7 hari"
+           },
+           {
+            "value": "berisiko_menengah",
+            "text": "1 Berisiko Menengah, monitoring asuoan makan setiap 3 hari"
+           },
+           {
+            "value": "berisiko_tinggi",
+            "text": "≥ Berisiko Tinggi, monitoring asupan makan setiap hari, lanjut ke asuhan gizi"
+           },
+           {
+            "value": "penurunan_nafsu_makan",
+            "text": "Penurunan nafsu makan > dari 5 hari, lanjut ke asuhan gizi"
+           }
+          ]
+         }
+        ],
+        "title": "5. Bila Hasil total Skrining gizi oleh perawat "
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "preskripsi_diet",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "makanan_biasa",
+            "text": "Makanan Biasa"
+           },
+           {
+            "value": "diet_khusus",
+            "text": "Diet Khusus"
+           }
+          ]
+         }
+        ],
+        "title": "6. Preskripsi Diet"
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "tindak_lanjut",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "perlu_asuhan_gizi",
+            "text": "Pelru asuhan gizi (Lanjutkan ke asuhan gizi)"
+           },
+           {
+            "value": "belum_perlu_asuhan",
+            "text": "Belum perlu asuhan gizi"
+           }
+          ]
+         }
+        ],
+        "title": "7. Tindak Lanjut"
+       }
+      ]
+     }
+    ]
+   }

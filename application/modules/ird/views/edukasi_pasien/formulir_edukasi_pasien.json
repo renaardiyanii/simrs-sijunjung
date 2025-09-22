@@ -1,0 +1,327 @@
+{
+    "title": "FORMULIR PEMBERIAN INFORMASI EDUKASI PASIEN DAN KELUARGA TERINTEGRASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "bahasa",
+            "title": "Bahasa sehari hari",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "indonesia",
+              "text": "Indonesia"
+             },
+             {
+              "value": "minang",
+              "text": "Minang"
+             },
+             {
+              "value": "isyarat",
+              "text": "Isyarat"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Lainnya"
+           },
+           {
+            "name": "pendidikan",
+            "title": "Tingkat pendidikan",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "tidak",
+              "text": "Tidak sekola"
+             },
+             {
+              "value": "sd",
+              "text": "SD"
+             },
+             {
+              "value": "smp",
+              "text": "SMP"
+             },
+             {
+              "value": "sma",
+              "text": "SMA"
+             },
+             {
+              "value": "tinggi",
+              "text": "Perguruan Tinggi"
+             }
+            ]
+           },
+           {
+            "name": "penerjemah",
+            "title": "Butuh penerjemah :",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "membaca",
+            "title": "Kemampuan membaca",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "nilai_nilai",
+            "title": "Nilai - nilai / keyakinan budaya / kepercayaan terhadap sakit / penyakitnya : POSITIF",
+            "cellType": "text"
+           },
+           {
+            "name": "detail_nilai",
+            "title": "Nilai - nilai / keyakinan budaya / kepercayaan terhadap sakit / penyakitnya : NEGATIF",
+            "cellType": "text"
+           },
+           {
+            "name": "pengobatan",
+            "title": "Pengobatan",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "tidak_ada",
+              "text": "Tidak ada hambatan"
+             },
+             {
+              "value": "nyeri",
+              "text": "Nyeri"
+             },
+             {
+              "value": "cemas",
+              "text": "Cemas"
+             },
+             {
+              "value": "g_penglihatan",
+              "text": "Gangguang penglihatan"
+             },
+             {
+              "value": "g_pendengaran",
+              "text": "Gangguang pendengaran"
+             },
+             {
+              "value": "g_bicara",
+              "text": "Gangguang bicara"
+             },
+             {
+              "value": "g_kognitif",
+              "text": "Gangguang kognitif"
+             },
+             {
+              "value": "g_emosi",
+              "text": "Gangguang emosi"
+             },
+             {
+              "value": "tidak_partisipasi",
+              "text": "Tidak ada partisipasi keluarga"
+             },
+             {
+              "value": "tidak_tertarik",
+              "text": "Tidak tertarik / tidak ada motivasi"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "metode",
+          "title": "Metode",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "penjelasan",
+            "text": "Penjelasan"
+           },
+           {
+            "value": "diskusi",
+            "text": "Diskusi"
+           },
+           {
+            "value": "demontrasi",
+            "text": "Demontrasi"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question2",
+          "startWithNewLine": false,
+          "title": "Media",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "leaflet",
+            "text": "Leaflet / dokumen hasil pemeriksaan"
+           },
+           {
+            "value": "audio",
+            "text": "Audio/Video"
+           },
+           {
+            "value": "alat_peraga",
+            "text": "Alat peraga"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question3",
+          "startWithNewLine": false,
+          "title": "Evaluasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "mampu_menjelaskan",
+            "text": "Mampu menjelaskan"
+           },
+           {
+            "value": "mampu_mendemokan",
+            "text": "Mampu mendemonstrasikan"
+           },
+           {
+            "value": "pengulangan",
+            "text": "Perlu pengulangan"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question4",
+          "startWithNewLine": false,
+          "title": "Penerima",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "pasien",
+            "text": "Pasien"
+           },
+           {
+            "value": "ortu",
+            "text": "Orang tua"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         }
+        ],
+        "title": "ASSESMEN"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question5",
+        "title": "PROFESI",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "tgl",
+          "title": "Tanggal",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "informais",
+          "title": "Isi informasi / pendidikan",
+          "cellType": "text"
+         },
+         {
+          "name": "metode1",
+          "title": "Metode",
+          "cellType": "text"
+         },
+         {
+          "name": "media",
+          "title": "Media",
+          "cellType": "text"
+         },
+         {
+          "name": "evaluasi",
+          "title": "Evaluasi",
+          "cellType": "text"
+         },
+         {
+          "name": "petugas",
+          "title": "Petugas",
+          "cellType": "signaturepad",
+          "width": "100",
+          "height": 150
+         },
+         {
+          "name": "penerima",
+          "title": "Penerima",
+          "cellType": "signaturepad",
+          "width": "100",
+          "height": 150
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "hak",
+          "text": "1. Hak dan kewajiban"
+         },
+         {
+          "value": "peraturan",
+          "text": "2. Peraturan / tata tertib RS"
+         },
+         {
+          "value": "tarif",
+          "text": "3. Tarif pelayanan RS"
+         },
+         {
+          "value": "peran",
+          "text": "4. Peran keluarga dalam : . a. pencegahan infeksi di RS (hand hygience & etika batuk, b. pencegahan risiko jatuh, c. pengawasan pasien"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

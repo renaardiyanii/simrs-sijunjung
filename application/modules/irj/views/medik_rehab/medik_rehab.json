@@ -1,0 +1,144 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "No MR"
+         },
+         {
+          "name": "text2",
+          "title": "Nama Pasien"
+         },
+         {
+          "name": "text3",
+          "title": "Tgl Lahir/usia"
+         },
+         {
+          "name": "text4",
+          "inputType": "date",
+          "title": "Tgl Pemeriksaan"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question5",
+        "title": "I. Anamnesis",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "umum",
+          "title": "Keluhan Utama",
+          "cellType": "comment"
+         },
+         {
+          "name": "Column 2",
+          "title": "Riwayat Penyakit Sekarang",
+          "cellType": "comment"
+         },
+         {
+          "name": "Column 3",
+          "title": "Riwayat Penyakit Dahulu",
+          "cellType": "comment"
+         }
+        ],
+        "columnLayout": "vertical",
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question6",
+        "title": "II. Pemeriksaan Umum",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "umum",
+          "title": " Umum",
+          "cellType": "comment"
+         },
+         {
+          "name": "Column 2",
+          "title": "Neuromusculo Skeletal",
+          "cellType": "comment"
+         },
+         {
+          "name": "Column 3",
+          "title": "Kardiorespirasi",
+          "cellType": "comment"
+         },
+         {
+          "name": "Column 4",
+          "title": "fungsional",
+          "cellType": "comment"
+         },
+         {
+          "name": "Column 5",
+          "title": "tumbuh Kembang",
+          "cellType": "comment"
+         }
+        ],
+        "columnLayout": "vertical",
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "comment",
+        "name": "question2",
+        "title": "III. Pemeriksaan Penunjang",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question3",
+        "title": "IV. Pemeriksaan Khusus",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question4",
+        "title": "V. Kesimpulan (ICD X)",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question7",
+        "title": "VI. Rekomendasi Terapi (ICD IX) (PT,OT,TW, atau OP)",
+        "hideNumber": true
+       }
+      ],
+      "title": "Pengkajian Awal Rehab Medik"
+     }
+    ]
+   }

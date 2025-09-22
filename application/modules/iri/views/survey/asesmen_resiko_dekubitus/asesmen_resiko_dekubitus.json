@@ -1,0 +1,223 @@
+{
+    "title": "ASESMEN ULANG RESIKO DAN KEJADIAN DECUBITUS",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "title": "Parameter",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "parameter",
+          "title": "Parameter",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "1",
+            "title": "1. Kondisi Umum",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Baik (4)"
+             },
+             {
+              "value": "3",
+              "text": "Cukup (3)"
+             },
+             {
+              "value": "2",
+              "text": "Lemah (2)"
+             },
+             {
+              "value": "1",
+              "text": "Sangat lemah (1)"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "2. Kondisi Mental",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Sadar (4)"
+             },
+             {
+              "value": "3",
+              "text": "Apatis (3)"
+             },
+             {
+              "value": "2",
+              "text": "Bingung  (2)"
+             },
+             {
+              "value": "1",
+              "text": "Tidak sadar (1)"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "3. Aktivitas",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Ambulasi baik (4)"
+             },
+             {
+              "value": "3",
+              "text": "Jalan perlu bantuan (3)"
+             },
+             {
+              "value": "2",
+              "text": "Tidak bisa pindah bed (2)"
+             },
+             {
+              "value": "1",
+              "text": "Tak bergerak (1)"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "4. Mobilitas",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Penuh (4)"
+             },
+             {
+              "value": "3",
+              "text": "Terbatas (3)"
+             },
+             {
+              "value": "2",
+              "text": "Sangat terbatas (2)"
+             },
+             {
+              "value": "1",
+              "text": "Imobilisasi (1)"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "5. Inkontinensia",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Kontinen/kateter (4)"
+             },
+             {
+              "value": "3",
+              "text": "Kadang inkontinen (3)"
+             },
+             {
+              "value": "2",
+              "text": "Inkontinen BAK (2)"
+             },
+             {
+              "value": "1",
+              "text": "Inkontinen BAK dan BAB (1)"
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Total Skor",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}+{row.3}+{row.4}+{row.5}"
+           },
+           {
+            "name": "kategori",
+            "title": "Kategori",
+            "cellType": "expression",
+            "expression": "iif({row.total_skor} > 18,'Risiko rendah (>18)',\n iif({row.total_skor}  > 14,'Risiko sedang (15-18)',\n iif({row.total_skor} < 10,'Risiko sangat tinggi (<10)','Risiko tinggi (10-14)'))"
+           },
+           {
+            "name": "kejadian",
+            "title": "Kejadian Dekubitus",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "grade",
+            "title": "Grade",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "grade1",
+              "text": "Grade I"
+             },
+             {
+              "value": "grade2",
+              "text": "Grade II"
+             },
+             {
+              "value": "grade3",
+              "text": "Grade III"
+             },
+             {
+              "value": "grade4",
+              "text": "Grade IV"
+             }
+            ]
+           },
+           {
+            "name": "nama",
+            "title": "Nama Petugas",
+            "cellType": "dropdown",
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_userppa_iri"
+            }
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah Parameter",
+          "removeRowText": "Hapus Parameter"
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah Parameter",
+        "panelRemoveText": "Hapus Paramater"
+       }
+      ]
+     }
+    ]
+   }

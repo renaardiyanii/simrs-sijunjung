@@ -1,0 +1,2224 @@
+{
+    "title": "CATATAN MEDIS AWAL RAWAT INAP ANAK",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "keluhan_utama",
+          "title": "Keluhan Utama",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_penyakit_sekarang",
+          "title": "Riwayat Penyakit Sekarang",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_dahulu",
+          "title": "Riwayat Penyakit Dahulu",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "penyakit_keluarga",
+          "title": "Riwayat Penyakit dalam Keluarga : ",
+          "descriptionLocation": "underTitle",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hipertensi",
+            "text": "Hipertensi"
+           },
+           {
+            "value": "diabetes",
+            "text": "Diabetes"
+           },
+           {
+            "value": "jantung",
+            "text": "Jantung"
+           },
+           {
+            "value": "stroke",
+            "text": "Stroke"
+           },
+           {
+            "value": "ginjal",
+            "text": "Ginjal"
+           },
+           {
+            "value": "asma",
+            "text": "Asma"
+           },
+           {
+            "value": "kejang",
+            "text": "Kejang"
+           },
+           {
+            "value": "hati",
+            "text": "Hati"
+           },
+           {
+            "value": "kanker",
+            "text": "Kanker"
+           },
+           {
+            "value": "TB",
+            "text": "TB"
+           },
+           {
+            "value": "glaukoma",
+            "text": "Glaukoma"
+           },
+           {
+            "value": "pms",
+            "text": "PMS"
+           },
+           {
+            "value": "perdarahan",
+            "text": "Perdarahan"
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "text",
+          "name": "penyakit_keluarga_lainnya",
+          "title": "Lainnya",
+          "hideNumber": true,
+          "size": 50
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_pribadi",
+          "title": "Riwayat pribadi/sosial/lingkungan",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_pengobatan",
+          "title": "Riwayat Pengobatan",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "bcg_imunisasi",
+          "title": "Riwayat Imunisasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "BCG",
+            "text": "BCG"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "polio_imunisasi",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Polio"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "value_polio",
+          "visibleIf": "{polio_imunisasi} = [1]",
+          "titleLocation": "hidden",
+          "size": 20,
+          "placeHolder": "jumlah"
+         },
+         {
+          "type": "checkbox",
+          "name": "hepatitis_imunisasi",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Hepatitis"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "value_hepatitis",
+          "visibleIf": "{hepatitis_imunisasi} = [1]",
+          "titleLocation": "hidden",
+          "size": 20,
+          "placeHolder": "jumlah"
+         },
+         {
+          "type": "checkbox",
+          "name": "dpt_imunisasi",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "1",
+            "text": "DPT"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "value_dpt",
+          "visibleIf": "{dpt_imunisasi} = [1]",
+          "titleLocation": "hidden",
+          "size": 20,
+          "placeHolder": "jumlah"
+         },
+         {
+          "type": "checkbox",
+          "name": "campak_imunisasi",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Campak"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "value_campak",
+          "visibleIf": "{campak_imunisasi} = [1]",
+          "titleLocation": "hidden",
+          "size": 20,
+          "placeHolder": "jumlah"
+         },
+         {
+          "type": "checkbox",
+          "name": "lainnya_imunisasi",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Lainnya"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "value_lainnya",
+          "visibleIf": "{lainnya_imunisasi} = [1]",
+          "titleLocation": "hidden",
+          "size": 20,
+          "placeHolder": "sebutkan"
+         },
+         {
+          "type": "radiogroup",
+          "name": "riwayat_persalinan",
+          "title": "Riwayat Persalinan",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "vacum",
+            "text": "Vacum"
+           },
+           {
+            "value": "forceps",
+            "text": "Forceps"
+           },
+           {
+            "value": "sc",
+            "text": "SC"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "penolong_persalinan",
+          "title": "Ditolong Oleh :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "dokter",
+            "text": "Dokter"
+           },
+           {
+            "value": "bidan",
+            "text": "Bidan"
+           },
+           {
+            "value": "lainnya",
+            "text": "Lainnya"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "value_penolong_persalinan",
+          "visibleIf": "{penolong_persalinan} = 'lainnya'",
+          "titleLocation": "hidden",
+          "size": 20
+         },
+         {
+          "type": "text",
+          "name": "BB_persalinan",
+          "title": "BB",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "text",
+          "name": "PB_persalinan",
+          "startWithNewLine": false,
+          "title": "PB",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "text",
+          "name": "LK_persalinan",
+          "startWithNewLine": false,
+          "title": "LK",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "radiogroup",
+          "name": "keadaan_saat_lahir",
+          "title": "Keadaan saat lahir",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "segera menangis",
+            "text": "Segera Menangis"
+           },
+           {
+            "value": "tidak segera menangis",
+            "text": "Tidak Segera Menangis"
+           }
+          ],
+          "colCount": 2
+         }
+        ]
+       }
+      ],
+      "title": "ANAMNESA",
+      "maxTimeToFinish": 8
+     },
+     {
+      "name": "page4",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel32",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question14",
+          "html": "9. Riwayat Nutrisi"
+         },
+         {
+          "type": "panel",
+          "name": "panel33",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "asi_ekslusif",
+            "title": "ASI",
+            "titleLocation": "top",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "1",
+              "text": "ekslusif"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_asi_ekslusif",
+            "visibleIf": "{asi_ekslusif} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           },
+           {
+            "type": "checkbox",
+            "name": "asi_durasi",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "durasi"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_asi_durasi",
+            "visibleIf": "{asi_durasi} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           },
+           {
+            "type": "checkbox",
+            "name": "frekuensi_asi",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "frekuensi"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_frekuensi_asi",
+            "visibleIf": "{frekuensi_asi} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah x/hari"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel34",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "formula_sejak_usia",
+            "title": "Susu Formula",
+            "titleLocation": "top",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "1",
+              "text": "sejak usia"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_usia_formula",
+            "visibleIf": "{formula_sejak_usia} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           },
+           {
+            "type": "checkbox",
+            "name": "formula_frekuensi",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "frekuensi"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_formula_frekuensi",
+            "visibleIf": "{formula_frekuensi} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah x/hari"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel35",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "bubur_usia",
+            "title": "Bubur Susu",
+            "titleLocation": "top",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "1",
+              "text": "sejak usia"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_bubur_usia",
+            "visibleIf": "{bubur_usia} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           },
+           {
+            "type": "checkbox",
+            "name": "frekuensi_bubur_susu",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "frekuensi"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_bubur_frekuensi",
+            "visibleIf": "{frekuensi_bubur_susu} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah x/hari"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel36",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "usia_nasi_tim",
+            "title": "Nasi Tim",
+            "titleLocation": "top",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "1",
+              "text": "sejak usia"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_nasi_tim_usia",
+            "visibleIf": "{usia_nasi_tim} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           },
+           {
+            "type": "checkbox",
+            "name": "nasitim_frekuensi",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "frekuensi"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_nasitim_frekuensi",
+            "visibleIf": "{nasitim_frekuensi} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah x/hari"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel37",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "usia_makanan_dewasa",
+            "title": "Makanan Dewasa",
+            "titleLocation": "top",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "1",
+              "text": "sejak usia"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_makanan_usia",
+            "visibleIf": "{usia_makanan_dewasa} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           },
+           {
+            "type": "checkbox",
+            "name": "makanan_dewasa_frekuensi",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "frekuensi"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_makanan_frekuensi",
+            "visibleIf": "{makanan_dewasa_frekuensi} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah x/hari"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "html",
+          "name": "question37",
+          "html": "10. Riwayat Tumbuh Kembang"
+         },
+         {
+          "type": "panel",
+          "name": "panel38",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "menegakan_kepala",
+            "title": "10. Riwayat Tumbuh Kembang",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "1",
+              "text": "Menegakan Kepala"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_menegakan_kepala",
+            "visibleIf": "{menegakan_kepala} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel39",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "membalik_badan",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Membalik Badan"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_membalik_badan",
+            "visibleIf": "{membalik_badan} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel40",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "duduk",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Duduk"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_duduk",
+            "visibleIf": "{duduk} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel41",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "merangkak",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Merangkak"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_merangkak",
+            "visibleIf": "{merangkak} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel42",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "berdiri",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Berdiri"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_berdiri",
+            "visibleIf": "{berdiri} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel43",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "berjalan",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Berjalan"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_berjalan",
+            "visibleIf": "{berjalan} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel44",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "bicara",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Bicara"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_bicara",
+            "visibleIf": "{bicara} = [1]",
+            "titleLocation": "hidden",
+            "size": 20,
+            "placeHolder": "jumlah bulan"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel45",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "riwayat_alergi",
+            "title": "Riwayat Alergi",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "1",
+              "text": "Ya"
+             },
+             {
+              "value": "0",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "reaksi_one",
+            "title": "reaksi",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "size": 30
+           },
+           {
+            "type": "text",
+            "name": "reaksi_two",
+            "title": "reaksi",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "size": 30
+           },
+           {
+            "type": "text",
+            "name": "reaksi_tiga",
+            "title": "reaksi",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "size": 30
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel46",
+          "elements": [
+           {
+            "type": "text",
+            "name": "obat_alergi",
+            "title": "Obat",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "placeHolder": "tipe"
+           },
+           {
+            "type": "text",
+            "name": "makanan_alergi",
+            "title": "Makanan",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "placeHolder": "tipe"
+           },
+           {
+            "type": "text",
+            "name": "lainnya_alergi",
+            "title": "Lain-lain",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "placeHolder": "tipe"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "radiogroup",
+          "name": "riwayat_operasi",
+          "title": "Riwayat Operasi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak"
+           },
+           {
+            "value": "1",
+            "text": "Ya, jenis &"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "value_operasi",
+          "visibleIf": "{riwayat_operasi} = 1",
+          "title": "Kapan",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "radiogroup",
+          "name": "riwayat_transfusi",
+          "title": "Riwayat Tranfusi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak"
+           },
+           {
+            "value": "1",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "reaksi_transfusi",
+          "title": "Reaksi Tranfusi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak"
+           },
+           {
+            "value": "1",
+            "text": "Ya, reaksi yang timbul"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "value_reaksi_transfusi",
+          "visibleIf": "{reaksi_transfusi} = 1",
+          "titleLocation": "hidden",
+          "size": 20
+         },
+         {
+          "type": "html",
+          "name": "question64",
+          "html": "14. Penilaian Nyeri"
+         },
+         {
+          "type": "radiogroup",
+          "name": "nyeri",
+          "title": "Nyeri",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ya",
+            "text": "Ya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "lokasi_nyeri",
+          "visibleIf": "{nyeri} = 'ya'",
+          "title": "Lokasi :",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "text",
+          "name": "skala_nyeri",
+          "visibleIf": "{nyeri} = 'ya'",
+          "title": "Skala FLACC :",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "radiogroup",
+          "name": "jenis_nyeri",
+          "title": "Jenis",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "akut",
+            "text": "Akut"
+           },
+           {
+            "value": "kronis",
+            "text": "Kronis"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "html",
+          "name": "question69",
+          "html": "PEMERIKSAAN FISIK"
+         },
+         {
+          "type": "html",
+          "name": "question70",
+          "html": "1. Tanda Tanda Vital"
+         },
+         {
+          "type": "text",
+          "name": "keadaan_umum",
+          "title": "Keadaan Umum",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 50
+         },
+         {
+          "type": "text",
+          "name": "E_gcs",
+          "title": "CGS : E",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 50
+         },
+         {
+          "type": "text",
+          "name": "M_gcs",
+          "startWithNewLine": false,
+          "title": "M",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 50
+         },
+         {
+          "type": "text",
+          "name": "V_gcs",
+          "startWithNewLine": false,
+          "title": "V",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 50
+         },
+         {
+          "type": "text",
+          "name": "td",
+          "title": "Tekanan Darah",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "text",
+          "name": "suhu",
+          "startWithNewLine": false,
+          "title": "Suhu",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "text",
+          "name": "nadi",
+          "startWithNewLine": false,
+          "title": "Nadi",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "text",
+          "name": "isi",
+          "startWithNewLine": false,
+          "title": "Isi",
+          "hideNumber": true,
+          "size": 20
+         },
+         {
+          "type": "radiogroup",
+          "name": "value_isi_teratur",
+          "startWithNewLine": false,
+          "title": "teratur",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "respirasi",
+          "title": "Respirasi",
+          "hideNumber": true,
+          "size": 30,
+          "placeHolder": "x/mnt"
+         },
+         {
+          "type": "text",
+          "name": "tipe",
+          "title": "Tipe",
+          "hideNumber": true,
+          "size": 30
+         },
+         {
+          "type": "text",
+          "name": "oksigen",
+          "title": "Saturasi Oksigen",
+          "hideNumber": true,
+          "size": 30,
+          "placeHolder": "%"
+         },
+         {
+          "type": "checkbox",
+          "name": "value_oksigen",
+          "title": "Pada ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "udara ruangan",
+            "text": "Udara Ruangan"
+           },
+           {
+            "value": "sungkup",
+            "text": "Sungkup"
+           },
+           {
+            "value": "nasal prong",
+            "text": "Nasal Prong"
+           },
+           {
+            "value": "lainnya",
+            "text": "Lainnya"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question84",
+          "visibleIf": "{value_oksigen} = ['lainnya']",
+          "titleLocation": "hidden",
+          "size": 20
+         },
+         {
+          "type": "html",
+          "name": "question85",
+          "html": "2. Pemeriksaan Umum"
+         },
+         {
+          "type": "radiogroup",
+          "name": "kepala",
+          "title": "Kepala",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "mikrosefali",
+            "text": "Mikrosefali"
+           },
+           {
+            "value": "makrosefali",
+            "text": "Makrosefali"
+           },
+           {
+            "value": "lainnya",
+            "text": "Lainnya"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "value_kepala",
+          "visibleIf": "{kepala} = 'lainnya'",
+          "titleLocation": "hidden",
+          "size": 30
+         },
+         {
+          "type": "html",
+          "name": "question88",
+          "html": "Rambut"
+         },
+         {
+          "type": "radiogroup",
+          "name": "warna_rambut",
+          "title": "Warna",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hitam",
+            "text": "Hitam"
+           },
+           {
+            "value": "seperti rambut jagung",
+            "text": "Seperti Rambut Jagung"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "mudah_dicabut",
+          "title": "Mudah dicabut",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "html",
+          "name": "question91",
+          "html": "Mata"
+         },
+         {
+          "type": "radiogroup",
+          "name": "palpebra",
+          "title": "Palpebra",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "cekung",
+            "text": "Cekung"
+           },
+           {
+            "value": "oedema",
+            "text": "Oedema"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "konjungtiva_pucat",
+          "title": "Konjungtiva Pucat",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "hiperemi",
+          "startWithNewLine": false,
+          "title": "Hiperemi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "sekret",
+          "title": "Sekret",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "sklera_ikterik",
+          "title": "Sklera Ikterik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "pupil_isokor",
+          "startWithNewLine": false,
+          "title": "Pupil Isokor",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "reflek_cahaya",
+          "title": "Reflek Cahaya",
+          "hideNumber": true,
+          "size": 50
+         },
+         {
+          "type": "html",
+          "name": "question99",
+          "html": "THT "
+         },
+         {
+          "type": "panel",
+          "name": "panel47",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "telinga",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "telinga",
+              "text": "Telinga"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_telinga",
+            "visibleIf": "{telinga} = ['telinga']",
+            "titleLocation": "hidden",
+            "size": 20
+           },
+           {
+            "type": "checkbox",
+            "name": "lidah",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "lidah",
+              "text": "Lidah"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_lidah",
+            "titleLocation": "hidden",
+            "size": 20
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel48",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "hidung",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "hidung",
+              "text": "Hidung"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_hidung",
+            "visibleIf": "{hidung} = ['hidung']",
+            "titleLocation": "hidden",
+            "size": 20
+           },
+           {
+            "type": "checkbox",
+            "name": "bibir",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "bibir",
+              "text": "Bibir"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_bibir",
+            "visibleIf": "{bibir} = ['bibir']",
+            "titleLocation": "hidden",
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel49",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "tenggorokan",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "tenggorokan",
+              "text": "tenggorokan"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "faring",
+            "visibleIf": "{tenggorokan} = ['tenggorokan']",
+            "hideNumber": true,
+            "size": 20
+           },
+           {
+            "type": "text",
+            "name": "value_tonsil_new",
+            "title": "Tonsil",
+            "hideNumber": true,
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "html",
+          "name": "question112",
+          "html": "Leher"
+         },
+         {
+          "type": "panel",
+          "name": "panel51",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "jvp_leher",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "JVP",
+              "text": "JVP"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_leher",
+            "visibleIf": "{jvp_leher} = ['JVP']",
+            "titleLocation": "hidden",
+            "size": 20
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel52",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "pembesaran_kelenjar",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "pembesaran kelenjar",
+              "text": "pembesaran kelenjar"
+             }
+            ]
+           },
+           {
+            "type": "checkbox",
+            "name": "value_kelenjar",
+            "visibleIf": "{pembesaran_kelenjar} = ['pembesaran kelenjar']",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             },
+             {
+              "value": "tunggal",
+              "text": "Tunggal"
+             },
+             {
+              "value": "multipel",
+              "text": "Multipel"
+             }
+            ],
+            "colCount": 4
+           },
+           {
+            "type": "text",
+            "name": "ukuran_kelenjar",
+            "visibleIf": "{value_kelenjar} = ['tidak']",
+            "title": "ukuran",
+            "hideNumber": true,
+            "size": 20,
+            "placeHolder": "jumlah cm"
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel53",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "kaku_duduk",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "kaku duduk",
+              "text": "Kaku Duduk"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_kaku_duduk",
+            "visibleIf": "{kaku_duduk} = ['kaku duduk']",
+            "titleLocation": "hidden",
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel54",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "leher_lainnya",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "lainnya",
+              "text": "Lainnya"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_leher_lainnya",
+            "visibleIf": "{leher_lainnya} = ['lainnya']",
+            "titleLocation": "hidden",
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "html",
+          "name": "question122",
+          "html": "Thoraks"
+         },
+         {
+          "type": "checkbox",
+          "name": "thoraks",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "simetris",
+            "text": "Simetris"
+           },
+           {
+            "value": "asimetris",
+            "text": "Asimetris,"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "bentuk_dada",
+          "title": "Bentuk Dada :",
+          "hideNumber": true
+         },
+         {
+          "type": "html",
+          "name": "question125",
+          "html": "- Cor"
+         },
+         {
+          "type": "panel",
+          "name": "panel55",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "cor_s_satu",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "s1_s2",
+              "text": "S1,S2"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_cor_s_satu",
+            "visibleIf": "{cor_s_satu} = ['s1_s2']",
+            "title": "reguler/ireguler",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "size": 20
+           },
+           {
+            "type": "radiogroup",
+            "name": "reguler_ireguler",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "reguler",
+              "text": "reguler"
+             },
+             {
+              "value": "ireguler",
+              "text": "ireguler"
+             }
+            ],
+            "colCount": 2
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel56",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "murmur",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "murmur",
+              "text": "Murmur"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_murmur",
+            "visibleIf": "{murmur} = ['murmur']",
+            "title": "reguler/ireguler",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel57",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "cor_lainnya",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "lain_lain",
+              "text": "Lain Lain"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_cor_lainnya",
+            "visibleIf": "{cor_lainnya} = ['lain_lain']",
+            "title": "reguler/ireguler",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "html",
+          "name": "question132",
+          "html": "- Pulmo"
+         },
+         {
+          "type": "panel",
+          "name": "panel58",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "suara_nafas",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "suara_napas",
+              "text": "Suara Napas"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_suara_nafas",
+            "visibleIf": "{suara_nafas} = ['suara_napas']",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "size": 20
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel59",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "rales",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "rales",
+              "text": "Rales"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_rales",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel60",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "wheezing",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "wheezing",
+              "text": "Wheezing"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_wheezing",
+            "visibleIf": "{wheezing} = ['wheezing']",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel61",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "lainnya_pulmo",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "lain lain",
+              "text": "Lain Lain"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_lainnya_pulmo",
+            "visibleIf": "{lainnya_pulmo} = ['lain lain']",
+            "titleLocation": "hidden",
+            "hideNumber": true,
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         }
+        ],
+        "questionTitleLocation": "left",
+        "title": "13. Riwayat Tranfusi"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "Abdomen"
+         },
+         {
+          "type": "panel",
+          "name": "panel3",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "distensi",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "distensi",
+              "text": "Distensi"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_distensi",
+            "visibleIf": "{distensi} = ['distensi']",
+            "titleLocation": "hidden",
+            "size": 20
+           },
+           {
+            "type": "checkbox",
+            "name": "meteorismus",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "meteorismus",
+              "text": "Meteorismus"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_meteorismus",
+            "visibleIf": "{meteorismus} = ['meteorismus']",
+            "titleLocation": "hidden",
+            "size": 20
+           },
+           {
+            "type": "checkbox",
+            "name": "asites",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "asites",
+              "text": "Asites"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_asites",
+            "visibleIf": "{asites} = ['asites']",
+            "titleLocation": "hidden",
+            "size": 20
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel4",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "nyeri_tekan",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "nyeri_tekan",
+              "text": "Nyeri Tekan"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_nyeri_tekan",
+            "visibleIf": "{nyeri_tekan} = ['nyeri_tekan']",
+            "titleLocation": "hidden",
+            "size": 20
+           },
+           {
+            "type": "text",
+            "name": "lokasi_nyeri_tekan",
+            "visibleIf": "{nyeri_tekan} = ['nyeri_tekan']",
+            "title": "Lokasi",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "size": 20
+           },
+           {
+            "type": "checkbox",
+            "name": "paristaltik",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "paristaltik",
+              "text": "Paristaltik"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_paristaltik",
+            "visibleIf": "{paristaltik} = ['paristaltik']",
+            "titleLocation": "hidden",
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel5",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "turgor",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "turgor",
+              "text": "Turgor"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "Value_turgor",
+            "visibleIf": "{turgor} = ['turgor']",
+            "titleLocation": "hidden",
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "multipletext",
+          "name": "hepar_massa",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "hepar",
+            "title": "Hepar"
+           },
+           {
+            "name": "massa",
+            "title": "Massa"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "lien_ginjal",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "lien",
+            "title": "Lien"
+           },
+           {
+            "name": "ginjal",
+            "title": "Ginjal"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "html",
+          "name": "question2",
+          "html": "Ekstermitas"
+         },
+         {
+          "type": "panel",
+          "name": "panel7",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "hangat_dingin",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "hangat/dingin",
+              "text": "Hangat/Dingin"
+             }
+            ]
+           },
+           {
+            "type": "checkbox",
+            "name": "reflaks_fisiologi",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "reflaks fisiologi",
+              "text": "Reflaks fisiologi"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel6",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "oedema",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "oedema",
+              "text": "Oedema"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_oedema",
+            "visibleIf": "{oedema} = ['oedema']",
+            "titleLocation": "hidden",
+            "size": 20
+           },
+           {
+            "type": "checkbox",
+            "name": "refleks_patologi",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "refleks_patologi",
+              "text": "Refleks Patologi"
+             }
+            ]
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "panel",
+          "name": "panel8",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "CRT",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "crt",
+              "text": "CRT"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_crt",
+            "visibleIf": "{CRT} = ['crt']",
+            "titleLocation": "hidden",
+            "size": 20
+           },
+           {
+            "type": "checkbox",
+            "name": "ekstremitas_lain",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "Ekstremitas",
+              "text": "Lain-lain"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "name": "value_ekstremitas",
+            "visibleIf": "{ekstremitas_lain} = ['Ekstremitas']",
+            "titleLocation": "hidden",
+            "size": 20
+           }
+          ],
+          "startWithNewLine": false
+         },
+         {
+          "type": "multipletext",
+          "name": "kulit",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "kulit",
+            "title": "Kulit"
+           },
+           {
+            "name": "genitalia_eksterna",
+            "title": "Genitalia Eksterna"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "status_pubertas",
+          "title": "Status Pubertas",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "perempuan",
+            "text": "Perempuan"
+           },
+           {
+            "value": "Laki-laki",
+            "text": "Laki - laki"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "MP_pubertas",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "M_pubertas",
+            "title": "M "
+           },
+           {
+            "name": "P_pubertas",
+            "title": "P"
+           }
+          ],
+          "itemSize": 20
+         },
+         {
+          "type": "multipletext",
+          "name": "GP_pubertas",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "G_pubertas",
+            "title": "G "
+           },
+           {
+            "name": "P_pubertas_lk",
+            "title": "P"
+           }
+          ],
+          "itemSize": 20
+         },
+         {
+          "type": "multipletext",
+          "name": "status_antropometri",
+          "title": "Status Antropometri",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "BB_U",
+            "title": "BB/U"
+           },
+           {
+            "name": "TB_U",
+            "title": "TB/U atau PB/U"
+           },
+           {
+            "name": "BB_TB",
+            "title": "BB/TB"
+           },
+           {
+            "name": "BBI",
+            "title": "BBI"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "comment",
+          "name": "pem_penunjang",
+          "title": "Hasil Pemeriksaan Penunjang",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "diag_kerja",
+          "title": "Diagnosa Kerja/Diagnosa Banding",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "tata_laksana",
+          "title": "Rencana Tata Laksana Medis",
+          "hideNumber": true
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

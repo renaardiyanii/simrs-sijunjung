@@ -1,0 +1,290 @@
+{
+  "title": "PENGKAJIAN RAWAT JALAN (THTKL)",
+  "pages": [
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "panel",
+      "name": "panel2",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question2",
+        "title": "a. KELUHAN UTAMA :",
+        "hideNumber": true
+       }
+      ],
+      "title": "ANAMNESA"
+     },
+     {
+      "type": "panel",
+      "name": "panel3",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question3",
+        "title": "a. Keluhan saat ini",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question4",
+        "title": "b. riwayat penyakit dahulu",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question5",
+        "title": "c. riwayat penyakit keluarga",
+        "hideNumber": true
+       }
+      ],
+      "title": "1. RIWAYAT KESEHATAN"
+     },
+     {
+      "type": "panel",
+      "name": "panel4",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "question7",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "kesadaran",
+          "title": "a. kesadaran",
+          "cellType": "text"
+         },
+         {
+          "name": "tekanan",
+          "title": "b. tekanan darah",
+          "cellType": "text"
+         },
+         {
+          "name": "nadi",
+          "title": "c. nadi",
+          "cellType": "text"
+         },
+         {
+          "name": "suhu",
+          "title": "d. suhu",
+          "cellType": "text"
+         },
+         {
+          "name": "pernapasan",
+          "title": "e. pernapasan",
+          "cellType": "text"
+         },
+         {
+          "name": "skor",
+          "title": "f. skor nyeri",
+          "cellType": "text"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question8",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "keadaan_umum",
+          "title": "g. keadaan umum",
+          "cellType": "radiogroup",
+          "choices": [
+           "baik",
+           "sedang",
+           "buruk"
+          ]
+         },
+         {
+          "name": "keadaan_gizi",
+          "title": "h. keadaan gizi",
+          "cellType": "radiogroup",
+          "choices": [
+           "baik",
+           "sedang",
+           "buruk"
+          ]
+         },
+         {
+          "name": "bb",
+          "title": "i. berat badan",
+          "cellType": "text"
+         },
+         {
+          "name": "tb",
+          "title": "j. tinggi badan",
+          "cellType": "text"
+         },
+         {
+          "name": "risiko",
+          "title": "k. risiko jatuh",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ]
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": " "
+         }
+        ]
+       }
+      ],
+      "title": "2. PEMERIKSAAN UMUM"
+     },
+     {
+      "type": "signaturepad",
+      "name": "question9",
+      "title": "kepala leher",
+      "hideNumber": true
+     },
+     {
+      "type": "comment",
+      "name": "question1",
+      "titleLocation": "hidden"
+     }
+    ]
+   },
+   {
+    "name": "page2",
+    "elements": [
+     {
+      "type": "panel",
+      "name": "panel5",
+      "elements": [
+       {
+        "type": "signaturepad",
+        "name": "question10",
+        "title": "Telinga",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question6",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question11",
+        "title": "Hidung",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question21",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question12",
+        "title": "Mulut",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question22",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question13",
+        "title": "Epipharynx",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question23",
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "page3",
+    "elements": [
+     {
+      "type": "panel",
+      "name": "panel6",
+      "elements": [
+       {
+        "type": "signaturepad",
+        "name": "question14",
+        "title": "Pharynx",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question24",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question15",
+        "title": "Larynx",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question25",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "comment",
+        "name": "question16",
+        "title": "Pemeriksaan penunjang",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question17",
+        "title": "Diagnosis Medis",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question18",
+        "title": "Rencana / Tatalaksana Medis",
+        "hideNumber": true
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }

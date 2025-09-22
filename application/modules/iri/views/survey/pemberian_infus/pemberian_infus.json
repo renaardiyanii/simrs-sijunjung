@@ -1,0 +1,96 @@
+{
+ "pages": [
+  {
+   "name": "page1",
+   "elements": [
+    {
+     "type": "matrixdynamic",
+     "name": "question1",
+     "titleLocation": "hidden",
+     "columns": [
+      {
+       "name": "nm_dokter",
+       "title": "Nama Dokter",
+       "cellType": "dropdown",
+       "choicesByUrl": {
+        "url": "/admin/admin/rest_all_user"
+       }
+      },
+      {
+       "name": "botol",
+       "title": "Botol Ke",
+       "cellType": "text"
+      },
+      {
+       "name": "jns_cairan",
+       "title": "Jenis Cairan",
+       "cellType": "text"
+      },
+      {
+       "name": "tetes",
+       "title": "Tetes Permenit",
+       "cellType": "radiogroup",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "cc",
+         "text": "cc"
+        },
+        {
+         "value": "permenit",
+         "text": "Permenit"
+        }
+       ]
+      },
+      {
+       "name": "column1",
+       "title": "detail cc",
+       "cellType": "text",
+       "visibleIf": "{question1[0].tetes} = 'cc'"
+      },
+      {
+       "name": "column2",
+       "title": "detail permenit",
+       "cellType": "text",
+       "visibleIf": "{question1[0].tetes} = 'permenit'"
+      },
+      {
+       "name": "jam",
+       "title": "Tgl & Mulai Jam",
+       "cellType": "text",
+       "inputType": "datetime-local"
+      },
+      {
+       "name": "tgl_selesai",
+       "title": "Tgl & Selesai Jam",
+       "cellType": "text",
+       "inputType": "datetime-local"
+      },
+      {
+       "name": "perawat",
+       "title": "Perawat",
+       "cellType": "dropdown",
+       "choicesByUrl": {
+        "url": "/admin/admin/rest_userppa_iri"
+       }
+      },
+      {
+       "name": "ket",
+       "title": "Keterangan",
+       "cellType": "text"
+      }
+     ],
+     "choices": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rowCount": 1
+    }
+   ],
+   "title": "DAFTAR PEMBERIAN INFUS"
+  }
+ ]
+}

@@ -1,0 +1,574 @@
+{
+    "title": "PERMINTAAN DARAH UNTUK TRANSFUSI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Rumah Sakit                     "
+           },
+           {
+            "name": "text2",
+            "title": "Kelas    :"
+           },
+           {
+            "name": "text3",
+            "title": "Bagian"
+           },
+           {
+            "name": "text4",
+            "title": "Ruang Rawat"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Dokter yang meminta",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "Nama O.S",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Nama Suami",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Tgl Lahir/ Umur",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Jenis kelamin",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Laki laki"
+             },
+             {
+              "value": "item2",
+              "text": "Perempuan"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "Alamat rumah",
+            "cellType": "text"
+           },
+           {
+            "name": "column7",
+            "title": "Tgl. Permintaan",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column8",
+            "title": "Tgl. Diperlukan",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column9",
+            "title": "Diagnosa klinis",
+            "cellType": "comment"
+           },
+           {
+            "name": "column10",
+            "title": "Alasan Transfusi",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Hb",
+            "cellType": "text"
+           },
+           {
+            "name": "column12",
+            "title": "Transfusi sebelumnya*)",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "column13",
+            "title": "Apakah pernah diperiksa serologi golongan darah (coombs test)",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "column14",
+            "title": "Dimana",
+            "cellType": "text",
+            "visibleIf": "{question3.item1.column13} anyof ['item1']"
+           },
+           {
+            "name": "column15",
+            "title": "Kapan",
+            "cellType": "text",
+            "visibleIf": "{question3.item1.column13} anyof ['item1']"
+           },
+           {
+            "name": "column16",
+            "title": "Hasil",
+            "cellType": "text",
+            "visibleIf": "{question3.item1.column13} anyof ['item1']"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "1. Jumlah kehamilan sebelumnya :"
+           },
+           {
+            "name": "text2",
+            "title": "2. Pernah abortus"
+           },
+           {
+            "name": "text3",
+            "title": "3. Adakah sebelumnya penyakit hemolitik pada bayi"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "CITO"
+           },
+           {
+            "value": "item2",
+            "text": "BIASA"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "Khusus untuk pasien wanita :"
+       },
+       {
+        "type": "html",
+        "name": "question5",
+        "html": "<p><b>PERHATIAN !</b>\n<p>*)- Beri tanda √ pada kotak (      ) yang dimaksud\n<p>'- Setiap permintaan darah harap disertai contoh darah beku 5 cc minimal 2 cc\n<p>'- Nama dan identitas O.S pada formulr dan contoh darah harus sama\n<p>'- Sebelum transfusi, cocokkan etiket pada kantong darah dengan labelnya dan disertakan\n<p>'dengan identitas O.S yang akan ditransfusi. Bila ada ketidak cocokan, segera \n<p>'kembalikan ke UTDC"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question7",
+        "title": "I. Darah Lengkap*)",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": " ",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "✓"
+           }
+          ]
+         },
+         {
+          "name": "column2",
+          "title": " ",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Segar (48 jam)"
+         },
+         {
+          "value": "item2",
+          "text": "Baru (max 2-7 hari)"
+         },
+         {
+          "value": "item3",
+          "text": "Biasa"
+         },
+         {
+          "value": "item4",
+          "text": "II. Packed Red Cells (PRC):"
+         },
+         {
+          "value": "item5",
+          "text": "III. Washed Erytrocite (WE) :"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question6",
+        "title": "IV. PLASMA",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": " ",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "✓"
+           }
+          ]
+         },
+         {
+          "name": "column2",
+          "title": " ",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Liquid Plasma (LP) :"
+         },
+         {
+          "value": "item2",
+          "text": "Fresh Frozen Plasma (FFP) :"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question8",
+        "title": "V. FAKTOR PEMBEKUAN",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": " ",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "✓"
+           }
+          ]
+         },
+         {
+          "name": "column2",
+          "title": " ",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Thrombocyte Concentrate (TC) biasa"
+         },
+         {
+          "value": "item2",
+          "text": "Thrombocyte Aperesis"
+         },
+         {
+          "value": "item3",
+          "text": "Cryoprecipitate (AHF)"
+         },
+         {
+          "value": "item4",
+          "text": "DLL"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "question9",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Dengan Crossmathing"
+         },
+         {
+          "value": "item2",
+          "text": "Tanpa Crossmathing"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "signaturepad",
+        "name": "question10",
+        "title": "Petugas RS yang mengambil contoh darah OS",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question11",
+        "startWithNewLine": false,
+        "title": "Dokter yang meminta darah",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question12",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question13",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question14",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Contoh darah OS"
+           },
+           {
+            "name": "text2",
+            "inputType": "datetime-local",
+            "title": "Diterima Tgl  dan jam"
+           },
+           {
+            "name": "text3",
+            "title": "Petugas  penerima"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question15",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "ABO"
+           },
+           {
+            "name": "text2",
+            "inputType": "datetime-local",
+            "title": "RHESUS"
+           },
+           {
+            "name": "text3",
+            "title": "LAIN2"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "checkbox",
+          "name": "question16",
+          "title": "Hasil Cross*)",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Compatible (Cocok)"
+           },
+           {
+            "value": "item2",
+            "text": "Incompatible ( Tidak cocok)"
+           },
+           {
+            "value": "item3",
+            "text": "Tanpa Cross"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "question17",
+          "title": "Petugas Pemeriksa :",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "question18",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Petugas  yang mengeluarkan darah"
+           },
+           {
+            "name": "text2",
+            "inputType": "datetime-local",
+            "title": "Tanggal & Jam"
+           }
+          ]
+         },
+         {
+          "type": "signaturepad",
+          "name": "question19",
+          "title": "Penerima darah",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question20",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "DIISI OLEH PETUGAS UTD"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question21",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Jumlah yang dikeluarkan cc/kantong",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "jenis darah",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "NO",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Tgl. Pengambilan",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column5",
+            "title": "No Kantong",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1
+         },
+         {
+          "type": "text",
+          "name": "question23",
+          "title": "Dijanjikan",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question22",
+          "title": "Petugas yang menjanjikan",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question24",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "Telah diberikan darah golongan dengan perincian"
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,387 @@
+{
+    "title": "PENGKAJIAN MEDIS PASIEN RAWAT INAP",
+    "description": "(Dilengkapi dalam 24 jam sejak pasien masuk rumah sakit)",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl",
+        "title": "Tanggal / Jam Pengkajian",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "text",
+        "name": "question15",
+        "title": "Sumber Informasi",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "keluhan",
+          "title": "Keluhan Utama",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "riwayat",
+          "title": "Riwayat Penyakit Sekarang ",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_penyakit_dahulu",
+          "title": "Riwayat Penyakit Dahulu",
+          "hideNumber": true
+         }
+        ],
+        "title": "Anamnesa"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "title": "Rekonsiliasi obat dan data obat pasien yang digunakan saat masuk Rumah Sakit",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Nama obat yang digunakan saat masuk RS",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "Dosis",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Aturan Pakai",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Obat yang digunakan saat ini",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "RIWAYAT PEKERJAAN :",
+          "hideNumber": true
+         }
+        ],
+        "title": "Riwayat Pengobatan"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "text",
+          "name": "kesadaran",
+          "title": "Kesadaran",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "keadaan_umum",
+          "startWithNewLine": false,
+          "title": "Keadaan Umum ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "baik",
+            "text": "Baik"
+           },
+           {
+            "value": "sedang",
+            "text": "Sedang"
+           },
+           {
+            "value": "buruk",
+            "text": "Buruk"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "td",
+          "title": "Tekanan Darah :",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "keadaan_gizi",
+          "startWithNewLine": false,
+          "title": "Keadaan Gizi ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "baik",
+            "text": "Baik"
+           },
+           {
+            "value": "sedang",
+            "text": "Sedang"
+           },
+           {
+            "value": "buruk",
+            "text": "Buruk"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "nadi",
+          "title": "Nadi",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "bb",
+          "startWithNewLine": false,
+          "title": "BB",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "suhu",
+          "title": "Suhu",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "gcs",
+          "startWithNewLine": false,
+          "title": "TB",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "pernafasan",
+          "title": "Pernafasan",
+          "hideNumber": true
+         },
+         {
+            "type": "text",
+            "name": "spo2",
+            "title": "SpO2",
+            "hideNumber": true
+           },
+         {
+          "type": "text",
+          "name": "skor_nyeri",
+          "startWithNewLine": false,
+          "title": "Skor Nyeri",
+          "hideNumber": true
+         }
+        ],
+        "title": "PEMERIKSAAN UMUM :"
+       }
+      ],
+      "title": "Halaman 1"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "pemeriksaan_penunjang",
+        "title": "Pemeriksaan Fisik",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question3",
+        "title": "Pemeriksaan Penunjang",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diagnosis_kerja",
+        "title": "Diagnosis Banding",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question4",
+        "title": "Diagnosis Kerja",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question5",
+          "title": "Ad Functionam",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ad Bonam"
+           },
+           {
+            "value": "item2",
+            "text": " Ad Malam "
+           },
+           {
+            "value": "item3",
+            "text": "Dubia Ad Bonam"
+           },
+           {
+            "value": "item4",
+            "text": "Dubia Ad Malam"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question6",
+          "title": "Ad Vitam ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ad Bonam"
+           },
+           {
+            "value": "item2",
+            "text": " Ad Malam "
+           },
+           {
+            "value": "item3",
+            "text": "Dubia Ad Bonam"
+           },
+           {
+            "value": "item4",
+            "text": "Dubia Ad Malam"
+           }
+          ],
+          "colCount": 4
+         }
+        ],
+        "title": "PROGNOSIS :"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question7",
+          "title": "Rencana Pemeriksaan Penunjang :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question8",
+          "title": "Rencana Tindakan/Pengobatan :",
+          "hideNumber": true
+         }
+        ],
+        "title": "PERENCANAAN :"
+       },
+       {
+        "type": "panel",
+        "name": "panel6RENCANA KEPULANGAN PASIEN :",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question9",
+          "title": "Rencana Lama Rawat",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Sudah dapat ditetapkan : "
+           },
+           {
+            "name": "text2",
+            "title": " rencana tanggal pulang : "
+           },
+           {
+            "name": "text3",
+            "title": "Belum bisa ditetapkan, karena :"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question10",
+          "title": "Ketika pulang, masih memerlukan perawatan lanjutan : ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question11",
+          "title": "Ketika pulang, masih memerlukan kebutuhan khusus :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         }
+         
+        ],
+        "title": "RENCANA KEPULANGAN PASIEN :"
+       }
+      ],
+      "title": "Halaman 2"
+     }
+    ]
+   }

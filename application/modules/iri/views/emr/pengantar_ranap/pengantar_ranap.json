@@ -1,0 +1,130 @@
+{
+    "title": "PENGANTAR RAWAT INAP",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "mohon",
+          "title": "Mohon dirawat penderita : TN/Ny/Nn/An :",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "ruangan",
+          "title": "Ruangan",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "terapi",
+          "title": "Terapi Sementara :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question6",
+          "title": "DIAGNOSIS :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question7",
+          "title": "Pemeriksaan Penunjang :",
+          "hideNumber": true
+         },
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "<h4>Terima Kasih atas kerjsama TS."
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "title": "Tanah badantuang, ",
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Dengan Hormat,"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "ttd_hormat",
+          "title": "Horma Kami",
+          "hideNumber": true,
+          "penColor": "#000000"
+         },
+         {
+          "type": "text",
+          "name": "ttd",
+          "titleLocation": "hidden",
+          "size": 50
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "text",
+          "name": "ruangan4",
+          "title": "Ruangan",
+          "hideNumber": true,
+          "size": 50
+         },
+         {
+          "type": "signaturepad",
+          "name": "question3",
+          "title": "Petugas yang menerima",
+          "hideNumber": true,
+          "penColor": "#121212"
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "size": 50
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "text",
+          "name": "ruangan6",
+          "title": "Ruangan",
+          "hideNumber": true,
+          "size": 50
+         },
+         {
+          "type": "signaturepad",
+          "name": "question2",
+          "title": "Petugas yang mengantar",
+          "hideNumber": true,
+          "penColor": "#0f0f0f"
+         },
+         {
+          "type": "text",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "size": 50
+         }
+        ],
+        "startWithNewLine": false
+       }
+      ]
+     }
+    ]
+   }

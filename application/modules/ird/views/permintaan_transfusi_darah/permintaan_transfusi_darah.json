@@ -1,0 +1,165 @@
+{
+    "title": "PERMINTAAN TRANSFUSI DARAH",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Rumah sakit"
+           },
+           {
+            "name": "text2",
+            "title": "Bagian"
+           },
+           {
+            "name": "text3",
+            "title": "Kelas"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Dr. yang meminta"
+           },
+           {
+            "name": "text2",
+            "title": "No Rekam medis"
+           },
+           {
+            "name": "text3",
+            "title": "Nama OS"
+           },
+           {
+            "name": "text4",
+            "title": "Umur"
+           },
+           {
+            "name": "text5",
+            "title": "Jenis kelamin"
+           },
+           {
+            "name": "text6",
+            "title": "Alamat"
+           },
+           {
+            "name": "text7",
+            "title": "Diagnosa sementara"
+           },
+           {
+            "name": "text8",
+            "title": "Indikasi tegas"
+           },
+           {
+            "name": "text9",
+            "inputType": "datetime-local",
+            "title": "Diperlukan Tgl & Jam"
+           },
+           {
+            "name": "text10",
+            "title": "Transf sebelum nya"
+           },
+           {
+            "name": "text11",
+            "title": "Kapan"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "title": "Untuk OS Wanita",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Pernah hamil"
+           },
+           {
+            "name": "text2",
+            "title": "Abortus"
+           },
+           {
+            "name": "text3",
+            "title": "Partus"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "multipletext",
+          "name": "question4",
+          "title": "Jenis darah yang di perlukan",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "1. whole blood"
+           },
+           {
+            "name": "text2",
+            "title": "2. Packed red cells"
+           },
+           {
+            "name": "text3",
+            "title": "3. Liquid plasma"
+           },
+           {
+            "name": "text4",
+            "title": "4. Trombosit"
+           },
+           {
+            "name": "text5",
+            "title": "5. FFP"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "title": "Hal hal lain",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "Tanah badantuang, ",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question7",
+          "title": "Tanda tangan dokter yang meminta",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "html",
+          "name": "question9",
+          "html": "<p>CATATAN :\n<P>- Harap diisi dengan lengkap\n<p>-  yang tidak diisi dengan lengkap akan di kembalikan"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

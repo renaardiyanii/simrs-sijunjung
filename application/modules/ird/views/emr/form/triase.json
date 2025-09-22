@@ -1,0 +1,717 @@
+{
+    "title": "TRIASE",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "keluhan_utama",
+        "title": "Keluhan Utama :",
+        "hideNumber": true
+       },
+       {
+        "type": "html",
+        "name": "===",
+        "html": "<hr>\n"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "text",
+          "name": "tekanan_darah",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "startWithNewLine": false,
+          "title": "Tekanan Darah\n",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "nadi",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "startWithNewLine": false,
+          "title": "Nadi",
+          "hideNumber": true,
+          "size": 0
+         },
+         {
+          "type": "text",
+          "name": "nafas",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "startWithNewLine": false,
+          "title": "Nafas",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "spotwo",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "title": "SpO2",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "suhu",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "startWithNewLine": false,
+          "title": "Suhu",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "e",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "title": "E",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "m",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "startWithNewLine": false,
+          "title": "M",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "v",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "startWithNewLine": false,
+          "title": "V\n",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "reflex_cahaya",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "title": "Reflex Cahaya\n",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "pupil",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "startWithNewLine": false,
+          "title": "Pupil\n",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "akral",
+          "minWidth": "",
+          "maxWidth": "30%",
+          "startWithNewLine": false,
+          "title": "Akral",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "riwayat_alergi_obat",
+          "minWidth": "",
+          "maxWidth": "50%",
+          "title": "Alergi",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Riwayat Alergi Obat"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_alergi_obat",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{riwayat_alergi_obat} = [1]",
+          "placeHolder": "Alergi Obat..."
+         },
+         {
+          "type": "checkbox",
+          "name": "riwayat_alergi_makan",
+          "minWidth": "",
+          "maxWidth": "50%",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Riwayat Alergi Makan"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_alergi_makanan",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{riwayat_alergi_makan} = [1]",
+          "placeHolder": "Alergi Makan ..."
+         },
+         {
+          "type": "checkbox",
+          "name": "riwayat_alergi_lainnya",
+          "minWidth": "",
+          "maxWidth": "50%",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "1",
+            "text": "Alergi Lainnya"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_alergi_lainnya",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{riwayat_alergi_lainnya} = [1]",
+          "placeHolder": "Alergi Lainnya..."
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "---",
+        "html": "<hr>\n"
+       },
+       {
+        "type": "checkbox",
+        "name": "ats1_ranap",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "ats51_ranap",
+          "text": " ATS 1 (segera)"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "ATS 1 (segera)"
+         },
+         {
+          "type": "checkbox",
+          "name": "resusitasi",
+          "title": "Resusitasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "henti_jantung",
+            "text": "Henti Jantung"
+           },
+           {
+            "value": "henti_nafas",
+            "text": "Henti Nafas"
+           },
+           {
+            "value": "respirasi_distress",
+            "text": "RR < 10 x/min Respirasi distress sangat berat"
+           },
+           {
+            "value": "tek_sitolik",
+            "text": "Tek sistolik < 80 mmhg  (dewasa) atau syok pd  anak/bayi "
+           },
+           {
+            "value": "gcs",
+            "text": "GCS < 9"
+           },
+           {
+            "value": "kejang_terus_menerus",
+            "text": "Kejang Terus Menerus"
+           },
+           {
+            "value": "resiko_sumbatan",
+            "text": "Resiko Sumbatan Jalan Nafas"
+           }
+          ]
+         }
+        ],
+        "visibleIf": "{ats1_ranap} = ['ats51_ranap']"
+       },
+       {
+        "type": "checkbox",
+        "name": "ats2_ranap",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "ats2_ranap",
+          "text": "ATS 2 (10 Menit)"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "label1",
+          "html": "<h5> ATS 2 (10 Menit)</h5>\n<hr>\n"
+         },
+         {
+          "type": "checkbox",
+          "name": "resusitasi1.",
+          "title": "Resusitasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "stridor_berat",
+            "text": "Stridor berat"
+           },
+           {
+            "value": "kesukaran_pernafasan_berat",
+            "text": "Kesukaran pernafasan berat"
+           },
+           {
+            "value": "hr_min_or_hr_max",
+            "text": "HR < 50  atau  >150x/min (Dws)"
+           },
+           {
+            "value": "kulit_lembab",
+            "text": "Kulit lembab, hipotensi  dgn efek hemodinamik"
+           },
+           {
+            "value": "perdarahan_berat",
+            "text": "Perdarahan berat"
+           },
+           {
+            "value": "overdosis_obat",
+            "text": "Overdosis obat dgn hipoventilasi"
+           },
+           {
+            "value": "gangguan_perilaku_berat",
+            "text": "Gangguan perilaku  berat dgn ancaman  terhadap kekerasan  yg berbahaya"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "Obsrespirasi1",
+          "startWithNewLine": false,
+          "title": "Obs. Respirasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "pernafasan_diangkat",
+            "text": "Pernafasan Diangkat"
+           },
+           {
+            "value": "sanoltwo",
+            "text": "Sa02 < 90"
+           },
+           {
+            "value": "sesak_berat",
+            "text": "Sesak berat"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel2",
+          "elements": [
+           {
+            "type": "text",
+            "name": "dewasa1",
+            "title": "Dewasa :",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "size": 35,
+            "placeHolder": "x/mnt"
+           },
+           {
+            "type": "text",
+            "name": "anak1",
+            "title": "Anak :",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "size": 35,
+            "placeHolder": "x/mnt"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel",
+          "elements": [
+           {
+            "type": "html",
+            "name": "obs_non_respirasi1",
+            "html": "<h5><b> Obs. Non Respirasi  :<b></h5><hr>\n\n"
+           },
+           {
+            "type": "checkbox",
+            "name": "table1",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "penurunan",
+              "text": "Penurunan Kesadaran"
+             },
+             {
+              "value": "hemiparese",
+              "text": "Hemiparese akut dan penurunan kesadaran"
+             },
+             {
+              "value": "nyeri",
+              "text": "Nyeri dada  kardiak"
+             },
+             {
+              "value": "demam",
+              "text": "Demam dengan  Kelemahan"
+             },
+             {
+              "value": "hemipareisi",
+              "text": "Hemipareisi/ disfagia akut"
+             },
+             {
+              "value": "mata_kena_cair",
+              "text": "Mata kena cairan  alkali/asam"
+             },
+             {
+              "value": "multiple",
+              "text": "Multiple trauma Mayor"
+             },
+             {
+              "value": "trauma",
+              "text": "Trauma berat,  Fracture mayor, amputasi"
+             },
+             {
+              "value": "minum_sedative",
+              "text": "Minum  sedative/keracunan"
+             },
+             {
+              "value": "kena_bisa",
+              "text": "Kena bisa binatang"
+             },
+             {
+              "value": "nyeri_hebat",
+              "text": "Nyeri hebat dicurigai   Pre Eklampsi, Aneurisma  Aorta Abdominalis atau KET"
+             },
+             {
+              "value": "gauh_gelisan",
+              "text": "Gaduh gelisah, agresi berat  butuh restraint"
+             }
+            ]
+           }
+          ],
+          "startWithNewLine": false
+         }
+        ],
+        "visibleIf": "{ats2_ranap} = ['ats2_ranap']"
+       },
+       {
+        "type": "checkbox",
+        "name": "ats3a_ranap",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "ats3_ranap",
+          "text": "ATS 3 (30 Menit)"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "html",
+          "name": "label3",
+          "html": "<h5> ATS 3 (30 Menit)</h5>\n"
+         },
+         {
+          "type": "checkbox",
+          "name": "obs_respirasi2",
+          "title": "Obs. Respiras :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "sesak_nafas",
+            "text": "Sesak nafas dg  riwayat TB Paru"
+           },
+           {
+            "value": "sesak_nafas_dg",
+            "text": "Sesak nafas dg  Sat. O2  90 – 95%"
+           },
+           {
+            "value": "batuk_berdahak",
+            "text": "Batuk berdahak  disertai demam  dan sesak"
+           },
+           {
+            "value": "batuk_nyeri_dada",
+            "text": "Batuk disertai  nyeri dada dan  sesak"
+           },
+           {
+            "value": "batuk_berdarah",
+            "text": "Batuk darah  Sesak nafas dg "
+           },
+           {
+            "value": "riwayat_asma",
+            "text": "riwayat Asma"
+           },
+           {
+            "value": "sesak_nafas_tumor",
+            "text": "Sesak nafas dg  riwayat Tumor Paru"
+           },
+           {
+            "value": "sesak_nafas_ppok",
+            "text": "Sesak nafas dg  riwayat PPOK"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "obs_non_respirasi3",
+          "title": "Obs. Non Respirasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "nyeri_non",
+            "text": "Nyeri non kardiak"
+           },
+           {
+            "value": "sakit_perut",
+            "text": "Sakit perut tanpa  risiko tinggi"
+           },
+           {
+            "value": "trauma",
+            "text": "Trauma extremitas,  Laserasi besar"
+           },
+           {
+            "value": "extremitas",
+            "text": "Extremitas tidak  ada sensasi"
+           },
+           {
+            "value": "trauma_pd",
+            "text": "Trauma pd penyakit risiko tinggi"
+           },
+           {
+            "value": "stable",
+            "text": "Stable neonatus"
+           },
+           {
+            "value": "kekerasan",
+            "text": "Kekerasan pada  anak"
+           },
+           {
+            "value": "stress",
+            "text": "Stress berat"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "obs_non_respirasi2",
+          "startWithNewLine": false,
+          "title": "Obs. Non Respirasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hipertensi",
+            "text": "Hipertensi berat"
+           },
+           {
+            "value": "perdarahan",
+            "text": "Perdarahan sedang"
+           },
+           {
+            "value": "riwayat_kejang",
+            "text": "Riwayat kejang  demam pada pas. "
+           },
+           {
+            "value": "imunosupresif",
+            "text": "Imunosupresif"
+           },
+           {
+            "value": "muntah_menetap",
+            "text": "Muntah2 menetap"
+           },
+           {
+            "value": "dehidrasi",
+            "text": "Dehidrasi"
+           },
+           {
+            "value": "cedera",
+            "text": "Cedera kepala dgn  riwayat pingsan"
+           },
+           {
+            "value": "nyeri_sedang",
+            "text": " Nyeri sedang  sampai berat"
+           }
+          ]
+         }
+        ],
+        "visibleIf": "{ats3a_ranap} = ['ats3_ranap']"
+       },
+       {
+        "type": "checkbox",
+        "name": "ats4_ranap",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "ats4_rana",
+          "text": "ATS 4 (60 Menit)"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "html",
+          "name": "label 4",
+          "html": "<h5>  ATS 4\n(60 Menit)</h5>\n"
+         },
+         {
+          "type": "checkbox",
+          "name": "nyeri4",
+          "title": "Obs Non Respirasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "nyeri_sedang",
+            "text": "Nyeri sedang"
+           },
+           {
+            "value": "mual_diare",
+            "text": "Mual/diare tanpa  dehidrasi"
+           },
+           {
+            "value": "nyeri_perut",
+            "text": "Nyeri perut non  spesifik"
+           },
+           {
+            "value": "trauma_dada",
+            "text": "Trauma dada tanpa nyeri  iga dan ggn pernafasan "
+           },
+           {
+            "value": "sukar_menelan",
+            "text": "Sukar  menelan  tanpa gangguan pernafasan"
+           },
+           {
+            "value": "masalah_kesehatan",
+            "text": " Masalah kesehatan  mental yg semi mendesak,   tidak ada risiko terhadap  diri sendiri atau orang lain"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question2",
+          "title": "Non Gawat Darurat",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "perdarahan",
+            "text": "Perdarahan ringan "
+           },
+           {
+            "value": "aspirasi",
+            "text": "Aspirasi benda  asing tanpa ggn  pernafasan"
+           },
+           {
+            "value": "ckr",
+            "text": "CKR"
+           },
+           {
+            "value": "iritasi",
+            "text": "Iritasi mata dgn  visus normal"
+           },
+           {
+            "value": "trauma",
+            "text": "Trauma extremitas : keseleo pergelangan kaki, kemungkinan fraktur, luka ringan, dg normal tanda2 vital dan nyeri ringan dan sedang"
+           },
+           {
+            "value": "balutan",
+            "text": "Balutan  ketat tanpa gangguan neuro vascular"
+           },
+           {
+            "value": "sendi",
+            "text": "Sendi bengkak dan merah"
+           }
+          ]
+         }
+        ],
+        "visibleIf": "{ats4_ranap} = ['ats4_rana']"
+       },
+       {
+        "type": "checkbox",
+        "name": "ats5_ranap",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "ats5_ranap",
+          "text": "ATS 5 (120 Menit)"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "html",
+          "name": "label5",
+          "html": "<h5>   ATS 5\n(120 Menit)</h5>\n<hr>\n"
+         },
+         {
+          "type": "checkbox",
+          "name": "nyeri5",
+          "title": "Non Gawat Darurat",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "nyeri_ringan",
+            "text": "Nyeri ringan tanpa tanda2 resiko tinggi"
+           },
+           {
+            "value": "riwayat_penyakit",
+            "text": "Riwayat penyakit risiko rendah "
+           },
+           {
+            "value": "gejala_ringan",
+            "text": "Gejala ringan dari penyakit"
+           },
+           {
+            "value": "luka_kecil",
+            "text": "Luka kecil/lecet"
+           },
+           {
+            "value": "kontrol",
+            "text": "Kontrol luka Imunisasi"
+           },
+           {
+            "value": "perilaku",
+            "text": "Perilaku/psikiatrik:  gejala kronis."
+           }
+          ]
+         }
+        ],
+        "visibleIf": "{ats5_ranap} = ['ats5_ranap']"
+       }
+      ]
+     }
+    ],
+    "showCompletedPage": false
+   }

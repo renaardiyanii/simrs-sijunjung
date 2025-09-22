@@ -1,0 +1,289 @@
+{
+    "title": "RENCANA PEMULANGAN PASIEN ",
+    "description": "(DISCHARGE PLANNING)",
+    "pages": [
+     {
+      "name": "rencana_pemulangan_pasien.",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question12",
+        "title": "Diagnosa medis"
+       },
+       {
+        "type": "text",
+        "name": "question13",
+        "startWithNewLine": false,
+        "title": "Rauangan"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "text",
+          "name": "tanggal_perencanaan_pemulangan",
+          "title": "Tanggal / Jam Masuk RS : ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "text",
+          "name": "question11",
+          "title": "Alasan Masuk RS",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "estimasi_tanggal",
+          "title": "Tanggal / jam dilakukan Perencanaan Pemulangan Pasien (Discharge Planning) :    ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "title": "Estimasi tanggal pemulangan pasien :",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "text",
+          "name": "question14",
+          "title": "Nama Perawat   : ",
+          "hideNumber": true
+         }
+        ],
+        "title": "SAAT MASUK RUMAH SAKIT   "
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question1",
+        "title": "KEGIATAN",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Tanggal / dilakukan",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "column2",
+          "title": "Petugas / dilakukan",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "Evaluasi / tidak dilakukan",
+          "cellType": "text"
+         },
+         {
+          "name": "column4",
+          "title": "Alasan / tidak dilakukan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "1.Pengkajian fisik dan psikososi"
+         },
+         {
+          "value": "item2",
+          "text": "2.Pengkajian status fungsional"
+         },
+         {
+          "value": "item3",
+          "text": "3.Pengkajian kebutuhan pendidikan kesehatan"
+         },
+         {
+          "value": "item4",
+          "text": "a. Proses Penyakit"
+         },
+         {
+          "value": "item5",
+          "text": "b. Obat-obatan"
+         },
+         {
+          "value": "item6",
+          "text": "c. Prosedur, cara perawatan"
+         },
+         {
+          "value": "item7",
+          "text": "d. Pencegahan faktor risiko"
+         },
+         {
+          "value": "item8",
+          "text": "e. Lingkungan yang perlu dipersiapkan"
+         },
+         {
+          "value": "item9",
+          "text": "f. Rencana tindak lanjut"
+         },
+         {
+          "value": "item10",
+          "text": "4. Pengkajian pemahanan pasien/keluarga terhadap penjelasan yang diberikan tim kesehatan"
+         },
+         {
+          "value": "item11",
+          "text": "5. Diskusi tentang proses penyakit : Pengertian, penyebab, tanda dan gejala"
+         },
+         {
+          "value": "item12",
+          "text": "b. Faktor risiko"
+         },
+         {
+          "value": "item13",
+          "text": "c. Komplikasi "
+         },
+         {
+          "value": "item14",
+          "text": "6. Diskusi tentang  Obat-obatan"
+         },
+         {
+          "value": "item15",
+          "text": "7. Diskusi tentang  Pemeriksaan Diagnostik"
+         },
+         {
+          "value": "item16",
+          "text": "8. Diskusi tentang  Rehabilitasi"
+         },
+         {
+          "value": "item17",
+          "text": "9. Diskusi tentang  Perawatan kebersihan diri, perubahan posisi, pencegahan jatuh, manajemen nyeri, latihan ROM dan teknik relaksasi"
+         },
+         {
+          "value": "item18",
+          "text": "10. Edukasi pengaturan diet (sesuai faktor risiko)"
+         },
+         {
+          "value": "item19",
+          "text": "11. Edukasi tentang modifikasi gaya hidup Aktifitas Fisik"
+         },
+         {
+          "value": "item20",
+          "text": "b. Merokok"
+         },
+         {
+          "value": "item21",
+          "text": "c. Penggunaan Alkohol dan Obat-obatan"
+         },
+         {
+          "value": "item22",
+          "text": "12. Edukasi tentang modifikasi lingkungan pasien setelah pulang dari rumah sakit"
+         },
+         {
+          "value": "item23",
+          "text": "13. Edukasi tentang modifikasi gaya hidup Kebutuhan dasar"
+         },
+         {
+          "value": "item24",
+          "text": "b Jadwal kontrol"
+         },
+         {
+          "value": "item25",
+          "text": "14. Diskusi tentang pengawasan pada pasien setelah pulang tentang obat, diet, aktifitas dan peningkatan status fungsional"
+         },
+         {
+          "value": "item26",
+          "text": "Diskusi tentang sistem dukungan keluarga, finansial, dan alat/transportasi yang akan digunakan pasien"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question2",
+        "title": "CATATAN PULANG",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Tanggal / Sudah Diberikan",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "column2",
+          "title": "Petugas / Sudah Diberikan",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "Alasan / Belum Diberikan",
+          "cellType": "text"
+         },
+         {
+          "name": "column4",
+          "title": "Keterangan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Resep/Obat-obatan pulang"
+         },
+         {
+          "value": "item2",
+          "text": "Surat Kontrol"
+         },
+         {
+          "value": "item3",
+          "text": "Rujukan Rehabilitasi"
+         },
+         {
+          "value": "item4",
+          "text": "Leaflet/Informasi Kesehatan (bila ada)"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "table_rencana_pemulangan",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Date",
+          "title": "Tgl / Jam",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "catatan",
+          "title": "Catatan"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rowCount": 1
+       }
+      ]
+     }
+    ]
+   }

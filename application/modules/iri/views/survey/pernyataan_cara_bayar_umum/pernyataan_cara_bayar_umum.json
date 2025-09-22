@@ -1,0 +1,92 @@
+{
+  "pages": [
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "multipletext",
+      "name": "Saya yang bertanda tangan di bawah ini :",
+      "hideNumber": true,
+      "items": [
+       {
+        "name": "Nama",
+        "requiredErrorText": "Nama harus diisi!"
+       },
+       {
+        "name": "NIK",
+        "inputType": "number"
+       },
+       {
+        "name": "Umur",
+        "inputType": "number"
+       },
+       {
+        "name": "Alamat"
+       },
+       {
+        "name": "No.HP",
+        "inputType": "number"
+       }
+      ]
+     },
+     {
+      "type": "multipletext",
+      "name": "question8",
+      "titleLocation": "hidden",
+      "items": [
+       {
+        "name": "text1",
+        "title": "Adalah"
+       }
+      ]
+     },
+     {
+      "type": "html",
+      "name": "question9",
+      "html": "<h5>(sebutkan hubungan dengan pasien) dari pasien yang nama tertera didalam label atas :"
+     },
+     {
+      "type": "html",
+      "name": "question7",
+      "html": "<h5>\nSehubungan dengan pembiayaan rawatan atas nama pasien (sebutkan nama pasien) diatas, dengan ini saya menyatakan bahwa : \n<p>\tSaya telah mendengar dan memahami dengan baik penjelasan yang disampaikan oleh petugas admisi rumah sakit\n<p>\tPasien adalah pemegang kartu kepesertaan BPJS kesehatan No "
+     },
+     {
+      "type": "text",
+      "name": "dari pasien yang nama tertera didalam label atas :",
+      "titleLocation": "hidden",
+      "description": "(tuliskan nomor kartu BPJS pasien)",
+      "descriptionLocation": "underInput",
+      "hideNumber": true,
+      "inputType": "number",
+      "size": 1,
+      "min": "0"
+     },
+     {
+      "type": "text",
+      "name": "namun saya tidak memanfaatkan kepesertaan BPJS kesehatan yang bersangkutan dengan alasan",
+      "hideNumber": true,
+      "size": 0
+     },
+     {
+      "type": "html",
+      "name": "question6",
+      "html": "<h5><p>Sehubungan dengan tindakan yang saya ambil sebagaimana disebutkan pada poin 2 diatas maka sebagai konsekuensinya saya bersedia menanggung dan membayarkan seluruh biaya rawatan pasien secara pribadi (menggunakan cara bayar umum) sesuai dengan perhitungan tarif RS yang berlaku. \n <p> Saya bersedia dan menyetujui tindakan pihak rumah sakit untuk menempatkan pasien dikelas rawatan yang tersedia apabila kelas rawatan yang diinginkan pada saat pasien masuk penuh atau tidak tersedia. <p>Saya bersedia melapor ke Admisi rumah sakit apabila ingin memindahkan pasien ke kelas rawatan yang diinginkan (lebih tinggi atau yang lebih rendah dari kelas perawatan awal).  <p>Saya bersedia dan menyetujui untuk tetap menempatkan pasien sesuai dengan kelas perawatan pada saat pasien masuk pertama kali, apabila saya tidak melapor ke admisi untuk memindahkan pasien.  <p>Saya menyadari dan mengetahui segala resiko yang akan terjadi dengan diterbitkannya surat pernyataan ini dan apabila dikemudian hari saya mengingkari ketentuan yang telah saya sampaikan dalam surat pernyataan ini maka saya bersedia mempertanggung jawabkan sesuai ketentuan yang berlaku   Demikianlah surat pernyataan ini dibuat dengan sebenarnya, dalam keadaan sadar dan tanpa ada paksaan dari pihak manapun untuk dipergunakan sebagaimana mestinya.  \n<p>"
+     },
+     {
+      "type": "signaturepad",
+      "name": "question2",
+      "title": "Pasien/Penanggung jawab pasien",
+      "description": "( Materai 10000 )",
+      "hideNumber": true
+     },
+     {
+      "type": "html",
+      "name": "question10",
+      "html": "01.03.2023.RM-001h / RI "
+     }
+    ],
+    "title": "SURAT PERNYATAAN TATA BAYAR UMUM"
+   }
+  ],
+  "showTitle": false
+ }

@@ -1,0 +1,144 @@
+{
+    "title": "SURAT RUJUKAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "no",
+          "title": "No"
+         },
+         {
+          "name": "kpd",
+          "title": "Kepada Yth. T. Sejawat "
+         },
+         {
+          "name": "dirumah",
+          "title": "Di Rumah Sakit"
+         },
+         {
+          "name": "bagian",
+          "title": "Bagian"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "nama",
+            "title": "Nama",
+            "cellType": "text"
+           },
+           {
+            "name": "status_pasien",
+            "title": "Status Pasien",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "umum",
+              "text": "Umum"
+             },
+             {
+              "value": "pln",
+              "text": "PLN"
+             },
+             {
+              "value": "bukit",
+              "text": "Bukit Asam"
+             },
+             {
+              "value": "nayaka",
+              "text": "Nayaka"
+             },
+             {
+              "value": "bpjs",
+              "text": "BPJS"
+             },
+             {
+              "value": "telkom",
+              "text": "Telkom"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Lainnya"
+           },
+           {
+            "name": "no_kartu",
+            "title": "No. Kartu",
+            "cellType": "text"
+           },
+           {
+            "name": "status_peserta",
+            "title": "Status peserta",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "peserta",
+              "text": "Peserta"
+             },
+             {
+              "value": "suami",
+              "text": "Suami"
+             },
+             {
+              "value": "istri",
+              "text": "Istri"
+             },
+             {
+              "value": "anak",
+              "text": "Anak"
+             }
+            ]
+           },
+           {
+            "name": "diagnosa",
+            "title": "Diagnosa",
+            "cellType": "comment"
+           },
+           {
+            "name": "tindakan",
+            "title": "Tindakan yang telah dilakukan",
+            "cellType": "comment"
+           },
+           {
+            "name": "terapi",
+            "title": "Terapi yang telah diberikan",
+            "cellType": "comment"
+           },
+           {
+            "name": "pemeriksaan",
+            "title": "Pemeriksaan Penunjang",
+            "cellType": "comment"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "Mohon pemeriksaan dan pengobatan lebih lanjut terhadap penderita :"
+       }
+      ]
+     }
+    ]
+   }

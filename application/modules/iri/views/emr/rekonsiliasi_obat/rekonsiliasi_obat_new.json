@@ -1,0 +1,227 @@
+{
+    "title": "REKONSILIASI OBAT",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question1",
+          "title": "Alergi Obat",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "visibleIf": "{question1} anyof ['item1']",
+          "title": "Nama Obat",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "1"
+           },
+           {
+            "name": "text2",
+            "title": "2"
+           },
+           {
+            "name": "text3",
+            "title": "3"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "jenis_obat",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "nama_obat",
+            "title": "Nama Obat ",
+            "cellType": "text"
+           },
+           {
+            "name": "dosis",
+            "title": "Frekuensi dan Dosis",
+            "cellType": "text"
+           },
+           {
+            "name": "frek",
+            "title": "Rute",
+            "cellType": "text"
+           },
+           {
+            "name": "dilanjutkan1",
+            "title": "Dilanjutkan saat admisi (Dokter)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "dilanjutkan2",
+            "title": "Dilanjutkan saat transfer I (Apoteker)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "dilanjutkan3",
+            "title": "Dilanjutkan saat transfer II (Apoteker)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "dilanjutkan4",
+            "title": "Dilanjutkan saat transfer III (Apoteker)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "dilanjutkan5",
+            "title": "Dilanjutkan saat pulang (Apoteker)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           }
+          ],
+          "cellType": "text",
+          "columnColCount": 1,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "Semua jenis obat termasuk obat bebas, herbal, atau traditional chinese medicine yang digunakan sebulan terakhir dan masih dipakai saat masuk rumah sakit"
+       },
+       {
+        "type": "text",
+        "name": "question5",
+        "title": "Tanggal & Jam",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question4",
+        "title": "Tanda tangan Dokter",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question3",
+        "title": "Nama Dokter / DPJP",
+        "hideNumber": true
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question6",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Tanda tangan apoteker",
+          "cellType": "signaturepad"
+         },
+         {
+          "name": "column2",
+          "title": "Nama Apoteker",
+          "cellType": "text"
+         },
+         {
+          "name": "column3",
+          "title": "Tanggal & Jam",
+          "cellType": "text",
+          "inputType": "datetime-local"
+         }
+        ],
+        "cellType": "text",
+        "columnColCount": 1,
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       },
+       {
+        "type": "comment",
+        "name": "question8",
+        "title": "Intruksi",
+        "hideNumber": true
+       },
+       {
+        "type": "html",
+        "name": "question7",
+        "html": "INTRUKSI \n<p>1. Dokter Memutuskan semua obat yang akan diteruskan/dihentikan dan mencatatnya pada catatan perkembangan pasien terintegrasi dan membutuhkan tanda tangan\n<p>2. Apoteker membandingkan dan menganalisis obat yang akan diteruskan dan membubuhkan tanda tangan"
+       }
+      ]
+     }
+    ]
+   }

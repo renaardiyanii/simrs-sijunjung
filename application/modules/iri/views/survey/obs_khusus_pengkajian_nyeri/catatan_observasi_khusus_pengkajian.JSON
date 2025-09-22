@@ -1,0 +1,238 @@
+{
+    "locale": "id",
+    "title": "CATATAN OBSERVASI KHUSUS DAN PENGKAJIAN ",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "1",
+          "title": "Skor Nyeri",
+          "cellType": "rating",
+          "rateMin": 0,
+          "rateMax": 10
+         },
+         {
+          "name": "total_skor",
+          "title": "Skor :",
+          "cellType": "expression",
+          "expression": "{row.1}"
+         },
+         {
+          "name": "kategori",
+          "title": "Kategori :",
+          "cellType": "expression",
+          "expression": "iif({row.total_skor} > 7,'Berikan analgesia sesuai order (8-10)', iif({row.total_skor} < 4,'Lanjutkan observasi (0-3)','Pertimbangkan pemberian analgesik (4-7)'))"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "1",
+          "title": "Skor sedasi",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "sadar penuh dan dapat berbicara"
+           },
+           {
+            "value": "1",
+            "text": "ringan :( kadang kadang tertidur, mudah dibangunkan, bangun sendirnya)"
+           },
+           {
+            "value": "2",
+            "text": "sedang ( sering tertidur, mudah dibangunkan, bangun dengan rangsangan"
+           },
+           {
+            "value": "3",
+            "text": "berat (sangat mengantuk, susah dibangunkan, tertdur ssaat berbicara)"
+           },
+           {
+            "value": "4",
+            "text": "tidak sadar (tidak berespon terhadap nyeri)"
+           },
+           {
+            "value": "x",
+            "text": "tidur normal"
+           }
+          ]
+         },
+         {
+          "name": "total_skor",
+          "title": "Skor",
+          "cellType": "expression",
+          "expression": "{row.1}"
+         },
+         {
+          "name": "intervensi",
+          "title": "Intervensi",
+          "cellType": "expression",
+          "expression": "iif({row.total_skor} = x,'Pastikan pasien tidur dan bukan karena sedasi (x)',\niif({row.total_skor} = 2,'lanjutkan observasi atau ganti sedasinya (2)', \niif({row.total_skor} = 3 ,'pertimbangan naloxone dosis rendah  (3)',\niif({row.total_skor} = 4,'review medik segera (4)', iif({row.total_skor} < 2,'lanjutkan obserbasi atau ganti sedasinya (0-1)'))\n"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": {
+             "id": "Tanggal "
+            },
+            "cellType": "text",
+            "width": "30",
+            "inputType": "date"
+           },
+           {
+            "name": "jam",
+            "title": {
+             "id": "Jam"
+            },
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "s",
+            "title": {
+             "id": "S (C)"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "n",
+            "title": {
+             "id": "N (x/mnt)"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "p",
+            "title": {
+             "id": "P"
+            },
+            "cellType": "text",
+            "minWidth": "30",
+            "width": "50"
+           },
+           {
+            "name": "td",
+            "title": {
+             "id": "TD (mmHg)"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "sp02",
+            "title": {
+             "id": "Sp02 (%)"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "o2",
+            "title": {
+             "id": "O2 (I/mnt)"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "sedasi",
+            "title": {
+             "id": "Skor Sedasi"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "istirahat",
+            "title": {
+             "id": "Istirahat"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "aktivitas",
+            "title": {
+             "id": "Aktivitas"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "intervensi",
+            "title": {
+             "id": "Intervensi / Keterangan"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "paraf",
+            "title": {
+             "default": "Paraf Perawat",
+             "id": "Paraf Staff"
+            },
+            "cellType": "signaturepad",
+            "width": "100",
+            "height": 100,
+            "penColor": "#242424"
+           }
+          ],
+          "horizontalScroll": true,
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": {
+           "id": "Tambah "
+          },
+          "removeRowText": {
+           "id": "Hapus"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

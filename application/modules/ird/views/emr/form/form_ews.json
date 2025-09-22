@@ -1,0 +1,170 @@
+{
+    "title": "LEMBAR OBSERVASI EWS",
+    "showCompletedPage": false,
+    "description": "PARAMETER",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "physiological",
+        "title": "Physiological",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "1",
+          "title": "Pernafasan",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "3",
+            "text": "<8"
+           },
+           {
+            "value": "1",
+            "text": "9-11"
+           },
+           {
+            "value": "0",
+            "text": "12-20"
+           },
+           {
+            "value": "2",
+            "text": "21-24"
+           },
+           {
+            "value": "3.",
+            "text": ">25"
+           }
+          ]
+         },
+         {
+          "name": "2",
+          "title": "Terperatur",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "3",
+            "text": "<35"
+           },
+           {
+            "value": "1",
+            "text": "35,1 -36,0"
+           },
+           {
+            "value": "0",
+            "text": "36,2 - 38,0"
+           },
+           {
+            "value": "1.",
+            "text": "≥ 39,1"
+           }
+          ]
+         },
+         {
+          "name": "3",
+          "title": "Sistolik",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "3",
+            "text": "<90"
+           },
+           {
+            "value": "2",
+            "text": "90-100"
+           },
+           {
+            "value": "1",
+            "text": "101-110"
+           },
+           {
+            "value": "0",
+            "text": "111-219"
+           },
+           {
+            "value": "3.",
+            "text": "≥ 220"
+           }
+          ]
+         },
+         {
+          "name": "4",
+          "title": "Denyut Nadi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "3.",
+            "text": "≤ 40"
+           },
+           {
+            "value": "1",
+            "text": "41-50"
+           },
+           {
+            "value": "0",
+            "text": "51-90"
+           },
+           {
+            "value": "1.",
+            "text": "91-110"
+           },
+           {
+            "value": "2",
+            "text": "111-130"
+           },
+           {
+            "value": "3",
+            "text": "≥ 131"
+           }
+          ]
+         },
+         {
+          "name": "5",
+          "title": "Kesadaran",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Sadar Penuh"
+           },
+           {
+            "value": "3",
+            "text": "VP Or U"
+           }
+          ]
+         },
+         {
+          "name": "total_skor",
+          "title": "Skor",
+          "cellType": "expression",
+          "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5}"
+         },
+         {
+          "name": "nilai_skor",
+          "title": "Nilai Skor :",
+          "cellType": "expression",
+          "expression": "iif({row.total_skor} > 6,'(7)', iif({row.total_skor} > 5,' (5-6)',' (0-4)'))"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "result",
+          "text": "Nilai"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

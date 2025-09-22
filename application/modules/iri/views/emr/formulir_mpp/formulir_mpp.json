@@ -1,0 +1,87 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "date",
+            "title": "Tanggal MRS"
+           },
+           {
+            "name": "text2",
+            "title": "Ruang/Kelas"
+           },
+           {
+            "name": "text3",
+            "inputType": "datetime-local",
+            "title": "Tgl/Jam"
+           },
+           {
+            "name": "text4",
+            "title": "DPJP Utama"
+           },
+           {
+            "name": "text5",
+            "title": "DPJP Lain"
+           },
+           {
+            "name": "text6",
+            "title": "Tindakan"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "Tanggal/Jam",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "Column 2",
+            "title": "Catatan Perkembangan",
+            "cellType": "comment"
+           },
+           {
+            "name": "Column 3",
+            "title": "Nama",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 4",
+            "title": "TTD",
+            "cellType": "signaturepad"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ]
+       }
+      ],
+      "title": "FORMULIR MPP (FORM B) CATATAN IMPLEMENTASI MPP"
+     }
+    ]
+   }

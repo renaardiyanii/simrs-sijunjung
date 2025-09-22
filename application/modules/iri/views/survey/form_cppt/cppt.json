@@ -1,0 +1,158 @@
+{
+    "title": "Formulir CPPT",
+    "pages": [
+     {
+      "name": "data_umum",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl_pemeriksaan",
+        "title": "Tanggal CPPT",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "subjective",
+          "title": "Subjective :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "objective",
+          "startWithNewLine": false,
+          "title": "Objective :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "assesment",
+          "title": "Assesment :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "plan",
+          "startWithNewLine": false,
+          "title": "Plan :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "instruksi",
+          "title": "Instruksi : ",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "konsul",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "Konsul Dokter",
+          "text": "Konsul Dokter"
+         }
+        ]
+       },
+       {
+        "type": "paneldynamic",
+        "name": "konsultasi",
+        "visibleIf": "{konsul} = ['Konsul Dokter']",
+        "title": " ",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "table_konsultasi",
+          "title": "Pemberi Pesan",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "jam",
+            "title": "Jam",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "nama_terang",
+            "title": "Nama Terang",
+            "cellType": "dropdown",
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_all_user"
+            }
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "penerima_pesan",
+          "visibleIf": "{konsul} = ['Konsul Dokter']",
+          "title": "Penerima Pesan",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "jam",
+            "title": "Jam",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "nama_terang",
+            "title": "Nama Terang",
+            "cellType": "dropdown",
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_all_user"
+            }
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "allowAddPanel": false,
+        "allowRemovePanel": false,
+        "panelCount": 1,
+        "minPanelCount": 1
+       }
+      ]
+     }
+    ],
+    "showCompletedPage": false
+   }

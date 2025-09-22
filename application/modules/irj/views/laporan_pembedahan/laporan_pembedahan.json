@@ -1,0 +1,270 @@
+{
+    "title": "LAPORAN PEMBEDAHAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Tanggal/Jam Pembedahan",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "ahli",
+            "title": "Ahli bedah"
+           },
+           {
+            "name": "asisten",
+            "title": "Asisten"
+           },
+           {
+            "name": "Instrumenator",
+            "title": "Instrumenator"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "checkbox",
+          "name": "question3",
+          "title": "Macam pembedahan :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "kecil",
+            "text": "Kecil"
+           },
+           {
+            "value": "sedang",
+            "text": "Sedang"
+           },
+           {
+            "value": "besar",
+            "text": "Besar"
+           },
+           {
+            "value": "khusus1",
+            "text": "Khusus 1"
+           },
+           {
+            "value": "khusus2",
+            "text": "Khusus 2"
+           },
+           {
+            "value": "gawat_darurat",
+            "text": "Gawat darurat"
+           },
+           {
+            "value": "berencana",
+            "text": "Berencana"
+           },
+           {
+            "value": "bersih",
+            "text": "Bersih"
+           },
+           {
+            "value": "tercemar",
+            "text": "Tercemar"
+           },
+           {
+            "value": "bersih_tercemar",
+            "text": "Bersih Tercemar"
+           },
+           {
+            "value": "kotor",
+            "text": "Kotor"
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "multipletext",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "diagnosa_pra_bedah",
+            "title": "Diagnosa Pra Bedah"
+           },
+           {
+            "name": "tindakan",
+            "title": "Tindakan pembedahan"
+           },
+           {
+            "name": "diagnosa_pasca",
+            "title": "Diagnosa pasca bedah"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "nm_implant",
+            "title": "Nama Implant",
+            "cellType": "text"
+           },
+           {
+            "name": "lokais",
+            "title": "Lokasi pemasangan",
+            "cellType": "text"
+           },
+           {
+            "name": "kode",
+            "title": "Kode produk/Baarcode",
+            "cellType": "text"
+           },
+           {
+            "name": "keterangan",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question6",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "ahli_bius",
+            "title": "Ahli bius",
+            "cellType": "text"
+           },
+           {
+            "name": "cara_pembiusan",
+            "title": "Cara pembiusan",
+            "cellType": "text"
+           },
+           {
+            "name": "posisi_pasien",
+            "title": "Posisi pasien",
+            "cellType": "text"
+           },
+           {
+            "name": "mulai",
+            "title": "Mulai",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "selesai",
+            "title": "Selesai",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "lama_pembedahan",
+            "title": "Lama pembedahan",
+            "cellType": "text"
+           },
+           {
+            "name": "ok",
+            "title": "OK",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "ok",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "comment",
+          "name": "uraian",
+          "title": "URAIAN PEMBEDAHAN",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "question7",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "komplikasi",
+            "title": "KOMPLIKASI"
+           },
+           {
+            "name": "perdarahaan",
+            "title": "PERDARAHAAN"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "jaringan",
+          "title": "Jaringan di kirim ke Patologi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "TIDAK"
+           },
+           {
+            "value": "ya",
+            "text": "YA"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "asjal",
+          "title": "Asal jaringan ",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "ttd",
+          "title": "Ahli bedah",
+          "hideNumber": true,
+          "penColor": "#0d1110"
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "titleLocation": "hidden",
+          "size": 50
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

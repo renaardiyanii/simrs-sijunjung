@@ -1,0 +1,1182 @@
+{
+    "title": "CATATAN PERSALINAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question14",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "tgl_jam",
+            "inputType": "datetime-local",
+            "title": "Tgl / Jam"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question15",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "g",
+            "title": "G"
+           },
+           {
+            "name": "p",
+            "title": "P"
+           },
+           {
+            "name": "a",
+            "title": "A"
+           },
+           {
+            "name": "h",
+            "title": "H"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "multipletext",
+          "name": "question16",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "ketuban_pecah",
+            "inputType": "time",
+            "title": "Ketuban Pecah, sejak jam"
+           },
+           {
+            "name": "mules",
+            "inputType": "time",
+            "title": "Mules sejak jam"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "signaturepad",
+          "name": "question23",
+          "width": 950,
+          "titleLocation": "hidden",
+          "height": 500,
+          "penColor": "#0c0d0d",
+          "image": "/assets/images/potograf_cat_persalinan.png"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question17",
+          "title": "Denyut Jantung Janin ( / menit)",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Air Ketuban",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "U",
+              "text": "U"
+             },
+             {
+              "value": "J",
+              "text": "J"
+             },
+             {
+              "value": "M",
+              "text": "M"
+             },
+             {
+              "value": "D",
+              "text": "D"
+             },
+             {
+              "value": "K",
+              "text": "K"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question24",
+          "title": "Penyusupan",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Penyusupan",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             },
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             },
+             {
+              "value": "3",
+              "text": "3"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question26",
+          "width": 950,
+          "titleLocation": "hidden",
+          "height": 500,
+          "image": "/assets/images/pembukaan_serviks_cat_persalinan.PNG"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question25",
+          "title": "Penyusupan",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Waktu(jam)",
+            "cellType": "text",
+            "inputType": "time"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question27",
+          "width": 950,
+          "titleLocation": "hidden",
+          "height": 300,
+          "image": "/assets/images/kontraksi_cat_persalinan.PNG"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question20",
+          "title": "Denyut Jantung Janin ( / menit)",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Oksilosin U/L",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "Tetes / menit",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question18",
+          "title": "Denyut Jantung Janin ( / menit)",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Obat dan cairan IV",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question19",
+          "width": 950,
+          "titleLocation": "hidden",
+          "height": 500,
+          "image": "/assets/images/td_cat_persalinan.png"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question21",
+          "title": "Denyut Jantung Janin ( / menit)",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Suhu",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ],
+          "cellType": "text",
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "minRowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question22",
+          "title": "Denyut Jantung Janin ( / menit)",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Protein",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "Aseton",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Volume",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": " "
+           }
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "PARTOGRAF"
+       }
+      ]
+     },
+     {
+      "name": "catatan_persalinan1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "table",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "tgl",
+          "title": "1. Tanggal",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "nama_bidan",
+          "title": "2. Nama Bidan ",
+          "cellType": "dropdown",
+          "choicesByUrl": {
+           "url": "/admin/admin/rest_userppa_iri"
+          }
+         },
+         {
+          "name": "catatan",
+          "title": "5. Catatan",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "rujuk",
+            "text": "Rujuk"
+           }
+          ]
+         },
+         {
+          "name": "kala",
+          "title": "Kala",
+          "cellType": "radiogroup",
+          "visibleIf": "{table[0].catatan} = 'rujuk'",
+          "choices": [
+           {
+            "value": "1",
+            "text": "I"
+           },
+           {
+            "value": "2",
+            "text": "II"
+           },
+           {
+            "value": "3",
+            "text": "III"
+           },
+           {
+            "value": "4",
+            "text": "IV"
+           }
+          ]
+         },
+         {
+          "name": "alasan_merujuk",
+          "title": "6. Alasan Merujuk"
+         },
+         {
+          "name": "tempat_rujukan",
+          "title": "7. Tempat Rujukan"
+         },
+         {
+          "name": "pendamping_saat_merujuk",
+          "title": "8. Pendamping saat merujuk"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "kala1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "pertolongan",
+            "title": "9. Pertolongan melewati garis waspada ",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "masalah",
+            "title": "10. Masalah Lain, sebutkan"
+           },
+           {
+            "name": "penatalaksanaan",
+            "title": "11. Penatalaksanaan masalah tsb"
+           },
+           {
+            "name": "hasilnya",
+            "title": "12. Hasilnya"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "KALA I"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "kala2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "episiotomi",
+            "title": "13. Episiotomi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             },
+             {
+              "value": "ya",
+              "text": "Ya, Sebutkan"
+             }
+            ]
+           },
+           {
+            "name": "detil_ya",
+            "title": "Sebutkan",
+            "visibleIf": "{kala2[0].episiotomi} = 'ya'"
+           },
+           {
+            "name": "pendampingan",
+            "title": "14. Pendampingan saaat persalinan",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "suami",
+              "text": "Suami"
+             },
+             {
+              "value": "keluarga",
+              "text": "Kelluarga"
+             },
+             {
+              "value": "teman",
+              "text": "Teman"
+             },
+             {
+              "value": "tidak_ada",
+              "text": "Tidak ada"
+             }
+            ]
+           },
+           {
+            "name": "gawat_janin",
+            "title": "15. Gawat Janin",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             },
+             {
+              "value": "pemantauan",
+              "text": "Pemantauan DJJ setiap 5-10 menit selama kala II"
+             }
+            ]
+           },
+           {
+            "name": "detilya",
+            "title": "Tindakan yang dilakukan",
+            "cellType": "comment",
+            "visibleIf": "{kala2[0].gawat_janin} = 'ya'"
+           },
+           {
+            "name": "hasil",
+            "title": "Hasil",
+            "cellType": "text",
+            "visibleIf": "{kala2[0].gawat_janin} = 'pemantauan'"
+           },
+           {
+            "name": "distosia_bahu",
+            "title": "16. Distosia Bahu",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "tindakan_yang_dilakukan",
+            "title": "Tindakan yang dilakukan",
+            "cellType": "comment",
+            "visibleIf": "{kala2[0].distosia_bahu} = 'ya'"
+           },
+           {
+            "name": "masalah",
+            "title": "17. Masalah lain, sebutkan"
+           },
+           {
+            "name": "penatalaksanaan",
+            "title": "18. Penatalaksanaan masalah tersebut"
+           },
+           {
+            "name": "hasilnya",
+            "title": "19. Hasilnya"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "KALA II"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "kala3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "lama_kala",
+            "title": "20. Lama Kala III"
+           },
+           {
+            "name": "pemberian_oksitoksin",
+            "title": "21. Pemberian Oksitoksin 10 U IM",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             },
+             {
+              "value": "ya",
+              "text": "Ya"
+             }
+            ]
+           },
+           {
+            "name": "detilya",
+            "title": "waktu sesudah persalinan",
+            "cellType": "text",
+            "visibleIf": "{kala3[0].pemberian_oksitoksin} = 'ya'",
+            "inputType": "time"
+           },
+           {
+            "name": "detiltidak",
+            "title": "Alasan",
+            "cellType": "text",
+            "visibleIf": "{kala3[0].pemberian_oksitoksin} = 'tidak'"
+           },
+           {
+            "name": "pemberian_ulang",
+            "title": "22. Pemberian Ulang Oksitoksin (2x)",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "alasan",
+            "title": "Alasan",
+            "visibleIf": "{kala3[0].pemberian_ulang} = 'ya'"
+           },
+           {
+            "name": "penanganan_tali_pusat",
+            "title": "23. Peregangan Tali Pusat terkendali ?",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "alasan1",
+            "title": "Alasan",
+            "visibleIf": "{kala3[0].penanganan_tali_pusat} = 'tidak'"
+           },
+           {
+            "name": "masase_fundus",
+            "title": "24. Masase fundus uteri ?",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "alasan3",
+            "title": "Alasan",
+            "visibleIf": "{kala3[0].masase_fundus} = 'tidak'"
+           },
+           {
+            "name": "plasenta",
+            "title": "25. Plasenta lahir lengkap (intact) ",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "alasan4",
+            "title": "Tindakan yang dilakukan",
+            "visibleIf": "{kala3[0].plasenta} = 'tidak'"
+           },
+           {
+            "name": "plasenta_tidak",
+            "title": "26. Plasenta tidak lahir > 30 menit ",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "tindakan",
+            "title": "Tindakan",
+            "cellType": "comment",
+            "visibleIf": "{kala3[0].plasenta_tidak} = 'ya'"
+           },
+           {
+            "name": "laserasi",
+            "title": "27. Laserasi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "dimana",
+            "title": "Dimana",
+            "visibleIf": "{kala3[0].laserasi} = 'ya'"
+           },
+           {
+            "name": "jika_laserasi",
+            "title": "28. Jika Anestesi parenieum derajat ",
+            "cellType": "radiogroup",
+            "choices": [
+             "1",
+             "2",
+             "3",
+             "4"
+            ]
+           },
+           {
+            "name": "tindakan1",
+            "title": "Tindakan ",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "penjahitan",
+              "text": "Penjahitan dengan / tanpa laserasi"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak dijahit "
+             }
+            ]
+           },
+           {
+            "name": "alasan5",
+            "title": "Alasan",
+            "visibleIf": "{kala3[0].tindakan1} = 'tidak'"
+           },
+           {
+            "name": "atonia",
+            "title": "29. Atonia uteri",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tiak"
+             }
+            ]
+           },
+           {
+            "name": "tindakan3",
+            "title": "Tindakan",
+            "visibleIf": "{kala3[0].atonia} = 'ya'"
+           },
+           {
+            "name": "jumlah_pendarahan",
+            "title": "30. Jumlah Pendarahan"
+           },
+           {
+            "name": "masalah_lain2",
+            "title": "31. Masalah lain, sebutkan"
+           },
+           {
+            "name": "penatalaksanaan_kain",
+            "title": "32. Penatalaksanaan kain, sebutkan"
+           },
+           {
+            "name": "hasilnya3",
+            "title": "33. Hasilnya"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "KALA III"
+       }
+      ]
+     },
+     {
+      "name": "catatan_persalinan2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "bayi_baru_lahir",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "berat_badan",
+            "title": "34. Berat Badan"
+           },
+           {
+            "name": "panjang_badan",
+            "title": "35. Panjang Badan"
+           },
+           {
+            "name": "jenis_kelamin",
+            "title": "36. Jenis Kelamin",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "p",
+              "text": "P"
+             },
+             {
+              "value": "l",
+              "text": "L"
+             }
+            ]
+           },
+           {
+            "name": "penilaian_bayi_baru_lahir",
+            "title": "37. Penilaian bayi baru lahir",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "Baik",
+              "text": "Baik"
+             },
+             {
+              "value": "Penyulit",
+              "text": "Penyulit"
+             }
+            ]
+           },
+           {
+            "name": "bayi_lahir",
+            "title": "38. Bayi Lahir",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "normal",
+              "text": "Normal"
+             },
+             {
+              "value": "aspiksia_ringan",
+              "text": "Aspiksia ringan / pucat / biru / lemas"
+             }
+            ]
+           },
+           {
+            "name": "tindakan1",
+            "title": "Tindakan",
+            "cellType": "checkbox",
+            "visibleIf": "{bayi_baru_lahir[0].bayi_lahir} = 'normal'",
+            "choices": [
+             {
+              "value": "mengeringkan",
+              "text": "Mengeringkan "
+             },
+             {
+              "value": "rangsangan",
+              "text": "Rangsangan taktil"
+             },
+             {
+              "value": "bungkus_bayi",
+              "text": "Bungkus bayi dan tempatkan disisi ibu"
+             }
+            ]
+           },
+           {
+            "name": "tindakan2",
+            "title": "Tindakan",
+            "cellType": "checkbox",
+            "visibleIf": "{bayi_baru_lahir[0].bayi_lahir} = 'aspiksia_ringan'",
+            "choices": [
+             {
+              "value": "mengeringkan",
+              "text": "Mengeringkan"
+             },
+             {
+              "value": "rangsangan",
+              "text": "Rangsangan taktil"
+             },
+             {
+              "value": "bungkus_bayi",
+              "text": "Bungkus Bayi"
+             },
+             {
+              "value": "bebaskan",
+              "text": "Bebaskan jalan nafas"
+             },
+             {
+              "value": "menghangatkan",
+              "text": "Menghangatkan "
+             },
+             {
+              "value": "tempatkan",
+              "text": "Tempatkan disisi ibu"
+             },
+             {
+              "value": "cacat_bawaan",
+              "text": "Cacat Bawaan"
+             },
+             {
+              "value": "hipotermi",
+              "text": "Hipotermi"
+             },
+             {
+              "value": "infeksi_mata",
+              "text": "Pencegahan Infeksi Mata"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Lainnya"
+           },
+           {
+            "name": "sebutkan",
+            "title": "Sebutkan",
+            "visibleIf": "{bayi_baru_lahir[0].tindakan2} anyof ['cacat_bawaan']"
+           },
+           {
+            "name": "tindakan3",
+            "title": "Tindakan",
+            "visibleIf": "{bayi_baru_lahir[0].tindakan2} anyof ['hipotermi']"
+           },
+           {
+            "name": "pemberian_asi",
+            "title": "39. Pemberian ASI",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "waktu",
+            "title": "Waktu",
+            "cellType": "text",
+            "visibleIf": "{bayi_baru_lahir[0].pemberian_asi} = 'ya'",
+            "inputType": "time"
+           },
+           {
+            "name": "alasan",
+            "title": "Alasan",
+            "visibleIf": "{bayi_baru_lahir[0].pemberian_asi} = 'tidak'"
+           },
+           {
+            "name": "masalah",
+            "title": "40. Masalah, sebutkan"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "BAYI BARU LAHIR"
+       }
+      ],
+      "title": "Halaman 2"
+     },
+     {
+      "name": "catatan_persalinan3",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "table1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "jam",
+            "title": "Jam ke"
+           },
+           {
+            "name": "waktu",
+            "title": "Waktu",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "tekanan_darah",
+            "title": "Tekanan Darah"
+           },
+           {
+            "name": "nadi",
+            "title": "Nadi"
+           },
+           {
+            "name": "suhu",
+            "title": "Suhu"
+           },
+           {
+            "name": "tinggi_fundus",
+            "title": "Tinggis Fundus uteri"
+           },
+           {
+            "name": "kontraksi",
+            "title": "Kontraksi Uterus"
+           },
+           {
+            "name": "kandung_kemis",
+            "title": "Kandung Kemih"
+           },
+           {
+            "name": "perdarahan",
+            "title": "Perdarahan"
+           }
+          ],
+          "horizontalScroll": true,
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "columnMinWidth": "200px",
+          "rowCount": 1,
+          "minRowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "PEMANTAUAN PERSALINAN KALA IV"
+       },
+       {
+        "type": "comment",
+        "name": "masalah_kala",
+        "title": "Masalah Kala IV",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "penatalaksanaaan",
+        "title": "Penatalaksanaan masalah",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "tersebut",
+          "title": "Tersebut"
+         },
+         {
+          "name": "hasilnya",
+          "title": "Hasilnya"
+         }
+        ]
+       }
+      ],
+      "title": "Halaman 3"
+     },
+     {
+      "name": "catatan_persalinan4",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl",
+        "title": "Tanggal / Jam",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "comment",
+        "name": "laporan_partus",
+        "title": "LAPORAN PARTUS KALA I s/d IV",
+        "hideNumber": true
+       },
+       {
+        "type": "dropdown",
+        "name": "question1",
+        "title": "Asisten",
+        "hideNumber": true,
+        "choices": [
+         "item1",
+         "item2",
+         "item3"
+        ],
+        "choicesByUrl": {
+         "url": "/admin/admin/rest_userppa_iri"
+        }
+       },
+       {
+        "type": "dropdown",
+        "name": "question2",
+        "startWithNewLine": false,
+        "title": "Penolong persalinan",
+        "hideNumber": true,
+        "choices": [
+         "item1",
+         "item2",
+         "item3"
+        ],
+        "choicesByUrl": {
+         "url": "/admin/admin/rest_userppa_iri"
+        }
+       }
+      ],
+      "title": "Halama 4"
+     }
+    ]
+   }

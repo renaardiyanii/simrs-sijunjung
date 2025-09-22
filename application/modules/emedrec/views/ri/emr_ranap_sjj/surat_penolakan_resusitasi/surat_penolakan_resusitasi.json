@@ -1,0 +1,82 @@
+{
+    "title": "SURAT PERNYATAAN MENOLAK RESUSITASI ( DO NOT RESUSCITATE ) ",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "title": "Yang bertandatangan di bawah ini saya :",
+          "hideNumber": true,
+          "readOnly": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama :"
+           },
+           {
+            "name": "text2",
+            "title": "Tanggal lahir :"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<p>Dengan ini saya menyatakan bahwa saya membuat keputusan dan menyutujui perintah do not resuscitate (jangan di resusitasi).\n<p>Saya menyatakan bahwa jika jantung saya berhenti berdetak atau jika saya berhenti bernapas, tidak ada prosedur medis untuk mengembalikan bernapas atau berfungsi kembali jantung akan dilakukan oleh staf Rumah Sakit, termasuk namun tidak terbatas pada staf layanan medis darurat.\n<p>Saya memahami bahwa keputusan ini tidakakan mencegah saya menerima pelayanan kesehatan lainnya seperti pemberian oksigen dan langkah-langkah perawatan untuk meningkatkan kenyamanan lainnya.\n<p>Saya memberikan izin agar informasi ini diberikan kepada seluruh staf rumah sakit, Saya memahami bahwa saya dapat mencabut pernyataan ini setiap saat.\n"
+         },
+         {
+          "type": "text",
+          "name": "question3",
+          "title": "Tanah badantuang,",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question4",
+          "title": "Saksi 1",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question5",
+          "startWithNewLine": false,
+          "title": "Saksi 2",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question6",
+          "startWithNewLine": false,
+          "title": "Yang Menyatakan,",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question9",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

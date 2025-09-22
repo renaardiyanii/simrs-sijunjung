@@ -1,0 +1,3342 @@
+{
+    "title": "RENCANA ASUHAN KEPERAWATAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Tanggal dan jam ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Tanggal"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question4",
+          "title": "Gangguan integritas kulit / jaringan (D.0129)",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Perubahan sirkulasi"
+           },
+           {
+            "value": "item2",
+            "text": "perubahan status nutrisi (kelebian atau kekurangan)"
+           },
+           {
+            "value": "item3",
+            "text": "kekurangan / kelebihan volume cairan"
+           },
+           {
+            "value": "item4",
+            "text": "penurunan mobilitas"
+           },
+           {
+            "value": "item5",
+            "text": "suhu lingkungan yang ekstrem"
+           },
+           {
+            "value": "item6",
+            "text": "kelembaban"
+           },
+           {
+            "value": "item7",
+            "text": "proses menua"
+           },
+           {
+            "value": "item8",
+            "text": "neuropati pigmentasi"
+           },
+           {
+            "value": "item9",
+            "text": "perubahan hormonal"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question9",
+          "html": "<b>"
+         },
+         {
+          "type": "checkbox",
+          "name": "question7",
+          "title": "Dibuktikan dengan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Kerusakan jaringan dan atau lapisan kulit"
+           },
+           {
+            "value": "item2",
+            "text": "nyeri"
+           },
+           {
+            "value": "item3",
+            "text": "perdarahan"
+           },
+           {
+            "value": "item4",
+            "text": "kemerahan"
+           },
+           {
+            "value": "item5",
+            "text": "hematoma"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question8",
+          "title": "kondisi klinis terkait",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Imobilitas"
+           },
+           {
+            "value": "item2",
+            "text": "gagal jantung kongestif"
+           },
+           {
+            "value": "item3",
+            "text": "gagal ginjal "
+           },
+           {
+            "value": "item4",
+            "text": "diabetes mellitus"
+           },
+           {
+            "value": "item5",
+            "text": "imunodefisiensi"
+           }
+          ]
+         }
+        ],
+        "title": "DIAGNOSA KEPERAWATAN",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question5",
+          "title": "Setelah dilakukan intervensi selama",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question3",
+          "title": "maka gangguan integritas kulit (L.14125) meningkat dengan kriteria hasil",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "penyatuan kulit meningkat"
+           },
+           {
+            "value": "item2",
+            "text": "penyatuan tepi kulit meningkat"
+           },
+           {
+            "value": "item3",
+            "text": "jaringan granulasi meningkat"
+           },
+           {
+            "value": "item4",
+            "text": "edema pada sisi luka menurun"
+           },
+           {
+            "value": "item5",
+            "text": "drainase purulent menurun"
+           },
+           {
+            "value": "item6",
+            "text": "eritem pada kulit sekitar menurun"
+           },
+           {
+            "value": "item7",
+            "text": "peningkatan suhu kulit menurun"
+           },
+           {
+            "value": "item8",
+            "text": "bau tidak sedap pada luka menurun"
+           },
+           {
+            "value": "item9",
+            "text": "nekrosis menurun"
+           },
+           {
+            "value": "item10",
+            "text": "infeksi menurun"
+           }
+          ]
+         }
+        ],
+        "title": "LUARAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel65",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question2",
+          "title": "Perawatan luka (I.14564), Tindakan observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "a. monitor karakteristik luka 9mis, drainase, warna , ukuran , bau"
+           },
+           {
+            "value": "item2",
+            "text": "b. monitor tanda tanda infeksi"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question6",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "a.lepaskan balutan dan plester secara perlahan"
+           },
+           {
+            "value": "item2",
+            "text": "b. cukur rambut disekitar daerah luka, jika perlu"
+           },
+           {
+            "value": "item3",
+            "text": "c. bersihkan dengan cairan NaCl atau pembersih nontosik, sesuai kebutuhan"
+           },
+           {
+            "value": "item4",
+            "text": "d. bersihkan jaringan nektrotik"
+           },
+           {
+            "value": "item5",
+            "text": "e. berikan salep yang sesuai ke kulit/lesi, jika perlu"
+           },
+           {
+            "value": "item6",
+            "text": "f. pasang balutan sesuai jenis luka"
+           },
+           {
+            "value": "item7",
+            "text": "g. pertahankan teknik steril saat melakukan perawatan luka"
+           },
+           {
+            "value": "item8",
+            "text": "h. ganti balutan sesuai jumlah eksudat dan drainase"
+           },
+           {
+            "value": "item9",
+            "text": "i. jadwalkan perubahan posisi setiap 2 jam atau sesuai kondisi pasien"
+           },
+           {
+            "value": "item10",
+            "text": "j. berikan diet dengan kalori 30-35 kkal/kg/bb/hari dengan protein 1,25 - 1,5g/kg/bb/hari"
+           },
+           {
+            "value": "item11",
+            "text": "k. berikan suplemen vitamin dan mineral (mis. vitamin A, vitamin C, Zinc, asam amino), sesuai indikasi"
+           },
+           {
+            "value": "item12",
+            "text": "l. Berika terapi TENS (Stimulasi saraf transkutaneous), jika perlu"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question10",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "a. jelaskan tanda dan gejala infeksi"
+           },
+           {
+            "value": "item2",
+            "text": "b. anjurkan mengkonsumsi makanan tinggi kalori dan protein "
+           },
+           {
+            "value": "item3",
+            "text": "c. anjurkan prosedur perawatan luka secara mandiri"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question11",
+          "title": "Kolaborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "a. kolaborasi prosedur debridement (mis, enximati, biologis, mekanis, antolik) jika perlu"
+           },
+           {
+            "value": "item2",
+            "text": "b. kolaborasi pemberian antibiotik, jika perlu"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question13",
+          "html": "<b>Perawatan integritas kulit (L11353) tindakan :"
+         },
+         {
+          "type": "html",
+          "name": "question15"
+         },
+         {
+          "type": "checkbox",
+          "name": "question12",
+          "title": "Observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "identifikasi penyebab gangguan integritas kulit (mis, perubahan sirkulasi, perubahan status nutrisi (kelebihan atau kekurangan), kekurangan/ kelebihan volume cairan penurunan mobilitas, suhu lingkungan yang ekstrem, penurunan kelembaban."
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question16",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "ubah posisi tiap 2 jam tirah baring"
+           },
+           {
+            "value": "item2",
+            "text": "lakukan pemijitan pada area penonjolan tulang jika perlu"
+           },
+           {
+            "value": "item3",
+            "text": "bersihkan perineal dengan air hangat , terutama jika periode diare"
+           },
+           {
+            "value": "item4",
+            "text": "gunakan produk berbahan petroleum atau minyak pada kulit kering"
+           },
+           {
+            "value": "item5",
+            "text": "gunakan produk berbahan ringan / alami dan hipoalergik pada kulit sensitive"
+           },
+           {
+            "value": "item6",
+            "text": "hindari produk berbahan dasar alkohol pada kulit kering"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question14",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anjurkan menggunakan pelembab (lotion, serum)"
+           },
+           {
+            "value": "item2",
+            "text": "anjurkan minum air yang cukup"
+           },
+           {
+            "value": "item3",
+            "text": "anjurkan meningkat asupan nutrisi"
+           },
+           {
+            "value": "item4",
+            "text": "anjurkan meningkatkan asupan buah dan sayur"
+           },
+           {
+            "value": "item5",
+            "text": "anjurkan menghindari terpapar suhu ekstrem"
+           },
+           {
+            "value": "item6",
+            "text": "anjurkan menggunakan tabir surya spf saat berada diluar rumah"
+           },
+           {
+            "value": "item7",
+            "text": "anjurkan mandi dan menggunakan sabun"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question17",
+          "title": "Kolaborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kolaborasi prosedur "
+           },
+           {
+            "value": "item2",
+            "text": "anjurkan minum air yang cukup"
+           },
+           {
+            "value": "item3",
+            "text": "anjurkan meningkat asupan nutrisi"
+           },
+           {
+            "value": "item4",
+            "text": "anjurkan meningkatkan asupan buah dan sayur"
+           },
+           {
+            "value": "item5",
+            "text": "anjurkan menghindari terpapar suhu ekstrem"
+           },
+           {
+            "value": "item6",
+            "text": "anjurkan menggunakan tabir surya spf saat berada diluar rumah"
+           },
+           {
+            "value": "item7",
+            "text": "anjurkan mandi dan menggunakan sabun"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question18",
+          "html": "<b> Perawatan luka tekan tindakan :"
+         },
+         {
+          "type": "checkbox",
+          "name": "question19",
+          "title": "Observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "monitor kondisi luka, derajat luka, perdarahan, warna dasarluka, infeksieksudat, bau luka, kondisi tepi luka"
+           },
+           {
+            "value": "item2",
+            "text": "monitor tanda dan gejalan infeksi luka"
+           },
+           {
+            "value": "item3",
+            "text": "monitor status nutrisi (asupan kalori dan protein)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question21",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "bersihkan kulit di sekitar luka dengan sabun dan air"
+           },
+           {
+            "value": "item2",
+            "text": "bersihkan luka bagian dalam dengan menggunakan nacl 0,9%"
+           },
+           {
+            "value": "item3",
+            "text": "lakukan balutan pada luka jika perlu"
+           },
+           {
+            "value": "item4",
+            "text": "oleskan salep jika perlu"
+           },
+           {
+            "value": "item5",
+            "text": "gunakan tempat tidur dan khsusu jika perlu"
+           },
+           {
+            "value": "item6",
+            "text": "pertahankan kepala tempat tidur pada posisi terendah yang dapat di toleransi"
+           },
+           {
+            "value": "item7",
+            "text": "jadwalkan perubahan posisi pasien setiap 2 jam atau sesuai kondisi pasien"
+           },
+           {
+            "value": "item8",
+            "text": "berikan diet dengan kalori 30-35 kkal/kg/bb/hari dan protein 1,25-1,5g/kg/bb/hari"
+           },
+           {
+            "value": "item9",
+            "text": "Berikan splemen vitamin dan mineral (mis vit A, zinc dan asam amino)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question20",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anjurkan melaporkan tanda tanda keruasakan kulit"
+           },
+           {
+            "value": "item2",
+            "text": "anjurkan menghindari duduk dalam jangka waktu lama"
+           },
+           {
+            "value": "item3",
+            "text": "anjurkan prosedur perawatan perawatan luka"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question22",
+          "title": "Kolabborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kolaborasi prosedur debri jika perlu"
+           },
+           {
+            "value": "item2",
+            "text": "kolaborasi pemberian anti biotik jika perlu "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI KEPERAWATAN",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question23",
+          "title": "Tanggal dan jam ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Tanggal"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question24",
+          "title": "Gangguan mobilitas fisik (D. 0054) berhubungan dengan :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kerusakan integritas struktur tulang"
+           },
+           {
+            "value": "item2",
+            "text": "perubahan metabolisme"
+           },
+           {
+            "value": "item3",
+            "text": "ketidakbugaran fisik"
+           },
+           {
+            "value": "item4",
+            "text": "penurunan masa otot"
+           },
+           {
+            "value": "item5",
+            "text": "penurunan kekuatan otot"
+           },
+           {
+            "value": "item6",
+            "text": "keterlambatan perkembangan"
+           },
+           {
+            "value": "item7",
+            "text": "kelakuan sendi"
+           },
+           {
+            "value": "item8",
+            "text": "kontaktur"
+           },
+           {
+            "value": "item9",
+            "text": "manultrisi"
+           },
+           {
+            "value": "item10",
+            "text": "gangguan muskuloskeletal"
+           },
+           {
+            "value": "item11",
+            "text": "gangguan neuromuskular"
+           },
+           {
+            "value": "item12",
+            "text": "efek agen farmakologis"
+           },
+           {
+            "value": "item13",
+            "text": "program pembatasan gerak"
+           },
+           {
+            "value": "item14",
+            "text": "nyeri"
+           },
+           {
+            "value": "item15",
+            "text": "kecemasan"
+           },
+           {
+            "value": "item16",
+            "text": "keengganan melakukan pergerakan"
+           },
+           {
+            "value": "item17",
+            "text": "gangguan sensori persepsi"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question25",
+          "html": "<b>"
+         },
+         {
+          "type": "checkbox",
+          "name": "question26",
+          "title": "Dibuktikan dengan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kekuatan otot menurun"
+           },
+           {
+            "value": "item2",
+            "text": "rentang gerak (ROM) menurun"
+           },
+           {
+            "value": "item3",
+            "text": "sendi kaku"
+           },
+           {
+            "value": "item4",
+            "text": "gerakan tidak terkoordinasi"
+           },
+           {
+            "value": "item5",
+            "text": "gerrakan terbatas"
+           },
+           {
+            "value": "item6",
+            "text": "fisik lemah"
+           }
+          ]
+         }
+        ],
+        "title": "DIAGNOSA KEPERAWATAN",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question28",
+          "title": "Setelah dilakukan intervensi selama",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question29",
+          "title": "maka mobilitas fisik (L.05042) Meningkat dengan kriteria hasil :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "pergerakan ekstremitas meningkat"
+           },
+           {
+            "value": "item2",
+            "text": "kekuatan otot meningkat"
+           },
+           {
+            "value": "item3",
+            "text": "Rentang gerak (ROM) meningkat"
+           },
+           {
+            "value": "item4",
+            "text": "nyeri menurun"
+           },
+           {
+            "value": "item5",
+            "text": "kecemasan menurun"
+           },
+           {
+            "value": "item6",
+            "text": "kaku sendi menurun "
+           },
+           {
+            "value": "item7",
+            "text": "gerakan tidak tekoordinasi menurun"
+           },
+           {
+            "value": "item8",
+            "text": "gerakan terbatas menurun"
+           },
+           {
+            "value": "item9",
+            "text": "kelemahan fisik"
+           }
+          ]
+         }
+        ],
+        "title": "LUARAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question30",
+          "title": "Dukungan mobilitas (L.05173) observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "identifikasi adanya nyeri atau keluhan fisik lainnya"
+           },
+           {
+            "value": "item2",
+            "text": "identifikasi toleransi fisik melakukan pergerakan "
+           },
+           {
+            "value": "item3",
+            "text": "monitor frekuensi jantung dan tekanan darah sebelum memulai aktifitas"
+           },
+           {
+            "value": "item4",
+            "text": "monitor kondisi umum selama melaksanakan mobilitas"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question31",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "fasilitas aktivitas mobilitas dengan alat bantu (mis:: pagar tempat tidur)"
+           },
+           {
+            "value": "item2",
+            "text": "fasilitas melakukan pergerakan jika perlu"
+           },
+           {
+            "value": "item3",
+            "text": "libatkan keluarga untuk membantu pasien dalam meningkatkan pergerakan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question32",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "jelaskan tujuan dan prosedur mobilitas"
+           },
+           {
+            "value": "item2",
+            "text": "anjurkan melakukan mobilisasi dini"
+           },
+           {
+            "value": "item3",
+            "text": "anjurkan mobilisasi sederhana yang harus dilakukan (mis:duduk di tempat tidur, duduk disisi tempat tidur, pindah dari tempat tidur ke kursi roda"
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI KEPERAWATAN",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question27",
+          "title": "Tanggal dan jam ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Tanggal"
+       },
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question33",
+          "title": "Intoleran aktivitas (D.0056) berhubungan dengan ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "ketidakseimbangan antara suplai dan kebutuhan oksigen"
+           },
+           {
+            "value": "item2",
+            "text": "Tirah baring"
+           },
+           {
+            "value": "item3",
+            "text": "kelemahan"
+           },
+           {
+            "value": "item4",
+            "text": "imobilitas"
+           },
+           {
+            "value": "item5",
+            "text": "gaya hidup monoton"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question35",
+          "title": "Dibuktikan dengan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Frekuensi jantung meningkat >20% dari kondisi istrahat"
+           },
+           {
+            "value": "item2",
+            "text": "tekanan darah berubah >20% dari kondisi istirahat"
+           },
+           {
+            "value": "item3",
+            "text": "gambarkan EKG menunjukan aritmia saat/setelah aktivitas"
+           },
+           {
+            "value": "item4",
+            "text": "gambaran EKG menunjukan iskemia"
+           },
+           {
+            "value": "item5",
+            "text": "sianosis"
+           }
+          ]
+         }
+        ],
+        "title": "DIAGNOSA KEPERAWATAN",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question36",
+          "title": "Setelah dilakukan intervensi selama",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question37",
+          "title": "maka toleransi aktivitas (L.05047) meningkat dengan kriteria hasil",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "frekuensi nadi meningkat"
+           },
+           {
+            "value": "item2",
+            "text": "keluhan lelah menurun"
+           },
+           {
+            "value": "item3",
+            "text": "dispnea saat aktivitas menurun"
+           },
+           {
+            "value": "item4",
+            "text": "dispnea setelah aktivitas menurun"
+           },
+           {
+            "value": "item5",
+            "text": "aritmia saat dan setelah aktivitas menurun"
+           },
+           {
+            "value": "item6",
+            "text": "sianosis menurun"
+           },
+           {
+            "value": "item7",
+            "text": "tekanan darah membaik"
+           },
+           {
+            "value": "item8",
+            "text": "frekuensi nafas membaik"
+           },
+           {
+            "value": "item9",
+            "text": "EKG iskemia membaik"
+           },
+           {
+            "value": "item10",
+            "text": "kemudahan dalam melakukan aktivitas sehari hari meningkat"
+           },
+           {
+            "value": "item11",
+            "text": "saturasi oksigen meningkat"
+           }
+          ]
+         }
+        ],
+        "title": "LUARAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel11",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question38",
+          "title": "Manajemen Energi (I.05178)",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Identifikasi gangguan fungsi tubuh yang mengakibatkan kelelahan "
+           },
+           {
+            "value": "item2",
+            "text": "monitor kelelahan fisik emosional"
+           },
+           {
+            "value": "item3",
+            "text": "monitor pola dan jam tidur"
+           },
+           {
+            "value": "item4",
+            "text": "monitor lokasi dan ketidak nyamanan selama melakukan aktivitas "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question39",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "sediakan lingkungan nyaman dan rendah stimulus (mis: cahaya suara, kunjungan)"
+           },
+           {
+            "value": "item2",
+            "text": "lakukan latihan rentang gerak pasif atau aktif"
+           },
+           {
+            "value": "item3",
+            "text": "berikan aktivitas distraksi yang menyenangkan "
+           },
+           {
+            "value": "item4",
+            "text": "fasilitas duduk di sisi tempat tidur, jika dapat berpindah atau berjalan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question40",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "anjurkan tirah baring"
+           },
+           {
+            "value": "item2",
+            "text": "anjurkan melakukan aktivitas secara bertahap"
+           },
+           {
+            "value": "item3",
+            "text": "anjurkan menghubungi perawat jika tanda dan gejala kelehan tidak berkurang "
+           },
+           {
+            "value": "item4",
+            "text": "anjarkan strategi koping untuk mengurangi kelelahan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question34",
+          "title": "Kolaborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kolaborasi dengan ahli gizi tentang cara meningkatkan asupan makanan "
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI KEPERAWATAN",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page4",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel12",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question41",
+          "title": "Tanggal dan jam ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Tanggal"
+       },
+       {
+        "type": "panel",
+        "name": "panel13",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question51",
+          "html": "<b>Penurunan curah jantung D.0008"
+         },
+         {
+          "type": "checkbox",
+          "name": "question42",
+          "title": "Berhubungan dengan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "perubahan irama jantung"
+           },
+           {
+            "value": "item2",
+            "text": "perubahan frekuensi jantung"
+           },
+           {
+            "value": "item3",
+            "text": "perubahan kontraktilitas"
+           },
+           {
+            "value": "item4",
+            "text": "perubahan preload"
+           },
+           {
+            "value": "item5",
+            "text": "perubahan afterload"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question43",
+          "title": "Dibuktikan dengan : gejala dan tanda mayor subjektif",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "palpitasi"
+           },
+           {
+            "value": "item2",
+            "text": "lelah"
+           },
+           {
+            "value": "item3",
+            "text": "dispnea"
+           },
+           {
+            "value": "item4",
+            "text": "paroxysmal noctunal dyspnea (PND) : orthopnea batuk"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question50",
+          "title": "1. perubahan irama jantung",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "bradikardial / takikardia"
+           },
+           {
+            "value": "item2",
+            "text": "gambaran EKG aritmia atau gangguan konduksi"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question53",
+          "title": "2. perubahan preload",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "edema"
+           },
+           {
+            "value": "item2",
+            "text": "distensi vena jugularis"
+           },
+           {
+            "value": "item3",
+            "text": "central venous pressure (CVP) meningkat / menurun"
+           },
+           {
+            "value": "item4",
+            "text": "hepatomegali"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question52",
+          "title": "3. perubahan afterload",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "tekanan darah meningkat / menurun"
+           },
+           {
+            "value": "item2",
+            "text": "nadi perifer teraba lemah"
+           },
+           {
+            "value": "item3",
+            "text": "capillary refill time > 3 detik"
+           },
+           {
+            "value": "item4",
+            "text": "oliguria"
+           },
+           {
+            "value": "item5",
+            "text": "warna kulir pucat dan atau sianosis"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question54",
+          "title": "4. perubahan kontraktilitas",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "terdengar suara jantung S3 dan atau S4"
+           },
+           {
+            "value": "item2",
+            "text": "Ejection fraction (EF) menurun"
+           },
+           {
+            "value": "item3",
+            "text": "capillary refill time > 3 detik"
+           },
+           {
+            "value": "item4",
+            "text": "oliguria"
+           },
+           {
+            "value": "item5",
+            "text": "warna kulir pucat dan atau sianosis"
+           }
+          ]
+         }
+        ],
+        "title": "DIAGNOSA KEPERAWATAN",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel14",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question44",
+          "title": "setelah dilakukan tindakan keperawatan diharapkan ketidak kuatan jantung memompa darah meningkat L.01008",
+          "hideNumber": true,
+          "placeHolder": "x24jam"
+         },
+         {
+          "type": "checkbox",
+          "name": "question45",
+          "title": "Dengan KH",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kekuatan nadi meningkat"
+           },
+           {
+            "value": "item2",
+            "text": "ejection fraction (EF) meningkat"
+           },
+           {
+            "value": "item3",
+            "text": "cardiac index (CI) meningkat"
+           },
+           {
+            "value": "item4",
+            "text": "left ventricular stroke work index (LVSWI) meningkat"
+           },
+           {
+            "value": "item5",
+            "text": "palpitasi menurun"
+           },
+           {
+            "value": "item6",
+            "text": "bradikardi menurun"
+           },
+           {
+            "value": "item7",
+            "text": "takikardi menurun"
+           },
+           {
+            "value": "item8",
+            "text": "gambaran EKG aritmia"
+           },
+           {
+            "value": "item9",
+            "text": "lelah menurun"
+           },
+           {
+            "value": "item10",
+            "text": "edema menurun"
+           },
+           {
+            "value": "item11",
+            "text": "distensi vena jugularis menurun"
+           },
+           {
+            "value": "item12",
+            "text": "dispnea menurun"
+           },
+           {
+            "value": "item13",
+            "text": "oliguria menurun"
+           },
+           {
+            "value": "item14",
+            "text": "sianosis / pucat menurun"
+           },
+           {
+            "value": "item15",
+            "text": "paroxysmal nocturnal dyspnea menurun"
+           },
+           {
+            "value": "item16",
+            "text": "ortopnea menurun"
+           },
+           {
+            "value": "item17",
+            "text": "batuk menurun"
+           },
+           {
+            "value": "item18",
+            "text": "suara jantung s3 menurun"
+           },
+           {
+            "value": "item19",
+            "text": "suara jantung s4 menurun"
+           },
+           {
+            "value": "item20",
+            "text": "murmur jantung menurun"
+           },
+           {
+            "value": "item21",
+            "text": "berat badan menurun"
+           },
+           {
+            "value": "item22",
+            "text": "hepatomegali menurun"
+           },
+           {
+            "value": "item23",
+            "text": "tekanan darah membaik"
+           },
+           {
+            "value": "item24",
+            "text": "CRT membaik"
+           }
+          ]
+         }
+        ],
+        "title": "LUARAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel15",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question46",
+          "title": "Perawatan Jantung",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Identifikasi tanda / gejala primer penurunan curah jantung (meliputi dispnea, kelelahan adema ortopnea paroxysmal noctural dyspnea , peningkat CPV)"
+           },
+           {
+            "value": "item2",
+            "text": "Identifikasi tanda / gejala sekunder penurunan curah jantung (meliputi peningkatan berat badan, hepatomegali ditensi vena jugularis, palpitasi, ronkhi basah, oliguria, batuk, kulit pucat"
+           },
+           {
+            "value": "item3",
+            "text": "monitor tekanan darah (termasuk tekanan darah ortostatik, jika perlu)"
+           },
+           {
+            "value": "item4",
+            "text": "monitor intake dan output cairan"
+           },
+           {
+            "value": "item5",
+            "text": "monitor berat badan setiap hari pada waktu yang sama "
+           },
+           {
+            "value": "item6",
+            "text": "monitor saturasi oksigen"
+           },
+           {
+            "value": "item7",
+            "text": "monitor keluhan nyeri dada (mis. intensitas, lokasi, radiasi, durasi, presivitasi yang mengurangi nyeri)"
+           },
+           {
+            "value": "item8",
+            "text": "monitor EKG 12 sadap on"
+           },
+           {
+            "value": "item9",
+            "text": "monitor aritmia (kelainan irama dan frekwensi)"
+           },
+           {
+            "value": "item10",
+            "text": "monitor nilai laboratorium jantung (mis.elektrolit, enzim jantung, BNP, Ntpro BNP)"
+           },
+           {
+            "value": "item11",
+            "text": "monitor fungsi alat pacu jantung"
+           },
+           {
+            "value": "item12",
+            "text": "periksa tekanan darah dan frekwensi nadi sebelum pemberian obat (mis. betablocker, acinhibitor, calcium channel blocker, digoksin)"
+           },
+           "item13"
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question47",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "posisikan pasien semi fowler atau fowler dengan kaki kebawah atau posisi nyaman"
+           },
+           {
+            "value": "item2",
+            "text": "berikan diet jantung yang sesuai (mis. batasi asupan kafein, natrium, kolestrol, dan makanan tinggi lemak)"
+           },
+           {
+            "value": "item3",
+            "text": "gunakan stocking elastis atau pneumatik intermiten, sesuai indikasi"
+           },
+           {
+            "value": "item4",
+            "text": "fasilitasi pasien dan keluarga untuk mengurasi stress, jika perlu"
+           },
+           {
+            "value": "item5",
+            "text": "berikan terapi relaksasi untuk  mengurangi stres, jika perlu"
+           },
+           {
+            "value": "item6",
+            "text": "berikan dukungan emosional dan spiritual"
+           },
+           {
+            "value": "item7",
+            "text": "berikan oksigen untuk mempertahankan saturasi okesigen >94%"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question48",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "anjurkan beraktivitas fisik sesuai toleransi"
+           },
+           {
+            "value": "item2",
+            "text": "anjurkan beraktivitas secara bertahap"
+           },
+           {
+            "value": "item3",
+            "text": "anjurkan berhenti meroko"
+           },
+           {
+            "value": "item4",
+            "text": "ajarkan pasien dan keluarga mengukur berat badan harian"
+           },
+           {
+            "value": "item5",
+            "text": "ajarkan pasien dan keluarga mengukur intake dan output cairan harian"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question55",
+          "title": "kolaborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kolaborasi pemberian antiartimia, jika perlu"
+           },
+           {
+            "value": "item2",
+            "text": "rujuk ke program rahabilitasi jantung"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question49",
+          "html": "<b> PERAWATAN JANTUNG AKUT (I.02076)"
+         },
+         {
+          "type": "checkbox",
+          "name": "question56",
+          "title": "Observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "identifikasi karakteristik nyeri dada (meliputi faktor pemicu dan pereda, kualitas, lokasi, radiasi, skala, durasi, frekuensi"
+           },
+           {
+            "value": "item2",
+            "text": "monitor EKG 12 sadapan untuk perubahan ST dan T "
+           },
+           {
+            "value": "item3",
+            "text": "monitor aritmia (kelainan irama dan frekuensi)"
+           },
+           {
+            "value": "item4",
+            "text": "monitor elektrolit yang dapat meningkatkan resiko aritmia (mis, kalium, magensium serum)"
+           },
+           {
+            "value": "item5",
+            "text": "monitor enzim jantung (mis , CK, CK-MK, Troponim T, Troponim I)"
+           },
+           {
+            "value": "item6",
+            "text": "monitor saturasi oksigen"
+           },
+           {
+            "value": "item7",
+            "text": "identifikasi stratifikasi pada sindrom koroner akut(mis . skor, killip , cruscade)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question58",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "pertahankan tirah baring minimal 12 jam"
+           },
+           {
+            "value": "item2",
+            "text": "pasang akses intravena"
+           },
+           {
+            "value": "item3",
+            "text": "puasakan hingga bebas nyeri"
+           },
+           {
+            "value": "item4",
+            "text": "berikan terapi relaksasi untuk mengurangi ansietas dan stress"
+           },
+           {
+            "value": "item5",
+            "text": "sediakan lingkungan yang kondusif untuk beristirahat dan pemulihan"
+           },
+           {
+            "value": "item6",
+            "text": "siapkan menjalani intervensi koroner perkuatan , jika perlu"
+           },
+           {
+            "value": "item7",
+            "text": "berikan dukungan spiritual dan emosional"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question57",
+          "title": "edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "ajurkan segera melaporkan nyeri dada"
+           },
+           {
+            "value": "item2",
+            "text": "anjurkan menghindari manuver valsava (mis. mengedan sat BAB atau batuk)"
+           },
+           {
+            "value": "item3",
+            "text": "jelaskan tindakan yang dijalani pasien"
+           },
+           {
+            "value": "item4",
+            "text": "ajarkan teknik menurunkan kecemasan dan ketakutan "
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question60",
+          "title": "kolaborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kolaborasi pemberian antipletelat, jika perlu"
+           },
+           {
+            "value": "item2",
+            "text": "kolaborasi pemberian antiangina (mis, nitrogliserin, beta blocker, calcium, channel bloker)"
+           },
+           {
+            "value": "item3",
+            "text": "kolaborasi pemberian morfin perlu"
+           },
+           {
+            "value": "item4",
+            "text": "kolaborasi inotropik, jika perlu"
+           },
+           {
+            "value": "item5",
+            "text": "kolaborasi pemberian obat untuk mencegah manuver (mis. pelunak, tinja, antiemetik)"
+           },
+           {
+            "value": "item6",
+            "text": "kolaborasi pemberian trombus dengan antikoagulan , jika perlu"
+           },
+           {
+            "value": "item7",
+            "text": "kolaborasi pemeriksaan x-ray dada, jika perlu"
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI KEPERAWATAN",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page5",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel16",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question59",
+          "title": "Tanggal dan jam ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Tanggal"
+       },
+       {
+        "type": "panel",
+        "name": "panel17",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question62",
+          "title": "Resiko syok (D.0039), Ditandai dengan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "hipoksemia"
+           },
+           {
+            "value": "item2",
+            "text": "hipoksia"
+           },
+           {
+            "value": "item3",
+            "text": "Hipotensi"
+           },
+           {
+            "value": "item4",
+            "text": "kekurangan volume cairan "
+           },
+           {
+            "value": "item5",
+            "text": "sepsis"
+           },
+           {
+            "value": "item6",
+            "text": "sindrom respons inflamasi sistemik (systemic inflamatory response syndrome (SIRS)"
+           }
+          ]
+         }
+        ],
+        "title": "DIAGNOSA KEPERAWATAN",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel18",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question68",
+          "title": "setelah dilakukan intervensi selama",
+          "hideNumber": true,
+          "placeHolder": "x24jam"
+         },
+         {
+          "type": "checkbox",
+          "name": "question69",
+          "title": "maka tingkat syok L.03032 menurun dengan kriteria hasil",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kekuatan nadi meningkat"
+           },
+           {
+            "value": "item2",
+            "text": "output urine meningkat"
+           },
+           {
+            "value": "item3",
+            "text": "tingkat kesadaran meningkat"
+           },
+           {
+            "value": "item4",
+            "text": "saturasi oksigen meningkat "
+           },
+           {
+            "value": "item5",
+            "text": "tekanan darah membaik"
+           },
+           {
+            "value": "item6",
+            "text": "frekuensi nadi membaik"
+           },
+           {
+            "value": "item7",
+            "text": "frekuensi nafas membaik"
+           }
+          ]
+         }
+        ],
+        "title": "LUARAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel19",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question70",
+          "title": "observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "monitor status kardipulmunal (frekuensi dan kekuatan nadi , frekuensi nafas, TD, MAP)"
+           },
+           {
+            "value": "item2",
+            "text": "monitor status oksigenasi (oksimetri, AGD)"
+           },
+           {
+            "value": "item3",
+            "text": "monitor status cairan (masukan dan keluaran , turgor, kulit, CRT)"
+           },
+           {
+            "value": "item4",
+            "text": "monitor tingkat kesadaran dan respon pupil"
+           },
+           {
+            "value": "item5",
+            "text": "periksa riwayat alergi"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question71",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "berikan oksigen untuk mempertanyakan saturasi oksigen 94%"
+           },
+           {
+            "value": "item2",
+            "text": "persiapkan intubasi dann ventilasi makanan, jika perlu"
+           },
+           {
+            "value": "item3",
+            "text": "pasang jalur IV , jika perlu"
+           },
+           {
+            "value": "item4",
+            "text": "pasang kateter urine untuk menilai produksi urine , jika perlu"
+           },
+           {
+            "value": "item5",
+            "text": "lakukan skintes untuk mencegah reaksi alergi"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question72",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "jelaskan penyebab atau faktor resiko syok"
+           },
+           {
+            "value": "item2",
+            "text": "jelaskan tanda dan gejala awal syok"
+           },
+           {
+            "value": "item3",
+            "text": "anjurkan melapor jika menemukan / merasakan tanda dan gejala awal syok"
+           },
+           {
+            "value": "item4",
+            "text": "anjurkan memperbanyak asupan cairan oral"
+           },
+           {
+            "value": "item5",
+            "text": "anjurkan menghindari alegern"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question61",
+          "title": "kolaborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kolaborasi pemberian IV, Jika perlu"
+           },
+           {
+            "value": "item2",
+            "text": "kolaborasi pemberian transfusi darah, jika perlu"
+           },
+           {
+            "value": "item3",
+            "text": "kolaborasi pemberian antiinflamasi, jika perlu"
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI KEPERAWATAN",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page6",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel20",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question63",
+          "title": "Tanggal dan jam ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Tanggal"
+       },
+       {
+        "type": "panel",
+        "name": "panel21",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question78",
+          "html": "<b>ketidakstabilan kadar gula darah (D.0027)\n<p>berhubungan dengan :\n<p>hiperkalemi"
+         },
+         {
+          "type": "checkbox",
+          "name": "question64",
+          "title": "disfungsi pangkreas",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "resistensi insulin"
+           },
+           {
+            "value": "item2",
+            "text": "gangguan toleransi glukosa darah puasa"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question79",
+          "title": "Hipoglikemia",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "penggunaan insulin atau obat glikemik oral"
+           },
+           {
+            "value": "item2",
+            "text": "hiperinsulimea"
+           },
+           {
+            "value": "item3",
+            "text": "endrokrinopati"
+           },
+           {
+            "value": "item4",
+            "text": "disfungsi hati"
+           },
+           {
+            "value": "item5",
+            "text": "disfungsi ginjal kronis"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question80",
+          "html": "<b>Dibuktikan dengan :"
+         },
+         {
+          "type": "checkbox",
+          "name": "question81",
+          "title": "Hipoglikemia",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "pusing"
+           },
+           {
+            "value": "item2",
+            "text": "mengantuk"
+           },
+           {
+            "value": "item3",
+            "text": "gangguan koordinasi"
+           },
+           {
+            "value": "item4",
+            "text": "kadar glukosa dalam darah / urine rendah"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question82",
+          "title": "hiperglikemia",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "lelah/lesu"
+           },
+           {
+            "value": "item2",
+            "text": "kadar gula darah / urine tinggi"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question76"
+         },
+         {
+          "type": "html",
+          "name": "question77"
+         }
+        ],
+        "title": "DIAGNOSA KEPERAWATAN",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel22",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question65",
+          "title": "setelah dilakukan intervensi selama",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question66",
+          "title": "maka kestabilan kadar gula darah meningkat (L.03022) dengan hasil kriteria :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "koordinasi meningkat"
+           },
+           {
+            "value": "item2",
+            "text": "kesadaran meningkat"
+           },
+           {
+            "value": "item3",
+            "text": "mengantuk menurun"
+           },
+           {
+            "value": "item4",
+            "text": "pusing menurun"
+           },
+           {
+            "value": "item5",
+            "text": "gemetar menurun"
+           },
+           {
+            "value": "item6",
+            "text": "perilaku aneh menurun"
+           },
+           {
+            "value": "item7",
+            "text": "kesulitan bicara membaik"
+           },
+           {
+            "value": "item8",
+            "text": "kadar glukosa dalam darah membaik"
+           },
+           {
+            "value": "item9",
+            "text": "jumlah urine membaik"
+           }
+          ]
+         }
+        ],
+        "title": "LUARAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel23",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question84",
+          "html": "<b> Manajemen hiperglikemi(I.03115)"
+         },
+         {
+          "type": "checkbox",
+          "name": "question67",
+          "title": "observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "identifikasi kemungkinan penyebab hiperglikemi"
+           },
+           {
+            "value": "item2",
+            "text": "identifikasi situasi yang menyebabkan kebutuhan insulin meningkat"
+           },
+           {
+            "value": "item3",
+            "text": "monitor kadar glukosa darah"
+           },
+           {
+            "value": "item4",
+            "text": "monitor tanda gejala hiperglikema"
+           },
+           {
+            "value": "item5",
+            "text": "monitor intake danoutput cairan"
+           },
+           {
+            "value": "item6",
+            "text": "monitor keton urine "
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question83"
+         },
+         {
+          "type": "checkbox",
+          "name": "question73",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "berikan asupan cairan normal"
+           },
+           {
+            "value": "item2",
+            "text": "konsultasi dengan medis jika tanda gejala hiperglike tetap adaatau memburuk"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question74",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "anjurkan menghindari olahraga saat kadar glukosa darah lebih dari 250mg"
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI KEPERAWATAN",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page7",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel24",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question75",
+          "title": "Tanggal dan jam ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Tanggal"
+       },
+       {
+        "type": "panel",
+        "name": "panel25",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question86",
+          "title": "Perfusi perifer tidak efektif (D.0009) Berhubungan dengan :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hiperflikemia"
+           },
+           {
+            "value": "item2",
+            "text": "Penurunan konsentrasi gemoglobin"
+           },
+           {
+            "value": "item3",
+            "text": "Peningkatan tekanan darah"
+           },
+           {
+            "value": "item4",
+            "text": "Kekurangan volume cairan "
+           },
+           {
+            "value": "item5",
+            "text": "penurunan aliran arteri dan atau vena"
+           },
+           {
+            "value": "item6",
+            "text": "kurang terpapar informasi tentang faktor pemberat (mis. meroko. gaya hidup. menonton. trauma. obsites. asupan garam.imobilitas"
+           },
+           {
+            "value": "item7",
+            "text": "kurang terpapar informasi tentang proses penyakit (mis.diabetes mellitus, hiperlipidemia)"
+           },
+           {
+            "value": "item8",
+            "text": "kurang aktivitas fisik"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question89",
+          "title": "Dibuktikan dengan :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "pengisian kapiler > 3 detik"
+           },
+           {
+            "value": "item2",
+            "text": "nadi perifer menurun atau tidak teraba"
+           },
+           {
+            "value": "item3",
+            "text": "akral teraba dingin"
+           },
+           {
+            "value": "item4",
+            "text": "warga kulit pucat"
+           },
+           {
+            "value": "item5",
+            "text": "turgor kulit menurun"
+           },
+           {
+            "value": "item6",
+            "text": "parastesia"
+           },
+           {
+            "value": "item7",
+            "text": "nyeri ekstemintas(klaudikasi intermiten)"
+           },
+           {
+            "value": "item8",
+            "text": "edema"
+           },
+           {
+            "value": "item9",
+            "text": "penyembuhan luka lambat"
+           },
+           {
+            "value": "item10",
+            "text": "indeks ankle-brcahial <0.90"
+           },
+           {
+            "value": "item11",
+            "text": "bruit femoral"
+           }
+          ]
+         }
+        ],
+        "title": "DIAGNOSA KEPERAWATAN",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel26",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question93",
+          "title": "setelah dilakukan intervensi selama",
+          "hideNumber": true,
+          "placeHolder": "x24jam"
+         },
+         {
+          "type": "checkbox",
+          "name": "question94",
+          "title": "maka perfusi perfier meningkat (L.02011) dengan kriteria hasil :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "denyut nadi perifer meningkat"
+           },
+           {
+            "value": "item2",
+            "text": "penyembuhan luka meningkat"
+           },
+           {
+            "value": "item3",
+            "text": "sensasi meningkat"
+           },
+           {
+            "value": "item4",
+            "text": "warna kulit pucat menurun"
+           },
+           {
+            "value": "item5",
+            "text": "edema perifer menurun"
+           },
+           {
+            "value": "item6",
+            "text": "nyeri ekstremitas menurun"
+           },
+           {
+            "value": "item7",
+            "text": "parastesia menurun"
+           },
+           {
+            "value": "item8",
+            "text": "kelemahan otot menurun"
+           },
+           {
+            "value": "item9",
+            "text": "kram otot menurun"
+           },
+           {
+            "value": "item10",
+            "text": "pengisian kapiler membaik"
+           },
+           {
+            "value": "item11",
+            "text": "akral membaik"
+           },
+           {
+            "value": "item12",
+            "text": "turgor kulit membaik"
+           },
+           {
+            "value": "item13",
+            "text": "tekanan darah sistolik dan diastolik membaik"
+           }
+          ]
+         }
+        ],
+        "title": "LUARAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel27",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question95",
+          "html": "<b> PERAWATAN SIRKULASI (I.02079)"
+         },
+         {
+          "type": "checkbox",
+          "name": "question96",
+          "title": "observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Periksa sirkulsai perifer(mis.nadi perifer , edema, pengisian kalpiler, warna, suhu, angkle brachial index)"
+           },
+           {
+            "value": "item2",
+            "text": "identifikasi faktor resiko gangguan sirkulasi (mis.diabetes, peroko, orang tua, hipertensi dan kadar kolestrol tinggi)"
+           },
+           {
+            "value": "item3",
+            "text": "monitor panas , kemerahan, nyeri, atau bengkak pada ekstremitas"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question98",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "hindari pemasangan infus atau pengambilan darah di area keterbatasan perfusi"
+           },
+           {
+            "value": "item2",
+            "text": "hindari pengukuran tekanan darah pada ekstremitas pada keterbatasan perfusi"
+           },
+           {
+            "value": "item3",
+            "text": "hindari penekanan dan pemasangan torniquet pada area yang di cedera"
+           },
+           {
+            "value": "item4",
+            "text": "lakukan pencegahan infeksi"
+           },
+           {
+            "value": "item5",
+            "text": "lakukan perawatan kaki dan kuku"
+           },
+           {
+            "value": "item6",
+            "text": "lakukan hidrasi"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question99",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "anjurkan berhenti meroko"
+           },
+           {
+            "value": "item2",
+            "text": "anjurkan berolahraga rutin"
+           },
+           {
+            "value": "item3",
+            "text": "anjurkan mengecek air mandi untuk kulit terbakar"
+           },
+           {
+            "value": "item4",
+            "text": "anjurkan menggunakan obat penurun tekanan darah, antikoagulan, dan penurun kolestrol, jika perlu"
+           },
+           {
+            "value": "item5",
+            "text": "anjurkan minum obat pengontrol tekanan darah secara teratur"
+           },
+           {
+            "value": "item6",
+            "text": "anjurkan menghindari penggunaan obat penyekat beta"
+           },
+           {
+            "value": "item7",
+            "text": "anjurkan melakukan perawatan kulit yang tepat (mis. melembabkan kulit kering pada kaki)"
+           },
+           {
+            "value": "item8",
+            "text": "anjurkan program rehabilitas vaskuler"
+           },
+           {
+            "value": "item9",
+            "text": "anjurkan program diet untuk memperbaiki sirkulasi (miss. rendah lemah jenuh, minyak ikan, omega3"
+           },
+           {
+            "value": "item10",
+            "text": "informasikan tanda dan gejala darurat yang harus dilaporkan (mis. rasa sakit yang tidak hilang saat istirahat , luka tidak sembuuh , hilang nya ras)"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question87",
+          "html": "<b> MANAJEMEN SENSASI PERIFER (I.06195)"
+         },
+         {
+          "type": "checkbox",
+          "name": "question85",
+          "title": "Observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "identifikasi penyebab perubahan sensasi"
+           },
+           {
+            "value": "item2",
+            "text": "identifikasi penggunaan alat pengikat, prostesi, sepatu, dan pakaian"
+           },
+           {
+            "value": "item3",
+            "text": "periksa perbedaan sensasi tajam atau tumpul"
+           },
+           {
+            "value": "item4",
+            "text": "periksa perbedaan sensai panas atau dingin"
+           },
+           {
+            "value": "item5",
+            "text": "periksa kemampuan identifikasi lokasi dan tekstur benda "
+           },
+           {
+            "value": "item6",
+            "text": "monitor terjadinya parestesia, jika perlu"
+           },
+           {
+            "value": "item7",
+            "text": "monitor perubahan kulit"
+           },
+           {
+            "value": "item8",
+            "text": "monitor adanya tromboflebitis dan tromboemboli vena"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question88",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "HIndari pemakaian benda benda yang berlebihan suhunya (terlalu panas atau dingin)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question90",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "anjurkan penggunaan termometer untuk menguji suhu air"
+           },
+           {
+            "value": "item2",
+            "text": "anjurkan penggunaan sarung tangan termal saat memasak"
+           },
+           {
+            "value": "item3",
+            "text": "anjurkan memakai sepatu lembut dan bertumit rendah"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question91",
+          "title": "kolaborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kolaborasi pemberian analgesik , jika perlu"
+           },
+           {
+            "value": "item2",
+            "text": "kolaborasi pemberian kortikosteroid, jika perlu"
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI KEPERAWATAN",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page8",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel28",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question92",
+          "title": "Tanggal dan jam ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Tanggal"
+       },
+       {
+        "type": "panel",
+        "name": "panel29",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question97",
+          "title": "Resiko perfusi serebral tidak efektif (D0017)",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Keabnormalan masa protrombin dan atau masa tromboplastin parsial"
+           },
+           {
+            "value": "item2",
+            "text": "penurunan kinejra ventikel kiri"
+           },
+           {
+            "value": "item3",
+            "text": "aterosklrosis aorta"
+           },
+           {
+            "value": "item4",
+            "text": "diseksi antrium"
+           },
+           {
+            "value": "item5",
+            "text": "fibrilasi atrium"
+           },
+           {
+            "value": "item6",
+            "text": "tumor otak"
+           },
+           {
+            "value": "item7",
+            "text": "stenosis karotis"
+           },
+           {
+            "value": "item8",
+            "text": "miksoma atrium"
+           },
+           {
+            "value": "item9",
+            "text": "aneurisma serebri"
+           },
+           {
+            "value": "item10",
+            "text": "koagulopati (mis. anemia sel sabit)"
+           },
+           {
+            "value": "item11",
+            "text": "dilatasi kardiomiopati"
+           },
+           {
+            "value": "item12",
+            "text": "koagulasi (mis. anemia sel sabit)"
+           },
+           {
+            "value": "item13",
+            "text": "embolisme"
+           },
+           {
+            "value": "item14",
+            "text": "cedera kepala"
+           },
+           {
+            "value": "item15",
+            "text": "hiperkolestronemia"
+           },
+           {
+            "value": "item16",
+            "text": "hipertensi"
+           },
+           {
+            "value": "item17",
+            "text": "endokarditis infektif"
+           },
+           {
+            "value": "item18",
+            "text": "katup prostetik mekanis"
+           },
+           {
+            "value": "item19",
+            "text": "stenosis mitral"
+           },
+           {
+            "value": "item20",
+            "text": "neoplasma otak"
+           },
+           {
+            "value": "item21",
+            "text": "infark miokard akut"
+           },
+           {
+            "value": "item22",
+            "text": "sindrom sick sinus"
+           },
+           {
+            "value": "item23",
+            "text": "penyalahgunaan zat"
+           },
+           {
+            "value": "item24",
+            "text": "terapi tombolitik"
+           },
+           {
+            "value": "item25",
+            "text": "efek samping tindakan (mis. tindakan operasi bypass)"
+           },
+           {
+            "value": "item26",
+            "text": "kondisi klinis terkait"
+           },
+           {
+            "value": "item27",
+            "text": "stroke"
+           },
+           {
+            "value": "item28",
+            "text": "cedera kepala"
+           },
+           {
+            "value": "item29",
+            "text": "aterosklerotik aortik"
+           },
+           {
+            "value": "item30",
+            "text": "infark miokard akut"
+           },
+           {
+            "value": "item31",
+            "text": "diseksi arteri"
+           },
+           {
+            "value": "item32",
+            "text": "embolisme"
+           },
+           {
+            "value": "item33",
+            "text": "endokarditis infeksi"
+           },
+           {
+            "value": "item34",
+            "text": "fibrilasi atrium"
+           },
+           {
+            "value": "item35",
+            "text": "hiperkolesterolemia"
+           },
+           {
+            "value": "item36",
+            "text": "hipertensi"
+           },
+           {
+            "value": "item37",
+            "text": "dilatasi kardiomiopati"
+           },
+           {
+            "value": "item38",
+            "text": "koagulasi intravaskular diseminata"
+           },
+           {
+            "value": "item39",
+            "text": "miksoma atrium"
+           },
+           {
+            "value": "item40",
+            "text": "neoplasma otak"
+           },
+           {
+            "value": "item41",
+            "text": "segmen ventrikel kiri akinetik"
+           },
+           {
+            "value": "item42",
+            "text": "sindrom sick sinus"
+           },
+           {
+            "value": "item43",
+            "text": "stenosis karotid"
+           },
+           {
+            "value": "item44",
+            "text": "stenosis mitral"
+           },
+           {
+            "value": "item45",
+            "text": "hidrosefalus"
+           },
+           {
+            "value": "item46",
+            "text": "infeksi otak(mis. meningitis, ensefalitis, abses serbri)"
+           },
+           {
+            "value": "item47",
+            "text": "intervensi utama"
+           },
+           {
+            "value": "item48",
+            "text": "manajemen peningkatan tekanan intrakranial"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "question100",
+          "title": "Pemantauan tekanan intakrasnial",
+          "hideNumber": true
+         }
+        ],
+        "title": "DIAGNOSA KEPERAWATAN",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel30",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question101",
+          "title": "setelah dilakukan intervensi keperawatan selama",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question102",
+          "title": "maka perfusi serebral meningkat (L.02014) dengan kriteria hasil",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "tingkat kesadaran meningkat"
+           },
+           {
+            "value": "item2",
+            "text": "kognitif meningkat"
+           },
+           {
+            "value": "item3",
+            "text": "tekanan intra kranial menurun"
+           },
+           {
+            "value": "item4",
+            "text": "sakit kepala menurun"
+           },
+           {
+            "value": "item5",
+            "text": "gelisah menurun"
+           },
+           {
+            "value": "item6",
+            "text": "kecemasan menurun"
+           },
+           {
+            "value": "item7",
+            "text": "agitasi menurun"
+           },
+           {
+            "value": "item8",
+            "text": "demam menurun"
+           },
+           {
+            "value": "item9",
+            "text": "nilai rata rata TD membaik"
+           },
+           {
+            "value": "item10",
+            "text": "kesadaran membaik"
+           },
+           {
+            "value": "item11",
+            "text": "TD sistolik membaik"
+           },
+           {
+            "value": "item12",
+            "text": "TD diastolik membaik"
+           },
+           {
+            "value": "item13",
+            "text": "refleks saraf membaik"
+           }
+          ]
+         }
+        ],
+        "title": "LUARAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel31",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question103",
+          "html": "<b> MANAJEMEN PENINGKATAN TEKANAN INTRAKRANIAL (I.06198)"
+         },
+         {
+          "type": "checkbox",
+          "name": "question104",
+          "title": "observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "identifikasi penyebab peningkatan TIK (mis. lesi, gangguan metabolisme, edema serebral)"
+           },
+           {
+            "value": "item2",
+            "text": "monitor tenda / gejala peningkatan TIK (mis. tekanan darah meningkat , tekanan nadi melebar, bradikardia, pola nafas iregular, kesadaran menurun)"
+           },
+           {
+            "value": "item3",
+            "text": "moitor MAP (mean arterial pressure)"
+           },
+           {
+            "value": "item4",
+            "text": "monitor CVP (central venous pressure) jika perlu"
+           },
+           {
+            "value": "item5",
+            "text": "monitor PAWP, jika perlu"
+           },
+           {
+            "value": "item6",
+            "text": "menitor PAP, jika perlu"
+           },
+           {
+            "value": "item7",
+            "text": "monitor ICP (intral cranial pressure)"
+           },
+           {
+            "value": "item8",
+            "text": "monitor CPP (cerebral perfusion pressure) "
+           },
+           {
+            "value": "item9",
+            "text": "monitor gelambang ICP"
+           },
+           {
+            "value": "item10",
+            "text": "monitor status pernafasan"
+           },
+           {
+            "value": "item11",
+            "text": "monitor intake dan output  cairan"
+           },
+           {
+            "value": "item12",
+            "text": "monitor cairan serebro-spinalis (mis. warna , konsistensi)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question105",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "minimalkan stimulus dengan menyediakan lingkungan yang tenang"
+           },
+           {
+            "value": "item2",
+            "text": "berikan posisi semi fowler"
+           },
+           {
+            "value": "item3",
+            "text": "hindari manuever vaslsava"
+           },
+           {
+            "value": "item4",
+            "text": "cegah terjadinya tegang"
+           },
+           {
+            "value": "item5",
+            "text": "hindari penggunaan PEEP"
+           },
+           {
+            "value": "item6",
+            "text": "hindari pemberian cairan IV hipotonik"
+           },
+           {
+            "value": "item7",
+            "text": "atur ventilator agar PaC02 optimal"
+           },
+           {
+            "value": "item8",
+            "text": "pertahankan suhu tubuh normal"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question106",
+          "title": "Kolaborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kolaborasi pemberian sedasi dan antikonvulsan , jika perlu"
+           },
+           {
+            "value": "item2",
+            "text": "kolaborasi pemberian diuretic osmosis, jika perlu"
+           },
+           {
+            "value": "item3",
+            "text": "kolaborasi pemberian pelunak tinja, jika perlu"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question107",
+          "html": "<b> PEMANTAUAN TEKANAN INTRAKRANIAL (I.06198)"
+         },
+         {
+          "type": "checkbox",
+          "name": "question108",
+          "title": "Observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "observasi penyerbab peningkatan TIK (mis. lesi menempati ruang, gangguan metabolisme, edema serebral, peningkatan tekanan vena , obstruksi aliran cairan serebrospinal, hipertensi intracranial idiopatik)"
+           },
+           {
+            "value": "item2",
+            "text": "monitor peningkatan TD"
+           },
+           {
+            "value": "item3",
+            "text": "monitor pelebar tekanan nadi (selisih TDS dan TDD)"
+           },
+           {
+            "value": "item4",
+            "text": "monitor penuruna frekuensi jantung"
+           },
+           {
+            "value": "item5",
+            "text": "monitor iregulasi irama jantung"
+           },
+           {
+            "value": "item6",
+            "text": "monitor penurunan tingkat kesadaran "
+           },
+           {
+            "value": "item7",
+            "text": "monitor perlambatan atau ketidaksimetrisan respon pupil"
+           },
+           {
+            "value": "item8",
+            "text": "monitor kadar C02 dan pertahankan dalam rentang yang diindikasikan"
+           },
+           {
+            "value": "item9",
+            "text": "monitor tekanan perfusi serebral"
+           },
+           {
+            "value": "item10",
+            "text": "monitor jumlah kecepatan, dan karakteristik drainase cairan serebrospinal"
+           },
+           {
+            "value": "item11",
+            "text": "monitor efek stimulus lingkungan terhadapt TIK"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question109",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "ambil sampel drainase cairan serebrospinal"
+           },
+           {
+            "value": "item2",
+            "text": "kalibrasi transduser"
+           },
+           {
+            "value": "item3",
+            "text": "pertahankan sterilitas system pemantauan"
+           },
+           {
+            "value": "item4",
+            "text": "pertahankan posisi kepala dan leher netral"
+           },
+           {
+            "value": "item5",
+            "text": "bila sistem pemantauan , jika perlu"
+           },
+           {
+            "value": "item6",
+            "text": "atur interval pemantauan sesuai kondisi pasien"
+           },
+           {
+            "value": "item7",
+            "text": "dokumentasikan hasil pemantauan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question110",
+          "title": "Edukasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "jelaskan tujuan dan prosedur pemantauan informaasikan hasil pemantauan , jika PERLU"
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI KEPERAWATAN",
+        "startWithNewLine": false
+       }
+      ]
+     },
+     {
+      "name": "page9",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel32",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question111",
+          "title": "Tanggal dan jam ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Tanggal"
+       },
+       {
+        "type": "panel",
+        "name": "panel33",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question112",
+          "title": "Penurunan kapasitas adiktif intrakranial (D.0066) berhubungan dengan :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hipertensi intrakranial idiopatik"
+           },
+           {
+            "value": "item2",
+            "text": "obstruksi aliran cairan serebrospinalis (mis. hidrosepalus)"
+           },
+           {
+            "value": "item3",
+            "text": "gangguan metbolisme (mis. akibat hiponatremia, ensefalopati urenikum, ensefalopati hepatikum, ketoasidosis diabetik, septikemia)"
+           },
+           {
+            "value": "item4",
+            "text": "edema serebral (mis. akibat cederakepala , stroke iskemik, stroke hemoragik, hipoksia, pasca operasi)"
+           },
+           {
+            "value": "item5",
+            "text": "peningkatan tekanan vena (mis. gagal jantung, trombosis / obstruksi vena jugularis atau vena kava superios"
+           },
+           {
+            "value": "item6",
+            "text": "lesi menempati ruang (mis. akibat tumor abses)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question113",
+          "title": "DIbutktikan dengan :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "sakit kepala"
+           },
+           {
+            "value": "item2",
+            "text": "tekanan darah meningkat dengan tekanan nadi melebar"
+           },
+           {
+            "value": "item3",
+            "text": "bradikardia"
+           },
+           {
+            "value": "item4",
+            "text": "pola nafas ireguler"
+           },
+           {
+            "value": "item5",
+            "text": "tingkat kesadaran menurun"
+           },
+           {
+            "value": "item6",
+            "text": "respon pupil melambat atau tidak sama"
+           },
+           {
+            "value": "item7",
+            "text": "reflek neurologis terganggu"
+           },
+           {
+            "value": "item8",
+            "text": "gelisah"
+           },
+           {
+            "value": "item9",
+            "text": "agitasi"
+           },
+           {
+            "value": "item10",
+            "text": "muntah (tanpa disertai mual)"
+           },
+           {
+            "value": "item11",
+            "text": "tampak lesu/lemah"
+           },
+           {
+            "value": "item12",
+            "text": "tekanan intraknanial (TIK > 20 mmhg)"
+           },
+           {
+            "value": "item13",
+            "text": "papiledema"
+           }
+          ]
+         }
+        ],
+        "title": "DIAGNOSA KEPERAWATAN",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel34",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question114",
+          "title": "setelah dilakukan intervensi selama",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question115",
+          "title": "maka kapasitas adaptif intrakania (L.06049) meningkat dengan kriteria hasil",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "tingkat kesadaran meningkat "
+           },
+           {
+            "value": "item2",
+            "text": "sakit kepala menurun"
+           },
+           {
+            "value": "item3",
+            "text": "gelisah menurun"
+           },
+           {
+            "value": "item4",
+            "text": "muntah menurun"
+           },
+           {
+            "value": "item5",
+            "text": "papiladema menurun"
+           },
+           {
+            "value": "item6",
+            "text": "tekanan darah membaik"
+           },
+           {
+            "value": "item7",
+            "text": "tekanan nadi membaik"
+           },
+           {
+            "value": "item8",
+            "text": "bradikardia membaik"
+           },
+           {
+            "value": "item9",
+            "text": "pola nafas membaik"
+           },
+           {
+            "value": "item10",
+            "text": "respon pupil membaik"
+           },
+           {
+            "value": "item11",
+            "text": "reflek neurologis membaik"
+           },
+           {
+            "value": "item12",
+            "text": "tekanan intrakanial membaik"
+           }
+          ]
+         }
+        ],
+        "title": "LUARAN DAN KRITERIA HASIL",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel35",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question116",
+          "html": "<b> MANAJEMEN PENINGKATAN TEKANAN INTRAKRANIAL (I.06194)"
+         },
+         {
+          "type": "checkbox",
+          "name": "question117",
+          "title": "observasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "identifikasi penyebab TIK (mis.lesi gangguan metabolisme , edema  serebral)"
+           },
+           {
+            "value": "item2",
+            "text": "monitor tanda / gejala peningkatan TIK (mis. tekanan darah meningkat, tekanan nadi melebar, bradikardia,pola nafas ireguler, kesdaran menurun)"
+           },
+           {
+            "value": "item3",
+            "text": "monitor status pernafasan "
+           },
+           {
+            "value": "item4",
+            "text": "monitor intake dan output pasien"
+           },
+           {
+            "value": "item5",
+            "text": "monitor cairan serebro_spinalis(mis. warna konsistensi)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question118",
+          "title": "Terapeutik",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "minimalkan stimulus dengan menyediakan lingkungan yang tenang"
+           },
+           {
+            "value": "item2",
+            "text": "berikan posisi semi fowler "
+           },
+           {
+            "value": "item3",
+            "text": "cegah terjadinya kejang"
+           },
+           {
+            "value": "item4",
+            "text": "hindari pemberian cairan IV hipotonik"
+           },
+           {
+            "value": "item5",
+            "text": "pertahankan suhu tubuh normal"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question119",
+          "title": "Kolaborasi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "kolaborasi pemberian sedasi dan konvulsan"
+           },
+           {
+            "value": "item2",
+            "text": "kolaborasi pemberian diuretik osmosis"
+           },
+           {
+            "value": "item3",
+            "text": "kolaborasi pemberian pelunak tinja"
+           }
+          ]
+         }
+        ],
+        "title": "INTERVENSI KEPERAWATAN",
+        "startWithNewLine": false
+       }
+      ]
+     }
+    ]
+   }

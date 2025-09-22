@@ -1,0 +1,104 @@
+{
+    "title": "SURAT PERNYATAAN PERSETUJUAN PENGOBATAN DENGAN IODIUM RADIOAKTIF",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<body>\n    <h3><b><center>INFORMASI DAN TATA TERTIB BAGI PASIEN RAWAT TERAPI ABLASI </center></b></h3>\n    <p>Untuk mengobati penyakit anda, dokter telah menyarankan terapi ablasi memakai lodium radioaktif. Pengobatan dengan lodium radioaktif ini telah dilakukan sejak lama. Dari pengalaman selama ini terbukti bahwa cara ini cukup aman, mudah dilakukan, tidak invasif (tidak menyakiti penderita), serta tidak menimbulkan efek samping yang berbahaya bagi penderitanya.</p>\n    <p>Ada dua jenis penyakit kelenjar tiroid (kelenjar gondok) yang dapat diobati dengan lodium radioaktif, yang pertama penyakit Hipertiroidi dimana terjadi fungsi kelenjar tiroid yang berlebihan dan yang kedua kanker/karsinoma tiroid jenis berdiferensiasi baik.</p>\n    <p>Walaupun pengobatan dengan lodium radioaktif relatif aman, namun untuk menghindari hal-hal yang tidak diinginkan, ada beberapa hal berikut yang perlu diperhatikan:</p>\n    <ul>\n        <li>Pengobatan tidak boleh dilakukan pada ibu hamil dan menyusui.</li>\n        <li>Paling kurang 6 (enam) bulan setelah pengobatan, penderita atau isteri penderita tidak boleh hamil dulu, gunakan alat kontrasepsi selama itu.</li>\n        <li>Pasien menghindari makanan/bahan/obat yang mengandung lodium.</li>\n        <li>Obat hormon tiroid (thyrax) dihentikan beberapa minggu sebelum kontrol/terapi.</li>\n        <li>Puasa minimal 6 jam sebelum terapi lodium radioaktif (boleh minum air putih).</li>\n        <li>Boleh makan setelah 1-2 jam pasca pemberian terapi Iodium radioaktif.</li>\n        <li>Banyak minum air putih selama terapi Iodium radioaktif agar paparan radiasinya cepat turun.</li>\n        <li>Setelah mendapat pengobatan disarankan agar penderita tidak berada dekat bayi, anak balita atau ibu hamil dalam waktu 2-3 hari.</li>\n        <li>Apabila diberikan dalam dosis yang cukup besar seperti pada penderita kanker tiroid, maka penderita harus dirawat di kamar isolasi khusus selama beberapa hari.</li>\n        <li>Pada penderita hipertiroidi yang telah mendapat pengobatan Iodium radioaktif, dalam jangka panjang mungkin terjadi hipotiroidi. Perlu pemantauan berkala per 3 atau 6 bulan. Jika terjadi hipotiroidi dapat diobati dengan minum hormon tiroid secara teratur setiap hari seumur hidup.</li>\n        <li>Pengobatan Kanker tiroid dilakukan setelah operasi pengangkatan seluruh kelenjar tiroid, tujuannya untuk menghilangkan sisa jaringan tiroid/ kanker tiroid yang tersisa dan anak sebarnya. Untuk menghambat tumbuhnya kembali kanker diberikan pula hormon tiroid dalam dosis supresi.</li>\n        <li>Keluhan yang dapat dirasakan penderita segera setelah mendapat pengobatan adalah rasa bengkan di leher, mulut terasa kering, mual, muntah dan mungkin perasaan sesak / nyeri kepala (biasanya bila kanker tiroid telah menyebar ke paru / otak). Keluhan-keluhan tersebut biasanya ringan dan akan hilang dengan sendirinya serta jarang memerlukan pengobatan khusus.</li>\n        <li>Pasien boleh keluar ruang rawat isolasi / pulang setelah tingkat radiasi aman dan tidak ada keluhan klinis.</li>\n        <li>Pasien pulang disertai surat kontrol dan resep dokter / obat yang diperlukan.</li>\n        <li>Obat hormon tiroid dilanjutkan 1 hari setelah pulang dari perawatan dan kemudian dosis disesuaikan dengan kadar TSHsensitif yang dianjurkan dokter.</li>\n        <li>Pasien daftar ulang 1 minggu sebelumnya ke bagian administrasi pendaftaran di Kedokteran Nuklir.</li>\n    </ul>\n</body>\n</html>\n"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "title": "Yang bertanda tangan dibawah ini",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama pasien / keluarga pasien   :"
+           },
+           {
+            "name": "text2",
+            "title": "Hubungan dengan pasien            :"
+           },
+           {
+            "name": "text3",
+            "title": "Alamat rumah                               :"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question3",
+          "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<p>Setelah mendapatkan keterangan seperlunya mengenai berbagai aspek yang berhubungan dengan pengobatan menggunakan iodium radioaktif, maka pasien dan keluarganya / pihak yang berkepentingan setuju untuk melaksanakan pengobatan menggunakan iodium radioaktif terhadap pasien.\n<p>Persetujuan ini diberikan dengan penuh kesadaran dan keharusan mematuhi aturan yang harus dilaksanakan dan akibat sampingan yang mungkin akan timbul dari pengobatan iodium radioaktif.\n<p>Demikian surat pernyataan ini dibuat dengan penuh kesadaran dan rasa tanggung jawab."
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "Tanah Badantuang,",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question4",
+          "title": "Pasien",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question5",
+          "startWithNewLine": false,
+          "title": "Yang bertanggung jawab terhadap pasien",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "html",
+          "name": "question9",
+          "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<p>Saya menyatakan bahwa saya telah menjelaskan aturan yang harus dilaksanakan oleh pasien yang menerima pengobatan iodium radioaktif dan tujuan serta kemungkinan akibat samping yang timbul akibat pengobatan iodium radioaktif kepada pasien."
+         },
+         {
+          "type": "signaturepad",
+          "name": "question10",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question11",
+          "titleLocation": "hidden",
+          "size": 50
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,2618 @@
+{
+    "title": "Formulir Laporan Anestesi",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "asal_ruangan",
+          "title": "Asal Ruangan"
+         },
+         {
+          "name": "tindakan",
+          "title": "Tindakan"
+         },
+         {
+          "name": "praoperatif",
+          "title": "Diagnosis Praoperatif"
+         },
+         {
+          "name": "panestesi",
+          "title": "Penata Anestesi"
+         },
+         {
+          "name": "operator"
+         },
+         {
+          "name": "asisten",
+          "title": "Asisten"
+         },
+         {
+          "name": "tb",
+          "title": "Tinggi badan"
+         },
+         {
+          "name": "danestesi",
+          "title": "Dokter anestesi"
+         },
+         {
+          "name": "bb",
+          "title": "Berat badan"
+         },
+         {
+          "name": "pascaoperasi",
+          "title": "Diagnosis Pasca Operasi"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "question22",
+        "title": "IMT",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "underwieght",
+          "text": "underwieght"
+         },
+         {
+          "value": "normal",
+          "text": "normal"
+         },
+         {
+          "value": "overweight",
+          "text": "overweight"
+         },
+         {
+          "value": "Obes 1",
+          "text": "Obes 1"
+         },
+         {
+          "value": "Obes 2",
+          "text": "Obes 2"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "Riwayat anastesi dan operasi sebelumnya",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 2",
+            "title": "Riwayat alergi dan penyakit penyerta ",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 3",
+            "title": "Pengobatan saat ini",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 4",
+            "title": "Kesadaran",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 5",
+            "title": "Tekanan Darah",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 6",
+            "title": "Nadi",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 7",
+            "title": "Pernafasan",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 8",
+            "title": "Dengan udara bebas/O2",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 9",
+            "title": "via",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 10",
+            "title": "Pemeriksaan penunjang",
+            "cellType": "comment"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "PENILAIAN PRA INDUKSI"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "ceklist",
+          "title": "Ceklist Persiapan anestesi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "persetujuan",
+            "text": "Persetujuan anastesi"
+           },
+           {
+            "value": "obat_anestesi",
+            "text": "Obat obatan anestesi"
+           },
+           {
+            "value": "talaksana",
+            "text": "alaksana jalan napas"
+           },
+           {
+            "value": "alat_monitoring",
+            "text": "Alat monitoring "
+           },
+           {
+            "value": "obat_emergency",
+            "text": "Obat obatan emergency"
+           },
+           {
+            "value": "mesin",
+            "text": "Mesin anestesi"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question34",
+          "title": "ASA",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "1",
+            "text": "1"
+           },
+           {
+            "value": "1E",
+            "text": "1E"
+           },
+           {
+            "value": "2",
+            "text": "2"
+           },
+           {
+            "value": "2E",
+            "text": "2E"
+           },
+           {
+            "value": "3",
+            "text": "3"
+           },
+           {
+            "value": "3E",
+            "text": "3E"
+           },
+           {
+            "value": "4",
+            "text": "4"
+           },
+           {
+            "value": "4E",
+            "text": "4E"
+           },
+           {
+            "value": "5",
+            "text": "5"
+           },
+           {
+            "value": "5E",
+            "text": "5E"
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "Puasa mulai pukul / tanggal",
+            "cellType": "text"
+           },
+           {
+            "name": "premedikasi",
+            "title": "Premedikasi"
+           },
+           {
+            "name": "rute",
+            "title": "Ruter",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "oral",
+              "text": "Oral"
+             },
+             {
+              "value": "intramuskular",
+              "text": "Intramaskular"
+             },
+             {
+              "value": "intravena",
+              "text": "Intravena"
+             }
+            ]
+           },
+           {
+            "name": "Column 2",
+            "title": "Jam",
+            "cellType": "text",
+            "inputType": "time"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "multipletext",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "time",
+            "title": "Masuk OK"
+           },
+           {
+            "name": "text2",
+            "inputType": "time",
+            "title": "Insisi"
+           },
+           {
+            "name": "text3",
+            "inputType": "time",
+            "title": "Akhir Operasi"
+           },
+           {
+            "name": "text4",
+            "inputType": "time",
+            "title": "Mulai Anastesi"
+           },
+           {
+            "name": "text5",
+            "inputType": "time",
+            "title": "Akhir anastesi"
+           },
+           {
+            "name": "text6",
+            "title": "Total"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "checkbox",
+          "name": "question6",
+          "title": "Teknik Anestesi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Anastesi Umum"
+           },
+           {
+            "value": "item2",
+            "text": "Anestesi Regional"
+           },
+           {
+            "value": "item3",
+            "text": "CEGA"
+           },
+           {
+            "value": "item4",
+            "text": "Konversi"
+           },
+           {
+            "value": "item5",
+            "text": "Sedasi"
+           },
+           {
+            "value": "item6",
+            "text": "Blokperifer"
+           }
+          ],
+          "colCount": 4
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question35",
+        "title": "Monitor",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "NIBP"
+         },
+         {
+          "value": "item2",
+          "text": "EKG"
+         },
+         {
+          "value": "item3",
+          "text": "SPO2"
+         },
+         {
+          "value": "item4",
+          "text": "Temp"
+         },
+         {
+          "value": "item5",
+          "text": "IBP / Arteria Line"
+         },
+         {
+          "value": "item6",
+          "text": "EtCO2"
+         },
+         {
+          "value": "item7",
+          "text": "Prekordial"
+         },
+         {
+          "value": "item8",
+          "text": "BIS"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question36",
+        "title": "Jalur intravena dan monitoring masif",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "ukuran",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "16",
+            "text": "16"
+           },
+           {
+            "value": "18",
+            "text": "18"
+           },
+           {
+            "value": "20",
+            "text": "20"
+           },
+           {
+            "value": "22",
+            "text": "22"
+           },
+           {
+            "value": "24",
+            "text": "24"
+           },
+           {
+            "value": "26",
+            "text": "26"
+           }
+          ]
+         },
+         {
+          "name": "Column 2",
+          "title": "sisi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "kanan",
+            "text": "kanan"
+           },
+           {
+            "value": "kiri",
+            "text": "kiri"
+           }
+          ]
+         },
+         {
+          "name": "Column 3",
+          "title": "letak",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "kaki",
+            "text": "kaki"
+           },
+           {
+            "value": "tangan",
+            "text": "tangan"
+           }
+          ]
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 2",
+          "text": "IV #1"
+         },
+         {
+          "value": "Row 3",
+          "text": " IV #2"
+         },
+         {
+          "value": "Row 4",
+          "text": "IV #3"
+         },
+         {
+          "value": "Row 5",
+          "text": "CVC"
+         },
+         {
+          "value": "Row 6",
+          "text": "IBP / Arteria Line"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question7",
+        "title": "Peralatan lainnya",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Penghangat Cairan"
+         },
+         {
+          "value": "item2",
+          "text": "Penghangat darah"
+         },
+         {
+          "value": "item3",
+          "text": "Infusion pump"
+         },
+         {
+          "value": "item4",
+          "text": "Syiringe pump"
+         },
+         {
+          "value": "item5",
+          "text": "Warm air blanket"
+         },
+         {
+          "value": "item6",
+          "text": "Blanked roll"
+         },
+         {
+          "value": "item7",
+          "text": "Kateter foley no :"
+         },
+         {
+          "value": "item8",
+          "text": "NGT no"
+         }
+        ],
+        "otherText": "NGT no "
+       },
+       {
+        "type": "radiogroup",
+        "name": "question37",
+        "visibleIf": "{question7} anyof ['item7']",
+        "title": "keteter foley no:",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "8",
+          "text": "8"
+         },
+         {
+          "value": "10",
+          "text": "10"
+         },
+         {
+          "value": "12",
+          "text": "12"
+         },
+         {
+          "value": "14",
+          "text": "14"
+         },
+         {
+          "value": "16",
+          "text": "16"
+         },
+         {
+          "value": "18",
+          "text": "18"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "question38",
+        "visibleIf": "{question7} anyof ['item8']",
+        "title": "NGT no:",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "10",
+          "text": "10"
+         },
+         {
+          "value": "12",
+          "text": "12"
+         },
+         {
+          "value": "14",
+          "text": "14"
+         },
+         {
+          "value": "16",
+          "text": "16"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question8",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Posisi pasien selama operasi",
+          "cellType": "radiogroup",
+          "colCount": 2,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Supine"
+           },
+           {
+            "value": "item2",
+            "text": "Semi Fowler"
+           },
+           {
+            "value": "item3",
+            "text": " Lithotomi"
+           },
+           {
+            "value": "item4",
+            "text": "Duduk"
+           },
+           {
+            "value": "item5",
+            "text": "Prone"
+           },
+           {
+            "value": "item6",
+            "text": "Lateral decubitus kiri"
+           },
+           {
+            "value": "item7",
+            "text": "Jack Knife"
+           },
+           {
+            "value": "item8",
+            "text": "Lateral decubitus kanan"
+           },
+           {
+            "value": "item9",
+            "text": "Trendelenberg"
+           },
+           {
+            "value": "item10",
+            "text": "Reverse Trendelenberg"
+           }
+          ]
+         },
+         {
+          "name": "column2",
+          "title": "Lengan",
+          "cellType": "radiogroup",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": " Sudut < 90"
+           },
+           {
+            "value": "item2",
+            "text": "Bantalan Aksilar"
+           }
+          ]
+         },
+         {
+          "name": "column3",
+          "title": "Mata",
+          "cellType": "radiogroup",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lubrikasi"
+           },
+           {
+            "value": "item2",
+            "text": "Bantalan Tambahan"
+           }
+          ]
+         },
+         {
+          "name": "column4",
+          "title": "Badan",
+          "cellType": "radiogroup",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Bantalan Punggung"
+           },
+           {
+            "value": "item2",
+            "text": "Bantalan Tungkai"
+           }
+          ]
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question9",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Induksi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Inhalasi"
+             },
+             {
+              "value": "item2",
+              "text": " Intravena"
+             },
+             {
+              "value": "item3",
+              "text": "Preoksigenisasi"
+             },
+             {
+              "value": "item4",
+              "text": "Rapid Sequence Induction"
+             },
+             {
+              "value": "item5",
+              "text": " Penekanan Krikoid"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "Jalan Nafas",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Oral"
+             },
+             {
+              "value": "item2",
+              "text": "Sungkup Muka"
+             },
+             {
+              "value": "item3",
+              "text": "LMA"
+             },
+             {
+              "value": "item4",
+              "text": "Trakeostomi"
+             },
+             {
+              "value": "item5",
+              "text": "Nasal"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Alat Bantu",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Direct laryngoscope"
+             },
+             {
+              "value": "item2",
+              "text": "Mandrin/Stylet"
+             },
+             {
+              "value": "item3",
+              "text": "Fiberoptik"
+             },
+             {
+              "value": "item4",
+              "text": "Tube changer style"
+             },
+             {
+              "value": "item5",
+              "text": "Teknik blind"
+             },
+             {
+              "value": "item6",
+              "text": "Teknik awake"
+             },
+             {
+              "value": "item7",
+              "text": "Sudah terintubasi"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Konfirmasi",
+            "cellType": "checkbox",
+            "colCount": 1,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "EtCO2"
+             },
+             {
+              "value": "item2",
+              "text": "Suara nafas vesikuler bilatera"
+             },
+             {
+              "value": "item3",
+              "text": "Pipa Sudah diplester"
+             },
+             {
+              "value": "item4",
+              "text": "Sulit ventilasi"
+             },
+             {
+              "value": "item5",
+              "text": "Sulit Intubasi"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "DLL"
+           }
+          ],
+          "horizontalScroll": true,
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "ett",
+          "title": "ETT",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "Tipe",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "k.i.n.g.k.i.n.g",
+              "text": "k.i.n.g.k.i.n.g"
+             },
+             {
+              "value": "non k.i.n.g.k.i.n.g",
+              "text": "non k.i.n.g.k.i.n.g"
+             }
+            ]
+           },
+           {
+            "name": "Column 7",
+            "title": "Ukuran LMA",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "2",
+              "text": "2"
+             },
+             {
+              "value": "2.5",
+              "text": "2.5"
+             },
+             {
+              "value": "3",
+              "text": "3"
+             },
+             {
+              "value": "3.5",
+              "text": "3.5"
+             },
+             {
+              "value": "4",
+              "text": "4"
+             },
+             {
+              "value": "4.5",
+              "text": "4.5"
+             },
+             {
+              "value": "5",
+              "text": "5"
+             },
+             {
+              "value": "5.5",
+              "text": "5.5"
+             },
+             {
+              "value": "6",
+              "text": "6"
+             },
+             {
+              "value": "6.5",
+              "text": "6.5"
+             },
+             {
+              "value": "7",
+              "text": "7"
+             },
+             {
+              "value": "7.5",
+              "text": "7.5"
+             },
+             {
+              "value": "8",
+              "text": "8"
+             }
+            ]
+           },
+           {
+            "name": "Column 3",
+            "title": "Kedalaman",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "10",
+              "text": "10"
+             },
+             {
+              "value": "11",
+              "text": "11"
+             },
+             {
+              "value": "12",
+              "text": "12"
+             },
+             {
+              "value": "13",
+              "text": "13"
+             },
+             {
+              "value": "14",
+              "text": "14"
+             },
+             {
+              "value": "15",
+              "text": "15"
+             },
+             {
+              "value": "16",
+              "text": "16"
+             },
+             {
+              "value": "17",
+              "text": "17"
+             },
+             {
+              "value": "18",
+              "text": "18"
+             },
+             {
+              "value": "19",
+              "text": "19"
+             },
+             {
+              "value": "20",
+              "text": "20"
+             },
+             {
+              "value": "21",
+              "text": "21"
+             },
+             {
+              "value": "22",
+              "text": "22"
+             },
+             {
+              "value": "23",
+              "text": "23"
+             },
+             {
+              "value": "24",
+              "text": "24"
+             },
+             {
+              "value": "25",
+              "text": "25"
+             }
+            ]
+           },
+           {
+            "name": "Column 4",
+            "title": "Cuffed",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "Column 5",
+            "title": "Pack",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "Column 6",
+            "title": "Pengulangan / Reintubasi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ada",
+              "text": "ada"
+             },
+             {
+              "value": "tidak ada",
+              "text": "tidak ada"
+             }
+            ]
+           },
+           {
+            "name": "Column 2",
+            "title": "Ukuran",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "1.5",
+              "text": "1.5"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             },
+             {
+              "value": "2.5",
+              "text": "2.5"
+             },
+             {
+              "value": "3",
+              "text": "3"
+             },
+             {
+              "value": "3.5",
+              "text": "3.5"
+             },
+             {
+              "value": "4",
+              "text": "4"
+             },
+             {
+              "value": "4.5",
+              "text": "4.5"
+             },
+             {
+              "value": "5",
+              "text": "5"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "PENATALAKSANAAN JALAN NAPAS"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question10",
+          "title": "ETT",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Teknik",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "spinal",
+              "text": "Spinal"
+             },
+             {
+              "value": "epidural",
+              "text": "Epidural"
+             },
+             {
+              "value": "kaudal",
+              "text": "Kaudal"
+             },
+             {
+              "value": "blok",
+              "text": "Perifer"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Lokasi Tusukan",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Jenis jarum",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "Tuohy",
+              "text": "Tuohy"
+             },
+             {
+              "value": "Quincke",
+              "text": "Quincke"
+             },
+             {
+              "value": "CSE",
+              "text": "CSE"
+             }
+            ]
+           },
+           {
+            "name": "column15",
+            "title": "Ukuran Jarum"
+           },
+           {
+            "name": "column5",
+            "title": "Anastesi Lokal",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Konsentrasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column7",
+            "title": "Jumlah",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Obat Tambahan",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Dosis",
+            "cellType": "text"
+           },
+           {
+            "name": "column13",
+            "title": "Komplikasi",
+            "cellType": "text"
+           },
+           {
+            "name": "column14",
+            "title": "Hasil",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Partial Block"
+             },
+             {
+              "value": "item2",
+              "text": "Gagal"
+             },
+             {
+              "value": "item3",
+              "text": "Total Block"
+             },
+             {
+              "value": "item4",
+              "text": "Sempurna"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "ANASTESI REGIONAL"
+       }
+      ],
+      "title": "Halaman 1"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question11",
+          "title": "Jam",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "time"
+         }
+        ],
+        "title": "Pemantauan Selama Anastesi"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Respirasi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Manual"
+           },
+           {
+            "value": "item2",
+            "text": "Ventilator"
+           }
+          ]
+         },
+         {
+          "name": "Column 2",
+          "title": "Mode :",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 3",
+          "title": "Rate :  ",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 4",
+          "title": "TV :    ",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 5",
+          "title": "PEEP :    ",
+          "cellType": "text"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question12",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Column 2",
+          "title": "Temperatur",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "32",
+            "text": "32"
+           },
+           {
+            "value": "33",
+            "text": "33"
+           },
+           {
+            "value": "34",
+            "text": "34"
+           },
+           {
+            "value": "35",
+            "text": "35"
+           },
+           {
+            "value": "36",
+            "text": "36"
+           },
+           {
+            "value": "37",
+            "text": "37"
+           },
+           {
+            "value": "38",
+            "text": "38"
+           },
+           {
+            "value": "39",
+            "text": "39"
+           },
+           {
+            "value": "40",
+            "text": "40"
+           }
+          ]
+         },
+         {
+          "name": "Column 3",
+          "title": "Urine Output"
+         },
+         {
+          "name": "Column 4",
+          "title": "Blood Loss"
+         },
+         {
+          "name": "Column 5",
+          "title": "CVP"
+         },
+         {
+          "name": "Column 6",
+          "title": "EtCO2"
+         },
+         {
+          "name": "Column 7",
+          "title": "Posisi"
+         },
+         {
+          "name": "Column 8",
+          "title": "Obat-obatan:"
+         },
+         {
+          "name": "Column 9",
+          "title": "O2",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "1",
+            "text": "1"
+           },
+           {
+            "value": "2",
+            "text": "2"
+           },
+           {
+            "value": "3",
+            "text": "3"
+           },
+           {
+            "value": "4",
+            "text": "4"
+           },
+           {
+            "value": "5",
+            "text": "5"
+           },
+           {
+            "value": "6",
+            "text": "6"
+           },
+           {
+            "value": "7",
+            "text": "7"
+           },
+           {
+            "value": "8",
+            "text": "8"
+           },
+           {
+            "value": "9",
+            "text": "9"
+           },
+           {
+            "value": "10",
+            "text": "10"
+           }
+          ]
+         },
+         {
+          "name": "Column 16",
+          "title": "Air/N2O",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "air",
+            "text": "Air"
+           },
+           {
+            "value": "N2O",
+            "text": "N2O"
+           }
+          ]
+         },
+         {
+          "name": "Column 10",
+          "title": " ",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "1",
+            "text": "1"
+           },
+           {
+            "value": "2",
+            "text": "2"
+           },
+           {
+            "value": "3",
+            "text": "3"
+           },
+           {
+            "value": "4",
+            "text": "4"
+           },
+           {
+            "value": "5",
+            "text": "5"
+           },
+           {
+            "value": "6",
+            "text": "6"
+           },
+           {
+            "value": "7",
+            "text": "7"
+           },
+           {
+            "value": "8",
+            "text": "8"
+           },
+           {
+            "value": "9",
+            "text": "9"
+           },
+           {
+            "value": "10",
+            "text": "10"
+           }
+          ]
+         },
+         {
+          "name": "Column 11",
+          "title": "Volatil",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "Sevoflurane",
+            "text": "Sevoflurane"
+           },
+           {
+            "value": "Desflurane",
+            "text": "Desflurane"
+           },
+           {
+            "value": "Isoflurane",
+            "text": "Isoflurane"
+           }
+          ]
+         },
+         {
+          "name": "Column 17",
+          "title": "detail Volatil",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 12",
+          "title": "Intravena"
+         },
+         {
+          "name": "Column 14",
+          "title": "Dosis intravena"
+         },
+         {
+          "name": "Column 18",
+          "title": "Infus/Transfusi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "Infus",
+            "text": "Infus"
+           },
+           {
+            "value": "Transfusi",
+            "text": "Transfusi"
+           }
+          ]
+         },
+         {
+          "name": "Column 13",
+          "title": "detail Infus/Transfusi"
+         },
+         {
+          "name": "Column 15",
+          "title": "Dosis infus"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rowCount": 1,
+        "maxRowCount": 22,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question13",
+        "title": "Operasi Sectio Cesaria",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Lahir",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "mati",
+            "text": "Mati"
+           },
+           {
+            "value": "hidup",
+            "text": "Hidup"
+           },
+           {
+            "value": "laki",
+            "text": "Laki laki"
+           },
+           {
+            "value": "perempuan",
+            "text": "Perempuan"
+           }
+          ]
+         },
+         {
+          "name": "column3",
+          "title": "Apgar score ( 5' )"
+         },
+         {
+          "name": "column4",
+          "title": "Apgar score ( 10' ) "
+         },
+         {
+          "name": "column2",
+          "title": "Catatan",
+          "cellType": "comment"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       }
+      ],
+      "title": "Halaman 2"
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question17",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "date",
+            "title": "Tanggal Masuk"
+           },
+           {
+            "name": "text2",
+            "inputType": "time",
+            "title": "Jam"
+           },
+           {
+            "name": "text3",
+            "title": "Perawat ruang pemulihan "
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question18",
+          "title": "ETT",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Kesadaran",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Alert"
+             },
+             {
+              "value": "item2",
+              "text": "Verbal"
+             },
+             {
+              "value": "item3",
+              "text": " Pain"
+             },
+             {
+              "value": "item4",
+              "text": "Unresponsive"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Tanda vital (NIBP)",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Tanda vital (Nadi )",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Tanda vital (Respirasi )",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Tanda Viital(SpO2 ) ",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Jalan Nafas",
+            "cellType": "checkbox",
+            "colCount": 2,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Kanul Binasal   "
+             },
+             {
+              "value": "item2",
+              "text": "Mayo   "
+             },
+             {
+              "value": "item3",
+              "text": "Simple Mask"
+             },
+             {
+              "value": "item4",
+              "text": "SMNR"
+             },
+             {
+              "value": "item5",
+              "text": " ETT "
+             },
+             {
+              "value": "item6",
+              "text": "T-piece"
+             },
+             {
+              "value": "item7",
+              "text": "Trakeastomi"
+             }
+            ]
+           },
+           {
+            "name": "column7",
+            "title": "Suhu",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "PEMANTAUAN DI RUANG PEMULIHAN"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question19",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "15'"
+         },
+         {
+          "name": "Column 2",
+          "title": "30'"
+         },
+         {
+          "name": "Column 3",
+          "title": "45'"
+         },
+         {
+          "name": "Column 4",
+          "title": "60'"
+         },
+         {
+          "name": "Column 5",
+          "title": "90'"
+         },
+         {
+          "name": "Column 6",
+          "title": "120'"
+         },
+         {
+          "name": "Column 7",
+          "title": "180'"
+         },
+         {
+          "name": "Column 8",
+          "title": "240'"
+         },
+         {
+          "name": "Column 9",
+          "title": "300'"
+         },
+         {
+          "name": "Column 10",
+          "title": "360'"
+         },
+         {
+          "name": "Column 11",
+          "title": "420'"
+         },
+         {
+          "name": "Column 12",
+          "title": "480'"
+         },
+         {
+          "name": "Column 13",
+          "title": "540'"
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rows": [
+         {
+          "value": "Row 14",
+          "text": "Jam"
+         },
+         {
+          "value": "Row 1",
+          "text": "Kesadaran"
+         },
+         {
+          "value": "Row 2",
+          "text": "Tekanan Darah Sistolik"
+         },
+         {
+          "value": "Row 3",
+          "text": "Tekanan Darah Diastoli"
+         },
+         {
+          "value": "Row 4",
+          "text": "Nadi"
+         },
+         {
+          "value": "Row 5",
+          "text": "Respirasi"
+         },
+         {
+          "value": "Row 6",
+          "text": "Suhu"
+         },
+         {
+          "value": "Row 7",
+          "text": "SpO2"
+         },
+         {
+          "value": "Row 8",
+          "text": "Skor Nyeri"
+         },
+         {
+          "value": "Row 9",
+          "text": "Diuresis"
+         },
+         {
+          "value": "Row 10",
+          "text": "Drain"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question39",
+        "title": "Skor Nyeri",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "NRS"
+         },
+         {
+          "value": "item2",
+          "text": "Wong Baker"
+         },
+         {
+          "value": "item3",
+          "text": "VAS"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "rating",
+        "name": "question23",
+        "visibleIf": "{question39} contains 'item3'",
+        "titleLocation": "hidden",
+        "rateMax": 10
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question40",
+        "title": "Monitoring Lain",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Name",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 2",
+          "title": "15'",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 3",
+          "title": "30'",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 4",
+          "title": "45'"
+         },
+         {
+          "name": "Column 5",
+          "title": "60'"
+         },
+         {
+          "name": "Column 6",
+          "title": "90'"
+         },
+         {
+          "name": "Column 7",
+          "title": "120'"
+         },
+         {
+          "name": "Column 8",
+          "title": "180'"
+         },
+         {
+          "name": "Column 9",
+          "title": "240'"
+         },
+         {
+          "name": "Column 10",
+          "title": "240'"
+         },
+         {
+          "name": "Column 11",
+          "title": "300'"
+         },
+         {
+          "name": "Column 12",
+          "title": "360'"
+         },
+         {
+          "name": "Column 13",
+          "title": "420'"
+         },
+         {
+          "name": "Column 14",
+          "title": "480'"
+         },
+         {
+          "name": "Column 15",
+          "title": "540'"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rowCount": 1,
+        "minRowCount": 1,
+        "maxRowCount": 7
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question41",
+        "title": "obat obatan",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Name",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 16",
+          "title": "satuan",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "mcg",
+            "text": "mcg"
+           },
+           {
+            "value": "gr",
+            "text": "gr"
+           },
+           {
+            "value": "mg",
+            "text": "mg"
+           }
+          ]
+         },
+         {
+          "name": "Column 2",
+          "title": "15'"
+         },
+         {
+          "name": "Column 3",
+          "title": "30'"
+         },
+         {
+          "name": "Column 4",
+          "title": "45'"
+         },
+         {
+          "name": "Column 5",
+          "title": "60'"
+         },
+         {
+          "name": "Column 6",
+          "title": "90'"
+         },
+         {
+          "name": "Column 7",
+          "title": "120'"
+         },
+         {
+          "name": "Column 8",
+          "title": "180'"
+         },
+         {
+          "name": "Column 9",
+          "title": "240'"
+         },
+         {
+          "name": "Column 10",
+          "title": "240'"
+         },
+         {
+          "name": "Column 11",
+          "title": "300'"
+         },
+         {
+          "name": "Column 12",
+          "title": "360'"
+         },
+         {
+          "name": "Column 13",
+          "title": "420'"
+         },
+         {
+          "name": "Column 14",
+          "title": "480'"
+         },
+         {
+          "name": "Column 15",
+          "title": "540'"
+         }
+        ],
+        "choices": [
+         {
+          "value": "MCG",
+          "text": "NCG"
+         },
+         {
+          "value": "GR",
+          "text": "GR"
+         },
+         {
+          "value": "MG",
+          "text": "NG"
+         }
+        ],
+        "cellType": "text",
+        "rowCount": 1,
+        "minRowCount": 1,
+        "maxRowCount": 7
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question42",
+        "title": "Cairan/Transfusi",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Name",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 2",
+          "title": "15'",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 3",
+          "title": "30'",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 4",
+          "title": "45'"
+         },
+         {
+          "name": "Column 5",
+          "title": "60'"
+         },
+         {
+          "name": "Column 6",
+          "title": "90'"
+         },
+         {
+          "name": "Column 7",
+          "title": "120'"
+         },
+         {
+          "name": "Column 8",
+          "title": "180'"
+         },
+         {
+          "name": "Column 9",
+          "title": "240'"
+         },
+         {
+          "name": "Column 10",
+          "title": "240'"
+         },
+         {
+          "name": "Column 11",
+          "title": "300'"
+         },
+         {
+          "name": "Column 12",
+          "title": "360'"
+         },
+         {
+          "name": "Column 13",
+          "title": "420'"
+         },
+         {
+          "name": "Column 14",
+          "title": "480'"
+         },
+         {
+          "name": "Column 15",
+          "title": "540'"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rowCount": 1,
+        "minRowCount": 1,
+        "maxRowCount": 7
+       },
+       {
+        "type": "comment",
+        "name": "question20",
+        "title": "Catatan",
+        "hideNumber": true
+       }
+      ],
+      "title": "Halaman 3"
+     },
+     {
+      "name": "page4",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question24",
+          "title": "Jam ",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "time"
+         },
+         {
+          "type": "radiogroup",
+          "name": "aldrete",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Aldrete Score"
+           },
+           {
+            "value": "item2",
+            "text": "Steward Score"
+           },
+           {
+            "value": "item3",
+            "text": "Bromage Score"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question14",
+          "visibleIf": "{aldrete} = 'item2'",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Kesadaran",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             },
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "Respirasi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             },
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Motorik",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             },
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Total skor",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}+{row.3}"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "add score",
+          "removeRowText": "delete score"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question15",
+          "visibleIf": "{aldrete} = 'item1'",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Aktivitas",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             },
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "Respirasi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             },
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Sirkulasi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             },
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Kesadaran",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             },
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             }
+            ]
+           },
+           {
+            "name": "6",
+            "title": "Saturasi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             },
+             {
+              "value": "1",
+              "text": "1"
+             },
+             {
+              "value": "2",
+              "text": "2"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Total skor",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}+{row.3}+{row.5}+{row.6}"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "add score",
+          "removeRowText": "delete score"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question16",
+          "visibleIf": "{aldrete} = 'item3'",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Gerakan penuh dari tungkai",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "3",
+              "text": "3"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "Tak mampu ekstensi tungkai",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "2",
+              "text": "2"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Tak mampu fleksi lutut",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "1",
+              "text": "1"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Tak mampu fleksi pergelangan kaki",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "0",
+              "text": "0"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "add score",
+          "removeRowText": "delete score"
+         }
+        ],
+        "title": "KRITERIA PENGELUARAN PASIEN DARI RUANG PEMULIHAN"
+       },
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question28",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Observasi kesadaran setiap :"
+           },
+           {
+            "name": "text2",
+            "title": "Observasi tanda vital/tekanan darah, nadi, pernafasan, suhu setiap :"
+           },
+           {
+            "name": "text3",
+            "title": "Posisi terlentang/miring ke kiri/miring ke kanan/ head up 30◦"
+           },
+           {
+            "name": "text4",
+            "title": "Pemeriksaan penunjang :"
+           },
+           {
+            "name": "text5",
+            "title": "Lain - lain :"
+           },
+           {
+            "name": "text6",
+            "placeHolder": "Liter/menit",
+            "title": "Terapi O2"
+           },
+           {
+            "name": "text7",
+            "placeHolder": " Selama ",
+            "title": "via kanul binasal/simple mask/ NRM"
+           },
+           {
+            "name": "text8",
+            "title": "Puasa selama :    "
+           },
+           {
+            "name": "text9",
+            "title": "Bila timbul mual/muntah, berikan :"
+           },
+           {
+            "name": "text10",
+            "inputType": "time",
+            "title": "Mulai minum jam :    "
+           },
+           {
+            "name": "text11",
+            "inputType": "time",
+            "title": " Mula makan jam "
+           },
+           {
+            "name": "text12",
+            "title": "Terapi cairan rumatan :"
+           },
+           {
+            "name": "text13",
+            "title": "Transfusi "
+           },
+           {
+            "name": "text14",
+            "title": "Manajemen nyeri :"
+           },
+           {
+            "name": "text15",
+            "title": "Obat-obatan lain :"
+           },
+           {
+            "name": "text16",
+            "title": "Pemeriksaan penunjang dan peralatan lainnya :"
+           },
+           {
+            "name": "text17",
+            "inputType": "date",
+            "title": "Keluar ruang pemulihan tanggal "
+           },
+           {
+            "name": "text18",
+            "inputType": "time",
+            "title": "Jam"
+           }
+          ]
+         }
+        ],
+        "title": "INTRUKSI PASCA ANASTESI"
+       },
+       {
+        "type": "radiogroup",
+        "name": "question21",
+        "title": "Ruangan Pasca Bedah",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "ICU/HCU"
+         },
+         {
+          "value": "item2",
+          "text": "ruangan"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Lainnya",
+        "colCount": 2
+       }
+      ],
+      "title": "Halaman 4"
+     }
+    ]
+   }

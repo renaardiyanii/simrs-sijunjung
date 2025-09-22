@@ -1,0 +1,223 @@
+{
+ "title": "PERMINTAAN TRANSFUSI DARAH",
+ "pages": [
+  {
+   "name": "page1",
+   "elements": [
+    {
+     "type": "panel",
+     "name": "panel1",
+     "elements": [
+      {
+       "type": "multipletext",
+       "name": "transfusi",
+       "titleLocation": "hidden",
+       "items": [
+        {
+         "name": "rs",
+         "title": "Rumah sakit"
+        },
+        {
+         "name": "bag",
+         "title": "Bag, "
+        },
+        {
+         "name": "kelas",
+         "title": "kelas"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "matrixdropdown",
+       "name": "question1",
+       "titleLocation": "hidden",
+       "columns": [
+        {
+         "name": "dr",
+         "title": "Dr. yang meminta",
+         "cellType": "text"
+        },
+        {
+         "name": "noreg",
+         "title": "No.Rekam Medis",
+         "cellType": "text"
+        },
+        {
+         "name": "nm_os",
+         "title": "Nama OS",
+         "cellType": "text"
+        },
+        {
+         "name": "umur",
+         "title": "Umur",
+         "cellType": "text"
+        },
+        {
+         "name": "jk",
+         "title": "Jenis Kelamin",
+         "cellType": "radiogroup",
+         "choices": [
+          {
+           "value": "perempuan",
+           "text": "Perempuan"
+          },
+          {
+           "value": "laki",
+           "text": "Laki laki"
+          }
+         ]
+        },
+        {
+         "name": "alamat",
+         "title": "Alamat",
+         "cellType": "comment"
+        },
+        {
+         "name": "diagnosa",
+         "title": "Diagnosa (Sementara)",
+         "cellType": "comment"
+        },
+        {
+         "name": "indikasi",
+         "title": "Indikasi Tegas",
+         "cellType": "text"
+        },
+        {
+         "name": "diperlukan",
+         "title": "Diperlukan",
+         "cellType": "text",
+         "inputType": "datetime-local"
+        },
+        {
+         "name": "trafs",
+         "title": "Trafs. Sebelumnya",
+         "cellType": "text"
+        },
+        {
+         "name": "kapan",
+         "title": "Kapan",
+         "cellType": "text"
+        },
+        {
+         "name": "os_wanita",
+         "title": "Untuk OS Wanita",
+         "cellType": "radiogroup",
+         "choices": [
+          {
+           "value": "ya",
+           "text": "Ya"
+          }
+         ]
+        },
+        {
+         "name": "p_hamil",
+         "title": "Pernah Hamil",
+         "cellType": "text"
+        },
+        {
+         "name": "abortus",
+         "title": "Abortus",
+         "cellType": "text"
+        },
+        {
+         "name": "partus",
+         "title": "Partus",
+         "cellType": "text"
+        }
+       ],
+       "columnLayout": "vertical",
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "cellType": "text",
+       "rows": [
+        {
+         "value": "item1",
+         "text": " "
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "name": "panel2",
+     "elements": [
+      {
+       "type": "multipletext",
+       "name": "question2",
+       "titleLocation": "hidden",
+       "items": [
+        {
+         "name": "whole",
+         "placeHolder": "cc",
+         "title": "Whole Blood"
+        },
+        {
+         "name": "packed",
+         "placeHolder": "unit",
+         "title": "Packed Red Cells"
+        },
+        {
+         "name": "liquid",
+         "placeHolder": "unit",
+         "title": "Liquid Plasma"
+        },
+        {
+         "name": "trombosit",
+         "placeHolder": "unit",
+         "title": "Trombosit"
+        },
+        {
+         "name": "ffp",
+         "placeHolder": "unit",
+         "title": "FFP"
+        }
+       ]
+      },
+      {
+       "type": "comment",
+       "name": "question3",
+       "title": "Hal lain lain",
+       "hideNumber": true
+      }
+     ],
+     "title": "JENIS DARAH YANG DI PERLUKAN"
+    },
+    {
+     "type": "panel",
+     "name": "panel3",
+     "elements": [
+      {
+       "type": "text",
+       "name": "tgl",
+       "maxWidth": "100px",
+       "title": "Tanah Badantuang, ",
+       "hideNumber": true,
+       "inputType": "datetime-local"
+      },
+      {
+       "type": "signaturepad",
+       "name": "ttd",
+       "title": "Tanda tangan Dokter yang meminta,",
+       "hideNumber": true
+      },
+      {
+       "type": "text",
+       "name": "question4",
+       "titleLocation": "hidden",
+       "hideNumber": true,
+       "size": 40,
+       "placeHolder": "nama lengkap"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

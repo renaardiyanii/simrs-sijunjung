@@ -1,0 +1,1151 @@
+{
+    "title": "FORMULIR REGISTRASI LAYANAN KONSELING DAN TES HIV",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl",
+        "title": "Tanggal",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question9",
+          "title": "DATA PASIEN",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Alamat"
+           },
+           {
+            "name": "text3",
+            "title": "Nama ibu kandung"
+           },
+           {
+            "name": "text4",
+            "title": "Jenis kelamin"
+           },
+           {
+            "name": "text5",
+            "title": "Status perkawinan"
+           },
+           {
+            "name": "text6",
+            "title": "Pendidikan"
+           },
+           {
+            "name": "text7",
+            "title": "Pekerjaan"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "statrujukan",
+          "title": "Status kunjungan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "datang",
+            "text": "Datang sendiri"
+           },
+           {
+            "value": "dirujuk",
+            "text": "Dirujuk"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question3",
+          "title": "Status rujukan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tempat_kerja",
+            "text": "Tempat kerja"
+           },
+           {
+            "value": "kader",
+            "text": "kader"
+           },
+           {
+            "value": "klp_dukungan",
+            "text": "Klp dukungan"
+           },
+           {
+            "value": "lsm",
+            "text": "LSM"
+           },
+           {
+            "value": "pasangan",
+            "text": "Pasangan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "kelresiko",
+          "title": "Status kehamilan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "trimester1",
+            "text": "Trimester I"
+           },
+           {
+            "value": "trimester2",
+            "text": "Trimester II"
+           },
+           {
+            "value": "trimester3",
+            "text": "Trimester III"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak hamil"
+           },
+           {
+            "value": "tidaktahu",
+            "text": "Tidak tahu"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question2",
+          "title": "Kelompok Resiko ",
+          "description": "Pilih salah satu yang paling dominan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ps",
+            "text": "PS"
+           },
+           {
+            "value": "pelanggan",
+            "text": "Pelanggan PS"
+           },
+           {
+            "value": "waria",
+            "text": "Waria"
+           },
+           {
+            "value": "ristri",
+            "text": "Pasangan Ristri"
+           },
+           {
+            "value": "penasun",
+            "text": "Penasun"
+           },
+           {
+            "value": "gay",
+            "text": "Gay/LSL"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question1",
+          "visibleIf": "{question2} anyof ['ps']",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "langsung",
+            "text": "langsung"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak langsung"
+           }
+          ],
+          "colCount": 4
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question4",
+          "title": "pasangan klien , jika klien perempuan ?",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "pasangan klien , jika klien laki laki?",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question6",
+          "title": "Apakah pasangan hamil ?",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           },
+           {
+            "value": "item3",
+            "text": "Tidak tahu"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "title": "Tanggal lahir pasangan",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question8",
+          "title": "Status pasangan ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "HIV (+)"
+           },
+           {
+            "value": "item2",
+            "text": "HIV (-)"
+           },
+           {
+            "value": "item3",
+            "text": "Tidak diketahui"
+           }
+          ],
+          "colCount": 3
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "wbp",
+          "title": "Klien WBP (warga binaan permasyarakatan)",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "POPULASI KHUSUS"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question10",
+          "title": "Tanggal Konseling Pra Tes HIV ",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question11",
+          "title": "Status klien",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lama"
+           },
+           {
+            "value": "item2",
+            "text": "Baru"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "checkbox",
+          "name": "question12",
+          "title": "Alasan tes HIV",
+          "description": "bisa di isi lebih dari satu",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ingin tahu saja"
+           },
+           {
+            "value": "item2",
+            "text": "Merasa beresiko"
+           },
+           {
+            "value": "item3",
+            "text": "Mampung gratus"
+           },
+           {
+            "value": "item4",
+            "text": "Tes ulang (window period)"
+           },
+           {
+            "value": "item5",
+            "text": "Untuk bekerja"
+           },
+           {
+            "value": "item6",
+            "text": "Ada gejala tertentu"
+           },
+           {
+            "value": "item7",
+            "text": "Akan menikah"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question13",
+          "title": "Mengetahui Adanya Tes HIV",
+          "description": "pilih satu yang lebih dominan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Brosur"
+           },
+           {
+            "value": "item2",
+            "text": "Koran"
+           },
+           {
+            "value": "item3",
+            "text": "TV"
+           },
+           {
+            "value": "item4",
+            "text": "Petugas kesehatan"
+           },
+           {
+            "value": "item5",
+            "text": "Teman"
+           },
+           {
+            "value": "item6",
+            "text": "Petugas Outrech"
+           },
+           {
+            "value": "item7",
+            "text": "Poster"
+           },
+           {
+            "value": "item8",
+            "text": "Lay konselor"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question14",
+          "title": "Pernah tes HIV sebelum nya",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question15",
+          "visibleIf": "{question14} anyof ['item1']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Dimana"
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Kapan"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question16",
+          "visibleIf": "{question14} anyof ['item1']",
+          "title": "Hasil",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Non Reaktif"
+           },
+           {
+            "value": "item2",
+            "text": "Reaktif"
+           },
+           {
+            "value": "item3",
+            "text": "Tidak tahu"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         }
+        ],
+        "title": "KONSELING PRA TES",
+        "description": "isikan bila dilakukan konseling KTS"
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel7",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "question17",
+            "title": "Hubungan seks vaginal berisiko ",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "question18",
+            "visibleIf": "{question17} anyof ['item1']",
+            "title": "Kapan",
+            "hideNumber": true,
+            "inputType": "date"
+           },
+           {
+            "type": "radiogroup",
+            "name": "question19",
+            "title": "Bergantian peralatan suntik",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "question20",
+            "visibleIf": "{question19} anyof ['item1']",
+            "title": "Kapan",
+            "hideNumber": true,
+            "inputType": "date"
+           },
+           {
+            "type": "radiogroup",
+            "name": "question21",
+            "title": "Transmisi Ibu ke anak",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "question22",
+            "visibleIf": "{question21} anyof ['item1']",
+            "title": "Kapan",
+            "hideNumber": true,
+            "inputType": "date"
+           },
+           {
+            "type": "radiogroup",
+            "name": "question23",
+            "title": "Periode Jendela (window period)",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "question24",
+            "visibleIf": "{question23} anyof ['item1']",
+            "title": "Kapan",
+            "hideNumber": true,
+            "inputType": "date"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel8",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "question25",
+            "title": "Anal Seks berisiko",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "question26",
+            "visibleIf": "{question25} anyof ['item1']",
+            "title": "Kapan",
+            "hideNumber": true,
+            "inputType": "date"
+           },
+           {
+            "type": "radiogroup",
+            "name": "question27",
+            "title": "Transfusi darah",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "question28",
+            "visibleIf": "{question27} anyof ['item1']",
+            "title": "Kapan",
+            "hideNumber": true,
+            "inputType": "date"
+           },
+           {
+            "type": "radiogroup",
+            "name": "question29",
+            "title": "Kesediaan untuk test",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "question32",
+            "title": "Lainnya",
+            "hideNumber": true
+           }
+          ],
+          "startWithNewLine": false
+         }
+        ],
+        "title": "KAJIAN TINGKAT RESIKO"
+       }
+      ],
+      "title": "Halaman 1"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question30",
+          "title": "Tanggal Pemberian informasi",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "checkbox",
+          "name": "question31",
+          "title": "Penyakit terkait pasien",
+          "description": "bole di isi lebih dari satu",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "TB"
+           },
+           {
+            "value": "item2",
+            "text": "Daermatitis"
+           },
+           {
+            "value": "item3",
+            "text": "Herpes"
+           },
+           {
+            "value": "item4",
+            "text": "Sifilis"
+           },
+           {
+            "value": "item5",
+            "text": "Hepatitis"
+           },
+           {
+            "value": "item6",
+            "text": "Diare"
+           },
+           {
+            "value": "item7",
+            "text": "LGV"
+           },
+           {
+            "value": "item8",
+            "text": "Toksoplasmosis"
+           },
+           {
+            "value": "item9",
+            "text": "IMS"
+           },
+           {
+            "value": "item10",
+            "text": "Kandidiasis oralesovaginal"
+           },
+           {
+            "value": "item11",
+            "text": "PCP"
+           },
+           {
+            "value": "item12",
+            "text": "Wasting syndrom"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 5
+         },
+         {
+          "type": "radiogroup",
+          "name": "question33",
+          "title": "Kesediaan untuk Tes",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 5
+         }
+        ],
+        "title": "PEMBERIAN INFORMASI"
+       },
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question34",
+          "title": "Tanggal Tes HIV",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question35",
+          "title": "Jenis Tes HIV",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Rapid Tes"
+           },
+           {
+            "value": "item2",
+            "text": "Elisa"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question36",
+          "title": "Hasil Tes R1",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Non Reaktif"
+           },
+           {
+            "value": "item2",
+            "text": "Reaktif"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question37",
+          "visibleIf": "{question36} anyof ['item2']",
+          "title": "Nama Reagen ",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "question38",
+          "title": "Hasil Tes R2",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Non Reaktif"
+           },
+           {
+            "value": "item2",
+            "text": "Reaktif"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question39",
+          "visibleIf": "{question38} anyof ['item2']",
+          "title": "Nama Reagen ",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "question40",
+          "title": "Hasil Tes R3",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Non Reaktif"
+           },
+           {
+            "value": "item2",
+            "text": "Reaktif"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question41",
+          "visibleIf": "{question40} anyof ['item2']",
+          "title": "Nama Reagen ",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "question42",
+          "title": "Kesimpulan Hasil Tes HIV",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Non Reaktif"
+           },
+           {
+            "value": "item2",
+            "text": "Reaktif"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question43",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nomor Registrasi nasional PDP"
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Tgl Rujuk Masuk PDP"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "checkbox",
+          "name": "question44",
+          "title": "Tindak Lanjut (TPK)",
+          "description": "bisa pilih lebih dari satu",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Rujuk konseling"
+           },
+           {
+            "value": "item2",
+            "text": "Rujuk ke PDP dan PPIA"
+           },
+           {
+            "value": "item3",
+            "text": "Rujuk ke"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "question45",
+          "visibleIf": "{question44} anyof ['item1']",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question46",
+          "visibleIf": "{question44} anyof ['item3']",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "TES ANTIBODI HIV"
+       },
+       {
+        "type": "panel",
+        "name": "panel11",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question47",
+          "title": "Bagaimana tes HIV pasangan ?",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "HIIV (-)"
+           },
+           {
+            "value": "item2",
+            "text": "HIIV (+)"
+           },
+           {
+            "value": "item3",
+            "text": "Tidak tahu"
+           }
+          ],
+          "colCount": 3
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel12",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question48",
+          "title": "Tanggal konseling pasca tes",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question49",
+          "title": "Terima hasil",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question50",
+          "startWithNewLine": false,
+          "title": "Kaji gejala TB",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question51",
+          "startWithNewLine": false,
+          "title": "Jumlah kondom yang diberikan",
+          "hideNumber": true,
+          "size": 50,
+          "placeHolder": "Buah"
+         }
+        ],
+        "title": "KONSELING PASCA TES"
+       },
+       {
+        "type": "checkbox",
+        "name": "question52",
+        "title": "Tindak lanjjut (KTS)",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tes ulang"
+         },
+         {
+          "value": "item2",
+          "text": "Rujuk ke layanan IMS"
+         },
+         {
+          "value": "item3",
+          "text": "Rujuk ke layanan TB"
+         },
+         {
+          "value": "item4",
+          "text": "Rujuk ke PDP"
+         },
+         {
+          "value": "item5",
+          "text": "Rujuk ke PPIA"
+         },
+         {
+          "value": "item6",
+          "text": "Rujuk ke Profesional"
+         },
+         {
+          "value": "item7",
+          "text": "Rujuk ke  layanan PTRM"
+         },
+         {
+          "value": "item8",
+          "text": "Rujuk ke Rehab"
+         },
+         {
+          "value": "item9",
+          "text": "Rujuk ke petugas pendukung"
+         },
+         {
+          "value": "item10",
+          "text": "Rujuk ke layanan LASS"
+         },
+         {
+          "value": "item11",
+          "text": "Konseling"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "radiogroup",
+        "name": "question53",
+        "visibleIf": "{question52} anyof ['item9']",
+        "title": "Tindak lanjjut (KTS)",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Komunitas"
+         },
+         {
+          "value": "item2",
+          "text": "LSM"
+         },
+         {
+          "value": "item3",
+          "text": "Kader"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "text",
+        "name": "question54",
+        "title": "Nama Konselor / Petugas Keshatan",
+        "hideNumber": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "question55",
+        "title": "Status layanan",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Rumah sakit"
+         },
+         {
+          "value": "item2",
+          "text": "Puskesmas"
+         },
+         {
+          "value": "item3",
+          "text": "Klinik"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "question56",
+        "title": "Jenis Layanan",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Layanan menetap"
+         },
+         {
+          "value": "item2",
+          "text": "Layanan bergerak"
+         }
+        ],
+        "colCount": 3
+       }
+      ],
+      "title": "Halaman 2"
+     }
+    ]
+   }

@@ -1,0 +1,85 @@
+{
+    "title": "PENANDAAN LOKASI OPERASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<p> Berikut tanda gambar sesuai dengan penandaan lokasi operasi pada tubuh pasien, berikan pendandaan pada lokasi tubuh pasien dengan <b>CORET </b> yang akan di operasi (penandaan tidak dilakukan jika secara teknis atau anatomois tidak mungkin untuk diberi tanda, seperti : permukaan mukosa, perineum dan bayi prematur."
+       },
+       {
+        "type": "text",
+        "name": "question2",
+        "title": "Prosedur",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question3",
+        "startWithNewLine": false,
+        "title": "Tanggal prosedur",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question4",
+        "width": 500,
+        "titleLocation": "hidden",
+        "height": 700
+       },
+       {
+        "type": "signaturepad",
+        "name": "question6",
+        "width": 500,
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "height": 700
+       },
+       {
+        "type": "signaturepad",
+        "name": "question11",
+        "width": 700,
+        "titleLocation": "hidden",
+        "height": 400
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question5",
+          "html": "Saya menyatakan bahwa lokasi operasi yang telah ditetapkan diagram adalah benar"
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "title": "posisi pasien dalam operasi :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question8",
+          "title": "Deskripsi singkat apabila tidak dapat dilakukan penandaan pada tubuh pasien",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question9",
+          "title": "Tanda tangan operator",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question10",
+          "titleLocation": "hidden"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

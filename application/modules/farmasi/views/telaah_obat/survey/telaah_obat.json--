@@ -1,0 +1,310 @@
+{
+ "pages": [
+  {
+   "name": "page1",
+   "elements": [
+    {
+     "type": "panel",
+     "name": "panel1",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question4",
+       "maxWidth": "200px",
+       "html": "<h4>Telaah Resep</h4>"
+      },
+      {
+       "type": "radiogroup",
+       "name": "tulisan_jelas",
+       "maxWidth": "200px",
+       "indent": 1,
+       "title": "Tulisan Jelas",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "benar_nama_obat",
+       "maxWidth": "200px",
+       "startWithNewLine": false,
+       "indent": 1,
+       "title": "Benar Nama Obat",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "benar_kekuatan_obat",
+       "maxWidth": "200px",
+       "indent": 1,
+       "title": "Benar Kekuatan Obat",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "benar_frekuensi",
+       "maxWidth": "200px",
+       "startWithNewLine": false,
+       "indent": 1,
+       "title": "Benar Frekuensi",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "pemberian",
+       "maxWidth": "200px",
+       "indent": 1,
+       "title": "Pemberian",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "benar_rute",
+       "maxWidth": "200px",
+       "startWithNewLine": false,
+       "indent": 1,
+       "title": "Benar Rute",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "ada_duplikasi",
+       "maxWidth": "200px",
+       "indent": 1,
+       "title": "Ada Duplikasi",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "ada_interaksi",
+       "maxWidth": "200px",
+       "startWithNewLine": false,
+       "indent": 1,
+       "title": "Ada Interaksi",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "item_7",
+       "maxWidth": "600px",
+       "indent": 1,
+       "title": "Item > 7",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      }
+     ],
+     "startWithNewLine": false,
+     "width": "600px"
+    },
+    {
+     "type": "panel",
+     "name": "telaah_resep_1",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question1",
+       "maxWidth": "200px",
+       "html": "<h4>Verif Penyerahan Obat</h4>"
+      },
+      {
+       "type": "radiogroup",
+       "name": "nama_pasien",
+       "maxWidth": "200px",
+       "indent": 1,
+       "title": "Nama Pasien",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "bentuk_sediaan",
+       "maxWidth": "200px",
+       "startWithNewLine": false,
+       "indent": 1,
+       "title": "Bentuk Sediaan",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "kekuatan",
+       "maxWidth": "200px",
+       "indent": 1,
+       "title": "Kekuatan",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "rute_pembeliaan",
+       "maxWidth": "200px",
+       "startWithNewLine": false,
+       "indent": 1,
+       "title": "Rute Pembelian",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      },
+      {
+       "type": "radiogroup",
+       "name": "frek_pembelian",
+       "maxWidth": "200px",
+       "indent": 1,
+       "title": "Frek Pembelian",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "1",
+         "text": "Ya"
+        },
+        {
+         "value": "0",
+         "text": "Tidak"
+        }
+       ],
+       "colCount": 3
+      }
+     ],
+     "startWithNewLine": false,
+     "width": "600px"
+    }
+   ]
+  }
+ ],
+ "showTitle": false
+}

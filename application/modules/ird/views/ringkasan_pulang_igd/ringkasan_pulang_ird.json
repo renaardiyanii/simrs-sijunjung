@@ -1,0 +1,458 @@
+{
+   "title": "RINGKASAN PULANG PASIEN IGD",
+   "pages": [
+    {
+     "name": "halaman1",
+     "elements": [
+      {
+       "type": "text",
+       "name": "tgl",
+       "visible": false,
+       "title": "Tanggal Kunjungan",
+       "hideNumber": true,
+       "inputType": "datetime-local"
+      },
+      {
+       "type": "comment",
+       "name": "diagnosa",
+       "visible": false,
+       "title": "Diagnosa",
+       "hideNumber": true
+      },
+      {
+       "type": "comment",
+       "name": "tindakan",
+       "title": "Tindakan",
+       "hideNumber": true
+      },
+      {
+       "type": "panel",
+       "name": "panel1",
+       "elements": [
+        {
+         "type": "matrixdynamic",
+         "name": "penatalaksana",
+         "title": "PENATALAKSANA :",
+         "hideNumber": true,
+         "columns": [
+          {
+           "name": "pukul",
+           "title": "Pukul",
+           "cellType": "text",
+           "inputType": "time"
+          },
+          {
+           "name": "nama_obat",
+           "title": "Nama Obat / Infus",
+           "cellType": "text"
+          },
+          {
+           "name": "dosis",
+           "title": "Dosisi",
+           "cellType": "text"
+          },
+          {
+           "name": "nm_tindakan",
+           "title": "Nama Tindakan",
+           "cellType": "text"
+          },
+          {
+           "name": "dilakukan",
+           "title": "Dilakukan oleh",
+           "cellType": "text"
+          }
+         ],
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "cellType": "text",
+         "allowAddRows": false,
+         "allowRemoveRows": false,
+         "rowCount": 4
+        },
+        {
+         "type": "matrixdropdown",
+         "name": "question1",
+         "visible": false,
+         "titleLocation": "hidden",
+         "columns": [
+          {
+           "name": "prosedur",
+           "title": "1. Prosedur Non Bedah",
+           "cellType": "text"
+          },
+          {
+           "name": "tenaga",
+           "title": "2. Tenaga Ahli",
+           "cellType": "text"
+          },
+          {
+           "name": "radiologi",
+           "title": "3. Radiologi",
+           "cellType": "text"
+          },
+          {
+           "name": "rehabilitas",
+           "title": "4. Rehabilitas",
+           "cellType": "text"
+          },
+          {
+           "name": "obat",
+           "title": "5. Obat",
+           "cellType": "text"
+          },
+          {
+           "name": "bedah",
+           "title": "6. Prosedur Bedah",
+           "cellType": "text"
+          },
+          {
+           "name": "keperawatan",
+           "title": "7.  Keperawatan",
+           "cellType": "text"
+          },
+          {
+           "name": "lab",
+           "title": "8. Laboratorium",
+           "cellType": "text"
+          },
+          {
+           "name": "kamar",
+           "title": "9. Kamar/Akomodasi",
+           "cellType": "text"
+          },
+          {
+           "name": "sewa",
+           "title": "10. Sewa alat",
+           "cellType": "text"
+          },
+          {
+           "name": "alkes",
+           "title": "11. Alat Kesehatan",
+           "cellType": "text"
+          },
+          {
+           "name": "konsultasi",
+           "title": "12. Konsultasi",
+           "cellType": "text"
+          },
+          {
+           "name": "penunjang",
+           "title": "13. Penunjang lainnya",
+           "cellType": "text"
+          },
+          {
+           "name": "pelayanan",
+           "title": "14. Pelayanan darah",
+           "cellType": "text"
+          },
+          {
+           "name": "rawat",
+           "title": "15. Rawat intensif",
+           "cellType": "text"
+          },
+          {
+           "name": "bmhp",
+           "title": "16. BMHP",
+           "cellType": "text"
+          },
+          {
+           "name": "lainnya",
+           "title": "17. Lain - lain",
+           "cellType": "text"
+          }
+         ],
+         "columnLayout": "vertical",
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "rows": [
+          {
+           "value": "satuan",
+           "text": "Satuan"
+          },
+          {
+           "value": "jumlah",
+           "text": "Jumlah"
+          },
+          {
+           "value": "total",
+           "text": "Total Tarif"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "halaman2",
+     "elements": [
+      {
+       "type": "panel",
+       "name": "panel3",
+       "elements": [
+        {
+         "type": "matrixdropdown",
+         "name": "mrs",
+         "titleLocation": "hidden",
+         "columns": [
+          {
+           "name": "ckls",
+           "title": "✓",
+           "cellType": "checkbox",
+           "choices": [
+            {
+             "value": "ckls",
+             "text": "✓"
+            }
+           ]
+          },
+          {
+           "name": "keterangan",
+           "title": "Keterangan",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "foto_rongsen",
+             "text": "Foto rongsen"
+            },
+            {
+             "value": "ekg",
+             "text": "EKG"
+            },
+            {
+             "value": "obat",
+             "text": "Obat obatan"
+            },
+            {
+             "value": "lab",
+             "text": "Laboratorium"
+            }
+           ]
+          }
+         ],
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "rows": [
+          {
+           "value": "mrs",
+           "text": "MRS"
+          }
+         ]
+        },
+        {
+         "type": "matrixdropdown",
+         "name": "dipulangkan",
+         "titleLocation": "hidden",
+         "columns": [
+          {
+           "name": "ckls",
+           "title": " ",
+           "cellType": "checkbox",
+           "choices": [
+            {
+             "value": "ckls",
+             "text": "✓"
+            }
+           ]
+          },
+          {
+           "name": "keterangan",
+           "title": " ",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "kie",
+             "text": "Kie"
+            },
+            {
+             "value": "obat_pulang",
+             "text": "Obat Pulang"
+            },
+            {
+             "value": "foto_rongsen",
+             "text": "Foto rongsen"
+            },
+            {
+             "value": "laboratorium",
+             "text": "Laboratorium"
+            },
+            {
+             "value": "kontrol",
+             "text": "Kontrol poliklinik"
+            }
+           ]
+          }
+         ],
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "rows": [
+          {
+           "value": "dipulangkan",
+           "text": "Dipulangkan"
+          }
+         ]
+        },
+        {
+         "type": "matrixdropdown",
+         "name": "pulang_paksa",
+         "titleLocation": "hidden",
+         "columns": [
+          {
+           "name": "ckls",
+           "title": " ",
+           "cellType": "checkbox",
+           "choices": [
+            {
+             "value": "ckls",
+             "text": "✓"
+            }
+           ]
+          },
+          {
+           "name": "keterangan",
+           "title": " ",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "kie",
+             "text": "Kie"
+            },
+            {
+             "value": "ttd",
+             "text": "Tanda tangan pernyataan pulang paksa"
+            }
+           ]
+          }
+         ],
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "rows": [
+          {
+           "value": "pulang_paksa",
+           "text": "Pulang paksa"
+          }
+         ]
+        },
+        {
+         "type": "matrixdropdown",
+         "name": "meninggal",
+         "titleLocation": "hidden",
+         "columns": [
+          {
+           "name": "ckls",
+           "title": " ",
+           "cellType": "checkbox",
+           "choices": [
+            {
+             "value": "ckls",
+             "text": "✓"
+            }
+           ]
+          },
+          {
+           "name": "keterangan",
+           "title": " ",
+           "cellType": "text",
+           "inputType": "datetime-local"
+          }
+         ],
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "rows": [
+          {
+           "value": "meninggal",
+           "text": "Meninggal"
+          }
+         ]
+        },
+        {
+         "type": "matrixdropdown",
+         "name": "minggat",
+         "titleLocation": "hidden",
+         "columns": [
+          {
+           "name": "ckls",
+           "title": " ",
+           "cellType": "checkbox",
+           "choices": [
+            {
+             "value": "ckls",
+             "text": "✓"
+            }
+           ]
+          },
+          {
+           "name": "keterangan",
+           "title": " ",
+           "cellType": "radiogroup"
+          }
+         ],
+         "choices": [
+          {
+           "value": "l_satpam",
+           "text": "Lapor satpam"
+          },
+          {
+           "value": "l_kooordinator",
+           "text": "Lapor koordinator . perawat pengawas"
+          },
+          {
+           "value": "l_piket",
+           "text": "Lapor piket"
+          }
+         ],
+         "rows": [
+          {
+           "value": "minggat",
+           "text": "Minggat"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "signaturepad",
+       "name": "question2",
+       "title": "Perawat",
+       "hideNumber": true
+      },
+      {
+       "type": "text",
+       "name": "question3",
+       "titleLocation": "hidden"
+      }
+     ],
+     "title": "INFORMASI PEMINDAHAN RUANGAN / PEMULANGAN PASIEN"
+    }
+   ]
+  }

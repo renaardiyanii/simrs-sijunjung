@@ -1,0 +1,137 @@
+{
+    "title": "SURAT KETERANGAN MASUK IGD",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "identitas",
+        "title": "Saya yang bertanda tangan dibawah ini menerangkan bahwa pasien dengan :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "nama",
+          "title": "Nama"
+         },
+         {
+          "name": "umur",
+          "title": "Umur"
+         },
+         {
+          "name": "alamat",
+          "title": "Alamat"
+         },
+         {
+          "name": "norek",
+          "title": "No Rekam Medik"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "title": "Telah masuk ke instalasi Gawat Darurat  (IGD) RSUD Sijunjung pada :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "tanggal",
+          "inputType": "date",
+          "title": "Tanggal"
+         },
+         {
+          "name": "jam",
+          "inputType": "time",
+          "title": "Jam"
+         },
+         {
+          "name": "keluhan",
+          "title": "Keluhan"
+         },
+         {
+          "name": "pemeriksaan_fisik",
+          "title": "Pemeriksaan Fisik"
+         }
+        ]
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "pemeriksaan_fisik",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "tekanan_nadi",
+          "title": "Tekanan Nadi",
+          "cellType": "text"
+         },
+         {
+          "name": "nadi",
+          "title": "Nadi",
+          "cellType": "text"
+         },
+         {
+          "name": "suhu",
+          "title": "Suhu",
+          "cellType": "text"
+         },
+         {
+          "name": "pernafasan",
+          "title": "Pernafasan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "multipletext",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "diagnosis",
+          "title": "Diagnosis (Lengkap)"
+         },
+         {
+          "name": "saran",
+          "title": "Saran"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question3",
+        "html": "<h5> Demikian surat keterangan ini kami buat untuk dapat dipergunakan sebagaimana mestinya."
+       },
+       {
+        "type": "text",
+        "name": "tempat",
+        "title": "Tanah Badantuang,",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "nm_ttd",
+        "titleLocation": "hidden",
+        "size": 50
+       }
+      ]
+     }
+    ]
+   }

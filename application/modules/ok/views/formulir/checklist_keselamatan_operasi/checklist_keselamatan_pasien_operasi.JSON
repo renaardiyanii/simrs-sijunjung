@@ -1,0 +1,264 @@
+{
+    "title": "CHEKLIST KESELAMATAN DI KAMAR OPERASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "title": "Minimal ada perawat dan dr  Anestesi",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "Apakah  identitas pasien sudah benar, rencana tindakan sudah jelas, dan ada persetujuan  tindakan medis  yang akan di lakukan (inform concern)?"
+           },
+           {
+            "name": "Column 2",
+            "title": "Apakah area yang akan dioperasi sudah diberi tanda ?"
+           },
+           {
+            "name": "Column 3",
+            "title": "Apakah mesin anestesi dan obat –obatan sudah lengkap ?           "
+           },
+           {
+            "name": "Column 4",
+            "title": "Apakah pasien sudah memakai pulse oksimetri dan sudah berfungsi baik?"
+           },
+           {
+            "name": "Column 5",
+            "title": "Apakah pasien memiliki  riwayat alergi?"
+           },
+           {
+            "name": "Column 6",
+            "title": "Apakah pasien memiliki gangguan pernapasan"
+           },
+           {
+            "name": "Column 7",
+            "title": "Resiko perdarahan > 500 ml (7ml/kg bagi pasien anak)  bagi pasien ligasi"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "cellType": "radiogroup",
+          "columnColCount": 2,
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "text",
+          "name": "tgl_sign_in",
+          "title": "Tgl/Jam",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Sebelum Induksi Anestesi\n ( Sign In )\n"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "title": "Dengan perawat, dr Anestesi & Bedah ",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Memastikan bahwa semua anggota tim medis sudah memperkenalkan diri(nama & peran)"
+           },
+           {
+            "name": "column2",
+            "title": "Memastikan dan membaca ulang nama pasien, tindakan medis dan area yang akan diinsisi "
+           },
+           {
+            "name": "column3",
+            "title": "Apakah profilaksis anti biotik sudah diberikan 1 jam sebelumnya"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "cellType": "radiogroup",
+          "columnColCount": 2,
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "title": "Kejadian beresiko yang perlu diantisipasi untuk dr Bedah",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Apakah tindakan beresiko atau tindakan tidak rutin yang akan dilakukan"
+           },
+           {
+            "name": "column2",
+            "title": "Berapa lama tindakan  ini akan dikerjakan",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Apakah sudah diantisipasi perdarahan?"
+           },
+           {
+            "name": "column4",
+            "title": "Untuk dr. Anestesi Apakah ada hal khusus untuk pasien"
+           },
+           {
+            "name": "column8",
+            "title": "jika ya,",
+            "cellType": "text",
+            "visibleIf": "{question3[0].column4} = 'ya'"
+           },
+           {
+            "name": "column5",
+            "title": "Untuk Tim Perawat Apakah ada masalah dengan peralatan atau masalah alat yang dikhawatirkan ?"
+           },
+           {
+            "name": "column6",
+            "title": "Apakah hasil radiologi yang diperlukan sudah ada?"
+           },
+           {
+            "name": "column7",
+            "title": "Apakah sudah dipastikan keseterilan alat?"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "cellType": "radiogroup",
+          "columnColCount": 2,
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "text",
+          "name": "tgl_time_out",
+          "title": "Tgl/Jam",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Sebelum Insisi\n    (Time Out)\n"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question4",
+          "title": "Dengan perawat, dr Anestesi & dr Bedah",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Secara verbal  perawat memastikan : Nama tindakan"
+           },
+           {
+            "name": "column6",
+            "title": "jika ya,",
+            "cellType": "text",
+            "visibleIf": "{question4[0].column1} = 'ya'"
+           },
+           {
+            "name": "column2",
+            "title": " Kelengkapan alat, jumlah kasa dan jarum/alat lain"
+           },
+           {
+            "name": "column3",
+            "title": "Pelabelan spesimen (baca label spesimen dan nama pasien dengan keras)"
+           },
+           {
+            "name": "column4",
+            "title": "Apakah ada masalah dengan peralatan yang perlu disampaikan ?"
+           },
+           {
+            "name": "column7",
+            "title": "jika ya",
+            "cellType": "text",
+            "visibleIf": "{question4[0].column4} = 'ya'"
+           },
+           {
+            "name": "column5",
+            "title": "Untuk dokter  Bedah, dr Anestesi dan perawat  : Apakah ada catatan khusus untuk proses recovery  /  penanganan perawatan pasien "
+           },
+           {
+            "name": "column8",
+            "title": "jika ya",
+            "cellType": "text",
+            "visibleIf": "{question4[0].column5} = 'ya'"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "cellType": "radiogroup",
+          "columnColCount": 2,
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "text",
+          "name": "tgl_sign_out",
+          "title": "Tgl/Jam",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         }
+        ],
+        "title": "Sebelum pasien meninggalkan Ruang Operasi  (Sign Out)"
+       }
+      ]
+     }
+    ]
+   }

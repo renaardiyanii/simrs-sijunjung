@@ -1,0 +1,677 @@
+{
+    "title": "MONITORING TRANSFUSI DARAH",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "title": "Diagnosis",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "startWithNewLine": false,
+          "title": "Golongan darah pasien",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "Jenis darah dan volume yang diminta :",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "title": "Alasan transfusi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question4",
+          "title": "Rencana pemberian transfusi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question6",
+          "title": "Pemberian pre medikasi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question7",
+          "title": "Kecepatan pemberian transfusi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question8",
+          "title": "Target pemberian transfusi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question9",
+          "title": "Pemeriksaan untuk transfusi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question11",
+          "title": "Pemeriksaan untuk monitoring",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question10",
+          "title": "Laporkan segera, bila terjadi reaksi transfusi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "gatal"
+           },
+           {
+            "value": "item2",
+            "text": "perubahan tanda vital"
+           },
+           {
+            "value": "item3",
+            "text": "kemerahan"
+           },
+           {
+            "value": "item4",
+            "text": "jantung berdebar debar"
+           },
+           {
+            "value": "item5",
+            "text": "sesak"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question12",
+          "title": "Verifikasi DPJP",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "date",
+            "title": "Tanggal"
+           },
+           {
+            "name": "text2",
+            "inputType": "time",
+            "title": "Jam"
+           }
+          ]
+         }
+        ],
+        "title": "INTRUKSI DOKTER",
+        "description": "diisi oleh dokter"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel3",
+          "elements": [
+           {
+            "type": "comment",
+            "name": "question13",
+            "title": "Nomor STOK",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question14",
+            "title": "Tgl kadaluarsa",
+            "hideNumber": true
+           },
+           {
+            "type": "radiogroup",
+            "name": "question23",
+            "title": "Gol darah kantong",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "A"
+             },
+             {
+              "value": "item2",
+              "text": "B"
+             },
+             {
+              "value": "item3",
+              "text": "AB"
+             },
+             {
+              "value": "item4",
+              "text": "O"
+             }
+            ]
+           },
+           {
+            "type": "comment",
+            "name": "question15",
+            "title": "Volume darah",
+            "hideNumber": true
+           }
+          ],
+          "title": "Kantong Darah......."
+         },
+         {
+          "type": "panel",
+          "name": "panel5",
+          "elements": [
+           {
+            "type": "comment",
+            "name": "question16",
+            "title": "Nomor STOK",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question17",
+            "title": "Tgl kadaluarsa",
+            "hideNumber": true
+           },
+           {
+            "type": "radiogroup",
+            "name": "question18",
+            "title": "Gol darah kantong",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "A"
+             },
+             {
+              "value": "item2",
+              "text": "B"
+             },
+             {
+              "value": "item3",
+              "text": "AB"
+             },
+             {
+              "value": "item4",
+              "text": "O"
+             }
+            ]
+           },
+           {
+            "type": "comment",
+            "name": "question19",
+            "title": "Volume darah",
+            "hideNumber": true
+           }
+          ],
+          "title": "Kantong Darah......."
+         },
+         {
+          "type": "text",
+          "name": "question20",
+          "title": "Nama",
+          "hideNumber": true
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel7",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "question24",
+            "title": "Identifikasi kantong",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "sesuai"
+             },
+             {
+              "value": "item2",
+              "text": "tidak sesuai"
+             }
+            ]
+           },
+           {
+            "type": "radiogroup",
+            "name": "question21",
+            "title": "identifikasi pasien",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "sesuai"
+             },
+             {
+              "value": "item2",
+              "text": "tidak sesuai"
+             }
+            ]
+           },
+           {
+            "type": "radiogroup",
+            "name": "question22",
+            "title": "keadaan kantong darah",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "baik"
+             },
+             {
+              "value": "item2",
+              "text": "tidak baik"
+             }
+            ]
+           },
+           {
+            "type": "multipletext",
+            "name": "question25",
+            "title": "Pelaksana identifikasi",
+            "hideNumber": true,
+            "items": [
+             {
+              "name": "text1",
+              "title": "Nama "
+             }
+            ]
+           },
+           {
+            "type": "signaturepad",
+            "name": "question27",
+            "title": "Tanda tangan",
+            "hideNumber": true
+           }
+          ],
+          "title": "IDENTIFIKASI"
+         },
+         {
+          "type": "panel",
+          "name": "panel8",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "question28",
+            "title": "Identifikasi kantong",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "sesuai"
+             },
+             {
+              "value": "item2",
+              "text": "tidak sesuai"
+             }
+            ]
+           },
+           {
+            "type": "radiogroup",
+            "name": "question29",
+            "title": "identifikasi pasien",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "sesuai"
+             },
+             {
+              "value": "item2",
+              "text": "tidak sesuai"
+             }
+            ]
+           },
+           {
+            "type": "radiogroup",
+            "name": "question30",
+            "title": "keadaan kantong darah",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "baik"
+             },
+             {
+              "value": "item2",
+              "text": "tidak baik"
+             }
+            ]
+           },
+           {
+            "type": "multipletext",
+            "name": "question31",
+            "title": "Pelaksana identifikasi",
+            "hideNumber": true,
+            "items": [
+             {
+              "name": "text1",
+              "title": "Nama "
+             }
+            ]
+           },
+           {
+            "type": "signaturepad",
+            "name": "question32",
+            "title": "Tanda tangan",
+            "hideNumber": true
+           }
+          ],
+          "title": "IDENTIFIKASI"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question26",
+          "title": "Tanda tangan",
+          "hideNumber": true
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel9",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question33",
+            "title": "Tanggal dan Jam ",
+            "hideNumber": true,
+            "inputType": "datetime-local"
+           },
+           {
+            "type": "matrixdropdown",
+            "name": "question34",
+            "title": "KONTROL VITAL SIGN",
+            "hideNumber": true,
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Jam",
+              "cellType": "text",
+              "inputType": "time"
+             },
+             {
+              "name": "column2",
+              "title": "TD",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "HR",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "T",
+              "cellType": "text"
+             },
+             {
+              "name": "column5",
+              "title": "reaksi +/-",
+              "cellType": "text"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "rows": [
+             {
+              "value": "item1",
+              "text": "1. sebelum transfusi"
+             },
+             {
+              "value": "item2",
+              "text": "2. 15 menit pertama transfusi"
+             },
+             {
+              "value": "item3",
+              "text": "3. 30 menit kedua tranfusi"
+             },
+             {
+              "value": "item4",
+              "text": "4. setelah transfusi"
+             }
+            ]
+           },
+           {
+            "type": "comment",
+            "name": "question35",
+            "title": "Ket jenis reaksi tranfusi",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question36",
+            "title": "Nama",
+            "hideNumber": true
+           },
+           {
+            "type": "signaturepad",
+            "name": "question37",
+            "title": "Tanda tangan",
+            "hideNumber": true
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel12",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question43",
+            "title": "Tanggal dan Jam ",
+            "hideNumber": true,
+            "inputType": "datetime-local"
+           },
+           {
+            "type": "matrixdropdown",
+            "name": "question44",
+            "title": "KONTROL VITAL SIGN",
+            "hideNumber": true,
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Jam",
+              "cellType": "text",
+              "inputType": "time"
+             },
+             {
+              "name": "column2",
+              "title": "TD",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "HR",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "T",
+              "cellType": "text"
+             },
+             {
+              "name": "column5",
+              "title": "reaksi +/-",
+              "cellType": "text"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "rows": [
+             {
+              "value": "item1",
+              "text": "1. sebelum transfusi"
+             },
+             {
+              "value": "item2",
+              "text": "2. 15 menit pertama transfusi"
+             },
+             {
+              "value": "item3",
+              "text": "3. 30 menit kedua tranfusi"
+             },
+             {
+              "value": "item4",
+              "text": "4. setelah transfusi"
+             }
+            ]
+           },
+           {
+            "type": "comment",
+            "name": "question45",
+            "title": "Ket jenis reaksi tranfusi",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question46",
+            "title": "Nama",
+            "hideNumber": true
+           },
+           {
+            "type": "signaturepad",
+            "name": "question47",
+            "title": "Tanda tangan",
+            "hideNumber": true
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel11",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question38",
+            "title": "Tanggal dan Jam ",
+            "hideNumber": true,
+            "inputType": "datetime-local"
+           },
+           {
+            "type": "matrixdropdown",
+            "name": "question39",
+            "title": "KONTROL VITAL SIGN",
+            "hideNumber": true,
+            "columns": [
+             {
+              "name": "column1",
+              "title": "Jam",
+              "cellType": "text",
+              "inputType": "time"
+             },
+             {
+              "name": "column2",
+              "title": "TD",
+              "cellType": "text"
+             },
+             {
+              "name": "column3",
+              "title": "HR",
+              "cellType": "text"
+             },
+             {
+              "name": "column4",
+              "title": "T",
+              "cellType": "text"
+             },
+             {
+              "name": "column5",
+              "title": "reaksi +/-",
+              "cellType": "text"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "rows": [
+             {
+              "value": "item1",
+              "text": "1. sebelum transfusi"
+             },
+             {
+              "value": "item2",
+              "text": "2. 15 menit pertama transfusi"
+             },
+             {
+              "value": "item3",
+              "text": "3. 30 menit kedua tranfusi"
+             },
+             {
+              "value": "item4",
+              "text": "4. setelah transfusi"
+             }
+            ]
+           },
+           {
+            "type": "comment",
+            "name": "question40",
+            "title": "Ket jenis reaksi tranfusi",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question41",
+            "title": "Nama",
+            "hideNumber": true
+           },
+           {
+            "type": "signaturepad",
+            "name": "question42",
+            "title": "Tanda tangan",
+            "hideNumber": true
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

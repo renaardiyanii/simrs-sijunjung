@@ -1,0 +1,239 @@
+{
+ "pages": [
+  {
+   "name": "page1",
+   "elements": [
+    {
+     "type": "matrixdropdown",
+     "name": "question5",
+     "width": "200",
+     "minWidth": "200",
+     "maxWidth": "200",
+     "startWithNewLine": false,
+     "titleLocation": "hidden",
+     "hideNumber": true,
+     "columns": [
+      {
+       "name": "tgl1",
+       "title": "Tanggal",
+       "cellType": "text",
+       "inputType": "date"
+      },
+      {
+       "name": "tgl2",
+       "title": "Tanggal",
+       "cellType": "text",
+       "inputType": "date"
+      },
+      {
+       "name": "tgl3",
+       "title": "Tanggal",
+       "cellType": "text",
+       "inputType": "date"
+      },
+      {
+       "name": "tgl4",
+       "title": "Tanggal",
+       "cellType": "text",
+       "inputType": "date"
+      },
+      {
+       "name": "tgl5",
+       "title": "Tanggal",
+       "cellType": "text",
+       "inputType": "date"
+      }
+     ],
+     "choices": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "cellType": "text",
+     "columnMinWidth": "100",
+     "rows": [
+      {
+       "value": "nama_obat",
+       "text": "Nama Obat ---------------------------------------"
+      }
+     ]
+    },
+    {
+     "type": "matrixdynamic",
+     "name": "question",
+     "hideNumber": true,
+     "columns": [
+      {
+       "name": "nm_obat",
+       "title": "Nama Obat",
+       "cellType": "dropdown",
+       "choices": [
+        "Amoxcilin",
+        "Paracetamol",
+        "Capcam",
+        "Neurodex"
+       ]
+      },
+      {
+       "name": "frekuensi",
+       "title": "Frekuensi",
+       "width": "100"
+      },
+      {
+       "name": "Rute",
+       "cellType": "dropdown",
+       "choices": [
+        "Oral",
+        "IV",
+        "Tetes"
+       ]
+      },
+      {
+       "name": "Dokter",
+       "cellType": "dropdown",
+       "choices": [
+        "dr. ruhaya",
+        "dr. ayuna",
+        "dr. fifi"
+       ]
+      },
+      {
+       "name": "Farmasi",
+       "cellType": "dropdown",
+       "choices": [
+        "armal",
+        "dede",
+        "rahmi"
+       ]
+      },
+      {
+       "name": "1",
+       "title": "P/S/S/M",
+       "cellType": "checkbox",
+       "choices": [
+        {
+         "value": "pagi",
+         "text": "P"
+        },
+        {
+         "value": "siang",
+         "text": "S"
+        },
+        {
+         "value": "sore",
+         "text": "S"
+        },
+        {
+         "value": "malam",
+         "text": "M"
+        },
+        {
+         "value": "Stop",
+         "text": "Stop"
+        }
+       ]
+      },
+      {
+       "name": "2",
+       "title": "P/S/S/M",
+       "cellType": "checkbox",
+       "choices": [
+        {
+         "value": "pagi",
+         "text": "P"
+        },
+        {
+         "value": "siang",
+         "text": "S"
+        },
+        {
+         "value": "sore",
+         "text": "S"
+        },
+        {
+         "value": "malam",
+         "text": "M"
+        },
+        {
+         "value": "Stop",
+         "text": "Stop"
+        }
+       ]
+      },
+      {
+       "name": "3",
+       "title": "P/S/S/M",
+       "cellType": "checkbox",
+       "choices": [
+        {
+         "value": "item1",
+         "text": "P"
+        },
+        {
+         "value": "item2",
+         "text": "S"
+        },
+        {
+         "value": "item3",
+         "text": "S"
+        },
+        {
+         "value": "item4",
+         "text": "M"
+        },
+        {
+         "value": "item5",
+         "text": "STOP"
+        }
+       ]
+      },
+      {
+       "name": "4",
+       "title": "P/S/S/M",
+       "cellType": "checkbox"
+      },
+      {
+       "name": "5",
+       "title": "P/S/S/M",
+       "cellType": "checkbox"
+      }
+     ],
+     "choices": [
+      {
+       "value": "Amoxcili",
+       "text": "P"
+      },
+      {
+       "value": "Paracetamo",
+       "text": "S"
+      },
+      {
+       "value": "Sore",
+       "text": "S"
+      },
+      {
+       "value": "Malam",
+       "text": "M"
+      },
+      {
+       "value": "item1",
+       "text": "Stop"
+      }
+     ],
+     "cellType": "text",
+     "allowRemoveRows": false,
+     "rowCount": 1
+    },
+    {
+     "type": "panel",
+     "name": "panel1"
+    }
+   ]
+  },
+  {
+   "name": "page2"
+  }
+ ]
+}

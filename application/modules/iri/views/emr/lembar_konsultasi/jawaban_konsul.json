@@ -1,0 +1,74 @@
+{
+    "title": "LEMBAR KONSULTASI",
+    "pages": [
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "text",
+          "name": "yt2",
+          "title": "Yth, TS Dr. ",
+          "hideNumber": true
+         },
+         {
+          "type": "panel",
+          "name": "panel4",
+          "elements": [
+           {
+            "type": "comment",
+            "name": "penemuan",
+            "title": "Penemuan",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question2",
+            "title": "Kesimpulan",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question3",
+            "title": "Anjuran",
+            "hideNumber": true
+           },
+           {
+            "type": "html",
+            "name": "question4",
+            "html": "<h4> Atas perhatian dan kerjasama diucapkan terima kasih.\n"
+           },
+           {
+            "type": "radiogroup",
+            "name": "question1",
+            "title": "Catatan :",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "setuju",
+              "text": "Kami setuju"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak setuju pindah rawat"
+             },
+             {
+              "value": "rawat",
+              "text": "Rawat bersama"
+             }
+            ],
+            "colCount": 3
+           }
+          ],
+          "title": "Membalas Konsul TS, dengan ini kami telah memeriksa penderita"
+         }
+        ],
+        "title": "PENDAPAT KONSULEN"
+       }
+      ]
+     }
+    ]
+   }

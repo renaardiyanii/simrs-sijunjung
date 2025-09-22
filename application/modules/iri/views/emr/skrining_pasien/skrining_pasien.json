@@ -1,0 +1,146 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "text",
+          "name": "question3",
+          "title": "Tanggal",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": " ",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "Row 1",
+            "text": "Usia Lansia > 75 tahun atau > 65 tahun dengan ketergantungan"
+           },
+           {
+            "value": "Row 2",
+            "text": "Pasien tinggal sendiri atau tinggal dengan pengasuh/lansia"
+           },
+           {
+            "value": "Row 3",
+            "text": "Pasien dengan high risk cost/komplain"
+           },
+           {
+            "value": "Row 4",
+            "text": "Pasien memiliki keterbatasan fisik atau kognitif"
+           },
+           {
+            "value": "Row 5",
+            "text": "mobilitas"
+           },
+           {
+            "value": "Row 6",
+            "text": "Pendengaran"
+           },
+           {
+            "value": "Row 7",
+            "text": "Penglihatan"
+           },
+           {
+            "value": "Row 8",
+            "text": "Reterdasi mental, tidak dapat membaca dan/atau menulis"
+           },
+           {
+            "value": "Row 9",
+            "text": "Pasien yang dirawat bersama oleh > 3 DPJP"
+           },
+           {
+            "value": "Row 10",
+            "text": "Pasien dengan penggunaan obat pulang > 5 obat"
+           },
+           {
+            "value": "Row 11",
+            "text": "Pasien dengan perawata luka, rehabilitasi medis, rehabilitasi psikososial dll"
+           },
+           {
+            "value": "Row 12",
+            "text": "Pasien dengan prolonged alat bantu hidup"
+           },
+           {
+            "value": "Row 13",
+            "text": "Pace maker"
+           },
+           {
+            "value": "Row 14",
+            "text": "NGT"
+           },
+           {
+            "value": "Row 15",
+            "text": "Oksigen"
+           },
+           {
+            "value": "Row 16",
+            "text": "VP"
+           },
+           {
+            "value": "Row 17",
+            "text": "Ventilator"
+           },
+           {
+            "value": "Row 18",
+            "text": "Tracheostomy"
+           },
+           {
+            "value": "Row 19",
+            "text": "Pasien Readmisi > 3 kali dalam 6 bulan"
+           },
+           {
+            "value": "Row 20",
+            "text": "Pasien Terminal"
+           },
+           {
+            "value": "Row 21",
+            "text": "Pasien dengan manajemen nyeri (VAS >7)"
+           },
+           {
+            "value": "Row 22",
+            "text": "Pasien dengan masalah administrasi"
+           }
+          ]
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah"
+       }
+      ],
+      "title": "SKRINING FAKTOR RESIKO PASIEN"
+     }
+    ]
+   }

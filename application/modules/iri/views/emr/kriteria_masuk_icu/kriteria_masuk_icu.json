@@ -1,0 +1,355 @@
+{
+    "title": "KRITERIA MASUK ICU",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "title": "VITAL SIGN",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Nadi < 40 atau >150 kali/menit",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "YA"
+             },
+             {
+              "value": "item2",
+              "text": "TIDAK"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Tekanan darah sistolik < 80 mmHg atau penurunan 20 mmHg dari tekanan darah sistolik biasanya",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "YA"
+             },
+             {
+              "value": "item2",
+              "text": "TIDAK"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Mean Arterial Pressure < 50 mmHg atau 150 mmHg",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "YA"
+           },
+           {
+            "value": "item2",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "YA/TIDAK"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "title": "NILAI LABORATORIUM",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Kadar natrium serum < 110 mEq/L atau > 170 mEq/L",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "YA"
+             },
+             {
+              "value": "item2",
+              "text": "TIDAK"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Kadar kalium serum < 2,0 mEq/L atau > 7,0 mEq/L",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "YA"
+             },
+             {
+              "value": "item2",
+              "text": "TIDAK"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "PaO2 < 50 mmHg",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column4",
+            "title": "pH < 7,1 atau > 7,7 oksigen dalam ruangan",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column5",
+            "title": "Serum glukosa > 800 mg/dl",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column6",
+            "title": "Serum Kalsium > 15 mg/dl",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column7",
+            "title": "Kadar obat atau substansi kimia dalam darah telah melebihi dosis toksis yang mengganggu hemodinamik dan status neurologis",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "YA"
+           },
+           {
+            "value": "item2",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "YA/TIDAK"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question3",
+          "title": "NILAI RADIOLOGI",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Infrak miokard dengan aritmia kompleks, gangguan hemodinamik atau gagal jantung kongestif",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column2",
+            "title": "Ventrikular takikardi atau ventrikular fibrilasi",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column3",
+            "title": "Blok jantung komplit dengan hemodinamik tidak stabil",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "YA"
+           },
+           {
+            "value": "item2",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "YA/TIDAK"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "title": "ECG",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Infrak miokard dengan aritmia kompleks, gangguan hemodinamik atau gagal jantung kongestif",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column2",
+            "title": "Ventrikular takikardi atau ventrikular fibrilasi",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column3",
+            "title": "Blok jantung komplit dengan hemodinamik tidak stabil",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "YA"
+           },
+           {
+            "value": "item2",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "YA/TIDAK"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question5",
+          "title": "PEMERIKSAAN FISIK",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Pupil anisokor pada pasien dengan kesadaran menurun",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column2",
+            "title": "Luka bakar > 10% luas permukaan tubuh",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column3",
+            "title": "Anuria",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column4",
+            "title": "Obstruksi saluran napas",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column5",
+            "title": "Koma (sesuai pediatric coma scale)",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column6",
+            "title": "Kejang berulang atau status epileptikus",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column7",
+            "title": "Sianosis",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column8",
+            "title": "Tamponade jantung atau pneumothorax",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "YA"
+           },
+           {
+            "value": "item2",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "YA/TIDAK"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "question6",
+          "title": "Pasca Pembedahan Sedang atau Pembedahan Mayor"
+         },
+         {
+          "type": "comment",
+          "name": "question7",
+          "title": "Kesimpulan",
+          "description": "Berdasarkan kondisi di atas, maka memenuhi indikasi masuk ICU dengan prioritas "
+         },
+         {
+          "type": "radiogroup",
+          "name": "question8",
+          "title": "Alat transport yang digunakan ",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Brancard"
+           },
+           {
+            "value": "item2",
+            "text": "Kursi roda"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question9",
+          "title": "Pendamping selama transfer   ",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Dokter"
+           },
+           {
+            "value": "item2",
+            "text": "Perawat"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question10",
+          "title": "Perlu alat medis selama transfer ",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tidak"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Ya",
+          "colCount": 3
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,1228 @@
+{
+    "title": "ASESMEN AWAL KEPERAWATAN RAWAT INAP NEONATUS",
+    "description": "(Dilengkapi 24 jam pasien masuk Ruang Rawat)",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "tiba_diruangan",
+        "title": "Tiba diruangan :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "tanggal",
+          "inputType": "date",
+          "title": "Tanggal"
+         },
+         {
+          "name": "jam",
+          "inputType": "time",
+          "title": "Jam"
+         },
+         {
+          "name": "tanggal1",
+          "inputType": "date",
+          "title": "Tanggal"
+         },
+         {
+          "name": "jam1",
+          "inputType": "time",
+          "title": "Jam"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "cara_masuk",
+        "title": "Cara Masuk :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "brankar",
+          "text": "Brankar"
+         },
+         {
+          "value": "kursi_roda",
+          "text": "Kursi Roda"
+         },
+         {
+          "value": "digendong",
+          "text": "Digendong"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Lain-lain, sebutkan",
+        "colCount": 4
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "identitas_bayi",
+          "title": "1. Identitas Bayi",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "tanggal_masuk_rs",
+            "inputType": "date",
+            "title": "Tanggal Masuk RS"
+           },
+           {
+            "name": "anak_ke",
+            "title": "Anak Ke"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "identitas_orang_tua",
+          "title": "2. Identitas Orang Tua",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama_ayah",
+            "title": "Nama Ayah"
+           },
+           {
+            "name": "umur",
+            "title": "Umur"
+           },
+           {
+            "name": "agama",
+            "title": "Agama"
+           },
+           {
+            "name": "suku_bangsa",
+            "title": "Suku / Bangsa"
+           },
+           {
+            "name": "pendidikan",
+            "title": "Pendidikan"
+           },
+           {
+            "name": "pekerjaan",
+            "title": "Pekerjaan"
+           },
+           {
+            "name": "alamat",
+            "title": "Alamat"
+           },
+           {
+            "name": "nama_ibu",
+            "title": "Nama Ibu"
+           },
+           {
+            "name": "umur1",
+            "title": "Umur"
+           },
+           {
+            "name": "agama1",
+            "title": "Agama"
+           },
+           {
+            "name": "suku_bangsa1",
+            "title": "Suku Bangsa"
+           },
+           {
+            "name": "pendidikan1",
+            "title": "Pendidikan"
+           },
+           {
+            "name": "pekerjaan1",
+            "title": "Pekerjaan"
+           },
+           {
+            "name": "alamat1",
+            "title": "Alamat"
+           }
+          ]
+         }
+        ],
+        "title": "I. IDENTIFIKASI "
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "keluhan_utama",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "II. KELUHAN UTAMA"
+       },
+       {
+        "type": "panel",
+        "name": "panel10",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "penyakit",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "Riwayat Penyakit Sekarang"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "title": "riwayat_antenatal",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "sebelum_hamil",
+            "title": "Sebelum Hamil"
+           },
+           {
+            "name": "selama_hamil",
+            "title": "Selama Hamil (trimester I-III)"
+           }
+          ]
+         }
+        ],
+        "title": "III. RIWAYAT ANTENATAL"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "riwayat_proses_persalinan",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "umur_kehamilan",
+            "title": "Umur Kehamilan"
+           },
+           {
+            "name": "kehamilan_tunggal_kembar",
+            "title": " Kehamilan Tunggal / Kembar"
+           },
+           {
+            "name": "lama_persalinan_kala1",
+            "title": " Lama Persalinan Kala I"
+           },
+           {
+            "name": "kelainan"
+           },
+           {
+            "name": "lama_persalinan_kala2",
+            "title": "Lama Persalinan Kala II"
+           },
+           {
+            "name": "kelainan1",
+            "title": "kelainan"
+           },
+           {
+            "name": "air_ketuban",
+            "title": " Air Ketuban"
+           },
+           {
+            "name": "ketuban_pecah",
+            "title": " Ketuban Pecah "
+           },
+           {
+            "name": "jumlah",
+            "title": "Jumlah"
+           },
+           {
+            "name": "warna",
+            "title": "Warna ",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "jernih",
+              "text": "Jernih"
+             },
+             {
+              "value": "keruh",
+              "text": "Keruh"
+             }
+            ]
+           },
+           {
+            "name": "meconium",
+            "title": "Meconium",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ada",
+              "text": "Ada"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             },
+             {
+              "value": "lainnya",
+              "text": "Lainnya"
+             }
+            ]
+           },
+           {
+            "name": "detillainnya",
+            "title": "Jelaskan",
+            "cellType": "comment",
+            "visibleIf": "{riwayat_proses_persalinan[0].meconium} = 'lainnya'"
+           },
+           {
+            "name": "letak_bayi",
+            "title": "Letak Bayi"
+           },
+           {
+            "name": "jenis_persalinan",
+            "title": "Jenis Pesalinan",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "spontan",
+              "text": "Spontan"
+             },
+             {
+              "value": "seccio_caesaria",
+              "text": "Seccio Caesaria"
+             },
+             {
+              "value": "vacum_ekstaksi",
+              "text": "Vacum Ekstaksi"
+             },
+             {
+              "value": "Lainya",
+              "text": "Lainnya"
+             }
+            ]
+           },
+           {
+            "name": "lainnya",
+            "title": "Jelaskan",
+            "visibleIf": "{riwayat_proses_persalinan[0].jenis_persalinan} = 'Lainya'"
+           },
+           {
+            "name": "indikasi",
+            "title": "Indikasi"
+           },
+           {
+            "name": "berat_badan_lahir",
+            "title": "Berat Badan Lahir"
+           },
+           {
+            "name": "lingkar_dada",
+            "title": "Lingkar Dada"
+           },
+           {
+            "name": "lingkar_kepala",
+            "title": "Lingkar Kepala"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "IV. RIWAYAT PROSES PERSALINAN"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "apgar_skore",
+        "title": "APGAR SCORE",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "1",
+          "title": "Denyut Jantung",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak ada (0)"
+           },
+           {
+            "value": "1",
+            "text": "< 100 (1)"
+           },
+           {
+            "value": "2",
+            "text": "> 100 (2)"
+           }
+          ]
+         },
+         {
+          "name": "2",
+          "title": "pernafasan",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak ada (0)"
+           },
+           {
+            "value": "1",
+            "text": "Tak Teratur (1)"
+           },
+           {
+            "value": "2",
+            "text": "Baik (2)"
+           }
+          ]
+         },
+         {
+          "name": "3",
+          "title": "Tonus Otot",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "tidak ada (0)"
+           },
+           {
+            "value": "1",
+            "text": "Fleksi sedikit (1)"
+           },
+           {
+            "value": "2",
+            "text": "gerakan aktif (2)"
+           }
+          ]
+         },
+         {
+          "name": "4",
+          "title": "Peka Rangsangan",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak ada (1)"
+           },
+           {
+            "value": "2",
+            "text": "Menangis kuat (2)"
+           }
+          ]
+         },
+         {
+          "name": "5",
+          "title": "Warna",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "pucat(0)"
+           },
+           {
+            "value": "1",
+            "text": "badan merah estermitas biru (1)"
+           },
+           {
+            "value": "2",
+            "text": "Merah Jambu (2)"
+           }
+          ]
+         },
+         {
+          "name": "total_skore",
+          "title": "Total",
+          "cellType": "expression",
+          "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5}"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "1menit",
+          "text": "1 MENIT"
+         },
+         {
+          "value": "2menit",
+          "text": "5 MENIT"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "resusitasi",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "Resusitasi1",
+          "title": "Resusitasi"
+         },
+         {
+          "name": "obat_obat",
+          "title": "Obat obat yang diberikan"
+         },
+         {
+          "name": "imunisasi",
+          "title": "Imunisasi"
+         },
+         {
+          "name": "menetek_pertama_kali",
+          "title": "Menetek Pertama Kali"
+         },
+         {
+          "name": "jam_stelah_lahir",
+          "title": "Jam Setelah Lahir"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "text",
+          "name": "keadaan_umum_bayi",
+          "title": "1. Keadaan Umum Bayi",
+          "titleLocation": "left",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "tanda_tanda",
+          "title": "2. Tanda Tanda Vital",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "suhu",
+            "placeHolder": "°C",
+            "title": "Suhu"
+           },
+           {
+            "name": "frekuensi_nadi",
+            "placeHolder": "x/mnt",
+            "title": "Frekuensi Nadi"
+           },
+           {
+            "name": "frekuensi_pernafasan",
+            "placeHolder": "x/mnt",
+            "title": "Frekuensi Pernafasan"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "pernafasan",
+          "title": "3. Pernafasan",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "teratur",
+            "text": "Teratur"
+           },
+           {
+            "value": "tidak_teratur",
+            "text": "Tidak Teratur"
+           },
+           {
+            "value": "cuping_hidung",
+            "text": "Cuping Hidung"
+           },
+           {
+            "value": "sianosis",
+            "text": "Sianosis"
+           },
+           {
+            "value": "apnea",
+            "text": "Apnea"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lain Lain",
+          "colCount": 4
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "peredaran_darah",
+          "title": "4. Peredaran darah",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "denyut_nadi",
+            "title": "Denyut Nadi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "teratur",
+              "text": "Teratur"
+             },
+             {
+              "value": "tidak_teratur",
+              "text": "Tidak Teratur"
+             },
+             {
+              "value": "lemah",
+              "text": "Lemah"
+             }
+            ]
+           },
+           {
+            "name": "ekstremitas",
+            "title": "Ekstremitas atas dan bawah",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "hangat",
+              "text": "Hangat"
+             },
+             {
+              "value": "dingin",
+              "text": "Dingin"
+             },
+             {
+              "value": "pucat",
+              "text": "Pucat"
+             },
+             {
+              "value": "biru",
+              "text": "Biru"
+             },
+             {
+              "value": "merah_muda",
+              "text": "Merah Muda"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "cellType": "radiogroup",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "V. PEMERIKSAAN FISIK BAYI"
+       }
+      ]
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "panel_eliminasi",
+          "title": "5. Eliminasi",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "BAK",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ada",
+              "text": "Ada"
+             },
+             {
+              "value": "belum",
+              "text": "Belum"
+             }
+            ]
+           },
+           {
+            "name": "mekonium",
+            "title": "Mekonium",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ada",
+              "text": "Ada"
+             },
+             {
+              "value": "belum",
+              "text": "Belum"
+             }
+            ]
+           },
+           {
+            "name": "feses",
+            "title": "Feses",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ada",
+              "text": "Ada"
+             },
+             {
+              "value": "belum",
+              "text": "Belum"
+             }
+            ]
+           },
+           {
+            "name": "konsistensi",
+            "title": "Konsistensi",
+            "cellType": "text"
+           },
+           {
+            "name": "warna",
+            "title": "Warna",
+            "cellType": "text"
+           },
+           {
+            "name": "frekuensi",
+            "title": "Frekuensi"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "checkbox",
+          "name": "reflex",
+          "title": "Reflex",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "menghisap",
+            "text": "Menghisap ( suckling reflex)"
+           },
+           {
+            "value": "menggenggam",
+            "text": "Menggenggam ( palmar gresp reflex)"
+           },
+           {
+            "value": "mencari",
+            "text": "Mencari ( rooting reflex)"
+           },
+           {
+            "value": "menelan",
+            "text": "Menelan ( swallowing reflex)"
+           },
+           {
+            "value": "moro reflex",
+            "text": "Moro Reflex"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "checkbox",
+          "name": "kepala",
+          "title": "Kepala",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "simetris",
+            "text": "Simetris"
+           },
+           {
+            "value": "asimetris",
+            "text": "Asimetris"
+           },
+           {
+            "value": "macrocephal",
+            "text": "Macrocephal"
+           },
+           {
+            "value": "microcephal",
+            "text": "Microcephal"
+           },
+           {
+            "value": "caput succedanum",
+            "text": "Caput succedanum"
+           },
+           {
+            "value": "luka lecet",
+            "text": "Luka lecet"
+           },
+           {
+            "value": "hematoma",
+            "text": "Hematoma"
+           },
+           {
+            "value": "hidrosefalus",
+            "text": "Hidrosifalus"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "dada",
+          "title": "Dada",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "simetris",
+            "text": "Simetris"
+           },
+           {
+            "value": "asimetris",
+            "text": "Asimetris"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "ekstremitas",
+          "title": "9. Ekstremitas",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ekstremitas_tangan",
+            "title": "Tangan",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "normal",
+              "text": "Normal"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Tidak Normal, jelaskan"
+           },
+           {
+            "name": "ekstremitas_kaki",
+            "title": "Kaki",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "normal",
+              "text": "Normal"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Tidak Normal, jelaskan"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "panel",
+          "name": "panel7",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "abdomen",
+            "title": "10. Abdomen",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "normal",
+              "text": "Normal"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Tidak Normal, jelaskan",
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "tali_pusat",
+            "startWithNewLine": false,
+            "title": "Tali Pusat",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "perdarahan",
+              "text": "Perdarahan"
+             },
+             {
+              "value": "tidak_perdarahan",
+              "text": "Tidak Perdarahan"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "radiogroup",
+            "name": "cek_tali_pusat",
+            "visibleIf": "{tali_pusat} anyof ['perdarahan']",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "bau",
+              "text": "Bau"
+             },
+             {
+              "value": "tidak_bau",
+              "text": "Tidak Bau"
+             }
+            ],
+            "colCount": 2
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "alat_kelamin",
+            "title": "11. Alat Kelamin",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "normal",
+              "text": "Normal"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Tidak Normal, jelaskan"
+           },
+           {
+            "name": "anus",
+            "title": "12. Anus",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "normal",
+              "text": "Normal"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Tidak Normal, jelaskan"
+           },
+           {
+            "name": "kulit",
+            "title": "13. Kulit",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "kemerahan",
+              "text": "Kemerahan"
+             },
+             {
+              "value": "pucat",
+              "text": "Pucat"
+             },
+             {
+              "value": "biru",
+              "text": "Biru"
+             },
+             {
+              "value": "kuning",
+              "text": "kuning"
+             },
+             {
+              "value": "kering",
+              "text": "Kering"
+             },
+             {
+              "value": "mengelupas",
+              "text": "Mengelupas"
+             },
+             {
+              "value": "edema",
+              "text": "Edema"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Lain - lain"
+           },
+           {
+            "name": "turgor",
+            "title": "14. Turgor",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "baik",
+              "text": "Baik"
+             },
+             {
+              "value": "buruk",
+              "text": "Buruk"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "panel",
+          "name": "panel8",
+          "elements": [
+           {
+            "type": "checkbox",
+            "name": "diagnosa_keperawatan",
+            "titleLocation": "hidden",
+            "choices": [
+             {
+              "value": "gangguan_pertukaran",
+              "text": "Gangguan pertukaran gas (asfiksia)"
+             },
+             {
+              "value": "ikterik_neonatus",
+              "text": "Ikterik Neonatus"
+             },
+             {
+              "value": "menyusui_efektif",
+              "text": "Menyusui Efektif"
+             },
+             {
+              "value": "menyusui_tidak_efektif",
+              "text": "Menyusui tidak efektif"
+             },
+             {
+              "value": "resiko_ikterik",
+              "text": "Resiko ikterik neonatus"
+             },
+             {
+              "value": "hipertermi",
+              "text": "Hipertermi"
+             },
+             {
+              "value": "hipotermi",
+              "text": "Hipotermi"
+             }
+            ]
+           }
+          ],
+          "title": "VI. DAFTAR DIAGNOSA KEPERAWATAN"
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           },
+           {
+            "name": "Column 2",
+            "title": "Diagnosa Keperawatan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "page4",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "pemantauan_respirasi",
+            "text": "Pemantauan Respirasi"
+           },
+           {
+            "value": "terapi_oksigen",
+            "text": "Terapi oksigen"
+           },
+           {
+            "value": "pencegahan_aspirasi",
+            "text": "Pencegahan aspirasi"
+           },
+           {
+            "value": "pengaturan_posisi",
+            "text": "Pengaturan posisi"
+           },
+           {
+            "value": "pemberian_obat",
+            "text": "Pemberian obat (oral,IV,IM,IC,SC,dll)"
+           },
+           {
+            "value": "fototerapi_neonatus",
+            "text": "Fototerapi neonatus"
+           },
+           {
+            "value": "perawatan_bayi",
+            "text": "Perawatan bayi"
+           },
+           {
+            "value": "perawatan_neonatus",
+            "text": "Perawatan neonatus"
+           },
+           {
+            "value": "pemantauan_tanda_vital",
+            "text": "Pemantauan tanda vital"
+           },
+           {
+            "value": "konseling_lactasi",
+            "text": "Konseling lactasi"
+           },
+           {
+            "value": "promosi_ASI",
+            "text": "Promosi ASI eksekutif"
+           },
+           {
+            "value": "promosi_laktasi",
+            "text": "Promosi laktasi"
+           },
+           {
+            "value": "pendampingan_proses",
+            "text": "Pendampingan proses menyusui"
+           },
+           {
+            "value": "manajemen_nyeri",
+            "text": "Manajemen nyeri"
+           },
+           {
+            "value": "manajemen_hipertermia",
+            "text": "Manajemen hipertermia"
+           },
+           {
+            "value": "regulasi_temperatur",
+            "text": "Regulasi temperatur"
+           },
+           {
+            "value": "manajemen_cairan",
+            "text": "Manajemen cairan"
+           },
+           {
+            "value": "managemen_kejang",
+            "text": "Managemen kejang"
+           },
+           {
+            "value": "pemantauan_cairan",
+            "text": "Pemantauan cairan"
+           },
+           {
+            "value": "manajeman_hipotermia",
+            "text": "Manajemen hipotermia"
+           },
+           {
+            "value": "kompres_panas",
+            "text": "Kompres panas"
+           },
+           {
+            "value": "managemen_lingkungan",
+            "text": "Managemen lingkungan"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           },
+           {
+            "name": "Column 2",
+            "title": "Intervensi Keperawatan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah"
+         },
+         {
+          "type": "file",
+          "name": "question6",
+          "title": "Cap Kaki",
+          "hideNumber": true
+         }
+        ],
+        "title": "VII. INTERVENSI KEPERAWATAN"
+       }
+      ]
+     }
+    ]
+   }

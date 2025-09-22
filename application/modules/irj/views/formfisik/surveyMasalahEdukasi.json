@@ -1,0 +1,395 @@
+{
+    "showCompletedPage": false,
+    "pages": [
+     {
+      "name": "data_umum",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question9",
+          "html": "MASALAH KEPERAWATAN"
+         },
+         {
+          "type": "checkbox",
+          "name": "nyeri_akut",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "nyeri akut",
+            "text": "Nyeri (Akut/Kronis)"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "chek_nyeri_akut",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{nyeri_akut} = ['nyeri akut']"
+         },
+         {
+          "type": "checkbox",
+          "name": "ketidakseimbangan_nutrisi",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "ketidakseimbangan nutrisi kurang dari kebutuhan tubuh",
+            "text": "Ketidak Seimbangan Nutrisi kurang dari kebutuhan tubuh."
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_ketidakseimbangan_nutrisi",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "enableIf": "{ketidakseimbangan_nutrisi} = ['ketidakseimbangan nutrisi kurang dari kebutuhan tubuh']"
+         },
+         {
+          "type": "checkbox",
+          "name": "pola_nafas_tidak_efektif",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "pola nafas tidak efektif",
+            "text": "Pola Nafas Tidak Efektif"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_pola_nafas_tidak_efektif",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{pola_nafas_tidak_efektif} = ['pola nafas tidak efektif']"
+         },
+         {
+          "type": "checkbox",
+          "name": "bersihkan_jalan_nafas",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "bersihkan jalan nafas",
+            "text": "Bersihkan Jalan Nafas"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_bersihkan_jalan_nafas",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{bersihkan_jalan_nafas} = ['bersihkan jalan nafas']"
+         },
+         {
+          "type": "checkbox",
+          "name": "hipertermia",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "hipertermia",
+            "text": "Hipertermia"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_hipertermia",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{hipertermia} = ['hipertermia']"
+         },
+         {
+          "type": "checkbox",
+          "name": "diare",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "diare",
+            "text": "Diare"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_diare",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{diare} = ['diare']"
+         },
+         {
+          "type": "checkbox",
+          "name": "resiko_infeksi_pembedahan",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "resiko infeksi pembedahan",
+            "text": "Resiko Infeksi Pembedahan"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_resiko_infeksi_pembedahan",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{resiko_infeksi_pembedahan} = ['resiko infeksi pembedahan']"
+         },
+         {
+          "type": "checkbox",
+          "name": "ansietas",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "ansietas",
+            "text": "Ansietas"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_ansietas",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{ansietas} = ['ansietas']"
+         },
+         {
+          "type": "checkbox",
+          "name": "gangguan_citra_tubuh",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "gangguan citra tubuh",
+            "text": "Gangguan Citra Tubuh"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_gangguan_citra_tubuh",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{gangguan_citra_tubuh} = ['gangguan citra tubuh']"
+         },
+         {
+          "type": "checkbox",
+          "name": "gangguan_menelan",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "gangguan menelan",
+            "text": "Gangguan Menelan"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_gangguan_menelan",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{gangguan_menelan} = ['gangguan menelan']"
+         },
+         {
+          "type": "checkbox",
+          "name": "penurunan_curah_jantung",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "penurunan curah jantung",
+            "text": "Penurunan Curah Jantung"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_penurunan_curah_jantung",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{penurunan_curah_jantung} = ['penurunan curah jantung']"
+         },
+         {
+          "type": "checkbox",
+          "name": "intoleran_aktifitas",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "intoleran aktifitas",
+            "text": "Intoleran Aktifitas"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_intoleran_aktifitas",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{intoleran_aktifitas} = ['intoleran aktifitas']"
+         },
+         {
+          "type": "checkbox",
+          "name": "gangguan_mobilitas_fisik",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "gangguan mobilitas fisik",
+            "text": "Gangguan Mobilitas Fisik"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_gangguan_mobilitas_fisik",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{gangguan_mobilitas_fisik} = ['gangguan mobilitas fisik']"
+         },
+         {
+          "type": "checkbox",
+          "name": "hambatan_komunikasi_verbal",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "hambatan komunikasi verbal",
+            "text": "Hambatan Komunikasi Verbal"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_hambatan_komunikasi_verbal",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{hambatan_komunikasi_verbal} = ['hambatan komunikasi verbal']"
+         },
+         {
+          "type": "checkbox",
+          "name": "diskontuinitas_jaringan",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "diskontiunitas jaringan",
+            "text": "Diskontiunitas Jaringan"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_diskontuinitas_jaringan",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{diskontuinitas_jaringan} = ['diskontiunitas jaringan']"
+         },
+         {
+          "type": "checkbox",
+          "name": "ketidakstabilan_gula_darah",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "ketidakstablian kadar gula darah",
+            "text": "Ketidakstabilan Kadar Gula Darah"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_ketidakstabilan_gula_darah",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{ketidakstabilan_gula_darah} = ['ketidakstablian kadar gula darah']"
+         },
+         {
+          "type": "checkbox",
+          "name": "lainnya",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "lainnya",
+            "text": "Lainnya"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_lainnya",
+          "visibleIf": "{lainnya} = ['lainnya']",
+          "titleLocation": "hidden",
+          "size": 35
+         },
+         {
+          "type": "text",
+          "name": "check_lainnya2",
+          "visibleIf": "{lainnya} = ['lainnya']",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "checkbox",
+          "name": "lainnya1",
+          "title": "Lainnya",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "lainnya",
+            "text": "Lainnya"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_lainnya1",
+          "visibleIf": "{lainnya1} = ['lainnya']",
+          "titleLocation": "hidden",
+          "size": 35
+         },
+         {
+          "type": "text",
+          "name": "check_lainnya3",
+          "visibleIf": "{lainnya1} = ['lainnya']",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question8",
+          "html": "KEBUTUHAN EDUKASI\n"
+         },
+         {
+          "type": "checkbox",
+          "name": "kebutuhan_edukasi",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "pengetahuan tentang penyakit",
+            "text": "Pengetahuan Tentang Penyakit"
+           },
+           {
+            "value": "perawatan dirumah tentang penyakit",
+            "text": "Perawatan Dirumah Tentang Penyakit"
+           },
+           {
+            "value": "cara minum obat",
+            "text": "Cara Minum Obat"
+           },
+           {
+            "value": "diet",
+            "text": "Diet"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

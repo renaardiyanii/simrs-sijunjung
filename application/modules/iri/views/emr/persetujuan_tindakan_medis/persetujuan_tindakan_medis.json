@@ -1,0 +1,364 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "dropdown",
+        "name": "question4",
+        "title": "Dokter Pelaksana Tindakan",
+        "hideNumber": true,
+        "choices": [
+         "item1",
+         "item2",
+         "item3"
+        ],
+        "choicesByUrl": {
+         "url": "/admin/admin/rest_all_user"
+        }
+       },
+       {
+        "type": "text",
+        "name": "question13",
+        "title": "Penerima Informasi",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "title": "PEMBERIAN INFORMASI",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text3",
+          "title": "Pemberi informasi/pemberi persetujuan *"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "isi_informasi",
+          "title": "ISI INFORMASI",
+          "cellType": "text"
+         },
+         {
+          "name": "ckls",
+          "title": "TANDA (√ )",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "1",
+            "text": " "
+           }
+          ]
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row1",
+          "text": "1. Diagnosis (WD dan DD)"
+         },
+         {
+          "value": "Row2",
+          "text": "2. Dasar diagnosis"
+         },
+         {
+          "value": "Row3",
+          "text": "3. Tindakan Kedokteran"
+         },
+         {
+          "value": "Row5",
+          "text": "4. Tata Cara"
+         },
+         {
+          "value": "Row4",
+          "text": "5. Indikasi Tindakan"
+         },
+         {
+          "value": "Row6",
+          "text": "6. Tujuan"
+         },
+         {
+          "value": "Row7",
+          "text": "7. Risiko dan komplikasi"
+         },
+         {
+          "value": "Row8",
+          "text": "8. Prognosis"
+         },
+         {
+          "value": "Row9",
+          "text": "9. Keuntungan"
+         },
+         {
+          "value": "Row10",
+          "text": "10. Alternatif = - Pilihan pengobatan , - Transfusi darah"
+         },
+         {
+          "value": "Row11",
+          "text": "11. Hal yang dilakukan untuk menyelamatkan pasien (perluasan tindakan, konsultasi selama tindakan, resusitasi)"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question3",
+        "html": "Dengan ini menyatakan bahwa saya telah menerangkan hal-hal di atas secara benar dan jelas dan memberikan kesempatan untuk bertanya dan/atau berdiskusi"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question14",
+        "title": "Dokter",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question15",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "html",
+        "name": "question5",
+        "html": "<p style=\"font-size:12px\">Dengan ini menyatakan bahwa saya telah menerima informasi sebagaimana di atas yang saya beri tanda/paraf di kolom kanannya serta telah diberi kesempatan untuk bertanya/berdiskusi, dan telah memahaminya</p>"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question16",
+        "title": "Keluarga Pasien"
+       },
+       {
+        "type": "text",
+        "name": "question17",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "html",
+        "name": "question8",
+        "html": "<h5>PERSETUJUAN TINDAKAN KEDOKTERAN</h5>"
+       },
+       {
+        "type": "html",
+        "name": "question20",
+        "html": "Yang bertandatangan di bawah ini, saya , \n"
+       },
+       {
+        "type": "html",
+        "name": "question21",
+        "html": "dengan ini menyatakan persetujuan untuk dilakukannya tindakan"
+       },
+       {
+        "type": "text",
+        "name": "question10",
+        "startWithNewLine": false,
+        "title": "terhadap saya / ",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "size": 18
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question31",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Nama",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 2",
+          "title": "tanggal lahir ",
+          "cellType": "datepicker"
+         },
+         {
+          "name": "Column 3",
+          "title": "jenis Kelamin",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "L",
+            "text": "Laki laki"
+           },
+           {
+            "value": "P",
+            "text": "Perempuan"
+           }
+          ]
+         },
+         {
+          "name": "Column 4",
+          "title": "Alamat",
+          "cellType": "text"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question22",
+        "html": "terhadap saya / "
+       },
+       {
+        "type": "text",
+        "name": "question9",
+        "startWithNewLine": false,
+        "title": " ",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 28
+       },
+       {
+        "type": "html",
+        "name": "question23",
+        "startWithNewLine": false,
+        "html": " saya "
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question11",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Bernama",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 2",
+          "title": "tanggal lahir ",
+          "cellType": "datepicker"
+         },
+         {
+          "name": "Column 3",
+          "title": "jenis Kelamin",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "L",
+            "text": "Laki laki"
+           },
+           {
+            "value": "P",
+            "text": "Perempuan"
+           }
+          ]
+         },
+         {
+          "name": "Column 4",
+          "title": "Alamat",
+          "cellType": "text"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question12",
+        "html": "Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah dijelaskan seperti di atas kepada saya, termasuk risiko dan komplikasi yang mungkin timbul. Saya juga menyadari bahwa oleh karena ilmu kedokteran bukanlah ilmu pasti, maka keberhasilan tindakan kedokteran bukanlah keniscayaan, melainkan sangat bergantung kepada izin Tuhan Yang Maha Esa. "
+       },
+       {
+        "type": "html",
+        "name": "question7",
+        "html": "* Bila pasien tidak kompeten atau tidak mau menerima informasi, maka penerima informasi adalah wali atau   \n Keluarga terdekat\n"
+       },
+       {
+        "type": "text",
+        "name": "question18",
+        "title": "Tanah Badantuang, ",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question19",
+        "title": "Saksi",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question24",
+        "startWithNewLine": false,
+        "title": "Yang menyatakan pasien / wali",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question25",
+        "startWithNewLine": false,
+        "title": "Dokter",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question26",
+        "startWithNewLine": false,
+        "title": "Saksi",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question27",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question28",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question29",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question30",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ],
+      "title": "PERSETUJUAN TINDAKAN KEDOKTERAN"
+     }
+    ]
+   }

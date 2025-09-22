@@ -1,0 +1,157 @@
+{
+    "title": "REKONSILIASI OBAT",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "jenis_obat",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "nama_obat",
+            "title": "Nama Obat ",
+            "cellType": "text"
+           },
+           {
+            "name": "dosis",
+            "title": "Dosis",
+            "cellType": "text"
+           },
+           {
+            "name": "frek",
+            "title": "Frekwensi ",
+            "cellType": "text"
+           },
+           {
+            "name": "cara_pemberian",
+            "title": "Cara pemberian",
+            "cellType": "text"
+           },
+           {
+            "name": "waktu",
+            "title": "waktu pemberian terakhir",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "tindakan_lanjutan",
+            "title": "Tindakan Lanjutan ",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "perubahan_aturan_pakai",
+            "title": "Perubahan Aturan Pakai"
+           }
+          ],
+          "choices": [
+           {
+            "value": "1",
+            "text": "Lanjut aturan pakai sama"
+           },
+           {
+            "value": 2,
+            "text": "Lanjut aturan pakai berubah"
+           },
+           {
+            "value": 3,
+            "text": "Stop"
+           }
+          ],
+          "cellType": "text",
+          "columnColCount": 1,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "Daftar obat di bawah ini meliputi obat resep dan non resep yang digunakan sebulan terakhir dan masih dipakai saat masuk rumah sakit Instruksi obat baru dituliskan pada rencana perawatan"
+       },
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Diketahui oleh farmasi "
+         },
+         {
+          "name": "text2",
+          "title": "Nama "
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question8",
+        "title": "Tanggal/jam",
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "text",
+        "name": "question10",
+        "startWithNewLine": false,
+        "title": "Tanggal/jam",
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "text",
+        "name": "question9",
+        "startWithNewLine": false,
+        "title": "Tanggal/jam",
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question2",
+        "title": "Perawat"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question3",
+        "startWithNewLine": false,
+        "title": "Dokter Ruangan"
+       },
+       {
+        "type": "text",
+        "name": "question5",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question6",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question4",
+        "title": "DPJP"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question11",
+        "startWithNewLine": false,
+        "title": "FARMASI"
+       },
+       {
+        "type": "text",
+        "name": "question7",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question12",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

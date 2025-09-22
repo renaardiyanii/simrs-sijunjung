@@ -1,0 +1,259 @@
+{
+    "title": "CATATAN EDUKASI TINDAKAN ANESTESI DAN SEDASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "checkbox",
+        "name": "question5",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "ANESTESIA UMUM"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "Anestesia Umum adalah teknik anestesi dimana pasien mengalami perubahan tingkat kesadaran seperti tidur dalam, penurunan respon terhadap rangsang dan respon nyeri, amnesia dan relaksasi otot yang bersifat sementara dan kembali pulih setelah prosedur anestesi berakhir. Obat Anestesia Umum berupa obat yang disuntikan ke dalam pembuluh darah atau zat anestesi yang dihirup menggunakan alat khusus. Lama kerja obat disesuaikan dengan lama operasi. Sesuai dengan kebutuhan operasi dan kondisi pasien, teknik ini akan mempengaruhi kemampuan untuk mempertahankan patensi jalan nafas, terjadi depresi fungsi napas spontan atau depresi fungsi otot sehingga pasien sering memerlukan pemasangan alat pernafasan untuk mempertahankan patensi jalan nafas dan pemberian nafas bantu, dan pada tingkatan tertentu terjadi depresi fungsi jantung dan pembuluh darah yang akan dipantau dan di antisipasi oleh dokter anestesi.\n<p>\n<p>Kelebihan Teknik Anestesia Umum :\n<ul>- Dari awal pemberian obat anestesia pasien sudah tidak sadar</ul>\n<ul>- Rasa nyeri berkurang</ul>\n<ul>- Adanya efek amnesia</ul>\n<ul>-Fungsi berkemih tidak terpengaruh</ul>\n<ul>-Teknik dan lama anestesi akan disesuaikan dengan kondisi pasien</ul>\n<ul>-Jenis dan lama operasi</ul>\n<p><br>\nKekurangan Teknik Anestesia Umum :\n<ul>- Pasca bedah, pasien harus sadar penuh sebelum diperbolehkan minum dan makan\n</ul>\n<ul>- Obat anestesia tertentu dapat memiliki efek ke seluruh tubuh (secara umum, obat anestesi yang beredar aman terhadap janin)\n</ul>\n\n<p><br>Komplikasi Anestesia Umum :\n<ul>- Secara umum, komplikasi fatal akibat langsung tindakan anestesia sangat jarang, kemungkinan 1 : 250.000 dari tindakan anestesi.</ul>\n<ul>- Efek samping yang sering terjadi namun berdampak ringan terhadap fungsi tubuh adalah mual/muntah, menggigil, pusing, mengantuk, nyeri tenggorok (akibat pemasangan pipa napas) yang dapat diatasi dengan obat-obatan.\ni.</ul>\n<ul>- Resiko aspirasi, yaitu masuknya isi lambung ke jalan napas atau paru, pada pasien yang tidak puasa/tidak cukup puasa\ni.</ul>\n<ul>- Kesulitan dalam pemasangan alat atau pipa napas yang tidak terduga sebelumnya, sehingga dapat menyebabkan lecet pada bibir, rongga mulut, gigi patah/goyang.\ni.</ul>\n<ul>- Alergi/Hipersensitif terhadap obat (sangat jarang), mulai derajat ringan hingga berat.\ni.</ul>\n<ul>- Komplikasi yang tidak dapat diprediksi dan tidak dapat dicegah sebelumnya, walaupun sangat jarang namun berakibat fatal seperti emboli (masuknya udara atau benda asing kedalam aliran darah).\ni.</ul>"
+       },
+       {
+        "type": "checkbox",
+        "name": "question6",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "ANESTESI SPINAL/EPIDURAL"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question7",
+        "html": "<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Anestesia Spinal/Epidural adalah anestesi yang hanya meliputi daerah perut ke dalam (perut sampai ujung kaki) dengan pasien tetap sadar tanpa merasakan nyeri. Bila pasien menginginkan untuk tidur maka dokter dapat memberi obat penenang melalui suntikan. Obat bius yang dipakai obat bius lokal dan bisa ditambah dengan obat lain yang bisa menambahkan kekuatan obat maupun menambah lama obat bius lokal. Untuk anestesia spinal, obat bius lokal tersebut disuntikan dengan jarum yang sangat kecil di celah tulang belakang daerah pinggang.\n<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Untuk anestesia epidural, dapat dilakukan di daerah punggung atau pinggang. Penyuntikan didahului dengan pemberian obat bius lokal melalui jarum epidural yang disuntikan di celah tulang belakang, akan dimasukkan selang kecil ke arah pinggiran tulang belakang, yang berfungsi untuk menyalurkan obat di sekitar saraf yang ada di pinggiran tulang belakang.\n<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Pada kedua teknik diatas, penyuntikan dilakukan pada pasien dalam keadaan posisi duduk membungkuk atau miring ke salah satu sisi dengan kedua tungkai dilipat ke arah perut dan kepala menunduk. Pada waktu penyuntikan obat, akan terasa hangat di tubuh. Setelah obat masuk ke tulang belakang, pada awalnya akan terasa kesemutan pada tungkai, lama kelamaan akan terasa berat pada kedua tungkai dan pada akhirnya kedua tungkai tidak dapat digerakkan, seolah-olah tungkainya hilang. Pada awalnya, dibagian perut pasien masih bisa merasakan sentuhan, gosokan, dan tarikan, tapi lama kelamaan akan tidak merasakan apa-apa lagi, hilang rasa ini bisa berlangsung hingga 3 jam sesuai jenis obat anestesi lokal yang digunakan. Tingkat kegagalan Spinal/Epidural sekitar 1-17% sehingga kadang diperlukan teknik anestesi alternatif.\n<p><br>\nKelebihan Teknik Anestesia Umum :\n<ul>- Jumlah obat yang dipakai sedikit.</ul>\n<ul>- Obat bius tidak masuk ke dalam aliran darah tali pusat sehingga menjadi pilihan untuk operasi sesar.</ul>\n<ul>- Obat bius tidak mempengaruhi organ lain didalam tubuh</ul>\n<ul>- Bisa ditambahkan obat penghilang rasa sakit yang bisa bertahan 24 pasca bedah atau lebih)</ul>\n<ul>- Bila tidak mual/muntah pasca bedah bisa lengsung minum tanpa harus menunggu flatus (buang angin)</ul>\n<ul>- Lebih aman untuk pasien yang tidak puasa/operasi darurat. </ul>\n<ul>- </ul>\n<p><br>\nKelemahan teknik  Anestesi Spinal/Epidural :\n<ul>- Penuruna tekanan darah</ul>\n<ul>- Pasca bedah harus berbaring, tidak boleh duduk/bangun selama 4 jam.</ul>\n<ul>- Kedua tungkai tidak dapat digerakkan sementara, terutama pada tingkatan Anestesi Spinal</ul>\n<ul>- Terjadi gangguan fungsi berkemih sementara terutama pada tindakan spinal.</ul>\n\n<p><br>Komplikasi teknik Anestesi Spinal/Epidural : \n<ul>- Efek samping pasca bedah yang sering terjadi adalah mual/muntah, gatal-gatal terutama di daerah wajah, semua bisa dikurangi dengan oba-obatan.</ul>\n<ul>- Efek samping yang jarang adalah sakit kepala dibagian depan atau belakang kepala pada hari ke 2 terutama pada waktu mengangkat kepala dan menghilang 5 sampai 7 hari. Bila tidak menghilang dilakukan tindakan khusus berupa pemberian darah pasien pada tempat penyutikan semula.</ul>\n<ul>- Alergi/Hipersensitif terhadap obat (sangat jarang), mulai derajat ringan sampai dengan berat/fatal.</ul>\n<ul>- Gangguan pernapasan mulai dari ringan (terasa pernapasan agak berat) sampai berat termasuk henti napas (jarang)</ul>\n<ul>- Kelumpuhan atau kesemutan/baal ditungkai yang memanjang, bersifat sementara dan bisa sembuh kembali</ul>\n<ul>- Untuk epidural bisa terjadi kejang bila obat masuk kedalam pembuluh darah (jarang terjadi) dan dapat ditangani sesuai prosedur.</ul>"
+       }
+      ],
+      "title": "Halaman 1"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "checkbox",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "BLOK SARAF TEPI (PERIFER)"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question3",
+        "html": "<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Blok Saraf Tepi adalah teknik anestesi yang hanya melibatkan sebagian tubuh yang akan diopesarikan saja. Teknik ini dilakukan dengan menyuntikan obat bius lokal di sekitar saraf yang mensarafi bagian tubuh yang akan dioperasi. Pada saat mencari saraf  yang akan  disuntik mungkin akan merasakan sedikit nyeri. Kadang bisa saraf sudah terkena maka akan terasaseperti kesetrum di bagian yang akan dioperasi. Demikian juga pada saat penyuntikan obat bius lokal akan terasa sedikit nyeri, tapi lama-kelamaan bagian tubuh yang akan dioperasi akan terasa kesemutan dan akhirnya terasa berat sampai dengan tidak bisa digerakan. Efek bius berlangsung antara 2-4 jam tergantung jenis obat yang dipakai.\n<p><br>Komplikasi Blok Saraf Tepi : \n<ul>- Rasa kesemutan dan atau gangguan gerak yang berkepanjangan tetapi bersifat sementara</ul>\n<ul>- Tertusuknya lapisan paru, pada blok perifer daerah dada (jarang)</ul>\n<ul>- Anestesia yang tidak komplit</ul>\n<ul>- Reaksi alergi atau hipertensi yang ringan hingga berat (sangat jarang)</ul>\n<ul>- Risiko kejang sekitar 0,2 – 1 per 1000 (jarang) bila obat masuk ke dalam pembuluh darah yang dapat ditangani sesuai prosedur tanpa gejala sisa</ul>\n<ul>- Koordinasi gerakan otot pada daerah yang dibius akan terganggu sementara</ul>\n<ul>- Cedera pembuluh darah sekitar 5,7% sampai 6,6% terutama pada area ekstremitas bawah</ul>\n<ul>- Cedera saraf (Neurophati) sekitar 0,5-1%, umumnya bersifat sementara, yang membaik setelah beberapa hari (jarang)</ul>\n<ul>- Dengan kateter saraf perifer terdapat efek samping berupa inflamasi lokal 0-13,7%, infeksi lokal 0-3,2%, abses 0-0,9% (jarang)</ul>\n"
+       }
+      ]
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "checkbox",
+        "name": "question4",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "SEDASI"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question8",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Sedasi Ringan"
+         },
+         {
+          "value": "item2",
+          "text": "Sedasi Sedang"
+         },
+         {
+          "value": "item3",
+          "text": "Sedasi Berat"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "html",
+        "name": "question9",
+        "visibleIf": "{question8} anyof ['item1']",
+        "html": "<p>Sedasi Ringan\n<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Teknik pembiusan dengan penyuntikan obat yang dapat menyebabkan pasien tidak lemas, sedikit mengantuk, tetapi masih memiliki respon normal terhadap rangsangan verbal dan tetap dapat mempertahankan patensi dari jalan nafasnya, sedang fungsi pernafasan dan kerja jantung serta pembuluh darah tidak dipengaruhi."
+       },
+       {
+        "type": "html",
+        "name": "question10",
+        "visibleIf": "{question8} anyof ['item2']",
+        "html": "<p>Sedasi Sedang\n<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Teknik pembiusan dengan penyuntikan obat yang dapat menyebabkan pasien mengantuk, tetapi masih memiliki respon normal terhadap rangsangan verbal, dapat diikuti atau tidak diikuti oleh rangsangan tekan yang ringan dan pasien masih dapat menjaga patensi jalan napasnya sendiri. Pada sedasi maderat terjadi perubahan ringan dari respon pernapasan namun fungsi kerja jantung dan pembuluh darah masih tetap tipertahankan dalam keadaan normal. Pada sedasi moderat dapat diikuti gangguan orientasi lingkungan serta gangguan fungi motorik ringan sampai sedang.\n"
+       },
+       {
+        "type": "html",
+        "name": "question11",
+        "visibleIf": "{question8} anyof ['item3']",
+        "html": "<p>Sedasi Berat\n<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Teknik pembiusan dengan penyuntikan obat yang dapat menyebabkan pasien mengantuk, tidur, serta tidak mudah dibangunkan tetapi masih memberikan respon terhadap rangsangan berulang atau rangsangan nyeri. Respon rangsangan sudah mulai terganggu dimana nafas spontan sudah mulai tidak edukuat dan pasien tidak dapat mempertahankan patensi dari jalan nafasnya (mengakibatkan hilangnya sebagian atau seluruh refleks protektif jalan nafas). Sedasi dalam dapat berpengaruh  terhadap fungsi kerja jantung dan pembuluh darah terutama pada pasien sakit berat, sehingga tindakan sedasi dalam membuatkan alat monitoring yang lebih lengkap dari sedasi ringan maupun sedasi moderat.\n"
+       },
+       {
+        "type": "html",
+        "name": "question12",
+        "html": "<p>Kelebihan Teknik Sedasi :\n<ul>- Obat diberikan secara bertahap</ul>\n<ul>- Selama tindakan pasien dalam keadaan mengantuk dan tidur</ul>\n<ul>- Obat yang diberikan dapat memiliki efek amnesia</ul>\n<p>Kelemahan Teknik Sedasi : :\n<ul>- Pasca sedasi pasien harus sadar penuh sebelum bisa diberi minum</ul>\n<ul>- Sampai 24 jam pasca sedasi, pasien tidak diperbolehkan mengendarai mobil, mengoperasikan mesin dan menandatangani dokumen penting yang bersifat legal.</ul>\n<p>Komplikasi Teknik Sedasi :\n<ul>-Oleh karena tindakan sedasi merupakan rangkaian proses dinamik dan dapat berubah, maka sedasi ringan ataupun moderat bisa bergeser menjadi sedasi dalam.</ul>\n<ul>- Efek samping pasca sedasi dapat berupa ; mual muntah, menggigil, pusing, menggigil, pusing, mengantuk, yang bisa diatasi dengan obat-obatan</ul>\n<ul>- Alergi/Hipersensitif terhadap obat (sangat jarang), mulai derajat ringan hingga berat/fatal.</ul>\n<ul>- Beresiko pada pasien yang tidak puasa, bisa terjadi aspirasi yaitu masuknya isi lambung ke jalan nafas/paru\n</ul>\n<ul>- Pada sedasi dalam terdapat kemungkinan pemasangan alat atau pipa pernafasan\n</ul>\n\n"
+       },
+       {
+        "type": "checkbox",
+        "name": "question13",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "MAC (Monitor Anestesia Care) prosedur pemantauan anestesia"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question14",
+        "html": "<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Prosesur pemantauan anestesia merupakan teknik dimana dokter anestesia mendampingi dan melakukan pemantauan tanda vital selama tindakan yang dilakukan oleh dokter lain, bila diperlukan dengan menimbang risiko dan keuntungannya dokter anestesia akan memberikan obat pemberian rasa kantuk, pengurangan rasa nyeri atau obat lain sesuai indikasi.\n<p>Komplikasi Teknik Sedasi :\n<ul>- Oleh karena tindakan MAC merupakan rangkaian proses dinamik dan dapat berubah, maka pemberian sedasi pada prosedur MAC dapat berubah dari sedasi ringan sedasi sedang atau dalam.\n</ul>\n<ul>- Efek samping  dapat berupa ; mual muntah, menggigil, pusing, menggigil, pusing, mengantuk, yang bisa diatasi dengan obat-obatan\n</ul>\n<ul>- Alergi/Hipersensitif terhadap obat (sangat jarang), mulai derajat ringan hingga berat/fatal.\n</ul>\n<ul>- Beresiko pada pasien yang tidak puasa, bisa terjadi aspirasi yaitu masuknya isi lambung ke jalan nafas/paru\n</ul>\n<ul>- Pada pemberian sedasi dalam terdapat kemungkinan pemasangan alat atau pipa pernafasan\n</ul>"
+       }
+      ]
+     },
+     {
+      "name": "page4",
+      "elements": [
+       {
+        "type": "checkbox",
+        "name": "question15",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "ANESTESIA TOPIKAL"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question16",
+        "html": "<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Anestesia topikal adalah teknik pembiusan yang hanya melibatkan bagian tubuh tertentu saja (misalnya mata, gusi, dll). Teknik pembiusan dilakukan dengan memberikan obat bius tets/spray/jelly pada bagian tubuh yang akan dibius. Efek bius berlangsung kira-kira 15-30 menit tergantung jenis obat yang dipakai.\n<p>Komplikasi :\n<ul>-Hampir tidak pernah ditemukan.</ul>\n"
+       },
+       {
+        "type": "checkbox",
+        "name": "question17",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "PENGELOLAAN NYERI PASCA TINDAKAN"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question18",
+        "html": "<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Pasien pasca tindakan atau anestesia akan mendapatkan manajemen nyeri disesuaikan dengan tingkatan nyeri yang dialami pasien. Pasien akan dievaluasi tingkatan nyeri berdasarkan skala 0 (tidak ada nyeri) hingga 10 (nyeri berat). Tingkatan nyeri dibagi dalam 3 kategori :\n<ul>-Skala      0-3      : nyeri ringan</ul>\n<ul>-Skala      4-6      : nyeri sedang</ul>\n<ul>-Skala      7-10   : nyeri berat</ul>\n<br>\n<p>Untuk tiap tingkatan nyeri akan diberikan manajemen yang berbeda. Modalitas penatalaksanaan nyeri dapat diberikan melalui oral, suntikan, spinal, maupun epidural.\n<ul>- Rasa Sakit Ringan\nDapat diberikan parasetamol (10-15mg/kg BB tiap 4-6jam) diminumkan atau melalui suntikan, atau rejimen lain sesuai prosedur SPO tatalaksana nyeri\n</ul>\n<ul>- Nyeri Sedang\nDapat diberikan kombinasi beberapa macam obat, termasuk paracetamol dan obat anti inflamasi non steroid melalui suntikan. Atau modalitas dan rejimen lain sesuai prosedur SPO tatalaksana nyeri\n</ul>\n<ul>- Nyeri Hebat\nDapat diberikan obat-obatan golongan narkotik kombinasi obat atau modalotas dan rejimen lain sesuai prosedur SPO tatalaksana nyeri.\n</ul>\n<p>Komplikasi Pnegelolaan Nyeri Pasca Tindakan :\n<ul>- Mual/muntah, gatal-gatal terutama di daerah wajah. Semua bisa dikurangi dengan obat-obatan.\n</ul>\n<ul>-Alergi/hipersensitif terhadap obat (sangat jarang), mulai derajat ringan hingga berat.\n</ul>\n<ul>- Gangguan fungsi pernapasan (jarang) dan dapat diatasi dengan tindakan.\n</ul>\n<br>\n<p class=\"MsoNormal\" style=\"text-align: justify; text-indent: 0.5in;\">Saya yang bertanda tangan dibawah ini, telah membaca atau dibacakan keterangan diatas dan telah dijelaskan terkait dengan prosedur anestesi dan sedasi yang akan dilakukan terhadap : diri saya sendiri / istri / suami / anak / ayah / ibu *)"
+       },
+       {
+        "type": "multipletext",
+        "name": "question19",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama "
+         },
+         {
+          "name": "text2",
+          "title": "Nomor Rekam Medis  "
+         },
+         {
+          "name": "text3",
+          "title": "Umur/Jenis Kelamin"
+         },
+         {
+          "name": "text4",
+          "title": "Alamat "
+         },
+         {
+          "name": "text5",
+          "title": "No. Telp / HP "
+         },
+         {
+          "name": "text6",
+          "title": "Diagnosa "
+         },
+         {
+          "name": "text7",
+          "title": "Rencana Tindakan"
+         },
+         {
+          "name": "text8",
+          "title": "Jenis Anestesi  "
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question20",
+        "title": "Tanah Badantuan, ",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question21",
+        "title": "Dokter yang menjelaskan",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question22",
+        "startWithNewLine": false,
+        "title": "Pihak yang dijelaskan,",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question25",
+        "startWithNewLine": false,
+        "title": "Saksi",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question23",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question24",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question26",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

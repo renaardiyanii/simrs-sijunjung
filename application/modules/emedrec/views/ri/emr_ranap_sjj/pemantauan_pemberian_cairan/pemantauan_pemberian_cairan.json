@@ -1,0 +1,568 @@
+{
+    "title": "PEMANTAUAN PEMBERIAN CAIRAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question2",
+        "title": "Ruang Rawat / Unit Kerja  ",
+        "hideNumber": true
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question16",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "panel",
+          "name": "panel2",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question1",
+            "title": "Tanggal",
+            "titleLocation": "top",
+            "hideNumber": true,
+            "inputType": "date"
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question17",
+            "title": "INTAKE",
+            "hideNumber": true,
+            "defaultValue": [
+             {
+              "Column 1": "07.00"
+             },
+             {
+              "Column 1": "08.00"
+             },
+             {
+              "Column 1": "09.00"
+             },
+             {
+              "Column 1": "10.00"
+             },
+             {
+              "Column 1": "11.00"
+             },
+             {
+              "Column 1": "12.00"
+             },
+             {
+              "Column 1": "13.00"
+             }
+            ],
+            "columns": [
+             {
+              "name": "Column 1",
+              "title": "Jam",
+              "readOnly": true
+             },
+             {
+              "name": "Column 2",
+              "title": "Oral"
+             },
+             {
+              "name": "Column 3",
+              "title": "NGT"
+             },
+             {
+              "name": "Column 4",
+              "title": "Line 1"
+             },
+             {
+              "name": "Column 5",
+              "title": "Line 2"
+             },
+             {
+              "name": "Column 6",
+              "title": "Line 3"
+             },
+             {
+              "name": "Column 7",
+              "title": "Comulative / Jam"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "cellType": "text",
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 7
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question18",
+            "title": "OUTPUT",
+            "hideNumber": true,
+            "defaultValue": [
+             {
+              "Column 1": "07.00",
+              "column8": "07.00"
+             },
+             {
+              "Column 1": "08.00",
+              "column8": "08.00"
+             },
+             {
+              "Column 1": "09.00",
+              "column8": "09.00"
+             },
+             {
+              "Column 1": "10.00",
+              "column8": "10.00"
+             },
+             {
+              "Column 1": "11.00",
+              "column8": "11.00"
+             },
+             {
+              "Column 1": "12.00",
+              "column8": "12.00"
+             },
+             {
+              "column8": "13.00"
+             }
+            ],
+            "columns": [
+             {
+              "name": "column8",
+              "title": "Jam",
+              "readOnly": true
+             },
+             {
+              "name": "column1",
+              "title": "Urine"
+             },
+             {
+              "name": "column2",
+              "title": "NGT / darah +-"
+             },
+             {
+              "name": "column3",
+              "title": "BAB / Darah +-"
+             },
+             {
+              "name": "column4",
+              "title": "Drain 1"
+             },
+             {
+              "name": "column5",
+              "title": "Drain 2"
+             },
+             {
+              "name": "column6",
+              "title": "IWL"
+             },
+             {
+              "name": "column7",
+              "title": "Comulative / Jam"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "cellType": "text",
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 7
+           },
+           {
+            "type": "html",
+            "name": "question19",
+            "html": "<h4> COMULATIVE / SHIFT"
+           },
+           {
+            "type": "dropdown",
+            "name": "question3",
+            "title": "Perawat",
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_userppa_iri"
+            }
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel5",
+          "elements": [
+           {
+            "type": "matrixdynamic",
+            "name": "question22",
+            "title": "INTAKE",
+            "hideNumber": true,
+            "defaultValue": [
+             {
+              "Column 1": "14.00"
+             },
+             {
+              "Column 1": "15.00"
+             },
+             {
+              "Column 1": "16.00"
+             },
+             {
+              "Column 1": "17.00"
+             },
+             {
+              "Column 1": "18.00"
+             },
+             {
+              "Column 1": "19.00"
+             },
+             {
+              "Column 1": "20.00"
+             }
+            ],
+            "columns": [
+             {
+              "name": "Column 1",
+              "title": "Jam",
+              "readOnly": true
+             },
+             {
+              "name": "Column 2",
+              "title": "Oral"
+             },
+             {
+              "name": "Column 3",
+              "title": "NGT"
+             },
+             {
+              "name": "Column 4",
+              "title": "Line 1"
+             },
+             {
+              "name": "Column 5",
+              "title": "Line 2"
+             },
+             {
+              "name": "Column 6",
+              "title": "Line 3"
+             },
+             {
+              "name": "Column 7",
+              "title": "Comulative / Jam"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "cellType": "text",
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 7
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question23",
+            "title": "OUTPUT",
+            "hideNumber": true,
+            "defaultValue": [
+             {
+              "column8": "14.00"
+             },
+             {
+              "column8": "15.00"
+             },
+             {
+              "column8": "16.00"
+             },
+             {
+              "column8": "17.00"
+             },
+             {
+              "column8": "18.00"
+             },
+             {
+              "column8": "19.00"
+             },
+             {
+              "column8": "20.00"
+             }
+            ],
+            "columns": [
+             {
+              "name": "column8",
+              "title": "Jam",
+              "readOnly": true
+             },
+             {
+              "name": "column1",
+              "title": "Urine"
+             },
+             {
+              "name": "column2",
+              "title": "NGT / darah +-"
+             },
+             {
+              "name": "column3",
+              "title": "BAB / Darah +-"
+             },
+             {
+              "name": "column4",
+              "title": "Drain 1"
+             },
+             {
+              "name": "column5",
+              "title": "Drain 2"
+             },
+             {
+              "name": "column6",
+              "title": "IWL"
+             },
+             {
+              "name": "column7",
+              "title": "Comulative / Jam"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "cellType": "text",
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 7
+           },
+           {
+            "type": "html",
+            "name": "question24",
+            "html": "<h4> COMULATIVE / SHIFT"
+           },
+           {
+            "type": "dropdown",
+            "name": "question4",
+            "title": "Perawat",
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_userppa_iri"
+            }
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel6",
+          "elements": [
+           {
+            "type": "matrixdynamic",
+            "name": "question27",
+            "title": "INTAKE",
+            "hideNumber": true,
+            "defaultValue": [
+             {
+              "Column 1": "21.00"
+             },
+             {
+              "Column 1": "22.00"
+             },
+             {
+              "Column 1": "23.00"
+             },
+             {
+              "Column 1": "24.00"
+             },
+             {
+              "Column 1": "01.00"
+             },
+             {
+              "Column 1": "02.00"
+             },
+             {
+              "Column 1": "03.00"
+             },
+             {
+              "Column 1": "04.00"
+             },
+             {
+              "Column 1": "05.00"
+             },
+             {
+              "Column 1": "06.00"
+             }
+            ],
+            "columns": [
+             {
+              "name": "Column 1",
+              "title": "Jam",
+              "readOnly": true
+             },
+             {
+              "name": "Column 2",
+              "title": "Oral"
+             },
+             {
+              "name": "Column 3",
+              "title": "NGT"
+             },
+             {
+              "name": "Column 4",
+              "title": "Line 1"
+             },
+             {
+              "name": "Column 5",
+              "title": "Line 2"
+             },
+             {
+              "name": "Column 6",
+              "title": "Line 3"
+             },
+             {
+              "name": "Column 7",
+              "title": "Comulative / Jam"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "cellType": "text",
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 10
+           },
+           {
+            "type": "matrixdynamic",
+            "name": "question28",
+            "titleLocation": "hidden",
+            "defaultValue": [
+             {
+              "column8": "21.00"
+             },
+             {
+              "column8": "22.00"
+             },
+             {
+              "column8": "23.00"
+             },
+             {
+              "column8": "24.00"
+             },
+             {
+              "column8": "01.00"
+             },
+             {
+              "column8": "02.00"
+             },
+             {
+              "column8": "03.00"
+             },
+             {
+              "column8": "04.00"
+             },
+             {
+              "column8": "05.00"
+             },
+             {
+              "column8": "06.00"
+             }
+            ],
+            "columns": [
+             {
+              "name": "column8",
+              "title": "Jam",
+              "readOnly": true
+             },
+             {
+              "name": "column1",
+              "title": "Urine"
+             },
+             {
+              "name": "column2",
+              "title": "NGT / darah +-"
+             },
+             {
+              "name": "column3",
+              "title": "BAB / Darah +-"
+             },
+             {
+              "name": "column4",
+              "title": "Drain 1"
+             },
+             {
+              "name": "column5",
+              "title": "Drain 2"
+             },
+             {
+              "name": "column6",
+              "title": "IWL"
+             },
+             {
+              "name": "column7",
+              "title": "Comulative / Jam"
+             }
+            ],
+            "choices": [
+             1,
+             2,
+             3,
+             4,
+             5
+            ],
+            "cellType": "text",
+            "allowAddRows": false,
+            "allowRemoveRows": false,
+            "rowCount": 10
+           },
+           {
+            "type": "html",
+            "name": "question29",
+            "html": "<h4> COMULATIVE / SHIFT"
+           },
+           {
+            "type": "dropdown",
+            "name": "question5",
+            "title": "Perawat",
+            "renderAs": "select2",
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_userppa_iri"
+            }
+           }
+          ]
+         }
+        ],
+        "panelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

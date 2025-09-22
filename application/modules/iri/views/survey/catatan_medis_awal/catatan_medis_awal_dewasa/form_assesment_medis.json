@@ -1,0 +1,752 @@
+{
+    "title": "CATATAN MEDIS AWAL RAWAT INAP",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl",
+        "title": "Tanggal & Waktu",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "keluhan",
+          "title": "Keluhan Utama",
+          "hideNumber": true
+         }
+        ],
+        "title": "Anamnesa"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "is_stroke",
+          "title": "On Set Stroke < 3 Hari",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "On Set Stroke < 3 Hari"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "visibleIf": "{is_stroke} = ['item1']",
+          "title": "SKOR",
+          "hideNumber": true,
+          "columns": [
+            {
+             "name": "tgl",
+             "title": "tanggal pemeriksaan",
+             "cellType": "text",
+             "inputType": "date"
+            },
+            {
+             "name": "1",
+             "title": "1a. Tingkat kesadaran",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Sadar penuh"
+              },
+              {
+               "value": "1",
+               "text": "1 = Tidak sadar penuh; dapat dibangunkan dengan stimulasi minor (suara)"
+              },
+              {
+               "value": "2",
+               "text": "2 = Tidak sadar penuh; dapat berespon dengan stimulasi berulang atau stimulasi nyeri"
+              },
+              {
+               "value": "3",
+               "text": "3 = Koma; tidak sadar dan tidak berespon dengan stimulasi apapun"
+              }
+             ]
+            },
+            {
+             "name": "2",
+             "title": "1b. Menjawab pertanyaan",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Benar semua"
+              },
+              {
+               "value": "1",
+               "text": "1 = benar/ETT/disartria"
+              },
+              {
+               "value": "2",
+               "text": "2 = Salah semua/afasia/stupor/koma"
+              }
+             ]
+            },
+            {
+             "name": "3",
+             "title": "1c. Mengikuti perintah",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Mampu melakukan 2 perintah"
+              },
+              {
+               "value": "1",
+               "text": "1 = Mampu melakukan 1 perintah"
+              },
+              {
+               "value": "2",
+               "text": "2 = Tidak mampu melakukan perintah"
+              }
+             ]
+            },
+            {
+             "name": "4",
+             "title": "2. Gaze: Gerakan mata konyugat horizontal",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Normal"
+              },
+              {
+               "value": "1",
+               "text": "1 =\tParesis gaze parsial pada 1 atau 2 mata, \t\tterdapat abnormal gaze namun forced \t\t\tdeviation atau paresis gaze total tidak ada"
+              },
+              {
+               "value": "2",
+               "text": "2 =\tForced deviation, atau paresis gaze total    tidak dapat diatasi dengan maneuver okulosefalik"
+              }
+             ]
+            },
+            {
+             "name": "5",
+             "title": "3. Visual: Lapang pandang pada tes konfrontasi",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Tidak ada gangguan"
+              },
+              {
+               "value": "1",
+               "text": "1 = Hemianopsia Parsial"
+              },
+              {
+               "value": "2",
+               "text": "2 = Hemianopsia Lengkap"
+              },
+              {
+               "value": "3",
+               "text": "3 = Hemianopsia Bilateral"
+              }
+             ]
+            },
+            {
+             "name": "6",
+             "title": "4. Paresis Wajah",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Normal"
+              },
+              {
+               "value": "1",
+               "text": "1 = Paralisis minor (sulcus nasolabial rata, asimetri saat tersenyum)"
+              },
+              {
+               "value": "2",
+               "text": "2 = Paralisis parsial (paralisis total atau near-total dari wajah bagian bawah)"
+              },
+              {
+               "value": "3",
+               "text": "3 = Paralisis komplit dari satu atau kedua sisi wajah (tidak ada gerakan pada sisi wajah atas maupun bawah)"
+              }
+             ]
+            },
+            {
+             "name": "7",
+             "title": "5. Motorik Lengan",
+             "cellType": "text"
+            },
+            {
+             "name": "8",
+             "title": "kiri",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Tidak ada drift; lengan dapat diangkat 90 (45)°, selama minimal 10 detik penuh"
+              },
+              {
+               "value": "1",
+               "text": "1 = Drift; lengan dapat diangkat 90 (45) namun turun sebelum 10 detik, tidak mengenai tempat tidur"
+              },
+              {
+               "value": "2",
+               "text": "2 = Ada upaya melawan gravitasi; lengan tidak dapat diangkat atau dipertahankan dalam posisi 90 (45)°, jatuh mengenai tempat tidur, nhamunada upaya melawan gravitasi"
+              },
+              {
+               "value": "3",
+               "text": "3 = Tidak ada upaya melawan gravitasi, tidak mampu mengangkat, hanya bergeser"
+              },
+              {
+               "value": "4",
+               "text": "4 = Tidak ada gerakan"
+              },
+              {
+               "value": "0",
+               "text": "UN = Amputasi atau fusi sendi, jelaskan"
+              }
+             ]
+            },
+            {
+             "name": "9",
+             "title": "kanan",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Tidak ada drift; lengan dapat diangkat 90 (45)°, selama minimal 10 detik penuh"
+              },
+              {
+               "value": "1",
+               "text": "1 = Drift; lengan dapat diangkat 90 (45) namun turun sebelum 10 detik, tidak mengenai tempat tidur"
+              },
+              {
+               "value": "2",
+               "text": "2 = Ada upaya melawan gravitasi; lengan tidak dapat diangkat atau dipertahankan dalam posisi 90 (45)°, jatuh mengenai tempat tidur, nhamunada upaya melawan gravitasi"
+              },
+              {
+               "value": "3",
+               "text": "3 = Tidak ada upaya melawan gravitasi, tidak mampu mengangkat, hanya bergeser"
+              },
+              {
+               "value": "4",
+               "text": "4 = Tidak ada gerakan"
+              },
+              {
+               "value": "0",
+               "text": "UN = Amputasi atau fusi sendi, jelaskan"
+              }
+             ]
+            },
+            {
+             "name": "10",
+             "title": "6. Motorik Tungkai",
+             "cellType": "text"
+            },
+            {
+             "name": "11",
+             "title": "kiri",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Tidak ada drift; tungkai dapat dipertahankan dalam posisi 30° minimal 5 detik"
+              },
+              {
+               "value": "1",
+               "text": "1 = Drift; tungkai jatuh persis 5 detik, namun tidak mengenai tempat tidur"
+              },
+              {
+               "value": "2",
+               "text": "2 = Ada upaya melawan gravitasi; tungkai jatuh mengenai tempat tidur dalam 5 detik, namun ada upaya melawan gravitasi"
+              },
+              {
+               "value": "3",
+               "text": "3 = Tidak ada upaya melawan gravitasi"
+              },
+              {
+               "value": "4",
+               "text": "4 = Tidak ada gerakan"
+              },
+              {
+               "value": "0",
+               "text": "UN = amputasi atau fusi sendi, jelaskan"
+              }
+             ]
+            },
+            {
+             "name": "12",
+             "title": "kanan",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Tidak ada drift; tungkai dapat dipertahankan dalam posisi 30° minimal 5 detik"
+              },
+              {
+               "value": "1",
+               "text": "1 = Drift; tungkai jatuh persis 5 detik, namun tidak mengenai tempat tidur"
+              },
+              {
+               "value": "2",
+               "text": "2 = Ada upaya melawan gravitasi; tungkai jatuh mengenai tempat tidur dalam 5 detik, namun ada upaya melawan gravitasi"
+              },
+              {
+               "value": "3",
+               "text": "3 = Tidak ada upaya melawan gravitasi"
+              },
+              {
+               "value": "4",
+               "text": "4 = Tidak ada gerakan"
+              },
+              {
+               "value": "0",
+               "text": "UN = amputasi atau fusi sendi, jelaskan"
+              }
+             ]
+            },
+            {
+             "name": "13",
+             "title": "7. Ataksia anggota gerak",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Tidak ada ataksia"
+              },
+              {
+               "value": "1",
+               "text": "1 = Ataksia pada satu ekstremitas"
+              },
+              {
+               "value": "2",
+               "text": "2 = Ataksia pada 2 atau lebih ekstremitas"
+              }
+             ],
+             "hasOther": true,
+             "otherText": "UN = Amputasi atau fusi sendi, jelaskan"
+            },
+            {
+             "name": "14",
+             "title": "8. Sensorik",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Normal; tidak ada gangguan sensorik"
+              },
+              {
+               "value": "1",
+               "text": "1 = Gangguan sensorik ringan-sedang; sensasi disentuh atau nyeri berkurang namun masih terasa disentuh"
+              },
+              {
+               "value": "2",
+               "text": "2 = Gangguan sensorik berat; tidak merasakan sentuhan di wajah, lengan, atau tungkai"
+              }
+             ]
+            },
+            {
+             "name": "15",
+             "title": "9. Bahasa Terbalik",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Normal; tidak ada afasia"
+              },
+              {
+               "value": "1",
+               "text": "1 = Afasia ringan-sedang; dapat berkomunikasi namun terbatas. Masih dapat mengenali benda namun kesulitan bicara percakapan dan mengerti percakapan"
+              },
+              {
+               "value": "2",
+               "text": "2 = Afasia berat; seluruh komunikasi melalui ekspresi yang terfragmentasi, dikira-kira dan pemeriksa tidak dapat memahami respons pasien"
+              },
+              {
+               "value": "3",
+               "text": "3 = Mutisme, afasia global; tidak ada kata-kata yang keluar maupun pengertian akan kata-kata"
+              }
+             ]
+            },
+            {
+             "name": "16",
+             "title": "10. Disartria",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Normal"
+              },
+              {
+               "value": "1",
+               "text": "1 = Disartria ringan-sedang; pasien pelo setidaknya pada beberapa kata namun meski berat dapat dimengerti"
+              },
+              {
+               "value": "2",
+               "text": "2 = Disartria berat; bicara pasien sangat pelo namun tidak afasia"
+              }
+             ],
+             "hasOther": true,
+             "otherText": "UN = Intubasi atau hambatan fisik lain, jelaskan"
+            },
+            {
+             "name": "17",
+             "title": "11. Pengabaian & Inatensi (Neglect)",
+             "cellType": "dropdown",
+             "choices": [
+              {
+               "value": "0",
+               "text": "0 = Tidak ada neglect"
+              },
+              {
+               "value": "1",
+               "text": "1 = Tidak ada atensi pada salah satu modalitas berikut; visual, tactile, auditory, spatial, or personal inattention."
+              },
+              {
+               "value": "2",
+               "text": "2 = Tidak ada atensi pada lebih dari satu modalitas"
+              }
+             ]
+            },
+            {
+             "name": "total",
+             "title": "TOTAL",
+             "cellType": "expression",
+             "expression": "{row.1}+{row.2}+{row.3}+{row.4}+{row.5}+{row.6}+{row.7}+{row.8}+{row.9}+{row.10}+{row.11}+{row.12}+{row.13}+{row.14}+{row.15}+{row.16}+{row.17}"
+            },
+            {
+             "name": "18",
+             "title": "Keterangan\t: Skor 1-4\t:\tdefisit neurologis ringan Skor 5-14\t:\tdefisit neurologis sedang Skor 15-24\t:\tdefisit neurologis berat Skor ≥ 25\t:\tdefisit neurologis sangat berat",
+             "cellType": "expression",
+             "expression": "iif({row.total} > 24,'Defisit neurologis sangat besar',\n iif({row.total}  > 14,'Defisit neurologis berat(15-24)',\n iif({row.total} < 5,'Defisit neurologis ringan(1-4)','Defisit neurologis sedang (5-14)'))"
+            }
+           ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ]
+       },
+       {
+        "type": "comment",
+        "name": "riwayat",
+        "title": "Riwayat Penyakit Sekarang ",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "riwayat_penyakit_dahulu",
+        "title": "Riwayat Penyakit Dahulu",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "penyakit_keluarga",
+        "title": "Riwayat Penyakit Keluarga",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "riwayat_pekerjaan",
+        "title": "Riwayat Pekerjaan :",
+        "hideNumber": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "riwayat_sosial",
+        "title": "Riwayat Sosial Ekonomi ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "biaya",
+          "text": "Biaya Sendiri"
+         },
+         {
+          "value": "asuransi",
+          "text": "Asuransi "
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "radiogroup",
+        "name": "check_asuransi",
+        "visibleIf": "{riwayat_sosial} = 'asuransi'",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "bpjs",
+          "text": "Bpjs"
+         },
+         {
+          "value": "mandiri",
+          "text": "Mandiri"
+         },
+         {
+          "value": "pbi",
+          "text": "PBI"
+         },
+         {
+          "value": "non",
+          "text": "Non PBI"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "text",
+        "name": "kejiwaan",
+        "title": "Riwayat Kejiwaan",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "riwayat_kebiasaan",
+        "title": "Riwayat Kebiasaan :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "meroko",
+          "text": "Meroko"
+         },
+         {
+          "value": "akohol",
+          "text": "Alkohol"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Lainnya",
+        "colCount": 3
+       },
+       {
+        "type": "radiogroup",
+        "name": "keadaan_umum",
+        "title": "Keadaan Umum ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "baik",
+          "text": "Baik"
+         },
+         {
+          "value": "sedang",
+          "text": "Sedang"
+         },
+         {
+          "value": "buruk",
+          "text": "Buruk"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "text",
+        "name": "suhu",
+        "startWithNewLine": false,
+        "title": "Suhu",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "kesadaran",
+        "title": "Kesadaran",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "gcs",
+        "startWithNewLine": false,
+        "title": "GCS :",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "td",
+        "title": "Tekanan Darah :",
+        "hideNumber": true,
+        "placeHolder": "mmHg"
+       },
+       {
+        "type": "text",
+        "name": "bb",
+        "startWithNewLine": false,
+        "title": "BB / TB",
+        "hideNumber": true,
+        "placeHolder": "kg"
+       },
+       {
+        "type": "text",
+        "name": "nadi",
+        "title": "Nadi",
+        "hideNumber": true,
+        "placeHolder": "x/menit"
+       },
+       {
+        "type": "radiogroup",
+        "name": "keadaan_gizi",
+        "startWithNewLine": false,
+        "title": "Keadaan Gizi ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "baik",
+          "text": "Baik"
+         },
+         {
+          "value": "sedang",
+          "text": "Sedang"
+         },
+         {
+          "value": "buruk",
+          "text": "Buruk"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "text",
+        "name": "pernafasan",
+        "title": "Pernafasan",
+        "hideNumber": true,
+        "placeHolder": "x/menit"
+       },
+       {
+        "type": "text",
+        "name": "skor_nyeri",
+        "startWithNewLine": false,
+        "title": "Skor Nyeri",
+        "hideNumber": true
+       }
+      ],
+      "title": "Halaman 1"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "table",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "normal",
+          "title": "Normal",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak"
+         },
+         {
+          "name": "jelaskan",
+          "title": "Jelaskan",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "kepala",
+          "text": "kepala"
+         },
+         {
+          "value": "mata",
+          "text": "mata"
+         },
+         {
+          "value": "tht",
+          "text": "THT"
+         },
+         {
+          "value": "mulut",
+          "text": "Mulut"
+         },
+         {
+          "value": "leher",
+          "text": "Leher"
+         },
+         {
+          "value": "jantung",
+          "text": "Jantung"
+         },
+         {
+          "value": "paru",
+          "text": "Paru"
+         },
+         {
+          "value": "dada",
+          "text": "Dada & Payudara"
+         },
+         {
+          "value": "perut",
+          "text": "Perut"
+         },
+         {
+          "value": "urogenital",
+          "text": "Urogenital"
+         },
+         {
+          "value": "anggota",
+          "text": "Anggota Gerak"
+         },
+         {
+          "value": "status",
+          "text": "Status Neurologis"
+         },
+         {
+          "value": "muskulosksletas",
+          "text": "Muskulosksletas"
+         }
+        ]
+       },
+       {
+        "type": "comment",
+        "name": "pemeriksaan_penunjang",
+        "title": "Pemeriksaan Penunjang",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diagnosis_kerja",
+        "title": "Diagnosis Kerja",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "pengobatan",
+        "title": "Pengobatan",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "rencana",
+        "title": "Rencana Tindakan",
+        "hideNumber": true
+       }
+      ],
+      "title": "Halaman 2"
+     }
+    ]
+   }

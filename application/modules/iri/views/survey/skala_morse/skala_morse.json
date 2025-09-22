@@ -1,0 +1,141 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "assesment_resiko_jatuh",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "1. Riwayat Jatuh ",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "15",
+              "text": "Ya (15)"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "2. Penyakit penyerta (diagnosa sekunder ≥ 2)",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "15",
+              "text": "Ya (15)"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "3. Alat bantu jalan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "a. Tidak ada / bed rest/ dibantu perawat (0)"
+             },
+             {
+              "value": "15",
+              "text": "b. Penopang tongkat/walker (15)"
+             },
+             {
+              "value": "30",
+              "text": "c. Berpegang dengan robot (30) "
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "4. Pemakaian tera / i heparin / intra vena / infus",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "20",
+              "text": "Ya (20)"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "5. Cara berjalan / berpindah",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "normal / bed rest / immobilisasi (0)"
+             },
+             {
+              "value": "10",
+              "text": "Lemah(10)"
+             },
+             {
+              "value": "20",
+              "text": "Terganggu(20)"
+             }
+            ]
+           },
+           {
+            "name": "6",
+            "title": "6. Status Mental",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "orientasi sesuai kemampuan diri (0)"
+             },
+             {
+              "value": "15",
+              "text": "Lupa keterbatasan diri (15)"
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Total Skor :",
+            "cellType": "expression",
+            "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5} + {row.6}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "skor",
+            "text": "Skor "
+           }
+          ]
+         }
+        ],
+        "title": "PENILAIAN RESIKO JATUH PASIEN DEWASA SKALA MORSE"
+       }
+      ]
+     }
+    ]
+   }

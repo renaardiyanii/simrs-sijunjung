@@ -1,0 +1,355 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "checkbox",
+        "name": "question1",
+        "title": "Data Subjektif",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Pasien mengeluh nyeri "
+         },
+         {
+          "value": "item2",
+          "text": "Pasien  mengatakan cemas"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question2",
+        "title": "Data Objektif ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Banyak bertanya meminta informasi "
+         },
+         {
+          "value": "item2",
+          "text": "Pasien terlihat cemas dan tegang"
+         },
+         {
+          "value": "item3",
+          "text": "Salah persepsi"
+         },
+         {
+          "value": "item4",
+          "text": "Skala cemas "
+         },
+         {
+          "value": "item5",
+          "text": "Skala nyeri"
+         },
+         {
+          "value": "item6",
+          "text": "TD"
+         },
+         {
+          "value": "item7",
+          "text": "Wajah meringis"
+         },
+         {
+          "value": "item8",
+          "text": "Nyeri berkurang"
+         },
+         {
+          "value": "item9",
+          "text": "Pengetahuan pasien bertambah setelah dilakukan tindakan keperawatan Ditandai dengan :"
+         },
+         {
+          "value": "item10",
+          "text": "Pasien terlihat tenang",
+          "visibleIf": "{question2} anyof ['item9']"
+         },
+         {
+          "value": "item11",
+          "text": "Menyatakan pemahaman proses penyakit, pengobatan",
+          "visibleIf": "{question2} anyof ['item9']"
+         },
+         {
+          "value": "item12",
+          "text": "Berpartisipasi dalam program pengobatan",
+          "visibleIf": "{question2} anyof ['item9']"
+         },
+         {
+          "value": "item13",
+          "text": "Cemas berkurang",
+          "visibleIf": "{question2} anyof ['item9']"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "question4",
+        "visibleIf": "{question2} anyof ['item6']",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "TD "
+         },
+         {
+          "name": "text2",
+          "title": "Nadi"
+         },
+         {
+          "name": "text3",
+          "title": "Pernafasan"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "text",
+        "name": "question11",
+        "visibleIf": "{question2} anyof ['item4']",
+        "title": "skala cemas",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question12",
+        "visibleIf": "{question2} anyof ['item5']",
+        "title": "skala nyeri",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "question3",
+        "title": "Diagnosa",
+        "description": "Dx : Nyeri  berhubungan dengan :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Fraktur"
+         },
+         {
+          "value": "item2",
+          "text": "Distensi jaringan oleh inflamasi"
+         },
+         {
+          "value": "item4",
+          "text": "kerusakan integritas kulit"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question6",
+        "title": "Diagnosa",
+        "description": "Dx : Kurang pengetahuan tentang kondisi , prognosis dan kebutuhan pengobatan berhubungan dengan :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Salah interprestasi"
+         },
+         {
+          "value": "item2",
+          "text": "Kurang mengenal informasi"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question5",
+        "title": "Intervensi  dan implementasi mandiri perawat :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Identifikasi pasien (verbal dan visual)"
+         },
+         {
+          "value": "item2",
+          "text": "Periksa jenis dan lokasi pembedahan (penandaan lokasi operasi)"
+         },
+         {
+          "value": "item3",
+          "text": "Periksa kelengkapan konsultasi dan memastikan pemeriksaan radiologi, laboratorium, dll"
+         },
+         {
+          "value": "item4",
+          "text": "Periksa kelengkapan (informed consent)/ surat izin operasi"
+         },
+         {
+          "value": "item5",
+          "text": "Memastikan persediaan darah pengosongan kandung kemih / clysma"
+         },
+         {
+          "value": "item6",
+          "text": "Memastikan persiapan fisik, puasa/ makan dan minum terakhir , persiapan kulit dan sal. Cerna"
+         },
+         {
+          "value": "item7",
+          "text": "Kaji nyeri, lokasi, karakteristik, beratnya (skala 0-10) selidiki dan laporkan perubahan nyeri"
+         },
+         {
+          "value": "item8",
+          "text": "Atur posisi yang nyaman untuk mengurangi nyeri"
+         },
+         {
+          "value": "item9",
+          "text": "Pertahankan istirahat dan posisi pasien"
+         },
+         {
+          "value": "item10",
+          "text": "Pasang pengaman brangkar"
+         },
+         {
+          "value": "item11",
+          "text": "Kaji tingkat kecemasan pasien dan kaji tingkat pengetahuan klien dan keluarga tentang tindakan operasi"
+         },
+         {
+          "value": "item12",
+          "text": "Perkenalkan diri dan tim operasi"
+         },
+         {
+          "value": "item13",
+          "text": "Perkenalkan pasien dengan lingkungan kamar operasi"
+         },
+         {
+          "value": "item14",
+          "text": "Edukasi pasien secara ringkas tentang proses perawatan kamar operasi"
+         },
+         {
+          "value": "item15",
+          "text": "Evaluasi tingkat pemahaman pasien"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question7",
+        "title": "Tujuan",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tujuan tercapai nyeri kurang"
+         },
+         {
+          "value": "item3",
+          "text": "Tujuan tidak tercapai nyeri tidak berkurang"
+         },
+         {
+          "value": "item2",
+          "text": "Tujuan tercapai cemas kurang"
+         },
+         {
+          "value": "item4",
+          "text": "Tujuan tidak tercapai cemas tidak berkurang"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question8",
+        "title": "Evaluasi",
+        "hideNumber": true,
+        "defaultValue": {
+         "Row 1": {
+          "Column 1": "Pasien menyatakan proses penyakit, perawatannya",
+          "Column 4": "Intervensi dilanjutkan di intra operatif"
+         }
+        },
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "S",
+          "cellType": "text",
+          "readOnly": true
+         },
+         {
+          "name": "Column 2",
+          "title": "O",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Cemas berkurang skala cemas"
+           },
+           {
+            "value": "item2",
+            "text": "Nyeri berkurang Skal nyeri "
+           }
+          ]
+         },
+         {
+          "name": "Column 5",
+          "title": " ",
+          "cellType": "text",
+          "visibleIf": "{row.Column 2} anyof ['item1']"
+         },
+         {
+          "name": "Column 6",
+          "title": " ",
+          "cellType": "text",
+          "visibleIf": "{row.Column 2} anyof ['item2']"
+         },
+         {
+          "name": "Column 3",
+          "title": "A",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Masalah teratasi"
+           },
+           {
+            "value": "item2",
+            "text": "Masalah tidak teratasi"
+           }
+          ]
+         },
+         {
+          "name": "Column 4",
+          "title": "P",
+          "cellType": "text",
+          "readOnly": true
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "signaturepad",
+        "name": "question9",
+        "title": "Perawat Kamar Operasi",
+        "hideNumber": true,
+        "penColor": "#363a39"
+       },
+       {
+        "type": "text",
+        "name": "question10",
+        "title": " ",
+        "hideNumber": true,
+        "size": 38
+       }
+      ],
+      "title": "ASUHAN KEPERAWATAN PRE OPERATIF"
+     }
+    ]
+   }

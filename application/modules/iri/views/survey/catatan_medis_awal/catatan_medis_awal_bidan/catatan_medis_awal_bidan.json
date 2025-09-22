@@ -1,0 +1,631 @@
+{
+    "title": "CATATAN MEDIS AWAL RAWAT INAP KEBIDANAN",
+    "pages": [
+     {
+      "name": "catatan_medis_awal_rawat_inap_kebidanan",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "keluhan_utama",
+          "title": "Keluhan Utama "
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_penyakit",
+          "title": "Riwayat Penyakit sekarang"
+         },
+         {
+          "type": "text",
+          "name": "riwayat_perkawinan",
+          "title": "Riwayat Perkawinan ke ",
+          "titleLocation": "top",
+          "placeHolder": "kali"
+         },
+         {
+          "type": "radiogroup",
+          "name": "kontrasepsi",
+          "title": "Kontrasepsi yang dipergunakan ",
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "YA, sebutkan",
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "riwayat_penyakit1",
+          "title": "Riwayat penyakit terdahulu",
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ada",
+            "text": "Ada"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "checkbox",
+          "name": "check_riwayat",
+          "visibleIf": "{riwayat_penyakit1} = 'ada'",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "hipertensi",
+            "text": "Hipertensi"
+           },
+           {
+            "value": "jantung",
+            "text": "Jantung"
+           },
+           {
+            "value": "asma",
+            "text": "Asma"
+           },
+           {
+            "value": "dm",
+            "text": "DM"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "riwayat_operasi",
+          "title": "Riwayat Operasi",
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Ada",
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "riwayat_pengobatan",
+          "title": "Riwayat Pengobatan ",
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Ya, sebutkan",
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "riwayat_alergi",
+          "title": "Riwayat Alergi ",
+          "titleLocation": "top",
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ya",
+            "text": "Ada"
+           }
+          ],
+          "otherText": "Ya, sebutkan",
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "check_alergi",
+          "visibleIf": "{riwayat_alergi} = 'ada'",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "makanan",
+            "text": "Makanan"
+           },
+           {
+            "value": "obat",
+            "text": "Obat"
+           }
+          ],
+          "otherText": "Ya, sebutkan",
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "check_makanan",
+          "visibleIf": "{check_alergi} = 'makanan'",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "check_obat",
+          "visibleIf": "{check_alergi} = 'obat'",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "Anamnesis"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "text",
+          "name": "menarche",
+          "title": "Menarche usia",
+          "hideNumber": true,
+          "placeHolder": "Tahun"
+         },
+         {
+          "type": "radiogroup",
+          "name": "siklus_haid",
+          "title": "Siklus Haid",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "teratur",
+            "text": "Teratur"
+           },
+           {
+            "value": "tidak_teratur",
+            "text": "Tidak teratur"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "chek_haid",
+          "visibleIf": "{siklus_haid} = 'teratur'",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "setiap",
+            "placeHolder": "hari",
+            "title": "Setiap"
+           },
+           {
+            "name": "lamanya",
+            "placeHolder": "hari",
+            "title": "Lamanya"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "keluhan_haid",
+          "title": "Keluhan selama haid",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "sakit",
+            "text": "Sakit"
+           },
+           {
+            "value": "tidak_sakit",
+            "text": "Tidak Sakit"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "hptht",
+          "title": "HPHT",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "pasti",
+            "text": "Pasti"
+           },
+           {
+            "value": "tidak_pasti",
+            "text": "Tidak Pasti"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "lamanya",
+          "visibleIf": "{hptht} = 'pasti'",
+          "startWithNewLine": false,
+          "title": "Lamanya",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "size": 40,
+          "placeHolder": "hari"
+         },
+         {
+          "type": "text",
+          "name": "taksira_persalinan",
+          "title": "Taksiran Persalinan",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "riwayat",
+          "title": "Riwayat",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "g",
+            "title": "G"
+           },
+           {
+            "name": "p",
+            "title": "P"
+           },
+           {
+            "name": "a",
+            "title": "A"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "table",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "no",
+            "title": "No",
+            "width": "50"
+           },
+           {
+            "name": "jenis_kelamin",
+            "title": "Jenis Kelamin",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "l",
+              "text": "L"
+             },
+             {
+              "value": "p",
+              "text": "P"
+             }
+            ]
+           },
+           {
+            "name": "berat_lahir",
+            "title": "Berat Lahir"
+           },
+           {
+            "name": "umur",
+            "title": "Umur"
+           },
+           {
+            "name": "keadaan",
+            "title": "Keadaan"
+           },
+           {
+            "name": "penolong",
+            "title": "Penolong"
+           },
+           {
+            "name": "tahun",
+            "title": "Tahun"
+           },
+           {
+            "name": "keterangan",
+            "title": "Keterangan (abortus, nifas, kehamilan)",
+            "cellType": "comment"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "columnMinWidth": "100px",
+          "rowCount": 1,
+          "minRowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "RIWAYAT KEBIDANAN / KANDUNGAN"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question2",
+          "title": "Keadaan Umum ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "sakit_ringan",
+            "text": "Sakit ringan"
+           },
+           {
+            "value": "sakit_sedang",
+            "text": "Sakit sedang"
+           },
+           {
+            "value": "sakit_berat",
+            "text": "Sakit Berat"
+           },
+           {
+            "value": "gcs",
+            "text": "GCS"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "visibleIf": "{question2} = 'gcs'",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "e",
+            "title": "E"
+           },
+           {
+            "name": "v",
+            "title": "V"
+           },
+           {
+            "name": "m",
+            "title": "M"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "question4",
+          "title": "Kesadaran",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "compos",
+            "text": "Compos Mentis"
+           },
+           {
+            "value": "apatis",
+            "text": "Apatis"
+           },
+           {
+            "value": "somnolen",
+            "text": "Somnolen"
+           },
+           {
+            "value": "sopor",
+            "text": "Sopor"
+           },
+           {
+            "value": "koma",
+            "text": "Koma"
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "multipletext",
+          "name": "question5",
+          "title": "Tanda tanda vital",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "td",
+            "placeHolder": "mmHg",
+            "title": "TD"
+           },
+           {
+            "name": "n",
+            "placeHolder": "x/menit",
+            "title": "N"
+           },
+           {
+            "name": "rr",
+            "placeHolder": "x/menit",
+            "title": "RR"
+           },
+           {
+            "name": "suhu",
+            "placeHolder": "°C",
+            "title": "Suhu"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question6",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "kepala",
+            "title": "Kepala"
+           },
+           {
+            "name": "mata",
+            "title": "Mata"
+           },
+           {
+            "name": "jantung",
+            "title": "Jantung"
+           },
+           {
+            "name": "paru",
+            "title": "Paru"
+           },
+           {
+            "name": "abdomen",
+            "title": "Abdomen"
+           },
+           {
+            "name": "ekstremitas",
+            "title": "Ekstremitas"
+           },
+           {
+            "name": "kulit",
+            "title": "Kulit"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "abnormal",
+            "text": "Abnormal"
+           }
+          ],
+          "cellType": "radiogroup",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "minRowCount": 1
+         }
+        ],
+        "title": "PEMERIKSAAN FISIK"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "title": "Pemeriksaan Luar",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "tinggu_fundus",
+            "title": "Tinggu fundus uteri"
+           },
+           {
+            "name": "detak_jantung",
+            "title": "Detak jantung janin"
+           },
+           {
+            "name": "letak_janin",
+            "title": "Letak janin"
+           },
+           {
+            "name": "his",
+            "title": "His"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "comment",
+          "name": "question7",
+          "title": "Pemeriksaan Dalam (Jika perlu)",
+          "hideNumber": true,
+          "cols": 0
+         }
+        ],
+        "title": "STATUS OBSTETRIK"
+       }
+      ]
+     },
+     {
+      "name": "catatan_medis_awal_rawat_inap_kebidanan2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "laboratorium",
+          "title": "Laboratorium",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "radiologi",
+          "startWithNewLine": false,
+          "title": "Radiologi",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "lain_lain",
+          "startWithNewLine": false,
+          "title": "Lain - lain",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "diagnosa_kerja",
+          "title": "Diagnosa Kerja",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "diagnosa_banding",
+          "startWithNewLine": false,
+          "title": "Diagnosa Banding",
+          "hideNumber": true
+         }
+        ],
+        "title": "PEMERIKSAAN PENUNJANG"
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "masalah",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "masalah_medik",
+            "title": "1. Masalah Medik"
+           },
+           {
+            "name": "masalah_keperawatan",
+            "title": "2. Masalah Keperawatan"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "rencana_asuhan",
+          "title": "RENCANA ASUHAN / TERAPI /INTRUKSI",
+          "description": "(STANDING ORDER)",
+          "hideNumber": true
+         }
+        ],
+        "title": "PERMASALAHAN "
+       }
+      ]
+     }
+    ]
+   }

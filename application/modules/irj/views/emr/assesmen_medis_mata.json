@@ -1,0 +1,415 @@
+{
+    "title": "ASSESMEN AWAL MEDIS POLIKLINIK MATA",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "anamnesis",
+        "title": "Anamnesis :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "pemeriksaan_fisik",
+        "title": "Pemeriksan Fisik :",
+        "description": "(Status Generalis)",
+        "hideNumber": true
+       },
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<h4> Status Oftalmik"
+       },
+       {
+        "type": "multipletext",
+        "name": "visus",
+        "title": "VISUS ",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "od",
+          "title": "OD :"
+         },
+         {
+          "name": "os",
+          "title": "OS :"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "kacamata",
+        "title": "KACAMATA",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "od",
+          "title": "OD :"
+         },
+         {
+          "name": "os",
+          "title": "OS :"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "palpebra",
+          "title": "Palpebra",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "edema",
+            "text": "edema"
+           },
+           {
+            "value": "ptosis",
+            "text": "ptosis"
+           },
+           {
+            "value": "hematon",
+            "text": "hematon"
+           },
+           {
+            "value": "normal",
+            "text": "normal"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "conjungtiva",
+          "title": "Conjungtiva",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "normal",
+            "text": "normal"
+           },
+           {
+            "value": "hiperemis",
+            "text": "hiperemis"
+           },
+           {
+            "value": "perdarahan",
+            "text": "perdarahan"
+           },
+           {
+            "value": "benda asing",
+            "text": "benda asing"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "cornea",
+          "title": "Cornea",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "bening",
+            "text": "bening"
+           },
+           {
+            "value": "edema",
+            "text": "edema"
+           },
+           {
+            "value": "kps",
+            "text": "KPS"
+           },
+           {
+            "value": "benda asing",
+            "text": "benda asing"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "pupil",
+          "title": "Pupil / Iris",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "bulat",
+            "text": "bulat"
+           },
+           {
+            "value": "lonjong",
+            "text": "lonjong"
+           },
+           {
+            "value": "linekia",
+            "text": "linekia"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "coa",
+          "title": "COA",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "cukup dalam",
+            "text": "cukup dalam"
+           },
+           {
+            "value": "dangkal",
+            "text": "dangkal"
+           },
+           {
+            "value": "perdarahan",
+            "text": "perdarahan"
+           },
+           {
+            "value": "pus",
+            "text": "pus"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "lensa",
+          "title": "Lensa",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "bening",
+            "text": "bening"
+           },
+           {
+            "value": "keruh sebagian",
+            "text": "keruh sebagian"
+           },
+           {
+            "value": "keruh total",
+            "text": "keruh total"
+           },
+           {
+            "value": "keruh sub kapsul posterior",
+            "text": "keruh sub kapsul posterior"
+           },
+           {
+            "value": "pc",
+            "text": "IOL PC"
+           },
+           {
+            "value": "ac",
+            "text": "IOL AC"
+           },
+           {
+            "value": "avakia",
+            "text": "Avakia"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "vitreous",
+          "title": "Vitreous Humor",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "bening",
+            "text": "bening"
+           },
+           {
+            "value": "keruh",
+            "text": "keruh"
+           },
+           {
+            "value": "perdarahan",
+            "text": "perdarahan"
+           },
+           {
+            "value": "floater",
+            "text": "floater"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "fundus",
+          "title": "Fundus Okuli",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "normal",
+            "text": "normal"
+           },
+           {
+            "value": "pupil batas kabur",
+            "text": "papil batas kabur"
+           },
+           {
+            "value": "perdarahan",
+            "text": "perdarahan"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "kedudukan",
+          "title": "Kedudukan Bola Mata",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "ortho",
+            "text": "ortho"
+           },
+           {
+            "value": "exotropia",
+            "text": "exotropia"
+           },
+           {
+            "value": "esutropia",
+            "text": "esutropia"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "gerakan_bola_mata",
+          "title": "Gerakan Bola Mata",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "normal ke segala arah",
+            "text": "normal ke segala arah"
+           },
+           {
+            "value": "terbatas ke temporal",
+            "text": "terbatas ke temporal"
+           },
+           {
+            "value": "terbatas ke nalar",
+            "text": "terbatas ke nalar"
+           },
+           {
+            "value": "terbatas ke superior",
+            "text": "terbatas ke superior"
+           },
+           {
+            "value": "terbatas ke interior",
+            "text": "terbatas ke interior"
+           },
+           {
+            "value": "terbatas ke segala arah",
+            "text": "terbatas ke segala arah"
+           },
+           {
+            "value": "gerakan_arah",
+            "text": "Gerakan Arah"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         },
+         {
+          "name": "tekanan_intra_okuler",
+          "title": "Tekanan Intra Okuler",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "n1",
+            "text": "N+1 (Palpasi)"
+           },
+           {
+            "value": "n2",
+            "text": "N+2 (Palpasi)"
+           },
+           {
+            "value": "hipotoni",
+            "text": "Hipotoni"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         {
+          "value": "ortho",
+          "text": "ortho"
+         },
+         {
+          "value": "exotropia",
+          "text": "exotropia"
+         },
+         {
+          "value": "esutropia",
+          "text": "esutropia"
+         }
+        ],
+        "rows": [
+         {
+          "value": "od",
+          "text": "OD"
+         },
+         {
+          "value": "os",
+          "text": "OS"
+         }
+        ]
+       },
+       {
+        "type": "signaturepad",
+        "name": "imageod",
+        "titleLocation": "hidden",
+        "height": 300,
+        "penColor": "#0b0e0e",
+        "image": "/assets/images/od_new.png"
+       },
+       {
+        "type": "signaturepad",
+        "name": "imageos",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "height": 300,
+        "penColor": "#0b0e0e",
+        "image": "/assets/images/os_new.png"
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa_kerja",
+        "title": "Diagnosa Kerja :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa_banding",
+        "title": "Diagnosa Banding :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "therapi_tindakan",
+        "title": "Therapi / Tindakan",
+        "hideNumber": true
+       }
+      ]
+     }
+    ],
+    "showCompletedPage": false
+   }

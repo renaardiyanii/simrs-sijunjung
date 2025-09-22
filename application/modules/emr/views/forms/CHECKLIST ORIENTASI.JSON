@@ -1,0 +1,411 @@
+{
+    "pages": [
+     {
+      "name": "chechlist_orientasi",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "identitas",
+        "title": "IDENTITAS",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "no_mec_reg",
+          "title": "No. Med.Rec :"
+         },
+         {
+          "name": "nama_lengkap",
+          "title": "Nama Lengkap :"
+         },
+         {
+          "name": "tgl_lahir",
+          "title": "Tanggal Lahir :"
+         },
+         {
+          "name": "jenis_kelamin",
+          "title": "Jenis Kelamin :"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "ruang_rawat",
+        "title": "Ruang Rawat : ",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "Tgl_Masuk",
+        "title": "Tanggal Masuk Rawat Inap",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "tgl_masuk_rawat_inap",
+          "title": "Tgl Masuk Rawat Inap"
+         },
+         {
+          "name": "pukul",
+          "title": "Pukul"
+         },
+         {
+          "name": "tgl_assesment",
+          "title": "Tgl Assesment"
+         },
+         {
+          "name": "pukul",
+          "title": "Pukul"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "disampaikan_oleh",
+        "title": "Disampaikan Oleh ",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 35
+       },
+       {
+        "type": "checkbox",
+        "name": "kepada",
+        "startWithNewLine": false,
+        "title": "Kepada",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "pasien",
+          "text": "Pasien"
+         },
+         {
+          "value": "saudara",
+          "text": "Saudara"
+         },
+         {
+          "value": "lainnya",
+          "text": "Lainnya"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "checkbox",
+        "name": "petugas_ruangan",
+        "title": "Petugas Ruangan :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "1",
+          "text": "Memperkenalkan kepada pasien sekamar atau sesama"
+         },
+         {
+          "value": "2",
+          "text": "Memperkenalkan kepada perawat penanggung jawab da petugas lainnya."
+         },
+         {
+          "value": "0",
+          "text": "Tidak dapat dilakukan karena..........."
+         }
+        ],
+        "otherText": "Tidak dapat dilakukan Karena .."
+       },
+       {
+        "type": "checkbox",
+        "name": "fasilitas_fisik",
+        "title": "Fasilitas Fisik :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "1",
+          "text": "Lokasi ruangan dan tempat tidur"
+         },
+         {
+          "value": "2",
+          "text": "Kamar mandi dan toilet"
+         },
+         {
+          "value": "3",
+          "text": "Nurse station"
+         },
+         {
+          "value": "4",
+          "text": "Ruangan publik"
+         },
+         {
+          "value": "5",
+          "text": "Sistem Nurse Call"
+         },
+         {
+          "value": "6",
+          "text": "Penggunaan TV"
+         },
+         {
+          "value": "7",
+          "text": "Penggunaan Telepon"
+         },
+         {
+          "value": "8",
+          "text": "Kegunaan Monitor bedside / Ventilator / syringe pump yang di gunakan pasien dll."
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "Tata Laksana Pelayanan Rumah Sakit",
+        "title": "Tata Laksana Pelayanan Rumah Sakit :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Aktifitas harian pelayanan di ruangan"
+         },
+         {
+          "value": "item2",
+          "text": "Barang kebutuhan pribadi dan perlengkapan mandi"
+         },
+         {
+          "value": "item3",
+          "text": "Pengunjung dan jam berkunjung"
+         },
+         {
+          "value": "item4",
+          "text": "Pemakaian pakaian pribadi pasien"
+         },
+         {
+          "value": "item5",
+          "text": "Prosedur khusus pra dan post tindakan / operasi (untuk pasien dengan rencana tindakan/operasi)"
+         },
+         {
+          "value": "item6",
+          "text": "Pelayanan Makanan"
+         },
+         {
+          "value": "item7",
+          "text": "Nomer Telepon ruangan / kamar"
+         },
+         {
+          "value": "item8",
+          "text": "Tidak mengalihkan perhatian perawat saat perawat sedang memberikan obat"
+         },
+         {
+          "value": "item9",
+          "text": "Prosedur visite dokter"
+         },
+         {
+          "value": "item10",
+          "text": "Hak Pasien di jelaskan / brosur di berikan"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "keselamatan",
+        "title": "Keselamatan :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "1",
+          "text": "Bahaya Kebakaran - dilarang merokok di area rumah sakit"
+         },
+         {
+          "value": "2",
+          "text": "Lokasi pintu darurat kebakaran"
+         },
+         {
+          "value": "3",
+          "text": "Penggunaan gelang identitas psaien"
+         },
+         {
+          "value": "4",
+          "text": "Pencegahan infeksi : cuci tangan"
+         },
+         {
+          "value": "5",
+          "text": "Pencegahan Jatuh"
+         },
+         {
+          "value": "6",
+          "text": "Peringatan tentang orang yang berbahaya (penipu)"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "gigi_palsu",
+        "title": "A. Gigi Palsu :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya :"
+         },
+         {
+          "value": "atas",
+          "text": "Atas"
+         },
+         {
+          "value": "bawah",
+          "text": "Bawah"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "text",
+        "name": "dibawa_oleh",
+        "startWithNewLine": false,
+        "title": "Dibawa Oleh",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "alat_bantu_dengar",
+        "title": "B. Alat bantu dengar :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya :"
+         },
+         {
+          "value": "kanan",
+          "text": "Kanan"
+         },
+         {
+          "value": "kiri",
+          "text": "Kiri"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "text",
+        "name": "Dibawa Oleh",
+        "startWithNewLine": false,
+        "title": "Dibawa Oleh ",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "uang_tunai",
+        "title": "C. Uang Tunai :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         },
+         {
+          "value": "ya",
+          "text": "Ya, disimpan di :"
+         },
+         {
+          "value": "kasir",
+          "text": "Kasir"
+         },
+         {
+          "value": "dibawa",
+          "text": "Dibawa pasien / keluarga"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "text",
+        "name": "lainnya",
+        "title": "Lainnya, sebutkan",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "saya",
+        "title": "Saya ",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 35
+       },
+       {
+        "type": "text",
+        "name": "nama_sebagai",
+        "startWithNewLine": false,
+        "title": "(Nama) sebagai ",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 30
+       },
+       {
+        "type": "html",
+        "name": "Catatan",
+        "html": "apabila saya dan pasien memilih untuk menyimpan benda / uang dalam penyimpanan saya , maka saya atau pasien tidak akan melimpahkan tanggung jawab kepada RSUP dr.Moh.Hoesin apabila terjadi kerusakan atau kehilangan benda / uang tersebut."
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd_petugas",
+        "title": "Tanda Tangan Petugas",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd_pasien_keluarga",
+        "startWithNewLine": false,
+        "title": "Tanda Tangan Pasien / Keluarga",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "question8",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "nama",
+          "title": "Nama :"
+         },
+         {
+          "name": "tgl_pukul",
+          "title": "Tanggal dan Pukul :"
+         }
+        ],
+        "itemSize": 20
+       },
+       {
+        "type": "multipletext",
+        "name": "question9",
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "nama",
+          "title": "Nama :"
+         },
+         {
+          "name": "tgl_pukul",
+          "title": "Tanggal dan Pukul :"
+         }
+        ],
+        "itemSize": 20
+       }
+      ],
+      "title": "CHECKLIST ORIENTASI PELAYANAN DAN FASILITAS PASIEN RAWAT INAP"
+     }
+    ]
+   }

@@ -1,0 +1,46 @@
+{
+    "title": "FORMULIR PERSETUJUAN UNTUK TES HIV",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<!DOCTYPE html>\n<html lang=\"id\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Persetujuan Tes HIV</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        .container {\n            width: 80%;\n            margin: 0 auto;\n        }\n        .box {\n            border: 1px solid #000;\n            padding: 15px;\n            margin-bottom: 20px;\n        }\n        .highlight {\n            font-weight: bold;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <h5>Sebelum menandatangani formulir persetujuan ini, harap mengetahui bahwa:</h5>\n        <ul>\n            <li>Anda mempunyai hak untuk berpartisipasi di dalam pemeriksaan dengan dasar kerahasiaan</li>\n            <li>Anda mempunyai hak untuk menarik persetujuan dari tes HIV sebelum pemeriksaan tersebut dilangsungkan</li>\n            <li>Keberadaan dan kegunaan testing HIV</li>\n        </ul>\n\n        <div class=\"box\">\n            <p>Saya Telah menerima informasi dan konseling menyangkut hal-hal berikut:</p>\n            <ol>\n                <li>Keberadaan dan kegunaan testing HIV</li>\n                <li>Tujuan dan kegunaan dari tes HIV</li>\n                <li>Apa yang dapat dan tidak dapat diberitahukan dari tes HIV</li>\n                <li>Keuntungan serta resiko dari tes HIV dan dari mengetahui hasil tes HIV saya</li>\n                <li>Pemahaman dari positif, negatif, false negatif, false positif dan hasil intermediate serta nampak dari masa jendela</li>\n                <li>Pengukuran untuk pencegahan dari pemaparan dan penularan akan HIV</li>\n            </ol>\n        </div>\n\n        <div class=\"box\">\n            <p>Saya dengan sukarela menyetujui untuk menjalani tes HIV, pemeriksaan HIV dengan ketentuan bahwa hasil tes tersebut akan tetap rahasia dan terbuka hanya kepada saya seorang.</p>\n            <p>Saya menyetujui untuk menerima pelayanan konseling setelah menjalani tes HIV pemeriksaan untuk mendiskusikan hasil tes HIV saya dan cara untuk mengurangi resiko untuk terkena HIV atau menyebarluaskan HIV kepada orang lain untuk waktu kedepannya.</p>\n            <p>Saya mengetahui bahwa pelayanan kesehatan pada klinik ini tidak akan mempengaruhi keputusan saya secara negatif terhadap tes HIV atau tidak menjalani tes HIV atau hasil dari tes HIV saya.</p>\n            <p>Saya telah memberikan kesempatan untuk bertanya dan pertanyaan saya ini telah diberikan jawaban yang memuaskan saya.</p>\n        </div>\n    </div>\n</body>\n</html>\n"
+       },
+       {
+        "type": "text",
+        "name": "question2",
+        "title": "Saya dengan ini mengizinkan tes HIV / Pemeriksaan HIV, untuk dilaksanakan pada Tanggal",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question3",
+        "title": "Pasien",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question4",
+        "startWithNewLine": false,
+        "title": "Konselor",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question5",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question6",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

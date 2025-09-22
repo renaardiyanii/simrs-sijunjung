@@ -1,0 +1,988 @@
+{
+    "title": "CATATAN MEDIS KHUSUS PASIEN PALIATIF",
+    "description": "Pengkajian Awal Rawat Inap",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "title": "Insight",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Mengetahui diagnosis",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column2",
+            "title": "Mengetahui prognosis",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column3",
+            "title": "Mengetahui tujuan perawatan",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Pasien"
+           },
+           {
+            "value": "item2",
+            "text": "Keluarga"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "title": "Keagamaan / dukungan spiritual",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Kebutuhan dan dukungan spiritual pada pasien",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column2",
+            "title": "Keagamaan / kebutuhan spiritual pada keluarga / lainnya",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column3",
+            "title": "Mengetahui tujuan perawatan",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column4",
+            "title": "Kecemasan pasien / kerabat terhadap diri sendiri / orang lain",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column5",
+            "title": "Dukungan dari Tim secara keseluruhan",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column6",
+            "title": "Identifikasi tradisi keagamaan",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "column7",
+            "title": "Identifikasi kebutuhan khusus saat ini, waktu saat  sebelum kematian, pada saat dan setelah kematian",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           },
+           {
+            "value": "item3",
+            "text": "Keadaan Koma"
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Pasien"
+           },
+           {
+            "value": "item2",
+            "text": "Keluarga"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question3",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "Isu Psikologis (e.g Spiritual/grief issues, caregiver stress, discharge issues, financial/legal issues) (if appropriate)"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "title": "General",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ya",
+            "title": "Ya/Tidak",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ket",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Lelah "
+           },
+           {
+            "value": "item2",
+            "text": "Gangguan Tidur"
+           },
+           {
+            "value": "item3",
+            "text": "Postur dan Pola"
+           },
+           {
+            "value": "item4",
+            "text": "Jalan"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question5",
+          "startWithNewLine": false,
+          "title": "Kardio/Respirasi",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ya",
+            "title": "Ya/Tidak",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ket",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Sesak napas"
+           },
+           {
+            "value": "item2",
+            "text": "Batuk"
+           },
+           {
+            "value": "item3",
+            "text": "Sputum"
+           },
+           {
+            "value": "item4",
+            "text": "Hemoptisis"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question6",
+          "title": "Saluran Cerna",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ya",
+            "title": "Ya/Tidak",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ket",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Napsu makan"
+           },
+           {
+            "value": "item2",
+            "text": "Hilang"
+           },
+           {
+            "value": "item3",
+            "text": "Gangguan oral"
+           },
+           {
+            "value": "item4",
+            "text": "Penurunan Berat badan"
+           },
+           {
+            "value": "item5",
+            "text": "Disfagia"
+           },
+           {
+            "value": "item6",
+            "text": "Mual"
+           },
+           {
+            "value": "item7",
+            "text": "Muntah"
+           },
+           {
+            "value": "item8",
+            "text": "Konstipasi"
+           },
+           {
+            "value": "item9",
+            "text": "Diare"
+           },
+           {
+            "value": "item10",
+            "text": "Hematemesis"
+           },
+           {
+            "value": "item11",
+            "text": "Melena"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question7",
+          "startWithNewLine": false,
+          "title": "SSP",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ya",
+            "title": "Ya/Tidak",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ket",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Sakit Kelapa"
+           },
+           {
+            "value": "item2",
+            "text": "Pusing"
+           },
+           {
+            "value": "item3",
+            "text": "Pingsan"
+           },
+           {
+            "value": "item4",
+            "text": "Kelemahan tungkai"
+           },
+           {
+            "value": "item5",
+            "text": "Penurunan kesadaran"
+           },
+           {
+            "value": "item6",
+            "text": "Kebingungan"
+           },
+           {
+            "value": "item7",
+            "text": "Hilang Memori"
+           },
+           {
+            "value": "item8",
+            "text": "Halusinasi"
+           },
+           {
+            "value": "item9",
+            "text": "Mimpi buruk"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question8",
+          "title": "Saluran Kemih",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ya",
+            "title": "Ya/Tidak",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ket",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Gangguan Kemih"
+           },
+           {
+            "value": "item2",
+            "text": "Gangguan Kandungan"
+           },
+           {
+            "value": "item3",
+            "text": "Keteter"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question9",
+          "startWithNewLine": false,
+          "title": "Psikologis",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ya",
+            "title": "Ya/Tidak",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ket",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Sedih"
+           },
+           {
+            "value": "item2",
+            "text": "Depresi"
+           },
+           {
+            "value": "item3",
+            "text": "Cemas"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question10",
+          "title": "Kulit",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ya",
+            "title": "Ya/Tidak",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ket",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Gatal"
+           },
+           {
+            "value": "item2",
+            "text": "Kemerahan"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question11",
+          "startWithNewLine": false,
+          "title": "Lainnya",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "ya",
+            "title": "Ya/Tidak",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "ya",
+              "text": "Ya"
+             },
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ket",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": " "
+           },
+           {
+            "value": "item2",
+            "text": " "
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "title": "Pengkajian Sistematik (jika di perlukan)"
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question13",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question12",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "makan",
+            "title": "Nafsu Makan",
+            "cellType": "text"
+           },
+           {
+            "name": "dysnea",
+            "title": "Dysnea",
+            "cellType": "text"
+           },
+           {
+            "name": "mual",
+            "title": "Mual",
+            "cellType": "text"
+           },
+           {
+            "name": "konstipasi",
+            "title": "Konstipasi",
+            "cellType": "text"
+           },
+           {
+            "name": "fatigue",
+            "title": "Fatigue",
+            "cellType": "text"
+           },
+           {
+            "name": "lelah",
+            "title": "Lelah",
+            "cellType": "text"
+           },
+           {
+            "name": "depresi",
+            "title": "Depresi",
+            "cellType": "text"
+           },
+           {
+            "name": "penurunan",
+            "title": "Penurunan Kesadaran",
+            "cellType": "text"
+           },
+           {
+            "name": "kenyamanan",
+            "title": "Kenyamanan",
+            "cellType": "text"
+           },
+           {
+            "name": "penanganan",
+            "title": "Penanganan Keseluruhan",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question14",
+          "title": "Tanggal/Waktu\n",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question15",
+          "title": "Diisi oleh :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pasien"
+           },
+           {
+            "value": "item2",
+            "text": "Keluarga"
+           },
+           {
+            "value": "item3",
+            "text": "Perawat"
+           },
+           {
+            "value": "item4",
+            "text": "Pekerjaan sosial"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question18",
+          "title": "Tingkat pendidikan",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "signaturepad",
+        "name": "question16",
+        "title": "Pemeriksaa",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question17",
+        "titleLocation": "hidden"
+       }
+      ],
+      "title": "Edmonton Symptoms Assesment Graph"
+     },
+     {
+      "name": "page4",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question19",
+        "title": "Komunikasi dengan keluarga/kerabat",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "question20",
+        "startWithNewLine": false,
+        "title": "Keluarga",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "   Setiap saat"
+         },
+         {
+          "value": "item2",
+          "text": "   Tidak pada malam hari"
+         },
+         {
+          "value": "item3",
+          "text": "   Pada saat menginap di rumah sakit"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel8",
+        "title": "Skala Identifikasi Gejala",
+        "description": "   *) pilih nomor yang menjelaskan gejala yang dirasakan SAAT ini"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question21",
+        "title": "Keadaan Terbaik",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "column1",
+          "title": "Tingkat Gejala",
+          "cellType": "rating",
+          "rateMax": 10
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Tidak Nyeri"
+         },
+         {
+          "value": "item2",
+          "text": "Tidak Nyeri"
+         },
+         {
+          "value": "item3",
+          "text": "Tidak Merasa Kantuk"
+         },
+         {
+          "value": "item4",
+          "text": "Tidak Mual"
+         },
+         {
+          "value": "item5",
+          "text": "Napsu Makan Baik"
+         },
+         {
+          "value": "item6",
+          "text": "Tidak Sesak Nafas"
+         },
+         {
+          "value": "item7",
+          "text": "Tidak Sedih"
+         },
+         {
+          "value": "item8",
+          "text": "Tidak Cemas"
+         },
+         {
+          "value": "item9",
+          "text": "Merasa Nyaman"
+         },
+         {
+          "value": "item10",
+          "text": "Tidak"
+         }
+        ]
+       },
+       {
+        "type": "signaturepad",
+        "name": "question22",
+        "title": "Pemeriksa",
+        "hideNumber": true
+       }
+      ]
+     },
+     {
+      "name": "page5",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question23",
+        "title": "Diagnosis\n",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question24",
+        "title": "Tanggal",
+        "hideNumber": true,
+        "inputType": "date"
+       },
+       {
+        "type": "comment",
+        "name": "question25",
+        "title": "     A. Masalah Medis :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question26",
+        "title": "     B. Masalah Keperawatan :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question27",
+        "title": "     C. Masalah Psikososial :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question29",
+        "title": "     C. Masalah Psikososial :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question28",
+        "title": "     D. Masalah Fungsional :",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "question30",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Berat (kg)"
+         },
+         {
+          "name": "text2",
+          "title": "Berat Badan yang hilang (kg)"
+         },
+         {
+          "name": "text3",
+          "title": "Tinggi (cm)"
+         },
+         {
+          "name": "text4",
+          "title": "IMT (kg/m2)"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "comment",
+        "name": "question31",
+        "title": "Hasil Pemeriksaan Diagnosis (Lab. Radiologi, dll)",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question32",
+        "title": "     Prinsip hidup pasien / Pilihan  :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question33",
+        "title": "     Riwayat Obat-obatan :",
+        "hideNumber": true
+       }
+      ],
+      "title": "PENILAIAN"
+     },
+     {
+      "name": "page6",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question34",
+        "title": "   Kebutuhan/permintaan khusus :",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question35",
+        "title": "   Nama Pemeriksa  :",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question36",
+        "titleLocation": "hidden"
+       }
+      ],
+      "title": "Rencana Tatalaksana Gejala (Plan of Care)"
+     }
+    ]
+   }

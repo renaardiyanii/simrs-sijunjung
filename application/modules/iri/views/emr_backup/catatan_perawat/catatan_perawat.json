@@ -1,0 +1,50 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "table",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "tgl",
+          "title": "Tanggal",
+          "cellType": "text",
+          "inputType": "datetime-local"
+         },
+         {
+          "name": "catatan",
+          "title": "Catatan perawat",
+          "cellType": "comment"
+         },
+         {
+          "name": "nm",
+          "title": "Nama Perawat",
+          "cellType": "text"
+         },
+         {
+          "name": "ttd",
+          "title": "Tanda tangan",
+          "cellType": "signaturepad",
+          "width": 150,
+          "height": 100
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       }
+      ],
+      "title": "CATATAN PERAWAT\n"
+     }
+    ]
+   }

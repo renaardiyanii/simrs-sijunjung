@@ -1,0 +1,250 @@
+{
+    "title": "REKONSILIASI OBAT",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "ruangan :",
+          "title": "Ruangan"
+         },
+         {
+          "name": "tgl_jam",
+          "inputType": "datetime-local",
+          "title": "Tanggal / Jam :"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "alergi_obat",
+          "title": "Alergi Obat :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "nama_obat",
+          "visibleIf": "{alergi_obat} = 'ya'",
+          "title": "Nama Obat ",
+          "hideNumber": true
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "reaksi_alergi",
+          "visibleIf": "{alergi_obat} = 'ya'",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "reaksi_alergi",
+            "title": "Reaksi Alergi :",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "rsb",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "rsb1",
+            "title": "Ringan/Sedang/Berat",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "ringan",
+              "text": "Ringan"
+             },
+             {
+              "value": "sedang",
+              "text": "Sedang"
+             },
+             {
+              "value": "berat",
+              "text": "Berat"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "jenis_obat",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tgl",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "nama_obat",
+            "title": "Nama Obat "
+           },
+           {
+            "name": "jumlah_obat",
+            "title": "Jumlah Obat "
+           },
+           {
+            "name": "dosi",
+            "title": "Dosis/Frekwensi "
+           },
+           {
+            "name": "rute",
+            "title": "Rute "
+           },
+           {
+            "name": "berapa_lama",
+            "title": "Berapa lama / mulai gunakan"
+           },
+           {
+            "name": "alasan_makan_obat",
+            "title": "Alasan Makan Obat"
+           },
+           {
+            "name": "tindakan_lanjutan",
+            "title": "Tindakan Lanjutan ",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "perubahan_aturan_pakai",
+            "title": "Perubahan Aturan Pakai"
+           }
+          ],
+          "choices": [
+           {
+            "value": "1",
+            "text": "Lanjut aturan pakai sama"
+           },
+           {
+            "value": 2,
+            "text": "Lanjut aturan pakai berubah"
+           },
+           {
+            "value": 3,
+            "text": "Stop"
+           }
+          ],
+          "cellType": "text",
+          "columnColCount": 1,
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "Semua Jenis Obat : Obat Bebas, Herbal atau Traditional Chinese Medicine yang dibawa dari rumah."
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "nama_ttd",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "profesi",
+          "title": "Profesi",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "dokter",
+            "text": "Dokter"
+           },
+           {
+            "value": "Perawat",
+            "text": "Perawat"
+           },
+           {
+            "value": "apoteker",
+            "text": "Apoteker"
+           }
+          ]
+         },
+         {
+          "name": "nama_ttd1",
+          "title": "Nama ",
+          "cellType": "dropdown",
+          "choicesByUrl": {
+           "url": "/admin/admin/rest_all_user"
+          }
+         },
+         {
+          "name": "tgl",
+          "title": "Tanggal",
+          "cellType": "text",
+          "inputType": "date"
+         },
+         {
+          "name": "pukul",
+          "title": "Pukul",
+          "cellType": "text",
+          "inputType": "time"
+         }
+        ],
+        "cellType": "text",
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       },
+       {
+        "type": "html",
+        "name": "question2",
+        "html": "<h4> INSTRUKSI <h4>\n<p>\n<p> <h5> 1. Dokter memutuskan semua obat yang akan diteruskan diberhentikan dan mencatatnya pada catatan  <p><p>perkembangan pasien terintegrasi dan menumbuhkan tanda tangan.\n<p> <h5> 2. Apoteker membandingkan dan menganalisisi obat yang akan diteruskan dan membutuhkan tanda tangan."
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,471 @@
+{
+    "title": "CHECKLIST LIST PERSIAPAN OPERASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "question10",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Ruangan",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 2",
+          "title": "Diagnosis",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 3",
+          "title": "Dokter Bedah ",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 4",
+          "title": "Dokter Anestesi",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 5",
+          "title": "Jenis Operasi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "besar",
+            "text": "besar"
+           },
+           {
+            "value": "sedang",
+            "text": "sedang"
+           },
+           {
+            "value": "kecil",
+            "text": "kecil"
+           },
+           {
+            "value": "khusus",
+            "text": "khusus"
+           }
+          ]
+         },
+         {
+          "name": "Column 6",
+          "title": "Jenis Pembiusan",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "lokal",
+            "text": "lokal"
+           },
+           {
+            "value": "general anestesi",
+            "text": "general anestesi"
+           },
+           {
+            "value": "regional",
+            "text": "regional"
+           }
+          ]
+         },
+         {
+          "name": "Column 7",
+          "title": "Dokter Anestesi",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 8",
+          "title": "Sifat Operasi",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "cito",
+            "text": "cito"
+           },
+           {
+            "value": "elektif",
+            "text": "elektif"
+           }
+          ]
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question1",
+        "title": "Persiapan Administrasi",
+        "hideNumber": true,
+        "showHeader": false,
+        "columns": [
+         {
+          "name": "column1",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rows": [
+         {
+          "value": "item1",
+          "text": "Surat Izin Operasi"
+         },
+         {
+          "value": "item2",
+          "text": "Administrasi Keuangan"
+         },
+         {
+          "value": "item3",
+          "text": "BPJS/umum/asuransi"
+         },
+         {
+          "value": "item4",
+          "text": "Status Pasien"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question7",
+        "title": "Pemeriksaan Diagnostik :",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": " ",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": "Rontgent"
+         },
+         {
+          "value": "Row 2",
+          "text": "EKG"
+         },
+         {
+          "value": "Row 3",
+          "text": "Laboratorium"
+         },
+         {
+          "value": "Row 4",
+          "text": "Echo"
+         },
+         {
+          "value": "Row 5",
+          "text": "Lain – lain "
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question8",
+        "visibleIf": "{question7.Row 5.Column 1} = 1",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "TTV",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         },
+         {
+          "name": "Column 2",
+          "title": "Makan Terakhir",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         },
+         {
+          "name": "Column 3",
+          "title": "jam makan terakhir",
+          "cellType": "text",
+          "visibleIf": "{question2.Row 1.Column 2} = 1",
+          "inputType": "time"
+         },
+         {
+          "name": "Column 4",
+          "title": "Premediksi",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         },
+         {
+          "name": "Column 5",
+          "title": "jam premediksi",
+          "cellType": "text",
+          "visibleIf": "{question2.Row 1.Column 4} = 1",
+          "inputType": "time"
+         },
+         {
+          "name": "Column 6",
+          "title": "Lavement",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         },
+         {
+          "name": "Column 7",
+          "title": "Jam lavement",
+          "cellType": "text",
+          "visibleIf": "{question2.Row 1.Column 6} = 1",
+          "inputType": "time"
+         },
+         {
+          "name": "Column 8",
+          "title": "Persiapan kulit/cukur",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         },
+         {
+          "name": "Column 9",
+          "title": " ",
+          "cellType": "text",
+          "visibleIf": "{question2.Row 1.Column 8} = 1"
+         },
+         {
+          "name": "Column 10",
+          "title": "Vagina Toilet",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         },
+         {
+          "name": "Column 16",
+          "title": " ",
+          "cellType": "text",
+          "visibleIf": "{question2.Row 1.Column 10} = 1"
+         },
+         {
+          "name": "Column 11",
+          "title": " Pengosongan Kandung Kemih",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         },
+         {
+          "name": "Column 12",
+          "title": "jam",
+          "cellType": "text",
+          "visibleIf": "{question2.Row 1.Column 11} = 1",
+          "inputType": "time"
+         },
+         {
+          "name": "Column 13",
+          "title": "Perhiasan",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         },
+         {
+          "name": "Column 14",
+          "title": "gigi Palsu",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         },
+         {
+          "name": "Column 15",
+          "title": "Pewarna Kuku",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question3",
+        "title": "Persiapan Tambahan :",
+        "hideNumber": true,
+        "showHeader": false,
+        "columns": [
+         {
+          "name": "column2",
+          "cellType": "text"
+         },
+         {
+          "name": "column1",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rows": [
+         {
+          "value": "darah",
+          "text": "Darah"
+         },
+         {
+          "value": "infus",
+          "text": "Infus\t"
+         },
+         {
+          "value": "jenis",
+          "text": "Jenis"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question4",
+        "title": "Riwayat penyakit masa lalu dan therapi :",
+        "hideNumber": true,
+        "showHeader": false,
+        "columns": [
+         {
+          "name": "column1",
+          "cellType": "boolean",
+          "labelTrue": "Ya",
+          "labelFalse": "Tidak",
+          "valueTrue": "1",
+          "valueFalse": "0"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "text",
+        "rows": [
+         {
+          "value": "diabetes",
+          "text": "Diabetes mellitus ( Gula Darah terakhir )"
+         },
+         {
+          "value": "hipertensi",
+          "text": "Hipertensi"
+         },
+         {
+          "value": "asma",
+          "text": "Asma"
+         },
+         {
+          "value": "jantung",
+          "text": "Jantung"
+         },
+         {
+          "value": "ginjal",
+          "text": "Ginjal"
+         },
+         {
+          "value": "alergi",
+          "text": "Alergi obat / makanan"
+         },
+         {
+          "value": "lainya",
+          "text": "lainnya"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question9",
+        "visibleIf": "{question4.lainya.column1} = true",
+        "title": "Lainnya",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "lergi",
+        "visibleIf": "{question4.alergi.column1} = true",
+        "title": "Alergi",
+        "hideNumber": true
+       }
+      ]
+     }
+    ]
+   }

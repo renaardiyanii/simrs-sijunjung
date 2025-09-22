@@ -1,0 +1,47 @@
+{
+    "title": "SURAT KONTROL",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "question1",
+        "title": "Ringkasan Riwayat Penyakit",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "question2",
+        "title": "Anjuran / Rencana Kontrol",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "Penunjang",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question4",
+          "title": "Diagnosa Medis",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "title": "Terapi pulang",
+          "hideNumber": true
+         }
+        ],
+        "title": "HASIL PEMERIKSAAN"
+       }
+      ]
+     }
+    ]
+   }

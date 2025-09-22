@@ -1,0 +1,987 @@
+
+<script>
+	/**
+	 * Added Eretensi
+	 * @aldi
+	 */
+
+	function openeretensi() {
+		$('#eretensimodal').modal('show');
+		$.ajax({
+			url: '<?php echo base_url("irj/rjcpelayanan/eretensi/" . $data_pasien[0]['no_cm']) ?>',
+			beforeSend: function() {
+				$('#hasilPencarian').html('<tr><td style="text-align:center;" colspan="3">Sedang Mencari Data...</td></tr>');
+			},
+			success: function(data) {
+				let html = '';
+				let index = 1;
+				data.data.map((e) => {
+					html += `
+					<tr>
+						<td>${index}</td>
+						<td>${e.nama_file}</td>
+						<td><a target="_blank" class="btn btn-primary" href="http://192.0.206.32/emr/view/rekam_medis/${e.no_scan}/${e.nama_file}">Lihat</a></td>
+					</tr>
+					`;
+					index++;
+				})
+				$('#hasilPencarian').html(html);
+			},
+			error: function(xhr) {
+				$('#hasilPencarian').html('<tr><td style="text-align:center;" colspan="3">Data Tidak Ditemukan</td></tr>');
+
+			},
+			complete: function() {
+
+			}
+		});
+	}
+	//end added eretensi
+	var site = "<?php echo site_url(); ?>";
+	$(function() {
+		$('.meninggal').hide();
+		$('.auto_diagnosa_pasien').autocomplete({
+			serviceUrl: site + 'iri/ricstatus/data_icd_1',
+			onSelect: function(suggestion) {
+				//$('#no_cm').val(''+suggestion.no_cm);
+				$('#diagnosa1').val(suggestion.id_icd + ' - ' + suggestion.nm_diagnosa);
+				$('#id_row_diagnosa').val('' + suggestion.id_icd);
+				// $('#nama').val(''+suggestion.nama);
+				// $('.tanggal_lahir').val(''+suggestion.tanggal_lahir);
+				// if(suggestion.jenis_kelamin=='L'){
+				// 	$('#laki_laki').attr('selected', 'selected');
+				// 	$('#perempuan').removeAttr('selected', 'selected');
+				// }else{
+				// 	$('#laki_laki').removeAttr('selected', 'selected');
+				// 	$('#perempuan').attr('selected', 'selected');
+				// }
+				// $('#telp').val(''+suggestion.telp);
+				// $('#hp').val(''+suggestion.hp);
+				// $('#id_poli').val(''+suggestion.id_poli);
+				// $('#poliasal').val(''+suggestion.poliasal);
+				// $('#id_dokter').val(''+suggestion.id_dokter);
+				// $('#dokter').val(''+suggestion.dokter);
+				// $('#diagnosa').val(''+suggestion.diagnosa);
+			}
+		});
+		// $('#tgl_meninggal').datepicker({
+		// 		format: "yyyy-mm-dd",
+		// 		autoclose: true,
+		// 		todayHighlight: true,
+		// 	});
+		$("#jam_meninggal").timepicker({
+			showInputs: false,
+			showMeridian: false
+		});
+
+	});
+
+	function update_status_pemeriksaan_ok(no_ipd) {
+		var r = confirm("Anda yakin ingin menambah pemeriksaan Operasi ?");
+		if (r == true) {
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url("iri/rictindakan/set_status_ok/"); ?>',
+				data: {
+					'no_ipd': no_ipd
+				},
+				success: function(data) {
+					//var obj = JSON.parse(data);
+					//alert("Request Pemeriksaan Radiologi Berhasil Dikirim. ");	
+					//window.open("'.site_url("rad/radcdaftar/pemeriksaan_rad/no_ipd").'", "_blank");
+					window.open(' <?php echo base_url("ok/okcdaftar/pemeriksaan_ok") ?>/' + no_ipd);
+					// if(!isEmpty(obj)){
+					// 	$("#harga_satuan_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$("#biaya_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$('#vtot_kelas').val(obj[0]['total_tarif']);
+					// 	$('#vtot').val(total - (obj[0]['total_tarif'] * qty) );
+					// 	$('#biaya_tindakan').val(temp[1] - obj[0]['total_tarif']);
+					// }else{
+					// 	$("#harga_satuan_jatah_kelas").val('0');
+					// 	$("#biaya_jatah_kelas").val('0');
+					// 	//$('#vtot').val('0');
+					// }
+				}
+			});
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	function batal_pasien(no_ipd) {
+		var r = confirm("Anda yakin ingin membatalkan pasien ?");
+		if (r == true) {
+			window.location.href = '<?php echo base_url("iri/ricstatus/batalkan_pasien/") ?>/' + no_ipd;
+			// window.open('<?php echo base_url("iri/ricstatus/batalkan_pasien/") ?>/'+no_ipd , "_self");
+			// alert('<?php echo base_url("iri/ricstatus/batalkan_pasien/") ?>/'+no_ipd);
+		} else {
+			return false;
+		}
+
+	}
+
+	function pulang(val_plg) {
+		if (val_plg != '') {
+			if (val_plg == "MENINGGAL") {
+				$('.meninggal').show();
+				document.getElementById("tgl_meninggal").required = true;
+				document.getElementById("jam_meninggal").required = true;
+				document.getElementById("kondisi_meninggal").required = true;
+			} else {
+				$('.meninggal').hide();
+				document.getElementById("tgl_meninggal").required = false;
+				document.getElementById("jam_meninggal").required = false;
+				document.getElementById("kondisi_meninggal").required = false;
+			}
+		}
+
+	}
+
+	function update_status_pemeriksaan_rad(no_ipd) {
+		var r = confirm("Anda yakin ingin menambah pemeriksaan Radiologi ?");
+		if (r == true) {
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url("iri/rictindakan/set_status_rad/"); ?>',
+				data: {
+					'no_ipd': no_ipd
+				},
+				success: function(data) {
+					//var obj = JSON.parse(data);
+					//alert("Request Pemeriksaan Radiologi Berhasil Dikirim. ");	
+					//window.open("'.site_url("rad/radcdaftar/pemeriksaan_rad/no_ipd").'", "_blank");
+					window.open(' <?php echo base_url("rad/radcdaftar/pemeriksaan_rad") ?>/' + no_ipd);
+					// if(!isEmpty(obj)){
+					// 	$("#harga_satuan_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$("#biaya_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$('#vtot_kelas').val(obj[0]['total_tarif']);
+					// 	$('#vtot').val(total - (obj[0]['total_tarif'] * qty) );
+					// 	$('#biaya_tindakan').val(temp[1] - obj[0]['total_tarif']);
+					// }else{
+					// 	$("#harga_satuan_jatah_kelas").val('0');
+					// 	$("#biaya_jatah_kelas").val('0');
+					// 	//$('#vtot').val('0');
+					// }
+				}
+			});
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+
+	function update_status_pemeriksaan_lab(no_ipd) {
+		var r = confirm("Anda yakin ingin menambah pemeriksaan Laboratorium ?");
+		if (r == true) {
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url("iri/rictindakan/set_status_lab/"); ?>',
+				data: {
+					'no_ipd': no_ipd
+				},
+				success: function(data) {
+					//var obj = JSON.parse(data);
+					//alert("Request Pemeriksaan Laboratorium Berhasil Dikirim. ");
+					window.open(' <?php echo base_url("lab/labcdaftar/pemeriksaan_lab") ?>/' + no_ipd);
+					// if(!isEmpty(obj)){
+					// 	$("#harga_satuan_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$("#biaya_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$('#vtot_kelas').val(obj[0]['total_tarif']);
+					// 	$('#vtot').val(total - (obj[0]['total_tarif'] * qty) );
+					// 	$('#biaya_tindakan').val(temp[1] - obj[0]['total_tarif']);
+					// }else{
+					// 	$("#harga_satuan_jatah_kelas").val('0');
+					// 	$("#biaya_jatah_kelas").val('0');
+					// 	//$('#vtot').val('0');
+					// }
+				}
+			});
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+
+	function update_status_pemeriksaan_pa(no_ipd) {
+		var r = confirm("Anda yakin ingin menambah pemeriksaan Patologi Anatomi ?");
+		if (r == true) {
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url("iri/rictindakan/set_status_pa/"); ?>',
+				data: {
+					'no_ipd': no_ipd
+				},
+				success: function(data) {
+					//var obj = JSON.parse(data);
+					alert("Request Pemeriksaan Patologi Anatomi Berhasil Dikirim. ");
+					window.open(' <?php echo base_url("pa/pacdaftar/pemeriksaan_pa") ?>/' + no_ipd);
+					// if(!isEmpty(obj)){
+					// 	$("#harga_satuan_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$("#biaya_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$('#vtot_kelas').val(obj[0]['total_tarif']);
+					// 	$('#vtot').val(total - (obj[0]['total_tarif'] * qty) );
+					// 	$('#biaya_tindakan').val(temp[1] - obj[0]['total_tarif']);
+					// }else{
+					// 	$("#harga_satuan_jatah_kelas").val('0');
+					// 	$("#biaya_jatah_kelas").val('0');
+					// 	//$('#vtot').val('0');
+					// }
+				}
+			});
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	function update_status_resep(no_ipd) {
+		var r = confirm("Anda yakin ingin memberikan resep?");
+		if (r == true) {
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url("iri/rictindakan/set_status_resep/"); ?>',
+				data: {
+					'no_ipd': no_ipd
+				},
+				success: function(data) {
+					//var obj = JSON.parse(data);
+					alert("Request Resep Obat Berhasil Dikirim. ");
+					// if(!isEmpty(obj)){
+					// 	$("#harga_satuan_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$("#biaya_jatah_kelas").val(obj[0]['total_tarif']);
+					// 	$('#vtot_kelas').val(obj[0]['total_tarif']);
+					// 	$('#vtot').val(total - (obj[0]['total_tarif'] * qty) );
+					// 	$('#biaya_tindakan').val(temp[1] - obj[0]['total_tarif']);
+					// }else{
+					// 	$("#harga_satuan_jatah_kelas").val('0');
+					// 	$("#biaya_jatah_kelas").val('0');
+					// 	//$('#vtot').val('0');
+					// }
+				}
+			});
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function update_dokter(no_ipd) {
+		var r = confirm("Anda yakin ingin mengupdate dokter?");
+		if (r == true) {
+			var id_dokter = $('#id_dokter').val();
+			var nmdokter = $('#nmdokter').val();
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url("iri/ricstatus/update_dokter/"); ?>',
+				data: {
+					'no_ipd': no_ipd,
+					'id_dokter': id_dokter,
+					'nmdokter': nmdokter
+				},
+				success: function(data) {
+					if (data == "1") {
+						alert("Dokter berhasil diupdate");
+					} else {
+						alert("Gagal update. Silahkan coba lagi");
+					}
+				}
+			});
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function showswal() {
+		var base = "<?php echo base_url(); ?>";
+		new swal({
+				title: "",
+				text: "MOHON REFRESH HALAMAN",
+				type: "success",
+				showConfirmButton: true,
+				showCancelButton: false,
+				closeOnConfirm: false,
+				showLoaderOnConfirm: true
+			},
+			function() {
+				window.location.href = base + "iri/ricpasien";
+			});
+	}
+
+	var site = "<?php echo site_url(); ?>";
+	$(function() {
+		$('.auto_no_register_dokter').autocomplete({
+			serviceUrl: site + '/iri/ricpendaftaran/data_dokter_autocomp',
+			onSelect: function(suggestion) {
+				$('#id_dokter').val('' + suggestion.id_dokter);
+				$('#nmdokter').val('' + suggestion.nm_dokter);
+			}
+		});
+	});
+
+	const kwitansinew = ()=>{
+		let data = btoa('<?= $data_pasien[0]['no_ipd'] ?>');
+		window.open(`${baseurl}/iri/ricstatus/cetak_list_pembayaran_pasien?q=${data}`,
+		'_blank');
+	}
+</script>
+<!-- <div class="row"> -->
+<!-- <div class="col-sm-6"> -->
+<div class="card card-outline-info">
+	<div class="card-header text-white" align="center">Data Pasien</div>
+	<div class="card-block">
+		<br />
+		<div class="row">
+			<div class="col-sm-3">
+				<div align="center"><img height="100px" class="img-rounded" src="<?php
+																					if ($data_pasien[0]['foto'] == '') {
+																						echo site_url("upload/photo/unknown.png");
+																					} else {
+																						echo site_url("upload/photo/" . $data_pasien[0]['foto']);
+																					}
+																					?>">
+					<!-- <a href="<?php echo base_url(); ?>iri/ricsjp/cetak_gelang/<?php echo $data_pasien[0]['no_ipd']; ?>" target="_blank"><input type="button" class="btn btn-primary btn-sm" value="Cetak Gelang"></a> -->
+
+					<a href="<?php echo base_url(); ?>iri/ricstatus/index/<?php echo $data_pasien[0]['no_ipd']; ?>"><input type="button" class="btn btn-primary btn-sm" value="Status Pasien"></a>
+
+
+				</div>
+				<!-- <div align="center"><br><a href="<?php echo base_url(); ?>iri/ricstatus/index/<?php echo $data_pasien[0]['no_ipd']; ?>"><button type="button" class="btn btn-warning btn-sm" style="white-space: normal;"><i class="fa fa-plusthick"></i> Status Pasien</button></a><br></div>
+									</div> -->
+				<div align="center"><br><a href="<?php echo base_url(); ?>iri/rictindakan/list_dokter/<?php echo $data_pasien[0]['no_ipd']; ?>"><input type="button" class="btn btn-success btn-sm" value="Dokter Pasien"></a></div>
+
+				<div align="center"><br><button onclick="return batal_pasien('<?php echo $data_pasien[0]['no_ipd']; ?>');" class="btn btn-warning btn-sm" style="white-space: normal;">Batalkan Pasien</button></div>
+
+				<div align="center"><br><a href="<?php echo base_url(); ?>iri/ricstatus/cetak_list_pembayaran_pasien/<?php echo $data_pasien[0]['no_ipd'] . '/0'; ?>" target="_blank" class="btn btn-danger btn-sm" style="white-space: normal;">Lihat Kwitansi Sementara</a><br></div>
+				<!-- <div align="center"><br><button onclick="kwitansinew()" class="btn btn-info btn-sm" style="white-space: normal;">Lihat Kwitansi (new)</button><br></div> -->
+			</div>
+
+
+			<div class="col-sm-9 table-responsive">
+				<table class="table-sm table-striped" style="font-size:15">
+					<tbody>
+						<tr>
+							<th>Nama</th>
+							<td>:&nbsp;</td>
+							<td><?php echo $data_pasien[0]['nama']; ?></td>
+						</tr>
+						<tr>
+							<th>No. MedRec</th>
+							<td>:&nbsp;</td>
+							<td><?php echo $data_pasien[0]['no_cm']; ?></td>
+						</tr>
+						<tr>
+							<th>No. Register</th>
+							<td>:&nbsp;</td>
+							<td><?php echo $data_pasien[0]['no_ipd']; ?></td>
+						</tr>
+						<tr>
+							<th>Tgl Lahir</th>
+							<td>:&nbsp;</td>
+							<td><?php
+								$interval = date_diff(date_create(), date_create($data_pasien[0]['tgl_lahir']));
+								//echo $interval->format("%Y Tahun, %M Bulan, %d Hari");
+								echo date('d-m-Y', strtotime($data_pasien[0]['tgl_lahir']));
+								?>
+							</td>
+						</tr>
+						<tr>
+							<th>Alamat</th>
+							<td>:&nbsp;</td>
+							<td><?php echo $data_pasien[0]['alamat']; ?>
+							</td>
+						</tr>
+						<tr>
+							<th>Gol Darah</th>
+							<td>:&nbsp;</td>
+							<td><?php echo $data_pasien[0]['goldarah']; ?></td>
+						</tr>
+						<tr>
+							<th>Tanggal Kunjungan</th>
+							<td>:&nbsp;</td>
+							<td><?php echo date('d-m-Y', strtotime($data_pasien[0]['tgl_masuk'])); ?></td>
+							<!-- <td><?php //echo date("j F Y", strtotime($data_pasien[0]['tgl_masuk'])); 
+										?></td> -->
+						</tr>
+						<tr>
+							<th>Kelas</th>
+							<td>:&nbsp;</td>
+							<td><?php echo $data_pasien[0]['kelas']; ?></td>
+						</tr>
+						<tr>
+							<th>DPJP</th>
+							<td>:&nbsp;</td>
+							<td><?php echo $data_pasien[0]['nm_dokter']; ?>
+							</td>
+						</tr>
+						<tr>
+							<th>Cara Bayar</th>
+							<td>:&nbsp;</td>
+							<td><?php echo $data_pasien[0]['carabayar']; ?> <a href="<?php echo base_url(); ?>iri/ricpasien/ubah_cara_bayar/<?php echo $data_pasien[0]['no_ipd']; ?>"><input type="button" class="btn btn-primary btn-sm" value="Ubah"></a></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td> &nbsp;</td>
+							<td><?php echo $data_pasien[0]['nmkontraktor']; ?></td>
+						</tr>
+						<?php if ($data_pasien[0]['pasien_anak'] == 'Y') { ?>
+							<tr>
+								<th>Ket Pasien</th>
+								<td> :</td>
+								<td>Anak</td>
+							</tr>
+						<?php } ?>
+
+						<?php if ($data_pasien[0]['ipdibu'] != null) { ?>
+							<tr>
+								<th>Ket Pasien</th>
+								<td> :</td>
+								<td>Bayi</td>
+							</tr>
+						<?php } ?>
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-md-12 d-flex justify-content-center align-items-center gap-2 flex-wrap">
+			
+
+				<a href="<?php echo base_url() . 'emedrec/C_emedrec/rekam_medik_detail/' . $data_pasien[0]['no_cm'] . '/' . $data_pasien[0]['no_medrec'] . '/' . $data_pasien[0]['no_ipd'] . '/' . $data_pasien[0]['noregasal'] ?>" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="btn btn-primary btn-sm mx-1">
+					Rekam Medik
+				</a>
+
+				<button class="btn btn-success btn-sm mx-1" data-toggle="modal" data-target="#modalMultipleFile">
+					<span class="mdi mdi-file-multiple"></span>
+				</button>
+
+				<?php 
+				if($id_poli == 'BA00'){ ?>
+					<a href="<?php echo base_url() . 'emedrec/C_emedrec/pengkajian_medis_igd/' . $data_pasien[0]['noregasal'] . '/' . $data_pasien[0]['no_cm'] . '/' . $data_pasien[0]['no_medrec'] ?>"
+					target="_blank" 
+					rel="noopener noreferrer" 
+					class="btn btn-primary btn-sm mx-1">
+						Pengkajian Medis IGD/Poli
+					</a>
+				<?php }else{ ?>
+					<a href="<?php echo base_url() . 'emedrec/C_emedrec/pengkajian_medis_rawat_jalan/' . $data_pasien[0]['noregasal'] . '/' . $data_pasien[0]['no_cm'] . '/' . $data_pasien[0]['no_medrec'] ?>"
+					target="_blank" 
+					rel="noopener noreferrer" 
+					class="btn btn-primary btn-sm mx-1">
+						Pengkajian Medis IGD/Poli
+					</a>
+				<?php }
+				?>
+
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- </div> -->
+<!-- <div class="col-sm-6"> -->
+<?php // if ($roleid == 1 || $roleid == 1012 || $roleid == 1011) { ?>
+	<div class="card card-outline-danger">
+
+		<div class="card-header text-white" align="center">Status Pulang</div>
+		<div class="card-block">
+			<br />
+
+			
+
+				<form action="<?php echo site_url('iri/rictindakan/update_tindakan_lain'); ?>" method="post">
+
+					<div class="form-group row">
+						<p class="col-sm-4 form-control-label" id="ket_pulang">Status Pulang</p>
+						<div class="col-sm-8">
+							<div class="form-inline">
+								<div class="form-group">
+									<select class="form-control" name="ket_pulang" onchange="pulang(this.value)">
+										<option value="">-Pilih Ket Pulang-</option>
+										<option value="PULANG">IZIN DOKTER</option>
+										<!-- <option value="PULANG">PULANG</option> -->
+										<option value="PULANG PAKSA">PULANG PAKSA</option>
+										<option value="MENINGGAL">MENINGGAL</option>
+										<option value="MELARIKAN DIRI">MELARIKAN DIRI</option>
+										<option value="DIRUJUK RS LAIN">DIRUJUK RS LAIN</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<p class="col-sm-4 form-control-label" id="tgl_pulang">Tgl Pulang</p>
+						<div class="col-sm-2">
+							<div class="form-inline">
+								<div class="form-group">
+									<input type="date" id="tgl_pulang" class="form-control" name="tgl_pulang" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php 
+					if($data_pasien[0]['carabayar'] == 'BPJS' && ($data_pasien[0]['no_sep']!= null ||$data_pasien[0]['no_sep']!='')){
+						echo '<a href="'.base_url('bpjs/rencanakontrol/insert/').$data_pasien[0]['no_sep'].'" class="btn-primary btn mb-4">Buat Surat Kontrol</a>';
+					}
+					?>
+
+					<!-- <div class="form-check adm">
+						<input class="form-check-input" type="checkbox" id="admin_tunda" name="admin_tunda" value="1">
+						<label for="admin_tunda" class="form-check-label">Belum Selesai Administrasi</label>
+					</div> -->
+
+					<div class="form-group row meninggal">
+						<div class="col-sm-4 control-label">Tgl. Meninggal</div>
+						<div class="col-sm-8">
+							<div class=' date' id='jadwal_operasi'>
+								<input type="date" id="tgl_meninggal" class="form-control" placeholder="Tanggal Meninggal" name="tgl_meninggal">
+
+							</div>
+							<div class='input-group bootstrap-timepicker'>
+								<input type="text" id="jam_meninggal" class="form-control" placeholder="Jam Meninggal" name="jam_meninggal">
+							</div>
+
+						</div>
+					</div>
+					<div class="form-group row meninggal">
+						<p class="col-sm-4 form-control-label">Waktu Meninggal</p>
+						<div class="col-sm-8">
+							<div class="form-inline">
+								<div class="form-group">
+									<select class="form-control" name="kondisi_meninggal" id="kondisi_meninggal">
+										<option value="">-Pilih Waktu-</option>
+										<option value="KURANG 48 JAM">Kurang dari 48 Jam</option>
+										<option value="LEBIH 48 JAM">Lebih dari 48 Jam</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- <div class="form-group row">
+									<p class="col-sm-4 form-control-label" >Diagnosa</p>
+									<p class="col-sm-12 form-control-label" id="ket_pulang"><input type="text" value="" class="form-control input-sm auto_diagnosa_pasien" name="diagnosa1" id="diagnosa1" /></p>
+										
+								</div> -->
+
+					<div class="form-inline" align="right">
+						<!-- <input type="hidden" class="form-control" value="<?php echo $data_pasien[0]['no_ipd']; ?>" name="no_ipd"> -->
+						<input type="hidden" class="form-control" value="<?php echo $no_ipd;?>" name="no_ipd">
+						<input type="hidden" class="form-control" value="" name="id_row_diagnosa" id="id_row_diagnosa">
+						<input type="hidden" class="form-control" value="<?php echo $user->name; ?>" name="user_plg" id="user_plg">
+						<div class="form-group" align="right">
+							<button type="reset" class="btn btn-warning btn-sm">Reset</button>&nbsp;
+							<input type="submit" class="btn btn-primary btn-sm" id="btn_simpan" value="Simpan">
+						</div>
+					</div>
+				</form>
+
+		
+		</div>
+	</div>
+
+
+<?php // } ?>
+
+
+<!-- <div class="card card-outline-info">
+					<div class="card-block">
+						<?php echo form_open('iri/rictindakan/rujukan_penunjang'); ?>
+						<?php
+						// var_dump($rujukan_penunjang);
+						?>
+						<?php foreach ($rujukan_penunjang as $row) {
+							$lab = $row->lab;
+							$ok = $row->ok;
+							$pa = $row->pa;
+							$rad = $row->rad;
+							$obat = $row->obat; ?>
+						<div class="form-group row">
+							<p class="col-sm-12 form-control-label" id="label_rujukan">Rujukan Penunjang</p>
+							<div class="col-sm-12">
+								<div class="form-inline">
+									<div class="form-group col-sm-6">
+								<div class="demo-checkbox">
+								<label class="checkbox-inline ">
+								<?php
+								if ($row->status_ok >= '1') {
+									if ($row->ok == '0') {
+										echo '<input type="checkbox" id="okCheckbox"  class="flat-red" name="okCheckbox" checked="checked" value="1" disabled><label for="okCheckbox"> Operasi | ' . $row->status_ok . ' Done</label>';
+									} else {
+										echo '<input type="checkbox" id="okCheckbox"  class="flat-red" name="okCheckbox" checked="checked" value="1" disabled><label for="okCheckbox"> Operasi';
+										echo ' | <a href="' . base_url('ok/okcdaftar/pemeriksaan_ok') . '/' . $data_pasien[0]['no_ipd'] . '" target="_blank">Progress</a></label>';
+									}
+								} else {
+									if ($row->ok == '0') {
+										echo '<input type="checkbox" id="okCheckbox"  class="flat-red" name="okCheckbox"  value="1"><label for="okCheckbox"> Operasi</label>';
+									} else {
+										echo '<input type="checkbox" id="okCheckbox"  class="flat-red" name="okCheckbox" checked="checked" value="1" disabled><label for="okCheckbox"> Operasi';
+										echo ' | <a href="' . base_url('ok/okcdaftar/pemeriksaan_ok') . '/' . $data_pasien[0]['no_ipd'] . '" target="_blank"> Progres</a></label>';
+									}
+								} ?>
+								</label>
+							</div>
+						</div>
+						<div class="form-group col-sm-6">
+								<div class="demo-checkbox">
+								<label class="checkbox-inline ">
+								<?php
+								if ($row->status_lab >= '1') {
+									if ($row->lab == '0') {
+										echo '<input type="checkbox" id="labCheckbox"  class="flat-red" name="labCheckbox"  value="1" ><label for="labCheckbox"> Lab | ' . $row->status_lab . ' Done</label>';
+									} else {
+										echo '<input type="checkbox" id="labCheckbox"  class="flat-red" name="labCheckbox" checked="checked" value="1" disabled><label for="labCheckbox"> Lab';
+										echo ' | <a href="' . base_url('lab/labcdaftar/pemeriksaan_lab') . '/' . $data_pasien[0]['no_ipd'] . '" target="_blank">Progress</a></label>';
+									}
+								} else {
+									if ($row->lab == '0') {
+										echo '<input type="checkbox" id="labCheckbox"  class="flat-red" name="labCheckbox"  value="1"><label for="labCheckbox"> Lab</label>';
+									} else {
+										echo '<input type="checkbox" id="labCheckbox"  class="flat-red" name="labCheckbox" checked="checked" value="1" disabled><label for="labCheckbox"> Lab';
+										echo ' | <a href="' . base_url('lab/labcdaftar/pemeriksaan_lab') . '/' . $data_pasien[0]['no_ipd'] . '" target="_blank"> Progress</a></label>';
+									}
+								} ?>
+								</label>
+								</div>
+						</div>
+						
+						<div class="form-group col-sm-6">
+							<div class="demo-checkbox">
+								<label class="checkbox-inline no_indent">
+								<?php
+								if ($row->status_rad >= '1') {
+									if ($row->rad == '0') {
+										echo '<input type="checkbox" id="radCheckbox"  class="flat-red" name="radCheckbox"  value="1"><label for="radCheckbox"> Radiologi | ' . $row->status_rad . ' Done</label>';
+									} else {
+										echo '<input type="checkbox" id="radCheckbox"  class="flat-red" name="radCheckbox" checked="checked" value="1" disabled><label for="radCheckbox"> Radiologi';
+										echo ' | <a href="' . base_url('rad/radcdaftar/pemeriksaan_rad') . '/' . $data_pasien[0]['no_ipd'] . '/DOKTER" target="_blank"> Progress</a></label>';
+									}
+								} else {
+									if ($row->rad == '0') {
+										echo '<input type="checkbox" id="radCheckbox"  class="flat-red" name="radCheckbox" value="1"><label for="radCheckbox"> Radiologi</label>';
+									} else {
+										echo '<input type="checkbox" id="radCheckbox"  class="flat-red" name="radCheckbox" checked="checked" value="1" disabled><label for="radCheckbox"> Radiologi';
+										echo ' | <a href="' . base_url('rad/radcdaftar/pemeriksaan_rad') . '/' . $data_pasien[0]['no_ipd'] . '/DOKTER" target="_blank"> Progress</a></label>';
+									}
+								} ?>
+								</label>
+							</div>
+						</div>
+						
+
+                        <div class="form-group col-sm-6">
+							<div class="demo-checkbox">
+								<label class="checkbox-inline no_indent">
+								<?php
+								if ($row->status_obat >= '1') {
+									if ($row->obat == '0') {
+										echo '<input type="checkbox" id="obatCheckbox"  class="flat-red" name="obatCheckbox"  value="1"><label for="obatCheckbox"> Obat | ' . $row->status_obat . ' Done</label>';
+									} else {
+										echo '<input type="checkbox" id="obatCheckbox"  class="flat-red" name="obatCheckbox" checked="checked" value="1" disabled><label for="obatCheckbox"> Obat';
+										echo ' | <a href="' . base_url('farmasi/frmcdaftar/permintaan_obat') . '/' . $data_pasien[0]['no_ipd'] . '/DOKTER" target="_blank"> Progress</a></label>';
+									}
+								} else {
+									if ($row->obat == '0') {
+										echo '<input type="checkbox" id="obatCheckbox"  class="flat-red" name="obatCheckbox" value="1"><label for="obatCheckbox"> Obat </label>';
+									} else {
+										echo '<input type="checkbox" id="obatCheckbox"  class="flat-red" name="obatradCheckbox" checked="checked" value="1" disabled><label for="obatradCheckbox"> Obat';
+										echo ' | <a href="' . base_url('farmasi/frmcdaftar/permintaan_obat') . '/' . $data_pasien[0]['no_ipd'] . '/DOKTER" target="_blank"> Progress</a></label>';
+									}
+								} ?>
+								</label>
+							</div>
+						</div>
+
+
+						<div class="form-group col-sm-6">
+							<div class="demo-checkbox">
+								<label class="checkbox-inline no_indent">
+								<?php
+								if ($row->status_em >= '1') {
+									if ($row->em == '0') {
+										echo '<input type="checkbox" id="emCheckbox"  class="flat-red" name="emCheckbox"  value="1"><label for="emCheckbox"> Elektromedik | ' . $row->status_em . ' Done</label>';
+									} else {
+										echo '<input type="checkbox" id="emCheckbox"  class="flat-red" name="emCheckbox" checked="checked" value="1" disabled><label for="emCheckbox"> Elektromedik';
+										echo ' | <a href="' . base_url('elektromedik/emcdaftar/pemeriksaan_em') . '/' . $data_pasien[0]['no_ipd'] . '" target="_blank"> Progress</a></label>';
+									}
+								} else {
+									if ($row->em == '0') {
+										echo '<input type="checkbox" id="emCheckbox"  class="flat-red" name="emCheckbox" value="1"><label for="emCheckbox"> Elektromedik</label>';
+									} else {
+										echo '<input type="checkbox" id="emCheckbox"  class="flat-red" name="emCheckbox" checked="checked" value="1" disabled><label for="emCheckbox"> Elektromedik';
+										echo ' | <a href="' . base_url('elektromedik/emcdaftar/pemeriksaan_em') . '/' . $data_pasien[0]['no_ipd'] . '" target="_blank"> Progress</a></label>';
+									}
+								} ?>
+								</label>
+							</div>
+						</div>
+
+
+			
+							<div class="col-sm-12" align="right">	
+							
+								<input type="hidden" class="form-control" value="<?php echo $data_pasien[0]['no_ipd']; ?>" name="no_ipd">
+								<input type="hidden" class="form-control" value="<?php echo $linkheader; ?>" name="linkheader">
+									<button type="submit" class="btn btn-primary btn-sm"> Simpan </button>
+							</div>	
+					</div>			
+						</div>
+					<?php } ?>
+					<?php echo form_close(); ?>
+					</div>
+				</div>			 -->
+<!-- </div>	 -->
+<!-- </div> -->
+
+
+
+
+
+<!-- added @aldi -->
+<!-- Modal Eretensi -->
+<div class="modal fade" id="eretensimodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Hasil Pencarian Eretensi</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>Hasil</th>
+							<th>Aksi</th>
+						</tr>
+					</thead>
+					<tbody id="hasilPencarian">
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Modal Eretensi -->
+
+<div class="modal fade" id="modalMultipleFile" role="dialog" data-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog modal-success">
+
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Combined View RJ & RI</h4>
+			</div>
+			<div class="modal-body">
+				<table class="datatableModalD nowrap table table-striped" cellspacing="110">
+					<thead style="display: none;">
+						<th>Form</th>
+					</thead>
+					<tbody>
+						<!-- <tr class="clickable-row" data-href="<?= base_url('emedrec/C_emedrec_iri/konsul_rj_ri/' . $data_pasien[0]['no_cm'] . '/' . $data_pasien[0]['no_medrec']); ?>">
+							<td>Konsul</td>
+						</tr> -->
+						<tr class="clickable-row" data-href="<?= base_url('emedrec/C_emedrec_iri/cppt_rj_ri/' . $data_pasien[0]['no_cm'] . '/' . $data_pasien[0]['no_medrec']); ?>">
+							<td>CPPT</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	jQuery(document).ready(function($) {
+		$(".clickable-row").click(function() {
+			window.open($(this).data("href"), '_blank');
+		});
+	});
+
+	$('.datatableModalD').DataTable({
+		paging: false,
+		ordering: false,
+		info: false,
+		"lengthChange": false,
+		pagingType: "simple"
+	});
+</script>
+<style>
+	/* .dataTables_wrapper .dataTables_paginate .paginate_button {
+		border: 0.5px solid #828282;
+		font-size: 12px;
+		margin-right: 10px;
+	}
+
+	.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+		border: 0px;
+	} */
+
+	.datatableModalD tr {
+		cursor: pointer;
+	}
+
+	.datatableModalD tr:hover td {
+		-moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+		-webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+		box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+	}
+
+	.datatableModalD tr:hover td:first-child {
+		-moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+		-webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+		box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+	}
+
+	.datatableModalD tr:hover td:last-child {
+		-moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+		-webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+		box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+	}
+
+	.datatableModalD tr:hover td:after {
+		content: "";
+		width: 3px;
+		height: 100%;
+		background-color: #F5F8FB;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
+</style>
+
+<SCRIPT type="text/javascript">
+    $(document).ready(function() {
+		//simpan verif
+        $('#verifh_1_btnproses').on('click', function(e) {
+            $.ajax({
+                url: "<?php echo site_url('iri/rictindakan/insertverifh_1') ?>",
+                data: {
+                    "no_ipd": $("#no_ipdverifh_1").val()
+                },
+                type: 'POST',
+                beforeSend: function() {
+                    $('#verifh_1_btnproses').html('<i class="fa fa-spinner fa-spin" ></i> Menyimpan...');
+                },
+                success: function(data) {
+					let res = JSON.parse(data);
+                    // console.log(res.response);
+                    if (res.response == 'success') {
+                        new Swal({
+                            title: "Data Berhasil Disimpan",
+                            icon: "success",
+                            showConfirmButton: true,
+                            button: "OK",
+                        }).then((confirmed) => {
+							let res_tgl=new Date(res.created_at);
+
+                            $('#verifh_1_btnproses').remove();
+							$('#res-ajax-nama-verified').text(res.nama_user);
+							$('#res-ajax-tgl-verified').text(res_tgl.getDate()+'-'+(res_tgl.getMonth()+1)+'-'+res_tgl.getFullYear());
+							$('#res-ajax-time-verified').text(res_tgl.getHours()+':'+res_tgl.getMinutes()+':'+res_tgl.getSeconds());
+							$('#row_kondisi_verifh_1').show();
+                        });
+                    } else {
+                        new Swal({
+                            icon: 'error',
+                            title: 'Data gagal disimpan!',
+                            showConfirmButton: true,
+                            button: "OK",
+                        }).then((confirmed) => {
+                            $('#verifh_1_btnproses').html('Proses');
+                        });
+                    }
+                },
+                error: function(event, textStatus, errorThrown) {
+                    new Swal({
+                        icon: 'error',
+                        title: "Data gagal disimpan!",
+                        text: formatErrorMessage(event, errorThrown),
+                        showConfirmButton: true,
+                        button: "OK",
+                    }).then((confirmed) => {
+                        $('#verifh_1_btnproses').html('Proses');
+                    });
+                }
+            })
+        });
+
+    });
+</SCRIPT>
+
+<SCRIPT type="text/javascript">
+    $(document).ready(function() {
+		//simpan verif
+
+		//simpan kondisi
+		$('#btnkondisi').on('click', function(e) {
+			// console.log($('.kondisi-class:checked').val());
+            $.ajax({
+                url: "<?php echo site_url('iri/rictindakan/update_verifh_1') ?>",
+                data: {
+                    "no_ipd": $("#no_ipdverifh_1").val(),
+					"kondisi": $('.kondisi-class:checked').val(),
+                },
+                type: 'POST',
+                beforeSend: function() {
+                    $('#btnkondisi').html('<i class="fa fa-spinner fa-spin" ></i> Menyimpan...');
+                },
+                success: function(data) {
+                   console.log(data);
+                    if (data == 'success') {
+                        new Swal({
+                            title: "Data Berhasil Disimpan",
+                            icon: "success",
+                            showConfirmButton: true,
+                            button: "OK",
+                        }).then((confirmed) => {
+                            $('#btnkondisi').html('Simpan');
+							$('#row_kondisi_verifh_1').show();
+                        });
+                    } else {
+                        new Swal({
+                            icon: 'error',
+                            title: 'Data gagal disimpan!',
+                            showConfirmButton: true,
+                            button: "OK",
+                        }).then((confirmed) => {
+                            $('#btnkondisi').html('Simpan');
+                        });
+                    }
+                },
+                error: function(event, textStatus, errorThrown) {
+                    new Swal({
+                        icon: 'error',
+                        title: "Data gagal disimpan!",
+                        text: formatErrorMessage(event, errorThrown),
+                        showConfirmButton: true,
+                        button: "OK",
+                    }).then((confirmed) => {
+                        $('#btnkondisi').html('Simpan');
+                    });
+                }
+            })
+        });
+    });
+</SCRIPT>

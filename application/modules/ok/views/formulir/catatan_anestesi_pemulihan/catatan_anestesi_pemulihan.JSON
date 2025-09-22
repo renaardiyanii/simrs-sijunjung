@@ -1,0 +1,1111 @@
+{
+    "title": "CATATAN KAMAR PEMULIHAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Masuk Kamar Pulih Dasar Jam",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "Pernapasan",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Spontan"
+             },
+             {
+              "value": "item2",
+              "text": "Dibantu"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Kesadaran",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Adekuat bersuara"
+             },
+             {
+              "value": "item2",
+              "text": "Penyumbat"
+             },
+             {
+              "value": "item3",
+              "text": "Tidur dalam"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "Skor ALDRETTE",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Aktivitas"
+           },
+           {
+            "name": "text2",
+            "title": "Sirkulasi"
+           },
+           {
+            "name": "text3",
+            "title": "Kesadaran"
+           },
+           {
+            "name": "text4",
+            "title": "Warna Kulit"
+           },
+           {
+            "name": "text5",
+            "title": "Total"
+           }
+          ],
+          "colCount": 5
+         }
+        ]
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question1",
+        "title": "MONITORING HEMODINAMIK",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question16",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column7",
+            "title": "Waktu",
+            "cellType": "text",
+            "inputType": "time"
+           },
+           {
+            "name": "column8",
+            "title": "Spo2",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Nadi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "180"
+             },
+             {
+              "value": "item2",
+              "text": "160"
+             },
+             {
+              "value": "item9",
+              "text": "150"
+             },
+             {
+              "value": "item3",
+              "text": "140"
+             },
+             {
+              "value": "item4",
+              "text": "120"
+             },
+             {
+              "value": "item11",
+              "text": "110"
+             },
+             {
+              "value": "item5",
+              "text": "100"
+             },
+             {
+              "value": "item6",
+              "text": "80"
+             },
+             {
+              "value": "item10",
+              "text": "70"
+             },
+             {
+              "value": "item7",
+              "text": "60"
+             },
+             {
+              "value": "item8",
+              "text": "40"
+             }
+            ]
+           },
+           {
+            "name": "column10",
+            "title": "TD Sistolik",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "200"
+             },
+             {
+              "value": "item2",
+              "text": "180"
+             },
+             {
+              "value": "item3",
+              "text": "160"
+             },
+             {
+              "value": "item10",
+              "text": "150"
+             },
+             {
+              "value": "item4",
+              "text": "140"
+             },
+             {
+              "value": "item5",
+              "text": "120"
+             },
+             {
+              "value": "item11",
+              "text": "110"
+             },
+             {
+              "value": "item6",
+              "text": "100"
+             },
+             {
+              "value": "item7",
+              "text": "80"
+             },
+             {
+              "value": "item12",
+              "text": "70"
+             },
+             {
+              "value": "item8",
+              "text": "60"
+             },
+             {
+              "value": "item9",
+              "text": "40"
+             }
+            ]
+           },
+           {
+            "name": "column11",
+            "title": "TD Diastolik",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "200"
+             },
+             {
+              "value": "item2",
+              "text": "180"
+             },
+             {
+              "value": "item3",
+              "text": "160"
+             },
+             {
+              "value": "item10",
+              "text": "150"
+             },
+             {
+              "value": "item4",
+              "text": "140"
+             },
+             {
+              "value": "item5",
+              "text": "120"
+             },
+             {
+              "value": "item11",
+              "text": "110"
+             },
+             {
+              "value": "item6",
+              "text": "100"
+             },
+             {
+              "value": "item7",
+              "text": "80"
+             },
+             {
+              "value": "item12",
+              "text": "70"
+             },
+             {
+              "value": "item8",
+              "text": "60"
+             },
+             {
+              "value": "item9",
+              "text": "40"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "rating",
+          "name": "question5",
+          "title": "VAS",
+          "hideNumber": true,
+          "rateMin": 0,
+          "rateMax": 10
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question32",
+          "title": "Alderete score",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Aktivitas",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Bergerak 4 ekstremitas atas perintah"
+             },
+             {
+              "value": "1",
+              "text": "Bergerak 2 ekstremitas atas perintah"
+             },
+             {
+              "value": "0",
+              "text": "Tidak mampu bergerak"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Respirasi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Nafas dalam dan batuk"
+             },
+             {
+              "value": "1",
+              "text": "Dsipneu/usaha nafas terbatas"
+             },
+             {
+              "value": "0",
+              "text": "Apneu"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Sirkulasi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "TB +- 20 %"
+             },
+             {
+              "value": "1",
+              "text": "TB +- 20-50 %"
+             },
+             {
+              "value": "0",
+              "text": "TB +- 50 %"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "Kesadaran",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Sadar penuh"
+             },
+             {
+              "value": "1",
+              "text": "Bangun jika di panggil"
+             },
+             {
+              "value": "0",
+              "text": "Tidak ada respon"
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": "Warna kulit",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Kemerahan"
+             },
+             {
+              "value": "1",
+              "text": "Pucat / kuning"
+             },
+             {
+              "value": "0",
+              "text": "Sianosis"
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": "Skor keluar",
+            "cellType": "expression",
+            "expression": "{row.column1}+{row.column2}+{row.column3}+{row.column4}+{row.column5}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question33",
+          "title": "Steward Score",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Kesadaran",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Bangun"
+             },
+             {
+              "value": "1",
+              "text": "Respon terhadap rangsangan"
+             },
+             {
+              "value": "0",
+              "text": "Tidak ada respon"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Respirasi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Batuk atau menangis"
+             },
+             {
+              "value": "1",
+              "text": "Pertahankan jalan nafas"
+             },
+             {
+              "value": "0",
+              "text": "Perlu bantuan nafas"
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": "Motorik",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Gerak bertujuan "
+             },
+             {
+              "value": "1",
+              "text": "Gerak tanpa bertujuan "
+             },
+             {
+              "value": "0",
+              "text": "Tidak bergerak"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "Skor keluar",
+            "cellType": "expression",
+            "expression": "{row.column1}+{row.column2}+{row.column3}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question34",
+          "title": "Bromage Score",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Bromage Score",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "Tidak mampu fleksi pergelangan kaki"
+             },
+             {
+              "value": "2",
+              "text": "Tidak mampu fleksi lutut"
+             },
+             {
+              "value": "1",
+              "text": "Tidak mampu ekstensi tungkai"
+             },
+             {
+              "value": "0",
+              "text": "Gerak penuh tungkai"
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": "Skor keluar",
+            "cellType": "expression",
+            "expression": "{row.column1}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question7",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "time",
+            "title": "Jam Keluar Kamar Pulih "
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question10",
+          "title": "Ke   :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ruang Rawat"
+           },
+           {
+            "value": "item2",
+            "text": "ICU"
+           },
+           {
+            "value": "item3",
+            "text": "Langsung Pulang"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "comment",
+          "name": "question11",
+          "title": "Catatan Khusus Ruang Pemulihan  :",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question12",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Bila Kesakitan"
+           },
+           {
+            "name": "text2",
+            "title": "Bila Mual / Muntah"
+           },
+           {
+            "name": "text3",
+            "title": "Obat-obatan"
+           },
+           {
+            "name": "text4",
+            "title": "Pemantauan Tensi, Nadi, Napas setiap"
+           },
+           {
+            "name": "text5",
+            "title": "selama"
+           },
+           {
+            "name": "text6",
+            "title": "Lainnya"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel7",
+          "elements": [
+           {
+            "type": "panel",
+            "name": "panel8",
+            "elements": [
+             {
+              "type": "radiogroup",
+              "name": "question35",
+              "title": "15 menit pertama\t",
+              "hideNumber": true,
+              "choices": [
+               {
+                "value": "item1",
+                "text": " 0  Muntah\t"
+               },
+               {
+                "value": "item2",
+                "text": "2  Tidak Muntah"
+               }
+              ],
+              "colCount": 2
+             },
+             {
+              "type": "radiogroup",
+              "name": "question36",
+              "title": "15 menit kedua",
+              "hideNumber": true,
+              "choices": [
+               {
+                "value": "item1",
+                "text": " 0  Muntah\t"
+               },
+               {
+                "value": "item2",
+                "text": "2  Tidak Muntah"
+               }
+              ],
+              "colCount": 2
+             },
+             {
+              "type": "multipletext",
+              "name": "question37",
+              "titleLocation": "hidden",
+              "items": [
+               {
+                "name": "text1",
+                "inputType": "time",
+                "title": "Jam keluar ruang pulih\t"
+               },
+               {
+                "name": "text2",
+                "title": "Aldrete Skor"
+               },
+               {
+                "name": "text3",
+                "title": "Bromage Score"
+               },
+               {
+                "name": "text4",
+                "title": "Steward Score"
+               }
+              ]
+             }
+            ],
+            "title": "a. Skor muntah\t:"
+           }
+          ],
+          "title": "UNTUK PASIEN RAWAT JALAN DEWASA DAN ANAK :"
+         },
+         {
+          "type": "panel",
+          "name": "panel9",
+          "elements": [
+           {
+            "type": "comment",
+            "name": "question38",
+            "title": "Obat-obatan\t\t:\t",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question39",
+            "title": "Mobilisasi\t\t:\t",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question40",
+            "title": "Diet dan Nutrisi\t:\t",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question41",
+            "title": "Edukasi & Follow Up\t:\t",
+            "hideNumber": true
+           },
+           {
+            "type": "comment",
+            "name": "question42",
+            "title": "Lainnya\t\t:\t",
+            "hideNumber": true
+           }
+          ],
+          "title": "INTRUKSI PASCA ANESTESI"
+         },
+         {
+          "type": "text",
+          "name": "question13",
+          "title": "Tanah badantuang,",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question14",
+          "title": "Dokter anestesiologi\n",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question15",
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "INSTRUKSI PASCA ANESTESI SELAMA DI RUANG PEMULIHAN"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question16",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Pangkat / Gol"
+           },
+           {
+            "name": "text2",
+            "title": "NRP / NIP     :"
+           },
+           {
+            "name": "text3",
+            "title": "Kesatuan / Alamat"
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "signaturepad",
+          "name": "question17",
+          "title": "Spesialis anastesi",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question18",
+          "startWithNewLine": false,
+          "title": "Asisten anastesi",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question19",
+          "startWithNewLine": false,
+          "title": "Spesialis bedah",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question20",
+          "title": "Diagnosa bedah",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question21",
+          "title": "Jenis pembedahan",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question22",
+          "title": "Diagnosa pasca bedah",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question23",
+          "title": "Teknik Anestesi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Sedasi"
+           },
+           {
+            "value": "item2",
+            "text": "Anestesi Umum     :"
+           },
+           {
+            "value": "item3",
+            "text": "Spinal"
+           },
+           {
+            "value": "item4",
+            "text": "Epidural"
+           },
+           {
+            "value": "item5",
+            "text": "Kaudal    :"
+           },
+           {
+            "value": "item6",
+            "text": "Blok Perifer"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question24",
+          "title": "Teknik dan Alat Khusus",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hipotensi"
+           },
+           {
+            "value": "item2",
+            "text": "TCI"
+           },
+           {
+            "value": "item3",
+            "text": "CPB"
+           },
+           {
+            "value": "item4",
+            "text": "Ventilasi Paru-paru"
+           },
+           {
+            "value": "item5",
+            "text": "Bronchoscopi"
+           },
+           {
+            "value": "item6",
+            "text": "Glidescope"
+           },
+           {
+            "value": "item7",
+            "text": "Stimulator Syaraf"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question25",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "EKG Lead"
+           },
+           {
+            "value": "item2",
+            "text": "Arteri Line"
+           },
+           {
+            "value": "item3",
+            "text": "Et CO₂"
+           },
+           {
+            "value": "item4",
+            "text": "Stetoscope"
+           },
+           {
+            "value": "item5",
+            "text": "NIBP"
+           },
+           {
+            "value": "item6",
+            "text": "CVP"
+           },
+           {
+            "value": "item7",
+            "text": " Cath A Pulmo"
+           },
+           {
+            "value": "item8",
+            "text": "SpO₂"
+           },
+           {
+            "value": "item9",
+            "text": "Kateter Urine"
+           },
+           {
+            "value": "item10",
+            "text": "Temp"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "rating",
+          "name": "question26",
+          "title": "ASA",
+          "hideNumber": true,
+          "rateMax": 6,
+          "maxRateDescription": "E"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question27",
+          "startWithNewLine": false,
+          "title": "Alergi",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "comment",
+          "name": "question28",
+          "title": "Penyakit Pra Anestesia      :",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question29",
+          "title": "Check List Persiapan Anestesia",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Informed Concent"
+           },
+           {
+            "value": "item2",
+            "text": "Obat-obatan Anestesia"
+           },
+           {
+            "value": "item3",
+            "text": "Tatalaksana Jalan Napas"
+           },
+           {
+            "value": "item4",
+            "text": "Mesin Anestesia"
+           },
+           {
+            "value": "item5",
+            "text": "Monitoring"
+           },
+           {
+            "value": "item6",
+            "text": "Obat-obatan Emergency"
+           },
+           {
+            "value": "item7",
+            "text": "Suction Apparatus"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question30",
+          "title": "Penilaian Pra Induksi",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "time",
+            "title": "Jam"
+           },
+           {
+            "name": "text2",
+            "title": "TD"
+           },
+           {
+            "name": "text3",
+            "title": "RR"
+           },
+           {
+            "name": "text4",
+            "title": "Kesadaran :"
+           },
+           {
+            "name": "text5",
+            "title": "Sat O₂"
+           },
+           {
+            "name": "text6",
+            "title": "Suhu"
+           },
+           {
+            "name": "text7",
+            "title": "Nadi"
+           },
+           {
+            "name": "text8",
+            "title": "BB"
+           },
+           {
+            "name": "text9",
+            "title": "TB"
+           },
+           {
+            "name": "text10",
+            "title": "Lainnya"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "comment",
+          "name": "question31",
+          "title": "CATATAN",
+          "hideNumber": true
+         }
+        ],
+        "title": "Status Fisik"
+       }
+      ],
+      "title": "CATATAN ANESTESI"
+     }
+    ]
+   }

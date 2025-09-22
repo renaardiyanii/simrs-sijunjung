@@ -1,0 +1,592 @@
+{
+   "title": "Surveilans HAIs",
+   "pages": [
+    {
+     "name": "page1",
+     "elements": [
+      {
+       "type": "radiogroup",
+       "name": "question5",
+       "title": "Cara Dirawat",
+       "hideNumber": true,
+       "choices": [
+        {
+         "value": "cito",
+         "text": "Cito"
+        },
+        {
+         "value": "elektif",
+         "text": "Elektif"
+        }
+       ],
+       "colCount": 2
+      },
+      {
+       "type": "multipletext",
+       "name": "question1",
+       "title": "Tempat Dirawat",
+       "hideNumber": true,
+       "items": [
+        {
+         "name": "ruang",
+         "title": "Ruang"
+        },
+        {
+         "name": "tgl",
+         "inputType": "date",
+         "title": "Tgl"
+        },
+        {
+         "name": "ruang1",
+         "title": "Ruang"
+        },
+        {
+         "name": "tgl1",
+         "inputType": "date",
+         "title": "Tgl"
+        },
+        {
+         "name": "tgl_keluar",
+         "title": "Tgl Keluar"
+        },
+        {
+         "name": "sebab_keluar",
+         "title": "Sebab Keluar"
+        },
+        {
+         "name": "diagnosa_akhir",
+         "title": "Diagnosa akhir"
+        }
+       ],
+       "colCount": 2
+      },
+      {
+       "type": "panel",
+       "name": "question96",
+       "elements": [
+        {
+         "type": "matrixdynamic",
+         "name": "question26",
+         "titleLocation": "hidden",
+         "hideNumber": true,
+         "columns": [
+          {
+           "name": "question56",
+           "title": "Operasi",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "ya",
+             "text": "Ya"
+            },
+            {
+             "value": "tidak",
+             "text": "Tidak"
+            }
+           ]
+          }
+         ],
+         "columnLayout": "vertical",
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "cellType": "text",
+         "allowAddRows": false,
+         "allowRemoveRows": false,
+         "rowCount": 1
+        }
+       ]
+      },
+      {
+       "type": "panel",
+       "name": "panel1",
+       "elements": [
+        {
+         "type": "text",
+         "name": "question6",
+         "title": "Faktor Resiko",
+         "titleLocation": "left",
+         "hideNumber": true
+        },
+        {
+         "type": "matrixdynamic",
+         "name": "question2",
+         "title": "Operasi",
+         "hideNumber": true,
+         "columns": [
+          {
+           "name": "ahli_bedah",
+           "title": "Ahli bedah "
+          },
+          {
+           "name": "scrub",
+           "title": "Scrub Nurse "
+          },
+          {
+           "name": "jenis",
+           "title": "Jenis operasi",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "apendik",
+             "text": "Apendik"
+            },
+            {
+             "value": "cabg",
+             "text": "CABG"
+            },
+            {
+             "value": "hernia",
+             "text": "Hernia"
+            }
+           ],
+           "hasOther": true,
+           "otherText": "lainya"
+          },
+          {
+           "name": "tipe_operasi",
+           "title": "Tipe  operasi",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "terbuka",
+             "text": "terbuka"
+            },
+            {
+             "value": "tertutup",
+             "text": "tertutup"
+            }
+           ]
+          },
+          {
+           "name": "jenis_luka",
+           "title": "Jenis luka",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "bersih",
+             "text": "bersih"
+            },
+            {
+             "value": "kontaminasi",
+             "text": "/ bersih kontaminasi"
+            },
+            {
+             "value": "konta",
+             "text": "kontaminasi"
+            },
+            {
+             "value": "kotor",
+             "text": "kotor"
+            }
+           ]
+          },
+          {
+           "name": "laporan",
+           "title": "Laporan Operasi",
+           "cellType": "radiogroup",
+           "choices": [
+            {
+             "value": "1 jam",
+             "text": "1 jam "
+            },
+            {
+             "value": "2 jam",
+             "text": "2 jam "
+            },
+            {
+             "value": "5 jam",
+             "text": "5 jam "
+            }
+           ]
+          },
+          {
+           "name": "asa",
+           "title": "ASA Score",
+           "cellType": "text"
+          },
+          {
+           "name": "resiko",
+           "title": "Risk Resiko",
+           "cellType": "text"
+          }
+         ],
+         "columnLayout": "vertical",
+         "choices": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "cellType": "text",
+         "allowAddRows": false,
+         "allowRemoveRows": false,
+         "rowCount": 1
+        }
+       ],
+       "visibleIf": "{question26[0].question56} = 'ya'"
+      },
+      {
+       "type": "matrixdynamic",
+       "name": "pemasangan",
+       "title": "Pemasangan Alat ",
+       "hideNumber": true,
+       "columns": [
+        {
+         "name": "intra_pasang",
+         "title": "Tanggal Infus Dipasang",
+         "cellType": "text",
+         "inputType": "date"
+        },
+        {
+         "name": "intra_lepas",
+         "title": "Tanggal Infus Dilepas",
+         "cellType": "text",
+         "inputType": "date"
+        },
+        {
+         "name": "intra2_pasang",
+         "title": "Tanggal CVL Dipasang\t",
+         "cellType": "text",
+         "inputType": "date"
+        },
+        {
+         "name": "intra2_lepas",
+         "title": "Tanggal CVL Dilepas\t",
+         "cellType": "text",
+         "inputType": "date"
+        },
+        {
+         "name": "intra3_pasang",
+         "title": "Tanggal UC Dipasang\t",
+         "cellType": "text",
+         "inputType": "date"
+        },
+        {
+         "name": "intra3_lepas",
+         "title": "Tanggal UC Dilepas\t",
+         "cellType": "text",
+         "inputType": "date"
+        },
+        {
+         "name": "intra4_pasang",
+         "title": "Tanggal ETT Dipasang",
+         "cellType": "text",
+         "inputType": "date"
+        },
+        {
+         "name": "intra4_lepas",
+         "title": "Tanggal ETT Dilepas",
+         "cellType": "text",
+         "inputType": "date"
+        },
+        {
+         "name": "bb",
+         "title": "BB Lahir ",
+         "cellType": "text"
+        },
+        {
+         "name": "bb1",
+         "title": "BB Sekarang ",
+         "cellType": "text"
+        },
+        {
+         "name": "status_gizi",
+         "title": "Status Gizi ",
+         "cellType": "text"
+        },
+        {
+         "name": "antibiotik",
+         "title": "Pemakaian antibiotika",
+         "cellType": "radiogroup",
+         "choices": [
+          {
+           "value": "profilaksis",
+           "text": "Profilaksis"
+          },
+          {
+           "value": "pengobatan",
+           "text": "Pengobatan"
+          }
+         ]
+        },
+        {
+         "name": "nama",
+         "title": "Nama /jenis obat\t",
+         "cellType": "text"
+        }
+       ],
+       "columnLayout": "vertical",
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "cellType": "text",
+       "allowAddRows": false,
+       "allowRemoveRows": false,
+       "rowCount": 1
+      },
+      {
+       "type": "matrixdynamic",
+       "name": "question3",
+       "titleLocation": "hidden",
+       "hideNumber": true,
+       "columns": [
+        {
+         "name": "pemeriksaan",
+         "title": "Pemeriksaan Kultur",
+         "cellType": "radiogroup",
+         "choices": [
+          {
+           "value": "Darah",
+           "text": "Darah"
+          },
+          {
+           "value": "Urine",
+           "text": "Urine"
+          },
+          {
+           "value": "Sputum",
+           "text": "Sputum"
+          },
+          {
+           "value": "Pus luka",
+           "text": "Pus luka"
+          }
+         ]
+        },
+        {
+         "name": "suhu",
+         "title": "Suhu",
+         "cellType": "text"
+        },
+        {
+         "name": "hasil",
+         "title": "hasil kultur",
+         "cellType": "text"
+        }
+       ],
+       "columnLayout": "vertical",
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "cellType": "text",
+       "allowAddRows": false,
+       "allowRemoveRows": false,
+       "rowCount": 1
+      },
+      {
+       "type": "matrixdynamic",
+       "name": "question4",
+       "title": "Infeksi HAls yang terjadi",
+       "hideNumber": true,
+       "columns": [
+         {
+            "name": "baktere",
+            "title": "Bakteremia \t",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "Sepsis",
+            "title": "Sepsis\t",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "vap",
+            "title": "VAP",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "infeksi",
+            "title": "Infeksi Saluran Kemih",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "infeksi1",
+            "title": "Infeksi Luka Operasi\t",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "plebitis",
+            "title": "Plebitis",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "dekubitus",
+            "title": "Terjadi Dekubitus",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "tirah_baring",
+            "title": "Pasien Tirah Baring",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "tirah_baring_mulai",
+            "title": "Tanggal Mulai",
+            "cellType": "text",
+            "inputType": "date",
+            "visibleIf": "{question4[0].tirah_baring} = 'y'"
+         },
+         {
+            "name": "tirah_baring_selesai",
+            "title": "Tanggal Selesai",
+            "cellType": "text",
+            "inputType": "date",
+            "visibleIf": "{question4[0].tirah_baring} = 'y'"
+         },
+         {
+            "name": "transfusi",
+            "title": "Pasien ditransfusi",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "respon",
+            "title": "Respon",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         },
+         {
+            "name": "lain",
+            "title": "Infeksi lain",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "y",
+              "text": "Ya"
+             },
+             {
+              "value": "t",
+              "text": "Tidak"
+             }
+            ]
+         }
+       ],
+       "columnLayout": "vertical",
+       "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "cellType": "text",
+       "allowAddRows": false,
+       "allowRemoveRows": false,
+       "rowCount": 1
+      }
+     ]
+    }
+   ]
+  }

@@ -1,0 +1,129 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "title": "Diagnosa Primer",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Diagnosa Sekunder",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "Tindakan",
+          "hideNumber": true
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "title": "Pemakaian Ventilator",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "Column 2",
+            "title": "Jam",
+            "cellType": "text",
+            "inputType": "time"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "Row 1",
+            "text": "Intubasi"
+           },
+           {
+            "value": "Row 2",
+            "text": "Ekstubasi"
+           }
+          ]
+         },
+         {
+          "type": "dropdown",
+          "name": "question9",
+          "title": "DPJP 1",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/dokter_konsul"
+          }
+         },
+         {
+          "type": "dropdown",
+          "name": "question10",
+          "startWithNewLine": false,
+          "title": "DPJP 2",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/dokter_konsul"
+          }
+         },
+         {
+          "type": "dropdown",
+          "name": "question5",
+          "title": "DPJP 3",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/dokter_konsul"
+          }
+         },
+         {
+          "type": "dropdown",
+          "name": "question6",
+          "startWithNewLine": false,
+          "title": "DPJP 4",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/dokter_konsul"
+          }
+         }
+        ]
+       }
+      ],
+      "title": "PEMAKAIAN VENTILATOR"
+     }
+    ]
+   }

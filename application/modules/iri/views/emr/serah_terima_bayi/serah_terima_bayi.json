@@ -1,0 +1,127 @@
+{
+    "title": "SERAH TERIMA BAYI DENGAN KELUARGA PASIEN ",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Telah diserahkan seorang bayi pada jam ",
+          "hideNumber": true,
+          "inputType": "time",
+          "placeHolder": "wib"
+         },
+         {
+          "type": "text",
+          "name": "question2",
+          "startWithNewLine": false,
+          "title": "Hari",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question3",
+          "startWithNewLine": false,
+          "title": "Tanggal",
+          "hideNumber": true,
+          "inputType": "datetime-local",
+          "placeHolder": "wib"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question4",
+          "title": "Kepada keluarga bayi (hubungan dengan pasien)",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama Bayi"
+           },
+           {
+            "name": "text2",
+            "title": "Jenis Kelamin"
+           },
+           {
+            "name": "text3",
+            "title": "No. Rekam Medis"
+           },
+           {
+            "name": "text4",
+            "title": "Nama Ibu"
+           },
+           {
+            "name": "text5",
+            "title": "No. Rekam Medis"
+           },
+           {
+            "name": "text6",
+            "title": "Alamat"
+           }
+          ]
+         },
+         {
+          "type": "signaturepad",
+          "name": "question6",
+          "title": "Keluarga yang menerima,",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question7",
+          "startWithNewLine": false,
+          "title": "Petugas yang menyerahkan,",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "question8",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Alamat"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question9",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Alamat"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

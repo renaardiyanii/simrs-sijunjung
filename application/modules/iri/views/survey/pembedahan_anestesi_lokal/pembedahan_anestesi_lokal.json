@@ -1,0 +1,223 @@
+{
+    "title": "LAPORAN PEMBEDAHAN DENGAN ANESTESI LOKAL",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "ahli_bedah",
+          "title": "Ahli bedah"
+         },
+         {
+          "name": "instrumentator",
+          "title": "Instrumentator"
+         },
+         {
+          "name": "asisten",
+          "title": "Asisten"
+         },
+         {
+          "name": "pembiusan",
+          "title": "Jenis pembiusan\t"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question2",
+        "title": "Macam Pembedahan ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "kecil",
+          "text": "Kecil"
+         },
+         {
+          "value": "khusus",
+          "text": "Khusus 1"
+         },
+         {
+          "value": "darurat",
+          "text": "Darurat Gawat"
+         },
+         {
+          "value": "bersih",
+          "text": "Bersih"
+         },
+         {
+          "value": "tercemar",
+          "text": "Tercemar"
+         },
+         {
+          "value": "sedang",
+          "text": "Sedang"
+         },
+         {
+            "value": "Khusus 2",
+            "text": "Khusus 2"
+           },
+           {
+            "value": "Berencana",
+            "text": "Berencana"
+           },
+           {
+            "value": "Bersih tercemar",
+            "text": "Bersih tercemar"
+           },
+           {
+            "value": "Kotor",
+            "text": "Kotor"
+           },
+           {
+            "value": "Besar",
+            "text": "Besar"
+           }
+
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "comment",
+        "name": "tindakan",
+        "title": "Tindakan pra bedah",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "tindakan1",
+        "title": "Tindakan pembedahan",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa",
+        "title": "Diagnosa pasca bedah",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "ahli_bius",
+        "title": "Ahli bius ",
+        "hideNumber": true
+       },
+       {
+        "type": "multipletext",
+        "name": "question3",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "cara_pembiusan",
+          "title": "Cara Pembiusan"
+         },
+         {
+          "name": "mulai",
+          "title": "Mulai"
+         },
+         {
+          "name": "selesai",
+          "title": "Selesai"
+         },
+         {
+          "name": "lama_pembedahan",
+          "title": "Lama pembedahan"
+         },
+         {
+          "name": "ok",
+          "title": "OK"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "multipletext",
+        "name": "question4",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "posisi",
+          "title": "Posisi pasien:"
+         },
+         {
+          "name": "jam",
+          "inputType": "time",
+          "title": "Jam"
+         },
+         {
+            "name": "selesai",
+            "title": "selesai"
+           },
+           {
+            "name": "jam1",
+            "inputType": "time",
+            "title": "Jam"
+           }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "html",
+        "name": "question5",
+        "html": "<p> URAIAN PEMBEDAHAN </p>\n<p> Uraian dimulai dari bagian tubuh yang dibedah, cara penemuan tindakan yang dilakukan, explorasi, indikasi dan tindakan macam penutupan luka, dengan lengkap dan jelas, jaringan yang dikeluarkan drainage, darah yang keluar"
+       },
+       {
+        "type": "comment",
+        "name": "question6",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "comment",
+        "name": "komplikasi",
+        "title": "Komplikasi",
+        "hideNumber": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "jangan",
+        "title": "Jaringan dikirim ke patologi ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "ya",
+          "text": "Ya"
+         },
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "asal",
+        "title": "Asal jaringan :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "ahli_bedah",
+        "width": 200,
+        "title": "Ahli Bedah",
+        "hideNumber": true,
+        "height": 150,
+        "penColor": "#000000"
+       },
+       {
+        "type": "text",
+        "name": "nama",
+        "title": "(Nama Lengkap)",
+        "titleLocation": "bottom",
+        "hideNumber": true,
+        "size": 30
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,136 @@
+{
+    "title": "Lembar Formulir Rawat jalan layanan kedokteran fisik dan rehabilitas",
+    "logoPosition": "right",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question1",
+          "title": "Hubungan dengan keluarga",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "suami",
+            "text": "Suami/istri"
+           },
+           {
+            "value": "anak",
+            "text": "Anak"
+           }
+          ],
+          "colCount": 2
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "title": "II. DIisi oleh Dokter SpKFR",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "tgl",
+            "inputType": "date",
+            "title": "Tanggal pelayanan"
+           },
+           {
+            "name": "Anamnesa",
+            "title": "Anamnesa"
+           },
+           {
+            "name": "pemeriksaan_fisik",
+            "title": "Pemeriksaan fisik dan Uji fungsi"
+           },
+           {
+            "name": "diagnosa_medis",
+            "title": "Diagnosa medis (ICD-10)"
+           },
+           {
+            "name": "diagnosa_fungsi",
+            "title": "Diagnosa fungsi (ICD-10)"
+           },
+           {
+            "name": "penunjang",
+            "title": "Pemeriksaan penunjang"
+           },
+           {
+            "name": "tata_laksana",
+            "title": "Tata laksana KFR (ICD 9 CM)"
+           },
+           {
+            "name": "anjuran",
+            "title": "Anjuran"
+           },
+           {
+            "name": "evaluasi",
+            "title": "Evaluasi"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "question4",
+        "title": "Suspek penykit akibat kerja",
+        "choices": [
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         }
+        ],
+        "otherText": "Ya",
+        "colCount": 2
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "ttd",
+          "title": "Tanda tangan pasien",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "nama lengkap",
+          "title": "Nama lengkap",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "question5",
+          "title": "Cap dan Tanda tangan dr. SpKR",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "Nama lengkap",
+          "hideNumber": true
+         }
+        ],
+        "startWithNewLine": false
+       }
+      ]
+     }
+    ],
+    "showPageTitles": false
+   }

@@ -1,0 +1,196 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "diagnosis_medis",
+        "title": "Diagnosis Medis",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "1",
+          "title": "Apakah pasien tampak kurus?",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak"
+           },
+           {
+            "value": "1",
+            "text": "Ya"
+           }
+          ]
+         },
+         {
+          "name": "kondisi",
+          "title": " Apakah terdapat salah satu dari kondisi berikut?",
+          "cellType": "checkbox",
+          "colCount": 1,
+          "choices": [
+           {
+            "value": "Diare kronik (lebih dari 2 minggu)",
+            "text": "Diare kronik (lebih dari 2 minggu)"
+           },
+           {
+            "value": "Penyakit Jantung Bawaan",
+            "text": "Penyakit Jantung Bawaan"
+           },
+           {
+            "value": "Infeksi Human Immunodeficiency Virus (HIV)",
+            "text": "Infeksi Human Immunodeficiency Virus (HIV)"
+           },
+           {
+            "value": "Kanker",
+            "text": "Kanker"
+           },
+           {
+            "value": "Penyakit hati kronik",
+            "text": "Penyakit hati kronik"
+           },
+           {
+            "value": "Penyakit Ginjal kronik",
+            "text": "Penyakit Ginjal kronik"
+           },
+           {
+            "value": "TB Paru",
+            "text": "TB Paru"
+           },
+           {
+            "value": "Luka bakar luas",
+            "text": "Luka bakar luas"
+           },
+           {
+            "value": "Lain-lain (berdasarkan pertimbangan dokter)",
+            "text": "Lain-lain (berdasarkan pertimbangan dokter)"
+           },
+           {
+            "value": "Kelainan anatomi daerah mulut yang menyebabkan kesulitan makan (misal: bibir sumbing)",
+            "text": "Kelainan anatomi daerah mulut yang menyebabkan kesulitan makan (misal: bibir sumbing)"
+           },
+           {
+            "value": "Trauma",
+            "text": "Trauma"
+           },
+           {
+            "value": "Kelainan metabolik bawaan",
+            "text": "Kelainan metabolik bawaan"
+           },
+           {
+            "value": "Retardasi mental",
+            "text": "Retardasi mental"
+           },
+           {
+            "value": "Keterlambatan perkembangan",
+            "text": "Keterlambatan perkembangan"
+           },
+           {
+            "value": "Rencana/paskaoperasi mayor (misal: laparotomi, Torakotomi)",
+            "text": "Rencana/paskaoperasi mayor (misal: laparotomi, Torakotomi)"
+           },
+           {
+            "value": "p.\tTerpasang stoma",
+            "text": "Terpasang stoma"
+           }
+          ]
+         },
+         {
+          "name": "2",
+          "title": " ",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak"
+           },
+           {
+            "value": "2",
+            "text": "Ya"
+           }
+          ]
+         },
+         {
+          "name": "kondisi1",
+          "title": " Apakah terdapat salah satu dari kondisi berikut?",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "Diare ≥ 5 kali/hari dan atau muntah> 3 kali/hari dalam seminggu terakhir",
+            "text": "Diare ≥ 5 kali/hari dan atau muntah> 3 kali/hari dalam seminggu terakhir"
+           },
+           {
+            "value": "Asupan makanan berkurang selama 1 minggu terakhir",
+            "text": "Asupan makanan berkurang selama 1 minggu terakhir"
+           }
+          ]
+         },
+         {
+          "name": "3",
+          "title": " ",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak"
+           },
+           {
+            "value": "1",
+            "text": "Ya"
+           }
+          ]
+         },
+         {
+          "name": "4",
+          "title": "Apakah terdapat penurunan berat badan atau tidak ada penambahan berat badan      (bayi< 1 tahun) selama beberapa minggu/bulan terakhir?",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak"
+           },
+           {
+            "value": "1",
+            "text": "Ya"
+           }
+          ]
+         },
+         {
+          "name": "total_skor",
+          "title": "Total Skor",
+          "cellType": "expression",
+          "expression": "{row.1}+{row.2}+{row.3}+{row.4}"
+         },
+         {
+          "name": "hasil_skor",
+          "title": "Hasil Total Skor",
+          "cellType": "expression",
+          "expression": "iif({row.total_skor} < 4,'Berisiko menengah, dirujuk ke Tim Terapi Gizi (TTG),  monitoring  asupan makan setiap 3 hari', iif({row.total_skor} > 3,'Berisiko tinggi, dirujuk ke Tim Terapi Gizi (TTG),  monitoring  asupan  makan setiap hari',iif({row.total_skor} = 0,'Berisiko rendah, ulangi skrining setiap 7 hari'))"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2
+        ],
+        "cellType": "checkbox",
+        "rows": [
+         {
+          "value": "1",
+          "text": "Skor"
+         }
+        ]
+       }
+      ],
+      "title": "SKRINING GIZI ANAK LANJUT ( Berdasarkan Metode Strong KIDS )"
+     }
+    ]
+   }

@@ -1,0 +1,583 @@
+{
+    "title": "CATATAN KEPERAWATAN DAN PONEK",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "title": "Keluhan "
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Masalah keperawatan /  kebidanan"
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "Diagnosa keperawatan/kebidanan"
+         },
+         {
+          "type": "comment",
+          "name": "question13",
+          "title": "Catatan keperawatan / Catatan ponek"
+         },
+         {
+          "type": "comment",
+          "name": "question14",
+          "title": "Daftar Pemberian terapi \nPonek/Kamar bersalin"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "1. Mengatur poisisi pasien"
+           },
+           {
+            "value": "item2",
+            "text": "2. Kompres hangat/dingin"
+           },
+           {
+            "value": "item3",
+            "text": "3. Pemberian cairan paretaral"
+           },
+           {
+            "value": "item4",
+            "text": "4. Ganti perban luka bersih"
+           },
+           {
+            "value": "item5",
+            "text": "5.  Ganti perban luka kotor"
+           },
+           {
+            "value": "item6",
+            "text": "6. Perawatan luka bersih"
+           },
+           {
+            "value": "item7",
+            "text": "7. Perawatan luka kotor"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question5",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "8. Heacting luka bersih"
+           },
+           {
+            "value": "item2",
+            "text": "9. Heating luka kotor"
+           },
+           {
+            "value": "item3",
+            "text": "10. Hitung beban cairan"
+           },
+           {
+            "value": "item4",
+            "text": "11. Memandikan pasien"
+           },
+           {
+            "value": "item5",
+            "text": "12. Oral hygine"
+           },
+           {
+            "value": "item6",
+            "text": "13. Vulva  Hygine"
+           },
+           {
+            "value": "item7",
+            "text": "14. Pemantauan monitor"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question6",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "15. Perawatan BBL"
+           },
+           {
+            "value": "item2",
+            "text": "16. Observasi pasca rujukan"
+           },
+           {
+            "value": "item3",
+            "text": "17. Edukasi"
+           },
+           {
+            "value": "item4",
+            "text": "18. Perawatan Jenazah"
+           },
+           {
+            "value": "item5",
+            "text": "19. Pemberian 02"
+           },
+           {
+            "value": "item6",
+            "text": "20. Febriding"
+           }
+          ]
+         }
+        ],
+        "title": "C. Asuhan Keperawatan"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question7",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "1. Injeksi"
+           },
+           {
+            "value": "item2",
+            "text": "2. IUFD"
+           },
+           {
+            "value": "item3",
+            "text": "3. NGT"
+           },
+           {
+            "value": "item4",
+            "text": "4. Kateter"
+           },
+           {
+            "value": "item5",
+            "text": "5. Skin Tes"
+           },
+           {
+            "value": "item6",
+            "text": "6. Obat suppos"
+           },
+           {
+            "value": "item7",
+            "text": "7. Obat Oles"
+           },
+           {
+            "value": "item8",
+            "text": "8. Spuling mata"
+           },
+           {
+            "value": "item9",
+            "text": "9. Pemberian obat oral"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question8",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "10. Heating"
+           },
+           {
+            "value": "item2",
+            "text": "11. Pemasangan IUVD Umbilikal"
+           },
+           {
+            "value": "item3",
+            "text": "12. Nebulizer"
+           },
+           {
+            "value": "item4",
+            "text": "13. Suction"
+           },
+           {
+            "value": "item5",
+            "text": "14. NRM"
+           },
+           {
+            "value": "item6",
+            "text": "15. Pemberian obat infus pam"
+           },
+           {
+            "value": "item7",
+            "text": "16. Pemberian obat siring pam"
+           },
+           {
+            "value": "item8",
+            "text": "17. RJP"
+           },
+           {
+            "value": "item9",
+            "text": "18. Obat pervaginam"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question9",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "19. Tampon vagina"
+           },
+           {
+            "value": "item2",
+            "text": "20. Tampon hidung"
+           },
+           {
+            "value": "item3",
+            "text": "21. Transfusi"
+           },
+           {
+            "value": "item4",
+            "text": "22. Pengambilan sample darah"
+           },
+           {
+            "value": "item5",
+            "text": "23. Pengambilan sample cairan"
+           },
+           {
+            "value": "item6",
+            "text": "24. Aff Infu"
+           },
+           {
+            "value": "item7",
+            "text": "25. Aff Kateter"
+           },
+           {
+            "value": "item8",
+            "text": "26. EKG"
+           },
+           {
+            "value": "item9",
+            "text": "27. RJP BBL (Neo Puff)"
+           },
+           {
+            "value": "item10",
+            "text": "28. Imunisasi"
+           },
+           {
+            "value": "item11",
+            "text": "29. Aff tampon"
+           }
+          ]
+         }
+        ],
+        "title": "D. Tindakan pendelegasian"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question10",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "1. Pemantauan Kala I"
+           },
+           {
+            "value": "item2",
+            "text": "2. Persalinan kala II"
+           },
+           {
+            "value": "item3",
+            "text": "3. Pertolongan kala III"
+           },
+           {
+            "value": "item4",
+            "text": "4. Pemantauan kala IV"
+           },
+           {
+            "value": "item5",
+            "text": "5. Vacum"
+           },
+           {
+            "value": "item6",
+            "text": "6. KBI / KBE"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question11",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "7. Pemantauan drip induksi"
+           },
+           {
+            "value": "item2",
+            "text": "8. Heating  vagina derajat I,II,III,IV"
+           },
+           {
+            "value": "item3",
+            "text": "9. Heating porsio"
+           },
+           {
+            "value": "item4",
+            "text": "10. Eksplorasi vacum uterus"
+           },
+           {
+            "value": "item5",
+            "text": "11. masase uterus"
+           },
+           {
+            "value": "item6",
+            "text": "12. Pemasangan IUD"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question12",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "13. Pemasangan laminaria"
+           },
+           {
+            "value": "item2",
+            "text": "14. USG"
+           },
+           {
+            "value": "item3",
+            "text": "15. CTG"
+           },
+           {
+            "value": "item4",
+            "text": "16. Inspekulo"
+           },
+           {
+            "value": "item5",
+            "text": "17. Manual Plasenta"
+           },
+           {
+            "value": "item6",
+            "text": "18. Dopler"
+           },
+           {
+            "value": "item7",
+            "text": "19. Persalinan Dengan Letak Sungsang"
+           }
+          ]
+         }
+        ],
+        "title": "E. Tindakan Kebidanan"
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,200 @@
+{
+    "title": "PERSETUJUAN IZIN OPERASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "title": "Saya yang bertandatangan dibawah ini :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Umur"
+           },
+           {
+            "name": "text5",
+            "title": "Jenis kelamin"
+           },
+           {
+            "name": "text3",
+            "title": "Alamat"
+           },
+           {
+            "name": "text4",
+            "title": "Bukti diri/ KTP"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "question2",
+          "title": "Dengan ini menyatakan dengan sesungguhnya telah menyetujui untuk dilakukan pembedahan/ operasi",
+          "hideNumber": true
+         },
+         {
+          "type": "html",
+          "name": "question3",
+          "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 14px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 14px;\n        }\n    </style>\n</head>\n<p>dalam narkose umum/ regional. Untuk itu kami tidak akan menuntut Dokter / Rumah Sakit/ Perawat/ Bidan/ Penata Anastesi di kemudian hari dalam bentuk apapun seandainya terjadi komplikasi Operasi/ Anastesi sebelum, selama dan sesudah Operasi berlangsung sesuai dengan yang diterangkan dokter dan bersedia membayar sesuai kesepakatan."
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "title": "Untuk dilakukan tindakan medis berupa  :",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "Terhadap",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "saya sendiri"
+           },
+           {
+            "value": "item2",
+            "text": "Istri"
+           },
+           {
+            "value": "item3",
+            "text": "suami"
+           },
+           {
+            "value": "item4",
+            "text": "anak"
+           },
+           {
+            "value": "item5",
+            "text": "ibu saya"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 5
+         },
+         {
+          "type": "multipletext",
+          "name": "question6",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Umur"
+           },
+           {
+            "name": "text5",
+            "title": "Jenis kelamin"
+           },
+           {
+            "name": "text3",
+            "title": "Alamat"
+           },
+           {
+            "name": "text4",
+            "title": "Bukti diri/ KTP"
+           },
+           {
+            "name": "text6",
+            "title": "Dirawat di"
+           },
+           {
+            "name": "text7",
+            "title": "No Rekam Medis"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question7",
+          "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 14px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 14px;\n        }\n    </style>\n</head>\n<p>Yang tujuan, sifat dan perlunya tindakan medis tersebut diatas, serta resiko yang dapat ditimbulkannya telah cukup dijelaskan oleh dokter dan telah saya mengerti sepenuhnya.\n<p>Demikianlah pernyataan ini saya buat dengan penuh kesadaran dan tanpa paksaan.\n"
+         },
+         {
+          "type": "text",
+          "name": "question9",
+          "title": "Tanah Bandantuan",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "panel",
+          "name": "panel2",
+          "elements": [
+           {
+            "type": "signaturepad",
+            "name": "question8",
+            "title": "Penanggung Jawab pasien",
+            "hideNumber": true
+           },
+           {
+            "type": "signaturepad",
+            "name": "question10",
+            "startWithNewLine": false,
+            "title": "Penderita ",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question11",
+            "titleLocation": "hidden"
+           },
+           {
+            "type": "text",
+            "name": "question12",
+            "startWithNewLine": false,
+            "titleLocation": "hidden"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel3",
+          "elements": [
+           {
+            "type": "signaturepad",
+            "name": "question13",
+            "title": "Saksi\nPerawat\n",
+            "hideNumber": true
+           },
+           {
+            "type": "signaturepad",
+            "name": "question14",
+            "startWithNewLine": false,
+            "title": "Dokter yang merawat",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question15",
+            "titleLocation": "hidden"
+           },
+           {
+            "type": "text",
+            "name": "question16",
+            "startWithNewLine": false,
+            "titleLocation": "hidden"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

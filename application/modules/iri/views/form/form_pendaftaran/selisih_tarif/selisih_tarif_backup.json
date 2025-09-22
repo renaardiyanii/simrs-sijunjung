@@ -1,0 +1,79 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "data",
+        "title": "Saya yang bertanda tangan dibawah ini :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama"
+         },
+         {
+          "name": "text2",
+          "title": "No KTP"
+         },
+         {
+          "name": "text4",
+          "title": "Umur"
+         },
+         {
+          "name": "text3",
+          "title": "Alamat\t"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question2",
+        "title": "Adalah",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 34
+       },
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "title": "dari pasien :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama"
+         },
+         {
+          "name": "text2",
+          "title": "No KTP"
+         },
+         {
+          "name": "text3",
+          "title": "Alamat"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question4",
+        "html": "<p style=\"font-size:12px\">Dengan ini menyatakan bersedia membayar selisih tarif sesuai aturan yang berlaku di Rumah Sakit Otak DR.Drs.M.Hatta Bukittinggi  tentang : PENETAPAN PENGENAAN SELISIH BIAYA DALAM PROGRAM JAMINAN KESEHATAN</p>"
+       },
+       {
+        "type": "html",
+        "name": "question5",
+        "html": "Pasal 3 : <br>\n\n1.\tPeningkatan kelas perawatan yang lebih tinggi dari haknya hanya dapat dilakukan satu tingkat lebih tinggi dari kelas yang menjadi hak peserta.<br>\n\nUntuk peningkatan kelas perawatan yang melebihi satu tingkat dari kelas rawatan yang menjadi hak peserta tidak dijamin oleh BPJS (menjadi pasien umum dan berlaku tarif sesuai ketentuan Rumah Sakit Otak DR.Drs.M. Hatta Bukittinggi).\n<br>\nPasal 4 :<br>\n\n1.\tUntuk peningkatan kelas pelayanan rawat inap dari kelas III (tiga) ke kelas II (dua), atau dari kelas II (dua) ke kelas I (satu), dikenakan selisih biaya yang dihitung berdasarkan Tarif INA-CBGs pada kelas rawat inap yang lebih tinggi yang dipilih dengan Tarif INA-CBGs pada kelas rawat inap yang sesuai dengan hak peserta ;<br>\n2.\tUntuk peningkatan kelas pelayanan rawat inap dari kelas I (satu) ke kelas VIP dikenakan selisih biaya dengan perhitungan sebagai berikut :<br>\na.\tBagi peserta BPJS yang dirawat selama 1-3 hari di ruangan rawat inap VIP dikenakan tambahan biaya sebesar 30% dari tarif INA-CBGs kelas I (satu) <br>\nb.\tBagi peserta BPJS yang dirawat selama 4-7 hari di ruangan rawat inap VIP dikenakan tambahan biaya sebesar 50% dari tarif INA-CBGs kelas I (satu)<br>\nc.\tBagi peserta BPJS yang dirawat selama > 7 hari di ruangan rawat inap VIP dikenakan tambahan biaya sebesar 75% dari tarif INA-CBGs kelas I (satu)<br>\nDemikianlah surat pernyataan ini dibuat untuk digunakan seperlunya.\n"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question7",
+        "title": "Yang Menyatakan,",
+        "hideNumber": true,
+        "penColor": "#0a0a0a"
+       }
+      ],
+      "title": "SURAT PERNYATAAN SELISIH TARIF"
+     }
+    ]
+   }

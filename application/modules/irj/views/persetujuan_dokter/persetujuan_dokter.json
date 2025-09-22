@@ -1,0 +1,344 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "title": "PEMBERIAN INFORMASI",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Dokter Pelaksana Tindakan"
+         },
+         {
+          "name": "text2",
+          "title": "Pemberi Informasi\t"
+         },
+         {
+          "name": "text3",
+          "title": "Penerima informasi/pemberi persetujuan *"
+         },
+         {
+          "name": "text4",
+          "inputType": "datetime-local",
+          "title": "Diberikanpada waktu"
+         }
+        ]
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "isi_informasi",
+          "title": "ISI INFORMASI",
+          "cellType": "text"
+         },
+         {
+          "name": "ckls",
+          "title": "TANDA (√ )",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "1",
+            "text": " "
+           }
+          ]
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": "Diagnosis (WD dan DD)"
+         },
+         {
+          "value": "Row 2",
+          "text": "Dasar diagnosis"
+         },
+         {
+          "value": "Row 3",
+          "text": "Tindakan Kedokteran"
+         },
+         {
+          "value": "Row 4",
+          "text": "Indikasi Tindakan"
+         },
+         {
+          "value": "Row 5",
+          "text": "Tata Cara"
+         },
+         {
+          "value": "Row 6",
+          "text": "Tujuan"
+         },
+         {
+          "value": "Row 7",
+          "text": "Risiko"
+         },
+         {
+          "value": "Row 8",
+          "text": "Komplikasi"
+         },
+         {
+          "value": "Row 9",
+          "text": "Prognosis"
+         },
+         {
+          "value": "Row 10",
+          "text": "Alternatif & Resiko"
+         },
+         {
+          "value": "Row 11",
+          "text": "Lain-Lain"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question3",
+        "html": "Dengan ini menyatakan bahwa saya telah menerangkan hal-hal di atas secara benar dan jelas dan memberikan kesempatan untuk bertanya dan/atau berdiskusi"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question4",
+        "width": 150,
+        "minWidth": "150px",
+        "startWithNewLine": false,
+        "title": "Tandatangan",
+        "hideNumber": true,
+        "height": 150,
+        "penColor": "#171c1b"
+       },
+       {
+        "type": "html",
+        "name": "question5",
+        "html": "<p style=\"font-size:12px\">Dengan ini menyatakan bahwa saya telah menerima informasi sebagaimana di atas yang saya beri tanda/paraf di kolom kanannya serta telah diberi kesempatan untuk bertanya/berdiskusi, dan telah memahaminya</p>"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question6",
+        "width": 150,
+        "startWithNewLine": false,
+        "title": "Tandatangan",
+        "hideNumber": true,
+        "height": 150,
+        "penColor": "#4f4f4f"
+       },
+       {
+        "type": "html",
+        "name": "question7",
+        "html": "* Bila pasien tidak kompeten atau tidak mau menerima informasi, maka penerima informasi adalah wali atau   \n Keluarga terdekat\n"
+       },
+       {
+        "type": "html",
+        "name": "question8",
+        "html": "<h5>PERSETUJUAN TINDAKAN KEDOKTERAN</h5>"
+       },
+       {
+        "type": "html",
+        "name": "question20",
+        "html": "Yang bertandatangan di bawah ini, saya , \n"
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question13",
+        "title": "Yang bertandatangan di bawah ini, saya , ",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "Nama",
+          "cellType": "text"
+         },
+         {
+          "name": "tgl_lahir",
+          "title": "Tanggal Lahir",
+          "cellType": "datepicker"
+         },
+         {
+          "name": "jns_kel3",
+          "title": "Jenis Kelamin",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "l",
+            "text": "Laki Laki"
+           },
+           {
+            "value": "p",
+            "text": "Perempuan"
+           }
+          ]
+         },
+         {
+          "name": "alamat",
+          "title": "Alamat",
+          "cellType": "text"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         " "
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question21",
+        "html": "dengan ini menyatakan persetujuan untuk dilakukannya tindakan"
+       },
+       {
+        "type": "text",
+        "name": "question10",
+        "startWithNewLine": false,
+        "title": "terhadap saya / ",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "size": 18
+       },
+       {
+        "type": "html",
+        "name": "question22",
+        "html": "terhadap saya / "
+       },
+       {
+        "type": "text",
+        "name": "question9",
+        "startWithNewLine": false,
+        "title": " ",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 28
+       },
+       {
+        "type": "html",
+        "name": "question23",
+        "startWithNewLine": false,
+        "html": " saya "
+       },
+       {
+        "type": "matrixdropdown",
+        "name": "question11",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "Column 1",
+          "title": "saya* bernama ",
+          "cellType": "text"
+         },
+         {
+          "name": "Column 2",
+          "title": "tanggal lahir ",
+          "cellType": "datepicker"
+         },
+         {
+          "name": "Column 3",
+          "title": "jenis Kelamin",
+          "cellType": "radiogroup",
+          "choices": [
+           {
+            "value": "l",
+            "text": "Laki laki"
+           },
+           {
+            "value": "p",
+            "text": "Perempuan"
+           }
+          ]
+         },
+         {
+          "name": "Column 4",
+          "title": "Alamat",
+          "cellType": "text"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "Row 1",
+          "text": " "
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question12",
+        "html": "Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah dijelaskan seperti di atas kepada saya, termasuk risiko dan komplikasi yang mungkin timbul. Saya juga menyadari bahwa oleh karena ilmu kedokteran bukanlah ilmu pasti, maka keberhasilan tindakan kedokteran bukanlah keniscayaan, melainkan sangat bergantung kepada izin Tuhan Yang Maha Esa. "
+       },
+       {
+        "type": "signaturepad",
+        "name": "question14",
+        "title": "Yang menyatakan *",
+        "hideNumber": true,
+        "penColor": "#3d3d3d"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question16",
+        "startWithNewLine": false,
+        "title": "Saksi 1 ",
+        "hideNumber": true,
+        "penColor": "#3b3f3e"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question15",
+        "startWithNewLine": false,
+        "title": "Saksi 2",
+        "hideNumber": true,
+        "penColor": "#292929"
+       },
+       {
+        "type": "text",
+        "name": "question17",
+        "title": " ",
+        "hideNumber": true,
+        "size": 38
+       },
+       {
+        "type": "text",
+        "name": "question19",
+        "startWithNewLine": false,
+        "title": " ",
+        "hideNumber": true,
+        "size": 38
+       },
+       {
+        "type": "text",
+        "name": "question18",
+        "startWithNewLine": false,
+        "title": " ",
+        "hideNumber": true,
+        "size": 38
+       }
+      ],
+      "title": "PERSETUJUAN TINDAKAN KEDOKTERAN"
+     }
+    ]
+   }

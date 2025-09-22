@@ -1,0 +1,668 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question2",
+        "html": "<h5>Asesmen Awal / Ulang Tanggal :"
+       },
+       {
+        "type": "text",
+        "name": "question5",
+        "titleLocation": "hidden",
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "html",
+        "name": "question11",
+        "html": "<h5>1.          Gejala seperti mau muntah dan kesulitan bernafas "
+       },
+       {
+        "type": "checkbox",
+        "name": "question3",
+        "title": "1.1 Kegawatan pernafasan :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Dyspnoe"
+         },
+         {
+          "value": "item2",
+          "text": "Nafas cepat dan dangkal"
+         },
+         {
+          "value": "item3",
+          "text": "Nafas lambat"
+         },
+         {
+          "value": "item4",
+          "text": "Nafas Tak teratur"
+         },
+         {
+          "value": "item5",
+          "text": "Nafas melalui mulut"
+         },
+         {
+          "value": "item6",
+          "text": "Mukosa oral kering"
+         },
+         {
+          "value": "item7",
+          "text": "Ada sekret"
+         },
+         {
+          "value": "item8",
+          "text": "SpO2<normal"
+         },
+         {
+          "value": "item9",
+          "text": "T.A.K"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "checkbox",
+        "name": "question4",
+        "title": "1.2 Kehilangan Tonus otot : ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Penurunan Pergerakan tubuh "
+         },
+         {
+          "value": "item2",
+          "text": "Sulit Berbicara  "
+         },
+         {
+          "value": "mual",
+          "text": "Mual"
+         },
+         {
+          "value": "item3",
+          "text": "Sulit menelan\t"
+         },
+         {
+          "value": "item4",
+          "text": "Distensi Abdomen "
+         },
+         {
+          "value": "item5",
+          "text": "Inkontinensia Urine "
+         },
+         {
+          "value": "item6",
+          "text": "Inkontinensia alvi "
+         },
+         {
+          "value": "T.A.K",
+          "text": "T.A.K"
+         }
+        ],
+        "otherText": "T.A.K  ",
+        "colCount": 3
+       },
+       {
+        "type": "checkbox",
+        "name": "question6",
+        "title": "1.3 Nyeri :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Ya",
+        "colCount": 0
+       },
+       {
+        "type": "checkbox",
+        "name": "question8",
+        "title": "1.4 Perlambatan Sirkulasi : ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Bercak dan sianosis pada ekstremitas "
+         },
+         {
+          "value": "item2",
+          "text": "Kulit dingin dan berkeringat "
+         },
+         {
+          "value": "item10",
+          "text": "Tekanan Darah menurun "
+         },
+         {
+            "value": "item11",
+            "text": "Gelisah  "
+           },
+         {
+          "value": "item12",
+          "text": "Lemas"
+         },
+         {
+          "value": "item13",
+          "text": "Nadi lambat dan lemah"
+         },
+         {
+          "value": "item15",
+          "text": "T.A.K"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question92",
+        "title": "2. Faktor-faktor yang meningkatkan dan membangkitkan gejala fisik :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Melakukan aktivitas fisik"
+         },
+         {
+          "value": "item2",
+          "text": "Pindah posisi "
+         }
+        ],
+        "hasOther": true,
+        "otherText": " ",
+        "colCount": 2
+       },
+       {
+        "type": "html",
+        "name": "question10",
+        "html": "<h5>3. Manajemen gejala saat ini ada respon pasien : \n    <p>"
+       },
+       {
+        "type": "checkbox",
+        "name": "question9",
+        "title": "Masalah keperawatan ",
+        "hideNumber": true,
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Mual"
+         },
+         {
+          "value": "item2",
+          "text": "Pola Nafas tidak aktif"
+         },
+         {
+          "value": "item3",
+          "text": "Bersihan jalan  nafas tidak efektif"
+         },
+         {
+          "value": "item4",
+          "text": "Perubahan persepsi sensori"
+         },
+         {
+          "value": "item5",
+          "text": "Konstipasi"
+         },
+         {
+          "value": "item6",
+          "text": "Defisit perawatan diri"
+         },
+         {
+          "value": "item7",
+          "text": "Nyeri akut"
+         },
+         {
+          "value": "item8",
+          "text": "Nyeri Kronis"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "html",
+        "name": "question13",
+        "html": "<h5>4. Orientasi spiritual pasien dan keluarga : "
+       },
+       {
+        "type": "checkbox",
+        "name": "question12",
+        "title": "Apakah perlu pelayanan spiritual ? ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Ya,Oleh",
+        "colCount": 2
+       },
+       {
+        "type": "html",
+        "name": "question16",
+        "html": "<h5>5. Urusan dan kebutuhan spiritual pasien dan keluarga seperti putus asa, penderitaan, rasa bersalah atau pengampunan : "
+       },
+       {
+        "type": "checkbox",
+        "name": "question15",
+        "title": "Perlu didoakan :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item3",
+          "text": "Ya"
+         },
+         {
+          "value": "item4",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question17",
+        "title": "Perlu bimbingan rohani :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item3",
+          "text": "Ya"
+         },
+         {
+          "value": "item4",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question18",
+        "title": "Perlu pendampingan rohani \t:",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item3",
+          "text": "Ya"
+         },
+         {
+          "value": "item4",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "html",
+        "name": "question19",
+        "html": "<h5>6. Status psikososial dan keluarga : "
+       },
+       {
+        "type": "checkbox",
+        "name": "question7",
+        "title": "6.1 Apakah ada orang yang ingin dihubungi saat ini?",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Ya,Siapa",
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "question22",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "Hubungan dengan pasien sebagai :",
+          "size": 45
+         },
+         {
+          "name": "Dimana :",
+          "size": 45
+         },
+         {
+          "name": "No. Telpon/HP :",
+          "inputType": "text",
+          "size": 45
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question23",
+        "title": "6.2 Bagaimana rencana perawatan selanjutnya? ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tetap dirawat di RS "
+         },
+         {
+          "value": "item2",
+          "text": "Dirawat di rumah "
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question24",
+        "title": "Apakah lingkungan rumah sudah disiapkan ?",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Ya"
+         },
+         {
+          "value": "item2",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question27",
+        "title": "Jika Ya, apakah ada yang mampu merawat pasien di rumah ?\t",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Ya,Siapa",
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question25",
+        "title": "Jika tidak, apakah perlu difasilitasi RS (Home Care)?",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Ya"
+         },
+         {
+          "value": "item2",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "html",
+        "name": "question28",
+        "html": "<h5>6.3 Reaksi pasien atas penyakitnya "
+       },
+       {
+        "type": "checkbox",
+        "name": "question29",
+        "title": "Asesmen informasi ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Menyangkal "
+         },
+         {
+          "value": "item2",
+          "text": "Sedih / menangis "
+         },
+         {
+          "value": "item6",
+          "text": "Marah"
+         },
+         {
+          "value": "item7",
+          "text": "Rasa bersalah "
+         },
+         {
+          "value": "item8",
+          "text": "Takut"
+         },
+         {
+          "value": "item9",
+          "text": "Ketidak berdayaan "
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question14",
+        "title": "Masalah keperawatan",
+        "hideNumber": true,
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Anxietas"
+         },
+         {
+          "value": "item2",
+          "text": "Distress Spiritual "
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "html",
+        "name": "question40"
+       }
+      ],
+      "title": "ASESMEN AWAL DAN ULANG PASIEN TERMINAL DAN KELUARGA"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question20",
+        "html": "<h5>6.4.\tReaksi keluarga atas penyakit pasien : "
+       },
+       {
+        "type": "checkbox",
+        "name": "question21",
+        "title": "Asesmen informasi",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Marah"
+         },
+         {
+          "value": "item2",
+          "text": "Letih/lelah"
+         },
+         {
+          "value": "item3",
+          "text": "Gangguan tidur"
+         },
+         {
+          "value": "item4",
+          "text": "Rasa bersalah "
+         },
+         {
+          "value": "item5",
+          "text": "Penurunan Konsentrasi"
+         },
+         {
+          "value": "item6",
+          "text": "Perubahan kebiasaan pola komunikasi "
+         },
+         {
+          "value": "item7",
+          "text": "Ketidakmampuan memenuhi peran yang diharapkan "
+         },
+         {
+          "value": "item8",
+          "text": "Keluarga kurang berpartisipasi membuat keputusan dalam perawatan pasien"
+         },
+         {
+          "value": "item9",
+          "text": "Keluarga kurang berkomunikasi dengan pasien "
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question26",
+        "title": "Masalah keperawatan",
+        "hideNumber": true,
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Koping individu tidak efektif "
+         },
+         {
+          "value": "item2",
+          "text": "Distress Spiritual "
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question30",
+        "title": "7.\tKebutuhan dukungan atau kelonggaran pelayanan bagi pasien, keluarga dan pemberi pelayanan lain : ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Pasien perlu didampingin keluarga "
+         },
+         {
+          "value": "item2",
+          "text": "Keluarga dapat mengunjungi pasien di luar waktu berkunjung"
+         },
+         {
+          "value": "item3",
+          "text": "Sahabat dapat mengunjungi pasien di luar waktu berkunjung"
+         }
+        ],
+        "hasOther": true,
+        "otherText": " "
+       },
+       {
+        "type": "checkbox",
+        "name": "question31",
+        "title": "8.\tApakah ada kebutuhan akan alternatif atau timgkat pelayanan lain : ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Tidak"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Donasi Organ : ",
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question32",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Autopsi"
+         }
+        ],
+        "hasOther": true,
+        "otherText": " "
+       },
+       {
+        "type": "html",
+        "name": "question34",
+        "html": "<h5>9.\tFaktor resiko bagi keluarga yang ditinggalkan : "
+       },
+       {
+        "type": "checkbox",
+        "name": "question33",
+        "title": "Asesmen informasi ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Marah "
+         },
+         {
+          "value": "item2",
+          "text": "Letih/lelah "
+         },
+         {
+          "value": "item3",
+          "text": "Depresi"
+         },
+         {
+          "value": "item4",
+          "text": "Gangguan tidur "
+         },
+         {
+          "value": "item5",
+          "text": "Rasa bersalah "
+         },
+         {
+          "value": "item6",
+          "text": "Sedih/menangis "
+         },
+         {
+          "value": "item7",
+          "text": "Perubahan kebiasaan pola komunikasi "
+         },
+         {
+          "value": "item8",
+          "text": "Penurunan konsentrasi "
+         },
+         {
+          "value": "item9",
+          "text": "Ketidak mampuan memenuhi peran yang diharapkan"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "question35",
+        "title": "Masalah keperawatan ",
+        "hideNumber": true,
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Koping individu tidak efektif "
+         },
+         {
+          "value": "item2",
+          "text": "Distress Spiritual"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "html",
+        "name": "question41"
+       }
+      ],
+      "title": "ASESMEN AWAL DAN ULANG PASIEN TERMINAL DAN KELUARGA"
+     }
+    ]
+   }

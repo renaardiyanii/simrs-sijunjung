@@ -1,0 +1,61 @@
+{
+    "title": "CATATAN PERAWAT",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "title": " ",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal/Jam",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "catatan",
+            "title": "Catatan Perawat",
+            "cellType": "comment"
+           },
+           {
+            "name": "nm",
+            "title": "Nama Perawat",
+            "cellType": "text"
+           },
+           {
+            "name": "ttd",
+            "title": "Tanda tangan",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,113 @@
+{
+    "title": "CATATAN SERAH TERIMA (HAND OVER) ASUHAN PASIEN",
+    "showCompletedPage": false,
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "ruang_rawat",
+        "title": "Ruang Rawat :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "diagnosis_medis",
+        "title": "Diagnosa Medis :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "waktu",
+        "title": "Waktu ",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "dropdown",
+        "name": "profesi",
+        "startWithNewLine": false,
+        "title": "Profesi",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "perawat",
+          "text": "Perawat"
+         },
+         {
+          "value": "dokter",
+          "text": "Dokter"
+         },
+         {
+          "value": "farmasi",
+          "text": "Farmasi"
+         },
+         {
+          "value": "nutrisionis",
+          "text": "Nutrisionis"
+         },
+         {
+          "value": "fisioterapis",
+          "text": "Fisioterapis"
+         }
+        ]
+       },
+       {
+        "type": "dropdown",
+        "name": "petugas1",
+        "startWithNewLine": false,
+        "title": "Petugas yang Menyerahkan",
+        "hideNumber": true,
+        "choices": [
+         "item1"
+        ],
+        "choicesByUrl": {
+         "url": "/admin/admin/rest_userppa_iri"
+        }
+       },
+       {
+        "type": "dropdown",
+        "name": "petugas2",
+        "startWithNewLine": false,
+        "title": "Petugas yang menerima",
+        "hideNumber": true,
+        "choices": [
+         "item1"
+        ],
+        "choicesByUrl": {
+         "url": "/admin/admin/rest_userppa_iri"
+        }
+       },
+       {
+        "type": "comment",
+        "name": "situations",
+        "title": "Situations",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "background",
+        "startWithNewLine": false,
+        "title": "Background",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "asessment",
+        "title": "Asessment",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "recommendation",
+        "startWithNewLine": false,
+        "title": "Recommendation",
+        "hideNumber": true
+       }
+      ]
+     }
+    ]
+   }

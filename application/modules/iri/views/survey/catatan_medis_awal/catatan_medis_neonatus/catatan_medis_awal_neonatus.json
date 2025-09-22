@@ -1,0 +1,1073 @@
+{
+    "title": "ASESMEN MEDIS AWAT INAP NEONATUS",
+    "description": "(Untuk usia < 28 hari)",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question1",
+        "title": "Tanggal / jam",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Keluhan Utama",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "Riwayat Penyakit sekarang",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question4",
+          "title": "Riwayat penyakit dahulu",
+          "hideNumber": true
+         }
+        ],
+        "title": "1. Anamnesa"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "Kondisi saat lahir",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "segera_menangis",
+            "text": "Segera menangis"
+           },
+           {
+            "value": "tidak_segera_menangis",
+            "text": "Tidak segera menangis"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "startWithNewLine": false,
+          "title": "APGAR SCORE",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "question7",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "gerak",
+            "title": "Gerak"
+           },
+           {
+            "name": "tangis",
+            "title": "Tangis"
+           },
+           {
+            "name": "warna_kulit",
+            "title": "Warna Kulit"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "multipletext",
+          "name": "question8",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "hr",
+            "title": "HR"
+           },
+           {
+            "name": "suhu",
+            "title": "Suhu"
+           },
+           {
+            "name": "rr",
+            "title": "RR"
+           },
+           {
+            "name": "saturasi",
+            "title": "Saturasi O2"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question9",
+          "title": "Capilary Refili",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "<2detik",
+            "text": "< 2 Detik"
+           },
+           {
+            "value": ">2detik",
+            "text": "> 2 Detik"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question10",
+          "title": "2. Ukuran Antropometri",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "bbl",
+            "placeHolder": "Gram",
+            "title": "BBL"
+           },
+           {
+            "name": "pb",
+            "placeHolder": "cm",
+            "title": "PB"
+           },
+           {
+            "name": "lk",
+            "placeHolder": "cm",
+            "title": "LK"
+           },
+           {
+            "name": "ld",
+            "placeHolder": "cm",
+            "title": "LD"
+           },
+           {
+            "name": "lp",
+            "placeHolder": "cm",
+            "title": "LP"
+           }
+          ],
+          "colCount": 5
+         }
+        ],
+        "title": "Keadaan Umum"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "kepala",
+          "title": "Kepala ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "simetris",
+            "text": "Simetris"
+           },
+           {
+            "value": "asimetris",
+            "text": "Asimetris"
+           },
+           {
+            "value": "cephal",
+            "text": "Cephal Hematoma"
+           },
+           {
+            "value": "caput",
+            "text": "Caput Succedanium"
+           },
+           {
+            "value": "anenceephali",
+            "text": "Anencephali "
+           },
+           {
+            "value": "microcephali",
+            "text": "Microcephali "
+           },
+           {
+            "value": "hydrocephalus",
+            "text": "Hydrocephalus "
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question11",
+          "title": "UUB",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "datar",
+            "text": "Datar"
+           },
+           {
+            "value": "cembung",
+            "text": "Cembung"
+           },
+           {
+            "value": "cekung",
+            "text": "Cekung"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question12",
+          "title": "Mata",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "anemia",
+            "text": "Anemia"
+           },
+           {
+            "value": "ikterus",
+            "text": "Ikterus"
+           },
+           {
+            "value": "sekret",
+            "text": "Sekret"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question13",
+          "title": "THT",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "nch",
+            "text": "NCH"
+           },
+           {
+            "value": "cianosis",
+            "text": "Cianosis"
+           },
+           {
+            "value": "sekret",
+            "text": "Sekret"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "mulut",
+          "title": "Mulut",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "labioschizis",
+            "text": "Labioschis"
+           },
+           {
+            "value": "labiopalaschizis",
+            "text": "Labiopalaschizis"
+           },
+           {
+            "value": "labiogenatopalatoschizis",
+            "text": "Labiogenatopalatoschizis"
+           },
+           {
+            "value": "mukosa",
+            "text": "Mukosa"
+           },
+           {
+            "value": "reflek_hisap",
+            "text": "Reflek Hisap"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "warna",
+          "visibleIf": "{mulut} contains 'mukosa'",
+          "title": "Warna",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "thorax",
+          "title": "Thorax",
+          "hideNumber": true
+         }
+        ],
+        "title": "3. Pemeriksaan Fisik"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "paru",
+          "title": "Paru",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "retraksi",
+            "text": "Retraksi "
+           },
+           {
+            "value": "sesak",
+            "text": "Sesak "
+           },
+           {
+            "value": "merintih",
+            "text": "merintih"
+           },
+           {
+            "value": "sianosis",
+            "text": "Sianosis"
+           },
+           {
+            "value": "nch",
+            "text": "NCH"
+           },
+           "item1"
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "jantung",
+          "title": "Jantung : BJ I/II",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "murni",
+            "text": "Murni"
+           },
+           {
+            "value": "tidak_murni",
+            "text": "Tidak murni"
+           },
+           {
+            "value": "reguler",
+            "text": "Reguler"
+           },
+           {
+            "value": "tidak_reguler",
+            "text": "Tidak reguler"
+           },
+           {
+            "value": "bunyi",
+            "text": "Bunyi tambahan"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question14",
+          "title": "Abdomen",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "distensi",
+            "text": "Distensi"
+           },
+           {
+            "value": "busing_usu",
+            "text": "Busing usus"
+           },
+           {
+            "value": "pembesaran_hepar",
+            "text": "Pembesaran Hepar"
+           },
+           {
+            "value": "pembesaran_limpa",
+            "text": "Pembesaran Limpa"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "tali_pusat",
+          "title": "Tali Pusat",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "segar",
+            "text": "Segar"
+           },
+           {
+            "value": "layu",
+            "text": "Layu"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "punggung",
+          "title": "Punggung",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "normal",
+            "text": "Normal"
+           },
+           {
+            "value": "spina_bifida",
+            "text": "Spina Bifida"
+           },
+           {
+            "value": "gibus",
+            "text": "Gibus"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "genetalia",
+          "title": "Genetalia",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hemaphrodit",
+            "text": "Hemaphrodit"
+           },
+           {
+            "value": "kelainanp",
+            "text": "Kelainan(p)"
+           },
+           {
+            "value": "kelainanL",
+            "text": "Kelainan(L)"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question22",
+          "visibleIf": "{genetalia} contains 'kelainanL'",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question21",
+          "visibleIf": "{genetalia} contains 'kelainanp'",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "checkbox",
+          "name": "anus",
+          "title": "Anus",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ada",
+            "text": "Ada"
+           },
+           {
+            "value": "tidak_ada",
+            "text": "Tidak ada"
+           },
+           {
+            "value": "bab",
+            "text": "BAB"
+           }
+          ],
+          "otherText": "Kelainan",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "ekstremitas",
+          "title": "Ekstremitas",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "simetris",
+            "text": "Simetris"
+           },
+           {
+            "value": "asimetris",
+            "text": "Asimetris"
+           },
+           {
+            "value": "refleks",
+            "text": "Refleks Morro +/-"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "kulit",
+          "title": "Kulit",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "turgor",
+            "text": "Turgor"
+           },
+           {
+            "value": "kutis_marmorata",
+            "text": "Kutis Marmorata"
+           },
+           {
+            "value": "sianosis",
+            "text": "Sianosis"
+           },
+           {
+            "value": "ikterus",
+            "text": "Ikterus"
+           },
+           {
+            "value": "perdarahan",
+            "text": "Perdarahan"
+           },
+           {
+            "value": "hematoma",
+            "text": "Hematoma"
+           },
+           {
+            "value": "sklerema",
+            "text": "Sklerema"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "metablisme",
+          "title": "Metablisme",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "edema",
+            "text": "Edema"
+           },
+           {
+            "value": "bak",
+            "text": "BAK"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         }
+        ]
+       }
+      ],
+      "description": "Halaman 1"
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question15",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Frekuensi Nafas",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "< 60 / menit (0)"
+             },
+             {
+              "value": "1",
+              "text": "60-80 menit (1)"
+             },
+             {
+              "value": "2",
+              "text": "> 80 / menit (2)"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Retraksi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak ada Retraksi"
+             },
+             {
+              "value": "1",
+              "text": "Retraksi ringan"
+             },
+             {
+              "value": "2",
+              "text": "Retraksi berat"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "Sianosis",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak ada nianosis (0)"
+             },
+             {
+              "value": "1",
+              "text": "Sianosis hilang dengan O2 (1)"
+             },
+             {
+              "value": "2",
+              "text": "Sianosis menetap walaupun diberi O2 (2)"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Air Entry ",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Udara Masuk (0)"
+             },
+             {
+              "value": "1",
+              "text": "Penurunan Ringan Udara masuk (1)"
+             },
+             {
+              "value": "2",
+              "text": "Tidak ada udara masuk (2)"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Merintih ",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak merintih (0)"
+             },
+             {
+              "value": "1",
+              "text": "Dapat didengar dengan stetoskop (1)"
+             },
+             {
+              "value": "2",
+              "text": "Dapat didengat tanpa alat bantu (2)"
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Total skor",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}+{row.3}+{row.4}+{row.5}"
+           },
+           {
+            "name": "keterangan",
+            "title": "Keterangan Skor",
+            "cellType": "expression",
+            "expression": "iif({row.total_skor} > 7,'Ancaman gagal napas (pemeriksaan AGD)',\n iif({row.total_skor} < 4,'Tidak ada gawat nafas (< 4))','Gawat Nafas (4-7)'))\n"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "Row 1",
+            "text": "Nilai"
+           }
+          ]
+         },
+         {
+          "type": "signaturepad",
+          "name": "penilaian_usia",
+          "title": "5. Penilaian Usia Kehamilan (Diisi <= 24 jam setelah lahir)",
+          "hideNumber": true,
+          "penColor": "#111312",
+           "width": "800",
+          "height":"500",
+          "image": "/assets/images/cat_medis_neonatus.png"
+         }
+        ],
+        "title": "4. Penilaian Skor Downes"
+       }
+      ],
+      "description": "Halaman 2"
+     },
+     {
+      "name": "halaman3",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question16",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Kulit",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "-1",
+              "text": "Lengket, rapuh, transparan"
+             },
+             {
+              "value": "0",
+              "text": "Merah seperti agar gelatin, transparan"
+             },
+             {
+              "value": "1",
+              "text": "Merah muda, halus, vena-vena tampak"
+             },
+             {
+              "value": "2",
+              "text": "Permukaan mengelupas dengan / tanpa ruam, vena jarang"
+             },
+             {
+              "value": "3",
+              "text": "Daerah pucat & pecah-pecah, vena panjang"
+             },
+             {
+              "value": "4",
+              "text": "Seperti kertas kulit pecah-pecah dalam, tidak ada vena"
+             },
+             {
+              "value": "5",
+              "text": "Pecah - pecah, kasar, keriput"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "Lanugo",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "-1",
+              "text": "Tidak ada"
+             },
+             {
+              "value": "0",
+              "text": "Jarang"
+             },
+             {
+              "value": "1",
+              "text": "Banyak sekali"
+             },
+             {
+              "value": "2",
+              "text": "Menipis"
+             },
+             {
+              "value": "3",
+              "text": "Menghilang"
+             },
+             {
+              "value": "4",
+              "text": "Umumnya tidak ada"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Permukaan Plantar kaki",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "-1",
+              "text": "Tumit – ibu jari kaki <40mm = -2 40-50mm = -1"
+             },
+             {
+              "value": "0",
+              "text": ">50mm, tidak ada garis"
+             },
+             {
+              "value": "1",
+              "text": "Garis-garis merah tipis"
+             },
+             {
+              "value": "2",
+              "text": "Garis melintang hanya pada bagian anterior"
+             },
+             {
+              "value": "3",
+              "text": "Garis lipatan sampai 2/3 bagian anterior"
+             },
+             {
+              "value": "4",
+              "text": "Garis lipatan pada seluruh telapak"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Payudara",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "-1",
+              "text": "Mata/ daun telinga"
+             },
+             {
+              "value": "0",
+              "text": "Kelopak mata menyatu, longgar -1 ketat"
+             },
+             {
+              "value": "1",
+              "text": "Kelopak terbuka, pinna datar, tetap terlipat"
+             },
+             {
+              "value": "2",
+              "text": "Pinna sedikit melengkung, lunak, recoil lambat"
+             },
+             {
+              "value": "3",
+              "text": "Pinna memutar penuh, lunak, tetapi sudah recoil"
+             },
+             {
+              "value": "4",
+              "text": "Pinna keras & berbentuk, recoil segera"
+             },
+             {
+              "value": "5",
+              "text": "Kartilago tebal, telinga kaku"
+             }
+            ]
+           },
+           {
+            "name": "7",
+            "title": "Mata/ daun telinga",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "-`1",
+              "text": "Kelopak mata menyatu, longgar -1 ketat"
+             },
+             {
+              "value": "0",
+              "text": "Kelopak terbuka, pinna datar, tetap terlipat"
+             },
+             {
+              "value": "1",
+              "text": "Pinna sedikit melengkung, lunak, recoil lambat"
+             },
+             {
+              "value": "2",
+              "text": "Pinna memutar penuh, lunak, tetapi sudah recoil"
+             },
+             {
+              "value": "3",
+              "text": "Pinna keras & berbentuk, recoil segera"
+             },
+             {
+              "value": "4",
+              "text": "Kartilago tebal, telinga kaku"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Kelamin laki-laki",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "-1",
+              "text": "Skrotum rata/ halus"
+             },
+             {
+              "value": "0",
+              "text": "Skrotum kosong, ruggae halus"
+             },
+             {
+              "value": "1",
+              "text": "Testis bagian atas kanal., ruggae jarang"
+             },
+             {
+              "value": "2",
+              "text": "Testis menuju ke bawah, ruggae sedikit"
+             },
+             {
+              "value": "3",
+              "text": "Testis sudah turun, ruggae jelas"
+             },
+             {
+              "value": "4",
+              "text": "Testis sudah bergelayut, ruggae dalam"
+             }
+            ]
+           },
+           {
+            "name": "6",
+            "title": "Kelamin perempuan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "-1",
+              "text": "Klitoris menonjol, labia datar"
+             },
+             {
+              "value": "0",
+              "text": "Klitoris menonjol, labia minora kecil"
+             },
+             {
+              "value": "1",
+              "text": "Klitoris menonjol, labia minora membesar"
+             },
+             {
+              "value": "2",
+              "text": "Labia majora & minora membesar"
+             },
+             {
+              "value": "3",
+              "text": "Labia majora besar, minora kecil"
+             },
+             {
+              "value": "4",
+              "text": "Labia mayora menutupi klitoris dan labia minora"
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Total skor",
+            "cellType": "expression",
+            "expression": "{row.1}+{row.2}+{row.3}+{row.4}+{row.5}+{row.6}+{row.7}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "Row 1",
+            "text": "Skor"
+           }
+          ]
+         }
+        ],
+        "title": "6. Maturitas Fisik"
+       }
+      ],
+      "description": "Halaman 3"
+     },
+     {
+      "name": "halaman4",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "signaturepad",
+          "name": "question17",
+          "titleLocation": "hidden",
+          "penColor": "#111312",
+           "width": "800",
+          "height":"500",
+          "image": "/assets/images/cat_medis_neonatus_2.png"
+         },
+        
+         {
+          "type": "comment",
+          "name": "diagnosis_kerja",
+          "title": "8. Diagnosis Kerja",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "rencana_tata",
+          "title": "9. Rencana Tata Laksana Medis",
+          "hideNumber": true
+         }
+        
+        ],
+        "title": "7. Klasifikasi Bayi Menurut Libchenco"
+       }
+      ],
+      "description": "Halaman 4"
+     }
+    ]
+   }

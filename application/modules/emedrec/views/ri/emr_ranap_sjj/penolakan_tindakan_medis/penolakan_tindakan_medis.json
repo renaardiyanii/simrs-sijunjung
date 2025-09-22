@@ -1,0 +1,266 @@
+{
+    "title": "PENOLAKAN TINDAKAN MEDIS",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "dropdown",
+          "name": "question3",
+          "title": "Dokter Pelaksana Tindakan",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/admin/get_dok_penolakan"
+          }
+         },
+         {
+          "type": "dropdown",
+          "name": "question6",
+          "title": "Pemberi Informasi",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/admin/admin/rest_all_user"
+          }
+         },
+         {
+          "type": "multipletext",
+          "name": "mt_penelitian",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "penerima",
+            "title": "Penerima Informasi / Pemberi persetujuan"
+           },
+           {
+            "name": "wkt",
+            "inputType": "datetime-local",
+            "title": "Diberikanpada waktu"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "info_penelitian",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "ISI INFORMASI",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 2",
+            "title": "TANDA (√)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "diagnosis",
+            "text": "Diagnosis (WD dan DD)"
+           },
+           {
+            "value": "tindakan",
+            "text": "Dasar diagnosis"
+           },
+           {
+            "value": "tindakan_anestesi",
+            "text": "Tindakan Medis"
+           },
+           {
+            "value": "indikasi_tind",
+            "text": "Indikasi Tindakan"
+           },
+           {
+            "value": "tatacara",
+            "text": "Tata Cara"
+           },
+           {
+            "value": "tujuan",
+            "text": "Tujuan"
+           },
+           {
+            "value": "komplikasi",
+            "text": "Komplikasi"
+           },
+           {
+            "value": "prognosis",
+            "text": "Prognosis"
+           },
+           {
+            "value": "alternatif",
+            "text": "Alternatif  & Resiko"
+           }
+          ]
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "question7",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "JENIS INFORMASI",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 2",
+            "title": "ISI INFORMASI",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 3",
+            "title": "TANDA (√)",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 3
+         },
+         {
+          "type": "html",
+          "name": "question4",
+          "html": "<p> Dengan ini menyatakan bahwa saya telah menerangkan hal-hal di atas secara benar dan jelas dan memberikan kesempatan untuk bertanya dan/atau berdiskusi </p>"
+         },
+         {
+          "type": "html",
+          "name": "question2",
+          "html": "<p> Dengan ini menyatakan bahwa saya telah menerima informasi sebagaimana di atas yang saya beri tanda/paraf di kolom kanannya serta telah diberi kesempatan untuk bertanya/berdiskusi, dan telah memahaminya </p>"
+         }
+        ],
+        "title": "PEMBERIAN INFORMASI"
+       },
+       {
+        "type": "html",
+        "name": "question5",
+        "html": "<p> * Bila pasien tidak kompeten atau tidak mau menerima informasi, maka penerima informasi adalah wali atau   \n Keluarga terdekat\n</p>"
+       }
+      ],
+      "title": "Halaman 1"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question2",
+          "html": "<p><strong>PENOLAKAN</strong><strong>&nbsp;</strong><strong>TINDAKAN </strong><strong> DOKTER</strong></p>\n"
+         },
+         {
+          "type": "multipletext",
+          "name": "mt_bio_wali_pasien",
+          "title": "Yang bertanda tangan dibawah ini saya,",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nm",
+            "title": "Nama :"
+           },
+           {
+            "name": "umur",
+            "title": "Umur :"
+           },
+           {
+            "name": "jk",
+            "title": "Jenis Kelamin :"
+           },
+           {
+            "name": "alamat",
+            "title": "Alamat :"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "txt_tindakan",
+          "title": "dengan ini menyatakan Penolakan untuk\ndilakukannya tindakan",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "terhadap saya / ",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "mt_bio_pasien1",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama :"
+           },
+           {
+            "name": "umur",
+            "title": "Umur :"
+           },
+           {
+            "name": "jk",
+            "title": "Jenis Kelamin :"
+           },
+           {
+            "name": "alamat",
+            "title": "Alamat :"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question5",
+          "html": "<p>Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah&nbsp; dijelaskan seperti di atas kepada saya, termasuk risiko dan komplikasi yang mungkin timbul.</p>\n\n<p>Saya juga menyadari bahwa oleh karena ilmu kedokteran bukanlah ilmu pasti, maka keberhasilan tindakan kedokteran bukanlah keniscayaan, melainkan sangat bergantung kepada Tuhan Yang Maha Esa.</p>\n"
+         }
+        ]
+       }
+      ],
+      "title": "Halaman 2"
+     }
+    ]
+   }

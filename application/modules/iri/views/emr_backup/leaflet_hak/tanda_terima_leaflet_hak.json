@@ -1,0 +1,268 @@
+{
+    "title": "TANDA TERIMA LEAFLET HAK & KEWAJIBAN PASIEN",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "<h5>Yang bertanda tangan dibawah ini menyatakan bahwa telah menerima Leaflet Hak dan Kewajiban Pasien secara tertulis dari Rumah Sakit Umum Daerah Sijunjung untuk pasien :"
+         },
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama : "
+           },
+           {
+            "name": "text2",
+            "title": "No RM :"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "question3",
+          "width": "100px",
+          "minWidth": "100px",
+          "maxWidth": "100px",
+          "title": "Tanah Badantuang, ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "ttd",
+          "title": "Petugas",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question4",
+          "startWithNewLine": false,
+          "title": "Yang menerima",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "size": 50
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "size": 50
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question7",
+          "html": "<h5><b>Hak Pasien :</b></h5>\n<p><h6>\n<p>1.\tMemperoleh informasi tentang tata tertib Rumah Sakit dan peraturan yang berlaku di Rumah Sakit.\n<p>2.\tMemperoleh informasi tentang Hak & Kewajiban Pasien.\n<p>3.\tMemperoleh layanan yang manusiawi, adil, jujur dan tanpa diskriminasi.\n<p>4.\tMemperoleh layanan bermutu sesuai standar profesi dan SOP.\n<p>5.\tMemperoleh layanan yang efektif dan efisien sehingga terhindar dari kerugian.\n<p>6.\tMengajukan pengaduan atas kualitas pelayanan yang didapatkan.\n<p>7.\tMemilih dokter dan kelas perawatan sesuai ketentuan Rumah Sakit.\n<p>8.\tMeminta konsultasi tentang penyakitnya kepada dokter lain (second opinion).\n<p>9.\tMendapatkan privasi & kerahasiaan penyakitnya.\n<p>10.\tMendapat informasi tentang kondisinya penyakit yang dideritanya.\n<p>11.\tMemberikan persetujuan atau menolak tindakan yang akan dilakukan terhadap dirinya.\n<p>12.\tDidampingi keluarganya dalam keadaan kritis.\n<p>13.\tMenjalankan ibadah sesuai agamanya.\n<p>14.\tMemperoleh keamanan dan keselamatan di Rumah Sakit.\n<p>15.\tMengajukan usul perbaikan untuk pelayanan.\n<p>16.\tMenolak bimbingan rohani yang tidak sesuai agamanya.\n<p>17.\tMenggugat dan/ atau menuntut RSUD Sijunjung apabila RSUD Sijunjung diduga memberikan pelayanan yang tidak sesuai dengan standar baik secara perdata ataupun pidana\n<p>18.\tMengeluhkan pelayanan Rumah Sakit Umum Daerah ( RSUD) Sijunjung yang tidak sesuai standar pelayanan melalui media cetak dan elektronik sesuai dengan ketentuan perundang undangan.\n"
+         },
+         {
+          "type": "html",
+          "name": "question8",
+          "html": "<h5><b>Kewajiban Pasien :</b></h5>\n<p><h6>\n<p>1.\tMemberikan informasi yang akurat dan lengkap tentang keluhan penyakit sekarang, riwayat medis yang lalu,  hospitalisasi, medikasi/pengobatan dan hal-hal lain yang berkaitan dengan kesehatan pasien.  \n<p>2.\tMengikuti rencana pengobatan yang diadviskan oleh dokter termasuk instruksi para perawat dan profesional  kesehatan yang lain sesuai perintah Dokter  \n<p>3.\tMemperlakukan staf Rumah Sakit dan pasien lain dengan bermartabat dan hormat serta tidak melakukan tindakan  yang akan mengganggu pekerjaan Rumah sakit \n<p>4.\tMenghormati privasi orang lain dan barang milik Rumah sakit \n<p>5.\tTidak membawa alkohol, obat-obat yang tidak mendapat persetujuan dan senjata ke dalam Rumah Sakit  \n<p>6.\tMenghormati bahwa Rumah Sakit adalah area bebas rokok  \n<p>7.\tMematuhi jam kunjungan dari Rumah Sakit  \n<p>8.\tMeninggalkan barang berharga di rumah dan membawa hanya barang-barang yang penting selama tinggal di Rumah Sakit  \n<p>9.\tMemastikan bahwa kewajiban finansial atas asuhan pasien dipenuhi sebagaimana kebijakan Rumah Sakit  \n<p>10.\tBertanggungjawab atas tindakan-tindakannya sendiri bila mereka menolak pengobatan atau advis dari Dokter\n"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question9",
+          "html": "<h4><center>PERSETUJUAN UMUM/ GENERAL CONSENT</h4></center>\n"
+         },
+         {
+          "type": "multipletext",
+          "name": "identitas",
+          "title": "IDENTITAS PASIEN",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama Pasien"
+           },
+           {
+            "name": "text2",
+            "title": "Nomor Rekam Medis\t"
+           },
+           {
+            "name": "text3",
+            "title": "Tanggal Lahir"
+           },
+           {
+            "name": "text4",
+            "title": "Alamat"
+           },
+           {
+            "name": "text5",
+            "title": "No Telp"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question10",
+          "html": "<h5><center>PASIEN DAN ATAU WALI HUKUM HARUS MEMBACA, <br>MEMAHAMI\nDAN MENGISI INFORMASI BERIKUT\n</h5></center>\n"
+         },
+         {
+          "type": "multipletext",
+          "name": "bertanggung",
+          "title": "Yang bertanda tangan dibawah ini :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Alamat"
+           },
+           {
+            "name": "text3",
+            "title": "No Telp"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question11",
+          "html": "<p>Selaku Pasien / Wali hukum RSUD Sijunjung dengan ini menyatakan persetujuan\n<p><h5><b>I. PERSETUJUAN UNTUK PERAWATAN DAN PENGOBATAN</b></h5>\n<p>1.\tSaya menyetujui untuk perawatan di Rumah Sakit Umum Daerah Sijunjung sebagai pasien rawat jalan atau rawat inap tergantung kepada kebutuhan medis.Pengobatan dapat meliputi pemeriksaan x-ray/radiologi, tes darah, perawatan rutin dan prosedur seperti cairan infus atau suntikan dan evaluasi (contohnya wawancara dan pemeriksaan fisik).\n<p>2.\tPersetujuan yang saya berikan tidak termasuk persetujuan untuk prosedur / tindakan invasif (misalnya operasi) atau tindakan yang mempunyai resiko tinggi.\n<p>3.\tJika saya memutuskan untuk menghentikan perawatan medis untuk diri saya sendiri. Saya memahami dan menyadari bahwa RSUD Sijunjung atau dokter tidak bertanggung jawab atas hasil yang merugikan saya.\n<h5><b>II. PERSETUJUAN PELEPASAN INFORMASI</b></h5>\n<p>1.\tSaya memahami informasi yang ada di dalam diri saya, termasuk diagnosis, hasil laboratorium dan hasil tes diagnostik yang akan di gunakan untuk perawatan medis, RSUD Sijunjung akan menjamin kerahasiaannya.\n<p>2.\tSaya memberi wewenang kepada RSUD Sijunjung untuk memberikan informasi tentang diagnosis,hasil pelayanan dan pengobatan bila diperlukan untuk memproses klaim asuransi / perusahaan dan atau lembaga pemerintah.\n<p>3.\tSaya memberi wewenang kepada RSUD Sijunjung untuk memberikan informasi tentang diagnosis, hasil pelayanan dan pengobatan saya kepada anggota "
+         },
+         {
+          "type": "multipletext",
+          "name": "question12",
+          "title": "keluarga saya dan kepada :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "1."
+           },
+           {
+            "name": "text2",
+            "title": "2."
+           },
+           {
+            "name": "text3",
+            "title": "3."
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question13",
+          "html": "<h5><b>III. HAK DAN TANGGUNG JAWAB PASIEN</b></h5>\n<p>1.\tMemiliki hak untuk mengambil bagian dalam keputusan mengenai penyakit saya dan dalam hal perawatan medis dan rencana pengobatan.\n<p>2.\tMendapat informasi tentang “Hak dan tanggung jawab pasien“ di RSUD Sijunjung melalui Leaflet dan banner yang disediakan oleh petugas.\n<p>3.\tMemahami bahwa RSUD Sijunjung tidak bertanggung jawab atas kehilangan barang pribadi dan barang berharga yang di bawa ke RSUD Sijunjung.\n<h5><b>IV. INFORMASI RAWAT INAP</b></h5>\n<p>1.\tSaya tidak diperkenankan untuk membawa barang-barang berharga ke ruang rawat inap,\njika ada anggota keluarga atau teman harus diminta untuk membawa pulang uang atau perhiasan. Bila tidak ada anggota keluarga, RSUD Sijunjung menyediakan tempat penitipan barang milik pasien di tempat resmi yang telah disediakan rumah sakit.\n<p>2.\tSaya telah menerima informasi tentang peraturan yang diberlakukan oleh RSUD Sijunjung dan saya beserta keluarga bersedia untuk mematuhinya,termasuk akan mematuhi jam berkunjung pasien sesuai dengan aturan di rumah sakit.\n<p>3.\tAnggota keluarga saya yang menunggu saya,bersedia untuk selalu memakai tanda pengenal khusus yang diberikan oleh RSUD Sijunjung, dan demi keamanan seluruh pasien setiap keluarga dan siapapun yang akan mengunjungi saya diluar jam berkunjung, bersedia untuk diminta / diperiksa identitasnya dan memakai identitias yang diberikan oleh RSUD Sijunjung.\n"
+         },
+         {
+          "type": "panel",
+          "name": "panel4",
+          "elements": [
+           {
+            "type": "radiogroup",
+            "name": "question14",
+            "title": "Saya",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Mengizinkan"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak Mengizinkan"
+             }
+            ],
+            "colCount": 2
+           },
+           {
+            "type": "text",
+            "name": "question15",
+            "title": "Rumah Sakit memberi akses bagi:Keluarga dan handai taulan serta orang-orang yang akan membezuk saya ( sebutkan nama bila ada permintaan khusus yg tidak diizinkan ) : ",
+            "hideNumber": true
+           },
+           {
+            "type": "html",
+            "name": "question16",
+            "html": "<h5><b>VI. INFORMASI BIAYA</b></h5>\n<p>\nSaya memahami tentang informasi biaya pengobatan atau biaya tindakan yang\ndijelaskan oleh petugas RSUD Sijunjung.\n"
+           },
+           {
+            "type": "html",
+            "name": "question17",
+            "html": "<h4><center>TANDA TANGAN</h4></center>\n<P>Dengan tanda tangan saya di bawah, saya menyatakan bahwa saya telah membaca dan memahami item pada Persetujuan Umum/ General Consent.</P>\n"
+           },
+           {
+            "type": "signaturepad",
+            "name": "question18",
+            "title": "(wali jika pasien < 18 tahun)                     ",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question21",
+            "title": "Nama ",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question22",
+            "startWithNewLine": false,
+            "title": "Tanggal",
+            "hideNumber": true,
+            "inputType": "datetime-local"
+           },
+           {
+            "type": "signaturepad",
+            "name": "question19",
+            "title": "Saksi ",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question20",
+            "title": "Nama ",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "question24",
+            "startWithNewLine": false,
+            "title": "Tanggal",
+            "hideNumber": true,
+            "inputType": "datetime-local"
+           }
+          ],
+          "title": "V. PRIVASI"
+         }
+        ]
+       }
+      ],
+      "title": "halaman2\n"
+     }
+    ]
+   }

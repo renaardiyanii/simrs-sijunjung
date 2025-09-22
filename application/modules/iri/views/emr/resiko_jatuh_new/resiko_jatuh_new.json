@@ -1,0 +1,180 @@
+{
+    "title": "PENILAIAN / PENGKAJIAN PASIEN RESIKO JATUH ",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question6",
+        "title": "Tanggal berobat",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": " YA / TIDAK",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "1. Cara berjalan pasien (salah satu atau lebih ), a. tidak seimbang / sempoyongan / limbung, b. jalan dengan menggunakan alat bantu (kruk, tripot, kursi roda, orang lain)"
+           },
+           {
+            "value": "item2",
+            "text": "2.  Menopang saat akan duduk : tampak memeang  pinggiran kursi atau meja / benda lain sebagai penopang saat duduk"
+           }
+          ]
+         }
+        ],
+        "title": "1. Pengkajian"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "KETERANGAN",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "1. Tidak beresiko = tidak ditemukan a & b"
+           },
+           {
+            "value": "item2",
+            "text": "2. Resiko rendah =  Ditemukan salah satu dari a /b "
+           },
+           {
+            "value": "item3",
+            "text": "3. Resiko tinggi = Ditemukan a & b"
+           }
+          ]
+         }
+        ],
+        "title": "2. Hasil"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "YA / TIDAK",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "column2",
+            "title": "Nama Petugas",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Paraf ",
+            "cellType": "signaturepad"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "1. Tidak beresiko = Tidak ada Tindakan"
+           },
+           {
+            "value": "item2",
+            "text": "2. Resiko rendah = Edukasi"
+           },
+           {
+            "value": "item3",
+            "text": "3. Resiko tinggi  = Pasang pita kuning dan edukasi"
+           }
+          ]
+         }
+        ],
+        "title": "3. Tindakan"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question4",
+        "title": "Petugas",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question5",
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,95 @@
+{
+    "title": "DAFTAR PEMBERIAN TERAPI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<!DOCTYPE html>\n<html lang=\"id\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Petunjuk Pengisian</title>\n</head>\n<body>\n    <h4>Petunjuk Pengisian:</h2>\n    <ol>\n        <li>Tulis tanggal, jam, <strong>NAMA OBAT</strong> dengan HURUF KAPITAL, catat pemberian dan dosis obat.</li>\n        <li>Bila obat dihentikan <strong>CORET SATU KALI</strong> di sepanjang kolom tanggal sesuai lajur obat.</li>\n        <li>Catat bila pasien menolak dan alasannya.</li>\n        <li>Bila ada perubahan rute atau frekuensi tulis pada alinea baru.</li>\n        <li>Harap nama obat ditulis ulang bila mengganti lembar halaman baru karena halaman telah penuh.</li>\n    </ol>\n</body>\n</html>\n"
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question2",
+        "title": " ",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "title": " ",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal/Jam",
+            "cellType": "text"
+           },
+           {
+            "name": "nm_obat",
+            "title": "Nama obat",
+            "cellType": "text"
+           },
+           {
+            "name": "cara_pemberian",
+            "title": "Cara pemberian",
+            "cellType": "text"
+           },
+           {
+            "name": "frekuensi",
+            "title": "Frekuensi",
+            "cellType": "text"
+           },
+           {
+            "name": "paraf",
+            "title": "Paraf dokter",
+            "cellType": "text"
+           },
+           {
+            "name": "paraf1",
+            "title": "Paraf farmasi/klinik",
+            "cellType": "text"
+           },
+           {
+            "name": "waktu",
+            "title": "Waktu petugas",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "p",
+              "text": "P"
+             },
+             {
+              "value": "s",
+              "text": "S"
+             },
+             {
+              "value": "m",
+              "text": "S"
+             }
+            ]
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

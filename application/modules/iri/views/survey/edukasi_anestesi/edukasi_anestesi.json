@@ -1,0 +1,55 @@
+{
+    "title": "EDUKASI ANESTESI DAN SEDASI ",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<p> <h4> ANESTESIA UMUM\n<p><h5> Tindakan Anestesia Umum adalah pembiusan dimana pasien dibuat tidak sadar sehingga tidak merasakan nyeri. Obat bius diberikan melalui penyuntikan ke dalam pembuluh darah atau melalui gas/uap yang dihirup. Lama kerja obat disesuaikan dengan lama tindakan/operasi. Setelah pasien menjadi tidak sadar bila perlu dipasang alat bantu jalan napas ke dalam rongga mulut (pipa laryngeal) atau tenggorokan (pipa endotrakeal) agar jalan napas tetap terbuka. Oksigen dan gas lain akan dialirkan melalui selang pernapasan.<p>\n<br>\nKelebihan Anestesia Umum:\n<br>1.\tSejak awal operasi pasien sudah tidak sadar.\n<br>2.\tLama pembiusan dapat disesuaikan dengan lama operasi.\n<br>3.\tKedalam pembiusan dapat diatur sesuai kebutuhan.\n<br> </br\n<p>Kelemahan Anestesia Umum:\n<br>1.\tObat yang diberikan berefek keseluruh tubuh pasien, termasuk ke aliran darah janin dalam kandungan.\n<br>2.\tPasca bedah pasien harus sadar penuh sebelum bisa diberi minum.\n<br>3.\tPemulihan relatif lebih lama.\n<br> \n<p>Komplikasi/Efek Samping :\n<br>1.\tMual, muntah, menggigil, pusing, mengantuk, sakit tenggorokan, sakit menelan, bisa diatasi dengan obat-obatan.\n<br>2.\tAspirasi (masuknya isi lambung ke dalam jalan nafas) - dapat terjadi pada pasien tidak puasa.\n<br>3.\tKesulitan Pemasangan alat/pipa pernafasan yang tidak diduga sebelumnya.\n<br>4.\tKejang pita suara (spasma larings), kejang jalan nafas bawah (spasma bronkus) dari ringan hingga berat yang dapat menyebabkan henti jantung.\n<br>5.\tAlergi/hipersensitif terhadap obat (jarang), mulai derajat ringan hingga berat/fatal.\n<br>6.\tKomplikasi akan meningkat pada pasien usia < 1 tahun, umur lanjut, pasien dengan penyakit penyerta (jantung, ginjal, hati, saraf, paru, endokrin, dll)<br><br></br>\n<p> Komplikasi diatas dapat timbul tanpa diduga sebelumnya dan akan ditangani sesuai prosedur medis\n\n"
+       }
+      ],
+      "title": "Halaman 1"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question2",
+        "html": "<p><h4> ANESTESIA REGIONAL<p>\n<p><h5> Blok spinal dan epidural adalah tindakan anestesia regional yang menghilangkan sensasi bagian bawah tubuh, mulai dari perut sampai ke ujung kaki dengan kesadaran tidak terganggu. Dokter spesialis anestesia dapat memberikan obat tidur (apabila diperlukan). <p>Pada anestesia blok spinal, obat disuntikkan didaerah punggung dengan jarum yang halus. Sedangkan blok epidural menggunakan jarum yang sedikit lebih besar dengan atau tanpa Pemasangan selang (Kateter).<p> Posisi penyuntikan blok spinal dan epidural adalah duduk atau tidur miring. Setelah penyuntikan obat maka akan terjadi perubahan sensasi dibagian bawah tubuh mulai dari rasa hangat, kesemutan, sampai akhirnya kehilangan seluruh sensasi dan rasa seperti tidak memiliki tungkai bawah. <p>Efek ini berlangsung antara 2 sampai 4 jam tergantung jenis dan konsentrasi obat yang digunakan. Bila digunakan kateter (epidural) efek anestesia regional dapat diulang.\n<br>\n<p> <h5>Kelebihan Anestesia Blok Spinal dan Epidural:\n<br>1.\tJumlah obat yang diberikan relatif lebih sedikit.\n<br>2.\tEfek obat bersifat lokal sehingga tidak mempengaruhi fungsi organ dan tidak masuk ke dalam yang disuntikkan tidak beredar keseluruh tubuh sehingga janin dalam rahim tidak kena efek bius.\n<br>3.\tDapat ditambahkan obat penghilang rasa sakit ke dalam epidural yang bisa bertahan hingga > 24 jam pasca bedah atau bisa ditambahkan sesuai kebutuhan.\n<br>4.\tDapat langsung minum dan makan segera setelah tindakan/operasi selesai.\n<br>5.\tRelatif lebih aman untuk pasien yang tidak puasa atau lama puasanya kurang (operasi emergency).\n<br></br><p>\nKelemahan Anastesia Blok Spinal dan Epidural:\n<br>1.\tTidak boleh duduk atau angkat kepala kurang lebih 12 jam post operasi.\n<br>2.\tPasca Bedah pasien kadang merasakan mual.\n<br></br>\n<p>Komplikasi Blok Spinal dan Epidural:\n<br>1.\tMual, muntah, gatal-gatal, terutama didaerah wajah, menggigil semua bisa diatasi dengan obat.\n<br>2.\tSakit kepala dibagian depan atau belakang pada hari ke 2 atau 3, terutama sewaktu mengangkat kepala dan menghilang setelah 5 sampai 7 hari. Bila tidak menghilang akan dilakukan intervensi sesuai kebutuhan.\n<br>3.\tAlergi/hipersensitif terhadap obat sangat jarang mulai ringan sampai berat.\n<br>4.\tGangguan pernafasan dari mulai ringan sampai berat (henti nafas).\n<br>5.\tKelumpuhan atau kesemutan/rasa baal yang memanjang.\n<br>6.\tSakit pinggang.\n<br>7.\tKejang, dapat ditangani sesuai prosedur tanpa gejala sisa.\n<br>8.\tHematom pada lokasi penyuntikan\n\n\n"
+       }
+      ],
+      "title": "Halaman 2"
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question3",
+        "html": "<p><h5> Blok perifer adalah menyuntikan obat anestesia lokal pada daerah tertentu untuk menghilangkan sensasi setempat. Umumnya blok perifer dilakukan untuk tindakan/operasi pada anggota gerak (lengan atau tungkai). Tindakan ini dilakukan oleh Dokter Spesialis Anestesi atas permintaan dari Dokter Spesialis Bedah.</p>\n<br>\n<p>Kelebihan Anestesia Blok Peripheral :\n<br>1.\tTidak mempengaruhi organ tubuh lain.\n<br>2.\tEfek hilangnya sensasi cukup kuat dan bertahan lama (2-6 jam)\n<br>3.\tTidak perlu perawatan pasca pembiusan\n<br></br>\n<p> Kelemahan Anestesia Blok Peripheral:\n<br>1.\tNyeri pada tempat penyuntikan.\n<br>2.\tDapat terjadi Blok parsial (tidak seluruh bagian yang akan dioperasi bebas nyeri) yang memerlukan tambahan obat anestesia (intravena).\n<br></br>\n<p>Komplikasi Anestesia Blok Peripheral:\n<br>1.\tPerdarahan pada tempat suntikan, terutama bila terkena pembuluh darah.\n<br>2.\tBlok yang memanjang lebih dari perkiraan sebelumnya.\n\n"
+       },
+       {
+        "type": "signaturepad",
+        "name": "ttd1",
+        "width": 200,
+        "title": "Pasien/Wali/Keluarga",
+        "hideNumber": true,
+        "height": 150,
+        "penColor": "#090c0b"
+       },
+       {
+        "type": "text",
+        "name": "question4",
+        "title": "Nama Lengkap",
+        "titleLocation": "bottom",
+        "hideNumber": true,
+        "size": 40
+       }
+      ],
+      "title": "Halaman 3"
+     }
+    ]
+   }

@@ -1,0 +1,575 @@
+{
+    "title": "RENCANA DAN TINDAKAN KEPERAWATAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question5",
+        "title": "Ruangan / Unit :",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question1Jalan Napas Paten",
+        "title": "RENCANA TINDAKAN KEPERAWATAN",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Tanggal / Jam",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "column2",
+            "title": "Kepala bed 15 - 30 derajat",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Posisi Kepala Pasien Netral",
+            "cellType": "text"
+           },
+           {
+            "name": "column4",
+            "title": "Ganti gudel tiap pagi",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Nebulizer",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Suction",
+            "cellType": "text"
+           },
+           {
+            "name": "column7",
+            "title": "Perawatan trakeostomi",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Oksigen",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Cek AGD / Saturasi O₂",
+            "cellType": "text"
+           },
+           {
+            "name": "column10",
+            "title": "Ganti sirkuit Ventilator/CPAP",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Penilaian Down Score",
+            "cellType": "text"
+           },
+           {
+            "name": "column12",
+            "title": "Tes fungsi menelan",
+            "cellType": "text"
+           },
+           {
+            "name": "column13",
+            "title": "Puasa",
+            "cellType": "text"
+           },
+           {
+            "name": "column14",
+            "title": "Diet ……… Kalori",
+            "cellType": "text"
+           },
+           {
+            "name": "column15",
+            "title": "ASI/PASI        X          ml",
+            "cellType": "text"
+           },
+           {
+            "name": "column16",
+            "title": "Sari buah  ………. X ………. cc",
+            "cellType": "text"
+           },
+           {
+            "name": "column17",
+            "title": "Air Putih  ………. X ………. cc",
+            "cellType": "text"
+           },
+           {
+            "name": "column18",
+            "title": "Bubur saring",
+            "cellType": "text"
+           },
+           {
+            "name": "column19",
+            "title": "Makanan Lunak",
+            "cellType": "text"
+           },
+           {
+            "name": "column20",
+            "title": "Cek NGT 6 / 24",
+            "cellType": "text"
+           },
+           {
+            "name": "column21",
+            "title": "Ganti NGT 1/7 hari",
+            "cellType": "text"
+           },
+           {
+            "name": "column22",
+            "title": "Gastro/Ileostomi",
+            "cellType": "text"
+           },
+           {
+            "name": "column23",
+            "title": "Spoeling NGT",
+            "cellType": "text"
+           },
+           {
+            "name": "column24",
+            "title": "Ukur Keseimbangan Cairan",
+            "cellType": "text"
+           },
+           {
+            "name": "column25",
+            "title": "Timbang berat badan",
+            "cellType": "text"
+           },
+           {
+            "name": "column26",
+            "title": "Menyusui",
+            "cellType": "text"
+           },
+           {
+            "name": "column27",
+            "title": "Ganti OGT 1/3 hari",
+            "cellType": "text"
+           },
+           {
+            "name": "column28",
+            "title": "Kaji refleks hisap",
+            "cellType": "text"
+           },
+           {
+            "name": "column29",
+            "title": "Menyendawakan",
+            "cellType": "text"
+           },
+           {
+            "name": "column30",
+            "title": "Cek residu",
+            "cellType": "text"
+           },
+           {
+            "name": "column31",
+            "title": "Urinal / Pot",
+            "cellType": "text"
+           },
+           {
+            "name": "column32",
+            "title": "Kondom Kateter",
+            "cellType": "text"
+           },
+           {
+            "name": "column33",
+            "title": "Ganti Kondom 1/24 jam",
+            "cellType": "text"
+           },
+           {
+            "name": "column34",
+            "title": "Dower Kateter",
+            "cellType": "text"
+           },
+           {
+            "name": "column35",
+            "title": "Ganti Kateter 1/7 hari",
+            "cellType": "text"
+           },
+           {
+            "name": "column36",
+            "title": "Pampers",
+            "cellType": "text"
+           },
+           {
+            "name": "column37",
+            "title": "Bladder scan",
+            "cellType": "text"
+           },
+           {
+            "name": "column38",
+            "title": "Kateter intermitten",
+            "cellType": "text"
+           },
+           {
+            "name": "column39",
+            "title": "Bab spontan",
+            "cellType": "text"
+           },
+           {
+            "name": "column40",
+            "title": "Gliserin semprit 1/3 hari",
+            "cellType": "text"
+           },
+           {
+            "name": "column41",
+            "title": "Mandi di kamar mandi",
+            "cellType": "text"
+           },
+           {
+            "name": "column42",
+            "title": "Mandi di tempat tidur (TT)",
+            "cellType": "text"
+           },
+           {
+            "name": "column43",
+            "title": "Perawatan gigi / mulut",
+            "cellType": "text"
+           },
+           {
+            "name": "column44",
+            "title": "Cuci rambut / 7 hari",
+            "cellType": "text"
+           },
+           {
+            "name": "column45",
+            "title": "Cukur kumis 2x / 7 hari",
+            "cellType": "text"
+           },
+           {
+            "name": "column46",
+            "title": "Gunting Kuku",
+            "cellType": "text"
+           },
+           {
+            "name": "column47",
+            "title": "Perawatan tali pusat",
+            "cellType": "text"
+           },
+           {
+            "name": "column48",
+            "title": "Memandikan bayi",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowLocation": "bottom",
+          "addRowText": "Tambah ",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question1",
+        "title": "RENCANA TINDAKAN KEPERAWATAN",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column4",
+            "title": "Tanggal/Waktu",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "column1",
+            "title": "Cek TTV",
+            "cellType": "text"
+           },
+           {
+            "name": "column2",
+            "title": "Kaji daerah perifer",
+            "cellType": "text"
+           },
+           {
+            "name": "column3",
+            "title": "Monitor EKG",
+            "cellType": "text"
+           },
+           {
+            "name": "column5",
+            "title": "Kaji CRT",
+            "cellType": "text"
+           },
+           {
+            "name": "column6",
+            "title": "Monitor suhu inkubator",
+            "cellType": "text"
+           },
+           {
+            "name": "column7",
+            "title": "ROM",
+            "cellType": "text"
+           },
+           {
+            "name": "column8",
+            "title": "Tirah baring (bed rest)",
+            "cellType": "text"
+           },
+           {
+            "name": "column9",
+            "title": "Miring kanan - kiri",
+            "cellType": "text"
+           },
+           {
+            "name": "column10",
+            "title": "Posisi kepala 15  - 30",
+            "cellType": "text"
+           },
+           {
+            "name": "column11",
+            "title": "Posisi kepala 45 - 60",
+            "cellType": "text"
+           },
+           {
+            "name": "column12",
+            "title": "Duduk di tempat tidur (90)",
+            "cellType": "text"
+           },
+           {
+            "name": "column13",
+            "title": "Duduk berjuntai",
+            "cellType": "text"
+           },
+           {
+            "name": "column14",
+            "title": "Duduk di kursi roda",
+            "cellType": "text"
+           },
+           {
+            "name": "column15",
+            "title": "Latihan berdiri",
+            "cellType": "text"
+           },
+           {
+            "name": "column16",
+            "title": "Pijat Bayi",
+            "cellType": "text"
+           },
+           {
+            "name": "column17",
+            "title": "Posisi Tengkurap",
+            "cellType": "text"
+           },
+           {
+            "name": "column18",
+            "title": "Pasang penghalang TT",
+            "cellType": "text"
+           },
+           {
+            "name": "column19",
+            "title": "Roda tempat tidur terkunci",
+            "cellType": "text"
+           },
+           {
+            "name": "column20",
+            "title": "Restrainkalau perlu",
+            "cellType": "text"
+           },
+           {
+            "name": "column21",
+            "title": "Libatkan Keluarga",
+            "cellType": "text"
+           },
+           {
+            "name": "column22",
+            "title": "Gosok minyak",
+            "cellType": "text"
+           },
+           {
+            "name": "column23",
+            "title": "Pasang pelindung mata pada",
+            "cellType": "text"
+           },
+           {
+            "name": "column24",
+            "title": "bayi yang diterapi sinar",
+            "cellType": "text"
+           },
+           {
+            "name": "column25",
+            "title": "Merapikan tempat tidur",
+            "cellType": "text"
+           },
+           {
+            "name": "column26",
+            "title": "Ganti Laken 3 / 7",
+            "cellType": "text"
+           },
+           {
+            "name": "column27",
+            "title": "Kompres",
+            "cellType": "text"
+           },
+           {
+            "name": "column28",
+            "title": "Beri Pijatan",
+            "cellType": "text"
+           },
+           {
+            "name": "column29",
+            "title": "Terapi Musik",
+            "cellType": "text"
+           },
+           {
+            "name": "column30",
+            "title": "Pemberian Sukrosa",
+            "cellType": "text"
+           },
+           {
+            "name": "column31",
+            "title": "Vulva Hygiene",
+            "cellType": "text"
+           },
+           {
+            "name": "column32",
+            "title": "Pijat payudara",
+            "cellType": "text"
+           },
+           {
+            "name": "column33",
+            "title": "Edukasi ASI",
+            "cellType": "text"
+           },
+           {
+            "name": "column34",
+            "title": "Melibatkan keluarga",
+            "cellType": "text"
+           },
+           {
+            "name": "column35",
+            "title": "Mendengar aktif",
+            "cellType": "text"
+           },
+           {
+            "name": "column36",
+            "title": "Mendampingi pasien",
+            "cellType": "text"
+           },
+           {
+            "name": "column37",
+            "title": "Manajemen nyeri",
+            "cellType": "text"
+           },
+           {
+            "name": "column38",
+            "title": "Obat-obatan"
+           },
+           {
+            "name": "column39",
+            "title": "Peralatan kesehatan"
+           },
+           {
+            "name": "column40",
+            "title": "Rehabilitasi"
+           },
+           {
+            "name": "column41",
+            "title": "Edukasi PMK"
+           },
+           {
+            "name": "column42",
+            "title": "Edukasi cara menyusui"
+           },
+           {
+            "name": "column43",
+            "title": "Perawatan luka"
+           },
+           {
+            "name": "column44",
+            "title": "Perawatan Stoma"
+           },
+           {
+            "name": "column45",
+            "title": "Ganti infus / IV line / 3 hari"
+           },
+           {
+            "name": "column46",
+            "title": "Observasi kejang"
+           },
+           {
+            "name": "column47",
+            "title": "PAGI/SORE/MALAM",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "PAGI"
+             },
+             {
+              "value": "item2",
+              "text": "SORE"
+             },
+             {
+              "value": "item3",
+              "text": "MALAM"
+             }
+            ]
+           },
+           {
+            "name": "column48",
+            "title": "Nama dan paraf",
+            "cellType": "text"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowLocation": "bottom",
+          "addRowText": "Tambah ",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

@@ -1,0 +1,292 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "date",
+            "title": "Tanggal MRS"
+           },
+           {
+            "name": "text2",
+            "title": "Ruang/Kelas"
+           },
+           {
+            "name": "text3",
+            "inputType": "datetime-local",
+            "title": "Tgl/Jam"
+           },
+           {
+            "name": "text4",
+            "title": "DPJP Utama"
+           },
+           {
+            "name": "text5",
+            "title": "DPJP Lain"
+           },
+           {
+            "name": "text6",
+            "title": "Tindakan"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question1",
+          "title": "I. Skrining Pasien",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Usia lebih dari 65 tahun dengan ketergantungan total"
+           },
+           {
+            "value": "item2",
+            "text": "Pasien dengan fungsi kognitif rendah (misalnya retardasi mental,demensia,delirium)"
+           },
+           {
+            "value": "item3",
+            "text": "Pasien dengan resiko tinggi (cacat fisik,KDRT,narapidana,korban dan tersangka tindak pidana)"
+           },
+           {
+            "value": "item4",
+            "text": "Poteni komplain tinggi (komplain seacra tertulis)"
+           },
+           {
+            "value": "item5",
+            "text": "Kasus dengan penyakit kronis,katastropik, terminasi ( drirawat bersama oleh 3 DPJP)"
+           },
+           {
+            "value": "item6",
+            "text": "Status fungsional rendah, kebutuhan bantuan ADL, (activity daily living) yang tinggi dari perkiraan membutuhkan bantuan dalam aktivitas sehari-hari dirumah"
+           },
+           {
+            "value": "item7",
+            "text": "Pasien dengan riwayat penggunaan peralatan medis dimasa lalu (misalnya : kanul traccal, CAPD, Double lumen)"
+           },
+           {
+            "value": "item8",
+            "text": "Riwayat gangguan mental, upaya bunuh diri, krisis keluarga, isu sosial (terlantar, narkoba, tinggal sendiri)"
+           },
+           {
+            "value": "item9",
+            "text": "Sering masuk IGD, readmisi RS > 3x dalam 6 bulan"
+           },
+           {
+            "value": "item10",
+            "text": "Perkiraan asuhan dengan biaya tinggi (biaya yang tidak masuk dalam retriksi asuransi"
+           },
+           {
+            "value": "item11",
+            "text": "Kemungkinan sistem biaya yang kompleks, adana masalah financial (tuna wisma, tidak ada asuransi)"
+           },
+           {
+            "value": "item12",
+            "text": "Kasus yang melebihi rata-rata lama dirawat lebih dari 8 hari dan lebih dalam 8 hari belum ada kepastian program"
+           },
+           {
+            "value": "item13",
+            "text": "Kasus yang diidentifikasi rencana pemulangannya penting/berisiko atau yang membutuhkan kontinuitas pelayanan (misalnya: rujuk balik, homecare)"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lain lain"
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "title": "II. Assesmen Untuk Managemen Pelayanan Pasien",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": " ",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           },
+           {
+            "name": "Column 2",
+            "title": " ",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "Row 1",
+            "text": "Fisik, Fungsional, Kognitif, Kekuatan, kemampuan, Kemandirian"
+           },
+           {
+            "value": "Row 2",
+            "text": "Riwayat kesehatan dahulu"
+           },
+           {
+            "value": "Row 3",
+            "text": "Riwayat kesehatan sekarang"
+           },
+           {
+            "value": "Row 4",
+            "text": "Perilaku, Psiko, Sosial, Kultur"
+           },
+           {
+            "value": "Row 5",
+            "text": "Kesehatan mental"
+           },
+           {
+            "value": "Row 6",
+            "text": "Tersedianya dokumen keluarga, kemampuan merawat dari pemberi asuhan"
+           },
+           {
+            "value": "Row 7",
+            "text": "Finansial"
+           },
+           {
+            "value": "Row 8",
+            "text": "Status asuransi"
+           },
+           {
+            "value": "Row 9",
+            "text": "Riwayat penggunaan obat, alternative"
+           },
+           {
+            "value": "Row 10",
+            "text": "Riwayat trauma, kekerasan"
+           },
+           {
+            "value": "Row 11",
+            "text": "Harapan terhadap hasil asuhan, kemampuan untuk menerima perubahan"
+           },
+           {
+            "value": "Row 12",
+            "text": "Pemahaman tentang kesehatan"
+           },
+           {
+            "value": "Row 13",
+            "text": "Aspek legal"
+           },
+           {
+            "value": "Row 14",
+            "text": "Lain-lain"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question3",
+          "title": "III. Identifikasi Masalah dan Kesempatan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Tingkat asuhan yang tidak sesuai panduan, norma yang digunakan"
+           },
+           {
+            "value": "item2",
+            "text": "Over/Under utilization pelayanan dengan dasar panduan, norma yang digunakan"
+           },
+           {
+            "value": "item3",
+            "text": "Penurunan determinasi pasien (ketika tingkat keparahan/komplikasi meningkat)"
+           },
+           {
+            "value": "item4",
+            "text": "Edukasi atau pemahaman yang belum memadai tentang proses penyakit, kondisi terkini, daftar obat"
+           },
+           {
+            "value": "item5",
+            "text": "Ketidakpastian pasien"
+           },
+           {
+            "value": "item6",
+            "text": "Kurangnya dukungan keluarga"
+           },
+           {
+            "value": "item7",
+            "text": "Kendala keuangan ketika keparahan/komplikasi meningkat"
+           },
+           {
+            "value": "item8",
+            "text": "Pemulangan/rujukan yang belum memenuhi kriteria atau sebaliknya pemulangan/rujukan yang dini"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lain lain"
+         },
+         {
+          "type": "checkbox",
+          "name": "question4",
+          "title": "IV. Perencanaan Manajemen Pelayanan Pasien",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lakukan validasi rencana asuhan konsisten dengan panduan, norma yang berlaku"
+           },
+           {
+            "value": "item2",
+            "text": "Lakukan kolaborasi, komunikasi dengan PPA dalam akses ke pelayanan, asuhan dengan biaya efektif, mutu asuhan"
+           },
+           {
+            "value": "item3",
+            "text": "Tentukan/rencanakan pemberian informasi kepada: pasien-keluarga untuk pengambilan keputusan"
+           },
+           {
+            "value": "item4",
+            "text": "Tentukan/renacakan partisipasi pasien-keluarga dalam asuhan termasuk persetujuan perubahan rencana"
+           },
+           {
+            "value": "item5",
+            "text": "Siapkan fasilitas mengatasi masalah dan konflik"
+           },
+           {
+            "value": "item6",
+            "text": "Perhatikan hambatan pembayar, frekwensi komunikasi relasi kerja berhubungan pasien"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lain lain"
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "titleLocation": "hidden",
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question7",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "titleLocation": "hidden"
+         }
+        ]
+       }
+      ],
+      "title": "FORMULIR MPP (FORM A) EVALUASI AWAL MPP"
+     }
+    ]
+   }

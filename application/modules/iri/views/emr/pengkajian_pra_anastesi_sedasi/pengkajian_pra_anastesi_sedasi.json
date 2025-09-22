@@ -1,0 +1,473 @@
+{
+    "title": "PENGKAJIAN PRA  ANESTESI DAN SEDASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question1",
+          "title": "Tanggal / Jam",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Diagnosa",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "startWithNewLine": false,
+          "title": "Tindakan bedah",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "TB"
+           },
+           {
+            "name": "text2",
+            "title": "BB"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "title": "A. Anamnesis\t:",
+          "hideNumber": true
+         }
+        ],
+        "title": "1. SUBYEKTIF"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question6",
+          "title": "Riwayat Asthma",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question7",
+          "startWithNewLine": false,
+          "title": "Alergi",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question8",
+          "title": "Diabetes mellitus",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question9",
+          "startWithNewLine": false,
+          "title": "Hipertensi",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "b. Riwayat Penyakit\t:"
+       },
+       {
+        "type": "multipletext",
+        "name": "question10",
+        "title": "c. Riwayat Operasi",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Jenis Anestesi"
+         },
+         {
+          "name": "text2",
+          "title": "komplikasi"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question11",
+          "title": "a. Pemeriksaan Fisik",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question12",
+          "title": "b. Keadaan Umum",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "question13",
+          "title": "Tanda-tanda Vital",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "TD "
+           },
+           {
+            "name": "text2",
+            "title": "N"
+           },
+           {
+            "name": "text3",
+            "title": "RR "
+           },
+           {
+            "name": "text4",
+            "title": "Suhu"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "multipletext",
+          "name": "question14",
+          "title": "Kepala Leher",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Conjungtiva "
+           },
+           {
+            "name": "text2",
+            "title": "Sclera "
+           },
+           {
+            "name": "text3",
+            "title": "Mallampati "
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "comment",
+          "name": "question15",
+          "title": "Thorax",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question16",
+          "title": "Abdomen",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question17",
+          "title": "Ekstremitas",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question18",
+          "title": "Laboratorium ",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question19",
+          "title": "EKG",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question20",
+          "title": "Ro – Thorax",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question21",
+          "title": "Pemeriksaan Penunjang",
+          "hideNumber": true
+         }
+        ],
+        "title": "2. OBYEKTIF"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "question22",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Setuju Anestesi"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak Setuju Anestesi"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question23",
+          "visibleIf": "{question22} anyof ['item1']",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "ASA "
+           },
+           {
+            "name": "text2",
+            "title": "Premedikasi "
+           },
+           {
+            "name": "text3",
+            "placeHolder": "Jam",
+            "title": "Puasa "
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "comment",
+          "name": "question25",
+          "visibleIf": "{question22} anyof ['item2']",
+          "title": "Rencana Tindakan",
+          "hideNumber": true
+         }
+        ],
+        "title": "3. ASSESSMENT"
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question24",
+          "title": "a. Teknik Anestesi dan Sedasi\t:",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Sedasi "
+           },
+           {
+            "name": "text2",
+            "title": "GA"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "checkbox",
+          "name": "question26",
+          "title": "Regional ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Spinal"
+           },
+           {
+            "value": "item2",
+            "text": "Epidural"
+           },
+           {
+            "value": "item3",
+            "text": "Kaudal"
+           },
+           {
+            "value": "item4",
+            "text": "Blok Perifer"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "question27",
+          "title": "b. Persediaan Darah",
+          "hideNumber": true
+         },
+         {
+          "type": "checkbox",
+          "name": "question28",
+          "title": "c. Teknik Khusus",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hipotensi"
+           },
+           {
+            "value": "item2",
+            "text": "Ventilasi satu paru"
+           },
+           {
+            "value": "item3",
+            "text": "TCI"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "checkbox",
+          "name": "question29",
+          "title": "d. Monitoring",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "EKG Lead"
+           },
+           {
+            "value": "item2",
+            "text": "SpO2"
+           },
+           {
+            "value": "item3",
+            "text": "NIBP"
+           },
+           {
+            "value": "item4",
+            "text": "Temp"
+           },
+           {
+            "value": "item5",
+            "text": "CVP "
+           },
+           {
+            "value": "item6",
+            "text": "Arteri Line"
+           },
+           {
+            "value": "item7",
+            "text": "Et CO2"
+           },
+           {
+            "value": "item8",
+            "text": "BIS"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Lainnya",
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question30",
+          "title": "e. Perawatan pasca anestesi\t:",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Rawat Jalan"
+           },
+           {
+            "value": "item2",
+            "text": "Rawat Inap"
+           },
+           {
+            "value": "item3",
+            "text": "HCU"
+           }
+          ],
+          "otherText": "Lainnya",
+          "colCount": 4
+         }
+        ],
+        "title": "4. PLANNING (PERENCANAAN ANESTESI & SEDASI)"
+       },
+       {
+        "type": "text",
+        "name": "question31",
+        "title": "Tanah badantuang,",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question32",
+        "title": "Dokter anastesi",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question33",
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

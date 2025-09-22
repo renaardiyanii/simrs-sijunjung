@@ -1,0 +1,472 @@
+{
+    "title": "CHECK LIST  KESELAMATAN  PASIEN KAMAR OPERASI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question2",
+          "html": "Minimal ada Perawat  dan dr. Anestesi"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question1",
+          "title": "Apakah  identitas pasien sudah benar, rencana tindakan sudah jelas, dan ada persetujuan  tindakan medis  yang akan dilakukan (Inform Concern) ?",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question3",
+          "title": "Apakah area yang akan dioperasi sudah diberi tanda ?",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question4",
+          "title": "Apakah mesin anestesi dan obat –obatan sudah lengkap?",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "Apakah profilaksis anti biotik sudah diberikan 1 jam sebelumnya",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question6",
+          "title": "Apakah pasien memiliki  riwayat alergi?",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question7",
+          "title": "Apaka pasien memiliki gangguan pernapasan",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question8",
+          "title": "Resiko perdarahan  > 500 ml (7ml/kg bagi pasien anak) ",
+          "choices": [
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Ya, jelaskan",
+          "colCount": 2
+         }
+        ],
+        "title": " Sebelum Induksi Anestesi (Sign In)"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question9",
+          "html": "Dengan Perawat, dr . Anestesi dan dr.  Bedah "
+         },
+         {
+          "type": "radiogroup",
+          "name": "question10",
+          "title": "1. Memastikan bahwa semua anggota tim medis sudah memperkenalkan diri (nama & peran ) ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question11",
+          "title": "2.  Memastikan dan membaca ulang nama pasien, tindakan medis dan area yang akan diinsisi .",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question12",
+          "title": "3. Apakah pasien sudah memakai  pulse oksimetri dan sudah berfungsi baik?",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "html",
+          "name": "question18",
+          "html": "<b>Kejadian berisiko yang perlu diantisipasi untuk dr. Bedah :"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question13",
+          "title": "1. Apakah tindakan beresiko atau tindakan tidak rutin yang akan dilakukan. ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question14",
+          "title": "2. Berapa lama tindakan  ini akan    dikerjakan",
+          "hideNumber": true
+         },
+         {
+          "type": "html",
+          "name": "question17",
+          "html": "<b>Untuk Tim dr . Anestesi :"
+         },
+         {
+          "type": "text",
+          "name": "question19",
+          "title": "Apakah ada hal khusus untuk pasien ini",
+          "hideNumber": true
+         },
+         {
+          "type": "html",
+          "name": "question20",
+          "html": "<b>Untuk Tim Perawat :"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question15",
+          "title": "1. Apakah ada masalah dengan peralatan atau masalah alat yang dikhawatirkan?",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question16",
+          "title": "2. Apakah hasil radiologi yang di perlukan sudah ada? ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item2",
+            "text": "Tidak"
+           },
+           {
+            "value": "item3",
+            "text": "Ya"
+           }
+          ],
+          "otherText": "Ya, jelaskan",
+          "colCount": 2
+         }
+        ],
+        "title": "Sebelum Insisi (Time Out)",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question21",
+          "html": "Dengan Perawat, dr. Anestesi dan dr. Bedah\n<p>Secara verbal  perawat memastikan"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question22",
+          "title": "1. Nama tindakan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question23",
+          "title": "2. Kelengkapan alat,jumlah kasa dan jarum/alat lain ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question24",
+          "title": "3. Pelabelan spesimen (baca label spesimen dan nama pasien dengan keras)",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question33",
+          "title": "4. Apakah ada masalah dengan peralatan yang perlu disampaikan ?",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "html",
+          "name": "question25",
+          "html": "<b>Untuk dr. Bedah, dr . Anestesi dan Perawat  :"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question26",
+          "title": "Apakah ada catatan khusus untuk proses pemulihan dan penanganan perawatan pasien ?",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "ebelum pasien meninggalkan Ruang Operasi (Sign Out)",
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question27",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "dr. Anestesi / Perawat Anestesi"
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Tanggal"
+           },
+           {
+            "name": "text3",
+            "inputType": "time",
+            "title": "Jam  Awal  "
+           },
+           {
+            "name": "text4",
+            "inputType": "time",
+            "title": "Jam  Akhir"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question28",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Perawat  OK"
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Tanggal"
+           },
+           {
+            "name": "text3",
+            "inputType": "time",
+            "title": "Jam  Awal  "
+           },
+           {
+            "name": "text4",
+            "inputType": "time",
+            "title": "Jam  Akhir"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question29",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Operator  "
+           },
+           {
+            "name": "text5",
+            "title": "Perawat  OK"
+           },
+           {
+            "name": "text6",
+            "title": "dr. Anestesi / Perawat Anestesi "
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Tanggal"
+           },
+           {
+            "name": "text3",
+            "inputType": "time",
+            "title": "Jam  Awal  "
+           },
+           {
+            "name": "text4",
+            "inputType": "time",
+            "title": "Jam  Akhir"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

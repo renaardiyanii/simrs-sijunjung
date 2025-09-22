@@ -1,0 +1,491 @@
+{
+    "locale": "id",
+    "title": {
+     "default": "LEMBAR MONITORING PENCEGAHAN PASIEN JATUH (HUMPTY DUMPTY SCALE)",
+     "id": "PENGKAJIAN RISIKO JATUH  PADA PASIEN DEWASA"
+    },
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question5",
+          "title": {
+           "id": "Tanggal / Jam"
+          },
+          "titleLocation": "top",
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "startWithNewLine": false,
+          "title": {
+           "id": "Ruangan"
+          },
+          "titleLocation": "top"
+         },
+         {
+          "type": "comment",
+          "name": "question6",
+          "title": {
+           "id": "Diagnosa Medis:"
+          },
+          "titleLocation": "top"
+         }
+        ]
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question1",
+        "title": {
+         "id": "FAKTOR RISIKO JATUH "
+        },
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "table2",
+          "title": "PENILAIAN RESIKO JATUH& (HUMPTY DUMPTY SCALE)",
+          "columns": [
+           {
+            "name": "column1",
+            "title": {
+             "id": "Tanggal"
+            },
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "column2",
+            "title": {
+             "id": "Riwayat Jatuh"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": {
+               "id": "Tidak (0)"
+              }
+             },
+             {
+              "value": "25",
+              "text": {
+               "id": "Ya (25)"
+              }
+             }
+            ]
+           },
+           {
+            "name": "column3",
+            "title": {
+             "id": "Diagnosa sekunder > 1"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": {
+               "id": "Tidak (0)"
+              }
+             },
+             {
+              "value": "15",
+              "text": {
+               "id": "Ya (15)"
+              }
+             }
+            ]
+           },
+           {
+            "name": "column4",
+            "title": {
+             "id": "Menggunakan alat alat bantu"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": {
+               "id": "Tidak ad / bedrest / dibantu (0)"
+              }
+             },
+             {
+              "value": "15",
+              "text": {
+               "id": "Kruk / Tongkat"
+              }
+             },
+             {
+              "value": "30",
+              "text": {
+               "id": "Mencengkram kursi / perabot"
+              }
+             }
+            ]
+           },
+           {
+            "name": "column5",
+            "title": {
+             "id": "Menggunakan infus / heparin / pengecer darah"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": {
+               "id": "Tidak"
+              }
+             },
+             {
+              "value": "20",
+              "text": {
+               "id": "Ya"
+              }
+             }
+            ]
+           },
+           {
+            "name": "column6",
+            "title": {
+             "id": "Gaya berjalan"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": {
+               "id": "Normal / bedrest / kursi"
+              }
+             },
+             {
+              "value": "10",
+              "text": {
+               "id": "Lemah (10)"
+              }
+             },
+             {
+              "value": "20",
+              "text": {
+               "id": "Terganggu (20)"
+              }
+             }
+            ]
+           },
+           {
+            "name": "column7",
+            "title": {
+             "id": "Status mental"
+            },
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": {
+               "id": "Menyadari kemampuan diri (0)"
+              }
+             },
+             {
+              "value": "15",
+              "text": {
+               "id": "Lupa keterbatasan diri / penurunan kesadaran (15)"
+              }
+             }
+            ]
+           },
+           {
+            "name": "column8",
+            "title": {
+             "id": "Total skor"
+            },
+            "cellType": "expression",
+            "expression": "{row.column1}+{row.column2}+{row.column3}+{row.column4}+{row.column5}+{row.column6}+{row.column7}"
+           },
+           {
+            "name": "column9",
+            "title": {
+             "id": "Nama perawat"
+            },
+            "cellType": "text"
+           },
+           {
+            "name": "column10",
+            "title": {
+             "id": "Paraf perawat"
+            },
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": {
+           "id": "Tambah Penilaian Resiko Jatuh"
+          },
+          "removeRowText": {
+           "id": "Hapus Penilaian Resiko Jatuh"
+          }
+         },
+         {
+          "type": "html",
+          "name": "question11"
+         },
+         {
+          "type": "html",
+          "name": "question12",
+          "html": {
+           "id": "<p>Tingkat resiko :\n<p> skor 0-24 = Tidak berisiko, perawatan yang baik\n<p>skor 25-50 = Resiko rendah, lakukan intervensi jatuh standar\n<p>skor > 51 = Resiko tinggi , lakukan intervensi jatuh resiko tinggi"
+          }
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": {
+         "id": "tambah"
+        },
+        "panelRemoveText": {
+         "id": "hapus"
+        }
+       }
+      ],
+      "title": {
+       "default": "LEMBAR MONITORING PENCEGAHAN PASIEN JATUH",
+       "id": "Halaman 1"
+      }
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question9",
+        "html": {
+         "id": "<h4>INTERVENSI PENCEGAHAN PASIEN RISIKO JATUH "
+        }
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question13",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": {
+             "id": "RISIKO RENDAH (0-24)"
+            },
+            "cellType": "radiogroup"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": {
+             "id": "√"
+            }
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": {
+             "id": "1. Lakukan orientasi kamar inap kepada pasien"
+            }
+           },
+           {
+            "value": "item2",
+            "text": {
+             "id": "2. posisikan tempat tidur serendah mungkin, roda terkunci kedua sisi pegangan tempat tidur terpasang baik"
+            }
+           },
+           {
+            "value": "item3",
+            "text": {
+             "id": "3. benda benda pribadi dalam jangkauan"
+            }
+           },
+           {
+            "value": "item4",
+            "text": {
+             "id": "4. pencahayaan yang adekuat"
+            }
+           },
+           {
+            "value": "item5",
+            "text": {
+             "id": "5. alat bantu dalam jangkauan"
+            }
+           },
+           {
+            "value": "item6",
+            "text": {
+             "id": "6. optimalisasi kaca mata dan alat dengar"
+            }
+           },
+           {
+            "value": "item7",
+            "text": {
+             "id": "7. pantau efek obat obatan"
+            }
+           },
+           {
+            "value": "item8",
+            "text": {
+             "id": "8. sediakan dukungan emosional dan psikologis"
+            }
+           },
+           {
+            "value": "item9",
+            "text": {
+             "id": "9. beri edukasi mengenai pencegahan jatuh pada pasien dan keluarga"
+            }
+           }
+          ]
+         }
+        ],
+        "panelCount": 1
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question14",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": {
+             "id": "RESIKO SEDANG (25-50)"
+            },
+            "cellType": "radiogroup"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": {
+             "id": "√"
+            }
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": {
+             "id": "10. lakukan tindakan pencegahan jatuh 1-9"
+            }
+           },
+           {
+            "value": "item2",
+            "text": {
+             "id": "11. pasang stiker kuning (resiko jatuh) pada gelang identifikasi"
+            }
+           },
+           {
+            "value": "item3",
+            "text": {
+             "id": "12. beri risiko jatuh pada tempat tidur pasien atau kamar pasien "
+            }
+           }
+          ]
+         }
+        ],
+        "panelCount": 1
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question15",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": {
+             "id": "RESIKO TINGGI (>51)"
+            },
+            "cellType": "radiogroup"
+           }
+          ],
+          "choices": [
+           {
+            "value": "item1",
+            "text": {
+             "id": "√"
+            }
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": {
+             "id": "13. lakukan tindakan pencegaha jatuh no 1-12"
+            }
+           },
+           {
+            "value": "item2",
+            "text": {
+             "id": "14. kunjungi dan monitor pasien setiap 1 jam "
+            }
+           },
+           {
+            "value": "item3",
+            "text": {
+             "id": "15. tempatkan pasien di kamar yang paling dekat dengan nurse station (jika memungkinkan)"
+            }
+           }
+          ]
+         },
+         {
+          "type": "signaturepad",
+          "name": "question8",
+          "title": {
+           "id": "Perawat"
+          },
+          "titleLocation": "top"
+         },
+         {
+          "type": "text",
+          "name": "question10",
+          "title": {
+           "id": "Nama perawat"
+          },
+          "titleLocation": "top"
+         }
+        ],
+        "panelCount": 1
+       }
+      ]
+     }
+    ],
+    "showQuestionNumbers": "off",
+    "questionTitleLocation": "left",
+    "showProgressBar": "bottom",
+    "pagePrevText": "Sebelumnya",
+    "pageNextText": "Selanjutnya",
+    "completeText": "Selesai"
+   }

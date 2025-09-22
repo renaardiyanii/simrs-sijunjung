@@ -1,0 +1,261 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question23",
+          "title": "DATA UMUM ",
+          "description": "Penanggung Jawab Pasien",
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama"
+           },
+           {
+            "name": "tgl_lahir",
+            "inputType": "date",
+            "title": "Tanggal Lahir"
+           },
+           {
+            "name": "hub",
+            "title": "Hubungan dengan Pasien"
+           },
+           {
+            "name": "alamat",
+            "title": "Alamat"
+           },
+           {
+            "name": "no_hp",
+            "inputType": "number",
+            "title": "No Telepon / HP"
+           },
+           {
+            "name": "no_register",
+            "title": "No Register"
+           },
+           {
+            "name": "no_cm",
+            "title": "No CM"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "question28",
+          "title": "WAKTU PENDAFTARAN",
+          "items": [
+           {
+            "name": "tgldaftarri",
+            "title": "Tanggal"
+           },
+           {
+            "name": "waktu",
+            "title": "Jam"
+           },
+           {
+            "name": "idrg",
+            "title": "Ruang Rawat",
+            "size": 35
+           },
+           {
+            "name": "klsiri",
+            "title": "Kelas",
+            "size": 35
+           }
+          ],
+          "itemSize": 35,
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "carabayar",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "UMUM",
+            "text": "UMUM"
+           },
+           {
+            "value": "BPJS",
+            "text": "BPJS"
+           },
+           {
+            "value": "Asuransi Lainnya",
+            "text": "Asuransi Lainnya"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "panel",
+          "name": "panel2",
+          "elements": [
+           {
+            "type": "html",
+            "name": "question1",
+            "html": "3. PENGOBATAN DAN HASIL YANG DIHARAPKAN\n"
+           },
+           {
+            "type": "html",
+            "name": "question2",
+            "html": "Saya mengetahui bahwa saya memiliki kondisi yang membutuhkan pemeriksaan dan tindakan medis.\n"
+           },
+           {
+            "type": "html",
+            "name": "question3",
+            "html": "Saya sadar dan mengakui bahwa setiap pemeriksaan dan tindakan medis yang dilakukan terhadap saya tidak akan selalu memberikan hasil sesuai yang diharapkan.Saya mengizinkan dokter dan profesional lainnya untuk melakukan pemeriksaan dan tindakan medis yang meliputi: pemeriksaan radiologi,pemeriksaan laboratorium,pemasangan infus,pemasangan kateter urine,pemasangan NGT,pemberian obat oral,supposituria dan suntikan,kecuali tindakan yang memerlukan persetujuan khusus."
+           },
+           {
+            "type": "html",
+            "name": "question4",
+            "html": "4. PELEPASAN INFORMASI"
+           },
+           {
+            "type": "html",
+            "name": "question5",
+            "html": "Saya memahami informasi yang ada di dalam diri saya, termasuk diagnosa,hasil pemeriksaan laboratorium dan hasil pemeriksaan diagnostik yang akan digunakan selama perawatan saya dan akan dijamin kerahasiaannya oleh Rumah Sakit."
+           },
+           {
+            "type": "html",
+            "name": "question6",
+            "html": "Saya memberi wewenang kepada Rumah Sakit untuk memberikan informasi dan data medis saya bila diperlukan untuk proses klaim BPJS, Asuransi Kesehatan lain dan kepentingan perusahaan dan atau lembaga pemerintahan lainnya sesuai aturan yang berlaku."
+           },
+           {
+            "type": "html",
+            "name": "question5b",
+            "html": "Saya mengetahui dan menyetujui bahwa berdasarkan Peraturan Menteri Kesehatan Nomor 24 Tahun 2022 tentang Rekam Medis, fasilitas pelayanan Kesehatan wajib membuka akses dan mengirim data rekam medis kepada Kementerian Kesehatan melalui Platform SATUSEHAT dan menyetujui untuk menerima dan membuka data pasien  dari Fasilitas Pelayanan Kesehatan lainnya melalui SATUSEHAT untuk kepentingan pelayanan Kesehatan dan/atau rujukan"
+           },
+           {
+            "type": "html",
+            "name": "question7",
+            "html": "5. PERMINTAAN PRIVASI"
+           },
+           {
+            "type": "html",
+            "name": "question8",
+            "html": "Bila ada permintaan privasi khusus :"
+           },
+           {
+            "type": "html",
+            "name": "question9",
+            "html": "Saya mengizinkan Rumah Sakit memberi akses hanya kepada nama-nama yang tertulis di bawah ini untuk menemui saya selama perawatan :"
+           },
+           {
+            "type": "text",
+            "name": "question10",
+            "titleLocation": "hidden",
+            "size": 30
+           },
+           {
+            "type": "text",
+            "name": "question24",
+            "titleLocation": "hidden",
+            "size": 30
+           },
+           {
+            "type": "text",
+            "name": "question25",
+            "titleLocation": "hidden",
+            "size": 30
+           },
+           {
+            "type": "html",
+            "name": "question26",
+            "html": "Bila tidak ada permintaan privasi khusus"
+           },
+           {
+            "type": "html",
+            "name": "question27",
+            "html": "saya mengizinkan Rumah Sakit memberi akses kepada keluarga dan handai taulan serta orang-orang yang akan menemui saya selama perawatan sesuai aturan Rumah Sakit."
+           },
+           {
+            "type": "html",
+            "name": "question11",
+            "html": "6. BARANG BERHARGA MILIK PRIBADI"
+           },
+           {
+            "type": "html",
+            "name": "question12",
+            "html": "Saya sudah mendapatkan informasi tentang kebijakan Rumah Sakit berkaitan barang berharga milik pasien.Saya setuju untuk tidak membawa dan menyimpan barang berharga dan barang-barang lainnya diluar ketentuan Rumah Sakit selama perawatan.Saya menyetujui bahwa apabila saya membawa dan menyimpan barang-barang tersebut,maka Rumah Sakit tidak bertanggung jawab terhadap kehilangan,kerusakan atau pencurian,"
+           },
+           {
+            "type": "html",
+            "name": "question13",
+            "html": "7. INFORMASI BIAYA"
+           },
+           {
+            "type": "html",
+            "name": "question14",
+            "html": "Saya sudah mendapatkan informasi biaya yang akan saya tanggung selama perawatan di Rumah Sakit,saya setuju baik sebagai wali/penanggung jawab atau sebagai pasien untuk membayar biaya perawatan saya sesuai ketentuan yang berlaku di RSOMH Bukittinggi."
+           },
+           {
+            "type": "html",
+            "name": "question15",
+            "html": "8. TATA TERTIB RUMAH SAKIT"
+           },
+           {
+            "type": "html",
+            "name": "question16",
+            "html": "Saya sudah mendapatkan informasi tentang tata tertib yang berlaku di RSOMH bukittinggi.Saya setuju untuk mematuhi semua ketentuan yang diatur dalam tata tertib RSOMH bukittinggi selama perawatan saya."
+           },
+           {
+            "type": "html",
+            "name": "question17",
+            "html": "9. HAK DAN KEWAJIBAN PASIEN"
+           },
+           {
+            "type": "html",
+            "name": "question18",
+            "html": "Saya sudah mendapatkan informasi tentang hak dan kewajiban saya sebagai pasien di RSOMH Bukittinggi. Saya setuju untuk mematuhi semua ketentuan yang tertuang dalam hak dan kewajiban pasien tersebut."
+           },
+           {
+            "type": "html",
+            "name": "question19",
+            "html": "10. KEIKUTSERTAAN PESERTA DIDIK"
+           },
+           {
+            "type": "html",
+            "name": "question20",
+            "html": "Saya sudah mendapatkan informasi tentang keikutsertaan peserta didik/mahasiswa praktek dalam pelayanan di RSOMH Bukittinggi. Saya setuju bila selama masa perawatan ada keterlibatan peserta didik/mahasiswa praktek sesuai batas kewenangan dan ketentuan yang berlaku di Rumah Sakit."
+           },
+           {
+            "type": "html",
+            "name": "question21",
+            "html": "11. PERNYATAAN"
+           },
+           {
+            "type": "html",
+            "name": "question22",
+            "html": "Saya telah memahami dan sepenuhnya setuju dengan setiap pernyataan yang terdapat dalam formulir ini dan menandatangani dengan kesadaran penuh tanpa paksaan."
+           }
+          ]
+         },
+         {
+          "type": "signaturepad",
+          "name": "ttd_pasien",
+          "title": "Bukittinggi,",
+          "description": "Pasien / Penanggung Jawab",
+          "hideNumber": true,
+          "penColor": "#202222"
+         },
+         {
+          "type": "text",
+          "name": "namattd",
+          "maxWidth": "400px",
+          "titleLocation": "hidden",
+          "hideNumber": true
+         }
+        ]
+       }
+      ],
+      "title": "PERSETUJUAN UMUM",
+      "description": "(GENERAL CONSENT)"
+     }
+    ]
+   }

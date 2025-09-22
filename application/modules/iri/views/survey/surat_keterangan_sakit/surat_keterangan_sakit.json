@@ -1,0 +1,43 @@
+{
+  "pages": [
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "text",
+      "name": "question2",
+      "minWidth": "",
+      "maxWidth": "",
+      "title": "Nomor",
+      "titleLocation": "left",
+      "hideNumber": true,
+      "inputType": "text",
+      "max": "0"
+     },
+     {
+      "type": "multipletext",
+      "name": "question3",
+      "titleLocation": "hidden",
+      "hideNumber": true,
+      "items": [
+       {
+        "name": "text1",
+        "title": "Menurut hasil pemeriksaan yang bersangkutan saat ini dalam keadaan sakit, oleh sebab itu perlu diberi istirahat selama"
+       },
+       {
+        "name": "text2",
+        "inputType": "date",
+        "title": "Hari, mulai tanggal"
+       },
+       {
+        "name": "text3",
+        "inputType": "date",
+        "title": "Sampai tanggal"
+       }
+      ]
+     }
+    ],
+    "title": "SURAT KETERANGAN SAKIT"
+   }
+  ]
+ }

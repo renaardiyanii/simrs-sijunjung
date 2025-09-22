@@ -1,0 +1,100 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "title": "Diagnosa Primer",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Diagnosa Sekunder",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "title": "Tindakan",
+          "hideNumber": true
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "title": "Pemakaian Ventilator",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "Intubasi",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "Column 2",
+            "title": "Ekstubasi",
+            "cellType": "text",
+            "inputType": "time"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "Row 1",
+            "text": "Tanggal"
+           },
+           {
+            "value": "Row 2",
+            "text": "Jam"
+           }
+          ]
+         },
+         {
+          "type": "dropdown",
+          "name": "question9",
+          "title": "DPJP 2",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/sijunjung_new/admin/dokter"
+          }
+         },
+         {
+          "type": "dropdown",
+          "name": "question10",
+          "startWithNewLine": false,
+          "title": "DPJP 3",
+          "hideNumber": true,
+          "choices": [
+           "item1",
+           "item2",
+           "item3"
+          ],
+          "choicesByUrl": {
+           "url": "/sijunjung_new/admin/dokter"
+          }
+         }
+        ]
+       }
+      ],
+      "title": "PEMAKAIAN VENTILATOR"
+     }
+    ]
+   }

@@ -1,0 +1,361 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "inputType": "date",
+          "title": "Tanggal Periksa"
+         },
+         {
+          "name": "text2",
+          "title": "Unit periksa"
+         },
+         {
+          "name": "text3",
+          "title": "Pemeriksa"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "Column1",
+            "title": "OBSERVASI",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Kesadaran"
+             }
+            ]
+           },
+           {
+            "name": "Column2",
+            "title": "HASIL OBSERVASI",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Kesadaran Sadar, lanjut ke no 2\tTidak sadar, hentikan skrining"
+             }
+            ]
+           },
+           {
+            "name": "Column3",
+            "title": "HASIL OBSERVASI",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "1",
+              "text": "Kesadaran Sadar, lanjut ke no 2 Tidak sadar, hentikan skrining"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           "1"
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "showHeader": false,
+          "columns": [
+           {
+            "name": "Column1",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Afasia atau disartria"
+             }
+            ]
+           },
+           {
+            "name": "Column2",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Ya. lanjutkan langkah berikut"
+             }
+            ]
+           },
+           {
+            "name": "Column3",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "2",
+              "text": "Tidak, lanjut ke nomor 3"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "2",
+            "text": "2"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "showHeader": false,
+          "columns": [
+           {
+            "name": "Column1",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "3",
+              "text": "Dapat merapatkan gigi, merapatkan bibr, wajah simetris, letak lidah lidah di tengah uvula di tengah "
+             }
+            ]
+           },
+           {
+            "name": "Column2",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "3",
+              "text": "Jika ditemukan 3 atau lebih gejala dilanjutkan ke nomor 4"
+             }
+            ]
+           },
+           {
+            "name": "Column3",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "3",
+              "text": "Tidak , lanjutkan  ke nomor 4 dan kolaborasi dengan terapi wicara (di rawat inap)"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "3",
+            "text": "3"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question6",
+          "titleLocation": "hidden",
+          "showHeader": false,
+          "columns": [
+           {
+            "name": "Column1",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Reflex muntah ada, batuk spontan, reflex menelan baik"
+             }
+            ]
+           },
+           {
+            "name": "Column2",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Ya. Lanjut ke langkah nomor 5"
+             }
+            ]
+           },
+           {
+            "name": "Column3",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "4",
+              "text": "Tidak, kolaborasi dengan terapi wicara,(dirawat inap) lakukan langkah nomor 5"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "4",
+            "text": "4"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question7",
+          "titleLocation": "hidden",
+          "showHeader": false,
+          "columns": [
+           {
+            "name": "Column1",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "5",
+              "text": "Tes menelan air putih satu sendok teh"
+             }
+            ]
+           },
+           {
+            "name": "Column2",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "5",
+              "text": "Mampu menelan, lanjut ke langkah nomor 6"
+             }
+            ]
+           },
+           {
+            "name": "Column3",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "5",
+              "text": "Tidak mampu menelan, STOP tes menelan. Hasil skrining disfagia positif   Protokol I. jangan  berikan makanan/minuman peroral, pasang NGT ,Rawat inap :kolaborasi dengan dokter, terapis wicara dan ahli gizi"
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           "5"
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question8",
+          "titleLocation": "hidden",
+          "showHeader": false,
+          "columns": [
+           {
+            "name": "Column1",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "6",
+              "text": "Berikan minum air putih bertahap mulai dari 25 ml, 50 ml, dan 100 ml "
+             }
+            ]
+           },
+           {
+            "name": "Column2",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "6",
+              "text": "Pasien mampu minum air putih 50 ml dalam waktu kurang dari 20 detik tanpa tersedak, hasil skrining disfagia negative atau fungsi menelan normal"
+             }
+            ]
+           },
+           {
+            "name": "Column3",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "6",
+              "text": "Tersedak / batuk : hasil skrining disfagia positif, pasien tidak mampu menelan cair. Protokol II : berikan modifikasi diit sesuai toleransi, pasang NGT bila diperlukan, untuk asupan cairan, kolaborasi dengana dokter, terapis wicara dan ahli gizi."
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "6",
+            "text": "6"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question9",
+        "html": "Kesimpulan :"
+       },
+       {
+        "type": "radiogroup",
+        "name": "question10",
+        "title": "Gangguan menelan :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "1",
+          "text": "Ya"
+         },
+         {
+          "value": "2",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       }
+      ],
+      "title": "PROSEDUR SKRINING DISFAGIA ",
+      "description": "MODIFIKASI DARI THE MASSEY BEDSIDE SWALLOWING SCREEN ( Massey & Jedlika, 2002)"
+     }
+    ]
+   }

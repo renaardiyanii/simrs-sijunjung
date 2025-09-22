@@ -1,0 +1,36 @@
+{
+    "title": "SURAT KETERANGAN KEMATIAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "html",
+        "name": "question2",
+        "html": "<H4> Telah meninggal dunia di RSUD Sijunjung pada :"
+       },
+       {
+        "type": "multipletext",
+        "name": "kematian",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "hari",
+          "title": "Hari"
+         },
+         {
+          "name": "tanggal",
+          "inputType": "date",
+          "title": "Tanggal"
+         },
+         {
+          "name": "pukul",
+          "inputType": "time",
+          "title": "Pukul"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

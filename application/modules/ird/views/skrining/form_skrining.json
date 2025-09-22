@@ -1,0 +1,246 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "tb",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "option",
+            "title": "YA / TIDAK",
+            "cellType": "radiogroup"
+           }
+          ],
+          "choices": [
+           {
+            "value": "ya",
+            "text": "YA"
+           },
+           {
+            "value": "tidak",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "batuk_berdahak",
+            "text": "1. Batuk berdahak selama > 2 minggu"
+           },
+           {
+            "value": "baruk_berdarah",
+            "text": "2. Batuk berdarah"
+           },
+           {
+            "value": "sesak_nafas",
+            "text": "3. Sesak nafas"
+           },
+           {
+            "value": "nyeri_dada",
+            "text": "4. Nyeri dada"
+           },
+           {
+            "value": "demam_hilang",
+            "text": "5. Demam hilang timbul"
+           },
+           {
+            "value": "keringat_malam",
+            "text": "6. Keringat malam tanpa aktifitas"
+           },
+           {
+            "value": "pernurunan_berat",
+            "text": "7. Penurunan berat badan tanpa penyebab yang jelas"
+           },
+           {
+            "value": "penurunan_nafsu",
+            "text": "8. Penurunan nafsu makan"
+           },
+           {
+            "value": "pembesaran",
+            "text": "9. Pembesaran kelenjer getah gening (benjolan dileher)"
+           },
+           {
+            "value": "keluarga",
+            "text": "10. keluarga/tetangga pernah sakit paru paru (TB)"
+           }
+          ]
+         }
+        ],
+        "title": "1. Formulir Skrining TB"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "covid",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "option",
+            "title": "YA / TIDAK",
+            "cellType": "radiogroup"
+           }
+          ],
+          "choices": [
+           {
+            "value": "ya",
+            "text": "YA"
+           },
+           {
+            "value": "tidak",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "demam",
+            "text": "1. Demam (suhu > 38C)"
+           },
+           {
+            "value": "batuk",
+            "text": "2. Batuk lebih dari 2 minggu"
+           },
+           {
+            "value": "sesak_nafas",
+            "text": "3. Sesak nafas"
+           }
+          ]
+         }
+        ],
+        "title": "2. Skrining Covid -19"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "pengkajian",
+          "title": "Pengkajian",
+          "columns": [
+           {
+            "name": "option",
+            "title": "YA / TIDAK",
+            "cellType": "radiogroup"
+           }
+          ],
+          "choices": [
+           {
+            "value": "ya",
+            "text": "YA"
+           },
+           {
+            "value": "tidak",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "cara_berjalan",
+            "text": "1. Cara berjalan pasien (salah satu atau lebih)  a, tidak seimbang/sempoyongan / limbung). b. jalan dengan menggunakan alat bantuk (kruk, tripot, kursi roda, oranglain)"
+           },
+           {
+            "value": "menopang",
+            "text": "2. Menopang saat akan duduk : tampak memegang pinggiran kursi atau meja /benda lain sebagai penopang saat akan duduk"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "hasil",
+          "title": "Hasil",
+          "columns": [
+           {
+            "name": "keterangan",
+            "title": "Keterangan",
+            "cellType": "text"
+           }
+          ],
+          "choices": [
+           {
+            "value": "ya",
+            "text": "YA"
+           },
+           {
+            "value": "tidak",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "demam",
+            "text": "1. Demam (suhu > 38C) = Tidak ditemukan a & b"
+           },
+           {
+            "value": "batuk",
+            "text": "2. Batuk lebih dari 2 minggu = Ditemukan salah satu dari a/b"
+           },
+           {
+            "value": "sesak_nafas",
+            "text": "3. Sesak nafas  = Ditemukan a & b"
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "title": "Tindakan",
+          "columns": [
+           {
+            "name": "keterangan",
+            "title": "Keterangan",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "ttd1",
+            "title": "Tanda tangan",
+            "cellType": "signaturepad",
+            "minWidth": "100",
+            "width": "150",
+            "penColor": "#202222"
+           }
+          ],
+          "choices": [
+           {
+            "value": "ya",
+            "text": "YA"
+           },
+           {
+            "value": "tidak",
+            "text": "TIDAK"
+           }
+          ],
+          "rows": [
+           {
+            "value": "tidak_beresiko",
+            "text": "1. Tidak beresiko = tidak ada tindakan"
+           },
+           {
+            "value": "risiko_rendah",
+            "text": "2. Edukasi"
+           },
+           {
+            "value": "risiko_tinggi",
+            "text": "3. Pasang pita kuning dan edukasi"
+           }
+          ]
+         },
+         {
+          "type": "signaturepad",
+          "name": "question3"
+         }
+        ],
+        "title": " 3. Penilaian / pengkajian pasien resiko jatuh"
+       }
+      ]
+     }
+    ]
+   }

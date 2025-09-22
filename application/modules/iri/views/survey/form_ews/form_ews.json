@@ -1,0 +1,280 @@
+{
+    "title": "LEMBAR OBSERVASI EWS",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "ruangan",
+        "title": "Ruangan",
+        "hideNumber": true
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question1",
+        "title": "PARAMETER",
+        "titleLocation": "hidden",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "html",
+          "name": "question3",
+          "html": "<h4> PARAMETER"
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "title": "Physiological",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "result",
+            "text": " "
+           }
+          ]
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "physiological",
+          "title": "Physiological",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "defaultValue": {
+           "result": {
+            "p": "P",
+            "total_skor": 0,
+            "nilai_skor": "Minimal setiap 12 jam sekali ((0))",
+            "asuhan": "Lanjutkan observasi / monitorng secara rutin(0))"
+           },
+           "item1": {
+            "p": "S",
+            "total_skor": 0,
+            "nilai_skor": "Minimal setiap 12 jam sekali ((0))",
+            "asuhan": "Lanjutkan observasi / monitorng secara rutin(0))"
+           },
+           "item2": {
+            "p": "M",
+            "total_skor": 0,
+            "nilai_skor": "Minimal setiap 12 jam sekali ((0))",
+            "asuhan": "Lanjutkan observasi / monitorng secara rutin(0))"
+           }
+          },
+          "correctAnswer": {
+           "result": {
+            "total_skor": 0,
+            "nilai_skor": "Minimal setiap 12 jam sekali ((0))",
+            "asuhan": "Lanjutkan observasi / monitorng secara rutin(0))"
+           },
+           "item1": {
+            "total_skor": 0,
+            "nilai_skor": "Minimal setiap 12 jam sekali ((0))",
+            "asuhan": "Lanjutkan observasi / monitorng secara rutin(0))"
+           },
+           "item2": {
+            "total_skor": 0,
+            "nilai_skor": "Minimal setiap 12 jam sekali ((0))",
+            "asuhan": "Lanjutkan observasi / monitorng secara rutin(0))"
+           }
+          },
+          "columns": [
+           {
+            "name": "p",
+            "title": "P/S/M",
+            "cellType": "text",
+            "readOnly": true
+           },
+           {
+            "name": "1",
+            "title": "Pernafasan ",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "<8"
+             },
+             {
+              "value": "1",
+              "text": "9-11"
+             },
+             {
+              "value": "0",
+              "text": "12-20"
+             },
+             {
+              "value": "2",
+              "text": "21-24"
+             },
+             {
+              "value": "3.",
+              "text": ">25"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "Terperatur",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "<35"
+             },
+             {
+              "value": "1",
+              "text": "35,1 -36,0"
+             },
+             {
+              "value": "0",
+              "text": "36,2 - 38,0"
+             },
+             {
+              "value": "1.",
+              "text": "≥ 39,1"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Sistolik",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3",
+              "text": "<90"
+             },
+             {
+              "value": "2",
+              "text": "90-100"
+             },
+             {
+              "value": "1",
+              "text": "101-110"
+             },
+             {
+              "value": "0",
+              "text": "111-219"
+             },
+             {
+              "value": "3.",
+              "text": "≥ 220"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Denyut Nadi",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "3.",
+              "text": "≤ 40"
+             },
+             {
+              "value": "1",
+              "text": "41-50"
+             },
+             {
+              "value": "0",
+              "text": "51-90"
+             },
+             {
+              "value": "1.",
+              "text": "91-110"
+             },
+             {
+              "value": "2",
+              "text": "111-130"
+             },
+             {
+              "value": "3",
+              "text": "≥ 131"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Kesadaran",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Sadar Penuh"
+             },
+             {
+              "value": "3",
+              "text": "VP Or U"
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Nilai EWS",
+            "cellType": "expression",
+            "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5}"
+           },
+           {
+            "name": "nilai_skor",
+            "title": "Frekuensi Monitoring",
+            "cellType": "expression",
+            "expression": "iif({row.total_skor} > 6,'Lanjutkan Observasi / monitoring tanda tanda vital(7)',\n iif({row.total_skor}  = 0,'Minimal setiap 12 jam sekali ((0))',\n iif({row.total_skor} < 5,' (Minimal setiap 4-6 jam sekali (1-4))','Peningkatan frekuensi observasi / monitoring. setidaknya setiap 1 jam sekali (5-6)'))\n"
+           },
+           {
+            "name": "asuhan",
+            "title": "Asuhan yang diberikan",
+            "cellType": "expression",
+            "width": "100px",
+            "expression": "iif({row.total_skor} > 6,'1. Ketua tim (Perawat) melaporkan kepada tim kode biru, 2. Tim kode biru melakukan assesmen segera, 3. setabilitas oleh tim kode biru dan pasien dirujuk sesuai kode pasien, 4. untuk pasien di IGD (prioritas 3,4, dan 5), perawat penaggung jawab segera kirim pasien ke ruangan resusitasi untuk penanganan bantuan hidup lanjut (BHL)(7)',\n iif({row.total_skor}  = 0,'Lanjutkan observasi / monitorng secara rutin(0))',\n iif({row.total_skor} < 5,' 1. Perawat pelaksana menginformasikan kepada ketua tim/ penanggung jawab jaga ruangan tentang siapa yang melaksanakan asesmen selanjutnya, 2. ketua tim / penanggung jawab membuat keputusan, (a) meningkatakan frekuenis observasi / monitoring, (b) perbaikan asuhan yang dibutuhkan oleh pasien  (1-4))','1. Ketua tim (perawat) segera memberikan informasi tentang kondisi pasien kepadadokter jaga atau DPJP, 2. Dokter jaga atau DPJP melakukan asesmen sesuai kompetensinya dan menentukan kondisi pasien apakah dalam penyakit akut, 3. Siapkan fasilitas monitoring yang lebih canggih (5-6)'))\n"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "result",
+            "text": " "
+           },
+           {
+            "value": "item1",
+            "text": " "
+           },
+           {
+            "value": "item2",
+            "text": " "
+           }
+          ]
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1,
+        "panelAddText": "Tambah Parameter",
+        "panelRemoveText": "Hapus Parameter"
+       }
+      ]
+     }
+    ],
+    "showCompletedPage": false
+   }

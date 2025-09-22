@@ -1,0 +1,415 @@
+{
+    "title": "FORMULIR SERAH TERIMA (HAND OVER) ANTAR SHIFT",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "situation",
+            "title": "Situation",
+            "cellType": "comment"
+           },
+           {
+            "name": "baground",
+            "title": "Baground",
+            "cellType": "text"
+           },
+           {
+            "name": "dokter",
+            "title": "Dx.Medis DPJP",
+            "cellType": "text"
+           },
+           {
+            "name": "assesment",
+            "title": "Assesment",
+            "cellType": "text"
+           },
+           {
+            "name": "kesadaran",
+            "title": "Kesadaran",
+            "cellType": "text"
+           },
+           {
+            "name": "ttv",
+            "title": "TTV : TD",
+            "cellType": "comment"
+           },
+           {
+            "name": "okesigen",
+            "title": "Oksigen",
+            "cellType": "text"
+           },
+           {
+            "name": "infus",
+            "title": "Infus",
+            "cellType": "text"
+           },
+           {
+            "name": "transfusi",
+            "title": "Transfusi",
+            "cellType": "text"
+           },
+           {
+            "name": "kateter",
+            "title": "Katheter",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ngt",
+            "title": "NGT",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "makan",
+            "title": "Makan/Minum",
+            "cellType": "text"
+           },
+           {
+            "name": "toileting",
+            "title": "Toileting",
+            "cellType": "text"
+           },
+           {
+            "name": "aktifitas",
+            "title": "Aktifitas/Gerak",
+            "cellType": "text"
+           },
+           {
+            "name": "skor",
+            "title": "Skor jatuh",
+            "cellType": "text"
+           },
+           {
+            "name": "recommedation",
+            "title": "Recommedation",
+            "cellType": "comment"
+           },
+           {
+            "name": "pemberi",
+            "title": "Pemberi operan",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "penerima",
+            "title": "Penerima operan",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "PAGI"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "situation",
+            "title": "Situation",
+            "cellType": "comment"
+           },
+           {
+            "name": "baground",
+            "title": "Baground",
+            "cellType": "text"
+           },
+           {
+            "name": "dokter",
+            "title": "Dx.Medis DPJP",
+            "cellType": "text"
+           },
+           {
+            "name": "assesment",
+            "title": "Assesment",
+            "cellType": "text"
+           },
+           {
+            "name": "kesadaran",
+            "title": "Kesadaran",
+            "cellType": "text"
+           },
+           {
+            "name": "ttv",
+            "title": "TTV : TD",
+            "cellType": "comment"
+           },
+           {
+            "name": "okesigen",
+            "title": "Oksigen",
+            "cellType": "text"
+           },
+           {
+            "name": "infus",
+            "title": "Infus",
+            "cellType": "text"
+           },
+           {
+            "name": "transfusi",
+            "title": "Transfusi",
+            "cellType": "text"
+           },
+           {
+            "name": "kateter",
+            "title": "Katheter",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ngt",
+            "title": "NGT",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "makan",
+            "title": "Makan/Minum",
+            "cellType": "text"
+           },
+           {
+            "name": "toileting",
+            "title": "Toileting",
+            "cellType": "text"
+           },
+           {
+            "name": "aktifitas",
+            "title": "Aktifitas/Gerak",
+            "cellType": "text"
+           },
+           {
+            "name": "skor",
+            "title": "Skor jatuh",
+            "cellType": "text"
+           },
+           {
+            "name": "recommedation",
+            "title": "Recommedation",
+            "cellType": "comment"
+           },
+           {
+            "name": "pemberi",
+            "title": "Pemberi operan",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "penerima",
+            "title": "Penerima operan",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "SORE"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "situation",
+            "title": "Situation",
+            "cellType": "comment"
+           },
+           {
+            "name": "baground",
+            "title": "Baground",
+            "cellType": "text"
+           },
+           {
+            "name": "dokter",
+            "title": "Dx.Medis DPJP",
+            "cellType": "text"
+           },
+           {
+            "name": "assesment",
+            "title": "Assesment",
+            "cellType": "text"
+           },
+           {
+            "name": "kesadaran",
+            "title": "Kesadaran",
+            "cellType": "text"
+           },
+           {
+            "name": "ttv",
+            "title": "TTV : TD",
+            "cellType": "comment"
+           },
+           {
+            "name": "okesigen",
+            "title": "Oksigen",
+            "cellType": "text"
+           },
+           {
+            "name": "infus",
+            "title": "Infus",
+            "cellType": "text"
+           },
+           {
+            "name": "transfusi",
+            "title": "Transfusi",
+            "cellType": "text"
+           },
+           {
+            "name": "kateter",
+            "title": "Katheter",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "ngt",
+            "title": "NGT",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "makan",
+            "title": "Makan/Minum",
+            "cellType": "text"
+           },
+           {
+            "name": "toileting",
+            "title": "Toileting",
+            "cellType": "text"
+           },
+           {
+            "name": "aktifitas",
+            "title": "Aktifitas/Gerak",
+            "cellType": "text"
+           },
+           {
+            "name": "skor",
+            "title": "Skor jatuh",
+            "cellType": "text"
+           },
+           {
+            "name": "recommedation",
+            "title": "Recommedation",
+            "cellType": "comment"
+           },
+           {
+            "name": "pemberi",
+            "title": "Pemberi operan",
+            "cellType": "signaturepad"
+           },
+           {
+            "name": "penerima",
+            "title": "Penerima operan",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "MALAM"
+       }
+      ]
+     }
+    ]
+   }

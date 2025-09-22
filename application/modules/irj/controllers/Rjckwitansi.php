@@ -1,0 +1,5283 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+include('Rjcterbilang.php');
+
+// require_once(APPPATH.'controllers/Secure_area.php');
+// require_once(APPPATH.'helpers/tcpdf/tcpdf.php');
+// class MYPDF extends TCPDF {  
+// 	//$this->load->helper('pdf_helper');
+//        // Page footer
+//         public function Footer() {
+//             // Position at 15 mm from bottom
+//             $this->SetY(-8);
+//             // Set font
+//             $this->SetFont('helvetica', 'I', 8);
+//             // Page number
+// 	date_default_timezone_set("Asia/Jakarta");			
+// 	$tgl_jam = date("d-m-Y H:i:s");
+//         $this->Cell(0, 0, '', 0, false, 'L', 0, '', 0, false, 'T', 'M');    
+// 	$this->Cell(0, 10, $this->getAliasNumPage().' of '.$this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');  
+//         }      
+//     }
+class rjckwitansi extends Secure_area
+{
+	public function __construct()
+	{
+		parent::__construct();
+
+		$this->load->model('irj/rjmpencarian', '', TRUE);
+		$this->load->model('irj/rjmpelayanan', '', TRUE);
+		$this->load->model('irj/rjmregistrasi', '', TRUE);
+		$this->load->model('irj/rjmkwitansi', '', TRUE);
+		$this->load->model('ird/ModelKwitansi', '', TRUE);
+		$this->load->model('admin/M_user', '', TRUE);
+		$this->load->helper('pdf_helper');
+		$this->load->model('admin/appconfig', '', TRUE);
+		$this->load->model('piutang/Mpiutang', '', TRUE);
+		$this->load->model('umc/Mumcicilan', '', TRUE);
+	}
+	public function index()
+	{
+		// $cterbilang=new rjcterbilang();
+		// echo $cterbilang->terbilang(100);
+		redirect('irj/rjcregistrasi', 'refresh');
+	}
+
+	public function kwitansi()
+	{
+		$data['title'] = 'Kwitansi Rawat Jalan';
+		$result = $this->M_user->getKasirAkses($this->session->userdata('userid'));
+		$data['kasir'] = "";
+		if ($result) {
+			$data['kasir'] = $result->kasir;
+		}
+		$date = $this->input->post('tgl');
+		if ($date == '') {
+			$date = date('Y-m-d');
+		}
+		$data['url'] = '';
+		$data['pasien_daftar'] = $this->rjmkwitansi->get_pasien_kwitansi($date)->result();
+		$this->load->view('irj/rjvkwitansi', $data);
+	}
+
+	public function list_kwitansi_bpjs()
+	{
+		$data['title'] = 'Kwitansi Rawat Jalan';
+		$result = $this->M_user->getKasirAkses($this->session->userdata('userid'));
+		$data['kasir'] = "";
+		if ($result) {
+			$data['kasir'] = $result->kasir;
+		}
+		$date = $this->input->post('tgl');
+		if ($date == '') {
+			$date = date('Y-m-d');
+		}
+		$data['url'] = '';
+		$data['pasien_daftar'] = $this->rjmkwitansi->get_pasien_kwitansi_bpjs($date)->result();
+		/*if(sizeof($data['pasien_daftar'])==0){
+			$this->session->set_flashdata('message_nodata','<div class="row">
+						<div class="col-md-12">
+						  <div class="box box-default box-solid">
+							<div class="box-header with-border">
+							  <center>Tidak ada lagi data</center>
+							</div>
+						  </div>
+						</div>
+					</div>');
+		}
+		*/
+		$this->load->view('irj/rjvkwitansibpjs', $data);
+	}
+
+	public function kwitansi_detail()
+	{
+		$data['title'] = 'Kwitansi Rawat Jalan Per Tindakan';
+		$date = $this->input->post('tgl');
+		$result = $this->M_user->getKasirAkses($this->session->userdata('userid'));
+		$data['kasir'] = "";
+		if ($result) {
+			$data['kasir'] = $result->kasir;
+		}
+		if ($date == '') {
+			$date = date('Y-m-d');
+		}
+		$data['pasien_daftar'] = $this->rjmkwitansi->get_pasien_pertind_kwitansi($date)->result();
+		$data['url'] = '1';
+
+		/*if(sizeof($data['pasien_daftar'])==0){
+			$this->session->set_flashdata('message_nodata','<div class="row">
+						<div class="col-md-12">
+						  <div class="box box-default box-solid">
+							<div class="box-header with-border">
+							  <center>Tidak ada lagi data</center>
+							</div>
+						  </div>
+						</div>
+
+					</div>');
+		}
+		*/
+		$this->load->view('irj/rjvkwitansidetail', $data);
+	}
+	/*public function kwitansi_by_no()
+	{
+		if($_SERVER['REQUEST_METHOD']=='POST'){
+			$key=$this->input->post('key');
+			if($this->input->post('based')=='no_cm'){
+				$data['pasien_daftar']=$this->rjmkwitansi->get_pasien_kwitansi_by_nocm($key)->result();
+			}else{
+				$data['pasien_daftar']=$this->rjmkwitansi->get_pasien_kwitansi_by_noregister($key)->result();
+			}
+			if(sizeof($data['pasien_daftar'])==0){
+				$this->session->set_flashdata('message_nodata','<div class="row">
+							<div class="col-md-12">
+							  <div class="box box-default box-solid">
+								<div class="box-header with-border">
+								  <center>Tidak ada lagi data</center>
+								</div>
+							  </div>
+							</div>
+						</div>');
+			}else{
+				$this->session->set_flashdata('message_nodata','');
+			}
+			$this->load->view('irj/rjvkwitansi',$data);
+		}else{
+			redirect('irj/rjckwitansi/kwitansi');
+		}
+	}
+	*/
+	public function kwitansi_by_date()
+	{
+		$data['title'] = 'Kwitansi Rawat Jalan';
+		$data['url'] = '';
+		$result = $this->M_user->getKasirAkses($this->session->userdata('userid'));
+		$data['kasir'] = "";
+		if ($result) {
+			$data['kasir'] = $result->kasir;
+		}
+		//if($_SERVER['REQUEST_METHOD']=='POST'){
+		$date = $this->input->post('date');
+		if ($date != '') {
+			$data['pasien_daftar'] = $this->rjmkwitansi->get_pasien_kwitansi_by_date($date)->result();
+			/*if(sizeof($data['pasien_daftar'])==0){
+				$this->session->set_flashdata('message_nodata','<div class="row">
+							<div class="col-md-12">
+							  <div class="box box-default box-solid">
+								<div class="box-header with-border">
+								  <center>Tidak ada lagi data</center>
+								</div>
+							  </div>
+							</div>
+						</div>');
+			}
+			*/
+			$this->load->view('irj/rjvkwitansi', $data);
+		} else {
+			redirect('irj/rjckwitansi/kwitansi');
+		}
+
+		//}else{
+		//	redirect('irj/rjckwitansi/kwitansi');
+		//}
+	}
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////read data pelayanan poli per pasien
+	public function kwitansi_pasien($no_register = '')
+	{
+		$data['title'] = 'Cetak Kwitansi Rawat Jalan';
+		if ($no_register != '') {
+
+			$data['no_register'] = $no_register;
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			//$data['data_tindakan']=$this->rjmkwitansi->getdata_unpaid_finish_tindakan_pasien($no_register)->result();
+			$data['data_laboratorium'] = $this->ModelKwitansi->getdata_lab_pasien($no_register)->result();
+			$data['data_radiologi'] = $this->ModelKwitansi->getdata_rad_pasien($no_register)->result();
+			$data['data_resep'] = $this->ModelKwitansi->getdata_resep_pasien($no_register)->result();
+			$data['data_pa'] = $this->ModelKwitansi->getdata_pa_pasien($no_register)->result();
+			$data['data_ok'] = $this->ModelKwitansi->getdata_ok_pasien($no_register)->result();
+			$data['kontraktor'] = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+			//	print_r($data['vtot']);die();
+			$data['vtotpoli'] = 0;
+			if ($data['data_pasien']->cara_bayar == 'UMUM') {
+				$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasienumum($no_register)->result();
+			} else {
+				$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			}
+			//	print_r($data);die();
+			foreach ($data['data_tindakan'] as $row) {
+				$data['vtotpoli'] = (int)$data['vtotpoli'] + $row->vtot;
+			}
+			/*if(sizeof($data['data_tindakan'])==0){
+				$this->session->set_flashdata('message_no_tindakan','<div class="row">
+							<div class="col-md-12">
+							  <div class="box box-default box-solid">
+								<div class="box-header with-border">
+								  <center>Tidak Ada Tindakan</center>
+								</div>
+							  </div>
+							</div>
+						</div>');
+			}else{
+				$this->session->set_flashdata('message_no_tindakan','');
+				
+			}*/
+
+			if (($data['vtot']->vtot == '0' &&
+				$data['vtot']->vtot_lab == '0' &&
+				$data['vtot']->vtot_rad == '0' &&
+				$data['vtot']->vtot_ok == '0' &&
+				$data['vtot']->vtot_obat == '0' &&
+				$data['vtot']->vtot_pa == '0') == 1) {
+				$this->session->set_flashdata('message_no_tindakan', 'tindakan_kosong');
+			}
+
+			$this->load->view('irj/rjvkwitansipasien', $data);
+		} else {
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			if ($data['data_pasien']->cara_bayar == 'BPJS') {
+				redirect('irj/rjckwitansi/list_kwitansi_bpjs');
+			} else {
+				redirect('irj/rjckwitansi/kwitansi');
+			}
+		}
+	}
+
+	public function kwitansi_pasien_detail($no_register = '')
+	{
+		$data['title'] = 'Cetak Kwitansi Rawat Jalan';
+		if ($no_register != '') {
+			$data['no_register'] = $no_register;
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['data_tindakan'] = $this->rjmkwitansi->getdata_unpaid_tindakan_pasien($no_register)->result();
+			$data['kontraktor'] = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+			// var_dump($data['vtot']);die();
+			//$data['data_tindakan']=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			/*if(sizeof($data['data_tindakan'])==0){
+				$this->session->set_flashdata('message_no_tindakan','<div class="row">
+							<div class="col-md-12">
+							  <div class="box box-default box-solid">
+								<div class="box-header with-border">
+								  <center>Tidak Ada Tindakan</center>
+								</div>
+							  </div>
+							</div>
+						</div>');
+			}else{
+				$this->session->set_flashdata('message_no_tindakan','');
+				
+			}*/
+
+			if (($data['vtot']->vtot == '0' && $data['vtot']->vtot_lab == '0' && $data['vtot']->vtot_rad == '0' && $data['vtot']->vtot_obat == '0') == 1) {
+				$this->session->set_flashdata('message_no_tindakan', 'tindakan_kosong');
+			}
+
+			$this->load->view('irj/rjvkwitansimrpoli', $data);
+
+			// $this->load->view('irj/rjvkwitansipasien',$data);
+		} else {
+			redirect('irj/rjckwitansi/kwitansi_detail');
+		}
+	}
+
+	public function kwitansi_pasien_all($no_register = '')
+	{
+		$data['title'] = 'Cetak Kwitansi Rawat Jalan';
+		if ($no_register != '') {
+
+			$data['no_register'] = $no_register;
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien_new($no_register)->result();
+			$data['data_laboratorium'] = $this->rjmkwitansi->getdata_lab_pasien($no_register)->result();
+			$data['data_radiologi'] = $this->rjmkwitansi->getdata_rad_pasien($no_register)->result();
+			// if ($data['data_pasien']->cara_bayar == 'UMUM') {
+			// 	$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasienumum($no_register)->result();
+			// } else {
+			// 	$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			// }
+
+
+			//$data['data_tindakan']=$this->rjmkwitansi->getdata_unpaid_finish_tindakan_pasien($no_register)->result();
+			
+			
+			$data['data_resep'] = $this->ModelKwitansi->getdata_resep_pasien($no_register)->result();
+			$data['data_pa'] = $this->ModelKwitansi->getdata_pa_pasien($no_register)->result();
+			$data['data_ok'] = $this->ModelKwitansi->getdata_ok_pasien($no_register)->result();
+			$data['kontraktor'] = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+			$data['vtotpoli'] = 0;
+			
+			//	print_r($data);die();
+			foreach ($data['data_tindakan'] as $row) {
+				$data['vtotpoli'] = (int)$data['vtotpoli'] + $row->vtot;
+			}
+			
+
+			if (($data['vtot']->vtot == '0' &&
+				$data['vtot']->vtot_lab == '0' &&
+				$data['vtot']->vtot_rad == '0' &&
+				$data['vtot']->vtot_ok == '0' &&
+				$data['vtot']->vtot_obat == '0' &&
+				$data['vtot']->vtot_pa == '0') == 1) {
+				$this->session->set_flashdata('message_no_tindakan', 'tindakan_kosong');
+			}
+
+			$this->load->view('irj/rjvkwitansipasienall', $data);
+		} else {
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			if ($data['data_pasien']->cara_bayar == 'BPJS') {
+				redirect('irj/rjckwitansi/list_kwitansi_bpjs');
+			} else {
+				redirect('irj/rjckwitansi/kwitansi');
+			}
+		}
+	}
+
+
+	public function st_cetak_kwitansi_detail_kt_()
+	{
+		// var_dump($this->input->post());die();
+		$no_register = $this->input->post('no_register');
+		$ket = $this->input->post('pembayaran_hide');
+		$penyetor = $this->input->post('penyetor_hide');
+		$jenis_bayar = $this->input->post('jenis_bayar_hide');
+
+		if ($no_register != '') {
+
+			$pilih = $this->input->post('pilih');
+			$ket = $this->input->post('pembayaran_hide');
+			$id_poli = $this->input->post('id_poli');
+			$login_data = $this->load->get_var("user_info");
+			$kasir = $this->M_user->get_role_aksesOne($login_data->userid)->row();
+			$data9['id_loket'] = $kasir->kasir;
+
+			$nomor = $this->rjmkwitansi->get_no_kwitansi_loket($data9['id_loket'])->row();
+
+			$data9['no_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+			$data9['idno_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+			$user = $login_data->username;
+			$user = $login_data->username;
+			$data9['xuser'] = $user;
+			$data9['xcreate'] = date('Y-m-d H:i:s');
+			$data9['no_register'] = $no_register;
+			$data9['nama_poli'] = 'ADM';
+			$data9['jenis_bayar'] = $ket;
+			$data9['asal'] = $id_poli;
+
+			$cek = $this->rjmkwitansi->insert_nomorkwitansi($data9);
+
+			//$data10['tunai']='0';
+			$data['no_kk'] = '0';
+			$data['nilai_kkd'] = '0';
+			$data['persen_kk'] = '0';
+			$data['diskon'] = '0';
+
+			//$data['pasien_bayar']=$this->input->post('jenis_bayar_hide'
+
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			//$data['vtot_bayar']=0;
+			//$datank['vtot_bayar']=0;
+			//if($this->input->post('nilai_tunai')){
+			$data['tunai'] = $this->input->post('nilai_tunai');
+			$data['vtot_bayar'] = $this->input->post('nilai_tunai'); //(int)$data['vtot_bayar']+(int)$data['tunai'];
+			//$datank['tunai']=$this->input->post('nilai_tunai');
+			//}
+			// if($this->input->post('no_kartuk')!=''){
+			// 	$data['no_kk']=$this->input->post('no_kk');
+			// }
+			// if($this->input->post('nilai_kk')!=''){
+			// 	$data['nilai_kkd']=$this->input->post('nilai_kk');
+			// 	$data['vtot_bayar']=(int)$data['vtot_bayar']+(int)$data['nilai_kkd'];
+			// }
+			// if($this->input->post('charge_rate')!=''){
+			// 	$data['persen_kk']=$this->input->post('charge_rate');
+			// }
+			// if ($this->input->post('diskon_hide')!='') 
+			// {	
+			//$data['diskon']=(int)$this->input->post('diskon_hide');
+			//$data['tunai']=(int)$this->input->post('nilai_tunai');
+			//$datank['diskon']=(int)$this->input->post('diskon_hide');
+			$datank['tunai'] = (int)$this->input->post('nilai_tunai');
+			//} else 
+
+			// if($this->input->post('totfinal_hide')!=''){
+			// 	$totakhir=$this->input->post('totakhir');
+			// }
+			//	print_r($data);
+			$this->rjmkwitansi->update_pembayaran_nokwitansi($data9['no_kwitansi'], $data);
+			//$this->rjmkwitansi->update_pembayaran($no_register,$data);
+			//ubah status
+			// $data['cetak_kwitansi'] = 1;
+			// $data['atas_nama'] = $this->input->post('penyetor_hide');
+			// //print_r($txtpilih);
+			// //set timezone
+			// date_default_timezone_set("Asia/Jakarta");
+			// $data['tgl_cetak_kw']=date("Y-m-d H:i:s");
+
+			// $login_data = $this->load->get_var("user_info");
+			// $user = $login_data->username;
+			// $data['xcetak']= $user;
+
+			// $status=$this->rjmkwitansi->update_status_kwitansi_kt($no_register,$data);
+
+			//=============================insert no_kwitansi============================================================
+
+			$datank['no_register'] = $no_register;
+			$datank['idno_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+			$datank['user_cetak'] = $user;
+			$datank['tgl_cetak'] = date('Y-m-d H:i:s');
+			$datank['jenis_kwitansi'] = 'Rawat Jalan';
+			$datank['dp'] = 0;
+			$datank['vtot_bayar'] = (int)$datank['tunai'];
+			$datank['jenis_bayar'] = $ket;
+			$datank['asal'] = $id_poli;
+			$this->rjmkwitansi->insert_nokwitansi($datank);
+
+			// update pelayanan_poli
+
+			//$data1['no_register'] =$no_register; ;
+			// $data1['bayar']= 1;
+			// $data1['tgl_cetak_kw']= date("Y-m-d H:i:s");
+			//	}
+
+			// $data2['diskon'] = $this->input->post('diskon_hide');
+			// $idtindakan = $this->input->post('idtindakan');
+			// var_dump($data2);die();
+			//$this->rjmkwitansi->update_diskon_poli($data2, $no_register, $idtindakan);
+			// var_dump($status_diskon);die();
+
+			// echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; '.$txtpilih.' window.open("'.site_url("irj/rjckwitansi/cetak_kwitansi_kt/$no_register").'", "_blank");window.focus()</script>';
+			// $txtpil='document.cookie = "pil=detail";';
+
+			$data_tindakan = $this->rjmkwitansi->getdata_unpaid_finish_tindakan_pasien($no_register)->result();
+
+			$noncover = 0;
+			foreach ($data_tindakan as $row1) {
+
+				if (($row1->noncover) > 0) {
+					$noncover = 1;
+				}
+			}
+
+			$no_trx = $this->rjmkwitansi->get_no_kwitansi_by_id((int)$datank['idno_kwitansi'])->row();
+
+
+			if (substr($no_register, 0, 2) == 'RJ') {
+				if ($data_pasien->id_poli == 'BA00') {
+					$component_id = '02';
+					$additional1 = 'Rawat Darurat 1';
+				} else {
+					$component_id = '01';
+					$additional1 = 'Rawat Jalan 1';
+				}
+			} else {
+				$component_id = '03';
+				$additional1 = '';
+			}
+
+			$datares['reg_date'] = date('Y-m-d');
+			$datares['reg_no'] = $no_register;
+			$datares['rm_no'] = $data_pasien->no_medrec;
+			$datares['pasien_name'] = $data_pasien->nama;
+			$datares['dob'] = $data_pasien->tgl_lahir;
+			$datares['gender'] = $data_pasien->sex;
+			$datares['gol_darah'] = $data_pasien->goldarah;
+			$datares['jenis_pelayanan_id'] = 1;
+			$datares['jenis_transaksi'] = 1;
+			$datares['payment_tp'] = 2;
+			$datares['component_id'] = $data_pasien->id_poli;
+
+			$datares['method_pay'] = $ket;
+			// $datares['kode_unit_poli'] = $data_pasien->id_poli;
+			$datares['nama_dokter'] = $data_pasien->nm_dokter;
+			$datares['trx_no'] = $no_trx->no_kwitansi;
+			$datares['paid_flag'] = 0;
+			$datares['cancel_flag'] = 0;
+			$datares['is_cancel'] = 0;
+			$datares['payment_bill'] = (int)$data['vtot_bayar'];
+			$datares['cancel_nominal'] = 0;
+			$datares['retur_nominal'] = 0;
+			$datares['retur_flag'] = 0;
+			$datares['new_payment_bill'] = 0;
+			$datares['additional1'] = $additional1;
+			$datares['additional2'] = '0';
+			$datares['additional3'] = '0';
+			$this->rjmkwitansi->insert_registrasi($datares);
+
+			/*if(($noncover==1 && $data_pasien->cara_bayar=='BPJS') || $data_pasien->cara_bayar=='UMUM'){
+				echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; '.$txtpil.' window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kw0_kt/$no_register").'", "_blank");window.focus()</script>';
+			}
+			if($data_pasien->cara_bayar=='BPJS'){*/
+			/* --hapus untuk mmc
+				echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; document.cookie = "id_loket='.$data9['id_loket'].'"; document.cookie = "no_kwitansi='.$data9['no_kwitansi'].'"; '.$txtpil.' window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kw_kt/$no_register").'", "_blank");window.focus()</script>';
+          end off hapus   */
+			// echo  "<script type='text/javascript'> 
+			//   window.open(".base_url()."/irj/rjckwitansi/cetak_faktur_kt/".$no_register.", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');  
+			// </script>";
+			// echo '<script type="text/javascript"> window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kt/$no_register").'", "_blank");</script>';
+			//}
+
+			$du['cetak_kwitansi'] = 0;
+			$this->rjmkwitansi->update_cetak_kwitansi($du, $no_register);
+			$this->rjmkwitansi->update_bayar_mrpoli($no_register);
+			// if($this->input->post('pilih')=='detail'){
+			// 	redirect('irj/rjckwitansi/kwitansi_pasien/'.$no_register,'refresh');
+			// }else{
+			//if($data_pasien->cara_bayar=='BPJS'){
+			//redirect('irj/rjckwitansi/list_kwitansi_bpjs/','refresh');
+			//}else{
+			// redirect('irj/rjckwitansi/cetak_kwitansi_kt/'.$no_register.'/'.$jenis_bayar,'refresh');
+			//}
+
+			//}
+		} else {
+			redirect('irj/rjckwitansi/kwitansi/', 'refresh');
+		}
+	}
+
+	public function st_cetak_kwitansi_detail_kt()
+	{
+		// var_dump($this->input->post());die();
+		$no_register = $this->input->post('no_register');
+		$ket = $this->input->post('pembayaran_hide');
+		$penyetor = $this->input->post('penyetor_hide');
+		$jenis_bayar = $this->input->post('jenis_bayar_hide');
+
+		if ($no_register != '') {
+
+			$pilih = $this->input->post('pilih');
+			$ket = $this->input->post('pembayaran_hide');
+			$id_poli = $this->input->post('id_poli');
+			$login_data = $this->load->get_var("user_info");
+			$kasir = $this->M_user->get_role_aksesOne($login_data->userid)->row();
+			$data9['id_loket'] = $kasir->kasir;
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$nomor = $this->rjmkwitansi->get_no_kwitansi_loket($data9['id_loket'])->row();
+
+			if ($ket == 'PIUTANG/IKS') {
+				$data_piutang['no_register'] = $no_register;
+				$data_piutang['jns_kwitansi'] = 'Rawat Jalan (Sebelum Poli)';
+				$data_piutang['total_tagihan'] = (int)$this->input->post('nilai_tunai');
+				$data_piutang['created_date'] = date('Y-m-d h:i:s');
+				$data_piutang['created_by'] = $login_data->username;
+				$data_piutang['nama'] = $data_pasien->nama;
+				$data_piutang['medrec'] = $data_pasien->no_medrec;
+				$data_piutang['asal'] = $id_poli;
+				$data_piutang['cara_bayar'] = $data_pasien->cara_bayar;
+				$this->rjmkwitansi->insert_header_piutang($data_piutang);
+				$this->rjmkwitansi->update_piutang_mrpoli($no_register);
+				$data_piutang_rj['piutang'] = 1;
+				$this->rjmkwitansi->update_daftar_ulang_irj($no_register, $data_piutang_rj);
+			} else {
+				$data9['no_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+				$data9['idno_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+				$user = $login_data->username;
+				$user = $login_data->username;
+				$data9['xuser'] = $user;
+				$data9['xcreate'] = date('Y-m-d H:i:s');
+				$data9['no_register'] = $no_register;
+				$data9['nama_poli'] = 'ADM';
+				$data9['jenis_bayar'] = $ket;
+				$data9['asal'] = $id_poli;
+
+				$cek = $this->rjmkwitansi->insert_nomorkwitansi($data9);
+
+				//$data10['tunai']='0';
+				$data['no_kk'] = '0';
+				$data['nilai_kkd'] = '0';
+				$data['persen_kk'] = '0';
+				$data['diskon'] = '0';
+
+				//$data['pasien_bayar']=$this->input->post('jenis_bayar_hide'
+
+
+				//$data['vtot_bayar']=0;
+				//$datank['vtot_bayar']=0;
+				//if($this->input->post('nilai_tunai')){
+				$data['tunai'] = $this->input->post('nilai_tunai');
+				// if ($ket == 'split') {
+				// 	$data['cash'] = (int)$this->input->post('biaya_tunai_hide');
+				// 	$data['noncash'] = (int)$this->input->post('biaya_non_tunai_hide');
+				// } else {
+				// 	$data['cash'] = 0;
+				// 	$data['noncash'] = 0;
+				// }
+
+				$data['vtot_bayar'] = $this->input->post('nilai_tunai'); //(int)$data['vtot_bayar']+(int)$data['tunai'];
+				//$datank['tunai']=$this->input->post('nilai_tunai');
+				//}
+				// if($this->input->post('no_kartuk')!=''){
+				// 	$data['no_kk']=$this->input->post('no_kk');
+				// }
+				// if($this->input->post('nilai_kk')!=''){
+				// 	$data['nilai_kkd']=$this->input->post('nilai_kk');
+				// 	$data['vtot_bayar']=(int)$data['vtot_bayar']+(int)$data['nilai_kkd'];
+				// }
+				// if($this->input->post('charge_rate')!=''){
+				// 	$data['persen_kk']=$this->input->post('charge_rate');
+				// }
+				// if ($this->input->post('diskon_hide')!='') 
+				// {	
+				//$data['diskon']=(int)$this->input->post('diskon_hide');
+				//$data['tunai']=(int)$this->input->post('nilai_tunai');
+				//$datank['diskon']=(int)$this->input->post('diskon_hide');
+				$datank['tunai'] = (int)$this->input->post('nilai_tunai');
+				// if ($ket == 'split') {
+				// 	$datank['cash'] = (int)$this->input->post('biaya_tunai_hide');
+				// 	$datank['noncash'] = (int)$this->input->post('biaya_non_tunai_hide');
+				// } else {
+				// 	$datank['cash'] = 0;
+				// 	$datank['noncash'] = 0;
+				// }
+				//} else 
+
+				// if($this->input->post('totfinal_hide')!=''){
+				// 	$totakhir=$this->input->post('totakhir');
+				// }
+				//	print_r($data);
+				$this->rjmkwitansi->update_pembayaran_nokwitansi($data9['no_kwitansi'], $data);
+				//$this->rjmkwitansi->update_pembayaran($no_register,$data);
+				//ubah status
+				// $data['cetak_kwitansi'] = 1;
+				// $data['atas_nama'] = $this->input->post('penyetor_hide');
+				// //print_r($txtpilih);
+				// //set timezone
+				// date_default_timezone_set("Asia/Jakarta");
+				// $data['tgl_cetak_kw']=date("Y-m-d H:i:s");
+
+				// $login_data = $this->load->get_var("user_info");
+				// $user = $login_data->username;
+				// $data['xcetak']= $user;
+
+				// $status=$this->rjmkwitansi->update_status_kwitansi_kt($no_register,$data);
+
+				//=============================insert no_kwitansi============================================================
+
+				$datank['no_register'] = $no_register;
+				$datank['idno_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+				$datank['user_cetak'] = $user;
+				$datank['tgl_cetak'] = date('Y-m-d H:i:s');
+				// $datank['jenis_kwitansi']= 'Rawat Jalan';
+				$datank['jenis_kwitansi'] = 'Rawat Jalan';
+				$datank['dp'] = 0;
+				$datank['vtot_bayar'] = (int)$datank['tunai'];
+				$datank['jenis_bayar'] = $ket;
+				$datank['asal'] = $id_poli;
+				$datank['referensi'] = 1;
+				$this->rjmkwitansi->insert_nokwitansi($datank);
+
+				// update pelayanan_poli
+
+				//$data1['no_register'] =$no_register; ;
+				// $data1['bayar']= 1;
+				// $data1['tgl_cetak_kw']= date("Y-m-d H:i:s");
+				//	}
+
+				// $data2['diskon'] = $this->input->post('diskon_hide');
+				// $idtindakan = $this->input->post('idtindakan');
+				// var_dump($data2);die();
+				//$this->rjmkwitansi->update_diskon_poli($data2, $no_register, $idtindakan);
+				// var_dump($status_diskon);die();
+
+				// echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; '.$txtpilih.' window.open("'.site_url("irj/rjckwitansi/cetak_kwitansi_kt/$no_register").'", "_blank");window.focus()</script>';
+				// $txtpil='document.cookie = "pil=detail";';
+
+				$data_tindakan = $this->rjmkwitansi->getdata_unpaid_finish_tindakan_pasien($no_register)->result();
+
+				$noncover = 0;
+				foreach ($data_tindakan as $row1) {
+
+					if (($row1->noncover) > 0) {
+						$noncover = 1;
+					}
+				}
+
+				$no_trx = $this->rjmkwitansi->get_no_kwitansi_by_id((int)$datank['idno_kwitansi'])->row();
+
+
+				if (substr($no_register, 0, 2) == 'RJ') {
+					if ($data_pasien->id_poli == 'BA00') {
+						$component_id = '02';
+						$additional1 = 'Rawat Darurat 1';
+					} else {
+						$component_id = '01';
+						$additional1 = 'Rawat Jalan 1';
+					}
+				} else {
+					$component_id = '03';
+					$additional1 = '';
+				}
+
+				$datares['reg_date'] = date('Y-m-d');
+				$datares['reg_no'] = $no_register;
+				$datares['rm_no'] = $data_pasien->no_medrec;
+				$datares['pasien_name'] = $data_pasien->nama;
+				$datares['dob'] = $data_pasien->tgl_lahir;
+				$datares['gender'] = $data_pasien->sex;
+				$datares['gol_darah'] = $data_pasien->goldarah;
+				$datares['jenis_pelayanan_id'] = 1;
+				$datares['jenis_transaksi'] = 1;
+				$datares['payment_tp'] = 2;
+				$datares['component_id'] = $data_pasien->id_poli;
+
+				$datares['method_pay'] = $ket;
+				// $datares['kode_unit_poli'] = $data_pasien->id_poli;
+				$datares['nama_dokter'] = $data_pasien->nm_dokter;
+				$datares['trx_no'] = $no_trx->no_kwitansi;
+				$datares['paid_flag'] = 0;
+				$datares['cancel_flag'] = 0;
+				$datares['is_cancel'] = 0;
+				$datares['payment_bill'] = (int)$data['vtot_bayar'];
+				$datares['cancel_nominal'] = 0;
+				$datares['retur_nominal'] = 0;
+				$datares['retur_flag'] = 0;
+				$datares['new_payment_bill'] = 0;
+				$datares['additional1'] = $additional1;
+				$datares['additional2'] = '0';
+				$datares['additional3'] = '0';
+				// if ($ket == 'split') {
+				// 	$datares['cash'] = (int)$this->input->post('biaya_tunai_hide');
+				// 	$datares['noncash'] = (int)$this->input->post('biaya_non_tunai_hide');
+				// } else {
+				// 	$datares['cash'] = 0;
+				// 	$datares['noncash'] = 0;
+				// }
+				$this->rjmkwitansi->insert_registrasi($datares);
+
+				/*if(($noncover==1 && $data_pasien->cara_bayar=='BPJS') || $data_pasien->cara_bayar=='UMUM'){
+					echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; '.$txtpil.' window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kw0_kt/$no_register").'", "_blank");window.focus()</script>';
+				}
+				if($data_pasien->cara_bayar=='BPJS'){*/
+				/* --hapus untuk mmc
+					echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; document.cookie = "id_loket='.$data9['id_loket'].'"; document.cookie = "no_kwitansi='.$data9['no_kwitansi'].'"; '.$txtpil.' window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kw_kt/$no_register").'", "_blank");window.focus()</script>';
+				end off hapus   */
+				// echo  "<script type='text/javascript'> 
+				//   window.open(".base_url()."/irj/rjckwitansi/cetak_faktur_kt/".$no_register.", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');  
+				// </script>";
+				// echo '<script type="text/javascript"> window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kt/$no_register").'", "_blank");</script>';
+				//}
+
+				$du['cetak_kwitansi'] = 0;
+				$this->rjmkwitansi->update_cetak_kwitansi($du, $no_register);
+				$this->rjmkwitansi->update_bayar_mrpoli($no_register);
+				// if($this->input->post('pilih')=='detail'){
+				// 	redirect('irj/rjckwitansi/kwitansi_pasien/'.$no_register,'refresh');
+				// }else{
+				//if($data_pasien->cara_bayar=='BPJS'){
+				//redirect('irj/rjckwitansi/list_kwitansi_bpjs/','refresh');
+				//}else{
+				// redirect('irj/rjckwitansi/cetak_kwitansi_kt/'.$no_register.'/'.$jenis_bayar,'refresh');
+				//}
+
+				//}
+			}
+		} else {
+			redirect('irj/rjckwitansi/kwitansi/', 'refresh');
+		}
+	}
+
+	public function update_diskon_poli()
+	{
+		$idtindakan = $this->input->post('id_tindakan');
+		$no_register = $this->input->post('noreg');
+		$data['diskon'] = $this->input->post('diskon_item');
+		$this->rjmkwitansi->update_diskon_poli($data, $no_register, $idtindakan);
+		//redirect('irj/rjckwitansi/kwitansi_pasien_detail/'.$no_register);
+	}
+
+	public function st_cetak_kwitansi_retur_kt()
+	{
+		$no_register = $this->input->post('no_register');
+
+		$pilih = $this->input->post('pilih');
+
+		//$data['tunai']='0';$data['no_kkkd']='0';$data['nilai_kkkd']='0';$data['persen_kk']='0';$data['diskon']='0';
+		//$this->rjmkwitansi->update_pembayaran($no_register,$data);
+		if ($no_register != '') {
+
+			$data['pasien_bayar'] = $this->input->post('jenis_bayar_hide');
+
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$myArray = [];
+			if ($this->input->post('idtindakanretur_hide')) {
+				$idtindakanretur = $this->input->post('idtindakanretur_hide');
+				$myArray = explode(',', $idtindakanretur);
+			}
+			if ($this->input->post('retur_hide')) {
+				//$data['vtot_retur']=$this->input->post('retur_hide');
+				$data['vtot_bayar'] = $this->input->post('totfinal_hide');
+				$data['retur'] = 1;
+			}
+			if ($this->input->post('nilai_tunai')) {
+				$data['tunai'] = $this->input->post('nilai_tunai');
+			}
+			if ($this->input->post('no_kartuk') != '') {
+				$data['no_kkkd'] = $this->input->post('no_kartuk');
+			}
+			if ($this->input->post('nilai_kk') != '') {
+				$data['nilai_kkkd'] = $this->input->post('nilai_kk');
+			}
+			if ($this->input->post('charge_rate') != '') {
+				$data['persen_kk'] = $this->input->post('charge_rate');
+			}
+			if ($this->input->post('diskon_hide') != '') {
+				$data['diskon'] = $this->input->post('diskon_hide');
+				//$data['tunai']=(int)$data_pasien->vtot-(int)$data['diskon']; 		
+			} else
+				$data['diskon'] = '0';
+
+			if ($this->input->post('totfinal_hide') != '') {
+				$totakhir = $this->input->post('totakhir');
+			}
+
+			if ($this->input->post('pilih') != 'detail') {
+				if ($this->input->post('pasien_retur') == "") {
+					$penyetor = $data_pasien->nama;
+				} else {
+					$penyetor = $this->input->post('pasien_retur');
+				}
+				$txtpilih = 'document.cookie = "pilih=0";';
+			} else {
+
+				//if (empty($this->input->post('penyetor_hide'))==1) 
+				if (!($this->input->post('penyetor_hide')) == 1) {
+					$penyetor = $data_pasien->nama;
+				} else {
+					$penyetor = $this->input->post('penyetor_hide');
+				}
+				$txtpilih = 'document.cookie = "pilih=' . $pilih . '";';
+			}
+			//		print_r($data);		
+			//$this->rjmkwitansi->update_pembayaran_detail($no_register,$data);
+			$noKwitansi = $this->rjmkwitansi->get_nomor_kwitansi_by_noregister($no_register)->row();
+			$this->rjmkwitansi->update_pembayaran_nokwitansi($noKwitansi->no_kwitansi, $data);
+			//ubah status
+			//$data['cetak_kwitansi']=1;
+			//print_r($txtpilih);
+			//set timezone
+			// date_default_timezone_set("Asia/Bangkok");
+			// $data1['bayar']=1;
+			// $data1['tgl_cetak_kw']=date("Y-m-d H:i:s");
+
+			// $login_data = $this->load->get_var("user_info");
+			// $user = $login_data->username;
+			// $data1['xcetak']= $user;
+			// $tunai = 0;
+			// $data_tindakan=$this->rjmkwitansi->getdata_unpaid_tindakan_pasien($no_register)->result();
+			// foreach($data_tindakan as $rows){
+			// 	$tunai = $tunai+$rows->biaya_tindakan;
+			// 	$status=$this->rjmkwitansi->update_status_kwitansi_detail_kt($rows->id_pelayanan_poli,$data1);
+			// }
+
+			$sizetind = $this->input->post('tot_tind_hide');
+			for ($i = 0; $i < sizeof($myArray); $i++) {
+				//$data4['id_pelayanan_poli']=$myArray[$i];
+				$data4['retur'] = 1;
+				//echo $myArray[$i].",";
+				$this->rjmkwitansi->update_status_kwitansi_detail_kt($myArray[$i], $data4);
+			}
+			//counter kwitansi
+			$this->rjmkwitansi->update_counter_kwitansi($no_register);
+
+			if ($sizetind == sizeof($myArray)) {
+				$success = 	'<div class="alert alert-success">
+                        		<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            	<h3 class="text-success">Kwitansi Berhasil Diretur</h3>
+                       		</div>';
+				$this->session->set_flashdata('message_cetak', $success);
+			} else {
+				$data['xupdate'] = date('Y-m-d H:i:s');
+				$data['pasien_bayar'] = $this->input->post('jenis_bayar_hide');
+
+				$kasir = $this->M_user->get_role_aksesOne($this->session->userdata('userid'))->row();
+				$data9['id_loket'] = $kasir->kasir;
+				$nomor = $this->rjmkwitansi->get_no_kwitansi_loket($data9['id_loket'])->row();
+				$data9['idno_kwitansi'] = sprintf("%08d", ($nomor->no_kwitansi + 1));
+				$login_data = $this->load->get_var("user_info");
+				$user = strtoupper($login_data->username);
+				$data9['xuser'] = $user;
+				$data9['xcreate'] = date('Y-m-d H:i:s');
+				$data9['no_register'] = $no_register;
+				$data9['nama_poli'] = 'ADM';
+				$cek = $this->rjmkwitansi->insert_nomorkwitansi($data9);
+
+				// echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; document.cookie = "tunai='.$tunai.'"; document.cookie = "id_loket='.$data9['id_loket'].'"; document.cookie = "no_kwitansi='.$data9['no_kwitansi'].'";'.$txtpilih.' window.open("'.site_url("irj/rjckwitansi/cetak_kwitansi_detail_kt/$no_register").'", "_blank");window.focus()</script>';
+			}
+
+			//$tunai=$data['tunai'];
+			//cetak kw.pdf
+			//echo $tunai;
+
+			// //$txtpil='document.cookie = "pil=detail";';
+			//echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; '.$txtpil.' window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kt/$no_register").'", "_blank");window.focus()</script>';
+			redirect('irj/rjckwitansi/list_lunas/', 'refresh');
+		} else {
+			redirect('irj/rjckwitansi/list_lunas/', 'refresh');
+		}
+	}
+
+	public function st_cetak_kwitansi_batal_kt()
+	{
+		$no_register = $this->input->post('no_register');
+
+		$pilih = $this->input->post('pilih');
+
+		if ($no_register != '') {
+
+			$id_kwitansi = $this->input->post('id_kwitansi_old_hide');
+
+			if ($this->input->post('note_hide')) {
+				$data10['editnote'] = $this->input->post('note_hide');
+			}
+
+			$login_data = $this->load->get_var("user_info");
+			$user = strtoupper($login_data->username);
+
+			$data10['batal'] = '1';
+			$data10['xbatal'] = $user;
+			$data10['xupdate'] = date('Y-m-d H:i:s');
+			$this->rjmkwitansi->update_pembayaran_idkwitansi($id_kwitansi, $data10);
+
+			//print_r($data);	
+			//$data['ket_pulang']=='BATAL_PELAYANAN_POLI';
+			//$data['ket_pulang']=='BATAL_PELAYANAN_POLI';
+			//$id=$this->rjmpelayanan->batal_pelayanan_poli($no_register);
+			//$this->rjmkwitansi->update_pembayaran_detail($no_register,$data);
+			//ubah status
+			//$data['cetak_kwitansi']=1;
+			//print_r($txtpilih);
+			//set timezone
+			// date_default_timezone_set("Asia/Bangkok");
+			// $data1['bayar']=1;
+			// $data1['tgl_cetak_kw']=date("Y-m-d H:i:s");
+
+			// $login_data = $this->load->get_var("user_info");
+			// $user = $login_data->username;
+			// $data1['xcetak']= $user;
+			// $tunai = 0;
+			// $data_tindakan=$this->rjmkwitansi->getdata_unpaid_tindakan_pasien($no_register)->result();
+			// foreach($data_tindakan as $rows){
+			// 	$tunai = $tunai+$rows->biaya_tindakan;
+			// 	$status=$this->rjmkwitansi->update_status_kwitansi_detail_kt($rows->id_pelayanan_poli,$data1);
+			// }
+
+			$success = 	'<div class="alert alert-success">
+                        		<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            	<h3 class="text-success">Kwitansi Berhasil Dibatalkan</h3>
+                       		</div>';
+			$this->session->set_flashdata('message_cetak', $success);
+			//for($i=0;$i<sizeof($myArray);$i++){
+			//$data4['id_pelayanan_poli']=$myArray[$i];
+			//$data4['baya']=1;
+			//echo $myArray[$i].",";
+			//	$this->rjmkwitansi->update_status_kwitansi_detail_kt($myArray[$i],$data4);
+			//}
+			//counter kwitansi
+			//$this->rjmkwitansi->update_counter_kwitansi($no_register);
+			//$tunai=$data['tunai'];
+			//cetak kw.pdf
+			//echo $tunai;
+			//echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; document.cookie = "tunai='.$tunai.'";'.$txtpilih.' window.open("'.site_url("irj/rjckwitansi/cetak_kwitansi_detail_kt/$no_register").'", "_blank");window.focus()</script>';
+			// //$txtpil='document.cookie = "pil=detail";';
+			//echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; '.$txtpil.' window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kt/$no_register").'", "_blank");window.focus()</script>';
+			redirect('irj/rjckwitansi/list_lunas/', 'refresh');
+		} else {
+			redirect('irj/rjckwitansi/list_lunas/', 'refresh');
+		}
+	}
+
+	public function st_cetak_kwitansi_kt_()
+	{
+		 
+		$no_register = $this->input->post('no_register');
+		$bayar = $this->input->post('bayar');
+		$penyetor = $this->input->post('penyetor_hide');
+		$jenis_bayar = $this->input->post('jenis_bayar_hide');
+
+		if ($no_register != '') {
+
+			$pilih = $this->input->post('pilih');
+			$ket = $this->input->post('pembayaran_hide');
+			$id_poli = $this->input->post('id_poli');
+			$login_data = $this->load->get_var("user_info");
+			$kasir = $this->M_user->get_role_aksesOne($login_data->userid)->row();
+			$data9['id_loket'] = $kasir->kasir;
+			$nomor = $this->rjmkwitansi->get_no_kwitansi_loket($data9['id_loket'])->row();
+			$data9['no_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+			$data9['idno_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+
+			$user = $login_data->username;
+			$data9['xuser'] = $user;
+			$data9['xcreate'] = date('Y-m-d H:i:s');
+			$data9['no_register'] = $no_register;
+			$data9['nama_poli'] = 'ADM';
+			$data9['jenis_bayar'] = $ket;
+			$data9['asal'] = $id_poli;
+
+			$cek = $this->rjmkwitansi->insert_nomorkwitansi($data9);
+
+			//$data10['tunai']='0';
+			$data10['no_kk'] = '0';
+			$data10['nilai_kkd'] = '0';
+			$data10['persen_kk'] = '0';
+			$data10['diskon'] = '0';
+			$this->rjmkwitansi->update_pembayaran_nokwitansi($data9['no_kwitansi'], $data10);
+
+			//$data['pasien_bayar']=$this->input->post('jenis_bayar_hide');
+
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			// $data['vtot_bayar']=0;
+			// $datank['vtot_bayar']=0;
+			//if($this->input->post('nilai_tunai')){
+			$data['tunai'] = $this->input->post('nilai_tunai');
+			$data['vtot_bayar'] = $this->input->post('nilai_tunai');
+			//$datank['tunai']=$this->input->post('nilai_tunai');
+			//}
+			// if($this->input->post('no_kartuk')!=''){
+			// 	$data['no_kk']=$this->input->post('no_kk');
+			// }
+			// if($this->input->post('nilai_kk')!=''){
+			// 	$data['nilai_kkd']=$this->input->post('nilai_kk');
+			// 	$data['vtot_bayar']=(int)$data['vtot_bayar']+(int)$data['nilai_kkd'];
+			// }
+			// if($this->input->post('charge_rate')!=''){
+			// 	$data['persen_kk']=$this->input->post('charge_rate');
+			// }
+			// if ($this->input->post('diskon_hide')!='') 
+			// {	
+			// $data['diskon']=(int)$this->input->post('diskon_hide');
+			// $data['tunai']=(int)$this->input->post('nilai_tunai');
+			// $datank['diskon']=(int)$this->input->post('diskon_hide');
+			$datank['tunai'] = (int)$this->input->post('nilai_tunai');
+			// } else 
+			// 	$data['diskon']='0';
+			// 	$datank['diskon']=0;
+
+			// if($this->input->post('totfinal_hide')!=''){
+			// 	$totakhir=$this->input->post('totakhir');
+			// }
+
+			//	print_r($data);
+
+			$this->rjmkwitansi->update_pembayaran_nokwitansi($data9['no_kwitansi'], $data);
+
+			//$this->rjmkwitansi->update_pembayaran($no_register,$data);
+			//ubah status
+			//	$datasta['cetak_kwitansi'] = 1;
+			//	$datasta['status'] = 1;
+			//	$datasta['ket_pulang'] = 'PULANG';
+			//	$datasta['atas_nama'] = $this->input->post('penyetor_hide');
+			//print_r($txtpilih);
+			//set timezone
+			//date_default_timezone_set("Asia/Jakarta");
+			//	$datasta['tgl_cetak_kw']=date("Y-m-d H:i:s");
+
+			// $login_data = $this->load->get_var("user_info");
+			// $user = $login_data->username;
+			//	$datasta['xcetak']= $user;
+
+			// $status=$this->rjmkwitansi->update_status_kwitansi_kt($no_register,$datasta);
+
+			//=============================insert no_kwitansi============================================================
+			$datank['no_register'] = $no_register;
+			$datank['idno_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+			$datank['user_cetak'] = $user;
+			$datank['tgl_cetak'] = date('Y-m-d H:i:s');
+			$datank['jenis_kwitansi'] = 'Rawat Jalan';
+			$datank['dp'] = 0;
+			$datank['vtot_bayar'] = (int)$datank['tunai'];
+			$datank['jenis_bayar'] = $ket;
+			$datank['asal'] = $id_poli;
+			$cek = $this->rjmkwitansi->insert_nokwitansi($datank);
+
+
+			// update pelayanan_poli
+
+			//$data1['no_register'] =$no_register; ;
+			// $data1['bayar'] = 2 ;
+			// $data1['tgl_cetak_kw']= date("Y-m-d H:i:s")
+			//	}
+
+
+			//cetak kw.pdf
+
+			// echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; '.$txtpilih.' window.open("'.site_url("irj/rjckwitansi/cetak_kwitansi_kt/$no_register").'", "_blank");window.focus()</script>';
+			// $txtpil='document.cookie = "pil=detail";';
+
+			$data_tindakan = $this->rjmkwitansi->getdata_unpaid_finish_tindakan_pasien($no_register)->result();
+			$noncover = 0;
+			foreach ($data_tindakan as $row1) {
+
+				if (($row1->noncover) > 0) {
+					$noncover = 1;
+				}
+			}
+
+			$no_trx = $this->rjmkwitansi->get_no_kwitansi_by_id((int)$datank['idno_kwitansi'])->row();
+
+			if (substr($no_register, 0, 2) == 'RJ') {
+				if ($data_pasien->id_poli == 'BA00') {
+					$component_id = '02';
+					$additional1 = 'Rawat Darurat 2';
+				} else {
+					$component_id = '01';
+					$additional1 = 'Rawat Jalan 2';
+				}
+			} else {
+				$component_id = '03';
+				$additional1 = '';
+			}
+
+			$datares['reg_date'] = date('Y-m-d');
+			$datares['reg_no'] = $no_register;
+			$datares['rm_no'] = $data_pasien->no_medrec;
+			$datares['pasien_name'] = $data_pasien->nama;
+			$datares['dob'] = $data_pasien->tgl_lahir;
+			$datares['gender'] = $data_pasien->sex;
+			$datares['gol_darah'] = $data_pasien->goldarah;
+			$datares['jenis_pelayanan_id'] = 1;
+			$datares['jenis_transaksi'] = 1;
+			$datares['payment_tp'] = 2;
+			$datares['component_id'] = $data_pasien->id_poli;
+			//$datares['component_id'] = $id_poli;
+			$datares['method_pay'] = $ket;
+			$datares['nama_dokter'] = $data_pasien->nm_dokter;
+			$datares['trx_no'] = $no_trx->no_kwitansi;
+			$datares['paid_flag'] = 0;
+			$datares['cancel_flag'] = 0;
+			$datares['is_cancel'] = 0;
+			$datares['payment_bill'] = (int)$data['vtot_bayar'];
+			$datares['cancel_nominal'] = 0;
+			$datares['retur_nominal'] = 0;
+			$datares['retur_flag'] = 0;
+			$datares['new_payment_bill'] = 0;
+			$datares['additional1'] = $additional1;
+			$datares['additional2'] = '0';
+			$datares['additional3'] = '0';
+			$this->rjmkwitansi->insert_registrasi($datares);
+
+			$data_irj['cetak_kwitansi'] = 1;
+			$data_irj['tgl_cetak_kw'] = date('Y-m-d');
+			$this->rjmkwitansi->update_daftar_ulang_irj($no_register, $data_irj);
+			$this->rjmkwitansi->update_bayar_pelayanan_poli($no_register);
+			/*if(($noncover==1 && $data_pasien->cara_bayar=='BPJS') || $data_pasien->cara_bayar=='UMUM'){
+				echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; '.$txtpil.' window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kw0_kt/$no_register").'", "_blank");window.focus()</script>';
+			}
+			if($data_pasien->cara_bayar=='BPJS'){*/
+			/* --hapus untuk mmc
+				echo '<script type="text/javascript">document.cookie = "penyetor='.$penyetor.'"; document.cookie = "id_loket='.$data9['id_loket'].'"; document.cookie = "no_kwitansi='.$data9['no_kwitansi'].'"; '.$txtpil.' window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kw_kt/$no_register").'", "_blank");window.focus()</script>';
+          end off hapus   */
+			// echo  "<script type='text/javascript'> 
+			//   window.open(".base_url()."/irj/rjckwitansi/cetak_faktur_kt/".$no_register.", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');  
+			// </script>";
+			// echo '<script type="text/javascript"> window.open("'.site_url("irj/rjckwitansi/cetak_faktur_kt/$no_register").'", "_blank");</script>';
+			//}
+
+
+			// if($this->input->post('pilih')=='detail'){
+			// 	redirect('irj/rjckwitansi/kwitansi_pasien/'.$no_register,'refresh');
+			// }else{
+			// 	if($data_pasien->cara_bayar=='BPJS'){
+			// 		redirect('irj/rjckwitansi/list_kwitansi_bpjs/','refresh');
+			// 	}else{
+			// 		redirect('irj/rjckwitansi/cetak_faktur_kt/'.$no_register.'/'.$penyetor.'/'.$jenis_bayar,'refresh');
+			// 	}
+
+			// }
+		} else {
+			// if($data_pasien->cara_bayar=='BPJS'){
+			// 	redirect('irj/rjckwitansi/list_kwitansi_bpjs/','refresh');
+			// }else{
+			redirect('irj/rjckwitansi/kwitansi/', 'refresh');
+			// }
+		}
+	}
+
+	public function st_cetak_kwitansi_kt()
+	{
+		//  var_dump($this->input->post());die();
+		$no_register = $this->input->post('no_register');
+		$bayar = $this->input->post('bayar');
+		$poli = $this->rjmkwitansi->get_poli_by_regist($no_register)->row()->id_poli;
+		$penyetor = $this->input->post('penyetor_hide');
+		$jenis_bayar = $this->input->post('jenis_bayar_hide');
+
+		if ($no_register != '') {
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$ket = $this->input->post('pembayaran_hide');
+			$login_data = $this->load->get_var("user_info");
+			$user = $login_data->username;
+			$id_poli = $this->input->post('id_poli');
+			$pilih = $this->input->post('pilih');
+			$kasir = $this->M_user->get_role_aksesOne($login_data->userid)->row();
+			$data9['id_loket'] = $kasir->kasir;
+			$nomor = $this->rjmkwitansi->get_no_kwitansi_loket($data9['id_loket'])->row();
+			$data9['no_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+			$data9['idno_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+			$data9['xuser'] = $user;
+			$data9['xcreate'] = date('Y-m-d H:i:s');
+			$data9['no_register'] = $no_register;
+			$data9['nama_poli'] = 'ADM';
+			$data9['jenis_bayar'] = $ket;
+			$data9['asal'] = $id_poli;
+
+			$cek = $this->rjmkwitansi->insert_nomorkwitansi($data9);
+
+				
+			$data10['no_kk'] = '0';
+			$data10['nilai_kkd'] = '0';
+			$data10['persen_kk'] = '0';
+			$data10['diskon'] = '0';
+			$this->rjmkwitansi->update_pembayaran_nokwitansi($data9['no_kwitansi'], $data10);
+
+			
+			$data['tunai'] = $this->input->post('nilai_tunai');
+			$data['vtot_bayar'] = $this->input->post('nilai_tunai');
+
+			$datank['tunai'] = (int)$this->input->post('nilai_tunai');
+			$this->rjmkwitansi->update_pembayaran_nokwitansi($data9['no_kwitansi'], $data);
+
+				
+
+				
+			$datank['no_register'] = $no_register;
+			$datank['idno_kwitansi'] = sprintf("%06d", ($nomor->no_kwitansi + 1));
+			$datank['user_cetak'] = $user;
+			$datank['tgl_cetak'] = date('Y-m-d H:i:s');
+			if ($poli != 'BA00') {
+				$datank['jenis_kwitansi'] = 'Rawat Jalan';
+			} else {
+				$datank['jenis_kwitansi'] = 'IGD';
+			}
+			$datank['dp'] = 0;
+			$datank['vtot_bayar'] = (int)$datank['tunai'];
+			$datank['jenis_bayar'] = $ket;
+			$datank['asal'] = $id_poli;
+			$datank['referensi'] = 2;
+
+			$cek = $this->rjmkwitansi->insert_nokwitansi($datank);
+
+
+
+			$no_trx = $this->rjmkwitansi->get_no_kwitansi_by_id((int)$datank['idno_kwitansi'])->row();
+
+			if (substr($no_register, 0, 2) == 'RJ') {
+				if ($data_pasien->id_poli == 'BA00') {
+					$component_id = '02';
+					$additional1 = 'Rawat Darurat 2';
+				} else {
+					$component_id = '01';
+					$additional1 = 'Rawat Jalan 2';
+				}
+			} else {
+				$component_id = '03';
+				$additional1 = '';
+			}
+
+			$datares['reg_date'] = date('Y-m-d');
+			$datares['reg_no'] = $no_register;
+			$datares['rm_no'] = $data_pasien->no_medrec;
+			$datares['pasien_name'] = $data_pasien->nama;
+			$datares['dob'] = $data_pasien->tgl_lahir;
+			$datares['gender'] = $data_pasien->sex;
+			$datares['gol_darah'] = $data_pasien->goldarah;
+			$datares['jenis_pelayanan_id'] = 1;
+			$datares['jenis_transaksi'] = 1;
+			$datares['payment_tp'] = 2;
+			$datares['component_id'] = $data_pasien->id_poli;
+			$datares['method_pay'] = $ket;
+			$datares['nama_dokter'] = $data_pasien->nm_dokter;
+			$datares['trx_no'] = $no_trx->no_kwitansi;
+			$datares['paid_flag'] = 0;
+			$datares['cancel_flag'] = 0;
+			$datares['is_cancel'] = 0;
+			$datares['payment_bill'] = (int)$data['vtot_bayar'];
+			$datares['cancel_nominal'] = 0;
+			$datares['retur_nominal'] = 0;
+			$datares['retur_flag'] = 0;
+			$datares['new_payment_bill'] = 0;
+			$datares['additional1'] = $additional1;
+			$datares['additional2'] = '0';
+			$datares['additional3'] = '0';
+				
+			$this->rjmkwitansi->insert_registrasi($datares);
+
+			$data_irj['cetak_kwitansi'] = 1;
+			$data_irj['cetak_kwitansi_st'] = 1;
+			$data_irj['tgl_cetak_kw'] = date('Y-m-d');
+			$this->rjmkwitansi->update_daftar_ulang_irj($no_register, $data_irj);
+			$this->rjmkwitansi->update_bayar_pelayanan_poli_new($no_register);
+			$this->rjmkwitansi->update_status_cetak_kwitansi_lab($no_register,$user);
+			$this->rjmkwitansi->update_status_cetak_kwitansi_rad($no_register,$user);
+
+
+
+			
+		} else {
+			redirect('irj/rjckwitansi/kwitansi/', 'refresh');
+		}
+	}
+
+
+	public function st_selesai_kwitansi_kt($no_register = '')
+	{
+		if ($no_register != '') {
+
+			//ubah status
+			$data['cetak_kwitansi'] = 1;
+			date_default_timezone_set("Asia/Bangkok");
+			$data['tgl_cetak_kw'] = date("Y-m-d H:i:s");
+			$status = $this->rjmkwitansi->update_status_kwitansi_kt($no_register, $data);
+
+			redirect('irj/rjckwitansi/kwitansi/', 'refresh');
+		} else {
+			redirect('irj/rjckwitansi/kwitansi/', 'refresh');
+		}
+	}
+
+	//$this->update_bayar($data_tindakan);
+	public function st_selesai_kwitansi_detail_kt($no_register = '')
+	{
+		if ($no_register != '') {
+
+			$data_tindakan = $this->rjmkwitansi->getdata_unpaid_tindakan_pasien($no_register)->result();
+			$this->update_bayar($data_tindakan);
+			redirect('irj/rjckwitansi/kwitansi_detail/', 'refresh');
+		} else {
+			redirect('irj/rjckwitansi/kwitansi_detail/', 'refresh');
+		}
+	}
+
+	public function cetak_faktur_kt_($no_register = '', $penyetors = '', $jenis_bayar = '')
+	{
+
+		if ($jenis_bayar == '1') {
+			$data['bayar'] = 'TUNAI';
+		} else {
+			$data['bayar'] = 'KREDIT';
+		}
+		$data['no_register'] = $no_register;
+		$data['daftar_ulang'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+		// $penyetor =  $this->input->post('penyetor_hide');	
+		if ($penyetors == "" || $penyetors == null) {
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['penyetor'] = $data['data_pasien']->nama;
+		} else {
+			$data['penyetor'] = $penyetors;
+		}
+		// $pilihtemp=$_COOKIE['pil'];
+		// if($pilihtemp=='0'){
+		// 	$pilih = '';
+		// }else $pilih=$pilihtemp;
+		$data['data_no_kwitansi'] = $this->rjmkwitansi->getdata_no_kwitansi_by_no_register($no_register)->row();
+
+		$data['no_kwitansi'] = $data['data_no_kwitansi']->no_kwitansi;
+
+		$login_data = $this->load->get_var("user_info");
+		$data['user'] = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$data['cterbilang'] = new rjcterbilang();
+			/*$get_no_kwkt=$this->rjmkwitansi->get_new_kwkt($no_register)->result();
+				foreach($get_no_kwkt as $val){
+					$no_kwkt=sprintf("KT%s%06s",$val->year,$val->counter+1);
+				}
+			$this->rjmkwitansi->update_kwkt($no_kwkt,$no_register);
+			
+			$tgl_kw=$this->rjmkwitansi->getdata_tgl_kw($no_register)->result();
+				foreach($tgl_kw as $row){
+					$tgl_jam=$row->tglcetak_kwitansi;
+					$tgl=$row->tgl_kwitansi;
+				}
+			*/
+
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$data['tgl'] = date("d-m-Y");
+
+			// $data_rs=$this->rjmkwitansi->getdata_rs('10000')->result();
+			// 	foreach($data_rs as $row){
+			// 		$namars=$row->namars;
+			// 		$kota_kab=$row->kota;
+			// 		$alamatrs=$row->alamat;
+			// 		$nmsingkat=$row->namasingkat;
+			// 	}
+
+			$conf = $this->appconfig->get_headerpdf_appconfig()->result();
+			$top_header = $this->appconfig->get_header_top_pdfconfig()->value;
+			$bottom_header = $this->appconfig->get_header_bottom_pdfconfig()->value;
+			$data['logo_header'] = $this->appconfig->get_header_isi_pdfconfig()->value;
+			$data['logo_kesehatan_header'] = $this->appconfig->get_header_logo_kesehatan_pdfconfig()->value;
+			$data['kota_header'] = $this->appconfig->get_kota_pdfconfig()->value;
+
+
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['nama_pasien'] = $data['data_pasien']->nama;
+			$data['tgl_lahir'] = $data['data_pasien']->tgl_lahir;
+			$data['tahun_lahir'] = substr($data['tgl_lahir'], 0, 4);
+			$data['tahun_sekarang'] = date('Y');
+
+			if ($data['data_pasien']->sex == 'L') {
+				$data['jenkel'] = 'Laki - Laki';
+			} else {
+				$data['jenkel'] = 'Perempuan';
+			}
+
+			$data['umur'] = (int)$data['tahun_sekarang'] - (int)$data['tahun_lahir'];
+
+			$data['detail_daful'] = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			//		print_r($detail_daful);die();
+			if ($data['detail_daful']->cara_bayar == 'UMUM') {
+				$data['pasien_bayar'] = 'TUNAI';
+			} else {
+				$data['pasien_bayar'] = 'KREDIT';
+			}
+
+			$data['txtkk'] = '';
+			$data['txtdiskon'] = '';
+			$data['txttunai'] = "";
+			$data['txtperusahaan'] = '';
+			$data['totalbayar'] = '';
+			$data['totalbayar1'] = '';
+			$data['totalbayar2'] = '';
+			$data['detail_bayar'] = $data['detail_daful']->cara_bayar;
+
+
+			//print_r($detail_bayar);
+			// if($data['detail_bayar']=='KERJASAMA' || $data['detail_bayar']=='BPJS')
+			// {
+			// 	$data['kontraktor']=$this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+
+			//	print_r($kontraktor);die();
+			// 	$data['txtperusahaan']="<td><b>Dijamin Oleh</b></td>
+			// 			<td> : </td>
+			// 			<td>".strtoupper($data['kontraktor']->nmkontraktor)."</td>";
+			// }
+
+			$data['diskon'] = $data['detail_daful']->diskon;
+			$data['persen'] = $data['detail_daful']->persen_kk;
+			$data['tunai'] = $data['detail_daful']->tunai;
+			$data['nilaikk'] = $data['detail_daful']->nilai_kkkd;
+			$data['nominal_kk'] = $data['persen'] / 100 * $data['nilaikk'] + $data['nilaikk'];
+
+			/*$data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			$vtot=0;
+			foreach($data_tindakan as $row1){
+				$vtot=$vtot+$row1->biaya_tindakan;
+			}
+			*/
+			//print_r($detail_daful);
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+			//print_r($vtot);die();
+			$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien_kwitansi($no_register)->result();
+			$vtottind = 0;
+			$jumlah_vtot = 0;
+			foreach ($data['data_tindakan'] as $row1) {
+
+				$vtottind = $vtottind + $row1->vtot;
+			}
+
+			//		var_dump($vtottind);die();
+
+			$jumlah_vtot =  $vtottind - $data['diskon'];
+
+			//	- $data['diskon'];
+
+			$data['vtot_terbilang'] = $data['cterbilang']->terbilang($jumlah_vtot);
+
+			//	var_dump($data['vtot_terbilang']);die();
+
+			// $data['data_lab']=$this->ModelKwitansi->getdata_lab_pasien($no_register)->result();
+			// $data['data_pa']=$this->ModelKwitansi->getdata_pa_pasien($no_register)->result();
+			// $data['data_rad']=$this->ModelKwitansi->getdata_rad_pasien($no_register)->result();
+			// $data['data_resep']=$this->ModelKwitansi->getdata_resep_pasien($no_register)->result();
+			// $data['data_ok']=$this->ModelKwitansi->getdata_ok_pasien($no_register)->result();
+
+			$this->load->view('kwitansi/kwitansi_setelah', $data);
+		} else {
+		}
+	}
+
+	public function cetak_faktur_kt($no_register = '', $penyetors = '', $jenis_bayar = '')
+	{
+
+		if ($jenis_bayar == '1') {
+			$data['bayar'] = 'TUNAI';
+		} else {
+			$data['bayar'] = 'KREDIT';
+		}
+		$data['no_register'] = $no_register;
+		$data['daftar_ulang'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+		// $penyetor =  $this->input->post('penyetor_hide');	
+		if ($penyetors == "" || $penyetors == null) {
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['penyetor'] = $data['data_pasien']->nama;
+		} else {
+			$data['penyetor'] = $penyetors;
+		}
+		// $pilihtemp=$_COOKIE['pil'];
+		// if($pilihtemp=='0'){
+		// 	$pilih = '';
+		// }else $pilih=$pilihtemp;
+		$data['data_no_kwitansi'] = $this->rjmkwitansi->getdata_no_kwitansi_by_no_register($no_register)->row();
+		// var_dump($data['data_no_kwitansi']);die();
+		if ($data['data_no_kwitansi'] != null) {
+			$data['no_kwitansi'] = $data['data_no_kwitansi']->no_kwitansi;
+		
+		} else {
+			$data['no_kwitansi'] = '';
+			
+		}
+
+
+
+		$login_data = $this->load->get_var("user_info");
+		$data['info_user'] = $this->load->get_var("user_info");
+		$data['user'] = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$data['cterbilang'] = new rjcterbilang();
+			
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$data['tgl'] = date("d-m-Y");
+
+
+			$conf = $this->appconfig->get_headerpdf_appconfig()->result();
+			$top_header = $this->appconfig->get_header_top_pdfconfig()->value;
+			$bottom_header = $this->appconfig->get_header_bottom_pdfconfig()->value;
+			$data['logo_header'] = $this->appconfig->get_header_isi_pdfconfig()->value;
+			$data['logo_kesehatan_header'] = $this->appconfig->get_header_logo_kesehatan_pdfconfig()->value;
+			$data['kota_header'] = $this->appconfig->get_kota_pdfconfig()->value;
+
+
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['nama_pasien'] = $data['data_pasien']->nama;
+			$data['tgl_lahir'] = $data['data_pasien']->tgl_lahir;
+			$data['tahun_lahir'] = substr($data['tgl_lahir'], 0, 4);
+			$data['tahun_sekarang'] = date('Y');
+
+			if ($data['data_pasien']->sex == 'L') {
+				$data['jenkel'] = 'Laki - Laki';
+			} else {
+				$data['jenkel'] = 'Perempuan';
+			}
+
+			$data['umur'] = (int)$data['tahun_sekarang'] - (int)$data['tahun_lahir'];
+
+			$data['detail_daful'] = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			//		print_r($detail_daful);die();
+			if ($data['detail_daful']->cara_bayar == 'UMUM') {
+				$data['pasien_bayar'] = 'TUNAI';
+			} else {
+				$data['pasien_bayar'] = 'KREDIT';
+			}
+
+			$data['txtkk'] = '';
+			$data['txtdiskon'] = '';
+			$data['txttunai'] = "";
+			$data['txtperusahaan'] = '';
+			$data['totalbayar'] = '';
+			$data['totalbayar1'] = '';
+			$data['totalbayar2'] = '';
+			$data['detail_bayar'] = $data['detail_daful']->cara_bayar;
+
+			$data['diskon'] = $data['detail_daful']->diskon;
+			$data['persen'] = $data['detail_daful']->persen_kk;
+			$data['tunai'] = $data['detail_daful']->tunai;
+			$data['nilaikk'] = $data['detail_daful']->nilai_kkkd;
+			$data['nominal_kk'] = $data['persen'] / 100 * $data['nilaikk'] + $data['nilaikk'];
+
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+			
+
+			$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien_new_kw($no_register)->result();
+			$data['data_laboratorium'] = $this->rjmkwitansi->getdata_lab_pasien_kw($no_register)->result();
+			$data['data_radiologi'] = $this->rjmkwitansi->getdata_rad_pasien_kw($no_register)->result();
+			$data['data_resep'] = $this->rjmkwitansi->getdata_resep_pasien_kw($no_register)->result();
+			$data['data_ok'] = $this->ModelKwitansi->getdata_ok_pasien($no_register)->result();
+			$data['ttd_dir'] = $this->rjmkwitansi->get_ttd_dir()->row();
+			// var_dump($data['ttd_dir']->ttd);die();
+			$data['ttd_wen'] = $this->rjmkwitansi->get_ttd_wen()->row();
+
+			$vtottind = 0;
+			$jumlah_vtot = 0;
+			foreach ($data['data_tindakan'] as $row1) {
+
+				$vtottind = $vtottind + $row1->vtot;
+			}
+
+			$jumlah_vtot =  $vtottind - $data['diskon'];
+
+			$data['vtot_terbilang'] = $data['cterbilang']->terbilang($jumlah_vtot);
+
+			$mpdf = new \Mpdf\Mpdf(['orientation' => 'P']);
+			$mpdf->curlAllowUnsafeSslRequests = true;
+
+			$html = $this->load->view('kwitansi/kwitansi_setelah', $data, true);
+			$mpdf->WriteHTML($html);
+			// $filename = 'custom_filename.pdf';
+			// $mpdf->Output($filename, 'D');
+			$mpdf->Output();
+			// $this->load->view('kwitansi/kwitansi_setelah', $data);
+		} else {
+		}
+	}
+
+
+	public function cetak_faktur_kw_kt($no_register = '')
+	{
+		$penyetor =  $_COOKIE['penyetor'];
+		$pilihtemp = $_COOKIE['pil'];
+		$idloket =  $_COOKIE['id_loket'];
+		$nokwitansi =  $_COOKIE['no_kwitansi'];
+		$data_kwitansi = $this->rjmkwitansi->getdata_nomor_kwitansi($nokwitansi, $idloket)->row();
+
+		if ($pilihtemp == '0') {
+			$pilih = '';
+		} else $pilih = $pilihtemp;
+
+		$login_data = $this->load->get_var("user_info");
+		$user = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$cterbilang = new rjcterbilang();
+			/*$get_no_kwkt=$this->rjmkwitansi->get_new_kwkt($no_register)->result();
+				foreach($get_no_kwkt as $val){
+					$no_kwkt=sprintf("KT%s%06s",$val->year,$val->counter+1);
+				}
+			$this->rjmkwitansi->update_kwkt($no_kwkt,$no_register);
+			
+			$tgl_kw=$this->rjmkwitansi->getdata_tgl_kw($no_register)->result();
+				foreach($tgl_kw as $row){
+					$tgl_jam=$row->tglcetak_kwitansi;
+					$tgl=$row->tgl_kwitansi;
+				}
+			*/
+
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$tgl = date("d-m-Y");
+
+			// $data_rs=$this->rjmkwitansi->getdata_rs('10000')->result();
+			// 	foreach($data_rs as $row){
+			// 		$namars=$row->namars;
+			// 		$kota_kab=$row->kota;
+			// 		$alamatrs=$row->alamat;
+			// 		$nmsingkat=$row->namasingkat;
+			// 	}
+
+			$namars = $this->config->item('namars');
+			$kota_kab = $this->config->item('kota');
+			$telp = $this->config->item('telp');
+			$alamatrs = $this->config->item('alamat');
+			$nmsingkat = $this->config->item('namasingkat');
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+
+			$detail_daful = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			//print_r($detail_daful);
+			if ($detail_daful->pasien_bayar == '1') {
+				$pasien_bayar = 'TUNAI';
+			} else $pasien_bayar = 'KREDIT';
+			$txtkk = '';
+			$txtdiskon = '';
+			$txttunai = "";
+			$txtperusahaan = '';
+			$totalbayar = '';
+			$totalbayar1 = '';
+			$totalbayar2 = '';
+			$detail_bayar = $detail_daful->cara_bayar;
+
+
+			//print_r($detail_bayar);
+			if ($detail_bayar == 'KERJASAMA' || $detail_bayar == 'BPJS') {
+				$kontraktor = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+				$txtperusahaan = "<td><b>Dijamin Oleh</b></td>
+						<td> : </td>
+						<td>" . strtoupper($kontraktor->nmkontraktor) . "</td>";
+			}
+
+			/*$diskon=$detail_daful->diskon2;
+			$persen=$detail_daful->persen_kk2;
+			$tunai=$detail_daful->tunai2;
+			$nilaikk=$detail_daful->nilai_kkkd2;				
+			$nominal_kk=$persen/100*$nilaikk+$nilaikk;*/
+			$diskon = $data_kwitansi->diskon;
+			$persen = $data_kwitansi->persen_kk;
+			$tunai = $data_kwitansi->tunai;
+			$nilaikk = $data_kwitansi->nilai_kkd;
+			$nominal_kk = $persen / 100 * $nilaikk + $nilaikk;
+			$vtottind = 0;
+			//$data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			if ($data_pasien->cara_bayar == 'UMUM') {
+				$data_tindakan = $this->rjmkwitansi->getdata_tindakan_pasienumum($no_register)->result();
+			} else {
+				$data_tindakan = $this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			}
+			$vtot = 0;
+			foreach ($data_tindakan as $row1) {
+				$vtottind = $vtottind + $row1->biaya_tindakan;
+			}
+
+			//print_r($detail_daful);
+			$vtot = $this->rjmkwitansi->get_vtot($no_register)->row();
+			/*$data_tindakan=$this->rjmkwitansi->getdata_unpaid_finish_tindakan_pasien($no_register)->result();
+			$vtottind=0;
+			foreach($data_tindakan as $row1){
+				if($row1->bpjs=='1'){
+					$vtottind=$vtottind+$row1->vtot;
+				}
+			}*/
+
+			if ($diskon != '' and $diskon != '0') {
+				if ($detail_bayar == 'BPJS') { //Total Biaya Ditanggung
+					$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:11px;\">Total Biaya Ditanggung</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:12px;\">" . number_format($diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+				} else
+					$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:11px;\">Dijamin/Potongan</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:12px;\">" . number_format($diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+			}
+
+			if ($nilaikk != '' and $nilaikk != '0') {
+				$txtkk = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:11px;\">Kartu Kredit/Debit</p></td>
+					<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:12px;\">" . number_format($nilaikk, 2, ',', '.') . "</p></td></tr>";
+			}
+			//echo $nilaikk;
+
+			if (($tunai != '' and $tunai != '0') or ($nilaikk == '' or $nilaikk == '0')) {
+
+				$tot1 = $tunai;
+				$tot2 = substr($tot1, -3);
+				if ($tot2 % 500 != 0) {
+					$mod = $tot2 % 500;
+					$tot1 = $tot1 - $mod;
+					$tot1 = $tot1 + 500;
+				}
+				$tunai_bulat = $tot1;
+
+				if ($tunai_bulat != '0') {
+					$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:11px;\">Total Bayar</p></td>
+					<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:12px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+				}
+			}
+
+			if (($tunai != '' and $tunai != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+				$tot1 = $tunai;
+				$tot2 = substr($tot1, -3);
+				if ($tot2 % 500 != 0) {
+					$mod = $tot2 % 500;
+					$tot1 = $tot1 - $mod;
+					$tot1 = $tot1 + 500;
+				}
+				$tunai_bulat = $tot1;
+
+				$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:11px;\">Tunai</p></td>
+					<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:12px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+				$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:11px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:11px; \"><p align=\"right\" style=\"font-size:12px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot = $nilaikk + $tunai_bulat, 2, ',', '.') . "</p></td>
+					</tr>";
+			}
+			if ($detail_bayar == 'BPJS') { //Total Biaya Ditanggung
+				$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:11px;\">Total Biaya Ditanggung</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:12px;\">" . number_format($diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+			}
+			if ($diskon != '0' or $nominal_kk != '0' or $tunai != '0') {
+
+				$jumlah_vtot = $nilaikk + $tunai;
+			}
+
+			if (($diskon != '' and $diskon != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+				$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:11px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:11px; \"><p align=\"right\" style=\"font-size:12px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot, 2, ',', '.') . "</p></td>
+					</tr>";
+			}
+
+			if ($data_pasien->cara_bayar != 'UMUM') {
+				$jumlah_vtot =  $vtottind + $vtot->vtot_lab + $vtot->vtot_rad + $vtot->vtot_obat + $vtot->vtot_pa + $vtot->vtot_ok;
+			}/*else
+				$jumlah_vtot =  $vtottind;*/
+
+
+			//echo $jumlah_vtot;
+			//echo $vtot_terbilang;			
+
+			$txtjudul = "";
+
+			$style = '';
+
+			$konten = "<style type=\"text/css\">
+					.table-font-size{
+						font-size:9px;
+					    }
+					.table-font-size1{
+						font-size:12px;
+					    }
+					.table-font-size2{
+						font-size:9px;
+						margin : 5px 1px 1px 1px;
+						padding : 5px 1px 1px 1px;
+					    }
+					</style>
+					
+					<table class=\"table-font-size2\" border=\"0\">
+						<tr>
+							<td width=\"16%\">
+								<p align=\"center\">
+									<img src=\"assets/img/" . $this->config->item('logo_url') . "\" alt=\"img\" height=\"40\" style=\"padding-right:5px;\">
+								</p>
+							</td>
+								<td  width=\"70%\" style=\" font-size:9px;\"><b><font style=\"font-size:12px\">$namars</font></b><br><br>$alamatrs $kota_kab $telp
+							</td>
+							<td width=\"14%\"><font size=\"8\" align=\"right\">$tgl_jam</font></td>						
+						</tr>
+						<tr><td></td><td colspan=\"2\"><p align=\"right\" style=\"font-size:10px;\"><b>Pembayaran : <u>" . $pasien_bayar . "</u></b></p></td></tr>
+						<tr><td></td><td colspan=\"2\"><p align=\"right\" style=\"font-size:10px;\"><b>No. Antrian :<u>" . $data_pasien->no_antrian . "</u></b></p></td></tr>
+					</table>
+					
+					<table>	
+							<tr>
+								<td colspan=\"3\" ><font size=\"12\" align=\"center\"><u><b>KWITANSI RAWAT JALAN 
+								No. " . $idloket . "" . $nokwitansi . "</b></u></font></td>
+							</tr>	
+							<br>		
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td width=\"17%\"><b>Sudah Terima Dari</b></td>
+								<td width=\"2%\"> : </td>
+								<td width=\"37%\">" . strtoupper($penyetor) . "</td>
+								<td width=\"19%\"><b>Tgl Kunjungan</b></td>
+								<td width=\"2%\"> : </td>
+								<td>" . date("d-m-Y", strtotime($data_pasien->tgl_kunjungan)) . "</td>
+							</tr>
+							<tr>
+								<td><b>Nama Pasien</b></td>
+								<td> : </td>
+								<td>" . strtoupper($data_pasien->nama) . "</td>
+								<td ><b>No Medrec</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->no_cm) . "</td>
+							</tr>
+							<tr>
+								<td ><b>Gol. Pasien</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->cara_bayar) . "</td>
+								
+								$txtperusahaan
+							</tr>
+							
+							<tr>
+								<td><b>Unit</b></td>
+								<td> : </td>
+								<td rowspan=\"3\">" . strtoupper($detail_daful->nm_poli) . "</td>
+								<td><b>Dokter</b></td>
+								<td> : </td>
+								<td>" . strtoupper($detail_daful->nm_dokter) . "</td>
+							</tr>											
+							</table>
+							<br/><br/>";
+
+			$konten = $konten . "<table border=\"1\" style=\"padding:2px\">
+						<tr>
+							<th width=\"5%\"><p align=\"center\"><b>No</b></p></th>
+							<th width=\"75%\"><p align=\"center\"><b>Pemeriksaan</b></p></th>
+							<th width=\"20%\"><p align=\"center\"><b>Biaya</b></p></th>
+
+						</tr>";
+			// <tr>
+			// 	<td><p align=\"center\">1</p></td>
+			// 	<td><b>TINDAKAN</b></td>
+			// 	<td></td>
+			// 	<td><p align=\"right\">".number_format( $vtot->vtot, 2 , ',' , '.' )."</p></td>
+			// </tr>";
+
+			$no = 1;
+			foreach ($data_tindakan as $row1) {
+				//if($row1->bpjs=='1'){
+				$konten = $konten . "
+					<tr>
+						<td><p align=\"center\">" . $no++ . "</p></td>
+						<td>" . ucwords(strtolower($row1->nmtindakan)) . "</td>
+						<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+						</tr>";
+				//}
+
+			}
+
+
+
+			if ($data_pasien->cara_bayar != 'UMUM') {
+				$data_lab = $this->ModelKwitansi->getdata_lab_pasien($no_register)->result();
+				$data_pa = $this->ModelKwitansi->getdata_pa_pasien($no_register)->result();
+				$data_rad = $this->ModelKwitansi->getdata_rad_pasien($no_register)->result();
+				$data_resep = $this->ModelKwitansi->getdata_resep_pasien($no_register)->result();
+				$data_ok = $this->ModelKwitansi->getdata_ok_pasien($no_register)->result();
+				//print_r($data_tindakan);
+
+
+				// $konten=$konten."	<tr>
+				// 				<td><p align=\"center\">2</p></td>
+				// 				<td><b>LABORATORIUM</b></td>
+				// 				<td></td>
+				// 				<td><p align=\"right\">".number_format( $vtot->vtot_lab, 2 , ',' , '.' )."</p></td>
+				// 			</tr>";
+
+				foreach ($data_lab as $row1) {
+					$konten = $konten . "
+						<tr>
+							<td><p align=\"center\">" . $no++ . "</p></td>
+							<td>(lab) " . ucwords(strtolower($row1->jenis_tindakan)) . "</td>
+							<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+							</tr>";
+				}
+				// $konten=$konten."	<tr>
+
+				// 				<td><p align=\"center\">2</p></td>
+				// 				<td><b>PATOLOGI ANATOMI</b></td>
+				// 				<td></td>
+
+				// 				<td><p align=\"right\">".number_format( $vtot->vtot_pa, 2 , ',' , '.' )."</p></td>
+
+				// 			</tr>";
+
+				foreach ($data_pa as $row1) {
+					$konten = $konten . "
+						<tr>
+							<td><p align=\"center\">" . $no++ . "</p></td>
+							<td>(pa) " . ucwords(strtolower($row1->jenis_tindakan)) . "</td>
+							<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+
+							</tr>";
+				}
+				// $konten=$konten."	<tr>
+				// 				<td><p align=\"center\">3</p></td>
+				// 				<td><b>RADIOLOGI</b></td>
+				// 				<td></td>
+				// 				<td><p align=\"right\">".number_format( $vtot->vtot_rad, 2 , ',' , '.' )."</p></td>
+				// 			</tr>";
+				foreach ($data_rad as $row1) {
+					$konten = $konten . "
+						<tr>
+							<td><p align=\"center\">" . $no++ . "</p></td>
+							<td>(rad) " . ucwords(strtolower($row1->jenis_tindakan)) . "</td>
+							<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+							</tr>";
+				}
+				// $konten=$konten."	<tr>
+				// 				<td><p align=\"center\">4</p></td>
+				// 				<td><b>OBAT</b></td>
+				// 				<td></td>
+				// 				<td><p align=\"right\">".number_format( $vtot->vtot_obat, 2 , ',' , '.' )."</p></td>
+				// 			</tr>
+				// 			";
+				foreach ($data_resep as $row1) {
+					$konten = $konten . "
+						<tr>
+							<td><p align=\"center\">" . $no++ . "</p></td>
+							<td>(frm) " . ucwords(strtolower($row1->nama_obat)) . "</td>
+							<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+							</tr>";
+				}
+				// $konten=$konten."	<tr>
+				// 				<td><p align=\"center\">6</p></td>
+				// 				<td><b>Operasi</b></td>
+				// 				<td></td>
+				// 				<td><p align=\"right\">".number_format( $vtot->vtot_ok, 2 , ',' , '.' )."</p></td>
+				// 			</tr>
+				// 			";
+				foreach ($data_ok as $row1) {
+					$konten = $konten . "
+						<tr>
+							<td><p align=\"center\">" . $no++ . "</p></td>
+							<td>(ok) " . ucwords(strtolower($row1->jenis_tindakan)) . "</td>
+							<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+							</tr>";
+				}
+			}
+
+
+
+
+
+			/* buat print per tindakan
+			$i=1;
+					$vtot=0;
+					foreach($data_tindakan as $row1){
+						$vtot=$vtot+$row1->biaya_tindakan;
+						$konten=$konten."
+						<tr>
+							<td><p align=\"center\">".$i++."</p></td>
+							<td>$row1->nmtindakan</td>
+							<td><p align=\"right\">".number_format( $row1->biaya_tindakan, 2 , ',' , '.' )."</p></td>
+						</tr>";
+					}
+						$konten=$konten."
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th bgcolor=\"yellow\"><p align=\"right\">".number_format( $vtot, 2 , ',' , '.' )."</p></th>
+						</tr>
+				*/
+			$vtot_terbilang = $cterbilang->terbilang($jumlah_vtot);
+			$konten = $konten . "
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th><p align=\"right\">" . number_format($jumlah_vtot, 2, ',', '.') . "</p></th>
+						</tr>
+					</table>
+					<br/><br/>
+					<table  >
+					$txttunai
+					$txtkk	
+					$txtdiskon
+					$totalbayar									
+					<tr>
+								<td width=\"17%\"><b>Terbilang</b></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><i>" . strtoupper($vtot_terbilang) . "</i></td>
+							</tr>
+					</table>";
+
+
+
+			$konten = $konten . "
+						
+					<br/>
+					
+					";
+
+			/*<tr>
+								<td width=\"17%\"><b>Terbilang</b></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><i>".strtoupper($vtot_terbilang)."</i></td>
+							</tr>*/
+
+			$konten = $konten . "
+					
+					<table style=\"width:100%;\">
+						<tr>
+							<td width=\"75%\" ></td>
+							<td width=\"25%\">
+								<p align=\"center\">
+								$kota_kab, $tgl
+								<br>an. Kasir Rumah Sakit
+								<br>K a s i r
+								<br><br><br>$user
+								</p>
+							</td>
+						</tr>	
+					</table>
+
+					";
+			//echo $konten;			
+			$file_name = "IRJ_faktur_$no_register.pdf";
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			tcpdf();
+			$obj_pdf = new MYPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+			$obj_pdf->SetCreator(PDF_CREATOR);
+			$title = "";
+			$obj_pdf->SetTitle($file_name);
+			$obj_pdf->SetHeaderData('', '', $title, '');
+			$obj_pdf->setPrintHeader(false);
+			$obj_pdf->setPrintFooter(false);
+			$obj_pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+			$obj_pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+			$obj_pdf->SetDefaultMonospacedFont('helvetica');
+			$obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+			$obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+			$obj_pdf->SetMargins('10', '10', '10');
+			$obj_pdf->SetAutoPageBreak(TRUE, '15');
+			$obj_pdf->SetFont('helvetica', '', 9);
+			$obj_pdf->setFontSubsetting(false);
+			$obj_pdf->AddPage();
+			ob_start();
+			$content = $konten;
+			ob_end_clean();
+			$obj_pdf->writeHTML($content, true, false, true, false, '');
+			$obj_pdf->Output(FCPATH . 'download/irj/rjkwitansi/' . $file_name, 'FI');
+			if (!file_exists(FCPATH . 'download/irj/rjkwitansi/' . $file_name)) {
+				$this->session->set_flashdata('message_cetak', '<div class="row">
+							<div class="col-md-12">
+							  <div class="box box-default box-solid">
+								<div class="box-header with-border">
+								  <center>Gagal Mencetak Kwitansi</center>
+								</div>
+							  </div>
+							</div>
+						</div>');
+				// redirect('irj/rjckwitansi/kwitansi/','refresh');
+			}
+		} else {
+			//redirect('irj/rjckwitansi/kwitansi/','refresh');
+		}
+	}
+
+	public function cetak_faktur_kw0_kt($no_register = '')
+	{
+		$penyetor =  $_COOKIE['penyetor'];
+		$pilihtemp = $_COOKIE['pil'];
+		if ($pilihtemp == '0') {
+			$pilih = '';
+		} else $pilih = $pilihtemp;
+
+		$login_data = $this->load->get_var("user_info");
+		$user = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$cterbilang = new rjcterbilang();
+			/*$get_no_kwkt=$this->rjmkwitansi->get_new_kwkt($no_register)->result();
+				foreach($get_no_kwkt as $val){
+					$no_kwkt=sprintf("KT%s%06s",$val->year,$val->counter+1);
+				}
+			$this->rjmkwitansi->update_kwkt($no_kwkt,$no_register);
+			
+			$tgl_kw=$this->rjmkwitansi->getdata_tgl_kw($no_register)->result();
+				foreach($tgl_kw as $row){
+					$tgl_jam=$row->tglcetak_kwitansi;
+					$tgl=$row->tgl_kwitansi;
+				}
+			*/
+
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$tgl = date("d-m-Y");
+
+			// $data_rs=$this->rjmkwitansi->getdata_rs('10000')->result();
+			// 	foreach($data_rs as $row){
+			// 		$namars=$row->namars;
+			// 		$kota_kab=$row->kota;
+			// 		$alamatrs=$row->alamat;
+			// 		$nmsingkat=$row->namasingkat;
+			// 	}
+
+			$namars = $this->config->item('namars');
+			$kota_kab = $this->config->item('kota');
+			$telp = $this->config->item('telp');
+			$alamatrs = $this->config->item('alamat');
+			$nmsingkat = $this->config->item('namasingkat');
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+
+			$detail_daful = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			//print_r($detail_daful);
+			if ($detail_daful->pasien_bayar == '1') {
+				$pasien_bayar = 'TUNAI';
+			} else $pasien_bayar = 'KREDIT';
+			$txtkk = '';
+			$txtdiskon = '';
+			$txttunai = "";
+			$txtperusahaan = '';
+			$totalbayar = '';
+			$totalbayar1 = '';
+			$totalbayar2 = '';
+			$detail_bayar = $detail_daful->cara_bayar;
+
+
+			//print_r($detail_bayar);
+			if ($detail_bayar == 'KERJASAMA' || $detail_bayar == 'BPJS') {
+				$kontraktor = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+				$txtperusahaan = "<td><b>Dijamin Oleh</b></td>
+						<td> : </td>
+						<td>" . strtoupper($kontraktor->nmkontraktor) . "</td>";
+			}
+
+			$diskon = $detail_daful->diskon;
+			$persen = $detail_daful->persen_kk;
+			$tunai = $detail_daful->tunai;
+			$nilaikk = $detail_daful->nilai_kkkd;
+			$nominal_kk = $persen / 100 * $nilaikk + $nilaikk;
+			$vtot_terbilang = $cterbilang->terbilang($tunai);
+			/*$data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			$vtot=0;
+			foreach($data_tindakan as $row1){
+				$vtot=$vtot+$row1->biaya_tindakan;
+			}
+			*/
+			//print_r($detail_daful);
+			//$vtot=$this->rjmkwitansi->get_vtot($no_register)->row();
+			$data_tindakan = $this->rjmkwitansi->getdata_unpaid_finish_tindakan_pasien($no_register)->result();
+			$data_ok = $this->ModelKwitansi->getdata_ok_pasien($no_register)->result();
+			$vtottind = 0;
+			foreach ($data_tindakan as $row1) {
+				if ($row1->bpjs == 0) {
+					$vtottind = $vtottind + $row1->vtot;
+				}
+			}
+			$jumlah_vtot =  $vtottind;
+
+
+			//echo $jumlah_vtot;
+			//echo $vtot_terbilang;			
+
+			$txtjudul = "";
+
+			$style = '';
+
+			$konten = "<style type=\"text/css\">
+					.table-font-size{
+						font-size:9px;
+					    }
+					.table-font-size1{
+						font-size:12px;
+					    }
+					.table-font-size2{
+						font-size:9px;
+						margin : 5px 1px 1px 1px;
+						padding : 5px 1px 1px 1px;
+					    }
+					</style>
+					
+					<table class=\"table-font-size2\" border=\"0\">
+						<tr>
+							<td width=\"16%\">
+								<p align=\"center\">
+									<img src=\"assets/img/" . $this->config->item('logo_url') . "\" alt=\"img\" height=\"40\" style=\"padding-right:5px;\">
+								</p>
+							</td>
+								<td  width=\"70%\" style=\" font-size:9px;\"><b><font style=\"font-size:12px\">$namars</font></b><br><br>$alamatrs $kota_kab $telp
+							</td>
+							<td width=\"14%\"><font size=\"8\" align=\"right\">$tgl_jam</font></td>						
+						</tr>
+						<tr><td></td><td colspan=\"2\"><p align=\"right\" style=\"font-size:10px;\"><b>Pembayaran : <u>TUNAI</u></b></p></td></tr>
+						<tr><td></td><td colspan=\"2\"><p align=\"right\" style=\"font-size:10px;\"><b>No. Antrian :<u>" . $data_pasien->no_antrian . "</u></b></p></td></tr>
+					</table>
+					
+					<table>	
+							<tr>
+								<td colspan=\"3\" ><font size=\"12\" align=\"center\"><u><b>KWITANSI RAWAT JALAN 
+								No. $no_register</b></u></font></td>
+							</tr>	
+							<br>		
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td width=\"17%\"><b>Sudah Terima Dari</b></td>
+								<td width=\"2%\"> : </td>
+								<td width=\"37%\">" . strtoupper($penyetor) . "</td>
+								<td width=\"19%\"><b>Tgl Kunjungan</b></td>
+								<td width=\"2%\"> : </td>
+								<td>" . date("d-m-Y", strtotime($data_pasien->tgl_kunjungan)) . "</td>
+							</tr>
+							<tr>
+								<td><b>Nama Pasien</b></td>
+								<td> : </td>
+								<td>" . strtoupper($data_pasien->nama) . "</td>
+								<td ><b>No Medrec</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->no_cm) . "</td>
+							</tr>
+							<tr>
+								<td ><b>Gol. Pasien</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->cara_bayar) . "</td>
+								
+								$txtperusahaan
+							</tr>
+							
+							<tr>
+								<td><b>Unit</b></td>
+								<td> : </td>
+								<td rowspan=\"3\">" . strtoupper($detail_daful->nm_poli) . "</td>
+								<td><b>Dokter</b></td>
+								<td> : </td>
+								<td>" . strtoupper($detail_daful->nm_dokter) . "</td>
+							</tr>											
+							</table>
+							<br/><br/>";
+
+			$konten = $konten . "<table border=\"1\" style=\"padding:2px\">
+						<tr>
+							<th width=\"5%\"><p align=\"center\"><b>No</b></p></th>
+							<th width=\"75%\"><p align=\"center\"><b>Pemeriksaan</b></p></th>
+							<th width=\"20%\"><p align=\"center\"><b>Biaya</b></p></th>
+
+						</tr>";
+			// <tr>
+			// 	<td><p align=\"center\">1</p></td>
+			// 	<td><b>TINDAKAN</b></td>
+			// 	<td></td>
+			// 	<td><p align=\"right\">".number_format( $vtot->vtot, 2 , ',' , '.' )."</p></td>
+			// </tr>";
+
+			$no = 1;
+			foreach ($data_tindakan as $row1) {
+				if ($row1->bpjs == 0) {
+					$konten = $konten . "
+						<tr>
+							<td><p align=\"center\">" . $no++ . "</p></td>
+							<td>" . ucwords(strtolower($row1->nmtindakan)) . "</td>
+							<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+							</tr>";
+				}
+			}
+			foreach ($data_ok as $row1) {
+				$konten = $konten . "
+						<tr>
+							<td><p align=\"center\">" . $no++ . "</p></td>
+							<td>(ok) " . ucwords(strtolower($row1->jenis_tindakan)) . "</td>
+							<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+							</tr>";
+			}
+			if ($diskon > 0 && $data_pasien->cara_bayar == 'UMUM') {
+				$txtdiskon = "<tr>
+									<td width=\"17%\"><b>Diskon</b></td>
+									<td width=\"2%\"> : </td>
+									<td  width=\"78%\"><i>" . number_format($diskon, 2, ',', '.') . "</i></td>
+								</tr>";
+			} else $txtdiskon = "";
+			if ($tunai > 0 && $data_pasien->cara_bayar == 'UMUM') {
+				$txttunai = "<tr>
+										<td width=\"17%\"><b>Jumlah Yang Dibayar</b></td>
+										<td width=\"2%\"> : </td>
+										<td  width=\"78%\"><i>" . number_format($tunai, 2, ',', '.') . "</i></td>
+									</tr>";
+				$vtot_terbilang = $cterbilang->terbilang($tunai);
+			} else {
+				if ($data_pasien->cara_bayar == 'BPJS') {
+					$txttunai = '';
+					$vtot_terbilang = $cterbilang->terbilang($diskon);
+				} else {
+					$txttunai = '';
+					$vtot_terbilang = 'Nol Rupiah';
+				}
+			}
+			/* buat print per tindakan
+			$i=1;
+					$vtot=0;
+					foreach($data_tindakan as $row1){
+						$vtot=$vtot+$row1->biaya_tindakan;
+						$konten=$konten."
+						<tr>
+							<td><p align=\"center\">".$i++."</p></td>
+							<td>$row1->nmtindakan</td>
+							<td><p align=\"right\">".number_format( $row1->biaya_tindakan, 2 , ',' , '.' )."</p></td>
+						</tr>";
+					}
+						$konten=$konten."
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th bgcolor=\"yellow\"><p align=\"right\">".number_format( $vtot, 2 , ',' , '.' )."</p></th>
+						</tr>
+				*/
+			$konten = $konten . "
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th><p align=\"right\">" . number_format($jumlah_vtot, 2, ',', '.') . "</p></th>
+						</tr>
+					</table>
+					<br/><br/>
+					<table  >
+					$txtdiskon	
+					$txttunai									
+					<tr>
+								<td width=\"17%\"><b>Terbilang</b></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><i>" . strtoupper($vtot_terbilang) . "</i></td>
+							</tr>
+					</table>";
+
+
+
+			$konten = $konten . "
+						
+					<br/>
+					
+					";
+
+			/*<tr>
+								<td width=\"17%\"><b>Terbilang</b></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><i>".strtoupper($vtot_terbilang)."</i></td>
+							</tr>*/
+
+			$konten = $konten . "
+					
+					<table style=\"width:100%;\">
+						<tr>
+							<td width=\"75%\" ></td>
+							<td width=\"25%\">
+								<p align=\"center\">
+								$kota_kab, $tgl
+								<br>an. Bendaharawan Rumah Sakit
+								<br>K a s i r
+								<br><br><br>$user
+								</p>
+							</td>
+						</tr>	
+					</table>
+
+					";
+			//echo $konten;			
+			$file_name = "IRJ0_$no_register.pdf";
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			tcpdf();
+			$obj_pdf = new MYPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+			$obj_pdf->SetCreator(PDF_CREATOR);
+			$title = "";
+			$obj_pdf->SetTitle($file_name);
+			$obj_pdf->SetHeaderData('', '', $title, '');
+			$obj_pdf->setPrintHeader(false);
+			$obj_pdf->setPrintFooter(false);
+			$obj_pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+			$obj_pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+			$obj_pdf->SetDefaultMonospacedFont('helvetica');
+			$obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+			$obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+			$obj_pdf->SetMargins('10', '10', '10');
+			$obj_pdf->SetAutoPageBreak(TRUE, '15');
+			$obj_pdf->SetFont('helvetica', '', 9);
+			$obj_pdf->setFontSubsetting(false);
+			$obj_pdf->AddPage();
+			ob_start();
+			$content = $konten;
+			ob_end_clean();
+			$obj_pdf->writeHTML($content, true, false, true, false, '');
+			$obj_pdf->Output(FCPATH . 'download/irj/rjkwitansi/' . $file_name, 'FI');
+			if (file_exists(FCPATH . 'download/irj/rjkwitansi/' . $file_name)) {
+			} else {
+			}
+		} else {
+			redirect('irj/rjckwitansi/kwitansi/', 'refresh');
+		}
+	}
+
+	public function cetak_faktur_kw5_kt($no_register = '')
+	{
+		// $str = "test";
+		// echo($str{0});
+		$daftar_ulang = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+		$penyetor =  $daftar_ulang->atas_nama;
+		// $pilihtemp=$_COOKIE['pil'];
+		$nomorKwitansi = $this->rjmkwitansi->get_nomor_kwitansi_by_noregister($no_register)->row();
+		$idloket =  $nomorKwitansi->id_loket;
+		$nokwitansi =  $nomorKwitansi->no_kwitansi;
+
+		// if($pilihtemp=='0'){
+		// 	$pilih = '';
+		// }else $pilih=$pilihtemp;
+
+		$login_data = $this->load->get_var("user_info");
+		$user = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$cterbilang = new rjcterbilang();
+
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$tgl = date("d-m-Y");
+
+			$namars = $this->config->item('namars');
+			$kota_kab = $this->config->item('kota');
+			$telp = $this->config->item('telp');
+			$alamatrs = $this->config->item('alamat');
+			$nmsingkat = $this->config->item('namasingkat');
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data_kwitansi = $this->rjmkwitansi->getdata_detail_kwitansi($no_register)->result();
+			$detail_daful = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			//print_r($detail_daful);
+			if ($detail_daful->pasien_bayar == '1') {
+				$pasien_bayar = 'TUNAI';
+			} else $pasien_bayar = 'KREDIT';
+			$txtkk = '';
+			$txtdiskon = '';
+			$txttunai = "";
+			$txtperusahaan = '';
+			$totalbayar = '';
+			$totalbayar1 = '';
+			$totalbayar2 = '';
+			$detail_bayar = $detail_daful->cara_bayar;
+
+			//print_r($detail_bayar);
+			if ($detail_bayar == 'KERJASAMA' || $detail_bayar == 'BPJS') {
+				$kontraktor = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+				$txtperusahaan = "<td><b>Dijamin Oleh</b></td>
+						<td> : </td>
+						<td>" . strtoupper($kontraktor->nmkontraktor) . "</td>";
+			}
+
+			$diskon = 0;
+			$tunai = 0;
+			$nilaikk = 0;
+			$nominal_kk = 0;
+			foreach ($data_kwitansi as $row2) {
+				$diskon += (int)$row2->diskon;
+				$tunai += (int)$row2->tunai;
+				$nilaikk += (int)$row2->nilai_kkd;
+				$nominal_kk += ($row2->persen_kk / 100 * $nilaikk + $nilaikk);
+			}
+			$vtot_terbilang = $cterbilang->terbilang($tunai);
+			/*$data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			$vtot=0;
+			foreach($data_tindakan as $row1){
+				$vtot=$vtot+$row1->biaya_tindakan;
+			}
+			*/
+			//print_r($detail_daful);
+			//$vtot=$this->rjmkwitansi->get_vtot($no_register)->row();
+			$data_tindakan = $this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+
+			$data_ok = $this->ModelKwitansi->getdata_ok_pasien($no_register)->result();
+			$vtottind = 0;
+			/*foreach($data_tindakan as $row1){
+				//if($row1->bpjs==0){
+					$vtottind=$vtottind+$row1->vtot;
+				//}				
+			}
+				$jumlah_vtot =  $vtottind;*/
+
+			$txtjudul = "";
+
+			$style = '';
+
+			$konten = "<style type=\"text/css\">
+					.table-font-size{
+						font-size:9px;
+					    }
+					.table-font-size1{
+						font-size:12px;
+					    }
+					.table-font-size2{
+						font-size:9px;
+						margin : 5px 1px 1px 1px;
+						padding : 5px 1px 1px 1px;
+					    }
+					</style>
+					
+					<table class=\"table-font-size2\" border=\"0\">
+						<tr>
+							<td width=\"16%\">
+								<p align=\"center\">
+									<img src=\"assets/img/" . $this->config->item('logo_url') . "\" alt=\"img\" height=\"40\" style=\"padding-right:5px;\">
+								</p>
+							</td>
+								<td  width=\"70%\" style=\" font-size:9px;\"><b><font style=\"font-size:12px\">$namars</font></b><br><br>$alamatrs $kota_kab $telp
+							</td>
+							<td width=\"14%\"><font size=\"8\" align=\"right\">$tgl_jam</font></td>						
+						</tr>
+						<tr><td></td><td colspan=\"2\"><p align=\"right\" style=\"font-size:10px;\"><b>Pembayaran : <u>TUNAI</u></b></p></td></tr>
+						<tr><td></td><td colspan=\"2\"><p align=\"right\" style=\"font-size:10px;\"><b>No. Antrian :<u>" . $data_pasien->no_antrian . "</u></b></p></td></tr>
+					</table>
+					
+					<table>	
+							<tr>
+								<td colspan=\"3\" ><font size=\"12\" align=\"center\"><u><b>FAKTUR RAWAT JALAN 
+								NoReg " . $no_register . "</b></u></font></td>
+							</tr>	
+							<br>		
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td width=\"17%\"><b>Sudah Terima Dari</b></td>
+								<td width=\"2%\"> : </td>
+								<td width=\"37%\">" . strtoupper($penyetor) . "</td>
+								<td width=\"19%\"><b>Tgl Kunjungan</b></td>
+								<td width=\"2%\"> : </td>
+								<td>" . date("d-m-Y", strtotime($data_pasien->tgl_kunjungan)) . "</td>
+							</tr>
+							<tr>
+								<td><b>Nama Pasien</b></td>
+								<td> : </td>
+								<td>" . strtoupper($data_pasien->nama) . "</td>
+								<td ><b>No Medrec</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->no_cm) . "</td>
+							</tr>
+							<tr>
+								<td ><b>Gol. Pasien</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->cara_bayar) . "</td>
+								
+								$txtperusahaan
+							</tr>
+							
+							<tr>
+								<td><b>Unit</b></td>
+								<td> : </td>
+								<td rowspan=\"3\">" . strtoupper($detail_daful->nm_poli) . "</td>
+								<td><b>Dokter</b></td>
+								<td> : </td>
+								<td>" . strtoupper($detail_daful->nm_dokter) . "</td>
+							</tr>											
+							</table>
+							<br/><br/>";
+
+			$konten = $konten . "<table border=\"1\" style=\"padding:2px\">
+						<tr>
+							<th width=\"5%\"><p align=\"center\"><b>No</b></p></th>
+							<th width=\"75%\"><p align=\"center\"><b>Pemeriksaan</b></p></th>
+							<th width=\"20%\"><p align=\"center\"><b>Biaya</b></p></th>
+
+						</tr>";
+			// <tr>
+			// 	<td><p align=\"center\">1</p></td>
+			// 	<td><b>TINDAKAN</b></td>
+			// 	<td></td>
+			// 	<td><p align=\"right\">".number_format( $vtot->vtot, 2 , ',' , '.' )."</p></td>
+			// </tr>";
+
+			$no = 1;
+			foreach ($data_tindakan as $row1) {
+				$vtottind = $vtottind + $row1->vtot;
+				//if($row1->bpjs==0){
+				$konten = $konten . "
+						<tr>
+							<td><p align=\"center\">" . $no++ . "</p></td>
+							<td>" . ucwords(strtolower($row1->nmtindakan)) . "</td>
+							<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+							</tr>";
+				//}
+			}
+			foreach ($data_ok as $row1) {
+				$vtottind = $vtottind + $row1->vtot;
+				$konten = $konten . "
+						<tr>
+							<td><p align=\"center\">" . $no++ . "</p></td>
+							<td>(ok) " . ucwords(strtolower($row1->jenis_tindakan)) . "</td>
+							<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+							</tr>";
+			}
+			if ($diskon != '' and $diskon != '0') {
+				if ($detail_bayar == 'BPJS') { //Total Biaya Ditanggung
+					$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:9px;\">Total Biaya Ditanggung</p></td>
+						<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:10px;\">" . number_format($diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+				} else
+					$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:9px;\">Dijamin/Potongan</p></td>
+						<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:10px;\">" . number_format($diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+			}
+
+			if ($nilaikk != '' and $nilaikk != '0') {
+				$txtkk = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:9px;\">Kartu Kredit/Debit</p></td>
+					<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:10px;\">" . number_format($nominal_kk, 2, ',', '.') . "</p></td></tr>";
+			}
+			//echo $nilaikk;
+
+			if (($tunai != '' and $tunai != '0') or ($nilaikk == '' or $nilaikk == '0')) {
+
+				$tot1 = $tunai;
+				$tot2 = substr($tot1, -3);
+				if ($tot2 % 500 != 0) {
+					$mod = $tot2 % 500;
+					$tot1 = $tot1 - $mod;
+					$tot1 = $tot1 + 500;
+				}
+				$tunai_bulat = $tot1;
+
+				if ($tunai_bulat != '0') {
+					$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:9px;\">Total Bayar</p></td>
+					<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:10px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+				}
+			}
+
+			if (($tunai != '' and $tunai != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+				$tot1 = $tunai;
+				$tot2 = substr($tot1, -3);
+				if ($tot2 % 500 != 0) {
+					$mod = $tot2 % 500;
+					$tot1 = $tot1 - $mod;
+					$tot1 = $tot1 + 500;
+				}
+				$tunai_bulat = $tot1;
+
+				$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:9px;\">Tunai</p></td>
+					<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:10px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+				$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:9px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:11px; \"><p align=\"right\" style=\"font-size:10px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot = $nominal_kk + $tunai_bulat, 2, ',', '.') . "</p></td>
+					</tr>";
+			}
+
+			if ($diskon != '0' or $nominal_kk != '0' or $tunai != '0') {
+
+				$jumlah_vtot = $nilaikk + $tunai;
+				$jumlah_vtot1 = $nilaikk + $tunai;
+			}
+
+			$vtot_terbilang = $cterbilang->terbilang($jumlah_vtot);
+
+			if (($diskon != '' and $diskon != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+				$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:9px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:9px; \"><p align=\"right\" style=\"font-size:10px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot, 2, ',', '.') . "</p></td>
+					</tr>";
+			}
+			/* buat print per tindakan
+			$i=1;
+					$vtot=0;
+					foreach($data_tindakan as $row1){
+						$vtot=$vtot+$row1->biaya_tindakan;
+						$konten=$konten."
+						<tr>
+							<td><p align=\"center\">".$i++."</p></td>
+							<td>$row1->nmtindakan</td>
+							<td><p align=\"right\">".number_format( $row1->biaya_tindakan, 2 , ',' , '.' )."</p></td>
+						</tr>";
+					}
+						$konten=$konten."
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th bgcolor=\"yellow\"><p align=\"right\">".number_format( $vtot, 2 , ',' , '.' )."</p></th>
+						</tr>
+				*/
+			$konten = $konten . "
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th><p align=\"right\">" . number_format($tunai, 2, ',', '.') . "</p></th>
+						</tr>
+					</table>
+					<br/><br/>
+					<table  >
+					$txtdiskon
+					$txtkk	
+					$txttunai	
+					$totalbayar							
+					<tr>
+								<td width=\"17%\"><b>Terbilang</b></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><i>" . strtoupper($vtot_terbilang) . "</i></td>
+							</tr>
+					</table>";
+
+
+
+			$konten = $konten . "
+						
+					<br/>
+					<br/>
+					<br/>
+					";
+
+			/*<tr>
+								<td width=\"17%\"><b>Terbilang</b></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><i>".strtoupper($vtot_terbilang)."</i></td>
+							</tr>*/
+
+			$konten = $konten . "
+					
+					<table style=\"width:100%;\">
+						<tr>
+							<td width=\"60%\" ></td>
+							<td width=\"40%\">
+								<p align=\"center\">
+								$kota_kab, $tgl
+								<br>an. Kasir Rumah Sakit
+								<br>K a s i r
+								<br><br><br>$user
+								</p>
+							</td>
+						</tr>	
+					</table>
+
+					";
+			//echo $konten;			
+			// $file_name="Faktur_IRJ_$no_register.pdf";			
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			// tcpdf();			
+			// $obj_pdf = new MYPDF('P', PDF_UNIT, 'A5', true, 'UTF-8', false);				
+			// $obj_pdf->SetCreator(PDF_CREATOR);
+			// $title = "";
+			// $obj_pdf->SetTitle($file_name);
+			// $obj_pdf->SetHeaderData('', '', $title, '');
+			// $obj_pdf->setPrintHeader(false);
+			// $obj_pdf->setPrintFooter(false);
+			// $obj_pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+			// $obj_pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+			// $obj_pdf->SetDefaultMonospacedFont('helvetica');
+			// $obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+			// $obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+			// $obj_pdf->SetMargins('10', '10', '10');
+			// $obj_pdf->SetAutoPageBreak(TRUE, '15');
+			// $obj_pdf->SetFont('helvetica', '', 9);
+			// $obj_pdf->setFontSubsetting(false);
+			// $obj_pdf->AddPage();
+			// ob_start();
+			$content = $konten;
+			// ob_end_clean();
+			// $obj_pdf->writeHTML($content, true, false, true, false, '');				
+			// $obj_pdf->Output(FCPATH.'download/irj/rjkwitansi/'.$file_name, 'FI');
+			$mpdf = new \Mpdf\Mpdf(['orientation' => 'P']);
+			$mpdf->curlAllowUnsafeSslRequests = true;
+			// $html = $this->load->view('lab/paper_css/hasil_lab',$data,true);			
+			// $this->mpdf->AddPage('L'); 
+			$mpdf->WriteHTML($content);
+			$mpdf->Output();
+			// if(!file_exists(FCPATH.'download/irj/rjkwitansi/'.$file_name)){
+			// 	$this->session->set_flashdata('message_cetak','<div class="row">
+			// 			<div class="col-md-12">
+			// 			  <div class="box box-default box-solid">
+			// 				<div class="box-header with-border">
+			// 				  <center>Gagal Mencetak Kwitansi</center>
+			// 				</div>
+			// 			  </div>
+			// 			</div>
+			// 		</div>');
+			//redirect('irj/rjckwitansi/kwitansi/','refresh');
+			// }
+		} else {
+			//redirect('irj/rjckwitansi/kwitansi/','refresh');
+		}
+	}
+
+	public function cetak_kwitansi_kt($no_register = '', $jenis_bayar = '')
+	{
+
+		$returnHtml = $this->input->get('returnhtml') == '1' ? TRUE : FALSE;
+		if ($jenis_bayar == '1') {
+			$data['bayar'] = 'TUNAI';
+		} else {
+			$data['bayar'] = 'KREDIT';
+		}
+		$data['no_register'] = $no_register;
+		$data['daftar_ulang'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+		// $penyetor =  $this->input->post('penyetor_hide');	
+		// if ($penyetors=="" || $penyetors == null) 
+		// {
+		// 	$data['data_pasien']=$this->rjmkwitansi->getdata_pasien($no_register)->row();
+		// 	$data['penyetor']=$data['data_pasien']->nama;
+		// } else {
+		// 	$data['penyetor']=$penyetors;
+		// }
+		// $pilihtemp=$_COOKIE['pil'];
+		// if($pilihtemp=='0'){
+		// 	$pilih = '';
+		// }else $pilih=$pilihtemp;
+		$data['data_no_kwitansi'] = $this->rjmkwitansi->getdata_no_kwitansi_by_no_register($no_register)->row();
+		// var_dump($data['data_no_kwitansi']);die();
+		$data['no_kwitansi'] = $data['data_no_kwitansi']->no_kwitansi;
+
+		if ($data['data_no_kwitansi'] != null) {
+			$data['no_kwitansi'] = $data['data_no_kwitansi']->no_kwitansi;
+			// $data['cash'] = $data['data_no_kwitansi']->cash;
+			// $data['noncash'] = $data['data_no_kwitansi']->noncash;
+		} else {
+			$data['no_kwitansi'] = '';
+			// $data['cash'] = 0;
+			// $data['noncash'] = 0;
+		}
+
+		$login_data = $this->load->get_var("user_info");
+		$data['user'] = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$data['cterbilang'] = new rjcterbilang();
+			/*$get_no_kwkt=$this->rjmkwitansi->get_new_kwkt($no_register)->result();
+				foreach($get_no_kwkt as $val){
+					$no_kwkt=sprintf("KT%s%06s",$val->year,$val->counter+1);
+				}
+			$this->rjmkwitansi->update_kwkt($no_kwkt,$no_register);
+			
+			$tgl_kw=$this->rjmkwitansi->getdata_tgl_kw($no_register)->result();
+				foreach($tgl_kw as $row){
+					$tgl_jam=$row->tglcetak_kwitansi;
+					$tgl=$row->tgl_kwitansi;
+				}
+			*/
+
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$data['tgl'] = date("d-m-Y");
+
+			// $data_rs=$this->rjmkwitansi->getdata_rs('10000')->result();
+			// 	foreach($data_rs as $row){
+			// 		$namars=$row->namars;
+			// 		$kota_kab=$row->kota;
+			// 		$alamatrs=$row->alamat;
+			// 		$nmsingkat=$row->namasingkat;
+			// 	}
+
+			$conf = $this->appconfig->get_headerpdf_appconfig()->result();
+			$top_header = $this->appconfig->get_header_top_pdfconfig()->value;
+			$bottom_header = $this->appconfig->get_header_bottom_pdfconfig()->value;
+			$data['logo_header'] = $this->appconfig->get_header_isi_pdfconfig()->value;
+			$data['logo_kesehatan_header'] = $this->appconfig->get_header_logo_kesehatan_pdfconfig()->value;
+			$data['kota_header'] = $this->appconfig->get_kota_pdfconfig()->value;
+
+
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['nama_pasien'] = $data['data_pasien']->nama;
+			$data['tgl_lahir'] = $data['data_pasien']->tgl_lahir;
+			$data['tahun_lahir'] = substr($data['tgl_lahir'], 0, 4);
+			$data['tahun_sekarang'] = date('Y');
+
+			if ($data['data_pasien']->sex == 'L') {
+				$data['jenkel'] = 'Laki - Laki';
+			} else {
+				$data['jenkel'] = 'Perempuan';
+			}
+
+			$data['umur'] = (int)$data['tahun_sekarang'] - (int)$data['tahun_lahir'];
+
+			$data['detail_daful'] = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			//		print_r($detail_daful);die();
+			if ($data['detail_daful']->cara_bayar == 'UMUM') {
+				$data['pasien_bayar'] = 'TUNAI';
+			} else {
+				$data['pasien_bayar'] = 'KREDIT';
+			}
+
+			$data['txtkk'] = '';
+			$data['txtdiskon'] = '';
+			$data['txttunai'] = "";
+			$data['txtperusahaan'] = '';
+			$data['totalbayar'] = '';
+			$data['totalbayar1'] = '';
+			$data['totalbayar2'] = '';
+			$data['detail_bayar'] = $data['detail_daful']->cara_bayar;
+
+
+			//print_r($detail_bayar);
+			// if($data['detail_bayar']=='KERJASAMA' || $data['detail_bayar']=='BPJS')
+			// {
+			// 	$data['kontraktor']=$this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+
+			//	print_r($kontraktor);die();
+			// 	$data['txtperusahaan']="<td><b>Dijamin Oleh</b></td>
+			// 			<td> : </td>
+			// 			<td>".strtoupper($data['kontraktor']->nmkontraktor)."</td>";
+			// }
+
+			$data['diskon'] = $data['detail_daful']->diskon;
+			$data['persen'] = $data['detail_daful']->persen_kk;
+			$data['tunai'] = $data['detail_daful']->tunai;
+			$data['nilaikk'] = $data['detail_daful']->nilai_kkkd;
+			$data['nominal_kk'] = $data['persen'] / 100 * $data['nilaikk'] + $data['nilaikk'];
+
+			/*$data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			$vtot=0;
+			foreach($data_tindakan as $row1){
+				$vtot=$vtot+$row1->biaya_tindakan;
+			}
+			*/
+			//print_r($detail_daful);
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+			//print_r($vtot);die();
+			if ($data['data_no_kwitansi'] != null) {
+				$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien_kwitansi($no_register)->result();
+			} else {
+				$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien_kwitansi_new($no_register)->result();
+			}
+
+			$vtottind = 0;
+			$jumlah_vtot = 0;
+			foreach ($data['data_tindakan'] as $row1) {
+
+				$vtottind = $vtottind + $row1->vtot;
+			}
+
+			//		var_dump($vtottind);die();
+
+			$jumlah_vtot =  $vtottind - $data['diskon'];
+
+			//	- $data['diskon'];
+
+			$data['vtot_terbilang'] = $data['cterbilang']->terbilang($jumlah_vtot);
+
+			//	var_dump($data['vtot_terbilang']);die();
+
+			// $data['data_lab']=$this->ModelKwitansi->getdata_lab_pasien($no_register)->result();
+			// $data['data_pa']=$this->ModelKwitansi->getdata_pa_pasien($no_register)->result();
+			// $data['data_rad']=$this->ModelKwitansi->getdata_rad_pasien($no_register)->result();
+			// $data['data_resep']=$this->ModelKwitansi->getdata_resep_pasien($no_register)->result();
+			// $data['data_ok']=$this->ModelKwitansi->getdata_ok_pasien($no_register)->result();
+			// $this->load->view('kwitansi/kwitansi_irj',$data);
+			$returnHtml ? $this->load->view('kwitansi/kwitansi_irj_apm', $data) : $this->load->view('kwitansi/kwitansi_irj', $data);
+		} else {
+		}
+	}
+
+	public function cetak_faktur_kt_old($no_register = '', $penyetors = '', $jenis_bayar = '')
+	{
+		error_reporting(~E_ALL);
+		//$this->console_log($this->config->item('logo_url'));
+		if ($jenis_bayar == '1') {
+			$bayar = 'TUNAI';
+		} else {
+			$bayar = 'KREDIT';
+		}
+		$daftar_ulang = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+		// $penyetor =  $this->input->post('penyetor_hide');	
+		if ($penyetors == "" || $penyetors == null) {
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$penyetor = $data_pasien->nama;
+		} else {
+			$penyetor = $penyetors;
+		}
+		// $pilihtemp=$_COOKIE['pil'];
+		// if($pilihtemp=='0'){
+		// 	$pilih = '';
+		// }else $pilih=$pilihtemp;
+		$data_no_kwitansi = $this->rjmkwitansi->getdata_no_kwitansi_by_no_register($no_register)->row();
+
+		$no_kwitansi = $data_no_kwitansi->no_kwitansi;
+
+		$login_data = $this->load->get_var("user_info");
+		$user = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$cterbilang = new rjcterbilang();
+			/*$get_no_kwkt=$this->rjmkwitansi->get_new_kwkt($no_register)->result();
+				foreach($get_no_kwkt as $val){
+					$no_kwkt=sprintf("KT%s%06s",$val->year,$val->counter+1);
+				}
+			$this->rjmkwitansi->update_kwkt($no_kwkt,$no_register);
+			
+			$tgl_kw=$this->rjmkwitansi->getdata_tgl_kw($no_register)->result();
+				foreach($tgl_kw as $row){
+					$tgl_jam=$row->tglcetak_kwitansi;
+					$tgl=$row->tgl_kwitansi;
+				}
+			*/
+
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$tgl = date("d-m-Y");
+
+			// $data_rs=$this->rjmkwitansi->getdata_rs('10000')->result();
+			// 	foreach($data_rs as $row){
+			// 		$namars=$row->namars;
+			// 		$kota_kab=$row->kota;
+			// 		$alamatrs=$row->alamat;
+			// 		$nmsingkat=$row->namasingkat;
+			// 	}
+
+			$conf = $this->appconfig->get_headerpdf_appconfig()->result();
+			$top_header = $this->appconfig->get_header_top_pdfconfig()->value;
+			$bottom_header = $this->appconfig->get_header_bottom_pdfconfig()->value;
+			$logo_header = $this->appconfig->get_header_isi_pdfconfig()->value;
+			$logo_kesehatan_header = $this->appconfig->get_header_logo_kesehatan_pdfconfig()->value;
+			$kota_header = $this->appconfig->get_kota_pdfconfig()->value;
+
+
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$nama_pasien = $data_pasien->nama;
+			$tgl_lahir = $data_pasien->tgl_lahir;
+			$tahun_lahir = substr($tgl_lahir, 0, 4);
+			$tahun_sekarang = date('Y');
+
+			if ($data_pasien->sex == 'L') {
+				$jenkel = 'Laki - Laki';
+			} else {
+				$jenkel = 'Perempuan';
+			}
+
+			$umur = (int)$tahun_sekarang - (int)$tahun_lahir;
+
+			$detail_daful = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			//		print_r($detail_daful);die();
+			if ($detail_daful->cara_bayar == 'UMUM') {
+				$pasien_bayar = 'TUNAI';
+			} else {
+				$pasien_bayar = 'KREDIT';
+			}
+			$txtkk = '';
+			$txtdiskon = '';
+			$txttunai = "";
+			$txtperusahaan = '';
+			$totalbayar = '';
+			$totalbayar1 = '';
+			$totalbayar2 = '';
+			$detail_bayar = $detail_daful->cara_bayar;
+
+
+			//print_r($detail_bayar);
+			if ($detail_bayar == 'KERJASAMA' || $detail_bayar == 'BPJS') {
+				$kontraktor = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+
+				//	print_r($kontraktor);die();
+				$txtperusahaan = "<td><b>Dijamin Oleh</b></td>
+						<td> : </td>
+						<td>" . strtoupper($kontraktor->nmkontraktor) . "</td>";
+			}
+
+			$diskon = $detail_daful->diskon;
+			$persen = $detail_daful->persen_kk;
+			$tunai = $detail_daful->tunai;
+			$nilaikk = $detail_daful->nilai_kkkd;
+			$nominal_kk = $persen / 100 * $nilaikk + $nilaikk;
+
+			/*$data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			$vtot=0;
+			foreach($data_tindakan as $row1){
+				$vtot=$vtot+$row1->biaya_tindakan;
+			}
+			*/
+			//print_r($detail_daful);
+			$vtot = $this->rjmkwitansi->get_vtot($no_register)->row();
+			//print_r($vtot);die();
+			$data_tindakan = $this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			$vtottind = 0;
+			foreach ($data_tindakan as $row1) {
+				$vtottind = $vtottind + $row1->vtot;
+			}
+			$jumlah_vtot =  $vtottind + $vtot->vtot_obat - $diskon;
+
+			$vtot_terbilang = $cterbilang->terbilang($jumlah_vtot);
+			//echo $jumlah_vtot;
+			//echo $vtot_terbilang;	
+			//	print_r($vtot_terbilang);die();	
+
+			$txtjudul = "";
+
+			$style = '';
+			// $header_page = $top_header."<img src=\"assets/img/".$logo_header."\" alt=\"img\" height=\"49\" style=\"padding-right:5px;\">".$bottom_header;		
+			$header_page = $top_header . "<p align=\"center\">
+											<img src=\"assets/img/" . $logo_kesehatan_header . "\" alt=\"img\" height=\"60\" style=\"padding-right:5px;\">
+										</p>
+									</td>
+									<td  width=\"74%\" style=\"font-size:9px;\" align=\"center\">
+										<font style=\"font-size:12px\">
+											<b><label>KEMENTERIAN KESEHATAN REPUBLIK INDONESIA</label></b><br>
+										</font>
+										<font style=\"font-size:11px\">
+											<b><label>DIREKTORAT JENDERAL PELAYANAN KESEHATAN</label></b><br>
+											<b><label>RUMAH SAKIT OTAK DR. Drs. M. HATTA BUKITTINGGI</label></b>
+										</font>    
+										<br>
+										<label>Jalan Jenderal Sudirman Bukittinggi Telepon (0752) 21013 Faksimile (0752) 23431</label><br>
+										<label>Email : rsomh.bkt20@gmail.com Email : rssnyanmed@yahoo.co.id Website : www.rsstrokebkt.com</label>
+									</td>
+									<td width=\"13%\">
+										<p align=\"center\">
+											<img src=\"assets/img/" . $logo_header . "\" alt=\"img\" height=\"60\" style=\"padding-right:5px;\">
+										</p>" . $bottom_header;
+
+			$konten = "<style type=\"text/css\">
+					.table-font-size{
+						font-size:9px;
+					    }
+					.table-font-size1{
+						font-size:12px;
+					    }
+					.table-font-size2{
+						font-size:9px;
+						margin : 5px 1px 1px 1px;
+						padding : 5px 1px 1px 1px;
+					    }
+					</style>
+					
+					<font size=\"6\" align=\"right\">$tgl_jam</font><br>
+					$header_page
+					<hr>
+					
+					<table>	
+							<tr>
+								<td colspan=\"3\" ><font size=\"12\" align=\"center\"><u><b>KWITANSI RAWAT JALAN </b></u></font></td>
+							</tr>	
+							<br>		
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td width=\"18%\"><b>Telah Terima Dari</b></td>
+								<td width=\"2%\"> : </td>
+								<td width=\"30%\">" . str_replace('%20', ' ', $penyetor) . "</td>
+								<td width=\"18%\"><b>Nama Pasien</b></td>
+								<td width=\"2%\"> : </td>
+								<td width=\"30%\">" . strtoupper($nama_pasien) . "</td>
+
+							</tr>
+							<tr>
+								<td ><b>No Register</b></td>
+								<td > : </td>
+								<td>" . $no_register . "</td>
+								<td ><b>Alamat</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->alamat) . "</td>
+							</tr>
+							<tr>
+								<td ><b>No RM</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->no_cm) . "</td>
+								<td><b>Kota</b></td>
+								<td> : </td>
+								<td>" . $data_pasien->kotakabupaten . "</td>
+							</tr>
+							<tr>
+								<td ><b>Tgl Reg</b></td>
+								<td > : </td>
+								<td>" . $tgl . "</td>	
+								<td><b>Umur</b></td>
+								<td > : </td>
+								<td>" . strtoupper($umur) . " Tahun</td>
+							</tr>
+							<tr>
+								<td ><b>Pembayaran</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->cara_bayar) . " (" . $bayar . ")</td>	
+								<td><b>Jenis Kelamin</b></td>
+								<td > : </td>
+								<td>" . strtoupper($jenkel) . "</td>
+							</tr>
+							<tr>
+								<td ><b>Dijamin Oleh</b></td>
+								<td > : </td>
+								<td>" . strtoupper($detail_daful->kontraktor) . "</td>	
+								<td><b>No Kwitansi</b></td>
+								<td > : </td>
+								<td>" . strtoupper($no_kwitansi) . "</td>
+							</tr>
+							
+							<tr>
+								<td><b>Unit</b></td>
+								<td> : </td>
+								<td rowspan=\"3\">" . strtoupper($detail_daful->nm_poli) . "</td>
+								<td><b>Dokter</b></td>
+								<td> : </td>
+								<td>" . strtoupper($detail_daful->nm_dokter) . "</td>
+							</tr>											
+							</table>
+							<br/><br/>";
+
+
+
+			$data_lab = $this->ModelKwitansi->getdata_lab_pasien($no_register)->result();
+			$data_pa = $this->ModelKwitansi->getdata_pa_pasien($no_register)->result();
+			$data_rad = $this->ModelKwitansi->getdata_rad_pasien($no_register)->result();
+			$data_resep = $this->ModelKwitansi->getdata_resep_pasien($no_register)->result();
+			$data_ok = $this->ModelKwitansi->getdata_ok_pasien($no_register)->result();
+
+			//	print_r($data_ok);die();
+
+			$no = 1;
+			//print_r($data_tindakan);
+			$konten = $konten . "<table border=\"1\" style=\"padding:2px\">
+						<tr>
+							<th width=\"5%\"><p align=\"center\"><b>No</b></p></th>
+							<th width=\"75%\"><p align=\"center\"><b>Pemeriksaan</b></p></th>
+							<th width=\"20%\"><p align=\"center\"><b>Biaya</b></p></th>
+
+						</tr>";
+			// <tr>
+			// 	<td><p align=\"center\">1</p></td>
+			// 	<td><b>TINDAKAN</b></td>
+			// 	<td></td>
+			// 	<td><p align=\"right\">".number_format( $vtot->vtot, 2 , ',' , '.' )."</p></td>
+			// </tr>";
+
+
+			foreach ($data_tindakan as $row1) {
+
+				$konten = $konten . "
+					<tr>
+						<td><p align=\"center\">" . $no++ . "</p></td>
+						<td>" . ucwords(strtolower($row1->nmtindakan)) . "</td>
+						<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+						</tr>";
+			}
+
+			// $konten=$konten."	<tr>
+			// 				<td><p align=\"center\">2</p></td>
+			// 				<td><b>LABORATORIUM</b></td>
+			// 				<td></td>
+			// 				<td><p align=\"right\">".number_format( $vtot->vtot_lab, 2 , ',' , '.' )."</p></td>
+			// 			</tr>";
+
+			// foreach($data_lab as $row1){
+			// 	$konten=$konten."
+			// 	<tr>
+			// 		<td><p align=\"center\">".$no++."</p></td>
+			// 		<td>(laboratorium) ".ucwords(strtolower($row1->jenis_tindakan))."</td>
+			// 		<td><p align=\"right\">".number_format( $row1->vtot, 2 , ',' , '.' )."</p></td>
+			// 		</tr>";
+			// 	}
+			// $konten=$konten."	<tr>
+
+			// 				<td><p align=\"center\">2</p></td>
+			// 				<td><b>PATOLOGI ANATOMI</b></td>
+			// 				<td></td>
+
+			// 				<td><p align=\"right\">".number_format( $vtot->vtot_pa, 2 , ',' , '.' )."</p></td>
+
+			// 			</tr>";
+
+			foreach ($data_pa as $row1) {
+				$konten = $konten . "
+					<tr>
+						<td><p align=\"center\">" . $no++ . "</p></td>
+						<td>(pa) " . ucwords(strtolower($row1->jenis_tindakan)) . "</td>
+						<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+
+						</tr>";
+			}
+			// $konten=$konten."	<tr>
+			// 				<td><p align=\"center\">3</p></td>
+			// 				<td><b>RADIOLOGI</b></td>
+			// 				<td></td>
+			// 				<td><p align=\"right\">".number_format( $vtot->vtot_rad, 2 , ',' , '.' )."</p></td>
+			// 			</tr>";
+			// foreach($data_rad as $row1){
+			// 		$konten=$konten."
+			// 		<tr>
+			// 			<td><p align=\"center\">".$no++."</p></td>
+			// 			<td>(Radiologi) ".ucwords(strtolower($row1->jenis_tindakan))."</td>
+			// 			<td><p align=\"right\">".number_format( $row1->vtot, 2 , ',' , '.' )."</p></td>
+			// 			</tr>";
+			// 		}
+			// $konten=$konten."	<tr>
+			// 				<td><p align=\"center\">4</p></td>
+			// 				<td><b>OBAT</b></td>
+			// 				<td></td>
+			// 				<td><p align=\"right\">".number_format( $vtot->vtot_obat, 2 , ',' , '.' )."</p></td>
+			// 			</tr>
+			// 			";
+			foreach ($data_resep as $row1) {
+				$konten = $konten . "
+					<tr>
+						<td><p align=\"center\">" . $no++ . "</p></td>
+						<td>(Farmasi) " . ucwords(strtolower($row1->nama_obat)) . "</td>
+						<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+						</tr>";
+			}
+
+			// foreach($data_ok as $row1){
+			// 	$konten=$konten."
+			// 	<tr>
+			// 		<td><p align=\"center\">".$no++."</p></td>
+			// 		<td>(Ok) ".ucwords(strtolower($row1->jenis_tindakan))."</td>
+			// 		<td><p align=\"right\">".number_format( $row1->vtot, 2 , ',' , '.' )."</p></td>
+			// 		</tr>";
+			// 	}
+
+
+			/* buat print per tindakan
+			$i=1;
+					$vtot=0;
+					foreach($data_tindakan as $row1){
+						$vtot=$vtot+$row1->biaya_tindakan;
+						$konten=$konten."
+						<tr>
+							<td><p align=\"center\">".$i++."</p></td>
+							<td>$row1->nmtindakan</td>
+							<td><p align=\"right\">".number_format( $row1->biaya_tindakan, 2 , ',' , '.' )."</p></td>
+						</tr>";
+					}
+						$konten=$konten."
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th bgcolor=\"yellow\"><p align=\"right\">".number_format( $vtot, 2 , ',' , '.' )."</p></th>
+						</tr>
+				*/
+
+			$jumlah_vtot =  $vtottind + $vtot->vtot_obat;
+			// $jumlah_vtot =  $vtottind + $vtot->vtot_lab + $vtot->vtot_rad + $vtot->vtot_obat + $vtot->vtot_ok;
+			// $jumlah_vtot_1 =  $vtottind + $vtot->vtot_lab + $vtot->vtot_rad + $vtot->vtot_obat + $vtot->vtot_ok - $diskon;
+			$jumlah_vtot_1 =  $vtottind + $vtot->vtot_obat  - $diskon;
+
+			$konten = $konten . "
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Sub Total   </b></p></th>
+							<th><p align=\"right\">" . number_format($jumlah_vtot, 2, ',', '.') . "</p></th>
+						</tr>
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Diskon   </b></p></th>
+							<th><p align=\"right\">" . number_format($diskon, 2, ',', '.') . "</p></th>
+						</tr>
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th><p align=\"right\">" . number_format($jumlah_vtot_1, 2, ',', '.') . "</p></th>
+						</tr>
+					</table>
+					<br/><br/>
+					<table  >										
+					<tr>
+								<td width=\"17%\"><b>Terbilang</b></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><i>" . strtoupper($vtot_terbilang) . "</i></td>
+							</tr>
+					</table>";
+
+
+
+			$konten = $konten . "
+						
+					<br/>
+					
+					";
+
+			/*<tr>
+								<td width=\"17%\"><b>Terbilang</b></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><i>".strtoupper($vtot_terbilang)."</i></td>
+							</tr>*/
+
+			$konten = $konten . "
+					
+					<table style=\"width:100%;\">
+						<tr>
+							<td width=\"75%\" ></td>
+							<td width=\"25%\">
+								<p align=\"center\">
+								$kota_header, $tgl
+								<br>an. Bendaharawan Rumah Sakit
+								<br>K a s i r
+								<br><br><br>$user
+								</p>
+							</td>
+						</tr>	
+					</table>
+
+					";
+			//echo $konten;			
+			$file_name = "IRJ_$no_register.pdf";
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			tcpdf();
+			$obj_pdf = new MYPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+			$obj_pdf->SetCreator(PDF_CREATOR);
+			$title = "";
+			$obj_pdf->SetTitle($file_name);
+			$obj_pdf->SetHeaderData('', '', $title, '');
+			$obj_pdf->setPrintHeader(false);
+			$obj_pdf->setPrintFooter(false);
+			$obj_pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+			$obj_pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+			$obj_pdf->SetDefaultMonospacedFont('helvetica');
+			$obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+			$obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+			$obj_pdf->SetMargins('10', '10', '10');
+			$obj_pdf->SetAutoPageBreak(TRUE, '15');
+			$obj_pdf->SetFont('helvetica', '', 9);
+			$obj_pdf->setFontSubsetting(false);
+			$obj_pdf->AddPage();
+			ob_start();
+			$content = $konten;
+			ob_end_clean();
+			$obj_pdf->writeHTML($content, true, false, true, false, '');
+			$obj_pdf->Output(FCPATH . 'download/irj/rjkwitansi/' . $file_name, 'FI');
+			if (!file_exists(FCPATH . 'download/irj/rjkwitansi/' . $file_name)) {
+				$this->session->set_flashdata('message_cetak', '<div class="row">
+							<div class="col-md-12">
+							  <div class="box box-default box-solid">
+								<div class="box-header with-border">
+								  <center>Gagal Mencetak Kwitansi</center>
+								</div>
+							  </div>
+							</div>
+						</div>');
+				redirect('irj/rjckwitansi/kwitansi_detail/', 'refresh');
+			}
+		} else {
+			redirect('irj/rjckwitansi/kwitansi/', 'refresh');
+		}
+	}
+
+	public function st_cetak_kwitansi_kk($id_pelayanan_poli = '', $id_poli = '', $no_register = '')
+	{
+		if ($id_pelayanan_poli != '') {
+			//ubah status
+			$status = $this->rjmkwitansi->update_status_kwitansi_kk($id_pelayanan_poli);
+			echo '<script type="text/javascript">window.open("' . site_url("irj/rjckwitansi/cetak_kwitansi_kk/$id_pelayanan_poli/$id_poli/$no_register") . '", "_blank");window.focus()</script>';
+			redirect('irj/rjcpelayanan/pelayanan_tindakan/' . $id_poli . '/' . $no_register, 'refresh');
+		} else {
+			redirect('irj/rjcpelayanan/pelayanan_tindakan/' . $id_poli . '/' . $no_register, 'refresh');
+		}
+	}
+	public function cetak_kwitansi_kk($id_pelayanan_poli = '', $id_poli = '', $no_register = '')
+	{
+		if ($id_pelayanan_poli != '') {
+			$cterbilang = new rjcterbilang();
+			$get_no_kwkt = $this->rjmkwitansi->get_new_kwkk($id_pelayanan_poli)->result();
+			foreach ($get_no_kwkt as $val) {
+				$no_kwkk = sprintf("KK%s%06s", $val->year, $val->counter + 1);
+			}
+			$this->rjmkwitansi->update_kwkk($no_kwkk, $id_pelayanan_poli);
+			$tgl_kk = $this->rjmkwitansi->getdata_tgl_kk($id_pelayanan_poli)->result();
+			foreach ($tgl_kk as $row) {
+				$tgl_jam = $row->tglcetak_kwitansi;
+				$tgl = $row->tgl_kwitansi;
+			}
+			// $data_rs=$this->rjmkwitansi->getdata_rs('1671013')->result();
+			// 	foreach($data_rs as $row){
+			// 		$namars=$row->namars;
+			// 		$kota_kab=$row->kota_kab;
+			// 	}
+
+			$namars = $this->config->item('namars');
+			$kota_kab = $this->config->item('kota');
+			$alamatrs = $this->config->item('alamat');
+			$nmsingkat = $this->config->item('namasingkat');
+
+			$data_kwitansikk = $this->rjmkwitansi->getdata_kwitansikk($id_pelayanan_poli)->result();
+			foreach ($data_kwitansikk as $row) {
+				$vtot_terbilang = $cterbilang->terbilang($row->biaya_poli);
+				$konten =
+					"<table>
+						<tr>
+							<td><b>DEPARTEMEN KESEHATAN RI</b></td>
+							<td><b>Tanggal-Jam: $tgl_jam</b></td>
+						</tr>
+						<tr>
+							<td><b>DIRJEN BINA PELAYANAN MEDIK</b></td>
+						</tr>
+						<tr>
+							<td><b>$namars</b></td>
+						</tr>
+					</table>
+					<br/><hr/><br/>
+					<p align=\"center\"><b>
+					BUKTI PEMBAYARAN - KWITANSI LUNAS BIAYA KONSUL DOKTER RAWAT JALAN<br/>
+					No. KW. $no_kwkk
+					</b></p><br/>
+					<table>
+							<tr>
+								<td width=\"30%\"><b>Sudah Terima Dari</b></td>
+								<td width=\"5%\"> : </td>
+								<td width=\"65%\">$row->nama</td>
+							</tr>
+							<tr>
+								<td><b>Nama Pasien</b></td>
+								<td> : </td>
+								<td>$row->nama</td>
+							</tr>
+							<tr>
+								<td><b>Banyak Uang</b></td>
+								<td> : </td>
+								<td>$vtot_terbilang</td>
+							</tr>
+							<tr>
+								<td><b>Di Poliklinik</b></td>
+								<td> : </td>
+								<td>$row->nm_poli</td>
+							</tr>
+							<tr>
+								<td><b>Untuk Biaya Konsul Dokter</b></td>
+								<td> : </td>
+								<td>$row->nm_dokter</td>
+							</tr>
+							<tr>
+								<td><b>Pemeriksaan</b></td>
+								<td> : </td>
+								<td>$row->nmtindakan</td>
+							</tr>
+					</table>
+					<br/><br/>
+				<b><font size=\"12\">Jumlah : Rp " . number_format($row->biaya_poli, 2, ',', '.') . "</font></b>
+				<p align=\"right\">$kota_kab, $tgl</p>
+			";
+			}
+			$file_name = "$no_kwkk.pdf";
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			tcpdf();
+			$obj_pdf = new TCPDF('L', PDF_UNIT, 'A5', true, 'UTF-8', false);
+			$obj_pdf->SetCreator(PDF_CREATOR);
+			$title = "";
+			$obj_pdf->SetTitle($file_name);
+			$obj_pdf->SetHeaderData('', '', $title, '');
+			$obj_pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+			$obj_pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+			$obj_pdf->SetDefaultMonospacedFont('helvetica');
+			$obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+			$obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+			$obj_pdf->SetMargins(PDF_MARGIN_LEFT, '20', PDF_MARGIN_RIGHT);
+			$obj_pdf->SetAutoPageBreak(TRUE, '5');
+			$obj_pdf->SetFont('helvetica', '', 9);
+			$obj_pdf->setFontSubsetting(false);
+			$obj_pdf->AddPage();
+			ob_start();
+			$content = $konten;
+			ob_end_clean();
+			$obj_pdf->writeHTML($content, true, false, true, false, '');
+			$obj_pdf->Output(FCPATH . 'asset/download/irj/rjkwitansi/' . $file_name, 'FI');
+		} else {
+			redirect('irj/rjcpelayanan/pelayanan_tindakan/' . $id_poli . '/' . $no_register, 'refresh');
+		}
+	}
+
+	//Special action
+
+	public function cetak_kwitansi_detail_kt($no_register = '')
+	{
+		$penyetor =  $_COOKIE['penyetor'];
+		$nokwitansi =  $_COOKIE['no_kwitansi'];
+		$idloket =  $_COOKIE['id_loket'];
+		//$pilihtemp=$_COOKIE['pil'];
+		/*if($pilihtemp=='0'){
+			$pilih = '';
+		}else */
+		$pilih = '0';
+
+		$login_data = $this->load->get_var("user_info");
+		$user = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$cterbilang = new rjcterbilang();
+			/*$get_no_kwkt=$this->rjmkwitansi->get_new_kwkt($no_register)->result();
+				foreach($get_no_kwkt as $val){
+					$no_kwkt=sprintf("KT%s%06s",$val->year,$val->counter+1);
+				}
+			$this->rjmkwitansi->update_kwkt($no_kwkt,$no_register);
+			
+			$tgl_kw=$this->rjmkwitansi->getdata_tgl_kw($no_register)->result();
+				foreach($tgl_kw as $row){
+					$tgl_jam=$row->tglcetak_kwitansi;
+					$tgl=$row->tgl_kwitansi;
+				}
+			*/
+
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$tgl = date("d-m-Y");
+
+			// $data_rs=$this->rjmkwitansi->getdata_rs('10000')->result();
+			// 	foreach($data_rs as $row){
+			// 		$namars=$row->namars;
+			// 		$kota_kab=$row->kota;
+			// 		$alamatrs=$row->alamat;
+			// 		$nmsingkat=$row->namasingkat;
+			// 	}
+
+			$namars = $this->config->item('namars');
+			$kota_kab = $this->config->item('kota');
+			$telp = $this->config->item('telp');
+			$alamatrs = $this->config->item('alamat');
+			$nmsingkat = $this->config->item('namasingkat');
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data_kwitansi = $this->rjmkwitansi->getdata_nomor_kwitansi($nokwitansi, $idloket)->row();
+			$detail_daful = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			//print_r($detail_daful);
+			if ($detail_daful->pasien_bayar == '1') {
+				$pasien_bayar = 'TUNAI';
+			} else $pasien_bayar = 'KREDIT';
+			$txtkk = '';
+			$txtdiskon = '';
+			$txttunai = "";
+			$txtperusahaan = '';
+			$totalbayar = '';
+			$totalbayar1 = '';
+			$totalbayar2 = '';
+			$detail_bayar = $detail_daful->cara_bayar;
+
+
+			//print_r($detail_bayar);
+			if ($detail_bayar == 'KERJASAMA' || $detail_bayar == 'BPJS') {
+				$kontraktor = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+				$txtperusahaan = "<td><b>Dijamin Oleh</b></td>
+						<td> : </td>
+						<td>" . strtoupper($kontraktor->nmkontraktor) . "</td>";
+			}
+
+			$diskon = $data_kwitansi->diskon;
+			$persen = $data_kwitansi->persen_kk;
+			$tunai = $data_kwitansi->tunai;
+			$nilaikk = $data_kwitansi->nilai_kkd;
+			$nominal_kk = $persen / 100 * $nilaikk + $nilaikk;
+
+			/*$data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			$vtot=0;
+			foreach($data_tindakan as $row1){
+				$vtot=$vtot+$row1->biaya_tindakan;
+			}
+			*/
+			//<tr><td></td><td colspan=\"2\"><p align=\"right\" style=\"font-size:10px;\"><b>Pembayaran : <u>".$pasien_bayar."</u></b></p></td></tr>
+			//print_r($detail_daful);
+
+			//echo $jumlah_vtot;
+			//echo $vtot_terbilang;			
+
+			$txtjudul = "";
+			//$nomor=$this->rjmkwitansi->get_no_kwitansi($no_register)->row();	
+			//$no_kwitansi=$nomor->no_kwitansi;
+
+			$style = '';
+			$konten1 = '';
+			$konten = "<style type=\"text/css\">
+					.table-font-size{
+						font-size:9px;
+					    }
+					.table-font-size1{
+						font-size:9px;
+					    }
+					.table-font-size2{
+						font-size:9px;
+						margin : 5px 1px 1px 1px;
+						padding : 5px 1px 1px 1px;
+					    }
+					</style>
+					
+					<table class=\"table-font-size2\" border=\"0\">
+						<tr>
+							<td width=\"16%\">
+								<p align=\"center\">
+									<img src=\"assets/img/" . $this->config->item('logo_url') . "\" alt=\"img\" height=\"40\" style=\"padding-right:5px;\">
+								</p>
+							</td>
+								<td  width=\"70%\" style=\" font-size:9px;\"><b><font style=\"font-size:12px\">$namars</font></b><br><br>$alamatrs $kota_kab $telp
+							</td>
+							<td width=\"14%\"><font size=\"8\" align=\"right\">$tgl_jam  <br>
+							$no_register-" . $detail_daful->counter_kwitansi . " - " . $data_pasien->no_antrian . "</font></td>
+							</tr>
+							
+						  
+					</table>
+					
+					<table>	
+							<tr>
+								<td colspan=\"3\" ><font size=\"12\" align=\"center\"><u><b>KWITANSI RAWAT JALAN 
+								No. " . $idloket . "" . $nokwitansi . "
+								</b></u></font></td>
+							</tr>	
+							
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td width=\"17%\"><b>Sudah Terima Dari</b></td>
+								<td width=\"2%\"> : </td>
+								<td width=\"37%\">" . strtoupper($penyetor) . "</td>
+								<td width=\"19%\"><b>Tgl Kunjungan</b></td>
+								<td width=\"2%\"> : </td>
+								<td>" . date("d-m-Y", strtotime($detail_daful->tgl_kunjungan)) . "</td>
+							</tr>
+							<tr>
+								<td><b>Nama Pasien</b></td>
+								<td> : </td>
+								<td>" . strtoupper($data_pasien->nama) . "</td>
+								<td ><b>No Medrec</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->no_cm) . "</td>
+							</tr>
+							<tr>								
+								
+								<td><b>Poliklinik</b></td>
+								<td> : </td>
+								<td>" . strtoupper($detail_daful->nm_poli) . "</td>
+								<td ><b>Gol. Pasien</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->cara_bayar) . "</td>
+							</tr>
+							
+							<tr>
+								<td><b>Alamat</b></td>
+								<td> : </td>
+								<td>" . strtoupper($data_pasien->alamat) . "</td>
+							</tr>	
+							<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							</tr>																	
+					</table>
+					</br>";
+			//$pilih='';													
+			if ($pilih != '') {
+
+				// $data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+				// 
+
+				$data_tindakan = $this->rjmkwitansi->getdata_unpaid_tindakan_pasien($no_register)->result();
+				//$data_lab=$this->ModelKwitansi->getdata_lab_pasien($no_register)->result();
+				//$data_pa=$this->ModelKwitansi->getdata_pa_pasien($no_register)->result();
+				//$data_rad=$this->ModelKwitansi->getdata_rad_pasien($no_register)->result();
+				//$data_resep=$this->ModelKwitansi->getdata_resep_pasien($no_register)->result();
+				$no = 1;
+				//print_r($data_tindakan);
+
+				if ($diskon != '' and $diskon != '0') {
+					if ($detail_bayar == 'BPJS') { //Total Biaya Ditanggung
+						$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:9px;\">Total Biaya Ditanggung</p></td>
+						<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:9px;\">" . number_format($diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+					} else
+						$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:9px;\">Dijamin/Potongan</p></td>
+						<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:9px;\">" . number_format($diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+				}
+
+				if ($nilaikk != '' and $nilaikk != '0') {
+					$txtkk = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:9px;\">Kartu Kredit/Debit</p></td>
+					<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:9px;\">" . number_format($nilaikk, 2, ',', '.') . "</p></td></tr>";
+				}
+				//echo $nilaikk;
+
+				if (($tunai != '' and $tunai != '0') or ($nilaikk == '' or $nilaikk == '0')) {
+
+					$tot1 = $tunai;
+					$tot2 = substr($tot1, -3);
+					if ($tot2 % 500 != 0) {
+						$mod = $tot2 % 500;
+						$tot1 = $tot1 - $mod;
+						$tot1 = $tot1 + 500;
+					}
+					$tunai_bulat = $tot1;
+
+					if ($tunai_bulat != '0') {
+						$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:9px;\">Total Bayar</p></td>
+					<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:9px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+					}
+				}
+
+				if (($tunai != '' and $tunai != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+					$tot1 = $tunai;
+					$tot2 = substr($tot1, -3);
+					if ($tot2 % 500 != 0) {
+						$mod = $tot2 % 500;
+						$tot1 = $tot1 - $mod;
+						$tot1 = $tot1 + 500;
+					}
+					$tunai_bulat = $tot1;
+
+					$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:9px;\">Tunai</p></td>
+					<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:9px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+					$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:9px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:9px; \"><p align=\"right\" style=\"font-size:9px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot = $nilaikk + $tunai_bulat, 2, ',', '.') . "</p></td>
+					</tr>";
+				}
+
+				if ($diskon != '0' or $nominal_kk != '0' or $tunai != '0') {
+
+					$jumlah_vtot = $nilaikk + $tunai; //-$diskon;
+					$jumlah_vtot1 = $nilaikk + $tunai;
+				}
+				$vtot_terbilang = $cterbilang->terbilang($jumlah_vtot);
+				//echo $diskon." ".$nominal_kk." ".$tunai;
+				//echo $jumlah_vtot;
+				//break;
+				if (($diskon != '' and $diskon != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+					$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:9px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:9px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:9px; \"><p align=\"right\" style=\"font-size:9px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot, 2, ',', '.') . "</p></td>
+					</tr>";
+				}
+
+				$konten = $konten . "<table border=\"1\" style=\"padding:2px\">
+						<tr>
+							<th width=\"5%\"><p align=\"center\"><b>No</b></p></th>
+							<th width=\"75%\"><p align=\"center\"><b>Bagian</b></p></th>
+							<th width=\"20%\"><p align=\"center\"><b>Biaya</b></p></th>
+
+						</tr>";
+				// <tr>
+				// 	<td><p align=\"center\">1</p></td>
+				// 	<td><b>TINDAKAN</b></td>
+				// 	<td></td>
+				// 	<td><p align=\"right\">".number_format( $vtot->vtot, 2 , ',' , '.' )."</p></td>
+				// </tr>";
+
+
+				$vtot_terbilang = $cterbilang->terbilang($jumlah_vtot);
+				$vtot = 0;
+				foreach ($data_tindakan as $row1) {
+					if ($row1->bpjs == 0) {
+						$vtot = $vtot + $row1->vtot;
+						$konten = $konten . "
+						<tr>
+						<td><p align=\"center\">" . $no++ . "</p></td>
+						<td>" . ucwords(strtolower($row1->nmtindakan)) . "</td>
+						<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+						</tr>";
+					}
+				}
+
+
+				//$vtot=$this->rjmkwitansi->get_vtot($no_register)->row();
+				//$jumlah_vtot =  $vtot->vtot + $vtot->vtot_lab + $vtot->vtot_rad + $vtot->vtot_obat + $vtot->vtot_pa;
+
+				/*if($diskon>0){
+					$txtdiskon="<tr>
+									<td width=\"17%\"><b>Diskon</b></td>
+									<td width=\"2%\"> : </td>
+									<td  width=\"78%\"><i>".$diskon."</i></td>
+								</tr>";
+					}else $txtdiskon="";
+					if($tunai>0){
+						$txttunai="<tr>
+										<td width=\"17%\"><b>Jumlah Yang Dibayar</b></td>
+										<td width=\"2%\"> : </td>
+										<td  width=\"78%\"><i>".$tunai."</i></td>
+									</tr>";
+						$vtot_terbilang=$cterbilang->terbilang($tunai);
+					}else {$txttunai=''; $vtot_terbilang='Nol Rupiah';	}*/
+
+				//$vtot_terbilang=$cterbilang->terbilang($jumlah_vtot);
+
+				// $konten=$konten."	<tr>
+				// 				<td><p align=\"center\">2</p></td>
+				// 				<td><b>LABORATORIUM</b></td>
+				// 				<td></td>
+				// 				<td><p align=\"right\">".number_format( $vtot->vtot_lab, 2 , ',' , '.' )."</p></td>
+				// 			</tr>";
+
+				/*foreach($data_lab as $row1){
+					$konten=$konten."
+					<tr>
+						<td><p align=\"center\">".$no++."</p></td>
+						<td>".ucwords(strtolower($row1->jenis_tindakan))."</td>
+						<td><p align=\"right\">".number_format( $row1->vtot, 2 , ',' , '.' )."</p></td>
+						</tr>";
+					}*/
+				// $konten=$konten."	<tr>
+
+				// 				<td><p align=\"center\">2</p></td>
+				// 				<td><b>PATOLOGI ANATOMI</b></td>
+				// 				<td></td>
+
+				// 				<td><p align=\"right\">".number_format( $vtot->vtot_pa, 2 , ',' , '.' )."</p></td>
+
+				// 			</tr>";
+
+				/*foreach($data_pa as $row1){
+					$konten=$konten."
+					<tr>
+						<td><p align=\"center\">".$no++."</p></td>
+						<td>".ucwords(strtolower($row1->jenis_tindakan))."</td>
+						<td><p align=\"right\">".number_format( $row1->vtot, 2 , ',' , '.' )."</p></td>
+
+						</tr>";
+					}*/
+				// $konten=$konten."	<tr>
+				// 				<td><p align=\"center\">3</p></td>
+				// 				<td><b>RADIOLOGI</b></td>
+				// 				<td></td>
+				// 				<td><p align=\"right\">".number_format( $vtot->vtot_rad, 2 , ',' , '.' )."</p></td>
+				// 			</tr>";
+				/*foreach($data_rad as $row1){
+					$konten=$konten."
+					<tr>
+						<td><p align=\"center\">".$no++."</p></td>
+						<td>".ucwords(strtolower($row1->jenis_tindakan))."</td>
+						<td><p align=\"right\">".number_format( $row1->vtot, 2 , ',' , '.' )."</p></td>
+						</tr>";
+					}*/
+				// $konten=$konten."	<tr>
+				// 				<td><p align=\"center\">4</p></td>
+				// 				<td><b>OBAT</b></td>
+				// 				<td></td>
+				// 				<td><p align=\"right\">".number_format( $vtot->vtot_obat, 2 , ',' , '.' )."</p></td>
+				// 			</tr>
+				// 			";
+				/*foreach($data_resep as $row1){
+					$konten=$konten."
+					<tr>
+						<td><p align=\"center\">".$no++."</p></td>
+						<td>".ucwords(strtolower($row1->nama_obat))."</td>
+						<td><p align=\"right\">".number_format( $row1->vtot, 2 , ',' , '.' )."</p></td>
+						</tr>";
+					}*/
+
+
+				/* buat print per tindakan
+			$i=1;
+					$vtot=0;
+					foreach($data_tindakan as $row1){
+						$vtot=$vtot+$row1->biaya_tindakan;
+						$konten=$konten."
+						<tr>
+							<td><p align=\"center\">".$i++."</p></td>
+							<td>$row1->nmtindakan</td>
+							<td><p align=\"right\">".number_format( $row1->biaya_tindakan, 2 , ',' , '.' )."</p></td>
+						</tr>";
+					}
+						$konten=$konten."
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th bgcolor=\"yellow\"><p align=\"right\">".number_format( $vtot, 2 , ',' , '.' )."</p></th>
+						</tr>
+
+						<br/>
+						///
+						<tr>
+						<td width=\"50%\" ><p  style=\"font-size:9px;  margin:0;\">Jumlah </p></td>
+						<td width=\"10%\">Rp.</td>
+						<td width=\"40%\"><p style=\"font-size:9px;margin:0;\" align=\"right\"> ".number_format( $vtot, 2 , ',' , '.' )."</p></td>
+					</tr>
+				*/
+				$konten1 = $konten . "<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th><p align=\"right\">" . number_format($vtot, 2, ',', '.') . "</p></th>
+						</tr>
+					</table><br/><br/>
+					<table  >										
+					
+						$txtdiskon	
+						$txttunai
+						$txtkk				
+						$totalbayar
+
+					</table>
+					<tr>
+								<td width=\"17%\"><p style=\"font-size:9px;\"><b>Terbilang</b></p></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><p style=\"font-size:9px;\"><i>" . strtoupper($vtot_terbilang) . "</i></p></td>
+							</tr>";
+			} else {
+
+				$konten = $konten . "
+						
+				
+					<table style=\"border:1px solid black; width:100%;\">
+															
+					$txtdiskon	
+					$txttunai
+					$txtkk		
+					$totalbayar
+					
+					</table>
+					";
+			}
+			$konten1 = $konten1 . "
+
+					<table style=\"width:100%;\">
+						<tr>
+							<td width=\"75%\" ></td>
+							<td width=\"25%\">
+								<p align=\"center\">
+								$kota_kab, $tgl
+								<br>an. Kasir Rumah Sakit
+								<br><br><br><br>$user
+								</p>
+							</td>
+						</tr>	
+					</table>
+
+					";
+			echo $konten;
+			$file_name = "IRJ_MR_$no_register.pdf";
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			tcpdf();
+			$width = 140;
+			$height = 216;
+			$pageLayout = array($width, $height);
+			$obj_pdf = new MYPDF('L', PDF_UNIT, $pageLayout, true, 'UTF-8', false);
+			$obj_pdf->SetCreator(PDF_CREATOR);
+			$title = "";
+			$obj_pdf->SetTitle($file_name);
+			$obj_pdf->SetHeaderData('', '', $title, '');
+			$obj_pdf->setPrintHeader(false);
+			$obj_pdf->setPrintFooter(false);
+			$obj_pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+			$obj_pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+			$obj_pdf->SetDefaultMonospacedFont('helvetica');
+			$obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+			$obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+			$obj_pdf->SetMargins('5', '5', '5');
+			$obj_pdf->SetAutoPageBreak(TRUE, '5');
+			$obj_pdf->SetFont('helvetica', '', 9);
+			$obj_pdf->setFontSubsetting(false);
+			//1
+			$obj_pdf->AddPage();
+			ob_start();
+			$content = $konten1;
+			ob_clean();
+			$obj_pdf->writeHTML($content, true, false, true, false, '');
+			$obj_pdf->SetXY(20, 131);
+			$obj_pdf->cell(1, 1, 'Lembar Pertama untuk Pasien', 0, 0, 'L');
+			$obj_pdf->AddPage();
+			$obj_pdf->writeHTML($content, true, false, true, false, '');
+			$obj_pdf->SetXY(20, 131);
+			$obj_pdf->cell(1, 1, 'Lembar Kedua untuk Poli', 0, 0, 'L');
+			$obj_pdf->AddPage();
+			$obj_pdf->writeHTML($content, true, false, true, false, '');
+			$obj_pdf->SetXY(20, 131);
+			$obj_pdf->cell(1, 1, 'Lembar Ketiga untuk Arsip Kasir', 0, 0, 'L');
+			// if($detail_bayar!='UMUM' and $pilih==''){
+			/*2
+				$obj_pdf->AddPage();
+				ob_start();
+				 	$content = $konten1;
+				ob_end_clean();
+				$obj_pdf->writeHTML($content, true, false, true, false, '');
+				//3
+				$obj_pdf->AddPage();
+				ob_start();
+				 	$content = $konten1;
+				ob_end_clean();
+				$obj_pdf->writeHTML($content, true, false, true, false, '');*/
+			// }
+			$obj_pdf->Output(FCPATH . '/download/irj/rjkwitansi/' . $file_name, 'FI');
+			if (file_exists(FCPATH . 'download/irj/rjkwitansi/' . $file_name)) {
+				$data['cetak_kwitansi'] = '1';
+				if ($vtot->vtot_lab != '') {
+					$this->rjmkwitansi->update_kw_penunjang($no_register, $data, 'pemeriksaan_laboratorium');
+				}
+				if ($vtot->vtot_rad != '') {
+					$this->rjmkwitansi->update_kw_penunjang($no_register, $data, 'pemeriksaan_radiologi');
+				}
+				if ($vtot->vtot_obat != '') {
+					$this->rjmkwitansi->update_kw_penunjang($no_register, $data, 'resep_pasien');
+				}
+				$this->update_bayar($data_tindakan, $data_kwitansi->idno_kwitansi);
+			} else {
+				$this->session->set_flashdata('message_cetak', '<div class="row">
+							<div class="col-md-12">
+							  <div class="box box-default box-solid">
+								<div class="box-header with-border">
+								  <center>Gagal Mencetak Kwitansi</center>
+								</div>
+							  </div>
+							</div>
+						</div>');
+				// redirect('irj/rjckwitansi/kwitansi_detail/','refresh');
+			}
+		} else {
+			//redirect('irj/rjckwitansi/kwitansi_detail/','refresh');
+		}
+	}
+
+
+
+	function update_bayar($data_tindakan, $idkwitansi)
+	{
+		date_default_timezone_set("Asia/Bangkok");
+		$data1['bayar'] = 1;
+		$data1['idkwitansi'] = $idkwitansi;
+		$data1['tgl_cetak_kw'] = date("Y-m-d H:i:s");
+
+		$login_data = $this->load->get_var("user_info");
+		$user = $login_data->username;
+		$data1['xcetak'] = $user;
+		$tunai = 0;
+		foreach ($data_tindakan as $rows) {
+			$tunai = $tunai + $rows->biaya_tindakan;
+			$status = $this->rjmkwitansi->update_status_kwitansi_detail_kt($rows->id_pelayanan_poli, $data1);
+		}
+	}
+
+
+
+
+
+
+
+
+
+	public function cetak_kwitansi_detail_kwt($no_register = '')
+	{
+		$penyetor =  $_COOKIE['penyetor'];
+		//$pilihtemp=$_COOKIE['pil'];
+		/*if($pilihtemp=='0'){
+			$pilih = '';
+		}else */
+		$pilih = '0';
+
+		$login_data = $this->load->get_var("user_info");
+		$user = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$cterbilang = new rjcterbilang();
+			/*$get_no_kwkt=$this->rjmkwitansi->get_new_kwkt($no_register)->result();
+				foreach($get_no_kwkt as $val){
+					$no_kwkt=sprintf("KT%s%06s",$val->year,$val->counter+1);
+				}
+			$this->rjmkwitansi->update_kwkt($no_kwkt,$no_register);
+			
+			$tgl_kw=$this->rjmkwitansi->getdata_tgl_kw($no_register)->result();
+				foreach($tgl_kw as $row){
+					$tgl_jam=$row->tglcetak_kwitansi;
+					$tgl=$row->tgl_kwitansi;
+				}
+			*/
+
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$tgl = date("d-m-Y");
+
+			// $data_rs=$this->rjmkwitansi->getdata_rs('10000')->result();
+			// 	foreach($data_rs as $row){
+			// 		$namars=$row->namars;
+			// 		$kota_kab=$row->kota;
+			// 		$alamatrs=$row->alamat;
+			// 		$nmsingkat=$row->namasingkat;
+			// 	}
+
+			$namars = $this->config->item('namars');
+			$kota_kab = $this->config->item('kota');
+			$telp = $this->config->item('telp');
+			$alamatrs = $this->config->item('alamat');
+			$nmsingkat = $this->config->item('namasingkat');
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+
+			$detail_daful = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			//print_r($detail_daful);
+			if ($detail_daful->pasien_bayar == '1') {
+				$pasien_bayar = 'TUNAI';
+			} else $pasien_bayar = 'KREDIT';
+			$txtkk = '';
+			$txtdiskon = '';
+			$txttunai = "";
+			$txtperusahaan = '';
+			$totalbayar = '';
+			$totalbayar1 = '';
+			$totalbayar2 = '';
+			$detail_bayar = $detail_daful->cara_bayar;
+
+
+			//print_r($detail_bayar);
+			if ($detail_bayar == 'KERJASAMA' || $detail_bayar == 'BPJS') {
+				$kontraktor = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+				$txtperusahaan = "<td><b>Dijamin Oleh</b></td>
+						<td> : </td>
+						<td>" . strtoupper($kontraktor->nmkontraktor) . "</td>";
+			}
+
+			$diskon = $detail_daful->diskon;
+			$persen = $detail_daful->persen_kk;
+			$tunai = $detail_daful->tunai;
+			$nilaikk = $detail_daful->nilai_kkkd;
+			$nominal_kk = $persen / 100 * $nilaikk + $nilaikk;
+
+			if ($diskon != '' and $diskon != '0') {
+				if ($detail_bayar == 'BPJS') { //Total Biaya Ditanggung
+					$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:11px;\">Total Biaya Ditanggung</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:12px;\">" . number_format($detail_daful->diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+				} else
+					$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:11px;\">Dijamin/Potongan</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:12px;\">" . number_format($detail_daful->diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+			}
+
+			if ($nilaikk != '' and $nilaikk != '0') {
+				$txtkk = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:11px;\">Kartu Kredit/Debit</p></td>
+					<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:12px;\">" . number_format($nominal_kk, 2, ',', '.') . "</p></td></tr>";
+			}
+			//echo $nilaikk;
+
+			if (($tunai != '' and $tunai != '0') or ($nilaikk == '' or $nilaikk == '0')) {
+
+				$tot1 = $tunai;
+				$tot2 = substr($tot1, -3);
+				if ($tot2 % 500 != 0) {
+					$mod = $tot2 % 500;
+					$tot1 = $tot1 - $mod;
+					$tot1 = $tot1 + 500;
+				}
+				$tunai_bulat = $tot1;
+
+				if ($tunai_bulat != '0') {
+					$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:11px;\">Total Bayar</p></td>
+					<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:12px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+				}
+			}
+
+			if (($tunai != '' and $tunai != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+				$tot1 = $tunai;
+				$tot2 = substr($tot1, -3);
+				if ($tot2 % 500 != 0) {
+					$mod = $tot2 % 500;
+					$tot1 = $tot1 - $mod;
+					$tot1 = $tot1 + 500;
+				}
+				$tunai_bulat = $tot1;
+
+				$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:11px;\">Tunai</p></td>
+					<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:12px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+				$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:11px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:11px; \"><p align=\"right\" style=\"font-size:12px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot = $nominal_kk + $tunai_bulat + $diskon, 2, ',', '.') . "</p></td>
+					</tr>";
+			}
+			if ($detail_bayar == 'BPJS') { //Total Biaya Ditanggung
+				$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:11px;\">Total Biaya Ditanggung</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:12px;\">" . number_format($detail_daful->diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+			}
+			if ($diskon != '0' or $nominal_kk != '0' or $tunai != '0') {
+
+				$jumlah_vtot = $nominal_kk + $tunai + $diskon;
+			}
+
+			if (($diskon != '' and $diskon != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+				$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:11px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:11px; \"><p align=\"right\" style=\"font-size:12px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot, 2, ',', '.') . "</p></td>
+					</tr>";
+			}
+			/*$data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			$vtot=0;
+			foreach($data_tindakan as $row1){
+				$vtot=$vtot+$row1->biaya_tindakan;
+			}
+			*/
+			//print_r($detail_daful);
+
+			//echo $jumlah_vtot;
+			//echo $vtot_terbilang;			
+
+			$txtjudul = "";
+
+			$style = '';
+			$konten1 = '';
+			$no_rm = strtoupper($data_pasien->no_cm);
+			$nama = strtoupper($penyetor);
+
+			$poli = strtoupper($detail_daful->nm_poli);
+			$biaya = number_format($vtot, 2, ',', '.');
+
+
+			$konten = "<style type=\"text/css\">
+					.table-font-size{
+						font-size:9px;
+					    }
+					.table-font-size1{
+						font-size:12px;
+					    }
+					.table-font-size2{
+						font-size:9px;
+						margin : 5px 1px 1px 1px;
+						padding : 5px 1px 1px 1px;
+					    }
+					</style>			
+					<table>	
+					<tr><td></td></tr>
+							<tr >
+								<td > RM :&nbsp;&nbsp;&nbsp;&nbsp;" . strtoupper($data_pasien->no_cm) . "</td>
+							</tr>				
+					</table>
+					
+					<br/><br/>";
+
+			if ($pilih != '') {
+
+				// $data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+				// 
+
+				$data_tindakan = $this->rjmkwitansi->getdata_unpaid_tindakan_pasien($no_register)->result();
+				//$data_lab=$this->ModelKwitansi->getdata_lab_pasien($no_register)->result();
+				//$data_pa=$this->ModelKwitansi->getdata_pa_pasien($no_register)->result();
+				//$data_rad=$this->ModelKwitansi->getdata_rad_pasien($no_register)->result();
+				//$data_resep=$this->ModelKwitansi->getdata_resep_pasien($no_register)->result();
+				$no = 1;
+				//print_r($data_tindakan);$this->pdf->Cell(0, 12, 'Contoh pertama, CodeIgniter dan TCPDF', 1, 1, 'C');
+
+
+				$konten = $konten . "
+
+			";
+				// <tr>
+				// 	<td><p align=\"center\">1</p></td>
+				// 	<td><b>TINDAKAN</b></td>
+				// 	<td></td>
+				// 	<td><p align=\"right\">".number_format( $vtot->vtot, 2 , ',' , '.' )."</p></td>
+				// </tr>";
+
+				$vtot = 0;
+				foreach ($data_tindakan as $row1) {
+					$vtot = $vtot + $row1->vtot;
+					$konten = $konten . "
+					<tr>
+						<td><p align=\"center\">" . $no++ . "</p></td>
+						<td>" . ucwords(strtolower($row1->nmtindakan)) . "</td>
+						<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+						</tr>";
+				}
+				//$vtot=$this->rjmkwitansi->get_vtot($no_register)->row();
+				//$jumlah_vtot =  $vtot->vtot + $vtot->vtot_lab + $vtot->vtot_rad + $vtot->vtot_obat + $vtot->vtot_pa;
+				if ($diskon > 0) {
+					$txtdiskon = "<tr>
+									<td width=\"17%\"><b>Diskon</b></td>
+									<td width=\"2%\"> : </td>
+									<td  width=\"78%\"><i>" . $diskon . "</i></td>
+								</tr>";
+				} else $txtdiskon = "";
+				if ($tunai > 0) {
+					$txttunai = "<tr>
+										<td width=\"17%\"><b>Jumlah Yang Dibayar</b></td>
+										<td width=\"2%\"> : </td>
+										<td  width=\"78%\"><i>" . $tunai . "</i></td>
+									</tr>";
+					$vtot_terbilang = $cterbilang->terbilang($tunai);
+				} else {
+					$txttunai = '';
+					$vtot_terbilang = 'Nol Rupiah';
+				}
+
+
+				$konten1 = $konten . "
+					<table>
+						<tr>
+							<td width=\"\">" . strtoupper($penyetor) . "</td>
+							</tr>
+							<tr>
+								<td>" . strtoupper($detail_daful->nm_poli) . "</td>
+							</tr>
+					</table>
+					<table >										
+					<tr>
+						
+						<td width=\"40%\"><p align=\"right\"> Rp " . number_format($vtot, 2, ',', '.') . "</p></td>
+					</tr>
+
+					</table>
+					<tr>
+							
+								<td  width=\"78%\"><i>" . strtoupper($vtot_terbilang) . "</i></td>
+							</tr>";
+			} else {
+
+				$konten = $konten . "
+						
+					<br/>
+					<table style=\"border:1px solid black; width:100%;\">
+															
+					$txtdiskon			
+					$totalbayar2
+					
+					</table>
+					";
+			}
+			$konten1 = $konten1 . "
+					<br><br><br>
+					<table style=\"width:100%;\">
+						<tr>
+							<td width=\"75%\" ></td>
+							<td width=\"25%\">
+								<p align=\"center\">
+								$kota_kab, $tgl
+								<br>K a s i r
+								<br><br><br>$user
+								</p>
+							</td>
+						</tr>	
+					</table>
+
+					";
+			$isi = $kota_kab;
+			$data = $this->rjmregistrasi->getdata_tracer($no_register)->row();
+			$row = $data->no_antrian;
+			$no_reg = $data->no_register;
+			$biaya = number_format($vtot, 2, ',', '.');
+			$terbilang = strtoupper($vtot_terbilang);
+			//echo $konten;			
+			$file_name = "IRJ_$no_register.pdf";
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			tcpdf();
+			$width = 92;
+			$height = 241;
+			$pageLayout = array($width, $height);
+			$obj_pdf = new MYPDF('L', PDF_UNIT, $pageLayout, true, 'UTF-8', false);
+			$obj_pdf->SetCreator(PDF_CREATOR);
+			$title = "";
+			$obj_pdf->SetTitle($file_name);
+			$obj_pdf->SetHeaderData('', '', $title, '');
+			$obj_pdf->setPrintHeader(false);
+			$obj_pdf->setPrintFooter(false);
+			$obj_pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+			$obj_pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+			$obj_pdf->SetDefaultMonospacedFont('helvetica');
+
+			$obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+			$obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+			// $obj_pdf->SetMargins('7', '7', '7');
+			$obj_pdf->SetAutoPageBreak(TRUE, '7');
+			$obj_pdf->SetFont('helvetica', '', 10);
+			$obj_pdf->setFontSubsetting(false);
+			//1
+			$obj_pdf->AddPage();
+			$obj_pdf->SetXY(55, 10);
+			$obj_pdf->cell(10, 5, 'NO URUT : ' . $row, 0, 1, 'L');
+			$obj_pdf->SetXY(200, 20);
+			$obj_pdf->cell(20, 5, 'RM : ' . $no_rm . ' / ' . $no_reg, 0, 1, 'R');
+			$obj_pdf->SetXY(95, 20);
+			$obj_pdf->cell(30, 5, '' . $nama, 0, 1, 'L');
+			$obj_pdf->SetXY(95, 31);
+			$obj_pdf->cell(100, 5, '' . $terbilang, 0, 1, 'L');
+			$obj_pdf->SetXY(120, 40);
+			$obj_pdf->cell(50, 5, '' . $poli, 0, 1, 'L');
+			$obj_pdf->SetXY(95, 75);
+			$obj_pdf->cell(30, 5, '' . $biaya, 0, 1, 'L');
+			$obj_pdf->SetXY(180, 70);
+			$obj_pdf->cell(40, 5, '' . $isi . ', ' . $tgl, 0, 1, 'C');
+			$obj_pdf->SetXY(180, 75);
+			$obj_pdf->cell(40, 5, '' . $user, 0, 1, 'C');
+			// if($detail_bayar!='UMUM' and $pilih==''){
+			/*2
+				$obj_pdf->AddPage();
+				ob_start();
+				 	$content = $konten1;
+				ob_end_clean();
+				$obj_pdf->writeHTML($content, true, false, true, false, '');
+				//3
+				$obj_pdf->AddPage();
+				ob_start();
+				 	$content = $konten1;
+				ob_end_clean();
+				$obj_pdf->writeHTML($content, true, false, true, false, '');*/
+			// }
+			$obj_pdf->Output(FCPATH . '/download/irj/rjkwitansi/' . $file_name, 'FI');
+			$data['cetak_kwitansi'] = '1';
+			//echo $vtot->vtot_lab!='';
+			if ($vtot->vtot_lab != '') {
+				$this->rjmkwitansi->update_kw_penunjang($no_register, $data, 'pemeriksaan_laboratorium');
+			}
+			if ($vtot->vtot_rad != '') {
+				$this->rjmkwitansi->update_kw_penunjang($no_register, $data, 'pemeriksaan_radiologi');
+			}
+			if ($vtot->vtot_obat != '') {
+				$this->rjmkwitansi->update_kw_penunjang($no_register, $data, 'resep_pasien');
+			}
+			$this->update_bayar($data_tindakan);
+		} else {
+			redirect('irj/rjckwitansi/kwitansi_detail/', 'refresh');
+		}
+	}
+
+	function cetak_faktur_kwt($no_register = '')
+	{
+
+		$login_data = $this->load->get_var("user_info");
+		$user = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$cterbilang = new rjcterbilang();
+			/*$get_no_kwkt=$this->rjmkwitansi->get_new_kwkt($no_register)->result();
+				foreach($get_no_kwkt as $val){
+					$no_kwkt=sprintf("KT%s%06s",$val->year,$val->counter+1);
+				}
+			$this->rjmkwitansi->update_kwkt($no_kwkt,$no_register);
+			
+			$tgl_kw=$this->rjmkwitansi->getdata_tgl_kw($no_register)->result();
+				foreach($tgl_kw as $row){
+					$tgl_jam=$row->tglcetak_kwitansi;
+					$tgl=$row->tgl_kwitansi;
+				}
+			*/
+
+			//set timezone
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$tgl = date("d-m-Y");
+
+			$namars = $this->config->item('namars');
+			$kota_kab = $this->config->item('kota');
+			$telp = $this->config->item('telp');
+			$alamatrs = $this->config->item('alamat');
+			$nmsingkat = $this->config->item('namasingkat');
+
+			$data_pasien = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+
+			$detail_daful = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			$diskon = $detail_daful->diskon;
+			$persen = $detail_daful->persen_kk;
+			$tunai = $detail_daful->tunai;
+			$nilaikk = $detail_daful->nilai_kkkd;
+			$nominal_kk = $persen / 100 * $nilaikk + $nilaikk;
+			// 
+			//print_r($detail_daful);
+			if ($detail_daful->cara_bayar == 'UMUM') {
+				$pasien_bayar = 'TUNAI';
+			} else $pasien_bayar = 'KREDIT';
+			$txtkk = '';
+			$txtdiskon = '';
+			$txttunai = "";
+			$txtperusahaan = '';
+			$totalbayar = '';
+			$totalbayar1 = '';
+			$totalbayar2 = '';
+			$detail_bayar = $detail_daful->cara_bayar;
+
+
+
+			//print_r($detail_bayar);
+			if ($detail_bayar == 'KERJASAMA' || $detail_bayar == 'BPJS') {
+				$kontraktor = $this->rjmkwitansi->getdata_perusahaan($no_register)->row();
+				$txtperusahaan = "<td><b>Dijamin oleh</b></td>
+						<td> : </td>
+						<td>" . strtoupper($kontraktor->nmkontraktor) . "</td>";
+			} else {
+				$txtperusahaan = "<td></td>
+								<td></td>
+								<td></td>";
+			}
+
+
+
+			/*$data_tindakan=$this->rjmkwitansi->getdata_tindakan_pasien($no_register)->result();
+			$vtot=0;
+			foreach($data_tindakan as $row1){
+				$vtot=$vtot+$row1->biaya_tindakan;
+			}
+			*/
+			$vtot = $this->rjmkwitansi->get_vtot($no_register)->row();
+			$vtot = 0;
+			$data_tindakan = $this->rjmkwitansi->getdata_unpaid_tindakan_pasien($no_register)->result();
+			foreach ($data_tindakan as $row1) {
+				$vtot = $vtot + $row1->biaya_tindakan;
+			}
+			$jumlah_vtot =  $vtot;
+
+			if ($diskon != '0' or $nominal_kk != '0' or $tunai != '0') {
+				$jumlah_vtot = $nominal_kk + $tunai + $diskon;
+				$jumlah_vtot1 = $nominal_kk + $tunai;
+			}
+
+			$vtot_terbilang = $cterbilang->terbilang($jumlah_vtot);
+			//echo $jumlah_vtot;
+			//echo $vtot_terbilang;			
+
+			$txtjudul = "";
+			$nomor = $this->rjmkwitansi->get_no_kwitansi($no_register)->row();
+
+			if ($diskon != '' and $diskon != '0') {
+				if ($detail_bayar == 'BPJS') { //Total Biaya Ditanggung
+					$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:11px;\">Total Biaya Ditanggung</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:12px;\">" . number_format($detail_daful->diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+				} else
+					$txtdiskon = "<tr><td width=\"50%\"><p  style=\"font-size:11px;\">Dijamin/Potongan</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\"><p  align=\"right\" style=\"font-size:12px;\">" . number_format($detail_daful->diskon, 2, ',', '.') . "</p></td></tr>
+					    ";
+			}
+
+			if ($nilaikk != '' and $nilaikk != '0') {
+				$txtkk = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:11px;\">Kartu Kredit/Debit</p></td>
+					<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:12px;\">" . number_format($nominal_kk, 2, ',', '.') . "</p></td></tr>";
+			}
+
+			if (($tunai != '' and $tunai != '0') or ($nilaikk == '' or $nilaikk == '0')) {
+
+				$tot1 = $tunai;
+				$tot2 = substr($tot1, -3);
+				if ($tot2 % 500 != 0) {
+					$mod = $tot2 % 500;
+					$tot1 = $tot1 - $mod;
+					$tot1 = $tot1 + 500;
+				}
+				$tunai_bulat = $tot1;
+
+				if ($tunai_bulat != '0') {
+					$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:11px;\">Total Bayar</p></td>
+					<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:12px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+				}
+			}
+
+			if (($tunai != '' and $tunai != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+				$tot1 = $tunai;
+				$tot2 = substr($tot1, -3);
+				if ($tot2 % 500 != 0) {
+					$mod = $tot2 % 500;
+					$tot1 = $tot1 - $mod;
+					$tot1 = $tot1 + 500;
+				}
+				$tunai_bulat = $tot1;
+
+				$txttunai = "<tr>
+					<td width=\"50%\"><p  style=\"font-size:11px;\">Tunai</p></td>
+					<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+					<td width=\"40%\" ><p  align=\"right\" style=\"font-size:12px;\">" . number_format($tunai_bulat, 2, ',', '.') . "</p></td></tr>";
+				$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:11px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:11px; \"><p align=\"right\" style=\"font-size:12px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot = $nominal_kk + $tunai_bulat + $diskon, 2, ',', '.') . "</p></td>
+					</tr>";
+			}
+
+			if ($diskon != '0' or $nominal_kk != '0' or $tunai != '0') {
+
+				$jumlah_vtot = $nominal_kk + $tunai + $diskon;
+			}
+
+			if (($diskon != '' and $diskon != '0') and ($nilaikk != '' and $nilaikk != '0')) {
+
+				$totalbayar = "<tr >						
+						<td width=\"50%\" ><p  style=\"font-size:11px;  margin:0;\">Total</p></td>
+						<td width=\"10%\"><p  style=\"font-size:11px;\">Rp.</p></td>
+						<td width=\"40%\" style=\"font-size:11px; \"><p align=\"right\" style=\"font-size:12px; border-top: 1pt solid black;\">  " . number_format($jumlah_vtot, 2, ',', '.') . "</p></td>
+					</tr>";
+			}
+
+			$style = '';
+			if ($data_pasien->sex == 'L') {
+				$sex = 'LAKI-LAKI';
+			} else {
+				$sex = 'PEREMPUAN';
+			}
+
+			$konten = "<style type=\"text/css\">
+					.table-font-size{
+						font-size:7px;
+					    }
+					.table-font-size1{
+						font-size:8.5px;
+					    }
+					</style>
+					
+					<table  border=\"0\" style=\"padding-top:10px;\">
+						<tr>
+							<td width=\"16%\">
+								<p align=\"center\">
+									<img src=\"assets/imag/" . $this->config->item('logo_url') . "\" alt=\"img\" height=\"30\" style=\"padding-right:5px;\">
+								</p>
+							</td>
+								<td  width=\"70%\" style=\" font-size:7px;\"><b><font style=\"font-size:12px\">$namars</font></b><br><br>$alamatrs $kota_kab $telp
+							</td>
+							<td width=\"14%\"><font size=\"6\" align=\"right\">$tgl_jam
+								<br> $nomor
+							</font></td>						
+						</tr>
+						
+					</table>
+						<tr>
+						<td colspan=\"3\" ><font size=\"10\" align=\"center\"><u><b>KWITANSI REGISTRASI RAWAT JALAN 
+						No. $no_register-1  </b></u></font></td>
+					</tr>
+					<table class=\"table-font-size1\" border=\"0\" style=\"padding-top:5px;\">		
+								
+																								
+							<tr>
+								<td width=\"17%\"><b>Nama Pasien</b></td>
+								<td width=\"2%\">:</td>
+								<td width=\"35%\">" . strtoupper($data_pasien->nama) . "</td>
+								<td width=\"19%\"><b>Tanggal Kunjungan</b></td>
+								<td width=\"2%\"> : </td>
+								<td width=\"22%\">" . date("d F Y", strtotime($data_pasien->tgl_kunjungan)) . "</td>
+							</tr>
+							<tr>
+								<td><b>Kelamin</b></td>
+								<td> : </td>
+								<td>" . $sex . "</td>
+								<td ><b>No MR</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->no_cm) . "</td>
+							</tr>
+							<tr>
+								<td><b>Alamat</b></td>
+								<td> : </td>
+								<td>" . strtoupper($data_pasien->alamat) . "</td>
+								<td><b>Poli Tujuan</b></td>
+								<td> : </td>
+								<td>" . strtoupper($data_pasien->nm_poli) . "</td>
+							</tr>
+							
+							<tr>
+								<td><b>Unit</b></td>
+								<td> : </td>
+								<td>" . $pasien_bayar . "</td>
+								<td ><b>Gol. Pasien</b></td>
+								<td > : </td>
+								<td>" . strtoupper($data_pasien->cara_bayar) . "</td>
+							</tr>							
+							<tr>
+								<td><b>Waktu Shift</b></td>
+								<td> : </td>
+								<td>" . $detail_daful->shift . "</td>						
+								$txtperusahaan
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>						
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+																											
+					</table>";
+
+
+
+			//$data_tindakan=$this->rjmkwitansi->getdata_unpaid_tindakan_pasien($no_register)->result();
+
+
+			//print_r($data_tindakan);
+			$no = 1;
+			$konten .= "<table border=\"1\" style=\"padding:2px\" class=\"table-font-size1\">
+						<tr>
+							<th width=\"5%\"><p align=\"center\"><b>No</b></p></th>
+							<th width=\"75%\"><p align=\"center\"><b>Pemeriksaan</b></p></th>
+							<th width=\"20%\"><p align=\"center\"><b>Biaya</b></p></th>
+
+						</tr>";
+			// <tr>
+			// 	<td><p align=\"center\">1</p></td>
+			// 	<td><b>TINDAKAN</b></td>
+			// 	<td></td>
+			// 	<td><p align=\"right\">".number_format( $vtot, 2 , ',' , '.' )."</p></td>
+			// </tr>";
+
+
+			foreach ($data_tindakan as $row1) {
+
+				$konten .= "
+					<tr>
+						<td><p align=\"center\">" . $no++ . "</p></td>
+						<td>" . ucwords(strtolower($row1->nmtindakan)) . "</td>
+						<td><p align=\"right\">" . number_format($row1->vtot, 2, ',', '.') . "</p></td>
+						</tr>";
+			}
+
+
+
+			$konten .= "
+						<tr>
+							<th colspan=\"2\"><p align=\"right\"><b>Total   </b></p></th>
+							<th ><p align=\"right\">" . number_format($vtot, 2, ',', '.') . "</p></th>
+						</tr>
+
+					</table>
+
+					$txtdiskon	
+					$txttunai
+					$txtkk				
+					$totalbayar
+
+					<table style=\"padding-top:5px;\" class=\"table-font-size1\"><tr>
+								<td width=\"17%\"><b>Terbilang</b></td>
+								<td width=\"2%\"> : </td>
+								<td  width=\"78%\"><b><i>" . strtoupper($vtot_terbilang) . "</i></b></td>
+							</tr></table>
+					
+					";
+			/*<table style=\"border:1px solid black; \" >										
+					<tr>
+						<td width=\"50%\" ><p>Jumlah </p></td>
+						<td width=\"10%\">:</td>
+						<td width=\"40%\"><p align=\"right\"> Rp ".number_format( $vtot, 2 , ',' , '.' )."</p></td>
+					</tr>
+					</table>*/
+
+			$konten .= "
+					
+					<table style=\"width:100%;\" style=\"padding-bottom:5px;\">
+						<tr>
+							<td width=\"75%\" ></td>
+							<td width=\"25%\">
+								<p align=\"center\">
+								$kota_kab, $tgl								
+								
+								<br><br><br><br>$user
+								</p>
+							</td>
+						</tr>	
+					</table>";
+
+
+			//echo $konten1;
+
+			$konten1 = $konten . "<hr>" . $konten . "<hr>" . $konten;
+			// var_dump($konten1);die();
+			$file_name = "Daftar_$no_register-1.pdf";
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			tcpdf();
+			$obj_pdf = new TCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+			$obj_pdf->SetCreator(PDF_CREATOR);
+			$title = "";
+			$obj_pdf->SetTitle($file_name);
+			$obj_pdf->SetHeaderData('', '', $title, '');
+			$obj_pdf->setPrintHeader(false);
+			$obj_pdf->setPrintFooter(false);
+			$obj_pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+			$obj_pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+			$obj_pdf->SetDefaultMonospacedFont('helvetica');
+			$obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+			$obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+			$obj_pdf->SetMargins('5', '0', '5');
+			$obj_pdf->SetAutoPageBreak(TRUE, '2');
+			$obj_pdf->SetFont('helvetica', '', 9);
+			$obj_pdf->setFontSubsetting(false);
+			$obj_pdf->AddPage();
+			ob_start();
+			$content = $konten1;
+			ob_clean();
+			$obj_pdf->writeHTML($content, true, false, true, false, '');
+			$obj_pdf->Output(FCPATH . 'download/irj/rjkwitansi/' . $file_name, 'FI');
+		} else {
+			//redirect('irj/rjcregistrasi/kwitansi/','refresh');
+		}
+	}
+
+	public function list_lunas()
+	{
+		$data['title'] = 'Pasien Umum Lunas Pembayaran';
+		$data['url'] = '';
+		//if($_SERVER['REQUEST_METHOD']=='POST'){
+		$date0 = $this->input->post('date0');
+		$date1 = $this->input->post('date1');
+		if ($date0 != '' && $date1 != '') {
+
+			$data['date0'] = $date0;
+			$data['date1'] = $date1;
+		} else {
+			$date0 = date('Y-m-d', strtotime('-7 days'));
+			$date1 = date('Y-m-d');
+			$data['date0'] = $date0;
+			$data['date1'] = $date1;
+		}
+		$data['pasien_daftar'] = $this->rjmkwitansi->get_pasien_kwitansi_lunas($date0, $date1)->result();
+		$this->load->view('irj/rjvkwitansilunas', $data);
+		//}else{
+		//	redirect('irj/rjckwitansi/kwitansi');
+		//}
+	}
+
+	public function retur($no_register = '')
+	{
+		$data['title'] = 'Retur Kwitansi Rawat Jalan';
+		$data['vtotpoli'] = 0;
+		if ($no_register != '') {
+			$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasienumumretur($no_register)->result();
+			$data['no_register'] = $no_register;
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+			foreach ($data['data_tindakan'] as $row) {
+				$data['vtotpoli'] = (int)$data['vtotpoli'] + $row->vtot;
+			}
+			/*if(sizeof($data['data_tindakan'])==0){
+				$this->session->set_flashdata('message_no_tindakan','<div class="row">
+							<div class="col-md-12">
+							  <div class="box box-default box-solid">
+								<div class="box-header with-border">
+								  <center>Tidak Ada Tindakan</center>
+								</div>
+							  </div>
+							</div>
+						</div>');
+			}else{
+				$this->session->set_flashdata('message_no_tindakan','');
+				
+			}*/
+
+			$this->load->view('irj/rjvkwitansireturpasien', $data);
+		} else {
+			redirect('irj/rjckwitansi/list_lunas');
+		}
+	}
+
+	public function batal($idno_kwitansi = '')
+	{
+		$data['title'] = 'Batal Kwitansi Rawat Jalan';
+		$data['vtotpoli'] = 0;
+		if ($idno_kwitansi != '') {
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien_nokwitansi($idno_kwitansi)->row();
+			$no_register = $data['data_pasien']->no_register;
+			$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasienumumretur($no_register)->result();
+			$data['no_register'] = $no_register;
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+			foreach ($data['data_tindakan'] as $row) {
+				$data['vtotpoli'] = (int)$data['vtotpoli'] + $row->vtot;
+			}
+
+			/*if(sizeof($data['data_tindakan'])==0){
+				$this->session->set_flashdata('message_no_tindakan','<div class="row">
+							<div class="col-md-12">
+							  <div class="box box-default box-solid">
+								<div class="box-header with-border">
+								  <center>Tidak Ada Tindakan</center>
+								</div>
+							  </div>
+							</div>
+						</div>');
+			}else{
+				$this->session->set_flashdata('message_no_tindakan','');
+				
+			}*/
+
+			$this->load->view('irj/rjvkwitansipasienedit', $data);
+		} else {
+			redirect('irj/rjckwitansi/list_lunas');
+		}
+	}
+
+	public function kwitansi_all_rj()
+	{
+		$data['title'] = 'Kwitansi Rawat Jalan';
+		$result = $this->M_user->getKasirAkses($this->session->userdata('userid'));
+		$data['kasir'] = "";
+		if ($result) {
+			$data['kasir'] = $result->kasir;
+		}
+
+		if ($this->input->post() == null) {
+			$date = date('Y-m-d');
+			$no_medrec = $this->input->post('no_medrec');
+			$data['pasien_daftar'] = $this->rjmkwitansi->get_pasien_kwitansi_all($date, $no_medrec)->result();
+			$data['url'] = '';
+		} else {
+			$date = $this->input->post('tgl');
+			$no_medrec = $this->input->post('no_medrec');
+			$data['pasien_daftar'] = $this->rjmkwitansi->get_pasien_kwitansi_all($date, $no_medrec)->result();
+			$data['url'] = '';
+		}
+
+
+		$this->load->view('irj/rjvkwitansiall', $data);
+	}
+
+	public function cetak_detail_tagihan($no_register)
+	{
+
+		$data['no_register'] = $no_register;
+		$data['daftar_ulang'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+		$login_data = $this->load->get_var("user_info");
+		$data['user'] = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$data['cterbilang'] = new rjcterbilang();
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$data['tgl'] = date("d-m-Y");
+			$conf = $this->appconfig->get_headerpdf_appconfig()->result();
+			$top_header = $this->appconfig->get_header_top_pdfconfig()->value;
+			$bottom_header = $this->appconfig->get_header_bottom_pdfconfig()->value;
+			$data['logo_header'] = $this->appconfig->get_header_isi_pdfconfig()->value;
+			$data['logo_kesehatan_header'] = $this->appconfig->get_header_logo_kesehatan_pdfconfig()->value;
+			$data['kota_header'] = $this->appconfig->get_kota_pdfconfig()->value;
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['nama_pasien'] = $data['data_pasien']->nama;
+			$data['tgl_lahir'] = $data['data_pasien']->tgl_lahir;
+			$data['tahun_lahir'] = substr($data['tgl_lahir'], 0, 4);
+			$data['tahun_sekarang'] = date('Y');
+			if ($data['data_pasien']->sex == 'L') {
+				$data['jenkel'] = 'Laki - Laki';
+			} else {
+				$data['jenkel'] = 'Perempuan';
+			}
+
+			$data['umur'] = (int)$data['tahun_sekarang'] - (int)$data['tahun_lahir'];
+
+			$data['detail_daful'] = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			if ($data['detail_daful']->cara_bayar == 'UMUM') {
+				$data['pasien_bayar'] = 'TUNAI';
+			} else {
+				$data['pasien_bayar'] = 'KREDIT';
+			}
+
+			$data['txtkk'] = '';
+			$data['txtdiskon'] = '';
+			$data['txttunai'] = "";
+			$data['txtperusahaan'] = '';
+			$data['totalbayar'] = '';
+			$data['totalbayar1'] = '';
+			$data['totalbayar2'] = '';
+			$data['detail_bayar'] = $data['detail_daful']->cara_bayar;
+			$data['diskon'] = $data['detail_daful']->diskon;
+			$data['persen'] = $data['detail_daful']->persen_kk;
+			$data['tunai'] = $data['detail_daful']->tunai;
+			$data['nilaikk'] = $data['detail_daful']->nilai_kkkd;
+			$data['nominal_kk'] = $data['persen'] / 100 * $data['nilaikk'] + $data['nilaikk'];
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+
+			$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien_kwitansi_piutang($no_register)->result();
+			$vtottind = 0;
+			$jumlah_vtot = 0;
+			foreach ($data['data_tindakan'] as $row1) {
+
+				$vtottind = $vtottind + $row1->vtot;
+			}
+			$jumlah_vtot =  $vtottind - $data['diskon'];
+			$data['vtot_terbilang'] = $data['cterbilang']->terbilang($jumlah_vtot);
+
+			$this->load->view('kwitansi/detail_piutang', $data);
+		} else {
+		}
+	}
+
+	public function cetak_faktur_kt_piutang($id, $id_piutang, $no_register)
+	{
+		$data['no_register'] = $no_register;
+		$data['daftar_ulang'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+		$login_data = $this->load->get_var("user_info");
+		$data['user'] = strtoupper($login_data->username);
+
+		if ($no_register != '') {
+			$data['cterbilang'] = new rjcterbilang();
+			date_default_timezone_set("Asia/Bangkok");
+			$tgl_jam = date("d-m-Y H:i:s");
+			$data['tgl'] = date("d-m-Y");
+
+			$conf = $this->appconfig->get_headerpdf_appconfig()->result();
+			$top_header = $this->appconfig->get_header_top_pdfconfig()->value;
+			$bottom_header = $this->appconfig->get_header_bottom_pdfconfig()->value;
+			$data['logo_header'] = $this->appconfig->get_header_isi_pdfconfig()->value;
+			$data['logo_kesehatan_header'] = $this->appconfig->get_header_logo_kesehatan_pdfconfig()->value;
+			$data['kota_header'] = $this->appconfig->get_kota_pdfconfig()->value;
+
+			$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+			$data['nama_pasien'] = $data['data_pasien']->nama;
+			$data['tgl_lahir'] = $data['data_pasien']->tgl_lahir;
+			$data['tahun_lahir'] = substr($data['tgl_lahir'], 0, 4);
+			$data['tahun_sekarang'] = date('Y');
+
+			if ($data['data_pasien']->sex == 'L') {
+				$data['jenkel'] = 'Laki - Laki';
+			} else {
+				$data['jenkel'] = 'Perempuan';
+			}
+
+			$data['umur'] = (int)$data['tahun_sekarang'] - (int)$data['tahun_lahir'];
+
+			$data['detail_daful'] = $this->rjmkwitansi->get_detail_daful($no_register)->row();
+			if ($data['detail_daful']->cara_bayar == 'UMUM') {
+				$data['pasien_bayar'] = 'TUNAI';
+			} else {
+				$data['pasien_bayar'] = 'KREDIT';
+			}
+			$data['data_header_piutang'] = $this->Mpiutang->get_pasien_piutang_detail($id_piutang);
+			$data['data_item_piutang'] = $this->Mpiutang->get_pasien_cicilan_detail_piutang($id);
+			$data['vtot'] = $this->rjmkwitansi->get_vtot($no_register)->row();
+			// $data['vtot_terbilang']=$data['cterbilang']->terbilang($jumlah_vtot);
+			$this->load->view('irj/kwitansi/kwitansi_angsuran', $data);
+		} else {
+		}
+	}
+
+	public function cetak_sebelum_poli($no_register)
+	{
+		$data['title'] = $no_register . ' - Kwitansi Sebelum Poli';
+		$data['login_data'] = $this->load->get_var("user_info");
+		$data['no_register'] = $no_register;
+		$data['logo_header'] = $this->appconfig->get_header_isi_pdfconfig()->value;
+		$data['logo_kesehatan_header'] = $this->appconfig->get_header_logo_kesehatan_pdfconfig()->value;
+		$data['kota_header'] = $this->appconfig->get_kota_pdfconfig()->value;
+
+		$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+		$data['terbilang'] = new rjcterbilang();
+		$data['nm_dokter'] = $this->rjmkwitansi->get_nm_dokter_kwitansi($no_register)->row()->nm_dokter;
+		// $data['data_no_kwitansi'] = $this->rjmkwitansi->getdata_no_kwitansi_by_no_register($no_register)->row();
+		// $data['data_tindakan']=$this->rjmkwitansi->getdata_tindakan_pasien_kwitansi($no_register)->result();
+
+		$data['data_kwitansi'] = $this->rjmkwitansi->get_no_kwitansi_sblm($no_register)->row();
+		$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien_kwitansi_sblm_poli($no_register)->result();
+
+		$this->load->view('kwitansi/kw_sblm', $data);
+	}
+
+	public function cetak_setelah_poli($no_register)
+	{
+		$data['title'] = $no_register . ' - Kwitansi Setelah Poli';
+		$data['login_data'] = $this->load->get_var("user_info");
+		$data['no_register'] = $no_register;
+		$data['logo_header'] = $this->appconfig->get_header_isi_pdfconfig()->value;
+		$data['logo_kesehatan_header'] = $this->appconfig->get_header_logo_kesehatan_pdfconfig()->value;
+		$data['kota_header'] = $this->appconfig->get_kota_pdfconfig()->value;
+
+		$data['data_pasien'] = $this->rjmkwitansi->getdata_pasien($no_register)->row();
+		$data['terbilang'] = new rjcterbilang();
+		$data['nm_dokter'] = $this->rjmkwitansi->get_nm_dokter_kwitansi($no_register)->row()->nm_dokter;
+		$data['no_kwitansi'] = $this->rjmkwitansi->get_no_kwitansi_setelah($no_register)->row();
+		// $data['data_tindakan']=$this->rjmkwitansi->getdata_tindakan_pasien_kwitansi($no_register)->result();
+
+		$data['data_kwitansi'] = $this->rjmkwitansi->get_no_kwitansi_stlh($no_register)->row();
+		$data['data_tindakan'] = $this->rjmkwitansi->getdata_tindakan_pasien_kwitansi_stlh_poli($no_register)->result();
+
+		$this->load->view('kwitansi/kw_stlh', $data);
+	}
+
+	public function kwitansi_all_non_pasien()
+	{
+		$data['title'] = 'Kwitansi Non Pasien';
+		$result = $this->M_user->getKasirAkses($this->session->userdata('userid'));
+		$data['kasir'] = "";
+		if ($result) {
+			$data['kasir'] = $result->kasir;
+		}
+
+		if ($this->input->post() == null) {
+			// $date=date('Y-m-d');
+			// $no_medrec=$this->input->post('no_medrec');
+			$data['pasien_daftar'] = $this->Mumcicilan->get_data_pembayaran_langsung()->result();
+			$data['url'] = '';
+		} else {
+			// $date=$this->input->post('tgl');
+			// $no_medrec=$this->input->post('no_medrec');
+			$data['pasien_daftar'] = $this->Mumcicilan->get_data_pembayaran_langsung()->result();
+			$data['url'] = '';
+		}
+
+
+		$this->load->view('irj/rjvkwitansinonpasien', $data);
+	}
+
+	public function kwitansi_bpjs()
+	{
+		$data['title'] = 'Kwitansi Pasien BPJS';
+		$result = $this->M_user->getKasirAkses($this->session->userdata('userid'));
+		$data['kasir'] = "";
+		if ($result) {
+			$data['kasir'] = $result->kasir;
+		}
+		$date1 = $this->input->post('tgl1');
+		$date2 = $this->input->post('tgl2');
+		if ($date1 == '' && $date2 == '' ) {
+			$date1 = date('Y-m-d');
+			$date2 = date('Y-m-d');
+		}
+		$data['url'] = '';
+		$data['pasien_daftar'] = $this->rjmkwitansi->get_pasien_kwitansi_bpjs_rj($date1,$date2)->result();
+		$this->load->view('irj/rjvkwitansi_bpjs', $data);
+	}
+}

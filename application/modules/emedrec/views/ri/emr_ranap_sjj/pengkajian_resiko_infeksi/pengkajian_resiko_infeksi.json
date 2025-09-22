@@ -1,0 +1,481 @@
+{
+    "title": "PENGKAJIAN RESIKO TERHADAP INFEKSI",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "  Ruang Rawat / Unit Kerja : "
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": " Tanggal  :"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "title": "Diagnosa\n",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "startWithNewLine": false,
+          "title": "Jenis Operasi",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question5",
+        "title": "ALAT / TINDAKAN",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Hari pemakaian",
+            "cellType": "rating",
+            "rateMax": 20
+           },
+           {
+            "name": "column2",
+            "title": "ETT / Tracheastomy / VM",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column3",
+            "title": "CVL / CVP/ Kateter Vena Sentral ",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column4",
+            "title": "IVL / Injection Port",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column5",
+            "title": "UC / Urine Kateter",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column6",
+            "title": "Post Operasi hari ke",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column7",
+            "title": "ASA",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column8",
+            "title": "Lama Operasi",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column9",
+            "title": "Mulai operasi",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column10",
+            "title": "Selesai operasi",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column11",
+            "title": "Jenis operasi",
+            "cellType": "checkbox"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": 1,
+            "text": "✓"
+           }
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Hari pemakaian"
+           }
+          ]
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question6",
+        "title": "MONITORING KEJADIAN INFEKSI",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "column1",
+            "title": "Hari pemakaian",
+            "cellType": "rating",
+            "rateMax": 20
+           },
+           {
+            "name": "column2",
+            "title": "VAP (CPIS > 6 )",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column3",
+            "title": "          Sekresi Trakea",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column4",
+            "title": "          Infiltrat",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column5",
+            "title": "          Hipotermia vs Hipertermia",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column6",
+            "title": "          Leukopenia vs lekositosis",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column7",
+            "title": "          AGD Nilai Kriteria CPIS",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column8",
+            "title": "Infeksi Aliran Darah (IAD)",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column9",
+            "title": "          Kultur Darah",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column10",
+            "title": "          Lain-lain",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column11",
+            "title": "Plebitis",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column12",
+            "title": "          Nyeri",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column13",
+            "title": "          Merah",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column14",
+            "title": "          Bengkak",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column15",
+            "title": "          Panas",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column16",
+            "title": "          Nanah",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column17",
+            "title": "Infeksi Saluran Kemih (ISK) ",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column18",
+            "title": "          Nyeri Suprapubik",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column19",
+            "title": "          Suhu > 38°C",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column20",
+            "title": "          Urinalisa ",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column21",
+            "title": "          Kultur / Mikrobiologis",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column22",
+            "title": "Pneunomia Tirah Baring / HAP",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column23",
+            "title": "          Klinis : Sesak nafas, Sputum Purulen",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column24",
+            "title": "          Radiologis",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column25",
+            "title": "          Kultur Sputum / BAL",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column26",
+            "title": "Infeksi Luka Dekubitus",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column27",
+            "title": "          Nerkotikan",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column28",
+            "title": "          Nanah",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column29",
+            "title": "          Kultur / Mikrobiologis",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column30",
+            "title": "Infeksi Luka Operasi",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column31",
+            "title": "          Suhu > 38°C atau  > 39°C",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column32",
+            "title": "          Leukosit >12000 atau < 4000 mm3",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column33",
+            "title": "          Nyeri + Kemerahan / Bengkak",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column34",
+            "title": "          Nanah",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column35",
+            "title": "          Jenis Operasi : Bersih :",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column36",
+            "title": "Bersih Tercemar :",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column37",
+            "title": "Kotor :",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column38",
+            "title": "Tercemar :",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column39",
+            "title": "Infeksi Tali Pusat",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column40",
+            "title": "          Panas lokal",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column41",
+            "title": "          Hipotermia vs Hipertermia",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column42",
+            "title": "          Leukopenia vs Lekositosis",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column43",
+            "title": "          Merah",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column44",
+            "title": "          Bengkak",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column45",
+            "title": "          Nekrotikan ",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column46",
+            "title": "          Nanah",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column47",
+            "title": "          Kultur / Mikrobiologis",
+            "cellType": "checkbox"
+           },
+           {
+            "name": "column48",
+            "title": "nama perawat",
+            "cellType": "text"
+           },
+           {
+            "name": "column49",
+            "title": "Paraf",
+            "cellType": "signaturepad"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "1",
+            "text": "✓"
+           }
+          ],
+          "cellType": "text",
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Hari pemakaian"
+           }
+          ]
+         }
+        ],
+        "panelCount": 1,
+        "minPanelCount": 1
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question7",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "column1",
+          "title": "DAFTAR NAMA DAN JENIS CAIRAN"
+         },
+         {
+          "name": "column2",
+          "title": "DAFTAR PEMAKAIAN ANTIBIOTIKA"
+         },
+         {
+          "name": "column3",
+          "title": "HASIL KULTUR / NAMA KUMAN"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "comment",
+        "allowAddRows": false,
+        "allowRemoveRows": false,
+        "rowCount": 1
+       },
+       {
+        "type": "html",
+        "name": "question9",
+        "html": "<p>keterangan :\n<p>P = Pasanag\n<p>L = Lepas\n<p>PB = Pasang Bar"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question8",
+        "title": "IPCN",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question10",
+        "startWithNewLine": false,
+        "title": "IPCLN",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question11",
+        "startWithNewLine": false,
+        "title": "Dokter  PenangungJawab Pelayanan",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question12",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question13",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question14",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

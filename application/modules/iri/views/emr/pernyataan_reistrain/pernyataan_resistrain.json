@@ -1,0 +1,145 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "title": "Diagnosa",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "startWithNewLine": false,
+          "title": "Pemriksaan",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question3",
+        "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<p>Telah diinformasikan sebab / alas an dilakukan tindakan RESTRAINT (Pemasangan alat pembatas gerakan) kepada pasien / keluarga pasien sebagai berikut :"
+       },
+       {
+        "type": "checkbox",
+        "name": "question4",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Pasien membahayakan diri sendiri / orang lain / lingkungan"
+         },
+         {
+          "value": "item2",
+          "text": "Mengupayakan pasien terhindar dari luka / jatuh / serangan dari pasien lain"
+         },
+         {
+          "value": "item3",
+          "text": "Mengamankan pasien dari tempat / sumber stress"
+         }
+        ],
+        "hasOther": true,
+        "otherText": "Lainnya"
+       },
+       {
+        "type": "html",
+        "name": "question5",
+        "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<p>1.\tSelama tindakan RESTRAINT akan diobservasi tanda-tanda vital pasien secara intensif sambil diberikan medikasi yang optimal\n<p>2.\tRisiko dari tindakan  RESTRAINT  dapat melukai anggota gerak atas (tangan, lengan bawah), anggota gerak bawah (pergelangan kaki) bila tidak mengikuti prosedur\n<p>3.\tSelama pelaksanaan akan dipantau secara periodic sesuai dengan kondisi\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "question6",
+        "title": "Saya yang bertanda tangan dibawah ini :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama pasien / keluarga pasien        "
+         },
+         {
+          "name": "text2",
+          "title": "Hubungan dengan pasien                "
+         },
+         {
+          "name": "text3",
+          "title": "Alamat rumah                                   "
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question7",
+        "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<p>Setelah membaca dan diterangkan tentang tindakan  RESTRAINT dengan segala risiko dan komplikasinya, saya sudah memahami tindakan tersebut dan  "
+       },
+       {
+        "type": "radiogroup",
+        "name": "question8",
+        "title": "Dilakukan tindakan  RESTRAINT.",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Setuju"
+         },
+         {
+          "value": "item2",
+          "text": "Tidak Setuju"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question9",
+        "title": "Tanah Badantuan,",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question10",
+        "title": "Pasien / Keluarga Pasien",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question11",
+        "startWithNewLine": false,
+        "title": "Saksi",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "question12",
+        "startWithNewLine": false,
+        "title": "DPJP",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question13",
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question14",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       },
+       {
+        "type": "text",
+        "name": "question15",
+        "startWithNewLine": false,
+        "titleLocation": "hidden"
+       }
+      ],
+      "title": "PERNYATAAN TINDAKAN RESTRAINT MEKANIK"
+     }
+    ]
+   }

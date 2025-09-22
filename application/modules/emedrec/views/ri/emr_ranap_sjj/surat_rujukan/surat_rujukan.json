@@ -1,0 +1,91 @@
+{
+    "title": "SURAT RUJUKAN",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nomor Surat"
+         },
+         {
+          "name": "rumah_sakit",
+          "title": "Kepada Rumah Sakit"
+         },
+         {
+          "name": "alamat",
+          "title": "Alamat Rumah Sakit"
+         },
+         {
+          "name": "bagian",
+          "title": "Bagian"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "question2",
+        "title": "TS Yth, mohon pemeriksaan dan pengobatan lebih lanjut terhadap penderita",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "nama",
+          "title": "Nama"
+         },
+         {
+          "name": "umur",
+          "title": "Umur"
+         },
+         {
+          "name": "no_kartu",
+          "title": "Nomor Kartu"
+         },
+         {
+          "name": "diagnosa",
+          "title": "Diagnosa Sementara"
+         }
+        ],
+        "itemSize": 100
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question3",
+          "html": "<h5> Atas Pertolongan TS kami ucapkan terima kasih, mohon informasi selanjutnya,"
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "title": "Tanah Badantuang, ",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question5",
+          "title": "Dokter Pengirim",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "minWidth": "100px",
+          "title": "Tanah Badantuang, ",
+          "titleLocation": "hidden",
+          "hideNumber": true
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

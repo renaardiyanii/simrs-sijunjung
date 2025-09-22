@@ -1,0 +1,68 @@
+{
+    "title": "ASSESMENT MEDIK DOKTER",
+    "pages": [
+        {
+            "name": "assesment_medik_dokter",
+            "elements": [
+                {
+                    "type": "panel",
+                    "name": "panel1",
+                    "elements": [
+                        {
+                            "type": "editor",
+                            "name": "subjective",
+                            "title": "Subjective",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "editor",
+                            "name": "objective",
+                            "startWithNewLine": false,
+                            "title": "Objective",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "editor",
+                            "name": "assesment",
+                            "title": "Assesment",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "editor",
+                            "name": "plan",
+                            "startWithNewLine": false,
+                            "title": "Plan",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "editor",
+                            "name": "pem_penunjang",
+                            "title": "Pemeriksaan Penunjang",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "editor",
+                            "name": "tindakan",
+                            "startWithNewLine": false,
+                            "title": "Therapi / Tindakan",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "editor",
+                            "name": "diag_kerja",
+                            "title": "Diagnosa Kerja",
+                            "hideNumber": true
+                        },
+                        {
+                            "type": "editor",
+                            "name": "diag_banding",
+                            "startWithNewLine": false,
+                            "title": "Diagnosa Banding",
+                            "hideNumber": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

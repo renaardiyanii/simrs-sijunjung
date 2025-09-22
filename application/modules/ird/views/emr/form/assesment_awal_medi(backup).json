@@ -1,0 +1,287 @@
+{
+    "title": "ASSESMENT AWAL MEDIS IGD",
+    "pages": [
+     {
+      "name": "data_umum",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "jenis_kasus",
+          "title": "Jenis Kasus :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "isRequired": true,
+          "choices": [
+           {
+            "value": "bedah",
+            "text": "Bedah"
+           },
+           {
+            "value": "neurolog",
+            "text": "Neurologi"
+           },
+           {
+            "value": "non_neurologi ",
+            "text": "Non Neurologi "
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "anamnesa",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "auto_anamnesa",
+            "text": "Auto Anamnesa"
+           },
+           {
+            "value": "allo_anamnesa",
+            "text": "Allo Anamnesa"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "comment",
+          "name": "anamnesis",
+          "title": "Anamnesis :",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<H3> Pemeriksaan Fisik </h3>"
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question3",
+          "html": "<h5>   A. UMUM</h5>\n<hr>\n"
+         },
+         {
+          "type": "text",
+          "name": "ku",
+          "title": "1. KU :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 30
+         },
+         {
+          "type": "text",
+          "name": "vitalsign",
+          "title": "2. Vital Sign",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 30
+         },
+         {
+          "type": "text",
+          "name": "td",
+          "title": "TD :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 30,
+          "placeHolder": "mmHg"
+         },
+         {
+          "type": "text",
+          "name": "nadi",
+          "title": "Nadi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 30,
+          "placeHolder": "x/i"
+         },
+         {
+          "type": "text",
+          "name": "pernafasan",
+          "title": "Pernafasan :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 30,
+          "placeHolder": "x/i"
+         },
+         {
+          "type": "text",
+          "name": "suhu",
+          "title": "Suhu :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 30,
+          "placeHolder": "⁰C"
+         },
+         {
+          "type": "text",
+          "name": "bb",
+          "title": "BB :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 30,
+          "placeHolder": "kg"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question4",
+          "html": "<h5>   B. Khusus</h5>\n<hr>\n"
+         },
+         {
+          "type": "text",
+          "name": "kesadaran",
+          "title": "Kesadaran :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 30
+         },
+         {
+          "type": "text",
+          "name": "gcs",
+          "title": "GCS :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 30
+         },
+         {
+          "type": "radiogroup",
+          "name": "sensorik",
+          "title": "Sensorik :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "+",
+            "text": "+"
+           },
+           {
+            "value": "-",
+            "text": "-"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "motorik",
+          "title": "Motorik :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "+",
+            "text": "+"
+           },
+           {
+            "value": "-",
+            "text": "-"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "status_generalis_dokter",
+          "title": "Status Generalis :",
+          "titleLocation": "left",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "status_lokalis_dokter",
+          "title": "Status Lokalis",
+          "titleLocation": "left",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "diagnosa_kerja_dokter",
+          "title": "DIAGNOSIS KERJA\t:",
+          "titleLocation": "left",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "diagnosa_banding_dokter",
+          "title": "DIAGNOSIS BANDING\t :",
+          "titleLocation": "left",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "pemeriksaan_penunjang_dokter",
+          "title": "PEMERIKSAAN PENUNJANG  :",
+          "titleLocation": "left",
+          "hideNumber": true
+         },
+         {
+          "type": "comment",
+          "name": "terapi_tindakan_dokter",
+          "title": "TERAPI / TINDAKAN \t :",
+          "titleLocation": "left",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "signaturepad",
+        "name": "imageigd",
+        "useDisplayValuesInTitle": false,
+        "width": 500,
+        "startWithNewLine": false,
+        "titleLocation": "hidden",
+        "height": 500,
+        "penColor": "#131615"
+       },
+       {
+        "type": "comment",
+        "name": "subjective_igd",
+        "title": "Subjective",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "objective_igd",
+        "startWithNewLine": false,
+        "title": "Objective",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "assesment_igd",
+        "title": "Assesment",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "plan_igd",
+        "startWithNewLine": false,
+        "title": "Plan",
+        "hideNumber": true
+       }
+      ]
+     }
+    ]
+   }

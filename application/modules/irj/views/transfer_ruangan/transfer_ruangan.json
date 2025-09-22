@@ -1,0 +1,765 @@
+{
+    "title": "FORMULIR TRANSFER ANTAR RUANGAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "tgl_masuk",
+        "title": "Tanggal Masuk :",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "tgl_pindah",
+        "startWithNewLine": false,
+        "title": "Tanggal Pindah :",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "text",
+        "name": "asal_ruang_rawat",
+        "startWithNewLine": false,
+        "title": "Asal Ruang Rawat :",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "ruang_rawat_selanjutnya",
+        "startWithNewLine": false,
+        "title": "Ruang Rawat Selanjutnya :",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "dokter_yang_merawat",
+        "title": "Dokter yang merawat :",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "dokter_penanggung_jawab",
+        "startWithNewLine": false,
+        "title": "Dokter Penanggung Jawab Pelayanan DPJP :",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa_utama",
+        "maxWidth": "400",
+        "title": "Diagnosa Utama :",
+        "hideNumber": true,
+        "rows": 7
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "perlu",
+          "title": "Perlu menjadi perhatian ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "alergi",
+            "text": "Alergi "
+           },
+           {
+            "value": "mrssa",
+            "text": "MRSA "
+           },
+           {
+            "value": "lainnya",
+            "text": "Lainnya"
+           }
+          ]
+         },
+         {
+          "type": "panel",
+          "name": "panel1",
+          "elements": [
+           {
+            "type": "text",
+            "name": "check_alergi",
+            "visibleIf": "{perlu} = ['alergi']",
+            "titleLocation": "hidden",
+            "placeHolder": "Sebutkan alergi"
+           },
+           {
+            "type": "text",
+            "name": "check_lainnya",
+            "visibleIf": "{perlu} = ['lainnya']",
+            "titleLocation": "hidden",
+            "placeHolder": "lainnya"
+           }
+          ],
+          "startWithNewLine": false
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa_sekunder",
+        "minWidth": "200px",
+        "maxWidth": "400px",
+        "title": "Diagnosa Sekunder :",
+        "hideNumber": true,
+        "rows": 6
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "<h5> Alasan Pemindahan Pasien : </h5>"
+         },
+         {
+          "type": "checkbox",
+          "name": "kondisi_pasien",
+          "title": "1. Kondisi Pasien :",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "memburuk",
+            "text": "Memburuk"
+           },
+           {
+            "value": "stabil",
+            "text": "Stabil"
+           },
+           {
+            "value": "tidak_ada_perubahan",
+            "text": "Tidak ada perubahan"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "checkbox",
+          "name": "fasilitas",
+          "title": "2. Fasilitas :",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "kurang_memadari",
+            "text": "Kurang Memadai"
+           },
+           {
+            "value": "membutuhkan_peralatan",
+            "text": "Membutuhkan peralatan yang lebih baik"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "checkbox",
+          "name": "tenaga",
+          "title": "3. Tenaga",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "membutuhkan_tenaga_yang",
+            "text": "Membutuhkan tenaga yang lebih ahli "
+           },
+           {
+            "value": "jumlah_tenaga_kurang",
+            "text": "Jumlah Tenaga Kurang "
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "lainya",
+          "title": "Lainnya sebutkan :",
+          "titleLocation": "top",
+          "hideNumber": true
+         },
+         {
+          "type": "radiogroup",
+          "name": "metode_pemindahan_pasien",
+          "title": "Metode Pemindahan Pasien :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "kursi_roda",
+            "text": "Kursi Roda"
+           },
+           {
+            "value": "tempat_tidur",
+            "text": "Tempat tidur"
+           },
+           {
+            "value": "brankar",
+            "text": "Brankar"
+           }
+          ],
+          "colCount": 3
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "checkbox",
+        "name": "derajat_transfer_pasien",
+        "title": "Derajat Transfer Pasien ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "derajat0",
+          "text": "Derajat 0"
+         },
+         {
+          "value": "derajat1",
+          "text": "Derajat 1"
+         },
+         {
+          "value": "derajat2",
+          "text": "Derajat 2"
+         },
+         {
+          "value": "derajat3",
+          "text": "Derajat 3"
+         }
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "pasien_keluarga_mengetahui",
+          "title": "Pasien / Keluarga menegtahui dan menyetujui mengenai alasan pemindahan",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Iya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "keluarga_yang_memberi_persetujuan",
+          "title": "Keluarga yang memberi persetujuan :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "nama",
+            "title": "Nama :"
+           },
+           {
+            "name": "hubungan",
+            "title": "Hubungan :"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "checkbox",
+          "name": "peralatan_yang_menyertai_pasien_saat_pindah",
+          "title": "Peralatan yang menyertai pasien saat pindah ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "portable",
+            "text": "Portable O2 Kebutuhan"
+           },
+           {
+            "value": "alat_penghisap",
+            "text": "Alat Penghisap "
+           },
+           {
+            "value": "bagging",
+            "text": "Bagging "
+           },
+           {
+            "value": "kateter_urin",
+            "text": "Kateter Urin"
+           },
+           {
+            "value": "pompa_infus",
+            "text": "Pompa Infus"
+           },
+           {
+            "value": "ngt",
+            "text": "NGT"
+           },
+           {
+            "value": "ventilator",
+            "text": "Ventilator"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "check_portable",
+          "visibleIf": "{peralatan_yang_menyertai_pasien_saat_pindah} = 'portable'",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "placeHolder": "x/menit"
+         }
+        ],
+        "startWithNewLine": false
+       },
+       {
+        "type": "html",
+        "name": "question2",
+        "html": "<h4> Keadaan pasien saat pindah </h4>\n<h5> Kesadaran (GCS) :"
+       },
+       {
+        "type": "text",
+        "name": "e",
+        "title": "E :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 35
+       },
+       {
+        "type": "text",
+        "name": "m",
+        "startWithNewLine": false,
+        "title": "M :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 35
+       },
+       {
+        "type": "text",
+        "name": "v",
+        "startWithNewLine": false,
+        "title": "V :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 35
+       },
+       {
+        "type": "text",
+        "name": "tekanan_darah",
+        "title": "Tekanan Darah :",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "size": 35,
+        "placeHolder": "mmHG"
+       },
+       {
+        "type": "text",
+        "name": "suhu",
+        "startWithNewLine": false,
+        "title": "Suhu :",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "size": 35,
+        "placeHolder": "°C"
+       },
+       {
+        "type": "text",
+        "name": "nadi",
+        "startWithNewLine": false,
+        "title": "Nadi :",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "size": 35,
+        "placeHolder": "X/menit"
+       },
+       {
+        "type": "text",
+        "name": "pernafasan",
+        "title": "Pernafasan",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 35,
+        "placeHolder": "X/menit"
+       },
+       {
+        "type": "text",
+        "name": "penggunaan_oksigen",
+        "title": "Penggunaan Oksigen :",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "size": 35,
+        "placeHolder": "L/menit"
+       },
+       {
+        "type": "text",
+        "name": "cairan_parenteral",
+        "startWithNewLine": false,
+        "title": "Caran Parenteral :",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "size": 35,
+        "placeHolder": "cc/24 jam"
+       },
+       {
+        "type": "text",
+        "name": "transfusi",
+        "startWithNewLine": false,
+        "title": "Transfusi :",
+        "titleLocation": "top",
+        "hideNumber": true,
+        "size": 35,
+        "placeHolder": "cc"
+       },
+       {
+        "type": "radiogroup",
+        "name": "penggunaan_cateter",
+        "title": "Penggunaan Cateter :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "ya",
+          "text": "Ya"
+         },
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "pemakaian",
+        "startWithNewLine": false,
+        "title": "Pemakaian ke :",
+        "titleLocation": "top",
+        "hideNumber": true
+       },
+       {
+        "type": "html",
+        "name": "question3",
+        "html": "<h4> INFORMASI MEDIS *) <H5> beri tanda pada kondisi yang paling sesuai "
+       },
+       {
+        "type": "checkbox",
+        "name": "gangguan",
+        "title": "Gangguan :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "disabilitas",
+          "text": "Disabilitas"
+         },
+         {
+          "value": "amputasi",
+          "text": "Amputasi"
+         },
+         {
+          "value": "paralis",
+          "text": "Paralis"
+         },
+         {
+          "value": "konstraktur",
+          "text": "Kontraktor"
+         },
+         {
+          "value": "ulkus_dekubitus",
+          "text": "Kultus Dekubitus"
+         },
+         {
+          "value": "mental",
+          "text": "Mental"
+         },
+         {
+          "value": "pendengaran",
+          "text": "Pendengaran"
+         },
+         {
+          "value": "sensasi",
+          "text": "Sensasi"
+         },
+         {
+          "value": "bicara",
+          "text": "Bicara"
+         },
+         {
+          "value": "penglihatan",
+          "text": "Penglihatan"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "inkontinensia",
+        "startWithNewLine": false,
+        "title": "Inkontinensia :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "urin",
+          "text": "Urin"
+         },
+         {
+          "value": "alvi",
+          "text": "Alvi"
+         },
+         {
+          "value": "saliva",
+          "text": "Saliva"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "potensial",
+        "startWithNewLine": false,
+        "title": "Potensial untuk dilakukan rehabilitasi",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "baik",
+          "text": "Baik"
+         },
+         {
+          "value": "sedang",
+          "text": "Sedang"
+         },
+         {
+          "value": "buruk",
+          "text": "Buruk"
+         }
+        ]
+       },
+       {
+        "type": "comment",
+        "name": "pemeriksaan_fisik",
+        "title": "Pemeriksaan fisik ",
+        "description": "Status Generalis (temuan yang signifikan)",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "nama_petugas",
+        "startWithNewLine": false,
+        "title": "Pendamping saat pasien pindah",
+        "description": "Nama Petugas :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "status_lokalis",
+        "title": "Status Lokalis (temuan yang signifikan)",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "pemeriksaan_penunjang",
+        "title": "Pemeriksaan Penunjang / diagnostik yang sudah dilakukan (EKG, Lab, dll)",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "intervensi",
+        "title": "Intervensi/Tindakan yang sudah dilakukan :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diet",
+        "title": "Diet :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "rencana_perawatan",
+        "title": "Rencana Perawatan Selanjutnya :",
+        "hideNumber": true
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "status_kemandirian",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "1",
+          "title": "Aktifitas di tempat tidur",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Berguling"
+           },
+           {
+            "value": "2",
+            "text": "Duduk"
+           }
+          ]
+         },
+         {
+          "name": "2",
+          "title": "Higiene Pribadi",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Wajah, Rambut, Tangan"
+           },
+           {
+            "value": "2",
+            "text": "Batang tubuh & perinium "
+           },
+           {
+            "value": "3",
+            "text": "Ekstrimitas Bawah"
+           },
+           {
+            "value": "4",
+            "text": "Traktus Digestivus"
+           },
+           {
+            "value": "5",
+            "text": "Traktur Urinarius"
+           }
+          ]
+         },
+         {
+          "name": "3",
+          "title": "Berpakaian",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Ekstremitas atas"
+           },
+           {
+            "value": "2",
+            "text": "Batang tubuh & perinium"
+           },
+           {
+            "value": "3",
+            "text": "Ekstremitas bawah"
+           }
+          ]
+         },
+         {
+          "name": "4",
+          "title": "Makan",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "-",
+            "text": "-"
+           }
+          ]
+         },
+         {
+          "name": "5",
+          "title": "Pergerakan",
+          "cellType": "checkbox",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Jalan Kaki"
+           },
+           {
+            "value": "2",
+            "text": "Kursi Roda"
+           }
+          ]
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "cellType": "checkbox",
+        "columnColCount": 1,
+        "rows": [
+         {
+          "value": "Butuh Bantuan",
+          "text": "Butuh Bantuan"
+         },
+         {
+          "value": "Tidak dapat melakukan",
+          "text": "Tidak Dapat Melakukan"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question4",
+        "html": "<h4> Terapi Saat Pindah"
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question5",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "nama_obat",
+          "title": "Nama Obat ",
+          "cellType": "text"
+         },
+         {
+          "name": "jumlah_frekwensi",
+          "title": "Jumlah Frekwensi",
+          "cellType": "text"
+         },
+         {
+          "name": "dosis",
+          "title": "Dosis ",
+          "cellType": "text"
+         },
+         {
+          "name": "cara_pemberian",
+          "title": "Cara Pemberian",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1
+       },
+       {
+        "type": "html",
+        "name": "question6",
+        "html": "<h5> Seluruh proses pemindahan pasien telah selesai dan dilakukan sesuai standard operasional prosedur yang diterapkan"
+       }
+      ]
+     }
+    ],
+    "showCompletedPage": false
+   }

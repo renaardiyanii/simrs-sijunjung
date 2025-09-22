@@ -1,0 +1,109 @@
+{
+  "pages": [
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "multipletext",
+      "name": "question2",
+      "title": "Saya yang bertanda tangan di bawah ini :",
+      "hideNumber": true,
+      "items": [
+       {
+        "name": "text1",
+        "title": "Nama"
+       },
+       {
+        "name": "text2",
+        "inputType": "number",
+        "title": "NIK"
+       },
+       {
+        "name": "text3",
+        "inputType": "number",
+        "title": "Umur"
+       },
+       {
+        "name": "text4",
+        "title": "Alamat"
+       },
+       {
+        "name": "text5",
+        "inputType": "number",
+        "title": "No. HP\t"
+       }
+      ]
+     },
+     {
+      "type": "text",
+      "name": "question3",
+      "title": "Adalah \n(sebutkan hubungan dengan pasien) dari pasien yang nama tertera didalam label atas :",
+      "titleLocation": "left",
+      "hideNumber": true,
+      "size": 30
+     },
+     {
+      "type": "html",
+      "name": "question4",
+      "html": "<h5>Dikarenakan hak jatah ruangan pasien ketika masuk rumah sakit penuh. Maka dengan ini saya menyatakan bahwa :"
+     },
+     {
+      "type": "matrixdropdown",
+      "name": "question5",
+      "indent": -1,
+      "titleLocation": "hidden",
+      "showHeader": false,
+      "columns": [
+       {
+        "name": "column1",
+        "cellType": "text"
+       }
+      ],
+      "choices": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "rows": [
+       {
+        "value": "item1",
+        "text": "1. Hak jatah kelas BPJS pasien adalah "
+       },
+       {
+        "value": "item2",
+        "text": "2. Ruangan yang ditempati saat masuk rumah sakit adalah"
+       },
+       {
+        "value": "item3",
+        "text": "  Kelas"
+       }
+      ]
+     },
+     {
+      "type": "html",
+      "name": "question6",
+      "html": "<h5>&nbsp;&nbsp;3. Saya bersedia pasien dipindahkan kembali ketika ruangan yang sesuai jatah  telah tersedia.<p><p>\n&nbsp;&nbsp;4.\tJika tidak bersedia pindah maka saya bersedia untuk melakukan pernyataan selisih tarif terhitung dari awal pasien masuk rumah sakit.<p>\n&nbsp;&nbsp;5.\tJika BPJS kelas 3 tidak bersedia dipindahkan ketika ruangan tersedia maka saya bersedia UMUM. Dikarenakan BPJS kelas 3 tidak boleh naik kelas atau selisih tarif.\n"
+     },
+     {
+      "type": "html",
+      "name": "question7",
+      "html": "<h5>Demikianlah surat pernyataan ini dibuat dengan sebenarnya, dalam keadaan sadar dan tanpa ada paksaan dari pihak manapun dan untuk dipergunakan sebagaimana mestinya."
+     },
+     {
+      "type": "signaturepad",
+      "name": "question8",
+      "title": "Pasien/Penanggung Pasien                              ",
+      "hideNumber": true
+     },
+     {
+      "type": "html",
+      "name": "question13",
+      "html": "01.03.2023.RM-001i / RI "
+     }
+    ],
+    "title": "SURAT PERNYATAAN TITIP  (RUANG RAWAT TIDAK TERSEDIA SESUAI JATAH) "
+   }
+  ]
+ }

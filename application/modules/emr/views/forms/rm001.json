@@ -1,0 +1,303 @@
+{
+    "pages": [
+     {
+      "name": "slip_admission",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "SLIP ADMISSION",
+        "title": "Tanggal/Pukul",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "tgl",
+          "inputType": "date",
+          "title": "Tanggal :"
+         },
+         {
+          "name": "time",
+          "inputType": "time",
+          "title": "Pukul :"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "Identitas_Pasien",
+        "title": "I.Identitas Pasien (ditulis oleh pasien atau keluarga)",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "nama",
+          "title": "Nama Lengkap :"
+         },
+         {
+          "name": "tgl_lahir",
+          "title": "Tanggal Lahir :"
+         },
+         {
+          "name": "alamat",
+          "title": "Alamat Pasien :"
+         },
+         {
+          "name": "penanggung_jawab",
+          "title": "Penanggung Jawab :"
+         },
+         {
+          "name": "Pekerjaan_Penanggung_Jawab",
+          "title": "Pekerjaan Penanggung Jawab :"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "Diagnosa_Masuk",
+        "title": "II.Diagnosa Masuk :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "Rencana_Perawatan",
+        "title": "Rencana Perawatan :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         "MRS",
+         "Operasi",
+         "Kemoterapi",
+         "Persalinan",
+         "ODC"
+        ],
+        "colCount": 5
+       },
+       {
+        "type": "text",
+        "name": "Dokter_yang_merawat",
+        "title": "Dokter yang merawat",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "Cara_Bayar",
+        "title": "Cara Bayar :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         "Umum",
+         "BPJS",
+         "Perusahan",
+         "Lain - Lain"
+        ],
+        "colCount": 4
+       },
+       {
+        "type": "text",
+        "name": "Hak_Perawatan_Kelas",
+        "title": "Hak Perawatan di Kelas :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "Kelas_Perawatan",
+        "title": "III.Kelas Perawatan :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         "III",
+         "II",
+         "I",
+         "VIP",
+         "SUPER VIP"
+        ],
+        "colCount": 5
+       },
+       {
+        "type": "checkbox",
+        "name": "Ruangan",
+        "title": "Ruangan :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         "Selincah",
+         "Kikim",
+         "Kelingi",
+         "Komering",
+         "Borang",
+         "Rambang",
+         "Lematang",
+         "Musi",
+         "Ogan",
+         "Enim",
+         "Lakitan",
+         "Rawas",
+         "HCU",
+         "BHC",
+         "Transit IGD",
+         "ICU(NICU/PICU/GICU)"
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "boolean",
+        "name": "Situasi Kamar",
+        "title": "Situasi Kamar :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "boolean",
+        "name": "Kesiapan Kamar",
+        "title": "Kesiapan Kamar :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "Ruang_Perawatan",
+        "title": "Ruang Perawatan :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "isRequired": true,
+        "placeHolder": "RP."
+       },
+       {
+        "type": "multipletext",
+        "name": "Informasi_Biaya",
+        "title": "IV.Informasi Biaya",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Jenis Tindakan :"
+         },
+         {
+          "name": "text2",
+          "title": "Rp+"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "Visit_Dokter",
+        "title": "Visit Dokter :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "isRequired": true,
+        "placeHolder": "Rp."
+       },
+       {
+        "type": "text",
+        "name": "Lain_Lain",
+        "title": "Lain Lain :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "isRequired": true,
+        "placeHolder": "Rp."
+       },
+       {
+        "type": "boolean",
+        "name": "Informasi Kamar",
+        "title": "Informasi Ketersediaan & Situasi Kamar :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "boolean",
+        "name": "Informasi Hak & Kewajiban",
+        "title": "Informasi Hak & Kewajiban :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "boolean",
+        "name": "Informasi General Concent",
+        "title": "Informasi General Concent :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "boolean",
+        "name": "Informasi Cara Bayar",
+        "title": "Informasi Cara Bayar dan Perlengkapan / Persyaratan :",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "checkbox",
+        "name": "Rekam Medik Lama",
+        "title": "Rekam Medik Lama :",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "Ada",
+          "text": "Ada"
+         },
+         {
+          "value": "Tidak",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "checkbox",
+        "name": "Check_List_Pasien",
+        "title": "Check List Pasien Oleh : ",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "IRD",
+          "text": "IRD"
+         },
+         {
+          "value": "Admission",
+          "text": "Admission"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "text",
+        "name": "Palembang",
+        "indent": 25,
+        "title": "Palembang, ",
+        "titleLocation": "left",
+        "hideNumber": true
+       },
+       {
+        "type": "signaturepad",
+        "name": "TTD_Pasien_Keluarga",
+        "title": "Pasien / Keluarga",
+        "hideNumber": true,
+        "penColor": "#040411"
+       },
+       {
+        "type": "signaturepad",
+        "name": "TTD_Petugas_Ruangan",
+        "startWithNewLine": false,
+        "title": "Petugas Ruangan Rawat Inap",
+        "hideNumber": true,
+        "penColor": "#070f1d"
+       },
+       {
+        "type": "signaturepad",
+        "name": "TTD_Pemberi_Informasi",
+        "startWithNewLine": false,
+        "title": "Pemberi Informasi",
+        "hideNumber": true,
+        "penColor": "#030816"
+       }
+      ],
+      "title": "SLIP ADMISSION"
+     }
+    ]
+   }

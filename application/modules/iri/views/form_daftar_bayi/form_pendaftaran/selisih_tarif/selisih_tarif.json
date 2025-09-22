@@ -1,0 +1,79 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "multipletext",
+        "name": "data",
+        "title": "Saya yang bertanda tangan dibawah ini :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama"
+         },
+         {
+          "name": "text2",
+          "title": "No KTP"
+         },
+         {
+          "name": "text4",
+          "title": "Umur"
+         },
+         {
+          "name": "text3",
+          "title": "Alamat\t"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question2",
+        "title": "Adalah",
+        "titleLocation": "left",
+        "hideNumber": true,
+        "size": 34
+       },
+       {
+        "type": "multipletext",
+        "name": "question1",
+        "title": "dari pasien :",
+        "hideNumber": true,
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama"
+         },
+         {
+          "name": "text2",
+          "title": "No KTP"
+         },
+         {
+          "name": "text3",
+          "title": "Alamat"
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question4",
+        "html": "<p style=\"font-size:12px\">Dengan ini menyatakan bersedia membayar selisih tarif sesuai aturan yang berlaku di Rumah Sakit Otak DR.Drs.M.Hatta Bukittinggi  tentang : <b>PENETAPAN PENGENAAN SELISIH BIAYA DALAM PROGRAM JAMINAN KESEHATAN</b> dan terkait Permenkes No 3 Tahun 2023 tentang Standar Tarif Pelayanan Kesehatan Dalam Penyelenggaraan Program Jaminan Kesehatan.</p>"
+       },
+       {
+        "type": "html",
+        "name": "question5",
+        "html": "1.\tPeningkatan kelas perawatan yang lebih tinggi dari haknya <b>tidak dapat dilakukan oleh peserta BPJS hak kelas III (tiga) baik BPJS PBI maupun BPJS Mandiri.</b>\n<br>\n2.\tUntuk peningkatan kelas perawatan kelas III (tiga) yang <b>melebihi satu tingkat</b> dari kelas rawatan yang menjadi hak peserta tidak dijamin oleh BPJS (menjadi pasien umum dan berlaku tarif sesuai ketentuan Rumah Sakit Otak DR.Drs.M. Hatta Bukittinggi).\n<br>\nPasal 48 :<br>\n\n1.\tHak rawat kelas II (dua) naik ke kelas I (satu), maka Selisih tarif INA-CBG pada kelas rawat inap Kelas I (satu) dengan tarif INA-CBG pada kelas rawat inap kelas II (dua);<br>\n2.\tHak rawat kelas 1 naik ke kelas diatas kelas 1(VIP), maka selisih tarif INA-CBG kelas 1 dengan tarif kelas di atas kelas 1 yaitu paling banyak sebesar 75% (tujuh puluh lima persen) dari tarif INA-CBG kelas 1\n<br>\n3.\tHak rawat kelas 2 naik ke kelas diatas kelas 1(VIP), maka selisih tarif INA-CBG antara kelas 1 dengan kelas 2 ditambah paling banyak sebesar 75% (tujuh puluh lima persen) dari tarif INA-CBG kelas 1.\n<br>\n4.\tKetentuan selisih biaya hak rawat kelas 1 naik ke kelas diatas kelas 1 dan hak rawat kelas 2 naik ke kelas di atas kelas 1 (VIP) tidak berlaku apabila biaya pelayanan rawat inap di Rumah Sakit tidak melebihi tarif INA-CBG sesuai hak peserta.<br>\nDemikianlah surat pernyataan ini dibuat untuk digunakan seperlunya.\n"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question7",
+        "title": "Yang Menyatakan,",
+        "hideNumber": true,
+        "penColor": "#0a0a0a"
+       }
+      ],
+      "title": "SURAT PERNYATAAN SELISIH TARIF"
+     }
+    ]
+   }

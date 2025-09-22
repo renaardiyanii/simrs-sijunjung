@@ -1,0 +1,955 @@
+{
+    "title": "ASSESMENT AWAL KEPERAWATAN POLIKLINIK MATA",
+    "showCompletedPage": false,
+    "description": "(Dilengkapi dalam waktu 2 jam pertama pasien masuk ruanga rawat jalan)",
+    "pages": [
+     {
+      "name": "data_umum",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "html",
+          "name": "riwayat_kesehatan",
+          "html": "RIWAYAT KESEHATAN"
+         },
+         {
+          "type": "comment",
+          "name": "riwayat_kesehatan_sekarang",
+          "title": "Riwayat Kesehatan Sekarang",
+          "hideNumber": true
+         },
+         {
+          "type": "html",
+          "name": "status_oftalmik",
+          "html": "STATUS OFTALMIK :"
+         },
+         {
+          "type": "multipletext",
+          "name": "visus",
+          "title": "VISUS :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "od",
+            "title": "OD :"
+           },
+           {
+            "name": "os",
+            "title": "OS :"
+           }
+          ]
+         },
+         {
+          "type": "multipletext",
+          "name": "kacamata",
+          "startWithNewLine": false,
+          "title": "KACAMATA",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "od",
+            "title": "OD :"
+           },
+           {
+            "name": "os",
+            "title": "OS :"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "html",
+          "name": "assesment_nyeri",
+          "html": "ASSESMENT NYERI"
+         },
+         {
+          "type": "radiogroup",
+          "name": "nyeri",
+          "title": "NYERI :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           },
+           {
+            "value": "ya, bersifat",
+            "text": "Ya, Bersifat"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "check_nyeri",
+          "visibleIf": "{nyeri} = 'ya, bersifat'",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "akut",
+            "text": "akut"
+           },
+           {
+            "value": "panas_terbakar",
+            "text": "panas_terbakar"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "panel",
+          "name": "panel2",
+          "elements": [
+            {
+                "type": "signaturepad",
+                "name": "image_nyeri1",
+                "image": "/assets/images/nyeri.png",
+                "width": 500,
+                "indent": 25,
+                "titleLocation": "hidden",
+                "height": 500,
+                "penColor": "#0e1010"
+               },
+           {
+            "type": "radiogroup",
+            "name": "kualitas_nyeri",
+            "visibleIf": "{nyeri} anyof ['ya, bersifat', 'akut', 'panas_terbakar']",
+            "title": "1.Kualitas Nyeri :",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "nyeri_tumpul",
+              "text": "Nyeri Tumpul"
+             },
+             {
+              "value": "nyeri_tajam",
+              "text": "Nyeri Tajam"
+             },
+             {
+              "value": "panas_terbakar",
+              "text": "Panas / Terbakar"
+             }
+            ],
+            "colCount": 3
+           },
+           {
+            "type": "radiogroup",
+            "name": "menjalar",
+            "visibleIf": "{nyeri} anyof ['ya, bersifat', 'akut', 'panas_terbakar']",
+            "title": "2. Menjalar :",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "tidak",
+              "text": "Tidak"
+             },
+             {
+              "value": "ya",
+              "text": "Ya, ke"
+             }
+            ],
+            "otherText": "Ya, ke",
+            "colCount": 3
+           },
+           {
+            "type": "text",
+            "name": "check_menjalar",
+            "visibleIf": "{menjalar} = 'ya'",
+            "startWithNewLine": false,
+            "titleLocation": "hidden",
+            "size": 35
+           },
+           {
+            "type": "text",
+            "name": "skor_nyeri",
+            "visibleIf": "{nyeri} anyof ['ya, bersifat', 'akut', 'panas_terbakar']",
+            "title": "3. Skor Nyeri",
+            "titleLocation": "left",
+            "hideNumber": true
+           },
+           {
+            "type": "radiogroup",
+            "name": "frekuensi_nyeri",
+            "visibleIf": "{nyeri} anyof ['ya, bersifat', 'akut', 'panas_terbakar']",
+            "title": "4. Frekuensi Nyeri :",
+            "titleLocation": "left",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "jarang",
+              "text": "Jarang"
+             },
+             {
+              "value": "hilang_timbul",
+              "text": "Hilang Timbul"
+             },
+             {
+              "value": "terus_menerus",
+              "text": "Terus Menerus"
+             }
+            ],
+            "otherText": "Ya, ke",
+            "colCount": 3
+           },
+           {
+            "type": "text",
+            "name": "lamanya_nyeri",
+            "visibleIf": "{nyeri} anyof ['ya, bersifat', 'akut', 'panas_terbakar']",
+            "title": "5. Lamanya Nyeri :",
+            "titleLocation": "left",
+            "hideNumber": true
+           },
+           {
+            "type": "text",
+            "name": "lokasi_nyeri",
+            "visibleIf": "{nyeri} anyof ['ya, bersifat', 'akut', 'panas_terbakar']",
+            "title": "6. Lokasi Nyeri :",
+            "titleLocation": "left",
+            "hideNumber": true
+           },
+           {
+            "type": "checkbox",
+            "name": "faktor_faktor",
+            "visibleIf": "{nyeri} anyof ['ya, bersifat', 'akut', 'panas_terbakar']",
+            "title": "7. Faktor Faktor yang mengurangi / menghilangkan nyeri ",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "minum_obat",
+              "text": "Minum Obat"
+             },
+             {
+              "value": "istirahat",
+              "text": "Istirahat"
+             },
+             {
+              "value": "mendengar_musik",
+              "text": "Mendengar Musik"
+             },
+             {
+              "value": "berubah_posisi_tidur",
+              "text": "Berubah Posisi/Tidur"
+             }
+            ],
+            "colCount": 4
+           }
+          ],
+          "visibleIf": "{check_nyeri} anyof ['akut', 'panas_terbakar']"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "skrining_gizi",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": "<h4>SKRINING GIZI (Berdasarkan Malnutrition Screening Tool /  MST )"
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "table_skrining",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "1.Apakah pasien mengalami penurunan berat badan yang tidak direncanakan/tidak diinginkan dalm 6 bulan terakhir?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "2",
+              "text": "Tidak yakin (ada tanda : baju menjadi lebih longgar) (2)"
+             },
+             {
+              "value": "1",
+              "text": "1-5 Kg    (1)"
+             },
+             {
+              "value": "2",
+              "text": "6-10 Kg    (2)"
+             },
+             {
+              "value": "3",
+              "text": "11-15 Kg    (3)"
+             },
+             {
+              "value": "4",
+              "text": ">15 Kg  (4)"
+             },
+             {
+              "value": "2",
+              "text": "Tidak tahu berapa Kg penurunannya    (2)"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "2.Apakah asupan makan pasien berkurang karena penurunan nafsu makan/kesulitan menerima makanan?",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak (0)"
+             },
+             {
+              "value": "1",
+              "text": "Ya(1)"
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Total Skor ",
+            "cellType": "expression",
+            "expression": "{row.1} + {row.2}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "result",
+            "text": "Skor"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel12",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question22",
+          "html": "STATUS PSIKOSOSIAL"
+         },
+         {
+          "type": "radiogroup",
+          "name": "hubungan_dengan_keluarga",
+          "title": "Hubungan dengan anggota keluarga",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "baik",
+            "text": "Baik"
+           },
+           {
+            "value": "tidak_baik",
+            "text": "Tidak Baik"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "html",
+          "name": "question24",
+          "html": "STATUS PSIKOLOGIS"
+         },
+         {
+          "type": "radiogroup",
+          "name": "status_psikologi",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tenang",
+            "text": "Tenang"
+           },
+           {
+            "value": "cemas",
+            "text": "Cemas"
+           },
+           {
+            "value": "takut",
+            "text": "Takut"
+           },
+           {
+            "value": "marah",
+            "text": "Marah"
+           },
+           {
+            "value": "bunuhdiri",
+            "text": "Kecenderungan Bunuh Diri"
+           },
+           {
+            "value": "lainnya",
+            "text": "Lain - Lain"
+           }
+          ],
+          "noneText": "Lain-lain",
+          "otherText": "Kecenderungan bunuh diri",
+          "colCount": 5
+         },
+         {
+          "type": "html",
+          "name": "question26",
+          "html": "SKRINING RISIKO CEDERA / JATUH"
+         },
+         {
+          "type": "radiogroup",
+          "name": "resiko_jatuh",
+          "title": "Skor :",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "resiko_rendah",
+            "text": "Resiko Rendah"
+           },
+           {
+            "value": "resiko_tinggi",
+            "text": "Resiko Tinggi"
+           },
+           {
+            "value": "tidak_beresiko",
+            "text": "Tidak Beresiko"
+           },
+           {
+            "value": "pasang_gelang",
+            "text": "Pasang Gelang resiko jatuh warna kuning"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "html",
+          "name": "question28",
+          "html": "ASESMENT FUNGSIONAL"
+         },
+         {
+          "type": "radiogroup",
+          "name": "penggunaan_alat_bantu",
+          "title": "Penggunaan Alat Bantu",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "mandiri",
+            "text": "Mandiri"
+           },
+           {
+            "value": "ketergantungan_total",
+            "text": "Ketergantungan Total"
+           },
+           {
+            "value": "perlu_bantuan",
+            "text": "Perlu Bantuan"
+           }
+          ],
+          "otherText": "Perlu bantuan, sebutkan",
+          "colCount": 3
+         },
+         {
+          "type": "radiogroup",
+          "name": "check_alat_bantu",
+          "visibleIf": "{penggunaan_alat_bantu} = 'perlu_bantuan'",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "tongkat",
+            "text": "Tongkat"
+           },
+           {
+            "value": "kursi roda",
+            "text": "Kursi Roda"
+           },
+           {
+            "value": "brankard",
+            "text": "Brankard"
+           },
+           {
+            "value": "walker",
+            "text": "Walker"
+           },
+           {
+            "value": "lainnya",
+            "text": "Lainnya"
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "text",
+          "name": "check_lainnya1",
+          "visibleIf": "{check_alat_bantu} = 'lainnya'",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "size": 25
+         },
+         {
+          "type": "radiogroup",
+          "name": "kekuatan_otot",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "kekuatan_otot",
+            "text": "Kekuatan Otot"
+           }
+          ],
+          "otherText": "Perlu bantuan, sebutkan",
+          "colCount": 3
+         },
+         {
+          "type": "panel",
+          "name": "panel6",
+          "elements": [
+           {
+            "type": "rating",
+            "name": "tangan_kanan",
+            "title": "Tangan Kanan :",
+            "hideNumber": true
+           },
+           {
+            "type": "rating",
+            "name": "tangan_kiri",
+            "startWithNewLine": false,
+            "title": "Tangan Kiri :",
+            "hideNumber": true
+           },
+           {
+            "type": "rating",
+            "name": "kaki_kanan",
+            "title": "Kaki Kanan :",
+            "hideNumber": true
+           },
+           {
+            "type": "rating",
+            "name": "kaki_kiri",
+            "startWithNewLine": false,
+            "title": "Kaki Kiri :",
+            "hideNumber": true
+           }
+          ],
+          "visibleIf": "{kekuatan_otot} = 'kekuatan_otot'"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "idmasalah_keperawatan",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel9",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question3",
+          "html": "<h4> Masalah Keperawatan"
+         },
+         {
+          "type": "checkbox",
+          "name": "nyeri_akut",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Nyeri (Akut/Kronis)"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "chek_masalahkeperawatan",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{nyeri_akut} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "ketidakseimbangan_nutrisi",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ketidak Seimbangan Nutrisi kurang dari kebutuhan tubuh."
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_ketidakseimbangan_nutrisi",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{ketidakseimbangan_nutrisi} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "pola_nafas_tidak_efektif",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Pola Nafas Tidak Efektif"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_pola_nafas_tidak_efektif",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{pola_nafas_tidak_efektif} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "bersihkan_jalan_nafas",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Bersihkan Jalan Nafas"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_bersihkan_jalan_nafas",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{bersihkan_jalan_nafas} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "hipertermia",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hipertermia"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_hipertermia",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{hipertermia} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "diare",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Diare"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_diare",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "enableIf": "{diare} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "resiko_infeksi_pembedahan",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Resiko Infeksi Pembedahan"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_resiko_infeksi_pembedahan",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{resiko_infeksi_pembedahan} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "ansietas",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ansietas"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_ansietas",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{ansietas} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "gangguan_citra_tubuh",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Gangguan Citra Tubuh"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_gangguan_citra_tubuh",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{gangguan_citra_tubuh} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "gangguan_menelan",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Gangguan Menelan"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_gangguan_menelan",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{gangguan_menelan} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "penurunan_curah_jantung",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Penurunan Curah Jantung"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_penurunan_curah_jantung",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{penurunan_curah_jantung} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "intoleran_aktifitas",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Intoleran Aktifitas"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_intoleran_aktifitas",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{intoleran_aktifitas} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "gangguan_mobilitas_fisik",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Gangguan Mobilitas Fisik"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_gangguan_mobilitas_fisik",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{gangguan_mobilitas_fisik} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "hambatan_komunikasi_verbal",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Hambatan Komunikasi Verbal"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_hambatan_komunikasi_verbal",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{hambatan_komunikasi_verbal} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "diskontuinitas_jaringan",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Diskontiunitas Jaringan"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_diskontuinitas_jaringan",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{diskontuinitas_jaringan} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "ketidakstabilan_gula_darah",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ketidakstabilan Kadar Gula Darah"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_ketidakstabila_gula_darah",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "enableIf": "{ketidakstabilan_gula_darah} = ['item1']"
+         },
+         {
+          "type": "checkbox",
+          "name": "lainnya",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Lainnya"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "check_lainnya",
+          "visibleIf": "{lainnya} = ['item1']",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "check_lainnya2",
+          "visibleIf": "{lainnya} = ['item1']",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "edukasi_pasien",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question2",
+          "html": "KEBUTUHAN EDUKASI\n"
+         },
+         {
+          "type": "checkbox",
+          "name": "Pengetahuan Edukasi",
+          "title": "Kesediaan Keluarga Pasien",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Pengetahuan Tentang Penyakit"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "perawatan_penyakit",
+          "title": "Kesediaan Keluarga Pasien",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Perawatan Dirumah Tentang Penyakit"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "cara_minum_obat",
+          "title": "Kesediaan Keluarga Pasien",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Cara Minum Obat"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "diet",
+          "title": "Kesediaan Keluarga Pasien",
+          "titleLocation": "hidden",
+          "choices": [
+           {
+            "value": "1",
+            "text": "Diet"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

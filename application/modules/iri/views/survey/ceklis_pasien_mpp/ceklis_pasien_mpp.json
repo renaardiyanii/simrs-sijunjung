@@ -1,0 +1,172 @@
+{
+    "title": "CEKLIS PASIEN DENGAN PERENCANAAN PEMULANGAN PASIEN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "kondisi_pasien",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "pasien_lansia_dengan_kelemahan",
+            "title": "Pasien lansia dengan kelemahan fisik"
+           },
+           {
+            "name": "pasien_stunting",
+            "title": "Pasien Stunting"
+           },
+           {
+            "name": "pasien_yang_memerlukan",
+            "title": "Pasien yang memerlukan perawatan Khusus"
+           },
+           {
+            "name": "pasien_vegetatif",
+            "title": "Pasien Vegetatif "
+           },
+           {
+            "name": "pasien_perawatan_paliatif",
+            "title": "Pasien perawatan paliatif (hospis)"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "cellType": "radiogroup",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "KONDISI PASIEN "
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "gangguan_aktivitas",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "pasca_stroke",
+            "title": "Pasca Stroke"
+           },
+           {
+            "name": "pasca_operasi_tulang_belakang",
+            "title": "Pasca Operasi Tulang Belakang "
+           },
+           {
+            "name": "Pasca Operasi daerah Panggul"
+           },
+           {
+            "name": "pasca_operasi_colum_femoris",
+            "title": "Pasca Operasi Colum Femoris"
+           },
+           {
+            "name": "pasca_luka_bakar",
+            "title": "Pasca Luka Bakar > 30 %"
+           },
+           {
+            "name": "pasca_operasi_besar_dengan_gangguan_aktivitas",
+            "title": "Pasca Operasi Besar dengan gangguan aktivitas"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "cellType": "radiogroup",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "GANGGUAN AKTIVITAS SEHARI HARI"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "bantuan_asuhan_pengobatan",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "perawatan_luka_yang_luas",
+            "title": "Perawatan Luka yang luas atau posisi sulit"
+           },
+           {
+            "name": "perawatan_luka_operasi",
+            "title": "Perawatan Luka Operasi "
+           },
+           {
+            "name": "pemberian_terapi",
+            "title": "Pemberian Terapi (misalnya insulin)"
+           },
+           {
+            "name": "pasien_lansia",
+            "title": "Pasien Lansia dengan dementia"
+           },
+           {
+            "name": "pasien_anak",
+            "title": "Pasien Anak"
+           },
+           {
+            "name": "variasi_rute",
+            "title": "Variasi Rute pemberian"
+           },
+           {
+            "name": "variasi_aturan_pakai",
+            "title": "Variasi aturan pakai"
+           },
+           {
+            "name": "cara_pemberian_khusus",
+            "title": "Cara Pemberian Khusus ( Contoh : inhalasi, rektail)"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           {
+            "value": "ya",
+            "text": "Ya"
+           },
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "cellType": "radiogroup",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "title": "BANTUAN ASUHAN / PENGOBATAN"
+       }
+      ]
+     }
+    ]
+   }

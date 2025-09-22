@@ -1,0 +1,186 @@
+{
+    "title": "SURAT PERNYATAAN PULANG APS (ATAS PERMINTAAN SENDIRI)",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "title": "Saya yang bertandatangan dibawah ini,",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "placeHolder": "tahun",
+            "title": "Umur"
+           },
+           {
+            "name": "text3",
+            "title": "Alamat"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question2",
+          "title": "Selaku ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "Diri Sendiri",
+            "text": "diri sindiri"
+           },
+           {
+            "value": "istri",
+            "text": "istri "
+           },
+           {
+            "value": "suami",
+            "text": "suami "
+           },
+           {
+            "value": "ayah",
+            "text": "ayah "
+           },
+           {
+            "value": "ibu",
+            "text": "ibu "
+           },
+           {
+            "value": "anak",
+            "text": "anak "
+           },
+           {
+            "value": "kakak",
+            "text": "kakak "
+           },
+           {
+            "value": "adik",
+            "text": "adik "
+           },
+           {
+            "value": "teman",
+            "text": "teman "
+           },
+           {
+            "value": "kerabat",
+            "text": "kerabat "
+           }
+          ],
+          "colCount": 5
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "title": "dari pasien :",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "No. RM"
+           },
+           {
+            "name": "text2",
+            "title": "Nama"
+           },
+           {
+            "name": "text3",
+            "title": "Tgl. Lahir"
+           },
+           {
+            "name": "text4",
+            "title": "Alamat"
+           },
+           {
+            "name": "text5",
+            "title": "Dirawat di"
+           }
+          ]
+         },
+         {
+          "type": "html",
+          "name": "question4",
+          "html": "<p>1. Dengan sadar tanpa paksaan dari pihak manapun meminta kepada pihak Rumah sakit untuk PULANG ATAS PERMINTAAAN SENDIRI yang merupakan hak saya / pasien dengan alasan: "
+         },
+         {
+          "type": "comment",
+          "name": "question5",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "html",
+          "name": "question6",
+          "html": "<p>2. Saya telah memahami sepenuhnya penjelasan yang diberikan dari pihak Rumah Sakit mengenai penyakit dan kemungkinan / konsekuensi terbaik sampai dengan terburuk atas keputusan yang saya ambil. Serta tanggung jawab saya dalam mengambil keputusan ini.\n<p>3. Apabila terjadi sesuatu hal berkaitan dengan keputusan yang telah diambil, maka hal tersebut adalah menjadi tanggung jawab pasien / keluarga sepenuhnya dan tidak akan menyangkut pautkan atau menuntut rumah sakit ini.\n<p>4. Atas keputusan saya ini, rumah sakit telah memberukan penjelasan mengenai alternatif pengobatan selanjutnya.\n<p>Demikian pernyataan ini saya buat dengan sesungguhnya untuk diketahui dan digunakan sebagai mana perlunya.\n<p>Saya menyadari beban biaya second opinion menjadi tenggung jawab saya."
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "title": "Tanah badantuang, ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question9",
+          "title": "saksi 1",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question8",
+          "startWithNewLine": false,
+          "title": "saksi 2",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question10",
+          "startWithNewLine": false,
+          "title": "petugas",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question11",
+          "startWithNewLine": false,
+          "title": "Yang menyatakan pasien/ wali",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question12",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question13",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question14",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question15",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

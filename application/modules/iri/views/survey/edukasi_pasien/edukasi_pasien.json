@@ -1,0 +1,1217 @@
+{
+    "title": "CATATAN EDUKASI TERINTEGRASI PASIEN / KELUARGA",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "ruangan_ranap",
+          "title": "Ruangan :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "size": 40
+         },
+         {
+          "type": "radiogroup",
+          "name": "hambatan_belajar_ranap",
+          "title": "Hambatan Belajar ;",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak_ada",
+            "text": "1. Tidak ada"
+           },
+           {
+            "value": "pandangan_terbatas",
+            "text": "2. Pandanga Terabatas"
+           },
+           {
+            "value": "hambatan_bahasa",
+            "text": "3. Hambatan Bahasa "
+           },
+           {
+            "value": "kognisi_terbatas",
+            "text": "4. Kognisi Terbatas"
+           },
+           {
+            "value": "pendengaran_terbatas",
+            "text": "5. Pendengaran Terbatas"
+           },
+           {
+            "value": "hambatan_emosi",
+            "text": "6. Hambatan Emosi"
+           },
+           {
+            "value": "keterbatasan_fisik",
+            "text": "7. Keterbatasan Fisik"
+           },
+           {
+            "value": "pertimbangan_budaya",
+            "text": "8. Pertimbangan budaya dalam perawatan"
+           },
+           {
+            "value": "tidak_bisa_membaca",
+            "text": "9. Tidak bisa membaca"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "check_hambatan",
+          "visibleIf": "{hambatan_belajar_ranap} = 'hambatan_bahasa'",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Ya",
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "chek_pertimbangann_budaya",
+          "visibleIf": "{hambatan_belajar_ranap} = 'pertimbangan_budaya'",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "tidak",
+            "text": "Tidak"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Ya",
+          "colCount": 2
+         }
+        ]
+       },
+       {
+        "type": "html",
+        "name": "question1",
+        "html": "<h5> KEBUTUHAN EDUKASI , TOPIK EDUKASI :"
+       },
+       {
+        "type": "checkbox",
+        "name": "penjelasan_tentang_perawatan",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "perawatan_penyakit_pasien",
+          "text": "1. PENJELASAN TENTANG PERAWATAN PENYAKIT PASIEN,  JIKA PENYAKIT PASIEN STROKE MAKA ISIKAN PEMBATASAN AKTIFITAS PASIEN SETELAH PENANGANAN KEGAWAT DARURATAN"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel8",
+        "elements": [
+         {
+          "type": "text",
+          "name": "tgl_edukasi1",
+          "title": "Tanggal Edukasi",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "panel",
+          "name": "panel7",
+          "elements": [
+           {
+            "type": "dropdown",
+            "name": "nm_ppa",
+            "title": "Profesi",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "dokter",
+              "text": "Dokter"
+             },
+             {
+              "value": "perawat",
+              "text": "Perawat"
+             },
+             {
+              "value": "apoteker",
+              "text": "Apoteker"
+             },
+             {
+              "value": "nutrisionis",
+              "text": "Nutrisionis"
+             },
+             {
+              "value": "rehabmedik",
+              "text": "Rehabmedik"
+             }
+            ]
+           },
+           {
+            "type": "dropdown",
+            "name": "nama_prof",
+            "startWithNewLine": false,
+            "title": "Nama",
+            "hideNumber": true,
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_all_user"
+            }
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "tingkat_pemahaman1",
+          "title": "Tingkat Pemahaman Awal :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hal_baru1",
+            "text": "Hal Baru"
+           },
+           {
+            "value": "edukasi_ulang2",
+            "text": "Edukasi Ulang"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "metode_edukasi1",
+          "title": "Metode Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lisa1",
+            "text": "Lisan"
+           },
+           {
+            "value": "demonstrasi1",
+            "text": "Demosntrasi"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "media_edukasi1",
+          "title": "Media Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lefleat1",
+            "text": "Lefleat"
+           },
+           {
+            "value": "alat_peraga1",
+            "text": "Aalat peraga"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "evaluasi1",
+          "title": "Evaluasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "dapat_menyebutkan1",
+            "text": "Dapat menyebutkan"
+           },
+           {
+            "value": "re_edukasi1",
+            "text": "Re-edukasi"
+           },
+           {
+            "value": "re_demosntrasi1",
+            "text": "Re- - Demonstrasi"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "rencana_reedukasi1",
+          "title": "Rencana tanggal Re-edukasi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "date"
+         }
+        ],
+        "visibleIf": "{penjelasan_tentang_perawatan} = ['perawatan_penyakit_pasien']"
+       },
+       {
+        "type": "checkbox",
+        "name": "penjelasan_penyakit_pasien",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "penyakit_pasien",
+          "text": "2. PENJELASAN PENYAKIT PASIEN KHUSUSNYA STROKE GEJALA YANG HARUS DI WASPADAI SERTA FAKTOR RESIKO STROKE "
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question12",
+          "title": "Tanggal Edukasi",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "panel",
+          "name": "panel9",
+          "elements": [
+           {
+            "type": "dropdown",
+            "name": "question2",
+            "title": "Profesi",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "dokter",
+              "text": "Dokter"
+             },
+             {
+              "value": "perawat",
+              "text": "Perawat"
+             },
+             {
+              "value": "apoteker",
+              "text": "Apoteker"
+             },
+             {
+              "value": "nutrisionis",
+              "text": "Nutrisionis"
+             },
+             {
+              "value": "rehabmedik",
+              "text": "Rehabmedik"
+             }
+            ]
+           },
+           {
+            "type": "dropdown",
+            "name": "question3",
+            "startWithNewLine": false,
+            "title": "Nama",
+            "hideNumber": true,
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_all_user"
+            }
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "tingkat_pemahaman_awal2",
+          "title": "Tingkat Pemahaman Awal :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hal_baru2",
+            "text": "Hal Baru"
+           },
+           {
+            "value": "edukasi_ulang2",
+            "text": "Edukasi Ulang"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "metode_edukasi2",
+          "title": "Metode Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lisa2",
+            "text": "Lisan"
+           },
+           {
+            "value": "demonstrasi2",
+            "text": "Demosntrasi"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "media_edukasi2",
+          "title": "Media Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lefleat2",
+            "text": "Lefleat"
+           },
+           {
+            "value": "alat_peraga2",
+            "text": "Aalat peraga"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "evaluasi2",
+          "title": "Evaluasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "dapat_menyebutkan2",
+            "text": "Dapat menyebutkan"
+           },
+           {
+            "value": "re_edukasi2",
+            "text": "Re-edukasi"
+           },
+           {
+            "value": "re_demosntrasi2",
+            "text": "Re- - Demonstrasi"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "rencana_reedukasi2",
+          "title": "Rencana tanggal Re-edukasi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "date"
+         }
+        ],
+        "visibleIf": "{penjelasan_penyakit_pasien} = ['penyakit_pasien']"
+       },
+       {
+        "type": "checkbox",
+        "name": "efek_samping_interaksi",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "efek_samping",
+          "text": "3. EFEK SAMPING DAN INTERAKSI OBAT OBATAN YANG DIBERIKAN"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel10",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question13",
+            "title": "Tanggal Edukasi",
+            "hideNumber": true,
+            "inputType": "date"
+           },
+           {
+            "type": "dropdown",
+            "name": "question4",
+            "title": "Profesi",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "dokter",
+              "text": "Dokter"
+             },
+             {
+              "value": "perawat",
+              "text": "Perawat"
+             },
+             {
+              "value": "apoteker",
+              "text": "Apoteker"
+             },
+             {
+              "value": "nutrisionis",
+              "text": "Nutrisionis"
+             },
+             {
+              "value": "rehabmedik",
+              "text": "Rehabmedik"
+             }
+            ]
+           },
+           {
+            "type": "dropdown",
+            "name": "question5",
+            "startWithNewLine": false,
+            "title": "Nama",
+            "hideNumber": true,
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_all_user"
+            }
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "tingkat_pemahaman_awal3",
+          "title": "Tingkat Pemahaman Awal :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hal_baru3",
+            "text": "Hal Baru"
+           },
+           {
+            "value": "edukasi_ulang3",
+            "text": "Edukasi Ulang"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "metode_edukasi3",
+          "title": "Metode Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lisa3",
+            "text": "Lisan"
+           },
+           {
+            "value": "demonstrasi3",
+            "text": "Demosntrasi"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "media_edukasi3",
+          "title": "Media Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lefleat3",
+            "text": "Lefleat"
+           },
+           {
+            "value": "alat_peraga3",
+            "text": "Aalat peraga"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "evaluasi3",
+          "title": "Evaluasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "dapat_menyebutkan3",
+            "text": "Dapat menyebutkan"
+           },
+           {
+            "value": "re_edukasi3",
+            "text": "Re-edukasi"
+           },
+           {
+            "value": "re_demosntrasi3",
+            "text": "Re- - Demonstrasi"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "rencana_reedukasi3",
+          "title": "Rencana tanggal Re-edukasi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "date"
+         }
+        ],
+        "visibleIf": "{efek_samping_interaksi} = ['efek_samping']"
+       },
+       {
+        "type": "checkbox",
+        "name": "program_diet_nutrisi_makanan",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "program_diet",
+          "text": " 4. PROGRAM DIET DAN NUTRISI MAKANAN"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question14",
+          "title": "Tanggal Edukasi",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "panel",
+          "name": "panel11",
+          "elements": [
+           {
+            "type": "dropdown",
+            "name": "question6",
+            "title": "Profesi",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "dokter",
+              "text": "Dokter"
+             },
+             {
+              "value": "perawat",
+              "text": "Perawat"
+             },
+             {
+              "value": "apoteker",
+              "text": "Apoteker"
+             },
+             {
+              "value": "nutrisionis",
+              "text": "Nutrisionis"
+             },
+             {
+              "value": "rehabmedik",
+              "text": "Rehabmedik"
+             }
+            ]
+           },
+           {
+            "type": "dropdown",
+            "name": "question7",
+            "startWithNewLine": false,
+            "title": "Nama",
+            "hideNumber": true,
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_all_user"
+            }
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "tingkat_pemahaman_awal4",
+          "title": "Tingkat Pemahaman Awal :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hal_baru4",
+            "text": "Hal Baru"
+           },
+           {
+            "value": "edukasi_ulang4",
+            "text": "Edukasi Ulang"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "metode_edukasi4",
+          "title": "Metode Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lisa4",
+            "text": "Lisan"
+           },
+           {
+            "value": "demonstrasi4",
+            "text": "Demosntrasi"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "media_edukasi4",
+          "title": "Media Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lefleat4",
+            "text": "Lefleat"
+           },
+           {
+            "value": "alat_peraga4",
+            "text": "Aalat peraga"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "evaluasi4",
+          "title": "Evaluasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "dapat_menyebutkan4",
+            "text": "Dapat menyebutkan"
+           },
+           {
+            "value": "re_edukasi4",
+            "text": "Re-edukasi"
+           },
+           {
+            "value": "re_demosntrasi4",
+            "text": "Re- - Demonstrasi"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "rencana_reedukasi4",
+          "title": "Rencana tanggal Re-edukasi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "date"
+         }
+        ],
+        "visibleIf": "{program_diet_nutrisi_makanan} = ['program_diet']"
+       },
+       {
+        "type": "checkbox",
+        "name": "rehabilitasi",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "rehabilitasi",
+          "text": "5. REHABILITASI"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel6",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question15",
+          "title": "Tanggal Edukasi",
+          "hideNumber": true,
+          "inputType": "date"
+         },
+         {
+          "type": "panel",
+          "name": "panel12",
+          "elements": [
+           {
+            "type": "dropdown",
+            "name": "question8",
+            "title": "Profesi",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "dokter",
+              "text": "Dokter"
+             },
+             {
+              "value": "perawat",
+              "text": "Perawat"
+             },
+             {
+              "value": "apoteker",
+              "text": "Apoteker"
+             },
+             {
+              "value": "nutrisionis",
+              "text": "Nutrisionis"
+             },
+             {
+              "value": "rehabmedik",
+              "text": "Rehabmedik"
+             }
+            ]
+           },
+           {
+            "type": "dropdown",
+            "name": "question9",
+            "startWithNewLine": false,
+            "title": "Nama",
+            "hideNumber": true,
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_all_user"
+            }
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "tingkat_pemahaman_awal5",
+          "title": "Tingkat Pemahaman Awal :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hal_baru4",
+            "text": "Hal Baru"
+           },
+           {
+            "value": "edukasi_ulang4",
+            "text": "Edukasi Ulang"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "metode_edukasi5",
+          "title": "Metode Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lisa4",
+            "text": "Lisan"
+           },
+           {
+            "value": "demonstrasi4",
+            "text": "Demosntrasi"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "media_edukasi5",
+          "title": "Media Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lefleat4",
+            "text": "Lefleat"
+           },
+           {
+            "value": "alat_peraga4",
+            "text": "Aalat peraga"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "evaluasi5",
+          "title": "Evaluasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "dapat_menyebutkan4",
+            "text": "Dapat menyebutkan"
+           },
+           {
+            "value": "re_edukasi4",
+            "text": "Re-edukasi"
+           },
+           {
+            "value": "re_demosntrasi4",
+            "text": "Re- - Demonstrasi"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "rencana_reedukasi5",
+          "title": "Rencana tanggal Re-edukasi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "date"
+         }
+        ],
+        "visibleIf": "{rehabilitasi} = ['rehabilitasi']"
+       },
+       {
+        "type": "checkbox",
+        "name": "kebersihan_tangan",
+        "titleLocation": "hidden",
+        "choices": [
+         {
+          "value": "kebersihan_tangan",
+          "text": "6. KEBERSIHAN TANGAN (HAND HYGIENE), ETIKA BATUK DAN PEMILAHAN LIMBAH 2 LINEN"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel13",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question16",
+            "title": "Tanggal Edukasi",
+            "hideNumber": true,
+            "inputType": "date"
+           },
+           {
+            "type": "dropdown",
+            "name": "question10",
+            "title": "Profesi",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "dokter",
+              "text": "Dokter"
+             },
+             {
+              "value": "perawat",
+              "text": "Perawat"
+             },
+             {
+              "value": "apoteker",
+              "text": "Apoteker"
+             },
+             {
+              "value": "nutrisionis",
+              "text": "Nutrisionis"
+             },
+             {
+              "value": "rehabmedik",
+              "text": "Rehabmedik"
+             }
+            ]
+           },
+           {
+            "type": "dropdown",
+            "name": "question11",
+            "startWithNewLine": false,
+            "title": "Nama",
+            "hideNumber": true,
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_all_user"
+            }
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "tingkat_pemahaman_awal6",
+          "title": "Tingkat Pemahaman Awal :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hal_baru4",
+            "text": "Hal Baru"
+           },
+           {
+            "value": "edukasi_ulang4",
+            "text": "Edukasi Ulang"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "metode_edukasi6",
+          "title": "Metode Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lisa4",
+            "text": "Lisan"
+           },
+           {
+            "value": "demonstrasi4",
+            "text": "Demosntrasi"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "media_edukasi6",
+          "title": "Media Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lefleat4",
+            "text": "Lefleat"
+           },
+           {
+            "value": "alat_peraga4",
+            "text": "Aalat peraga"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "evaluasi6",
+          "title": "Evaluasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "dapat_menyebutkan4",
+            "text": "Dapat menyebutkan"
+           },
+           {
+            "value": "re_edukasi4",
+            "text": "Re-edukasi"
+           },
+           {
+            "value": "re_demosntrasi4",
+            "text": "Re- - Demonstrasi"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "rencana_reedukasi6",
+          "title": "Rencana tanggal Re-edukasi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "date"
+         }
+        ],
+        "visibleIf": "{kebersihan_tangan} = ['kebersihan_tangan']"
+       },
+       {
+        "type": "checkbox",
+        "name": "question17",
+        "titleLocation": "hidden",
+        "hasComment": true,
+        "commentText": " ",
+        "choices": [
+         {
+          "value": "item1",
+          "text": "7 . Lainnya"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel14",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel15",
+          "elements": [
+           {
+            "type": "text",
+            "name": "question18",
+            "title": "Tanggal Edukasi",
+            "hideNumber": true,
+            "inputType": "date"
+           },
+           {
+            "type": "dropdown",
+            "name": "question19",
+            "title": "Profesi",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "dokter",
+              "text": "Dokter"
+             },
+             {
+              "value": "perawat",
+              "text": "Perawat"
+             },
+             {
+              "value": "apoteker",
+              "text": "Apoteker"
+             },
+             {
+              "value": "nutrisionis",
+              "text": "Nutrisionis"
+             },
+             {
+              "value": "rehabmedik",
+              "text": "Rehabmedik"
+             }
+            ]
+           },
+           {
+            "type": "dropdown",
+            "name": "question20",
+            "startWithNewLine": false,
+            "title": "Nama",
+            "hideNumber": true,
+            "choices": [
+             "item1",
+             "item2",
+             "item3"
+            ],
+            "choicesByUrl": {
+             "url": "/admin/admin/rest_all_user"
+            }
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question21",
+          "title": "Tingkat Pemahaman Awal :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "hal_baru4",
+            "text": "Hal Baru"
+           },
+           {
+            "value": "edukasi_ulang4",
+            "text": "Edukasi Ulang"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question22",
+          "title": "Metode Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lisa4",
+            "text": "Lisan"
+           },
+           {
+            "value": "demonstrasi4",
+            "text": "Demosntrasi"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question23",
+          "title": "Media Edukasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "lefleat4",
+            "text": "Lefleat"
+           },
+           {
+            "value": "alat_peraga4",
+            "text": "Aalat peraga"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question24",
+          "title": "Evaluasi :",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "dapat_menyebutkan4",
+            "text": "Dapat menyebutkan"
+           },
+           {
+            "value": "re_edukasi4",
+            "text": "Re-edukasi"
+           },
+           {
+            "value": "re_demosntrasi4",
+            "text": "Re- - Demonstrasi"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "question25",
+          "title": "Rencana tanggal Re-edukasi",
+          "titleLocation": "left",
+          "hideNumber": true,
+          "inputType": "date"
+         }
+        ],
+        "visibleIf": "{question17} contains 'item1'"
+       }
+      ]
+     }
+    ],
+    "showCompletedPage": false
+   }

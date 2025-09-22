@@ -1,0 +1,304 @@
+{
+    "title": "RINGKASAN MASUK DAN KELUAR      PASIEN RAWAT INAP",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "inputType": "time",
+            "title": " Jam  / Tanggal Masuk :"
+           },
+           {
+            "name": "text2",
+            "inputType": "time",
+            "title": "Jam  / Tanggal Keluar :"
+           }
+          ],
+          "colCount": 2
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "No. Rekam Medis"
+           },
+           {
+            "name": "text2",
+            "title": "No. Kartu"
+           },
+           {
+            "name": "text3",
+            "title": "Nama Pasien"
+           },
+           {
+            "name": "text4",
+            "title": "Telepon Rumah  (HP)"
+           },
+           {
+            "name": "text5",
+            "title": "Tgl.Lahir/Umur  "
+           },
+           {
+            "name": "text6",
+            "title": "No. KTP / SIM / Passport"
+           },
+           {
+            "name": "text7",
+            "title": "Alamat"
+           },
+           {
+            "name": "text8",
+            "title": "Cara Bayar  "
+           },
+           {
+            "name": "text9",
+            "title": "Kewarganegaraan  "
+           },
+           {
+            "name": "text10",
+            "title": "Ruang Rawat   "
+           },
+           {
+            "name": "text11",
+            "title": "Status Pasien   "
+           },
+           {
+            "name": "text12",
+            "title": "Kelas Perawatan  "
+           },
+           {
+            "name": "text13",
+            "title": "Pekerjaan   "
+           },
+           {
+            "name": "text14",
+            "title": "Jumlah Hari Rawat"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "i. Data Pasien"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Hubungan Keluarga"
+           },
+           {
+            "name": "text3",
+            "title": "Alamat "
+           },
+           {
+            "name": "text4",
+            "title": "Telepon Selular (HP)"
+           },
+           {
+            "name": "text5",
+            "title": "Perhatian Khusus   :"
+           },
+           {
+            "name": "text6",
+            "title": "Alergi Obat   "
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question4",
+          "title": "Infeksi Nosokomial   ",
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Ya"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question5",
+          "startWithNewLine": false,
+          "title": "Penyebab Infeksi    :"
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "Pengobatan Radioterapi / Radio Nuklir  :"
+         },
+         {
+          "type": "radiogroup",
+          "name": "question7",
+          "title": "Keadaan Keluar     :  ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Sembuh "
+           },
+           {
+            "value": "item2",
+            "text": "Belum Sembuh  "
+           },
+           {
+            "value": "item3",
+            "text": "Meninggal   > 48 Jam"
+           },
+           {
+            "value": "item4",
+            "text": "Membaik"
+           },
+           {
+            "value": "item5",
+            "text": "Meninggal  < 48 Jam"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "radiogroup",
+          "name": "question8",
+          "startWithNewLine": false,
+          "title": "Cara Keluar    :",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Diizinkan pulang   "
+           },
+           {
+            "value": "item2",
+            "text": "Lari "
+           },
+           {
+            "value": "item3",
+            "text": " Pulang Paksa"
+           },
+           {
+            "value": "item4",
+            "text": "Pindah RS lain"
+           }
+          ],
+          "hasOther": true,
+          "otherText": "Dirujuk ke",
+          "colCount": 4
+         }
+        ],
+        "title": "ii. Keluarga Terdekat"
+       },
+       {
+        "type": "multipletext",
+        "name": "question9",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama Perusahaan / Penanggung Jawab Biaya   :"
+         },
+         {
+          "name": "text2",
+          "title": "Alamat Penanggung Jawab Biaya   :"
+         },
+         {
+          "name": "text3",
+          "title": "Telepon / HP"
+         },
+         {
+          "name": "text4",
+          "title": "Nomor Asuransi"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "question10",
+        "title": "Surat Jaminan ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Ya"
+         },
+         {
+          "value": "item2",
+          "text": "Tidak"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "question11",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Yang dihubungi "
+         },
+         {
+          "name": "text2",
+          "title": "Keterangan"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question12",
+        "title": "Tanah badantuang",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question13",
+        "title": "Dokter yang merawat",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question14",
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

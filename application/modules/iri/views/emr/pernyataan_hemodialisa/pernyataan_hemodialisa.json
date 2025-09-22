@@ -1,0 +1,342 @@
+{
+    "title": "PERNYATAAN  TINDAKAN HEMODIALISIS",
+    "pages": [
+     {
+      "name": "halaman1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel7",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "info1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "dpjp",
+            "title": "Ruang                       "
+           },
+           {
+            "name": "pemberi_info",
+            "title": "Diagnosa Klinis         "
+           },
+           {
+            "name": "penerima_info",
+            "title": " Tgl / HD Ke -             "
+           },
+           {
+            "name": "dokter",
+            "title": "Dokter"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question5",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "Column 1",
+            "title": "Isi Informasi",
+            "cellType": "text"
+           },
+           {
+            "name": "Column 2",
+            "title": "Tanda",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": " "
+             }
+            ]
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Diagnosa & dasar diagnosa"
+           },
+           {
+            "value": "item2",
+            "text": "Tindakan kedokteran"
+           },
+           {
+            "value": "item3",
+            "text": "Indikasi Tindakan"
+           },
+           {
+            "value": "item4",
+            "text": "Tujuan"
+           },
+           {
+            "value": "item5",
+            "text": "Prognosis"
+           },
+           {
+            "value": "item6",
+            "text": "Kemungkinan komplikasi / Risiko"
+           },
+           {
+            "value": "item7",
+            "text": "Transfusi"
+           },
+           {
+            "value": "item8",
+            "text": "Reused filter"
+           },
+           {
+            "value": "item9",
+            "text": "Biaya"
+           }
+          ]
+         }
+        ],
+        "title": "Informasi Tindakan Hemodialisis"
+       },
+       {
+        "type": "radiogroup",
+        "name": "question1",
+        "title": "Yang bertanda tangan dibawah ini saya sebagai WALI :",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Anak"
+         },
+         {
+          "value": "item2",
+          "text": "Istri"
+         },
+         {
+          "value": "item3",
+          "text": "Suami"
+         }
+        ],
+        "hasOther": true,
+        "otherPlaceHolder": "dari nama pasien tersebut diatas",
+        "otherText": "Lainnya",
+        "colCount": 2
+       },
+       {
+        "type": "multipletext",
+        "name": "question2",
+        "titleLocation": "hidden",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Nama"
+         },
+         {
+          "name": "text2",
+          "title": "No KTP"
+         },
+         {
+          "name": "text3",
+          "title": "Alamat"
+         },
+         {
+          "name": "text4",
+          "title": "Pekerjaan"
+         },
+         {
+          "name": "text5",
+          "title": "Jenis kelamin"
+         }
+        ],
+        "colCount": 2
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question3",
+          "title": "Tindakan  hemodialisis ",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Menyetujui"
+           },
+           {
+            "value": "item2",
+            "text": "Menolak"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question4",
+          "startWithNewLine": false,
+          "title": "dilakukan reuse ( pencucian ulang )",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Menyetujui"
+           },
+           {
+            "value": "item2",
+            "text": "Tidak menyetujui"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "text",
+          "name": "question6",
+          "title": "terhadap dialyzer ( ginjal buatan ) sebanyak",
+          "hideNumber": true,
+          "placeHolder": "x"
+         },
+         {
+          "type": "html",
+          "name": "question7",
+          "html": "setelah menerima penjelasan dan diberi kesempatan untuk berdiskusi.\t"
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "title": "Tanah Badantuang, ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question9",
+          "title": "Dokter",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question10",
+          "startWithNewLine": false,
+          "title": "Petugas / Saksi",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question11",
+          "startWithNewLine": false,
+          "title": "Pasien / Keluarga ",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question12",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question13",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question14",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "PERNYATAAN"
+       }
+      ],
+      "title": "Halaman 1"
+     },
+     {
+      "name": "halaman2",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question15",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "datetime-local"
+           },
+           {
+            "name": "diag",
+            "title": "Diagnosa Klinik",
+            "cellType": "text"
+           },
+           {
+            "name": "alasan",
+            "title": "Alasan Data",
+            "cellType": "text"
+           },
+           {
+            "name": "pakai",
+            "title": "Pakai Dialyzer Reused ( R )",
+            "cellType": "text"
+           },
+           {
+            "name": "pemberi",
+            "title": "Pemberi informasi",
+            "cellType": "text"
+           },
+           {
+            "name": "setuju",
+            "title": "Setuju / Menolak pasien",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Ya"
+             },
+             {
+              "value": "item2",
+              "text": "Tidak"
+             }
+            ]
+           },
+           {
+            "name": "komplikasi",
+            "title": "Keterangan (komplikasi dll)",
+            "cellType": "comment"
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "cellType": "text",
+          "rowCount": 1,
+          "addRowText": "Tambah",
+          "removeRowText": "Hapus"
+         }
+        ],
+        "title": "PERNYATAAN LANJUTAN HEMODIALISI"
+       }
+      ]
+     }
+    ]
+   }

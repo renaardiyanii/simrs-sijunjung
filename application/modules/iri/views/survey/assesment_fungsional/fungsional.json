@@ -1,0 +1,231 @@
+{
+    "title": "STATUS FUNGSIONAL (BARTHEL INDEKS)",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdropdown",
+        "name": "assesment_fungsional",
+        "titleLocation": "hidden",
+        "columns": [
+         {
+          "name": "1",
+          "title": "1. Mengendalikan ransang defekasi (BAB)",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tak terkendali / tak teratur (perlu pencahar)(0)"
+           },
+           {
+            "value": "1",
+            "text": "kadang-kadang tak terkendali (1)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri/Teratur (2)"
+           }
+          ]
+         },
+         {
+          "name": "2",
+          "title": "2. Mengendalika ransang berkemih (BAK)",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tak terkendali / pakai keteter (0)"
+           },
+           {
+            "value": "1",
+            "text": "kadang - kadang tak terkendali 1x24 jam (1)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri/Teratur (2)"
+           }
+          ]
+         },
+         {
+          "name": "3",
+          "title": "3. Membersihkan diri (cuci muka, sisir rambut, sikat gigi)",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Butuh pertolongan orang lain(0)"
+           },
+           {
+            "value": "1",
+            "text": "Perlu Pertolongan pada beberapa kegiatan, tetapi dapat mengerjakan sendiri kegiatan yang lain (1)"
+           }
+          ]
+         },
+         {
+          "name": "4",
+          "title": "4. Penggunaan Jamban , masuk, dan keluar (melepaskan, memakai celana, membersihkan, menyiram)",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tergantung Pertolongan oarang lain(0)"
+           },
+           {
+            "value": "1",
+            "text": "Perlu pertolongan pada beberapa kegiatan, tetapi dapat mengerjakan sendiri kegiatan yang lain (1)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri (2)"
+           }
+          ]
+         },
+         {
+          "name": "5",
+          "title": "5. Makan",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak mampu (0)"
+           },
+           {
+            "value": "1",
+            "text": "Perlu pertolongan memotong makanan (1)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri (2)"
+           }
+          ]
+         },
+         {
+          "name": "6",
+          "title": "6. Berubah sikap dari berbaring ke duduk ",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak mampu (0)"
+           },
+           {
+            "value": "1",
+            "text": "Perlu banyak bantuan untuk bisa duduk(2orang) (1)"
+           },
+           {
+            "value": "2",
+            "text": "Bantuan minimal 1 orang(2)"
+           },
+           {
+            "value": "3",
+            "text": "Mandiri (3)"
+           }
+          ]
+         },
+         {
+          "name": "7",
+          "title": "7. Berpindah / Berjalan ",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak mampu (0)"
+           },
+           {
+            "value": "1",
+            "text": "Bisa (pindah) dengan kursi roda (1)"
+           },
+           {
+            "value": "2",
+            "text": "Berjalan dengan bantuan 1 orang  (2)"
+           },
+           {
+            "value": "3",
+            "text": "Mandiri (3)"
+           }
+          ]
+         },
+         {
+          "name": "8",
+          "title": "8. Memakaii baju ",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tergantung pada orang lain(0)"
+           },
+           {
+            "value": "1",
+            "text": "Sebagian dibantu (misalnya mengancing baju ) (1)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri (2)"
+           }
+          ]
+         },
+         {
+          "name": "9",
+          "title": "9. Naik Turun Tangga ",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tidak Mampu(0)"
+           },
+           {
+            "value": "1",
+            "text": "Butuh pertolongan (1)"
+           },
+           {
+            "value": "2",
+            "text": "Mandiri (2)"
+           }
+          ]
+         },
+         {
+          "name": "10",
+          "title": "10. Mandi",
+          "cellType": "dropdown",
+          "choices": [
+           {
+            "value": "0",
+            "text": "Tergantung pada orang lain(0)"
+           },
+           {
+            "value": "1",
+            "text": "Mandiri (1)"
+           }
+          ]
+         },
+         {
+          "name": "total_skor",
+          "title": "total Skor :",
+          "cellType": "expression",
+          "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5} + {row.6} + {row.7} + {row.8} + {row.9} + {row.10}"
+         }
+        ],
+        "columnLayout": "vertical",
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rows": [
+         {
+          "value": "masuk_rs",
+          "text": "Masuk RS(Skor)"
+         },
+         {
+          "value": "keluar_rs",
+          "text": "Keluar RS(Skor)"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }

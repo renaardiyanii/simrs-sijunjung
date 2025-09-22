@@ -1,0 +1,107 @@
+{
+    "title": "CATATAN GRAFIK TANDA VITAL",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "comment",
+          "name": "question1",
+          "title": "Diagnosis\n",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question2",
+          "startWithNewLine": false,
+          "title": "Ruangan",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "paneldynamic",
+        "name": "question4",
+        "titleLocation": "hidden",
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "tgl",
+            "title": "Tanggal",
+            "cellType": "text",
+            "inputType": "date"
+           },
+           {
+            "name": "waktu",
+            "title": "Waktu pemeriksaan dilakukan ( (jam/pukul)",
+            "cellType": "radiogroup",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "6"
+             },
+             {
+              "value": "item2",
+              "text": "11"
+             },
+             {
+              "value": "item3",
+              "text": "15"
+             },
+             {
+              "value": "item4",
+              "text": "19"
+             }
+            ]
+           },
+           {
+            "name": "fp",
+            "title": "FP",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "suhu",
+            "title": "Suhu",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "fn",
+            "title": "FN",
+            "cellType": "radiogroup"
+           },
+           {
+            "name": "td",
+            "title": "TD",
+            "cellType": "radiogroup"
+           }
+          ],
+          "columnLayout": "vertical",
+          "horizontalScroll": true,
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1
+         }
+        ],
+        "panelCount": 1,
+        "panelAddText": "Tambah",
+        "panelRemoveText": "Hapus"
+       }
+      ]
+     }
+    ]
+   }

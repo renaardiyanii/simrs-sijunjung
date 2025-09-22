@@ -1,0 +1,369 @@
+{
+    "title": "RESEP",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrixdynamic",
+        "name": "question2",
+        "minWidth": "1200px",
+        "maxWidth": "2000px",
+        "title": " Obat",
+        "hideNumber": true,
+        "requiredErrorText": "Jangan lupa Tambahkan obat ",
+        "validators": [
+         {
+          "type": "expression"
+         }
+        ],
+        "columns": [
+         {
+          "name": "nm_obat",
+          "title": "Nama Obat",
+          "cellType": "dropdown",
+          "renderAs": "select2",
+          "choicesByUrl": {
+           "url": "/admin/master_obat"
+          }
+         },
+         {
+          "name": "qty",
+          "title": "qty",
+          "cellType": "text",
+          "requiredErrorText": "Jangan lupa qty ",
+          "width": "100"
+         },
+         {
+          "name": "cara_pakai",
+          "title": "Aturan Dokter",
+          "cellType": "text"
+         },
+         {
+          "name": "jam1",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam2",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam3",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam4",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam5",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam6",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "paraf_dok",
+          "title": "Paraf Dokter",
+          "cellType": "dropdown",
+          "width": "35",
+          "choicesByUrl": {
+           "url": "/admin/dokter"
+          }
+         }
+        ],
+        "detailElements": [
+         {
+          "type": "panel",
+          "name": "panel_ttd",
+          "width": "1200px"
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnMinWidth": "100px",
+        "rowCount": 1,
+        "addRowText": "Tambah Obat",
+        "removeRowText": "Stop",
+        "detailPanelShowOnAdding": true
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question1",
+        "minWidth": "1200px",
+        "maxWidth": "2000px",
+        "title": "BMHP",
+        "hideNumber": true,
+        "requiredErrorText": "Jangan lupa Tambahkan obat ",
+        "validators": [
+         {
+          "type": "expression"
+         }
+        ],
+        "columns": [
+         {
+          "name": "nm_obat",
+          "title": "Nama Obat",
+          "cellType": "dropdown",
+          "renderAs": "select2",
+          "choicesByUrl": {
+           "url": "/admin/master_obat"
+          }
+         },
+         {
+          "name": "qty",
+          "title": "qty",
+          "cellType": "text",
+          "requiredErrorText": "Jangan lupa qty ",
+          "width": "100"
+         },
+         {
+          "name": "cara_pakai",
+          "title": "Aturan Pakai",
+          "cellType": "text"
+         },
+         {
+          "name": "jam1",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam2",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam3",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam4",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam5",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "jam6",
+          "title": "Jam",
+          "cellType": "text",
+          "inputType": "time"
+         },
+         {
+          "name": "paraf_dok",
+          "title": "Paraf Dokter",
+          "cellType": "dropdown",
+          "width": "35",
+          "choicesByUrl": {
+           "url": "/admin/dokter"
+          }
+         }
+        ],
+        "detailElements": [
+         {
+          "type": "panel",
+          "name": "panel_ttd",
+          "width": "1200px"
+         }
+        ],
+        "horizontalScroll": true,
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "columnMinWidth": "100px",
+        "rowCount": 1,
+        "addRowText": "Tambah Obat",
+        "removeRowText": "Stop",
+        "detailPanelShowOnAdding": true
+       },
+       {
+        "type": "paneldynamic",
+        "name": "obat_racikan",
+        "title": "Obat Racikan",
+        "hideNumber": true,
+        "templateElements": [
+         {
+          "type": "matrixdynamic",
+          "name": "obat_racikan_header",
+          "minWidth": "1200px",
+          "maxWidth": "2000px",
+          "title": " ",
+          "hideNumber": true,
+          "requiredErrorText": "Jangan lupa Tambahkan obat ",
+          "validators": [
+           {
+            "type": "expression"
+           }
+          ],
+          "columns": [
+           {
+            "name": "nama_racikan",
+            "title": "Nama Racikan",
+            "cellType": "text"
+           },
+           {
+            "name": "qty_total",
+            "title": "Qty",
+            "cellType": "text"
+           },
+           {
+            "name": "signa_racikan",
+            "title": "Aturan Pakai",
+            "cellType": "text",
+            "requiredErrorText": "Jangan lupa Signa ",
+            "width": "100"
+           },
+           {
+            "name": "jam_racikan",
+            "title": "Jam",
+            "cellType": "text",
+            "inputType": "time"
+           }
+          ],
+          "detailElements": [
+           {
+            "type": "panel",
+            "name": "panel_ttd",
+            "width": "1200px"
+           }
+          ],
+          "horizontalScroll": true,
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "columnMinWidth": "100px",
+          "allowAddRows": false,
+          "allowRemoveRows": false,
+          "rowCount": 1,
+          "addRowText": "Tambah Obat",
+          "removeRowText": "Hapus Obat",
+          "detailPanelShowOnAdding": true
+         },
+         {
+          "type": "matrixdynamic",
+          "name": "item_racikan",
+          "minWidth": "1200px",
+          "maxWidth": "2000px",
+          "title": " ",
+          "hideNumber": true,
+          "requiredErrorText": "Jangan lupa Tambahkan obat ",
+          "validators": [
+           {
+            "type": "expression"
+           }
+          ],
+          "columns": [
+           {
+            "name": "nm_obatracikan",
+            "title": "Nama Obat",
+            "cellType": "dropdown",
+            "renderAs": "select2",
+            "choicesByUrl": {
+             "url": "/admin/master_obat"
+            }
+           },
+           {
+            "name": "qty_item_racikan",
+            "title": "Dosis",
+            "cellType": "text",
+            "requiredErrorText": "Jangan lupa qty ",
+            "width": "100"
+           }
+          ],
+          "detailElements": [
+           {
+            "type": "panel",
+            "name": "panel_ttd",
+            "width": "1200px"
+           }
+          ],
+          "horizontalScroll": true,
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "columnMinWidth": "100px",
+          "rowCount": 1,
+          "addRowText": "Tambah Obat",
+          "removeRowText": "Hapus Obat",
+          "detailPanelShowOnAdding": true
+         }
+        ]
+       },
+       {
+        "type": "matrixdynamic",
+        "name": "question3",
+        "title": "Obat Luar (Copy Resep)",
+        "hideNumber": true,
+        "columns": [
+         {
+          "name": "nm_obat",
+          "title": "Nama Obat",
+          "cellType": "text"
+         },
+         {
+          "name": "qty",
+          "title": "Qty",
+          "cellType": "text"
+         },
+         {
+          "name": "signa",
+          "title": "Signa",
+          "cellType": "text"
+         }
+        ],
+        "choices": [
+         1,
+         2,
+         3,
+         4,
+         5
+        ],
+        "rowCount": 1,
+        "addRowText": "Tambah",
+        "removeRowText": "Hapus"
+       }
+      ],
+      "title": "Halaman 1 - 1"
+     }
+    ]
+   }

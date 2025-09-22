@@ -1,0 +1,242 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "panel",
+          "name": "panel3",
+          "elements": [
+           {
+            "type": "text",
+            "name": "ku",
+            "title": "KU :",
+            "hideNumber": true
+           },
+           {
+            "type": "radiogroup",
+            "name": "Kesadaran",
+            "title": "Kesadaran :",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Composmentis"
+             },
+             {
+              "value": "item2",
+              "text": "Apatis"
+             },
+             {
+              "value": "item3",
+              "text": "Somnolet"
+             },
+             {
+              "value": "item4",
+              "text": "Soporo"
+             },
+             {
+              "value": "item5",
+              "text": "Soporocoma"
+             },
+             {
+              "value": "item6",
+              "text": "koma"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Koma",
+            "colCount": 4
+           },
+           {
+            "type": "text",
+            "name": "td",
+            "title": "Tekanan Darah :",
+            "hideNumber": true,
+            "placeHolder": "mmHg"
+           },
+           {
+            "type": "radiogroup",
+            "name": "nadi",
+            "title": "Nadi :",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak Teratur"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Teratur",
+            "colCount": 5
+           },
+           {
+            "type": "text",
+            "name": "suhu",
+            "title": "Suhu Tubuh :",
+            "hideNumber": true
+           },
+           {
+            "type": "radiogroup",
+            "name": "pernafasan",
+            "title": "Pernafasan :",
+            "hideNumber": true,
+            "choices": [
+             {
+              "value": "item1",
+              "text": "Tidak Teratur"
+             }
+            ],
+            "hasOther": true,
+            "otherText": "Teratur",
+            "colCount": 5
+           }
+          ],
+          "title": "1. Pemeriksaan Fisik"
+         },
+         {
+          "type": "text",
+          "name": "tb",
+          "title": "TB :",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "bb",
+          "startWithNewLine": false,
+          "title": "BB :",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "imt",
+          "startWithNewLine": false,
+          "title": "IMT :",
+          "hideNumber": true
+         }
+        ],
+        "title": "ASESMEN MEDIS"
+       },
+       {
+        "type": "comment",
+        "name": "pemeriksaan",
+        "title": "2. Pemeriksaan Fisik",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "a. Inspeksi :"
+           },
+           {
+            "name": "text2",
+            "title": "b. Palpasi :"
+           },
+           {
+            "name": "text3",
+            "title": "c. Akultasi :"
+           },
+           {
+            "name": "text4",
+            "title": "TBJ :"
+           },
+           {
+            "name": "text5",
+            "title": "d. Inspekulo :"
+           },
+           {
+            "name": "text6",
+            "title": "e. Periksa dalam :"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "pevilme",
+          "title": "4. PELVIMETRI KLINIK (Khusus ibu hamil 34-36 minggu atau inpartu"
+         }
+        ],
+        "title": "3. Status Obstetri dan Ginekologi"
+       }
+      ],
+      "title": "PENGKAJIAN MEDIS OBSTETRI DAN GINEKOLOGI"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "comment",
+        "name": "penunjang",
+        "title": "5. PEMERIKSAAN PENUNJANG DIAGNOSTIK (CTG, USG, LAB) :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "diagnosa",
+        "title": "6. DIAGNOSIS KERJA :",
+        "hideNumber": true
+       },
+       {
+        "type": "comment",
+        "name": "penata",
+        "title": "7. PENATALAKSANAAN :",
+        "hideNumber": true
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "text",
+          "name": "rencana",
+          "title": "a. Rencana Diagnostik :",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "edukasi",
+          "title": "b. Rencana Edukasi :",
+          "hideNumber": true
+         }
+        ]
+       },
+       {
+        "type": "comment",
+        "name": "progrnosis",
+        "title": "9. PROGNOSIS :",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "tgl",
+        "title": "Tanggal / Jam",
+        "hideNumber": true,
+        "inputType": "datetime-local"
+       },
+       {
+        "type": "signaturepad",
+        "name": "question2",
+        "title": "Dokter yang memeriksa",
+        "hideNumber": true
+       },
+       {
+        "type": "text",
+        "name": "question3",
+        "titleLocation": "hidden"
+       }
+      ]
+     }
+    ]
+   }

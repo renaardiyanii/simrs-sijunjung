@@ -1,0 +1,71 @@
+<?php
+
+    var_dump($get_soap[0])
+?>
+<div id="surveyAssesmentMedikPerawat"></div>
+
+<script>
+Survey.StylesManager.applyTheme("modern");
+
+var surveyJsonMedikPerawat = {"title":"ASESMEN MEDIK","pages":[{"name":"page1","elements":[{"type":"comment","name":"subjective_rajal","title":"Subjective","hideNumber":true},{"type":"comment","name":"objective_rajal","startWithNewLine":false,"title":"Objective :","hideNumber":true},{"type":"comment","name":"assesmen_rajal","title":"Assesmen :","hideNumber":true},{"type":"comment","name":"plan_rajal","startWithNewLine":false,"title":"Plan :","hideNumber":true}]}]}
+
+function sendDataToServer(survey) {
+    Swal.fire({
+        title: 'Simpan Data?',
+        text: "Apakah Anda Yakin Dengan data Tersebut!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, Simpan Data'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                    url: "<?php echo base_url('irj/rjcpelayanan/insert_soap')?>",
+                    type : 'POST',
+                    data : {
+                        no_register:'<?php echo $no_register ?>',
+                        formjson_perawat : JSON.stringify(survey.data)
+                    },
+                    datatype:'json',
+                
+                    success:function(data)
+                    {
+                        new swal({
+											title: "Selesai",
+											text: "Data berhasil disimpan",
+											type: "success",
+											showCancelButton: false,
+											closeOnConfirm: false,
+											showLoaderOnConfirm: true,
+												willClose: () => {
+													window.location.reload();
+												}
+										},
+										function () {
+											// window.location.reload();
+										});
+                    },
+                        error: function(e){
+                            new swal('Gagal!','Gagal Disimpan Karena ' + e,'error');
+
+                        }
+                });
+            };
+
+        });
+}
+
+var surveyMedikPerawat = new Survey.Model(surveyJsonMedikPerawat);
+surveyMedikPerawat.setValue("subjective_rajal",'<?php echo isset($get_soap[0]->subjective_perawat)?str_replace('"',"",$get_soap[0]->subjective_perawat):'' ?>');
+surveyMedikPerawat.setValue('objective_rajal','<?php echo isset($get_soap[0]->objective_perawat)?json_decode(str_replace('"','',$get_soap[0]->objective_perawat)):'' ?>');
+surveyMedikPerawat.setValue('assesmen_rajal','<?php echo isset($get_soap[0]->assesment_perawat)?$get_soap[0]->assesment_perawat == "null"?'':str_replace('"','',$get_soap[0]->assesment_perawat):'' ?>');
+surveyMedikPerawat.setValue('plan_rajal','<?php echo isset($get_soap[0]->plan_perawat)?$get_soap[0]->plan_perawat == "null"?'':str_replace('"','',$get_soap[0]->plan_perawat):'' ?>');
+// surveyMedikPerawat.showNavigationButtons = false;
+
+surveyAssesmentKeperawatan.render("surveyJsonMedikPerawat");
+$("#surveyAssesmentMedikPerawat").Survey({
+    model: surveyMedikPerawat,
+    onComplete: sendDataToServer
+});
+</script>

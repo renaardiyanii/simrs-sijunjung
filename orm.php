@@ -1,0 +1,94 @@
+<?php
+
+$omr = [
+    'MWL_KEY' => '',
+    'TRIGGER_DTTM'=>'',
+    'REPLICA_DTTM'=>'',
+    'EVENT_TYPE'=>'',
+    'CHARACTER_SET'=>'',
+    'SCHEDULED_AETITLE'=>'',
+    'SCHEDULED_DTTM'=>'',
+    'SCHEDULED_MODALITY'=>'',
+    'SCHEDULED_STATION'=>'',
+    'SCHEDULED_LOCATION'=>'',
+    'SCHEDULED_PROC_ID'=>'',
+    'SCHEDULED_PROC_DESC'=>'',
+    'SCHEDULED_ACTION_CODES'=>'',
+    'SCHEDULED_PROC_STATUS'=>'',
+    'PREMEDICATION'=>'',
+    'CONTRAST_AGENT'=>'',
+    'REQUESTED_PROC_ID'=>'',
+    'REQUESTED_PROC_DESC'=>'',
+    'REQUESTED_PROC_CODES'=>'',
+    'REQUESTED_PROC_PRIORITY'=>'',
+    'REQUESTED_PROC_REASON'=>'',
+    'REQUESTED_PROC_COMMENTS'=>'',
+    'STUDY_INSTANCE_UID'=>'',
+    'PROC_PLACER_ORDER_NO'=>'',
+    'PROC_FILER_ORDER_NO'=>'',
+    'ACCESSION_NO'=>'',
+    'ATTEND_DOCTOR'=>'',
+    'PERFORM_DOCTOR'=>'',
+    'CONSULT_DOCTOR'=>'',
+    'REQUEST_DOCTOR'=>'',
+    'REFER_DOCTOR'=>'',
+    'REQUEST_DEPARTMENT'=>'',
+    'IMAGING_REQUEST_REASON'=>'',
+    'IMAGING_REQUEST_COMMENTS'=>'',
+    'IMAGING_REQUEST_DTTM'=>'',
+    'ISR_PLACER_ORDER_NO'=>'',
+    'ISR_FILLER_ORDER_NO'=>'',
+    'ADMISSION_ID'=>'',
+    'PATIENT_TRANSPORT'=>'',
+    'PATIENT_LOCATION'=>'',
+    'PATIENT_RESIDENCY'=>'',
+    'PATIENT_NAME'=>'',
+    'PATIENT_ID'=>'',
+    'OTHER_PATIENT_NAME'=>'',
+    'OTHER_PATIENT_ID'=>'',
+    'PATIENT_BIRTH_DATE'=>'',
+    'PATIENT_SEX'=>'',
+    'PATIENT_WEIGHT'=>'',
+    'PATIENT_SIZE'=>'',
+    'PATIENT_STATE'=>'',
+    'CONFIDENTIALITY'=>'',
+    'PREGNANCY_STATUS'=>'',
+    'MEDICAL_ALERT'=>'',
+    'CONTRAST_ALLERGIES'=>'',
+    'SPECIAL_NEEDS'=>'',
+    'SPECIALITY'=>'',
+    'DIAGNOSIS'=>'',
+    'ADMIT_DTTM'=>''
+];
+
+$omr['PATIENT_NAME']='RICCA ISMA';
+$omr['PATIENT_SEX']='M';
+$omr['PATIENT_BIRTH_DATE']='19840419';
+$omr['PATIENT_ID']='00002050'; // ini ASSN ID
+$omr['ADMISSION_ID']=''; // no registrasi/kunjungan 
+$omr['PATIENT_SEX']='M';
+$omr['ATTEND_DOCTOR']='0902016';
+$omr['REQUEST_DOCTOR']='dr Widya, S.RAD';
+$omr['REFER_DOCTOR']='dr Agus, S.RAD';
+$omr['REQUEST_DEPARTMENT']='RAD';
+$omr['ACCESSION_NO']='210600327402';
+$omr['MWL_KEY']=$omr['ACCESSION_NO'];
+$omr['TRIGGER_DTTM']='20210612004129';
+$omr['REPLICA_DTTM']='ANY';
+$omr['SCHEDULED_AETITLE']='MR';
+$omr['SCHEDULED_DTTM']='20210612004129';
+$omr['ADMIT_DTTM']='20210612004029';
+$omr['SCHEDULED_MODALITY']='MR   '; //ini modality, perhatikan ada spasi dibelakangnya
+$omr['SCHEDULED_STATION']='MR';
+$omr['SCHEDULED_PROC_ID']='P0001';
+$omr['SCHEDULED_PROC_DESC']='Photo Thorax';
+$omr['REQUESTED_PROC_ID']='P0001';
+$omr['REQUESTED_PROC_DESC']='Photo Thorax';
+$omr['SCHEDULED_PROC_STATUS']='120'; // permintaan baru
+$omr['STUDY_INSTANCE_UID']='1.2.840.113619.2.55.3.2831178355.675.0128378.202003000002';
+$omr['IMAGING_REQUEST_COMMENTS']="Komentar";
+
+
+$str = implode('|',$omr);
+echo $str;
+?>

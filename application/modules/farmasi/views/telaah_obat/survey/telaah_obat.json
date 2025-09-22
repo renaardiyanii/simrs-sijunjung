@@ -1,0 +1,112 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "matrix",
+        "name": "telaah_resep",
+        "title": "TELAAH RESEP",
+        "hideNumber": true,
+        "isRequired": true,
+        "columns": [
+         {
+          "value": "ya",
+          "text": "Ya"
+         },
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         }
+        ],
+        "rows": [
+         {
+          "value": "1",
+          "text": "Kejelasan Penulisan Resep"
+         },
+         {
+          "value": "2",
+          "text": "Tepat Pasien"
+         },
+         {
+          "value": "3",
+          "text": "Tepat Obat"
+         },
+         {
+          "value": "4",
+          "text": "Tepat dosis & kekuatan"
+         },
+         {
+          "value": "5",
+          "text": "Tepat cara pemberian"
+         },
+         {
+          "value": "6",
+          "text": "Tidak ada duplikasi"
+         },
+         {
+          "value": "7",
+          "text": "Tidak ada interaksi obat"
+         },
+         {
+          "value": "8",
+          "text": "Tidak ada alergi"
+         },
+         {
+          "value": "9",
+          "text": "Kontra Indikasi"
+         }
+        ]
+       },
+       {
+        "type": "matrix",
+        "name": "verif_penyerahan_obat",
+        "startWithNewLine": false,
+        "title": "TELAAH OBAT",
+        "hideNumber": true,
+        "columns": [
+         {
+          "value": "ya",
+          "text": "Ya"
+         },
+         {
+          "value": "tidak",
+          "text": "Tidak"
+         }
+        ],
+        "rows": [
+         {
+          "value": "1",
+          "text": "Tepat pasien"
+         },
+         {
+          "value": "2",
+          "text": "Tepat indikasi"
+         },
+         {
+          "value": "3",
+          "text": "Tepat obat"
+         },
+         {
+          "value": "4",
+          "text": "Tepat Dosis & Kekuatan"
+         },
+         {
+          "value": "5",
+          "text": "Tepat cara pemberian"
+         },
+         {
+          "value": "6",
+          "text": "Tepat waktu pemberian"
+         },
+         {
+          "value": "7",
+          "text": "Tepat Dokumentasi"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "showTitle": false
+   }

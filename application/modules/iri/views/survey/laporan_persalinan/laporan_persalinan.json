@@ -1,0 +1,382 @@
+{
+    "title": "LAPORAN PERSALINAN",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "keadaan_umum",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "Baik",
+            "text": "Baik"
+           },
+           {
+            "value": "Sedang",
+            "text": "Sedang"
+           },
+           {
+            "value": "Buruk",
+            "text": "Buruk"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "nadi",
+            "placeHolder": "x/mnt",
+            "title": "Nadi"
+           },
+           {
+            "name": "tekanan_darah",
+            "placeHolder": "mmHg",
+            "title": "Tekanan Darah "
+           },
+           {
+            "name": "suhu",
+            "placeHolder": "C",
+            "title": "Suhu"
+           },
+           {
+            "name": "hb",
+            "placeHolder": "g%",
+            "title": "Hb"
+           }
+          ],
+          "colCount": 4
+         },
+         {
+          "type": "text",
+          "name": "uterus",
+          "title": "Uterus",
+          "hideNumber": true
+         },
+         {
+          "type": "multipletext",
+          "name": "perdarahan",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "perdarahan_kala2",
+            "placeHolder": "cc",
+            "title": "Perdarahan Kala III"
+           },
+           {
+            "name": "kala_iv",
+            "placeHolder": "cc",
+            "title": "Kala IV "
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "Keadaan Ibu Pasca Persalinan"
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "planceta",
+          "title": "Planceta",
+          "titleLocation": "hidden",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "bentuk_ukuran",
+            "placeHolder": "cc",
+            "title": "Bentuk / Ukuran "
+           },
+           {
+            "name": "cairan_ketuban",
+            "placeHolder": "cc",
+            "title": "Cairan Ketuban"
+           },
+           {
+            "name": "tali_pusat",
+            "title": "Tali Pusat"
+           }
+          ],
+          "colCount": 3
+         }
+        ],
+        "title": "Planceta"
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question1",
+          "title": "Jenis Kelamin",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "Laki - Laki",
+            "text": "Laki laki"
+           },
+           {
+            "value": "Perempuan",
+            "text": "Perempuan"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "Lahir",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "Hidup",
+            "text": "Hidup"
+           },
+           {
+            "value": "Mati",
+            "text": "Mati"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question3",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "berat_badan",
+            "title": "Berat Badan"
+           },
+           {
+            "name": "panjang_badan",
+            "title": "Panjang Badan"
+           },
+           {
+            "name": "lingkar_dada",
+            "title": "Lingkar Dada"
+           },
+           {
+            "name": "lingkar_kepala",
+            "title": "Lingkar Kepala"
+           },
+           {
+            "name": "kelainan_kongenital",
+            "title": "Kelainan Kongenital"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "Anak"
+       },
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "text",
+          "name": "bayi",
+          "title": "Lahir hidup kemudian meninggal ",
+          "hideNumber": true,
+          "inputType": "time"
+         },
+         {
+          "type": "multipletext",
+          "name": "bayi_lahir",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "bayi_lahir_mati",
+            "title": "Bayi lahir mati"
+           },
+           {
+            "name": "sebab_kelahiran",
+            "title": "Sebab kelahiran mati"
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "matrixdropdown",
+          "name": "question4",
+          "titleLocation": "hidden",
+          "columns": [
+           {
+            "name": "1",
+            "title": "Denyut Jantung",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tak ada (0)"
+             },
+             {
+              "value": "1",
+              "text": "< 100 (1)"
+             },
+             {
+              "value": "2",
+              "text": "> 100 (2)"
+             }
+            ]
+           },
+           {
+            "name": "2",
+            "title": "Pernafasan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tak ada (0)"
+             },
+             {
+              "value": "1",
+              "text": "Tak teratur (1)"
+             },
+             {
+              "value": "2",
+              "text": "Baik (2)"
+             }
+            ]
+           },
+           {
+            "name": "3",
+            "title": "Tonus Otot",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Lumpuh(0)"
+             },
+             {
+              "value": "1",
+              "text": "Fleksi Sedikit (1)"
+             },
+             {
+              "value": "2",
+              "text": "Gerakan Aktif (2)"
+             }
+            ]
+           },
+           {
+            "name": "4",
+            "title": "Peka rangsangan",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Tidak Ada(0)"
+             },
+             {
+              "value": "2",
+              "text": "Menangis Kuat (2)"
+             }
+            ]
+           },
+           {
+            "name": "5",
+            "title": "Warna",
+            "cellType": "dropdown",
+            "choices": [
+             {
+              "value": "0",
+              "text": "Pucat"
+             },
+             {
+              "value": "1",
+              "text": "Badan merah estermitas biru (1)"
+             },
+             {
+              "value": "2",
+              "text": "Merah Jambu (2)"
+             }
+            ]
+           },
+           {
+            "name": "total_skor",
+            "title": "Total Skor",
+            "cellType": "expression",
+            "expression": "{row.1} + {row.2} + {row.3} + {row.4} + {row.5}"
+           }
+          ],
+          "columnLayout": "vertical",
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "Row 1",
+            "text": "1 menit"
+           },
+           {
+            "value": "Row 2",
+            "text": "5 menit"
+           }
+          ]
+         }
+        ],
+        "title": "Untuk bayi yang keadaan Jelek :"
+       },
+       {
+        "type": "panel",
+        "name": "panel5",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "iktisar",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "ketuban_pecah",
+            "inputType": "datetime-local",
+            "title": "Ketuban Pecah "
+           },
+           {
+            "name": "lahir",
+            "inputType": "datetime-local",
+            "title": "Lahir"
+           },
+           {
+            "name": "macam_persalinan",
+            "title": "Macam persalinan"
+           },
+           {
+            "name": "indikasi",
+            "title": "Indikasi"
+           },
+           {
+            "name": "lama_persalinan",
+            "title": "Lama Persalinan"
+           },
+           {
+            "name": "lainnya",
+            "title": "Lainnya"
+           }
+          ],
+          "colCount": 2
+         }
+        ],
+        "title": "Iktisar Persalinan"
+       }
+      ]
+     }
+    ]
+   }

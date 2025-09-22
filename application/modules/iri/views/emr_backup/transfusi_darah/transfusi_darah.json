@@ -1,0 +1,254 @@
+{
+    "title": "PERNYATAAN  TRANSFUSI DARAH",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Alasan Transfusi    :                                                                         "
+           },
+           {
+            "name": "text2",
+            "title": "Dokter yang meminta darah   :"
+           },
+           {
+            "name": "text3",
+            "title": " Diagnosa Klinis      :                                                                           "
+           },
+           {
+            "name": "text4",
+            "title": "Jumlah Trombosit                  :                                                                         "
+           }
+          ],
+          "colCount": 2
+         },
+         {
+          "type": "multipletext",
+          "name": "question2",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "JENIS DARAH / KOMPONEN DARAH YANG DIBERIKAN  & JUMLAH : "
+           },
+           {
+            "name": "text2",
+            "inputType": "datetime-local",
+            "title": "Tanggal & Jam Permintaan : "
+           },
+           {
+            "name": "text3",
+            "inputType": "date",
+            "title": "Tanggal  digunakan : "
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "matrixdropdown",
+          "name": "question2",
+          "title": "PENJELASAN TRANSFUSI",
+          "hideNumber": true,
+          "columns": [
+           {
+            "name": "jelas",
+            "title": "Jelas",
+            "cellType": "checkbox",
+            "choices": [
+             {
+              "value": "item1",
+              "text": "√"
+             }
+            ]
+           },
+           {
+            "name": "ttd",
+            "title": "TTD Pemberi Informasi",
+            "cellType": "signaturepad",
+            "width": 150,
+            "height": 150
+           },
+           {
+            "name": "ttd2",
+            "title": "TTD Penerima Infromasi",
+            "cellType": "signaturepad",
+            "width": 150,
+            "height": 150
+           }
+          ],
+          "choices": [
+           1,
+           2,
+           3,
+           4,
+           5
+          ],
+          "rows": [
+           {
+            "value": "item1",
+            "text": "Indikasi tranfusi & jenis darah yang diberikan"
+           },
+           {
+            "value": "item2",
+            "text": "Infeksi yang dapat ditularkan melalui tranfusi darah & pemeriksaan penapisan terhadap produk darah"
+           },
+           {
+            "value": "item3",
+            "text": "Kemungkinan risiko tertular infeksi kecil beserta usaha untuk memperkecil risiko tsb"
+           },
+           {
+            "value": "item4",
+            "text": "Pemeriksaan pre tranfusi untuk menghindari reaksi ketidak cocokan akibat tranfusi"
+           },
+           {
+            "value": "item5",
+            "text": "Hubungan tranfusi darah dengan agama / kepercayaan"
+           },
+           {
+            "value": "item6",
+            "text": "Biaya penggantian pengelolaan darah"
+           }
+          ]
+         }
+        ],
+        "title": "ISI INFORMASI"
+       },
+       {
+        "type": "checkbox",
+        "name": "question3",
+        "title": "\nPERSETUJUAN PEMBERIAN TRANSFUSI",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Pasien tidak memperoleh persetujuan tindakan medis sehubungan dengan kedaruratan dari tranfusi"
+         },
+         {
+          "value": "item2",
+          "text": "Pasien / keluarga telah mendapatkan penjelasan tetapi tidak berharap untuk mendiskusikan risiko dari tranfusi"
+         },
+         {
+          "value": "item3",
+          "text": "Pasien / keluarga  telah menerima penjelasan & diberi kesempatan mendiskusikan manfaat serta risiko tranfusi darah terhadap dirinya."
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question4",
+        "title": "Yang bertanda tangan dibawah ini saya sebagai WALI : ",
+        "hideNumber": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Anak"
+         },
+         {
+          "value": "item2",
+          "text": "Istri"
+         },
+         {
+          "value": "item3",
+          "text": "Suami"
+         }
+        ],
+        "colCount": 3
+       },
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "Saya",
+          "hideNumber": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Menyetujui"
+           },
+           {
+            "value": "item2",
+            "text": "Menolak"
+           }
+          ],
+          "colCount": 3
+         },
+         {
+          "type": "text",
+          "name": "question7",
+          "title": "tindakan tranfusI darah yang diberikan pada saya / keluarga saya yang bernama",
+          "hideNumber": true
+         },
+         {
+          "type": "html",
+          "name": "question6",
+          "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 16px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 16px;\n        }\n    </style>\n</head>\n<p>setelah menerima penjelasan dari informasi sebagaimana diatas yang di beri tanda / tandatangan di kolom kanannya dan telah memahami.\t"
+         },
+         {
+          "type": "text",
+          "name": "question8",
+          "title": "Tanah Badantuang, ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question9",
+          "title": "Dokter",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question10",
+          "startWithNewLine": false,
+          "title": "Petugas / Saksi",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question11",
+          "startWithNewLine": false,
+          "title": "Pasien / Keluarga ",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question12",
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question13",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         },
+         {
+          "type": "text",
+          "name": "question14",
+          "startWithNewLine": false,
+          "titleLocation": "hidden"
+         }
+        ],
+        "title": "PERNYATAAN"
+       }
+      ]
+     }
+    ]
+   }

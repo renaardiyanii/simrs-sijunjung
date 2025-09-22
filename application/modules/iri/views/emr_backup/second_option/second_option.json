@@ -1,0 +1,111 @@
+{
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "title": "Saya yang bertandatangan dibawah ini,",
+          "hideNumber": true,
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "title": "Umur   "
+           },
+           {
+            "name": "text3",
+            "title": "Alamat"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "name": "question2",
+          "title": "Dengan ini menyatakan permintaan untuk mendapat second opinion atas :",
+          "hideNumber": true
+         },
+         {
+          "type": "html",
+          "name": "question3",
+          "html": "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Informasi Terapi Ablasi</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n        }\n        h5 {\n            text-align: center;\n            font-weight: bold;\n        }\n        p {\n            font-size: 14px; /* Font size diperbesar */\n        }\n        ul {\n            font-size: 14px;\n        }\n    </style>\n</head>\n<p>Saya memahami perlunya dan manfaat Pendapat lain <b>(second opinion)</b> tersebut sebagaimana telah dijelaskan kepada saya.\n<p>Saya telah mendapat kesempatan untuk bertanya dan telah mendapat jawaban yang memuaskan.\n<p>Saya juga menyadari bahwa oleh karena ilmu kedokteran bukanlah ilmu pasti dan selalu berkembang, maka perbedaan pendapat ahli adalah biasa terjadi dalam dunia kedokteran.\n<p>Saya menyadari beban biaya second opinion menjadi tenggung jawab saya."
+         },
+         {
+          "type": "text",
+          "name": "question4",
+          "title": "Tanah Badantuang, ",
+          "hideNumber": true,
+          "inputType": "datetime-local"
+         },
+         {
+          "type": "signaturepad",
+          "name": "question5",
+          "title": "Saksi 1",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question6",
+          "startWithNewLine": false,
+          "title": "Saksi 2",
+          "hideNumber": true
+         },
+         {
+          "type": "signaturepad",
+          "name": "question7",
+          "startWithNewLine": false,
+          "title": "Yang Menyatakan  Pasien / Wali **)",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question9",
+          "titleLocation": "hidden",
+          "size": 50
+         },
+         {
+          "type": "text",
+          "name": "question10",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "size": 50
+         },
+         {
+          "type": "text",
+          "name": "question11",
+          "startWithNewLine": false,
+          "titleLocation": "hidden",
+          "size": 50
+         },
+         {
+          "type": "signaturepad",
+          "name": "question8",
+          "title": "DPJP",
+          "hideNumber": true
+         },
+         {
+          "type": "text",
+          "name": "question12",
+          "titleLocation": "hidden",
+          "size": 50
+         },
+         {
+          "type": "html",
+          "name": "question13",
+          "html": "<p>*) coret yang tidak perlu\n<p>*) bila pasien tidak kompeten atau tidak mau menerima informasi, maka wali atau seseorang yang diberi \n    hak untuk menyetujui tindakan terhadap pasien tersebut.\n"
+         }
+        ]
+       }
+      ],
+      "title": "PERMINTAAN PENDAPAT LAIN (SECOND OPINION)"
+     }
+    ]
+   }
