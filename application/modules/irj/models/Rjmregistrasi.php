@@ -1189,6 +1189,13 @@ from dokter_poli a where a.id_dokter='$id_dokter'");
 		return TRUE;
 	}
 
+	function get_counter_internal()
+	{
+		$query = $this->db->query("SELECT nextval('rujukan_internal_counter') as sequence_value");
+        $row = $query->row();
+        return $row->sequence_value;
+	}
+
 }
 
 

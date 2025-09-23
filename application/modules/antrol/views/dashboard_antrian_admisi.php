@@ -549,10 +549,12 @@
                 let currentQueueNumber = null;
                 let currentQueueLoket = null;
 
-                // Cek apakah ada antrian yang sedang dipanggil (status = dipanggil)
+                // Cek apakah ada antrian yang sedang dipanggil (status = dipanggil) atau sedang diproses
                 if (queueData.pasien && queueData.pasien.length > 0) {
-                    // Cari antrian dengan status 'dipanggil' untuk ditampilkan sebagai sedang dilayani
-                    const panggilanAntrian = queueData.pasien.find(item => item.status === 'dipanggil');
+                    // Cari antrian dengan status 'dipanggil' atau 'processed' untuk ditampilkan sebagai sedang dilayani
+                    const panggilanAntrian = queueData.pasien.find(item =>
+                        item.status === 'dipanggil' || item.status === 'processed'
+                    );
 
                     if (panggilanAntrian) {
                         currentQueueNumber = `A-${String(panggilanAntrian.nomorantrian).padStart(3, '0')}`;
@@ -584,9 +586,11 @@
                 const queueList2 = [];
 
                 if (queueData.pasien && queueData.pasien.length > 0) {
-                    // Filter antrian yang belum dipanggil untuk ditampilkan di daftar antrian berikutnya
+                    // Filter antrian yang belum dipanggil/diproses untuk ditampilkan di daftar antrian berikutnya
                     const waitingQueue = queueData.pasien.filter(item =>
-                        item.status !== 'dipanggil' && item.status !== 'selesai'
+                        item.status !== 'dipanggil' &&
+                        item.status !== 'processed' &&
+                        item.status !== 'selesai'
                     );
 
                     waitingQueue.forEach((item, index) => {

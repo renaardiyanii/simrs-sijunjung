@@ -117,7 +117,7 @@
 				}
 			},
 			error: function (request, status, error) {
-				alert(request.responseText);
+				// alert(request.responseText);
 			}
 	    });}
 	}
@@ -141,7 +141,7 @@
 				}
 			},
 			error: function (request, status, error) {
-				alert(request.responseText);
+				// alert(request.responseText);
 			}
 	    });}
 	}
@@ -320,6 +320,26 @@
 		document.getElementById("btn-submit").disabled = true;
 		document.getElementById("btn-submit").innerHTML = '<i class="fa fa-spinner fa-spin" ></i> Loading...';
 		return true;
+	}
+
+	// Fungsi untuk memberitahu parent window bahwa save berhasil
+	function notifyParentSaveSuccess() {
+		// Ambil queue ID dari URL parameters
+		const urlParams = new URLSearchParams(window.location.search);
+		const queueId = urlParams.get('id');
+
+		if (queueId && window.opener) {
+			// Kirim pesan ke parent window untuk menghapus item dari list
+			window.opener.postMessage({
+				type: 'queue_save_success',
+				queueId: queueId
+			}, '*');
+
+			// Close window setelah notifikasi terkirim
+			setTimeout(() => {
+				window.close();
+			}, 1000);
+		}
 	}
 
 	var myVar, myVar2;
@@ -1033,7 +1053,26 @@
       	</div>
       	<!-- /.modal -->		
 	
-    <?php 
+    <script>
+		// Cek apakah ada flash message success yang menandakan save berhasil
+		$(document).ready(function() {
+			// Cek apakah form berhasil disubmit
+			<?php if($this->session->flashdata('success_msg')): ?>
+				// Jika ada success message, panggil notifyParentSaveSuccess
+				console.log('Form saved successfully, notifying parent window...');
+				setTimeout(function() {
+					notifyParentSaveSuccess();
+				}, 500);
+			<?php endif; ?>
+
+			// Override form submit untuk menangani success response
+			$('#formRegistrasi').on('submit', function(e) {
+				// Form akan disubmit normal, tapi kita akan handle response di page redirect
+			});
+		});
+	</script>
+
+    <?php
         if ($role_id == 1) {
             $this->load->view("layout/footer_left");
         } else {

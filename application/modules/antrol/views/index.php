@@ -89,6 +89,92 @@
 .modal_buat_sep_irj{
     z-index:1049 !important;
 }
+
+/* Style untuk item antrian yang sudah diklik/diproses */
+.queue-item-processed {
+    background-color: #d4edda !important;
+    border-left: 4px solid #28a745 !important;
+}
+
+.queue-item-processed td {
+    background-color: #d4edda !important;
+}
+
+/* Badge untuk status antrian */
+.badge-dipanggil {
+    background-color: #17a2b8 !important;
+    color: white !important;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 8px;
+    animation: pulse-blue 2s ease-in-out infinite;
+}
+
+.badge-sedang-dilayani {
+    background-color: #28a745 !important;
+    color: white !important;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 8px;
+    animation: pulse-green 2s ease-in-out infinite;
+}
+
+.badge-selesai {
+    background-color: #6c757d !important;
+    color: white !important;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.badge-menunggu {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+/* Animasi untuk badge */
+@keyframes pulse-blue {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes pulse-green {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+/* Animasi fade out untuk item yang akan dihapus */
+.queue-item-removing {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(-100%); }
+}
 </style>
 <div class="card">
     <div class="card-header">
@@ -150,15 +236,24 @@
                     </div>
                 </div>
 
-                <!-- Tombol Reset Settings -->
+                <!-- Tombol Reset Settings dan Kontrol Antrian -->
                 <div class="row mb-3">
-                    <div class="col-12">
+                    <div class="col-6">
                         <button type="button" class="btn btn-outline-secondary btn-sm" id="resetSettingsBtn">
                             <i class="fas fa-undo"></i> Reset Pengaturan
                         </button>
                         <span class="ml-3 text-muted">
                             <i class="fas fa-info-circle"></i>
                             <span id="settingsStatus">Settings disimpan otomatis</span>
+                        </span>
+                    </div>
+                    <div class="col-6 text-right">
+                        <button type="button" class="btn btn-outline-primary btn-sm" id="refreshDataBtn">
+                            <i class="fas fa-sync"></i> Refresh Data
+                        </button>
+                        <span class="ml-2 text-muted">
+                            <i class="fas fa-clock"></i>
+                            <span id="autoRefreshStatus">Auto refresh: ON (15s)</span>
                         </span>
                     </div>
                 </div>
@@ -509,6 +604,39 @@ function makebadge(flag)
         return badge;
     }
 
+    // Fungsi untuk membuat badge status antrian
+    function makeStatusBadge(status) {
+        var badge = '';
+
+        // Debug log untuk melihat status yang masuk
+        console.log('makeStatusBadge called with status:', status, typeof status);
+
+        switch(status) {
+            case 'dipanggil':
+                badge = '<span class="badge-dipanggil">TELAH DIPANGGIL</span>';
+                break;
+            case 'processed':
+                badge = '<span class="badge-sedang-dilayani">SEDANG DILAYANI</span>';
+                break;
+            case 'selesai':
+                badge = '<span class="badge-selesai">SELESAI</span>';
+                break;
+            case null:
+            case undefined:
+            case '':
+                // Untuk antrian baru tanpa status, tampilkan badge menunggu
+                badge = '<span class="badge-menunggu">MENUNGGU</span>';
+                break;
+            default:
+                // Untuk testing - tampilkan status apapun yang diterima
+                badge = `<span class="badge-dipanggil">STATUS: ${status}</span>`;
+                break;
+        }
+
+        console.log('Badge result:', badge);
+        return badge;
+    }
+
     function handle(){
         var tanggalpertama = $('#tanggalpertama').val();
         var tanggalkedua = $('#tanggalkedua').val()
@@ -581,6 +709,8 @@ function makebadge(flag)
             type: 'GET',
             dataType: 'json',
             success: function(response) {
+                console.log('getantrianadmisi full response:', response);
+
                 if (response.metadata.code === 200) {
                     // Data retrieval successful, populate the table
                     var dataList = response.response;
@@ -589,15 +719,37 @@ function makebadge(flag)
 
                     // Loop through the data and append rows to the table
                     $.each(dataList, function(index, data) {
+                        // Check status dari database
+                        const isProcessed = data.status === 'processed';
+                        const rowClass = isProcessed ? 'queue-item-processed' : '';
+
+                        // Generate badge berdasarkan status
+                        let statusBadge = makeStatusBadge(data.status);
+
+                        // Debug untuk melihat data yang diterima
+                        console.log(`Queue ID ${data.id}: status = ${data.status}, statusBadge = ${statusBadge}`);
+                        console.log('Full data:', data);
+
+                        // Check apakah row ini sudah pernah diupdate manual (preserve manual updates)
+                        const existingRow = $(`tr[data-queue-id="${data.id}"]`);
+                        if (existingRow.length > 0) {
+                            const existingBadge = existingRow.find('.badge-dipanggil, .badge-sedang-dilayani, .badge-selesai');
+                            if (existingBadge.length > 0) {
+                                // Preserve existing manual update
+                                statusBadge = existingBadge[0].outerHTML;
+                                console.log(`Preserving manual update for Queue ID ${data.id}: ${statusBadge}`);
+                            }
+                        }
+
                         var row = $(`
-                            <tr>
+                            <tr class="${rowClass}" data-queue-id="${data.id}">
                                 <td>
                                     <button class="btn btn-warning mt-2 btn-panggil-antrian" data-antrian='${JSON.stringify(data)}'>
                                         <i class="fas fa-microphone"></i> Panggil Antrian
                                     </button>
                                     <br>
 
-                                    <a href="<?= base_url('irj/rjcregistrasi/regpasienantrol?id=') ?>${data.id}&loket=${<?= $loket ?>}" class="btn btn-primary mt-2">
+                                    <a href="<?= base_url('irj/rjcregistrasi/regpasienantrol?id=') ?>${data.id}&loket=${$('#defaultLoketSelect').val() || 1}" class="btn btn-primary mt-2 btn-proses-antrian" data-queue-id="${data.id}" target="_blank">
                                         <i class="fas fa-user-plus"></i> Proses Antrian
                                     </a>
 
@@ -607,10 +759,13 @@ function makebadge(flag)
                                     </button>
 
                                 </td>
-                                <td>A-${String(data.no_antrian).padStart(3, '0')}</td>
+                                <td>A-${String(data.no_antrian).padStart(3, '0')}${statusBadge}</td>
                             </tr>`);
                         tbody.append(row);
                     });
+
+                    // Update URL tombol Proses Antrian sesuai loket default
+                    updateProsesAntrianUrls();
 
                     $('#table-datatablespasienbaru').DataTable();
                 } else {
@@ -625,6 +780,8 @@ function makebadge(flag)
 
     // Global variable untuk menyimpan data antrian yang akan dipanggil
     let currentQueueData = null;
+
+    // Tidak perlu array local lagi, semua status dibaca dari database
 
     // Fungsi untuk load settings dari localStorage
     function loadSettings() {
@@ -655,6 +812,28 @@ function makebadge(flag)
         setTimeout(() => {
             $('#settingsStatus').text('Settings disimpan otomatis');
         }, 2000);
+    }
+
+    // Fungsi untuk update URL tombol Proses Antrian secara real-time
+    function updateProsesAntrianUrls() {
+        const selectedLoket = $('#defaultLoketSelect').val() || 1;
+
+        // Update semua tombol Proses Antrian yang ada di tabel
+        $('.btn-proses-antrian').each(function() {
+            const currentHref = $(this).attr('href');
+
+            // Extract queue ID dari href yang ada
+            const urlParams = new URLSearchParams(currentHref.split('?')[1]);
+            const queueId = urlParams.get('id');
+
+            if (queueId) {
+                // Buat URL baru dengan loket yang dipilih
+                const newHref = `<?= base_url('irj/rjcregistrasi/regpasienantrol?id=') ?>${queueId}&loket=${selectedLoket}`;
+                $(this).attr('href', newHref);
+            }
+        });
+
+        console.log(`Updated all Proses Antrian URLs to use loket: ${selectedLoket}`);
     }
 
     // Fungsi untuk reset settings
@@ -720,7 +899,14 @@ function makebadge(flag)
     function panggilantrian(data, loket) {
         const queueNumber = `A-${String(data.no_antrian).padStart(3, '0')}`;
 
-        // Kirim request ke backend untuk update data dengan loket
+        // Kirim request ke backend untuk update data dengan loket dan status dipanggil
+        console.log('Sending panggilantrian request with data:', {
+            id: data.id,
+            loket: loket,
+            no_antrian: data.no_antrian,
+            status: 'dipanggil'
+        });
+
         $.ajax({
             url: `<?= base_url('antrol/panggilantrianadmisi') ?>`,
             type: 'POST',
@@ -728,10 +914,20 @@ function makebadge(flag)
             data: {
                 id: data.id,
                 loket: loket,
-                no_antrian: data.no_antrian
+                no_antrian: data.no_antrian,
+                status: 'dipanggil'  // Status dipanggil akan menghasilkan badge "TELAH DIPANGGIL"
             },
             success: function(response) {
+                console.log('Response dari panggilantrian:', response);
+
                 if (response.success) {
+                    // Update tampilan langsung tanpa menunggu refresh
+                    const row = $(`tr[data-queue-id="${data.id}"]`);
+                    const antrianCell = row.find('td:last-child');
+                    const queueNumberText = `A-${String(data.no_antrian).padStart(3, '0')}`;
+                    const newBadge = '<span class="badge-dipanggil">TELAH DIPANGGIL</span>';
+                    antrianCell.html(queueNumberText + newBadge);
+
                     // Show success message
                     Swal.fire({
                         title: "Berhasil!",
@@ -740,9 +936,12 @@ function makebadge(flag)
                         timer: 3000
                     });
 
-                    // Refresh data
-                    getpasienbaru();
+                    // Refresh data untuk sinkronisasi dengan backend (background)
+                    setTimeout(() => {
+                        getpasienbaru();
+                    }, 2000); // Tunggu 2 detik untuk memastikan database ter-update
                 } else {
+                    console.error('Backend response error:', response);
                     Swal.fire({
                         title: "Gagal!",
                         text: response.message || "Terjadi kesalahan saat memanggil antrian",
@@ -887,6 +1086,114 @@ function makebadge(flag)
         }
     }
 
+    // Fungsi untuk menandai antrian sebagai sedang diproses
+    function markQueueAsProcessed(queueId) {
+        // Update status di database melalui API
+        $.ajax({
+            url: '<?= base_url('antrol/updatestatusantrian') ?>',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                id: queueId,
+                status: 'processed'
+            },
+            success: function(response) {
+                if (response.success) {
+                    // Update tampilan langsung tanpa menunggu refresh
+                    const row = $(`tr[data-queue-id="${queueId}"]`);
+                    row.addClass('queue-item-processed');
+
+                    const antrianCell = row.find('td:last-child');
+                    const queueNumberMatch = antrianCell.text().match(/A-\d{3}/);
+                    if (queueNumberMatch) {
+                        const queueNumberText = queueNumberMatch[0];
+                        const newBadge = '<span class="badge-sedang-dilayani">SEDANG DILAYANI</span>';
+                        antrianCell.html(queueNumberText + newBadge);
+                    }
+
+                    // Refresh data untuk sinkronisasi dengan database
+                    setTimeout(() => {
+                        getpasienbaru();
+                    }, 500);
+
+                    console.log('Status antrian berhasil diupdate ke processed');
+                } else {
+                    console.error('Gagal mengupdate status antrian:', response.message);
+                    Swal.fire({
+                        title: 'Gagal!',
+                        text: response.message,
+                        icon: 'error'
+                    });
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error mengupdate status antrian:', error);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Terjadi kesalahan saat mengupdate status antrian',
+                    icon: 'error'
+                });
+            }
+        });
+    }
+
+    // Fungsi untuk menghapus antrian dari list (setelah save berhasil)
+    function removeQueueFromList(queueId) {
+        // Hapus antrian dari database melalui API
+        $.ajax({
+            url: '<?= base_url('antrol/hapusantrian') ?>',
+            type: 'POST',
+            data: {
+                id: queueId
+            },
+            success: function(response) {
+                if (response.success) {
+                    const row = $(`tr[data-queue-id="${queueId}"]`);
+
+                    // Tambahkan animasi fade out
+                    row.addClass('queue-item-removing');
+
+                    // Hapus dari DOM setelah animasi selesai
+                    setTimeout(() => {
+                        row.remove();
+
+                        // Refresh data untuk sinkronisasi dengan database
+                        getpasienbaru();
+
+                        console.log('Antrian berhasil dihapus dari database');
+                    }, 1000);
+                } else {
+                    console.error('Gagal menghapus antrian:', response.message);
+                    Swal.fire({
+                        title: 'Gagal!',
+                        text: response.message,
+                        icon: 'error'
+                    });
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error menghapus antrian:', error);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Terjadi kesalahan saat menghapus antrian',
+                    icon: 'error'
+                });
+            }
+        });
+    }
+
+    // Functions untuk localStorage sudah tidak diperlukan lagi
+    // Semua status sekarang disimpan di database untuk sinkronisasi real-time antar user
+
+    // Fungsi untuk auto refresh data setiap 30 detik
+    function autoRefreshData() {
+        getpasienbaru();
+        console.log('Data antrian di-refresh otomatis');
+    }
+
+    // Variable untuk menyimpan interval ID
+    let refreshInterval;
+
     // Convert number to natural Indonesian words
     function convertNumberToIndonesian(numberString) {
         const number = parseInt(numberString);
@@ -984,7 +1291,28 @@ function makebadge(flag)
         // Load settings dari localStorage
         loadSettings();
 
+        // Tidak perlu load dari localStorage lagi, semua dibaca dari database
+
         getpasienbaru();
+
+        // Setup auto refresh setiap 15 detik untuk responsivitas yang lebih baik
+        refreshInterval = setInterval(autoRefreshData, 15000);
+
+        // Listen untuk pesan dari child window (form registrasi)
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'queue_save_success') {
+                // Hapus item antrian dari list setelah save berhasil
+                removeQueueFromList(event.data.queueId);
+
+                // Tampilkan notifikasi sukses
+                Swal.fire({
+                    title: 'Berhasil!',
+                    text: 'Data pasien berhasil disimpan dan antrian telah selesai diproses',
+                    icon: 'success',
+                    timer: 3000
+                });
+            }
+        });
 
         // Event handler untuk tombol konfirmasi panggil antrian
         $('#confirmCallButton').click(function() {
@@ -1060,9 +1388,21 @@ function makebadge(flag)
             }
         });
 
+        // Event handler untuk tombol Proses Antrian
+        $(document).on('click', '.btn-proses-antrian', function() {
+            const queueId = $(this).attr('data-queue-id');
+
+            // Tandai item sebagai sedang diproses
+            markQueueAsProcessed(queueId);
+
+            // Simpan ke localStorage untuk persistensi
+            saveProcessedQueues();
+        });
+
         // Event handlers untuk settings
         $('#defaultLoketSelect').on('change', function() {
             saveSettings();
+            updateProsesAntrianUrls(); // Update URL tombol Proses Antrian secara real-time
         });
 
         $('#enableSound').on('change', function() {
@@ -1097,6 +1437,25 @@ function makebadge(flag)
                     });
                 }
             });
+        });
+
+        // Event handler untuk manual refresh
+        $('#refreshDataBtn').on('click', function() {
+            const btn = $(this);
+            const originalText = btn.html();
+
+            // Show loading state
+            btn.html('<i class="fas fa-spinner fa-spin"></i> Refreshing...');
+            btn.prop('disabled', true);
+
+            // Refresh data
+            getpasienbaru();
+
+            // Restore button after 2 seconds
+            setTimeout(() => {
+                btn.html(originalText);
+                btn.prop('disabled', false);
+            }, 2000);
         });
 
         // Volume control handler

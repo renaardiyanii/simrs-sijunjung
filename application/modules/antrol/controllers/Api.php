@@ -467,7 +467,7 @@ class Api extends CI_Controller
 			"keterangan" => "Peserta harap 30 menit lebih awal guna pencatatan administrasi."
 		);
 		// var_dump(json_encode($payloads));die();
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		// //$this->endpoint = 'http://192.168.1.139:8000/';
 		$response = $this->clients->post(
 			$this->endpoint .'wsbpjs/antrean/add',
 			[
@@ -479,7 +479,7 @@ class Api extends CI_Controller
 		if($json->metadata->code == 200){
 			// hit task id 1
 			if($payloads['pasienbaru'] == 1){
-				$this->endpoint = 'http://192.168.1.139:8000/';
+				// //$this->endpoint = 'http://192.168.1.139:8000/';
 				$response = $this->clients->get(
 					$this->endpoint .'adminantrian/prosesantrian/'.$payloads['kodebooking'].'/1',
 					[
@@ -494,7 +494,7 @@ class Api extends CI_Controller
 	}
 
 	function selesaimanual($kodebooking,$proses,$timestamp){
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		// //$this->endpoint = 'http://192.168.1.139:8000/';
 		$response = $this->clients->get(
 			$this->endpoint .'adminantrian/prosesantrianwaktu/'.$kodebooking.'/'.$proses.'/'.$timestamp,
 			[
@@ -512,7 +512,7 @@ class Api extends CI_Controller
 		// var_dump($data);
 		$req = json_decode($data);
 
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		//$this->endpoint = 'http://192.168.1.139:8000/';
 				$response = $this->clients->get(
 					$this->endpoint .'adminantrian/prosesantrian/'.$req->kodebooking.'/1',
 					[
@@ -529,7 +529,7 @@ class Api extends CI_Controller
 			'kodebooking'=>$req->kodebooking,
 			'keterangan'=>''
 		];
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		//$this->endpoint = 'http://192.168.1.139:8000/';
 		$response = $this->clients->post(
 			$this->endpoint .'adminantrian/panggil_admisi',
 			[
@@ -558,7 +558,7 @@ class Api extends CI_Controller
 				'kodebooking'=>$req->kodebooking,
 				'keterangan'=>'Pasien Tidak Hadir'
 			];
-			$this->endpoint = 'http://192.168.1.139:8000/';
+			//$this->endpoint = 'http://192.168.1.139:8000/';
 			$response = $this->clients->post(
 				$this->endpoint .'adminantrian/batalantrian',
 				[
@@ -583,7 +583,7 @@ class Api extends CI_Controller
 			$posting = [
 				'kodebooking'=>$req->kodebooking,
 			];
-			$this->endpoint = 'http://192.168.1.139:8000/';
+			//$this->endpoint = 'http://192.168.1.139:8000/';
 			$response = $this->clients->post(
 				$this->endpoint .'wsbpjs/antrean/getlisttask',
 				[
@@ -609,7 +609,7 @@ class Api extends CI_Controller
 						'verify' => false,
 						// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 					]);
-					$this->endpoint = 'http://192.168.1.139:8000/';
+					//$this->endpoint = 'http://192.168.1.139:8000/';
 					$response = $this->clients->get(
 						$this->endpoint .'wsbpjs/antrean/pendaftaran/tanggal/'.$req['tanggal']
 					)->getBody()->getContents();
@@ -625,7 +625,7 @@ class Api extends CI_Controller
 						'verify' => false,
 						// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 					]);
-					$this->endpoint = 'http://192.168.1.139:8000/';
+					//$this->endpoint = 'http://192.168.1.139:8000/';
 					$response = $this->clients->get(
 						$this->endpoint .'wsbpjs/antrean/pendaftaran/kodebooking/'.$req['kodebooking']
 					)->getBody()->getContents();
@@ -640,7 +640,7 @@ class Api extends CI_Controller
 					'verify' => false,
 					// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 				]);
-				$this->endpoint = 'http://192.168.1.139:8000/';
+				//$this->endpoint = 'http://192.168.1.139:8000/';
 				$response = $this->clients->get(
 					$this->endpoint .'wsbpjs/antrean/pendaftaran/aktif'
 				)->getBody()->getContents();
@@ -668,7 +668,7 @@ class Api extends CI_Controller
 						'verify' => false,
 						// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 					]);
-					$this->endpoint = 'http://192.168.1.139:8000/';
+					//$this->endpoint = 'http://192.168.1.139:8000/';
 					$response = $this->clients->get(
 						$this->endpoint .'wsbpjs/dashboard/waktutunggu/tanggal/'.$req['tanggal'].'/waktu/'.$req['waktu']
 					)->getBody()->getContents();
@@ -698,7 +698,7 @@ class Api extends CI_Controller
 						'verify' => false,
 						// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 					]);
-					$this->endpoint = 'http://192.168.1.139:8000/';
+					//$this->endpoint = 'http://192.168.1.139:8000/';
 					$response = $this->clients->get(
 						$this->endpoint .'wsbpjs/dashboard/waktutunggu/bulan/'.$req['bulan'].'/tahun/'.$req['tahun'].'/waktu/'.$req['waktu']
 					)->getBody()->getContents();
@@ -728,7 +728,7 @@ class Api extends CI_Controller
 						'verify' => false,
 						// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 					]);
-					$this->endpoint = 'http://192.168.1.139:8000/';
+					//$this->endpoint = 'http://192.168.1.139:8000/';
 					$response = $this->clients->get(
 						$this->endpoint . 'wsbpjs/antrean/pendaftaran/kodepoli/' . $req['kodepoli'] . '/kodedokter/' . $req['kodedokter'] . '/hari/' . $req['hari'] . '/jampraktek/' . $req['jampraktek']
 					)->getBody()->getContents();
@@ -919,7 +919,7 @@ class Api extends CI_Controller
 				'verify' => false,
 				// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 			]);
-			$this->endpoint = 'http://192.168.1.139:8000/';
+			//$this->endpoint = 'http://192.168.1.139:8000/';
 			$response = $this->clients->get(
 				$this->endpoint .'wsbpjs/jadwaldokter/kodepoli/'.$this->input->get('val').'/tanggal/'.date('Y-m-d')
 			)->getBody()->getContents();
@@ -1548,7 +1548,7 @@ class Api extends CI_Controller
 				'verify' => false,
 				// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 			]);
-			$this->endpoint = 'http://192.168.1.139:8000/';
+			//$this->endpoint = 'http://192.168.1.139:8000/';
 			$response = $this->clients->get(
 				$this->endpoint .'wsbpjs/jadwaldokter/kodepoli/'.$this->input->get('val').'/tanggal/'.date('Y-m-d')
 			)->getBody()->getContents();
@@ -2243,7 +2243,7 @@ class Api extends CI_Controller
 			'verify' => false,
 			// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 		]);
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		//$this->endpoint = 'http://192.168.1.139:8000/';
 		$posting = $this->input->post();
 		
 		// {
@@ -2449,7 +2449,7 @@ class Api extends CI_Controller
 			'verify' => false,
 			// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 		]);
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		//$this->endpoint = 'http://192.168.1.139:8000/';
 		$posting = $this->input->post();
 
 		$response = $this->clients->post(
@@ -2473,7 +2473,7 @@ class Api extends CI_Controller
 			'verify' => false,
 			// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 		]);
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		//$this->endpoint = 'http://192.168.1.139:8000/';
 		$posting = $this->input->post();
 
 		$response = $this->clients->post(
@@ -2514,7 +2514,7 @@ class Api extends CI_Controller
 			'verify' => false,
 			// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 		]);
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		//$this->endpoint = 'http://192.168.1.139:8000/';
 		$posting = $this->input->post();
 
 		$response = $this->clients->post(

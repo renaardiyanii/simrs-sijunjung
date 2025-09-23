@@ -31,7 +31,8 @@ class Rjcregistrasi extends Secure_area
 			'verify' => false,
 			// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 		]);
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		// $this->endpoint = 'http://192.168.1.139:8000/';
+		$this->endpoint = 'http://localhost:8000/';
 
 		// $this->load->constant();		
 	}
@@ -6011,9 +6012,11 @@ class Rjcregistrasi extends Secure_area
 
 	public function insert_data_pasien_antrol_v2($id,$loket)
 	{
+		// var_dump($this->input->post());
+		// die();
 		if ($this->input->post('jenis_identitas') == 'KTP') {
 			$check_ktp = $this->rjmregistrasi->check_ktp($this->input->post('no_identitas'))->row();
-			if (count($check_ktp)) {
+			if ($check_ktp) {
 				$success = 	'<div class="alert alert-danger">
                         		<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
                             	<h3 class="text-success">Nomor KTP Sudah Terdaftar.</h3> Harap masukkan nomor KTP yang lain.
@@ -6108,14 +6111,69 @@ class Rjcregistrasi extends Secure_area
 		$data['response_bpjs'] = $this->clients->get(
 			$this->endpoint .'adminantrian/v2/updateflagantrian/'.$id.'/2/'.$loket
 		)->getBody()->getContents();
-		
+
+		// Update status antrian menjadi "telah dilayani" menggunakan internal endpoint
+		// $id = $this->input->post('id');
+		// $status = $this->input->post('status'); // processed, completed
+		// var_dump($id);
+		// var_dump($status);
+		// die();
+
+		// if (!$id || !$status) {
+		// 	echo json_encode([
+		// 		'success' => false,
+		// 		'message' => 'Parameter tidak lengkap'
+		// 	]);
+		// 	return;
+		// }
+
+		try {
+			$this->clients = new Client(['verify' => false]);
+
+			$posting = [
+				'id' => $id,
+				'status' => 'telah_dilayani'
+			];
+
+			$response = $this->clients->post(
+				$this->endpoint . 'adminantrian/v2/updatestatus',
+				[
+					'headers' => ['Content-Type' => 'application/json'],
+					'json' => $posting
+				]
+			)->getBody()->getContents();
+
+			$result = json_decode($response, true);
+
+			if ($result && isset($result['metadata']) && $result['metadata']['code'] == 200) {
+				echo json_encode([
+					'success' => true,
+					'message' => 'Status antrian berhasil diupdate',
+					'data' => [
+						'id' => $id,
+						'status' => $status
+					]
+				]);
+			} else {
+				echo json_encode([
+					'success' => false,
+					'message' => $result['metadata']['message'] ?? 'Gagal mengupdate status antrian'
+				]);
+			}
+
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
+		}
 
 		$success = 	'<div class="alert alert-success">
                         		<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
                             	<h3><i class="fa fa-check-circle"></i> Pendaftaran Pasien Baru Berhasil.</h3> Data berhasil disimpan. Silahkan daftar ulang pasien.
                        		</div>';
 		$this->session->set_flashdata('success_msg', $success);
-		redirect('irj/rjcregistrasi/daftarulangantrol/' . $no_medrec_pasien_baru.'?antrol='.$id );
+		redirect('http://192.168.1.139:3000/antrian/pasienlamadebug?norm=' . $no_medrec_pasien_baru.'&antrol='.$id );
 	}
 
 	// ADD SJJ 2024

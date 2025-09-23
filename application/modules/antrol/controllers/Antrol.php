@@ -1286,6 +1286,10 @@ class Antrol extends Secure_area
 		$id = $this->input->post('id');
 		$loket = $this->input->post('loket');
 		$no_antrian = $this->input->post('no_antrian');
+		$status = $this->input->post('status'); // Ambil parameter status
+
+		// Debug log untuk melihat parameter yang diterima
+		error_log("panggilantrianadmisi received params - id: $id, loket: $loket, no_antrian: $no_antrian, status: $status");
 
 		if (!$id || !$loket || !$no_antrian) {
 			echo json_encode([
@@ -1302,11 +1306,88 @@ class Antrol extends Secure_area
 				'id' => $id,
 				'loket' => $loket,
 				'no_antrian' => $no_antrian,
-				'status' => 'dipanggil'
+				'status' => $status ?: 'dipanggil' // Gunakan status yang dikirim, default 'dipanggil'
 			];
+
+			// Debug log untuk melihat data yang akan dikirim ke API
+			error_log("Sending to API: " . json_encode($posting));
 
 			$response = $this->clients->post(
 				$this->endpoint . 'adminantrian/v2/panggilantrian',
+				[
+					'headers' => ['Content-Type' => 'application/json'],
+					'json' => $posting
+				]
+			)->getBody()->getContents();
+
+			// Debug log untuk melihat response dari API
+			error_log("API Response: " . $response);
+
+			$result = json_decode($response, true);
+
+			// Debug log untuk melihat hasil decode
+			error_log("Decoded result: " . json_encode($result));
+
+			if ($result && isset($result['metadata']) && $result['metadata']['code'] == 200) {
+				echo json_encode([
+					'success' => true,
+					'message' => 'Antrian berhasil dipanggil',
+					'data' => [
+						'id' => $id,
+						'loket' => $loket,
+						'no_antrian' => $no_antrian
+					],
+					'api_response' => $result // Tambahkan response API untuk debug
+				]);
+			} else {
+				echo json_encode([
+					'success' => false,
+					'message' => $result['metadata']['message'] ?? 'Gagal memanggil antrian',
+					'api_response' => $result // Tambahkan response API untuk debug
+				]);
+			}
+
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
+		}
+	}
+
+	public function updatestatusantrian()
+	{
+		header('Content-Type: application/json; charset=utf-8');
+
+		if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Method not allowed'
+			]);
+			return;
+		}
+
+		$id = $this->input->post('id');
+		$status = $this->input->post('status'); // processed, completed
+
+		if (!$id || !$status) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Parameter tidak lengkap'
+			]);
+			return;
+		}
+
+		try {
+			$this->clients = new Client(['verify' => false]);
+
+			$posting = [
+				'id' => $id,
+				'status' => $status
+			];
+
+			$response = $this->clients->post(
+				$this->endpoint . 'adminantrian/v2/updatestatus',
 				[
 					'headers' => ['Content-Type' => 'application/json'],
 					'json' => $posting
@@ -1318,17 +1399,78 @@ class Antrol extends Secure_area
 			if ($result && isset($result['metadata']) && $result['metadata']['code'] == 200) {
 				echo json_encode([
 					'success' => true,
-					'message' => 'Antrian berhasil dipanggil',
+					'message' => 'Status antrian berhasil diupdate',
 					'data' => [
 						'id' => $id,
-						'loket' => $loket,
-						'no_antrian' => $no_antrian
+						'status' => $status
 					]
 				]);
 			} else {
 				echo json_encode([
 					'success' => false,
-					'message' => $result['metadata']['message'] ?? 'Gagal memanggil antrian'
+					'message' => $result['metadata']['message'] ?? 'Gagal mengupdate status antrian'
+				]);
+			}
+
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
+		}
+	}
+
+	public function hapusantrian()
+	{
+		header('Content-Type: application/json; charset=utf-8');
+
+		if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Method not allowed'
+			]);
+			return;
+		}
+
+		$id = $this->input->post('id');
+
+		if (!$id) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'ID antrian tidak ditemukan'
+			]);
+			return;
+		}
+
+		try {
+			$this->clients = new Client(['verify' => false]);
+
+			$posting = [
+				'id' => $id
+			];
+
+			$response = $this->clients->post(
+				$this->endpoint . 'adminantrian/v2/hapusantrian',
+				[
+					'headers' => ['Content-Type' => 'application/json'],
+					'json' => $posting
+				]
+			)->getBody()->getContents();
+
+			$result = json_decode($response, true);
+
+			if ($result && isset($result['metadata']) && $result['metadata']['code'] == 200) {
+				echo json_encode([
+					'success' => true,
+					'message' => 'Antrian berhasil dihapus',
+					'data' => [
+						'id' => $id
+					]
+				]);
+			} else {
+				echo json_encode([
+					'success' => false,
+					'message' => $result['metadata']['message'] ?? 'Gagal menghapus antrian'
 				]);
 			}
 
