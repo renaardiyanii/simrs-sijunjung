@@ -15,7 +15,8 @@ class Antrol extends Secure_area
 		$this->clients = new Client([
 			'verify' => false,
 		]);
-		$this->endpoint = 'http://192.168.1.139:8000/';
+		// $this->endpoint = 'http://192.168.1.139:8000/';
+		$this->endpoint = 'http://localhost:8000/';
 		$this->load->library('vclaim');
 	}
 
@@ -1267,6 +1268,75 @@ class Antrol extends Secure_area
 						'message' => $e->getMessage()
 					]
 				]));
+		}
+	}
+
+	public function panggilantrianadmisi()
+	{
+		header('Content-Type: application/json; charset=utf-8');
+
+		if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Method not allowed'
+			]);
+			return;
+		}
+
+		$id = $this->input->post('id');
+		$loket = $this->input->post('loket');
+		$no_antrian = $this->input->post('no_antrian');
+
+		if (!$id || !$loket || !$no_antrian) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Parameter tidak lengkap'
+			]);
+			return;
+		}
+
+		try {
+			$this->clients = new Client(['verify' => false]);
+
+			$posting = [
+				'id' => $id,
+				'loket' => $loket,
+				'no_antrian' => $no_antrian,
+				'status' => 'dipanggil'
+			];
+
+			$response = $this->clients->post(
+				$this->endpoint . 'adminantrian/v2/panggilantrian',
+				[
+					'headers' => ['Content-Type' => 'application/json'],
+					'json' => $posting
+				]
+			)->getBody()->getContents();
+
+			$result = json_decode($response, true);
+
+			if ($result && isset($result['metadata']) && $result['metadata']['code'] == 200) {
+				echo json_encode([
+					'success' => true,
+					'message' => 'Antrian berhasil dipanggil',
+					'data' => [
+						'id' => $id,
+						'loket' => $loket,
+						'no_antrian' => $no_antrian
+					]
+				]);
+			} else {
+				echo json_encode([
+					'success' => false,
+					'message' => $result['metadata']['message'] ?? 'Gagal memanggil antrian'
+				]);
+			}
+
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
 		}
 	}
 }
