@@ -311,25 +311,29 @@ $(document).ready(function() {
             {
                 data: null,
                 render: function (data, type, row, meta) {
-                    // Cek jika data.noantrian null, gunakan index dari meta.row
-                    let nomorAntrian = '';
-                    // if (data.noantrian) {
-                        nomorAntrian = `F-${String(data.noantrian).padStart(3, '0')}`;
-                    // } else {
-                        // Menggunakan index jika noantrian null
-                        // nomorAntrian = `F-${String(meta.row + 1).padStart(3, '0')}`;
-                    // }
+                    // Generate nomor antrian
+                    let nomorAntrian = `F-${String(data.noantrian).padStart(3, '0')}`;
 
-                    // Menambahkan badge berdasarkan nilai checkin
-                    let badge = '';
-                    if (data.checkin === '1') {
-                        badge = `<span class="badge badge-success">Check-in</span>`;
+                    // Generate tombol panggil berdasarkan status
+                    let tombolPanggil = '';
+                    if (data.checkin === '1' && data.waktu_masuk_farmasi) {
+                        // Sudah selesai
+                        tombolPanggil = `<span class="btn btn-secondary btn-xs disabled">
+                            <i class="fa fa-check"></i> Selesai
+                        </span>`;
+                    } else if (data.checkin === '1') {
+                        // Sudah dipanggil tapi belum selesai
+                        tombolPanggil = `<button onclick="selesaiAntrianFarmasi('${data.no_register}','${nomorAntrian}','${data.nama}')" class="btn btn-info btn-xs" title="Selesai Pelayanan">
+                            <i class="fa fa-check"></i> Selesai
+                        </button>`;
                     } else {
-                        badge = `<span class="badge badge-danger">Belum Check-in</span>`;
+                        // Belum dipanggil
+                        tombolPanggil = `<button onclick="panggilAntrianFarmasi('${data.no_register}','${nomorAntrian}','${data.nama}')" class="btn btn-success btn-xs" title="Panggil Antrian">
+                            <i class="fa fa-volume-up"></i> Panggil
+                        </button>`;
                     }
 
-                    // Menggabungkan nomor antrean dengan badge
-                    return `${nomorAntrian}<br>${badge}`;
+                    return `<strong>${nomorAntrian}</strong><br>${tombolPanggil}`;
                 }
             },
 
@@ -359,17 +363,21 @@ $(document).ready(function() {
                     }
                 return button;
             }},
-            { data: "tgl", render: function (data) {
+            { data: "tgl_kunjungan", render: function (data) {
                 return moment(data).format("D MMMM YYYY h:mm");
             }},
             // { data: "no_sep" },
-            { data: "no_kartu" },
-            { data: "no_cm" },
+            { data: "no_kartu", defaultContent: "-",
+              render: function(data, type, row) {
+                return data || row.no_sep || "-";
+              }
+            },
+            { data: "no_cm", defaultContent: "-" },
             { data: "no_register" },
             { data: "nama" },
-            { data: "alamat" },
-            { data: "bed" },
-            { data: "cara_bayar" }
+            { data: "alamat", defaultContent: "-" },
+            { data: "bed", defaultContent: "-" },
+            { data: "cara_bayar", defaultContent: "-" }
         ]
     });
     $("#datepicker-proses").datepicker({
@@ -394,21 +402,22 @@ $(document).ready(function() {
             success: function(response) {
                 var formattedData = response.map(function(item) {
                 return {
-                    waktu_selesai_farmasi:item.waktu_selesai_farmasi,
-                    wkt_telaah_obat:item.wkt_telaah_obat,
-                    no_register:item.no_register,
-                    no_kartu:item.no_kartu,
-                    jml_resep: item.jml_resep,
-                    tgl_kunjungan: moment(item.tgl_kunjungan).format("D MMMM YYYY"),
-                    no_sep: item.no_sep,
-                    no_cm: item.no_cm,
+                    waktu_selesai_farmasi: item.waktu_selesai_farmasi || null,
+                    waktu_masuk_farmasi: item.waktu_masuk_farmasi || null,
+                    wkt_telaah_obat: item.wkt_telaah_obat || null,
+                    no_register: item.no_register,
+                    no_kartu: item.no_kartu || '-',
+                    jml_resep: item.jml_resep || 0,
+                    tgl_kunjungan: item.tgl_kunjungan,
+                    no_sep: item.no_sep || '-',
+                    no_cm: item.no_cm || '-',
                     nama: item.nama,
-                    alamat: item.alamat,
-                    bed: item.bed,
+                    alamat: item.alamat || '-',
+                    bed: item.bed || '-',
                     cara_bayar: item.cara_bayar,
-                    tgl: item.tgl,
-                    noantrian:item.noantrian,
-                    checkin:item.checkin,
+                    tgl: item.tgl_kunjungan,
+                    noantrian: item.noantrian || 1,
+                    checkin: item.checkin || '0',
                 };
             });
 
@@ -420,28 +429,35 @@ $(document).ready(function() {
     $.ajax({
         url: `<?php echo site_url('farmasi/Frmcdaftar/get_daftar_resep_pasien/'.date('Y-m-d')); ?>`,
         success: function(response) {
-            // console.log(response);
-            var formattedData = response.map(function(item) {
+            console.log('Response from server:', response);
+            var formattedData = response.map(function(item, index) {
             return {
-                waktu_selesai_farmasi:item.waktu_selesai_farmasi,
-                wkt_telaah_obat:item.wkt_telaah_obat,
-                no_register:item.no_register,
-                no_kartu:item.no_kartu,
-                jml_resep: item.jml_resep,
-                tgl_kunjungan: moment(item.tgl_kunjungan).format("D MMMM YYYY"),
-                no_sep: item.no_sep,
-                no_cm: item.no_cm,
-                nama: item.nama,
-                alamat: item.alamat,
-                bed: item.bed,
-                cara_bayar: item.cara_bayar,
-                tgl: item.tgl,noantrian:item.noantrian,
-                checkin:item.checkin,
+                waktu_selesai_farmasi: item.waktu_selesai_farmasi || null,
+                waktu_masuk_farmasi: item.waktu_masuk_farmasi || null,
+                wkt_telaah_obat: item.wkt_telaah_obat || null,
+                no_register: item.no_register || '',
+                no_kartu: item.no_kartu || item.no_sep || '-',
+                jml_resep: item.jml_resep || 0,
+                tgl_kunjungan: item.tgl_kunjungan || new Date().toISOString(),
+                no_sep: item.no_sep || '-',
+                no_cm: item.no_cm || '-',
+                nama: item.nama || 'Nama tidak tersedia',
+                alamat: item.alamat || '-',
+                bed: item.bed || '-',
+                cara_bayar: item.cara_bayar || '-',
+                tgl: item.tgl_kunjungan || item.tgl || new Date().toISOString(),
+                noantrian: item.noantrian || (index + 1),
+                checkin: item.checkin || '0',
             };
         });
+        console.log('Formatted data:', formattedData);
 
         // Clear the DataTable and add the formatted data
         table.clear().rows.add(formattedData).draw();
+        },
+        error: function(xhr, status, error) {
+            console.error('AJAX Error:', error);
+            console.error('Response:', xhr.responseText);
         }
     });
 })
@@ -481,19 +497,22 @@ function selesai(noreg) {
                             // console.log(response);
                             var formattedData = response.map(function(item) {
                             return {
-                                waktu_selesai_farmasi:item.waktu_selesai_farmasi,
-                                wkt_telaah_obat:item.wkt_telaah_obat,
-                                no_register:item.no_register,
-                                no_kartu:item.no_kartu,
-                                jml_resep: item.jml_resep,
-                                tgl_kunjungan: moment(item.tgl_kunjungan).format("D MMMM YYYY"),
-                                no_sep: item.no_sep,
-                                no_cm: item.no_cm,
+                                waktu_selesai_farmasi: item.waktu_selesai_farmasi || null,
+                                waktu_masuk_farmasi: item.waktu_masuk_farmasi || null,
+                                wkt_telaah_obat: item.wkt_telaah_obat || null,
+                                no_register: item.no_register,
+                                no_kartu: item.no_kartu || '-',
+                                jml_resep: item.jml_resep || 0,
+                                tgl_kunjungan: item.tgl_kunjungan,
+                                no_sep: item.no_sep || '-',
+                                no_cm: item.no_cm || '-',
                                 nama: item.nama,
-                                alamat: item.alamat,
-                                bed: item.bed,
+                                alamat: item.alamat || '-',
+                                bed: item.bed || '-',
                                 cara_bayar: item.cara_bayar,
-                                tgl: item.tgl
+                                tgl: item.tgl_kunjungan,
+                                noantrian: item.noantrian || 1,
+                                checkin: item.checkin || '0',
                             };
                         });
 
@@ -505,6 +524,63 @@ function selesai(noreg) {
         }
     });
 }
+
+// Fungsi untuk memanggil antrian farmasi
+function panggilAntrianFarmasi(no_register, no_antrian, nama_pasien) {
+    if (confirm('Apakah Anda yakin ingin memanggil antrian ' + no_antrian + ' (' + nama_pasien + ')?')) {
+        $.ajax({
+            type: 'POST',
+            url: '<?php echo base_url('antrol/panggil_antrian_farmasi'); ?>',
+            data: {
+                no_register: no_register,
+                no_antrian: no_antrian,
+                nama_pasien: nama_pasien
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    Swal.fire('Berhasil!', response.message, 'success');
+                    // Refresh table data
+                    // location.reload();
+                } else {
+                    Swal.fire('Error!', response.message, 'error');
+                }
+            },
+            error: function(xhr, status, error) {
+                Swal.fire('Error!', 'Terjadi kesalahan sistem: ' + error, 'error');
+            }
+        });
+    }
+}
+
+// Fungsi untuk menyelesaikan antrian farmasi
+function selesaiAntrianFarmasi(no_register, no_antrian, nama_pasien) {
+    if (confirm('Apakah Anda yakin ingin menyelesaikan antrian ' + no_antrian + ' (' + nama_pasien + ')?')) {
+        $.ajax({
+            type: 'POST',
+            url: '<?php echo base_url('antrol/selesai_antrian_farmasi'); ?>',
+            data: {
+                no_register: no_register,
+                no_antrian: no_antrian,
+                nama_pasien: nama_pasien
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    Swal.fire('Berhasil!', response.message, 'success');
+                    // Refresh table data
+                    location.reload();
+                } else {
+                    Swal.fire('Error!', response.message, 'error');
+                }
+            },
+            error: function(xhr, status, error) {
+                Swal.fire('Error!', 'Terjadi kesalahan sistem: ' + error, 'error');
+            }
+        });
+    }
+}
+
 // <button class="btn btn-primary btn-sm" onclick="selesai('${data.no_register}')">Selesai</button>
 </script>
 <script src="<?= base_url() ?>asset/js/jquery-ui.js"></script>

@@ -49,6 +49,89 @@ class Mantrol extends CI_Model{
         return $row->sequence_value;
 	}
 
+	function get_antrian_farmasi($date = null)
+	{
+		if ($date == null) {
+			$date = date('Y-m-d');
+		}
+
+		return $this->db->query("
+			SELECT
+				ROW_NUMBER() OVER (ORDER BY p.tgl_kunjungan ASC, p.no_register ASC) AS noantrian,
+				p.no_register, p.no_medrec, p.tgl_kunjungan, p.nama, p.kelas, p.obat, p.idrg, p.bed, p.cara_bayar,
+				p.farmasi, p.wkt_telaah_obat, p.no_sep, p.tgl,
+				COALESCE(dp.alamat, p.alamat, '') as alamat,
+				dp.no_cm,
+				(SELECT no_resep
+				 FROM resep_pasien
+				 WHERE no_register = p.no_register
+				 GROUP BY no_resep
+				 LIMIT 1) AS jml_resep,
+				CASE
+					WHEN p.status_antrian_farmasi = 'dipanggil' OR p.status_antrian_farmasi = 'selesai' THEN '1'
+					ELSE '0'
+				END AS checkin,
+				p.waktu_panggil_farmasi as waktu_panggil,
+				p.waktu_selesai_farmasi as waktu_masuk_farmasi,
+				COALESCE(p.status_antrian_farmasi, 'menunggu') as status,
+				('F-' || LPAD(ROW_NUMBER() OVER (ORDER BY p.tgl_kunjungan ASC, p.no_register ASC)::text, 3, '0')) as no_antrian,
+				p.nama as nama_pasien,
+				p.waktu_panggil_farmasi as waktu_daftar
+			FROM
+				permintaan_obat p
+			LEFT JOIN
+				data_pasien dp ON p.no_medrec = dp.no_medrec
+			WHERE
+				p.obat = '1'
+				AND p.tgl_kunjungan = '$date'
+			ORDER BY
+				p.tgl_kunjungan ASC, p.no_register ASC
+		");
+	}
+
+	function panggil_antrian_farmasi($no_register, $no_antrian)
+	{
+		// Update status antrian farmasi menjadi 'dipanggil' dengan waktu panggil
+		// Menggunakan kolom khusus antrian farmasi, bukan field 'farmasi' yang existing
+		$data = [
+			'status_antrian_farmasi' => 'dipanggil',
+			'waktu_panggil_farmasi' => date('Y-m-d H:i:s')
+		];
+
+		return $this->update_source_table($no_register, $data);
+	}
+
+	function selesai_antrian_farmasi($no_register)
+	{
+		// Update status antrian farmasi menjadi 'selesai' dengan waktu selesai
+		$data = [
+			'status_antrian_farmasi' => 'selesai',
+			'waktu_selesai_farmasi' => date('Y-m-d H:i:s')
+		];
+
+		return $this->update_source_table($no_register, $data);
+	}
+
+	private function update_source_table($no_register, $data)
+	{
+		// Tentukan tabel mana yang akan diupdate berdasarkan format no_register
+		$prefix = substr($no_register, 0, 3);
+
+		if ($prefix == 'PLF' || $prefix == 'PLL' || $prefix == 'PLR') {
+			// Pasien luar (farmasi, lab, radiologi)
+			return $this->db->where('no_register', $no_register)
+				->update('pasien_luar', $data);
+		} else if (substr($no_register, 0, 2) == 'RI') {
+			// Pasien rawat inap
+			return $this->db->where('no_ipd', $no_register)
+				->update('pasien_iri', $data);
+		} else {
+			// Pasien rawat jalan (RJ prefix atau format lain)
+			return $this->db->where('no_register', $no_register)
+				->update('daftar_ulang_irj', $data);
+		}
+	}
+
 	function get_pasien_by_no_cm($norm)
 	{
 		return $this->db->where('no_cm',$norm)->get('data_pasien')->row();

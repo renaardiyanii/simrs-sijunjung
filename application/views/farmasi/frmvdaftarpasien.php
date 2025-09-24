@@ -19,6 +19,7 @@ var site = "<?php echo site_url();?>";
                 { data: "idrg" },
                 { data: "bed" },
                 { data: "cara_bayar" },
+                { data: "antrian" },
                 { data: "aksi" }
             ],
             columnDefs: [
@@ -101,6 +102,63 @@ var site = "<?php echo site_url();?>";
 			}
 	    });
 	}
+
+	// Fungsi untuk memanggil antrian farmasi
+	function panggilAntrianFarmasi(no_register, no_antrian, nama_pasien) {
+		if (confirm('Apakah Anda yakin ingin memanggil antrian ' + no_antrian + ' (' + nama_pasien + ')?')) {
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url('antrol/panggil_antrian_farmasi'); ?>',
+				data: {
+					no_register: no_register,
+					no_antrian: no_antrian,
+					nama_pasien: nama_pasien
+				},
+				dataType: 'json',
+				success: function(response) {
+					if (response.success) {
+						alert('Berhasil: ' + response.message);
+						// Refresh table
+						objTable.ajax.reload();
+					} else {
+						alert('Error: ' + response.message);
+					}
+				},
+				error: function(xhr, status, error) {
+					alert('Terjadi kesalahan sistem: ' + error);
+				}
+			});
+		}
+	}
+
+	// Fungsi untuk menyelesaikan antrian farmasi
+	function selesaiAntrianFarmasi(no_register, no_antrian, nama_pasien) {
+		if (confirm('Apakah Anda yakin ingin menyelesaikan antrian ' + no_antrian + ' (' + nama_pasien + ')?')) {
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url('antrol/selesai_antrian_farmasi'); ?>',
+				data: {
+					no_register: no_register,
+					no_antrian: no_antrian,
+					nama_pasien: nama_pasien
+				},
+				dataType: 'json',
+				success: function(response) {
+					if (response.success) {
+						alert('Berhasil: ' + response.message);
+						// Refresh table
+						objTable.ajax.reload();
+					} else {
+						alert('Error: ' + response.message);
+					}
+				},
+				error: function(xhr, status, error) {
+					alert('Terjadi kesalahan sistem: ' + error);
+				}
+			});
+		}
+	}
+
 </script>
 <section class="content-header">
 	<?php
@@ -227,6 +285,7 @@ var site = "<?php echo site_url();?>";
 							<th>Id Ruang</th>
 							<th>Ruang</th>
 							<th>Cara Bayar</th>
+							<th>No. Antrian</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>

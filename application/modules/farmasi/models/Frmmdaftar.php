@@ -15,47 +15,38 @@ class Frmmdaftar extends CI_Model
 
 	function get_daftar_resep_pasien($date)
 	{
-		// return $this->db->query("SELECT *,(SELECT no_resep FROM resep_pasien WHERE  no_register=permintaan_obat.no_register GROUP BY no_resep limit 1) as jml_resep FROM permintaan_obat WHERE obat = '1' and tgl_kunjungan='$date' order by tgl_kunjungan desc ");
 		return $this->db->query("
-		WITH ranked_obat AS (
-			SELECT 
-				ROW_NUMBER() OVER (ORDER BY tgl_kunjungan ASC) AS generated_noantrian,
-				no_register,
-				tgl_kunjungan,
-				obat
-			FROM 
-				permintaan_obat
-			WHERE 
-				obat = '1' 
-				AND tgl_kunjungan = '$date'
-		)
-		SELECT 
-			CASE 
-				WHEN h.no_register IS NOT NULL and h.checkin_farmasi = '1' THEN 1 ELSE 0 
-			END AS checkin,
-			COALESCE(h.noantrian, ro.generated_noantrian) AS noantrian,
-			p.*,
-			(SELECT no_resep 
-			 FROM resep_pasien 
-			 WHERE no_register = p.no_register 
-			 GROUP BY no_resep 
-			 LIMIT 1) AS jml_resep
-		FROM 
-			permintaan_obat p
-		LEFT JOIN 
-			history_antrol h 
-		ON 
-			h.no_register = p.no_register 
-			AND h.aksi = 'farmasi'
-		LEFT JOIN 
-			ranked_obat ro
-		ON 
-			p.no_register = ro.no_register
-		WHERE 
-			p.obat = '1' 
-			AND p.tgl_kunjungan = '$date'
-		ORDER BY 
-			COALESCE(h.noantrian, ro.generated_noantrian) ASC;;");
+			SELECT
+				ROW_NUMBER() OVER (ORDER BY p.tgl_kunjungan ASC, p.no_register ASC) AS noantrian,
+				p.no_register, p.no_medrec, p.tgl_kunjungan, p.nama, p.kelas, p.obat, p.idrg, p.bed, p.cara_bayar,
+				p.farmasi, p.wkt_telaah_obat, p.no_sep, p.tgl,
+				COALESCE(dp.alamat, p.alamat, '') as alamat,
+				dp.no_cm,
+				(SELECT no_resep
+				 FROM resep_pasien
+				 WHERE no_register = p.no_register
+				 GROUP BY no_resep
+				 LIMIT 1) AS jml_resep,
+				CASE
+					WHEN p.status_antrian_farmasi = 'dipanggil' OR p.status_antrian_farmasi = 'selesai' THEN '1'
+					ELSE '0'
+				END AS checkin,
+				p.waktu_panggil_farmasi as waktu_panggil,
+				p.waktu_selesai_farmasi as waktu_masuk_farmasi,
+				COALESCE(p.status_antrian_farmasi, 'menunggu') as status,
+				('F-' || LPAD(ROW_NUMBER() OVER (ORDER BY p.tgl_kunjungan ASC, p.no_register ASC)::text, 3, '0')) as no_antrian,
+				p.nama as nama_pasien,
+				p.waktu_panggil_farmasi as waktu_daftar
+			FROM
+				permintaan_obat p
+			LEFT JOIN
+				data_pasien dp ON p.no_medrec = dp.no_medrec
+			WHERE
+				p.obat = '1'
+				AND p.tgl_kunjungan = '$date'
+			ORDER BY
+				p.tgl_kunjungan ASC, p.no_register ASC
+		");
 	}
 
 	function get_daftar_resep_pasien_by($by,$kode)

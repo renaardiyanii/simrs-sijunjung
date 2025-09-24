@@ -148,8 +148,63 @@ class Frmcdaftar extends Secure_area
         }
         $hasil = $this->Frmmdaftar->get_daftar_resep_pasien($date)->result();
 
+        $line = array();
+        $line2 = array();
+        $row2 = array();
 
-        $line['data'] = $hasil;
+        $i = 1;
+        foreach ($hasil as $value) {
+            $no_register = $value->no_register;
+            $nama = $value->nama;
+
+            // Generate queue number
+            $antrian_number = 'F-' . str_pad($value->noantrian, 3, '0', STR_PAD_LEFT);
+
+            // Create call and complete buttons based on status
+            $antrian_buttons = '';
+            if ($value->status == 'menunggu') {
+                // Not called yet - show call button
+                $antrian_buttons = "<button onclick=\"panggilAntrianFarmasi('$no_register','$antrian_number','$nama')\" class=\"btn btn-success btn-xs\" title=\"Panggil Antrian\">
+                    <i class=\"fa fa-volume-up\"></i> Panggil
+                </button>";
+            } else if ($value->status == 'selesai') {
+                // Already completed - show completed status
+                $antrian_buttons = "<span class=\"btn btn-secondary btn-xs disabled\">
+                    <i class=\"fa fa-check\"></i> Selesai
+                </span>";
+            } else if ($value->status == 'dipanggil') {
+                // Called but not completed - show complete button
+                $antrian_buttons = "<button onclick=\"selesaiAntrianFarmasi('$no_register','$antrian_number','$nama')\" class=\"btn btn-info btn-xs\" title=\"Selesai Pelayanan\">
+                    <i class=\"fa fa-check\"></i> Selesai
+                </button>";
+            }
+
+            $row2['no'] = $i++;
+            $row2['tgl_kunjungan'] = date('d-m-Y | H:i', strtotime($value->tgl_kunjungan));
+            $row2['no_cm'] = $value->no_cm;
+            $row2['no_register'] = $value->no_register;
+            $row2['nama'] = $value->nama;
+            $row2['kelas'] = $value->kelas;
+            $row2['idrg'] = $value->idrg;
+            $row2['bed'] = $value->bed;
+            $row2['cara_bayar'] = $value->cara_bayar;
+            $row2['antrian'] = $antrian_number . '<br>' . $antrian_buttons;
+
+            // Build action buttons (existing functionality)
+            $getrdrj = substr($no_register, 0, 2);
+            if ($getrdrj == 'RJ') {
+                $selesai_farmasi = "<a href='" . site_url('farmasi/Frmcdaftar/force_selesai/' . $no_register) . "' class=\"btn btn-danger btn-sm\">Selesai Farmasi</a>";
+            } else {
+                $selesai_farmasi = "";
+            }
+
+            $aksi = "<a href='" . site_url('farmasi/Frmcdaftar/permintaan_obat/' . $no_register) . "' class=\"btn btn-primary btn-sm\">Resep</a> " . $selesai_farmasi;
+            $row2['aksi'] = $aksi;
+
+            $line2[] = $row2;
+        }
+
+        $line['data'] = $line2;
 
         echo json_encode($line);
     }

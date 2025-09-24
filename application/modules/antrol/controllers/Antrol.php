@@ -1636,4 +1636,101 @@ class Antrol extends Secure_area
 			]);
 		}
 	}
+
+	public function get_antrian_farmasi()
+	{
+		header('Content-Type: application/json; charset=utf-8');
+		try {
+			$date = $this->input->get('date') ?: date('Y-m-d');
+			$result = $this->mantrol->get_antrian_farmasi($date);
+			$data = $result->result();
+
+			echo json_encode([
+				'success' => true,
+				'data' => $data
+			]);
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage(),
+				'data' => []
+			]);
+		}
+	}
+
+	public function panggil_antrian_farmasi()
+	{
+		header('Content-Type: application/json; charset=utf-8');
+
+		$no_register = $this->input->post('no_register');
+		$no_antrian = $this->input->post('no_antrian');
+		$nama_pasien = $this->input->post('nama_pasien');
+
+		if (empty($no_register) || empty($no_antrian)) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Parameter tidak lengkap'
+			]);
+			return;
+		}
+
+		try {
+			$result = $this->mantrol->panggil_antrian_farmasi($no_register, $no_antrian);
+
+			if ($result) {
+				echo json_encode([
+					'success' => true,
+					'message' => 'Antrian ' . $no_antrian . ' (' . $nama_pasien . ') berhasil dipanggil'
+				]);
+			} else {
+				echo json_encode([
+					'success' => false,
+					'message' => 'Gagal memanggil antrian'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
+		}
+	}
+
+	public function selesai_antrian_farmasi()
+	{
+		header('Content-Type: application/json; charset=utf-8');
+
+		$no_register = $this->input->post('no_register');
+		$no_antrian = $this->input->post('no_antrian');
+		$nama_pasien = $this->input->post('nama_pasien');
+
+		if (empty($no_register)) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'No register tidak boleh kosong'
+			]);
+			return;
+		}
+
+		try {
+			$result = $this->mantrol->selesai_antrian_farmasi($no_register);
+
+			if ($result) {
+				echo json_encode([
+					'success' => true,
+					'message' => 'Antrian ' . $no_antrian . ' (' . $nama_pasien . ') telah selesai'
+				]);
+			} else {
+				echo json_encode([
+					'success' => false,
+					'message' => 'Gagal menyelesaikan antrian'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
+		}
+	}
 }

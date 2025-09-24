@@ -1,0 +1,173 @@
+
+column_name	data_type	is_nullable	column_default
+no_register	character varying	NO	
+tgl_kunjungan	timestamp with time zone	YES	
+jns_kunj	character varying	YES	
+ublnrj	integer	YES	
+uharirj	integer	YES	
+umurrj	integer	YES	
+cara_kunj	character varying	YES	
+asal_rujukan	character varying	YES	
+no_rujukan	character varying	YES	
+kelas_pasien	character varying	YES	
+cara_bayar	character varying	YES	
+status_bpjs	integer	YES	
+id_poli	character varying	YES	
+kd_ruang	character varying	YES	
+biayadaftar	integer	YES	
+nama_penjamin	character varying	YES	
+hubungan	character varying	YES	
+vtot	integer	YES	
+status	character	YES	0
+tgl_pulang	date	YES	
+ket_pulang	character varying	YES	
+no_sep	character varying	YES	
+cetak_kwitansi	character	YES	0
+ket_tambahan	character varying	YES	
+xupdate	timestamp with time zone	YES	
+xuser	character varying	YES	
+xterminal	character varying	YES	
+lab	integer	YES	0
+status_lab	integer	YES	0
+vtot_lab	integer	YES	
+jadwal_lab	timestamp without time zone	YES	
+pa	integer	YES	0
+status_pa	integer	YES	0
+vtot_pa	integer	YES	
+jadwal_pa	timestamp without time zone	YES	
+obat	integer	YES	0
+status_obat	integer	YES	0
+vtot_obat	integer	YES	
+rad	integer	YES	0
+status_rad	integer	YES	0
+vtot_rad	integer	YES	
+jadwal_rad	timestamp without time zone	YES	
+diagnosa	character varying	YES	
+tgl_cetak_kw	timestamp without time zone	YES	
+tgl_kontrol	date	YES	
+tgl_rujukan	timestamp without time zone	YES	
+diskon	integer	YES	
+pasien_bayar	integer	YES	
+tunai	integer	YES	
+no_kkkd	character varying	YES	
+nilai_kkkd	integer	YES	
+persen_kk	integer	YES	
+lunas	integer	YES	
+biaya_alkes	integer	YES	
+diag_baru	character varying	YES	
+diag_lama	character varying	YES	
+xcetak	character varying	YES	
+catatan	text	YES	
+alasan_berobat	character varying	YES	
+datang_dengan	character varying	YES	
+kecelakaan	character varying	YES	
+lokasi_kecelakaan	character varying	YES	
+no_antrian	integer	YES	
+counter_kwitansi	integer	YES	
+hapusSEP	character varying	YES	
+catatan_plg	character varying	YES	
+ok	integer	YES	0
+status_ok	integer	YES	0
+vtot_ok	integer	YES	
+jadwal_ok	timestamp without time zone	YES	
+waktu_masuk_poli	timestamp without time zone	YES	
+waktu_keluar_poli	timestamp without time zone	YES	
+waktu_masuk_lab	timestamp without time zone	YES	
+waktu_keluar_lab	timestamp without time zone	YES	
+waktu_masuk_rad	timestamp without time zone	YES	
+waktu_keluar_rad	timestamp without time zone	YES	
+catatan_diagnosa	text	YES	
+klaim	integer	YES	
+status_fisio	integer	YES	
+vtot_fisio	integer	YES	
+fisio	integer	YES	
+cetak_tracer	integer	YES	
+diskon2	integer	YES	
+no_kkkd2	character varying	YES	
+nilai_kkkd2	integer	YES	
+persen_kk2	integer	YES	
+tunai2	integer	YES	
+vtot_retur	integer	YES	
+retur	integer	YES	
+vtot_bayar	integer	YES	
+note_retur	character varying	YES	
+xcreate	character varying	YES	
+xpulang	character varying	YES	
+poli_ke	integer	YES	
+waktu_masuk_pa	timestamp without time zone	YES	
+waktu_keluar_pa	timestamp without time zone	YES	
+online	integer	YES	
+ket_pengajuan_sep	text	YES	
+kll_penjamin	character varying	YES	
+kll_tgl_kejadian	timestamp without time zone	YES	
+kll_provinsi	character varying	YES	
+kll_kabupaten	character varying	YES	
+kll_kecamatan	character varying	YES	
+kll_ketkejadian	text	YES	
+katarak	smallint	YES	
+dpjp_skdp	character varying	YES	
+dpjp_skdp_sep	character varying	YES	
+nosurat_skdp	character varying	YES	
+nosurat_skdp_sep	character varying	YES	
+no_reg_parent	character varying	YES	
+tuslah	integer	YES	
+atas_nama	character varying	YES	
+id_dokter	integer	YES	
+no_medrec	integer	YES	
+id_kontraktor	integer	YES	
+kekhususan	character varying	YES	
+tindak_lanjut	text	YES	
+tgl_kontrol_ulang	date	YES	
+jam_kontrol_ulang	time without time zone	YES	
+cetak_prmrj	character	YES	
+em	integer	YES	0
+status_em	integer	YES	0
+vtot_em	integer	YES	
+jadwal_em	timestamp without time zone	YES	
+waktu_masuk_em	timestamp without time zone	YES	
+waktu_keluar_em	timestamp without time zone	YES	
+no_register_lama	character varying	YES	
+waktu_masuk_dokter	timestamp without time zone	YES	
+waktu_pulang	timestamp without time zone	YES	
+alasan_kontrol_ulang	character varying	YES	
+kode_faskes_perujuk	character varying	YES	
+nama_faskes_perujuk	character varying	YES	
+tgl_konsul	date	YES	
+tgl_jawaban_konsul	timestamp without time zone	YES	
+jawaban_konsul	integer	YES	
+puskesmas_tujuan	character varying	YES	
+tujuan_rs	character varying	YES	
+dokter_kontrol_id	character varying	YES	
+kondisi_masuk	character varying	YES	
+saran_rawat	character varying	YES	
+konsul_nanti	character	YES	
+pengobatan	character varying	YES	
+pemeriksa_dokter	character varying	YES	
+pemeriksa_perawat	character varying	YES	
+alasan_tunda_rad	character varying	YES	
+cetak_rad	integer	YES	
+status_cetak_rad	integer	YES	
+noreservasi	character varying	YES	
+billing_rad	timestamp without time zone	YES	
+cetak_kwitansi_st	character varying	YES	
+farmasi	character varying	YES	
+dtfarmasi	timestamp without time zone	YES	
+waktu_resep_dokter	timestamp without time zone	YES	
+waktu_farmasi_verif	timestamp without time zone	YES	
+waktu_telaah_obat	timestamp without time zone	YES	
+waktu_selesai_farmasi	timestamp without time zone	YES	
+wkt_telaah_obat	timestamp without time zone	YES	
+wkt_dispensing_obat	timestamp without time zone	YES	
+wkt_penyerahan_obat	timestamp without time zone	YES	
+respon_rujukan	character varying	YES	
+cara_dtg	character varying	YES	
+diag_klinis_rad	character varying	YES	
+id_poli_rujuk	character varying	YES	
+noreg_asal_konsul	character varying	YES	
+utdrs	character varying	YES	
+status_utdrs	character varying	YES	
+order_lab_cito	character varying	YES	
+waktu_resep_farmasi	timestamp without time zone	YES	
+status_panggil	character varying	YES	
+waktu_selesai	character varying	YES	
+waktu_panggil	character varying	YES	
