@@ -6003,7 +6003,7 @@ class rjcpelayanan extends Secure_area
 		echo json_encode($biaya);
 	}
 
-	function select2s_diagnosa(){  
+	function select2s_diagnosa(){
 		header('Content-Type: application/json; charset=utf-8');
 
         if (isset($_GET['term'])){
@@ -6011,6 +6011,151 @@ class rjcpelayanan extends Secure_area
           $this->rjmpelayanan->select2s_diagnosa($q);
         }
     }
+
+	public function panggil_antrian_poli()
+	{
+		header('Content-Type: application/json; charset=utf-8');
+
+		$no_register = $this->input->post('no_register');
+		$no_antrian = $this->input->post('no_antrian');
+		$nama_pasien = $this->input->post('nama_pasien');
+		$id_poli = $this->input->post('id_poli');
+
+		if (!$no_register || !$no_antrian || !$nama_pasien) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Parameter tidak lengkap'
+			]);
+			return;
+		}
+
+		try {
+			// Get patient data untuk kodebooking
+			$pasien_data = $this->rjmpelayanan->get_pasien_by_register($no_register);
+
+			if (!$pasien_data) {
+				echo json_encode([
+					'success' => false,
+					'message' => 'Data pasien tidak ditemukan'
+				]);
+				return;
+			}
+
+			// Update status panggil di database lokal
+			$update_data = [
+				'status_panggil' => 'dipanggil',
+				'waktu_panggil' => date('Y-m-d H:i:s')
+			];
+
+			$this->rjmpelayanan->update_status_antrian($no_register, $update_data);
+
+			// Kirim ke API antrian (jika ada kodebooking)
+			if (!empty($pasien_data->kodebooking)) {
+				$client = new Client(['verify' => false]);
+				$endpoint = 'http://localhost:8000/';
+
+				$posting = [
+					'id' => $no_register,
+					'kodebooking' => $pasien_data->kodebooking,
+					'no_antrian' => $no_antrian,
+					'nama_pasien' => $nama_pasien,
+					'status' => 'dipanggil'
+				];
+
+				try {
+					$response = $client->post(
+						$endpoint . 'adminantrian/v2/panggilantrian',
+						[
+							'headers' => ['Content-Type' => 'application/json'],
+							'json' => $posting
+						]
+					)->getBody()->getContents();
+				} catch (Exception $e) {
+					// Log error but continue
+					log_message('error', 'API panggil antrian error: ' . $e->getMessage());
+				}
+			}
+
+			echo json_encode([
+				'success' => true,
+				'message' => 'Antrian ' . $no_antrian . ' berhasil dipanggil'
+			]);
+
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
+		}
+	}
+
+	public function selesai_antrian_poli()
+	{
+		header('Content-Type: application/json; charset=utf-8');
+
+		$no_register = $this->input->post('no_register');
+		$no_antrian = $this->input->post('no_antrian');
+		$nama_pasien = $this->input->post('nama_pasien');
+		$id_poli = $this->input->post('id_poli');
+
+		if (!$no_register || !$no_antrian || !$nama_pasien) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Parameter tidak lengkap'
+			]);
+			return;
+		}
+
+		try {
+			// Get patient data untuk kodebooking
+			$pasien_data = $this->rjmpelayanan->get_pasien_by_register($no_register);
+
+			if (!$pasien_data) {
+				echo json_encode([
+					'success' => false,
+					'message' => 'Data pasien tidak ditemukan'
+				]);
+				return;
+			}
+
+			// Update status selesai di database lokal
+			$update_data = [
+				'status_panggil' => 'selesai',
+				'waktu_selesai' => date('Y-m-d H:i:s')
+			];
+
+			$this->rjmpelayanan->update_status_antrian($no_register, $update_data);
+
+			// Kirim ke API antrian untuk update task id ke 5 (selesai)
+			if (!empty($pasien_data->kodebooking)) {
+				$client = new Client(['verify' => false]);
+				$endpoint = 'http://localhost:8000/';
+
+				try {
+					$response = $client->get(
+						$endpoint . 'adminantrian/prosesantrian/' . $pasien_data->kodebooking . '/5',
+						[
+							'headers' => ['Content-Type' => 'application/json']
+						]
+					)->getBody()->getContents();
+				} catch (Exception $e) {
+					// Log error but continue
+					log_message('error', 'API selesai antrian error: ' . $e->getMessage());
+				}
+			}
+
+			echo json_encode([
+				'success' => true,
+				'message' => 'Pelayanan antrian ' . $no_antrian . ' berhasil diselesaikan'
+			]);
+
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
+		}
+	}
 
 
 }

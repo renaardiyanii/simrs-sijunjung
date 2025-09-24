@@ -82,7 +82,7 @@
         }
 
         .hospital-title {
-            font-size: clamp(1.5rem, 4vw, 3rem);
+            font-size: clamp(1.2rem, 3vw, 2.5rem);
             font-weight: 800;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
@@ -94,7 +94,7 @@
         }
 
         .date-time {
-            font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+            font-size: clamp(0.8rem, 2vw, 1.2rem);
             color: var(--text-secondary);
             font-weight: 500;
             text-align: center;
@@ -104,8 +104,8 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-radius: var(--border-radius);
-            padding: 2rem;
-            margin-bottom: 2rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
             box-shadow: var(--shadow);
             border: 1px solid rgba(255, 255, 255, 0.2);
             position: relative;
@@ -135,8 +135,12 @@
         }
 
         .doctor-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        .doctor-card.latest-call:hover {
+            transform: scale(1.02) translateY(-3px);
         }
 
         .doctor-card::before {
@@ -145,15 +149,19 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 6px;
+            height: 4px;
             background: var(--gradient-doctor);
         }
 
+        .doctor-card.latest-call::before {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
         .doctor-name {
-            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
             font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             text-align: center;
             display: flex;
             align-items: center;
@@ -161,19 +169,31 @@
             gap: 0.5rem;
         }
 
+        .poli-name {
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .doctor-card.latest-call .poli-name {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
         .current-patient {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .current-patient-number {
-            font-size: clamp(3rem, 8vw, 6rem);
+            font-size: clamp(2rem, 6vw, 4rem);
             font-weight: 900;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin: 1rem 0;
+            margin: 0.5rem 0;
             animation: pulse 2s infinite;
             text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             min-height: 1.2em;
@@ -183,7 +203,7 @@
         }
 
         .current-patient-number.no-patient {
-            font-size: clamp(1.5rem, 4vw, 3rem);
+            font-size: clamp(1rem, 3vw, 2rem);
             animation: none;
             color: var(--text-secondary);
             background: none;
@@ -191,14 +211,19 @@
         }
 
         .current-patient-info {
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-size: clamp(0.8rem, 2vw, 1.2rem);
             font-weight: 600;
             color: var(--text-primary);
-            margin-top: 1rem;
-            padding: 1rem;
+            margin-top: 0.5rem;
+            padding: 0.8rem;
             background: rgba(16, 185, 129, 0.1);
             border: 2px solid rgba(16, 185, 129, 0.3);
             border-radius: 12px;
+        }
+
+        .doctor-card.latest-call .current-patient-info {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
         }
 
         @keyframes pulse {
@@ -207,14 +232,14 @@
         }
 
         .queue-section {
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
 
         .queue-title {
-            font-size: clamp(1.1rem, 2.8vw, 1.8rem);
+            font-size: clamp(0.9rem, 2.2vw, 1.4rem);
             font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             text-align: center;
             display: flex;
             align-items: center;
@@ -231,11 +256,11 @@
         .queue-item {
             background: rgba(99, 126, 234, 0.1);
             border: 2px solid rgba(99, 126, 234, 0.2);
-            border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 0.8rem;
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
             text-align: left;
-            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+            font-size: clamp(0.8rem, 2vw, 1rem);
             font-weight: 600;
             color: var(--primary-color);
             transition: all 0.3s ease;
@@ -243,6 +268,12 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+        }
+
+        .doctor-card.latest-call .queue-item {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
         }
 
         .queue-item:hover {
@@ -254,7 +285,7 @@
         @keyframes slideInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -266,13 +297,17 @@
             text-align: center;
             color: var(--text-secondary);
             font-style: italic;
-            padding: 2rem;
-            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            padding: 1.5rem;
+            font-size: clamp(0.8rem, 2vw, 1.2rem);
+        }
+
+        .doctor-card.latest-call .empty-queue {
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .status-indicator {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: var(--success-color);
             animation: blink 1.5s infinite;
@@ -287,9 +322,9 @@
 
         .loading-spinner {
             display: inline-block;
-            width: 2rem;
-            height: 2rem;
-            border: 3px solid rgba(99, 126, 234, 0.3);
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid rgba(99, 126, 234, 0.3);
             border-radius: 50%;
             border-top-color: var(--primary-color);
             animation: spin 1s ease-in-out infinite;
@@ -299,48 +334,29 @@
             to { transform: rotate(360deg); }
         }
 
+        .poli-selector {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+
         @media (max-width: 768px) {
             .container-fluid {
                 padding: 1rem;
             }
 
-            .header {
+            .header, .poli-selector {
                 padding: 1rem;
             }
 
             .doctor-card {
-                padding: 1.5rem;
+                padding: 1rem;
                 margin-bottom: 1rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .current-patient-number {
-                font-size: clamp(2rem, 10vw, 4rem);
-            }
-
-            .current-patient-number.no-patient {
-                font-size: clamp(1rem, 3vw, 2rem);
-            }
-
-            .queue-item {
-                padding: 0.8rem;
-                font-size: clamp(0.8rem, 3vw, 1rem);
-            }
-        }
-
-        @media (min-width: 1920px) {
-            .current-patient-number {
-                font-size: 8rem;
-            }
-
-            .current-patient-number.no-patient {
-                font-size: 4rem;
-            }
-
-            .queue-item {
-                font-size: 1.5rem;
-                padding: 1.5rem;
             }
         }
     </style>
@@ -354,26 +370,27 @@
                 <div class="col-md-2 text-center">
                     <img src="<?= base_url('assets/antrian/img/logo_kemenkes.png') ?>"
                          class="hospital-logo img-fluid"
-                         style="max-height: 80px; width: auto;"
+                         style="max-height: 60px; width: auto;"
                          alt="Logo Kemenkes">
                 </div>
                 <div class="col-md-8 text-center">
                     <h1 class="hospital-title mb-2" id="poli">
-                        <div class="loading-spinner"></div>
+                        ANTRIAN POLIKLINIK
                     </h1>
                     <p class="date-time mb-0" id="dateTime">Loading...</p>
                 </div>
                 <div class="col-md-2 text-center">
                     <img src="<?= base_url('assets/images/logo.png') ?>"
                          class="hospital-logo img-fluid"
-                         style="max-height: 80px; width: auto;"
+                         style="max-height: 60px; width: auto;"
                          alt="Logo Rumah Sakit">
                 </div>
             </div>
         </div>
 
+        
         <!-- Doctor Cards Container -->
-        <div class="row g-4" id="countdokter">
+        <div class="row g-3" id="countdokter">
             <!-- Dynamic doctor cards will be inserted here -->
         </div>
     </div>
@@ -382,8 +399,8 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script>
-        let namapoli = '';
         let previousData = null;
+        let currentPolies = '<?= $kodepolis ?>';
 
         function updateDateTime() {
             const now = new Date();
@@ -402,7 +419,6 @@
         }
 
         function createDoctorCard(doctorData, index) {
-            // Determine if patient number has changed for animation
             const hasPatient = doctorData.pasiendilayani && doctorData.pasiendilayani.nourut;
             const patientNumber = hasPatient ? doctorData.pasiendilayani.nourut : null;
             const patientName = hasPatient ? doctorData.pasiendilayani.nama : '';
@@ -412,22 +428,30 @@
             // Build queue list
             let queueListHtml = '';
             if (doctorData.pasien && doctorData.pasien.length > 0) {
-                doctorData.pasien.forEach((patient, idx) => {
+                doctorData.pasien.slice(0, 5).forEach((patient, idx) => {
                     queueListHtml += `
                         <li class="queue-item" style="animation-delay: ${idx * 0.1}s">
                             <i class="fas fa-user me-2"></i>
                             <div>
                                 <strong>${patient.nama}</strong>
-                                <small class="text-muted d-block">RM: ${patient.norm}</small>
+                                <small class="d-block">RM: ${patient.norm}</small>
                             </div>
                         </li>
                     `;
                 });
+                if (doctorData.pasien.length > 5) {
+                    queueListHtml += `
+                        <li class="queue-item" style="opacity: 0.7;">
+                            <i class="fas fa-ellipsis-h me-2"></i>
+                            <div><small>Dan ${doctorData.pasien.length - 5} lainnya...</small></div>
+                        </li>
+                    `;
+                }
             } else {
                 queueListHtml = `
                     <li class="empty-queue">
                         <i class="fas fa-hourglass-half me-2"></i>
-                        Tidak ada antrian menunggu
+                        Tidak ada antrian
                     </li>
                 `;
             }
@@ -439,34 +463,36 @@
                     <div class="current-patient-info">
                         <i class="fas fa-user-check me-2"></i>
                         <strong>${patientName}</strong>
-                        <small class="text-muted d-block">RM: ${patientNorm}</small>
-                        ${doctorData.pasiendilayani.waktu_panggil ? `<small class="text-muted d-block">Dipanggil: ${new Date(doctorData.pasiendilayani.waktu_panggil).toLocaleTimeString('id-ID')}</small>` : ''}
+                        <small class="d-block">RM: ${patientNorm}</small>
+                        ${doctorData.pasiendilayani.waktu_panggil ?
+                            `<small class="d-block">Dipanggil: ${new Date(doctorData.pasiendilayani.waktu_panggil).toLocaleTimeString('id-ID')}</small>`
+                            : ''}
                     </div>
                 `;
             }
 
             // Determine column size based on latest call
-            const colClass = isLatestCall ? 'col-lg-8 col-xl-6' : 'col-lg-6 col-xl-4';
+            const colClass = isLatestCall ? 'col-lg-6 col-xl-4' : 'col-lg-4 col-xl-3';
             const cardClass = isLatestCall ? 'doctor-card latest-call' : 'doctor-card';
 
             return `
                 <div class="${colClass}">
-                    <div class="${cardClass}" style="animation-delay: ${index * 0.2}s">
+                    <div class="${cardClass}" style="animation-delay: ${index * 0.1}s">
                         <div class="doctor-name">
                             <span class="status-indicator"></span>
                             <i class="fas fa-user-md me-2"></i>
                             ${doctorData.dokter}
-                            ${isLatestCall ? '<i class="fas fa-star ms-2" title="Pemanggilan Terakhir"></i>' : ''}
+                            ${isLatestCall ? '<i class="fas fa-star ms-1" title="Pemanggilan Terakhir"></i>' : ''}
                         </div>
-                        <div class="small text-center mb-2">
-                            <strong>${doctorData.poli}</strong>
-                            ${isLatestCall ? '<span class="badge bg-light text-success ms-2">Pemanggilan Terakhir</span>' : ''}
+                        <div class="poli-name">
+                            ${doctorData.poli}
+                            ${isLatestCall ? '<span class="badge bg-light text-success ms-1">Terbaru</span>' : ''}
                         </div>
 
                         <div class="current-patient">
                             <div class="current-patient-number ${!hasPatient ? 'no-patient' : ''}"
                                  data-doctor="${doctorData.dokter}">
-                                ${hasPatient ? patientNumber : 'Belum Ada Pasien'}
+                                ${hasPatient ? patientNumber : 'Belum Ada'}
                             </div>
                             ${patientInfoHtml}
                         </div>
@@ -474,7 +500,7 @@
                         <div class="queue-section">
                             <h4 class="queue-title">
                                 <i class="fas fa-list-ol me-2"></i>
-                                Antrian Menunggu (${doctorData.pasien ? doctorData.pasien.length : 0})
+                                Antrian (${doctorData.pasien ? doctorData.pasien.length : 0})
                             </h4>
                             <ul class="queue-list">
                                 ${queueListHtml}
@@ -485,38 +511,25 @@
             `;
         }
 
-        function animateChanges() {
-            // Add flash animation to changed patient numbers
-            $('.current-patient-number').each(function() {
-                const $element = $(this);
-                const doctorName = $element.data('doctor');
-
-                if (previousData) {
-                    const previousDoctor = previousData.find(d => d.dokter === doctorName);
-                    const currentText = $element.text().trim();
-                    const previousText = previousDoctor && previousDoctor.pasiendilayani ?
-                                        previousDoctor.pasiendilayani.nourut : 'Belum Ada Pasien';
-
-                    if (currentText !== previousText && previousText !== 'Belum Ada Pasien') {
-                        $element.addClass('animate__animated animate__flash');
-                        setTimeout(() => {
-                            $element.removeClass('animate__animated animate__flash');
-                        }, 1000);
-                    }
-                }
-            });
-        }
 
         function getdata() {
-            $.get('<?= base_url('antrol/get_data_dashboard_antrian_poli/' . $kodepoli) ?>', function (data, status) {
+            if (!currentPolies) {
+                console.warn('No poli codes specified');
+                return;
+            }
+
+            $.get('<?= base_url('antrol/antrol/get_data_dashboard_antrian_multi/') ?>' + encodeURIComponent(currentPolies), function (data, status) {
                 if (!data || data.length === 0) {
-                    console.warn('No data received for poliklinik');
+                    $("#countdokter").html(`
+                        <div class="col-12">
+                            <div class="alert alert-warning text-center">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                Tidak ada data antrian untuk poli yang dipilih
+                            </div>
+                        </div>
+                    `);
                     return;
                 }
-
-                // Update page title
-                const poliName = data[0].poli ? data[0].poli.toUpperCase() : 'POLIKLINIK';
-                $("#poli").html(`ANTRIAN POLIKLINIK ${poliName}`);
 
                 // Build doctor cards
                 let doctorCardsHtml = '';
@@ -527,23 +540,43 @@
                 // Update content
                 $("#countdokter").html(doctorCardsHtml);
 
-                // Animate changes if this is not the first load
-                if (previousData) {
-                    setTimeout(animateChanges, 100);
-                }
-
                 // Store current data for comparison
                 previousData = [...data];
 
             }).fail(function(xhr, status, error) {
-                console.error('Error fetching poliklinik data:', error);
-                $("#poli").html('Error Loading Data');
+                console.error('Error fetching multi poli data:', error);
+                $("#countdokter").html(`
+                    <div class="col-12">
+                        <div class="alert alert-danger text-center">
+                            <i class="fas fa-exclamation-circle me-2"></i>
+                            Error loading data: ${error}
+                        </div>
+                    </div>
+                `);
             });
         }
 
         function initializeDisplay() {
             updateDateTime();
-            getdata();
+
+            // Set poli info display
+            if (currentPolies) {
+                const poliArray = currentPolies.split(',');
+                $("#poliList").text(poliArray.join(', '));
+                $("#poli").text('ANTRIAN POLIKLINIK');
+                getdata();
+            } else {
+                $("#poliList").text('Tidak ada poli yang dipilih');
+                $("#poli").text('ANTRIAN POLIKLINIK');
+                $("#countdokter").html(`
+                    <div class="col-12">
+                        <div class="alert alert-warning text-center">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            Tidak ada poli yang dipilih untuk ditampilkan
+                        </div>
+                    </div>
+                `);
+            }
         }
 
         $(document).ready(function() {
@@ -552,8 +585,13 @@
             // Update time every second
             setInterval(updateDateTime, 1000);
 
-            // Update queue data every 10 seconds
-            setInterval(getdata, 10000);
+            // Update queue data every 15 seconds if polies are loaded
+            setInterval(() => {
+                if (currentPolies) {
+                    getdata();
+                }
+            }, 15000);
+
 
             // Reload page every 30 minutes to prevent memory leaks
             setTimeout(() => {
@@ -563,7 +601,7 @@
 
         // Handle visibility change to refresh when tab becomes visible
         document.addEventListener('visibilitychange', function() {
-            if (!document.hidden) {
+            if (!document.hidden && currentPolies) {
                 getdata();
             }
         });
@@ -571,8 +609,15 @@
         // Add error handling for failed requests
         $(document).ajaxError(function(event, xhr, settings, error) {
             console.error('AJAX Error:', error);
-            if (settings.url.includes('get_data_dashboard_antrian_poli')) {
-                $("#poli").html('Koneksi Terputus');
+            if (settings.url.includes('get_data_dashboard_antrian_multi')) {
+                $("#countdokter").html(`
+                    <div class="col-12">
+                        <div class="alert alert-danger text-center">
+                            <i class="fas fa-wifi me-2"></i>
+                            Koneksi Terputus - Mencoba menghubungkan kembali...
+                        </div>
+                    </div>
+                `);
             }
         });
     </script>

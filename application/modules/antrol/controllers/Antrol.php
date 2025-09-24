@@ -1098,20 +1098,20 @@ class Antrol extends Secure_area
 		$this->load->view('antrol/dashboard_antrian_poli',$data);
 	}
 
-	// public function get_data_dashboard_antrian_poli($kodepoli)
-	// {
-	// 	header('Content-Type: application/json');
-	// 	try {
-	// 		$response = $this->clients->request(
-	// 			'GET',
-	// 			$this->endpoint . "adminantrian/dashboardantrian/".$kodepoli
-	// 		)->getBody()->getContents();
-	// 		echo $response;
-	// 		return;
-	// 	} catch (Exception $e) {
-	// 		throw new \Exception($e->getMessage(), 1);
-	// 	}
-	// }
+	public function get_data_dashboard_antrian_poli($kodepoli)
+	{
+		header('Content-Type: application/json');
+		try {
+			$response = $this->clients->request(
+				'GET',
+				$this->endpoint . "adminantrian/dashboardantrian/".$kodepoli
+			)->getBody()->getContents();
+			echo $response;
+			return;
+		} catch (Exception $e) {
+			throw new \Exception($e->getMessage(), 1);
+		}
+	}
 
 	public function dashboard_antrian_farmasi(){
 		$data = [];
@@ -1478,6 +1478,161 @@ class Antrol extends Secure_area
 			echo json_encode([
 				'success' => false,
 				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
+		}
+	}
+
+	
+
+	public function dashboard_antrian_multi($poli1='', $poli2='', $poli3='', $poli4='', $poli5=''){
+		// Gabungkan parameter poli yang tidak kosong
+		$poli_params = array_filter([$poli1, $poli2, $poli3, $poli4, $poli5], function($poli) {
+			return !empty($poli);
+		});
+
+		$data['kodepolis'] = implode(',', $poli_params);
+		$data['poli_list'] = $poli_params;
+		$this->load->view('antrol/dashboard_antrian_multi',$data);
+	}
+
+	public function get_data_dashboard_antrian_multi($kodepolis)
+	{
+		header('Content-Type: application/json');
+		try {
+			// Parse poli list dari comma separated string
+			$poli_list = array_map('trim', explode(',', $kodepolis));
+
+			// Batasi maksimal 5 poli
+			$poli_list = array_slice($poli_list, 0, 5);
+
+			if (empty($poli_list)) {
+				echo json_encode([
+					'metadata' => [
+						'code' => 400,
+						'message' => 'Format poli tidak valid'
+					]
+				]);
+				return;
+			}
+
+			// Load model rjmpelayanan
+			$this->load->model('irj/rjmpelayanan', '', TRUE);
+
+			// Ambil data antrian dari database
+			$result = $this->rjmpelayanan->get_dashboard_multi_poli($poli_list);
+			$data_antrian = $result->result();
+
+			// Ambil info pemanggilan terakhir
+			$latest_call = $this->rjmpelayanan->get_latest_call_info($poli_list);
+
+			// Group data berdasarkan dokter dan poli
+			$doctors = [];
+			$grouped_data = [];
+
+			foreach ($data_antrian as $row) {
+				$key = $row->id_poli . '_' . $row->id_dokter;
+
+				if (!isset($grouped_data[$key])) {
+					$grouped_data[$key] = [
+						'dokter' => $row->nm_dokter ?: 'Dokter Tidak Diketahui',
+						'poli' => $row->nm_poli ?: $row->id_poli,
+						'kodepoli' => $row->id_poli,
+						'kodedokter' => $row->id_dokter,
+						'is_latest_call' => false,
+						'pasiendilayani' => null,
+						'pasien' => [],
+						'total_antrian' => 0
+					];
+				}
+
+				// Tentukan status pasien
+				if ($row->status_antrian === 'sedang_dilayani' || $row->status_antrian === 'dipanggil') {
+					// Pasien sedang dilayani
+					$grouped_data[$key]['pasiendilayani'] = [
+						'nourut' => $row->no_antrian,
+						'nomorantrian' => $row->no_antrian,
+						'nama' => $row->nama ?: 'Nama Tidak Diketahui',
+						'norm' => $row->no_medrec,
+						'waktu_panggil' => $row->waktu_panggil
+					];
+				} elseif ($row->status_antrian === 'menunggu') {
+					// Pasien menunggu antrian
+					$grouped_data[$key]['pasien'][] = [
+						'nourut' => $row->no_antrian,
+						'nomorantrian' => $row->no_antrian,
+						'nama' => $row->nama ?: 'Nama Tidak Diketahui',
+						'norm' => $row->no_medrec
+					];
+				}
+
+				$grouped_data[$key]['total_antrian']++;
+			}
+
+			// Set flag untuk pemanggilan terakhir
+			if ($latest_call) {
+				$latest_key = $latest_call->id_poli . '_' . $latest_call->id_dokter;
+				if (isset($grouped_data[$latest_key])) {
+					$grouped_data[$latest_key]['is_latest_call'] = true;
+				}
+			}
+
+			// Convert ke array untuk response
+			$response_data = array_values($grouped_data);
+
+			echo json_encode($response_data);
+
+		} catch (Exception $e) {
+			echo json_encode([
+				'metadata' => [
+					'code' => 500,
+					'message' => $e->getMessage()
+				]
+			]);
+		}
+	}
+
+	public function dashboard_selector()
+	{
+		$data = [
+			'title' => 'Pilih Dashboard Antrian Poliklinik'
+		];
+
+		$this->load->view('antrol/dashboard_selector', $data);
+	}
+
+	public function get_poliklinik_list()
+	{
+		header('Content-Type: application/json');
+		try {
+			// Load model untuk mengambil daftar poliklinik
+			$this->load->model('irj/rjmpelayanan', '', TRUE);
+
+			$query = "
+				SELECT
+					p.id_poli,
+					p.nm_poli,
+					COUNT(DISTINCT d.id_dokter) as total_dokter,
+					COUNT(d.no_register) as total_pasien_hari_ini
+				FROM poliklinik p
+				LEFT JOIN daftar_ulang_irj d ON p.id_poli = d.id_poli
+					AND DATE(d.tgl_kunjungan) = CURRENT_DATE
+					AND d.ket_pulang IS NULL
+				GROUP BY p.id_poli, p.nm_poli
+				ORDER BY p.nm_poli ASC
+			";
+
+			$result = $this->rjmpelayanan->db->query($query);
+			$data = $result->result();
+
+			echo json_encode([
+				'success' => true,
+				'data' => $data
+			]);
+
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => $e->getMessage()
 			]);
 		}
 	}

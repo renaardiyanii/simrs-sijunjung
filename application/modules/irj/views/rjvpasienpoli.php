@@ -214,15 +214,24 @@
 														} else {
 															echo $row->waktu_masuk_poli ? 'bebas' : '';
 														}  ?>">
-    											<?php //if ($row->kelas!="Urikkes") { 
+    											<?php //if ($row->kelas!="Urikkes") {
 												?>
-    											<?php //if($roleid=='32'){ 
+    											<?php //if($roleid=='32'){
 												?>
     											<!-- <button onclick="tindak('<?php //echo $row->waktu_masuk_poli; ?>','<?php echo $id_poli; ?>','<?php echo $id; ?>')" class="btn btn-primary btn-xs">Tindak</button> -->
     											<!-- <button onclick="return openUrl('http://192.168.115.253/irj/rjcpelayanan/pelayanan_tindakan/BJ00/RJ21050902')" class="btn btn-primary btn-xs">Tindak</button> -->
 												<button onclick="tindak('<?php echo $row->waktu_masuk_poli; ?>','<?php echo $id_poli; ?>','<?php echo $id; ?>')" class="btn btn-primary btn-xs" <?=
 												!$row->checkin || !$row->cetaksep?"":""
 												?>>Tindak</button>
+												<?php if(!$row->waktu_masuk_poli): ?>
+												<button onclick="panggilAntrian('<?php echo $id; ?>','<?php echo ($row->poli_bpjs??'POL').'-' . sprintf('%03d', $row->antri); ?>','<?php echo $row->nama; ?>')" class="btn btn-success btn-xs" title="Panggil Antrian">
+													<i class="fa fa-volume-up"></i> Panggil
+												</button>
+												<?php else: ?>
+												<button onclick="selesaiPelayanan('<?php echo $id; ?>','<?php echo ($row->poli_bpjs??'POL').'-' . sprintf('%03d', $row->antri); ?>','<?php echo $row->nama; ?>')" class="btn btn-info btn-xs" title="Selesai Pelayanan">
+													<i class="fa fa-check"></i> Selesai
+												</button>
+												<?php endif; ?>
     											<?php //} else{ 
 												?>
     											<button type="button" onclick="hapus_pelayanan('<?php echo $id_poli; ?>','<?php echo $id; ?>','<?php echo $row->ket; ?>','<?php echo $row->hapusSEP; ?>','0')" class="btn btn-warning btn-xs delete-pelayanan">Batal</button>
@@ -603,6 +612,134 @@ function cetakulangsep(val) {
     },
     dataType: 'json'
   });
+}
+
+function panggilAntrian(no_register, no_antrian, nama_pasien) {
+    Swal.fire({
+        title: 'Panggil Antrian',
+        html: `Panggil antrian <strong>${no_antrian}</strong><br>Pasien: <strong>${nama_pasien}</strong>?`,
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, Panggil',
+        cancelButtonText: 'Batal',
+        confirmButtonColor: '#28a745',
+        cancelButtonColor: '#6c757d'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url(); ?>irj/rjcpelayanan/panggil_antrian_poli',
+                data: {
+                    'no_register': no_register,
+                    'no_antrian': no_antrian,
+                    'nama_pasien': nama_pasien,
+                    'id_poli': '<?php echo $id_poli; ?>'
+                },
+                beforeSend: function() {
+                    Swal.fire({
+                        title: 'Memanggil Antrian...',
+                        text: 'Mohon tunggu sebentar',
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading()
+                        }
+                    });
+                },
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            title: 'Berhasil!',
+                            text: response.message,
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        }).then(() => {
+                            // location.reload();
+                        });
+                    } else {
+                        Swal.fire({
+                            title: 'Gagal!',
+                            text: response.message,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Terjadi kesalahan sistem: ' + error,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                },
+                dataType: 'json'
+            });
+        }
+    });
+}
+
+function selesaiPelayanan(no_register, no_antrian, nama_pasien) {
+    Swal.fire({
+        title: 'Selesai Pelayanan',
+        html: `Selesai pelayanan untuk antrian <strong>${no_antrian}</strong><br>Pasien: <strong>${nama_pasien}</strong>?`,
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, Selesai',
+        cancelButtonText: 'Batal',
+        confirmButtonColor: '#007bff',
+        cancelButtonColor: '#6c757d'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url(); ?>irj/rjcpelayanan/selesai_antrian_poli',
+                data: {
+                    'no_register': no_register,
+                    'no_antrian': no_antrian,
+                    'nama_pasien': nama_pasien,
+                    'id_poli': '<?php echo $id_poli; ?>'
+                },
+                beforeSend: function() {
+                    Swal.fire({
+                        title: 'Memproses...',
+                        text: 'Mohon tunggu sebentar',
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading()
+                        }
+                    });
+                },
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            title: 'Berhasil!',
+                            text: response.message,
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        }).then(() => {
+                            // location.reload();
+                        });
+                    } else {
+                        Swal.fire({
+                            title: 'Gagal!',
+                            text: response.message,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Terjadi kesalahan sistem: ' + error,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                },
+                dataType: 'json'
+            });
+        }
+    });
 }
 
 </script>

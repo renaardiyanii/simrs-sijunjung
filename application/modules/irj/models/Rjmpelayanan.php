@@ -2044,28 +2044,31 @@ class Rjmpelayanan extends CI_Model
 		}
 	}
 
-	
-		function getdata_lab_pasien_new($no_medrec){
-			return $this->db->query("SELECT * FROM pemeriksaan_laboratorium as a
+
+	function getdata_lab_pasien_new($no_medrec)
+	{
+		return $this->db->query("SELECT * FROM pemeriksaan_laboratorium as a
 				WHERE a.no_medrec = '$no_medrec'
 				AND ((a.cetak_kwitansi='1' AND a.cara_bayar='UMUM') or (a.cetak_kwitansi='0' AND a.cara_bayar<>'UMUM'))
 				order by a.tgl_kunjungan desc");
-		}
+	}
 
-		function getdata_rad_pasienrj_new($no_medrecrad){
-			return $this->db->query("SELECT * FROM pemeriksaan_radiologi as a
+	function getdata_rad_pasienrj_new($no_medrecrad)
+	{
+		return $this->db->query("SELECT * FROM pemeriksaan_radiologi as a
 				WHERE a.no_medrec = '$no_medrecrad'
 				AND ((a.cetak_kwitansi='1' AND a.cara_bayar='UMUM') or (a.cetak_kwitansi='0' AND a.cara_bayar<>'UMUM'))
 				order by tgl_kunjungan desc");
-		}
+	}
 
-		function getdata_resep_pasien_new($no_medrec){
-			return $this->db->query("SELECT * FROM resep_pasien as a
+	function getdata_resep_pasien_new($no_medrec)
+	{
+		return $this->db->query("SELECT * FROM resep_pasien as a
 				WHERE a.no_medrec = '$no_medrec'
 				order by tgl_kunjungan  desc");
-		}
+	}
 
-		function get_konsultasi_dokter_new($no_register)
+	function get_konsultasi_dokter_new($no_register)
 	{
 		$this->db->where('no_register', $no_register);
 		return $this->db->get('lembar_konsul_pasien');
@@ -2076,7 +2079,8 @@ class Rjmpelayanan extends CI_Model
 		return $this->db->insert('lembar_konsul_pasien', $data);
 	}
 
-	function getdata_noreg_asal_konsul($no_reg){
+	function getdata_noreg_asal_konsul($no_reg)
+	{
 		return $this->db->query("SELECT noreg_asal_konsul FROM daftar_ulang_irj
 			WHERE no_register = '$no_reg'");
 	}
@@ -2137,7 +2141,7 @@ class Rjmpelayanan extends CI_Model
 
 
 	// added putri 02-10-2024
-	
+
 	function insert_lap_echo($data)
 	{
 		return $this->db->insert('laporan_echo', $data);
@@ -2301,48 +2305,55 @@ class Rjmpelayanan extends CI_Model
 		return $this->db->update('laporan_pembedahan', $data);
 	}
 
-	function getdata_resep_pasien_new_by_noreg($no_reg){
+	function getdata_resep_pasien_new_by_noreg($no_reg)
+	{
 		return $this->db->query("SELECT * FROM resep_pasien as a
 			WHERE a.no_register = '$no_reg'
 			order by tgl_kunjungan  desc");
 	}
 
-	function getdata_lab_pasien_new_by_noreg($no_reg){
+	function getdata_lab_pasien_new_by_noreg($no_reg)
+	{
 		return $this->db->query("SELECT * FROM pemeriksaan_laboratorium as a
 			WHERE a.no_register = '$no_reg'
 			order by a.tgl_kunjungan desc");
 	}
 
-	function getdata_rad_pasienrj_new_by_noreg($noreg){
+	function getdata_rad_pasienrj_new_by_noreg($noreg)
+	{
 		return $this->db->query("SELECT * FROM pemeriksaan_radiologi as a
 			WHERE a.no_register = '$noreg'
 			order by tgl_kunjungan desc");
 	}
 
-	function getdata_ok_pasienrj_new_by_noreg($noreg){
+	function getdata_ok_pasienrj_new_by_noreg($noreg)
+	{
 		return $this->db->query("SELECT * FROM pemeriksaan_operasi as a
 			WHERE a.no_register = '$noreg'
 			order by tgl_kunjungan desc");
 	}
 
-	function cek_soap_diagnosa($no_register){
+	function cek_soap_diagnosa($no_register)
+	{
 		return $this->db->query("SELECT * FROM soap_pasien_rj WHERE no_register='$no_register' AND DATE(tgl_input) = current_date ORDER BY tgl_input DESC");
 	}
 
-	function insert_data_soap($data){
+	function insert_data_soap($data)
+	{
 		$this->db->insert('soap_pasien_rj', $data);
 		return true;
 	}
-	
-	function update_data_soap($data,$id){
-		$this->db->where('id',$id);
+
+	function update_data_soap($data, $id)
+	{
+		$this->db->where('id', $id);
 		$this->db->update('soap_pasien_rj', $data);
 		return true;
 	}
 
 	function getdata_pa_pasienrj($no_register, $datenow)
 	{
-	
+
 		return $this->db->query("SELECT * FROM pemeriksaan_patologianatomi as a
 				WHERE a.no_register = '$no_register' and (to_char(a.tgl_kunjungan,'YYYY-MM-DD') = '$datenow' or a.tgl_kunjungan is null)
 				");
@@ -2359,7 +2370,7 @@ class Rjmpelayanan extends CI_Model
 			");
 	}
 
-	
+
 	function get_resep_for_ringkasan_pulang($noreg)
 	{
 		return $this->db->query("SELECT nama_obat,signa FROM resep_pasien where no_register = '$noreg'");
@@ -2372,11 +2383,12 @@ class Rjmpelayanan extends CI_Model
 
 
 	function insert_history_antrol($data)
-    {
-        return $this->db->insert('history_antrol',$data);
-    }
+	{
+		return $this->db->insert('history_antrol', $data);
+	}
 
-	function getnoantriansekarang(){
+	function getnoantriansekarang()
+	{
 		return $this->db->query("SELECT COALESCE(MAX(noantrian), 0) + 1 AS noantrian
 		FROM history_antrol
 		WHERE TO_CHAR(dt, 'YYYY-MM-DD') = TO_CHAR(CURRENT_TIMESTAMP, 'YYYY-MM-DD');
@@ -2395,13 +2407,13 @@ class Rjmpelayanan extends CI_Model
 		return $this->db->query("SELECT * FROM upload_pemeriksaan_penunjang where no_register='$no_ipd'");
 	}
 
-    function insert_upload_penunjang($data)
+	function insert_upload_penunjang($data)
 	{
 		return $this->db->insert('upload_pemeriksaan_penunjang', $data);
 	}
 
-    function update_upload_penunjang($no_ipd, $data)
-	{ 
+	function update_upload_penunjang($no_ipd, $data)
+	{
 		$this->db->where('no_register', $no_ipd);
 		return $this->db->update('upload_pemeriksaan_penunjang', $data);
 	}
@@ -2423,12 +2435,12 @@ class Rjmpelayanan extends CI_Model
 	}
 
 	function get_name_for_konsul($no_ipd, $data)
-	{ 
+	{
 		$this->db->where('no_register', $no_ipd);
 		return $this->db->update('upload_pemeriksaan_penunjang', $data);
 	}
 
-	function update_konsultasi($no_ipd,$id, $data)
+	function update_konsultasi($no_ipd, $id, $data)
 	{
 		$this->db->where('no_register', $no_ipd);
 		$this->db->where('id', $id);
@@ -2439,13 +2451,13 @@ class Rjmpelayanan extends CI_Model
 		return $this->db->query("SELECT * FROM asuhan_gizi where no_register='$no_ipd'");
 	}
 
-    function insert_asuhan_gizi($data)
+	function insert_asuhan_gizi($data)
 	{
 		return $this->db->insert('asuhan_gizi', $data);
 	}
 
-    function update_asuhan_gizi($no_ipd, $data)
-	{ 
+	function update_asuhan_gizi($no_ipd, $data)
+	{
 		$this->db->where('no_register', $no_ipd);
 		return $this->db->update('asuhan_gizi', $data);
 	}
@@ -2455,18 +2467,122 @@ class Rjmpelayanan extends CI_Model
 		return $this->db->query("SELECT * FROM asuhan_gizi_anak where no_register='$noreg'");
 	}
 
-    function insert_asuhan_gizi_anak($data)
+	function insert_asuhan_gizi_anak($data)
 	{
 		return $this->db->insert('asuhan_gizi_anak', $data);
 	}
 
-    function update_asuhan_gizi_anak($noreg, $data)
-	{ 
+	function update_asuhan_gizi_anak($noreg, $data)
+	{
 		$this->db->where('no_register', $noreg);
 		return $this->db->update('asuhan_gizi_anak', $data);
 	}
-	
 
-	
+	// Method untuk mendukung fitur antrian poli
+	public function get_pasien_by_register($id_register)
+	{
+		return $this->db->query("
+			SELECT
+				daftar_ulang_irj.noreservasi as kodebooking
+			FROM daftar_ulang_irj
+			WHERE daftar_ulang_irj.no_register = '$id_register'
+		")->row();
+	}
 
+	public function update_status_antrian($id_register, $data)
+	{
+		$this->db->where('no_register', $id_register);
+		return $this->db->update('daftar_ulang_irj', $data);
+	}
+
+	public function get_dashboard_multi_poli($poli_list)
+	{
+
+		// Buat IN clause untuk poli
+		// var_dump($poli_list);die();
+		$poli_in = "'" . implode("','", array_map([$this->db, 'escape_str'], $poli_list)) . "'";
+
+		// var_dump($poli_in);die();
+		// 1. Hilangkan tanda kutip di awal & akhir
+		$clean = trim($poli_in, "'");
+
+		// 2. Decode URL encoding (%2C → ,)
+		$decoded = urldecode($clean);
+
+		// 3. Ubah koma menjadi `','`
+		$result = "'" . str_replace(",", "','", $decoded) . "'";
+
+		// var_dump($result);die();
+		$query = "
+			SELECT
+				d.no_register,
+				d.id_poli,
+				d.id_dokter,
+				dp.no_cm as no_medrec,
+				d.no_antrian,
+				d.waktu_masuk_poli,
+				d.waktu_panggil,
+				d.status_panggil,
+				d.tgl_kunjungan,
+				dd.nm_dokter,
+				p.nm_poli,
+				dp.nama,
+				CASE
+					WHEN d.waktu_masuk_poli IS NOT NULL AND d.status_panggil != 'selesai'
+					THEN 'sedang_dilayani'
+					WHEN d.status_panggil = 'dipanggil'
+					THEN 'dipanggil'
+					WHEN d.status_panggil = 'selesai'
+					THEN 'selesai'
+					ELSE 'menunggu'
+				END as status_antrian
+			FROM daftar_ulang_irj d
+			LEFT JOIN data_dokter dd ON d.id_dokter = dd.id_dokter
+			LEFT JOIN poliklinik p ON d.id_poli = p.id_poli
+			LEFT JOIN data_pasien dp ON d.no_medrec = dp.no_medrec
+			WHERE d.id_poli IN ($result)
+				AND DATE(d.tgl_kunjungan) = CURRENT_DATE
+				AND d.ket_pulang IS NULL
+			ORDER BY d.id_poli, d.id_dokter, d.no_antrian ASC
+		";
+
+		return $this->db->query($query);
+	}
+
+	public function get_latest_call_info($poli_list)
+	{
+		// Buat IN clause untuk poli
+		// var_dump($poli_list);die();
+		$poli_in = "'" . implode("','", array_map([$this->db, 'escape_str'], $poli_list)) . "'";
+
+		// var_dump($poli_in);die();
+		// 1. Hilangkan tanda kutip di awal & akhir
+		$clean = trim($poli_in, "'");
+
+		// 2. Decode URL encoding (%2C → ,)
+		$decoded = urldecode($clean);
+
+		// 3. Ubah koma menjadi `','`
+		$result = "'" . str_replace(",", "','", $decoded) . "'";
+
+		$query = "
+			SELECT
+				d.id_dokter,
+				d.id_poli,
+				dd.nm_dokter,
+				p.nm_poli,
+				d.waktu_panggil
+			FROM daftar_ulang_irj d
+			LEFT JOIN data_dokter dd ON d.id_dokter = dd.id_dokter
+			LEFT JOIN poliklinik p ON d.id_poli = p.id_poli
+			WHERE d.id_poli IN ($result)
+				AND DATE(d.tgl_kunjungan) = CURRENT_DATE
+				AND d.waktu_panggil IS NOT NULL
+				AND d.status_panggil = 'dipanggil'
+			ORDER BY d.waktu_panggil DESC
+			LIMIT 1
+		";
+
+		return $this->db->query($query)->row();
+	}
 }
