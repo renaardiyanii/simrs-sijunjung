@@ -6052,7 +6052,8 @@ class rjcpelayanan extends Secure_area
 			// Kirim ke API antrian (jika ada kodebooking)
 			if (!empty($pasien_data->kodebooking)) {
 				$client = new Client(['verify' => false]);
-				$endpoint = 'http://localhost:8000/';
+				// $endpoint = 'http://localhost:8000/';
+				$endpoint = 'http://192.168.1.139:8000/';
 
 				$posting = [
 					'id' => $no_register,
@@ -6129,7 +6130,8 @@ class rjcpelayanan extends Secure_area
 			// Kirim ke API antrian untuk update task id ke 5 (selesai)
 			if (!empty($pasien_data->kodebooking)) {
 				$client = new Client(['verify' => false]);
-				$endpoint = 'http://localhost:8000/';
+				// $endpoint = 'http://localhost:8000/';
+				$endpoint = 'http://192.168.1.139:8000/';
 
 				try {
 					$response = $client->get(

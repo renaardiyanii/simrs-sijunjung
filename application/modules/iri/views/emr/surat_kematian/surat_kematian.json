@@ -8,21 +8,15 @@
         "name": "panel1",
         "elements": [
          {
-          "type": "text",
-          "name": "question1",
-          "title": "Nomor",
-          "titleLocation": "left",
-          "hideNumber": true
-         },
-         {
           "type": "html",
           "name": "question2",
-          "html": "Yang bertanda tangan di bawah ini Direktur Rumah Sakit Umum Daerah Ahmd Syafii Maarif dengan ini menerangkan bahwa :"
+          "html": "Yang bertanda tangan dibawah ini, Direktur Rumah Sakit Umum Daerah Ahmad Syafii Maarif dengan ini menyatakan bahwa ;"
          },
          {
           "type": "multipletext",
           "name": "question3",
           "titleLocation": "hidden",
+          "readOnly": true,
           "items": [
            {
             "name": "text1",
@@ -30,7 +24,8 @@
            },
            {
             "name": "text2",
-            "title": "Umur"
+            "inputType": "date",
+            "title": "Tempat/Tanggal Lahir"
            },
            {
             "name": "text3",
@@ -66,18 +61,45 @@
            },
            {
             "name": "text2",
+            "inputType": "date",
             "title": "Tanggal"
            },
            {
             "name": "text3",
+            "inputType": "time",
             "title": "Pukul"
            }
           ]
          },
          {
           "type": "html",
+          "name": "question10",
+          "html": "Penanggung Jawab Pasien ;"
+         },
+         {
+          "type": "multipletext",
+          "name": "question1",
+          "titleLocation": "hidden",
+          "items": [
+           {
+            "name": "text1",
+            "title": "Nama"
+           },
+           {
+            "name": "text2",
+            "inputType": "date",
+            "title": "Tempat/Tanggal Lahir"
+           },
+           {
+            "name": "text3",
+            "title": "Hubungan"
+           }
+          ]
+         },
+         {
+          "type": "html",
           "name": "question6",
-          "html": "Demikianlah surat keterangan ini diberikan untuk dapat dipergunakan seperlunya."
+          "html": "Demikianlah surat keterangan kematian ini dibuat dengan sebenar-benarnya dan sebagai bukti keterangan yang sah untuk digunakan sebagaimana mestinya."
          },
          {
           "type": "text",

@@ -45,31 +45,76 @@ $this->load->view('layout/header_form');
     }
 };
 
-function openModal(data){
-	var value = data;
+// function openModal(data){
+// 	var value = data;
 		
-        const data_json = JSON.parse(value.formjson);
-        // console.log(data_json.penderita.penderita1);
+//         const data_json = JSON.parse(value.formjson);
+//         // console.log(data_json.penderita.penderita1);
 	
-		$("#penderita").val(data_json.penderita?.penderita1 ?? "");
-		$("#diag_kerja").val(data_json.penderita?.diagnosis ?? "");
-$("#ikhtisar").val(data_json.ikhtisar ?? "");
-$("#kesimpulan").val(data_json.kesimpulan ?? "");
-$("#konsul_diminta").val(data_json.konsul ?? "");
+// 		$("#penderita").val(data_json.penderita?.penderita1 ?? "");
+// 		$("#diag_kerja").val(data_json.penderita?.diagnosis ?? "");
+//         $("#ikhtisar").val(data_json.ikhtisar ?? "");
+//         $("#kesimpulan").val(data_json.kesimpulan ?? "");
+//         $("#konsul_diminta").val(data_json.konsul ?? "");
 
-        $("#no_ipd").val(data.no_ipd);
-        $("#id_konsul").val(data.id);
+//         $("#no_ipd").val(data.no_ipd);
+//         $("#id_konsul").val(data.id);
 
-        $("#penemuan").val(data.penemuan);
-        $("#kesimpulan_jawaban").val(data.kesimpulan);
-        $("#anjuran").val(data.anjuran);
-        $("#tgl_jawaban").val(data.tgl_jawaban);
+//         $("#penemuan").val(data.penemuan);
+//         $("#kesimpulan_jawaban").val(data.kesimpulan);
+//         $("#anjuran").val(data.anjuran);
+//         $("#tgl_jawaban").val(data.tgl_jawaban);
 
 		
-	    $('#exampleKonsultasijawaban').modal('show');
+// 	    $('#exampleKonsultasijawaban').modal('show');
 	
 
+// }
+function openModal(elOrObj) {
+    // support dipanggil openModal(this) atau openModal(obj)
+    let data;
+    if (elOrObj && elOrObj.dataset && elOrObj.dataset.json) {
+        try {
+            data = JSON.parse(elOrObj.dataset.json);
+        } catch (e) {
+            console.error("Gagal parse data-json:", e, elOrObj.dataset.json);
+            data = {};
+        }
+    } else {
+        data = elOrObj || {};
+    }
+
+    // parse formjson (karena val.formjson adalah string JSON di dalam JSON)
+    let data_json = {};
+    if (data.formjson) {
+        try {
+            data_json = JSON.parse(data.formjson);
+        } catch (e) {
+            console.warn("formjson tidak valid, gunakan {} sebagai fallback", e);
+            data_json = {};
+        }
+    }
+
+    // Isi field (gunakan fallback supaya ga error)
+    $("#penderita").val(data_json.penderita?.penderita1 ?? "");
+    $("#diag_kerja").val(data_json.penderita?.diagnosis ?? "");
+    $("#ikhtisar").val(data_json.ikhtisar ?? "");
+    $("#kesimpulan").val(data_json.kesimpulan ?? "");
+    $("#konsul_diminta").val(data_json.konsul ?? "");
+
+    $("#no_ipd").val(data.no_ipd ?? "");
+    $("#id_konsul").val(data.id ?? "");
+
+    $("#penemuan").val(data.penemuan ?? "");
+    $("#kesimpulan_jawaban").val(data.kesimpulan ?? "");
+    $("#anjuran").val(data.anjuran ?? "");
+    $("#tgl_jawaban").val(data.tgl_jawaban ?? "");
+
+    $('#exampleKonsultasijawaban').modal('show');
 }
+
+
+
 
 
 
@@ -152,8 +197,15 @@ $("#LembarKonsul").Survey({
                         <td><?= isset($val->tgl_jawaban)?date('d-m-Y',strtotime($val->tgl_jawaban)):'-' ?></td>
                         <td><?= isset($val->dokter_dpjp)?$val->dokter:'' ?></td>
                         <td><?= isset($val->dokter_konsul)?$val->dokter_konsulen:'' ?></td>
-                        <td><button type="button" class="btn btn-primary" onclick='openModal(<?= json_encode($val); ?>)'> Jawab Konsul </button></td>
-                    </tr>
+                        <td>
+                            <button type="button" class="btn btn-primary"
+                                    data-json='<?= htmlspecialchars(json_encode($val), ENT_QUOTES, 'UTF-8'); ?>'
+                                    onclick="openModal(this)">
+                                Jawab Konsul
+                            </button>
+                            </td>
+
+                        </tr>
                     <?php }
                     ?>
                 </tbody>

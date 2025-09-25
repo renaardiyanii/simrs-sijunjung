@@ -11,77 +11,56 @@ $data = isset($sur_kematian->formjson)?json_decode($sur_kematian->formjson):'';
     <!-- <header style="margin-top:0px;">
         <?php $this->load->view('emedrec/rj/header_print') ?>
     </header> -->
-    <table border="1" width="100%" cellpadding="5px" style="margin-top:30px">
-    <tr>
-        <td width="30%">
-            <table border="0" width="100%">
+    <header>
+            <table style="width: 100%; border: 0;">
+                
                 <tr>
-                    <td width="30%"><img src="<?= base_url("assets/img/logo.png"); ?>" alt="img" height="70px" width="60px" style="padding-right:15px;"></td>
-                    <td width="80%" style="vertical-align:middle"><h3>RSUD AHMAD SYAFII MAARIF</h3></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="font-size:9px;font-style:italic">
-                        <span>Jl. Lintas Sumatera, Km. 110</span><br>
-                        <span>Tanah Badantung-Kab. Sijunjung</span>
+                     <td style="text-align: center;">
+                        <img src="<?= base_url('assets/img/logo.png'); ?>" alt="img" height="70px" width="60px" style="padding-bottom: 4px;">
+                    </td>
+                    <td style="font-size: 15px; text-align: center;">
+                        <b>PEMERINTAHAN KABUPATEN SIJUNJUNG</b><br>
+                        <b>RUMAH SAKIT UMUM DAERAH AHMAD SYAFII MAARIF</b><br>
+                        <label>JL. Lintas Sumatera Km 110 Tanah Badantuang Kabupaten Sijunjung</label><br>
+                        <label>Website : rsud.sijunjung.go.id , Email : rsudsijunjung1@gmail.com</label>
                     </td>
                 </tr>
             </table>
-        </td>
-        <td width="30%">
-            <table border="0" width="100%" cellpadding="2px" >
-                <tr>
-                    <td style="font-size:13px" width="20%">No.RM</td>
-                    <td style="font-size:13px" width="2%">:</td>
-                    <td style="font-size:13px"><?= isset($data_pasien[0]->no_cm)?$data_pasien[0]->no_cm:'' ?></td>
-                </tr>
 
-                <tr>
-                    <td style="font-size:13px" width="20%">Nama</td>
-                    <td style="font-size:13px" width="2%">:</td>
-                    <td style="font-size:13px"><?= isset($data_pasien[0]->nama)?$data_pasien[0]->nama:'' ?></td>
-                </tr>
-
-                <tr>
-                    <td style="font-size:13px" width="20%">TglLahir</td>
-                    <td style="font-size:13px" width="2%">:</td>
-                    <td style="font-size:13px"><?= isset($data_pasien[0]->tgl_lahir)?date('d-m-Y',strtotime($data_pasien[0]->tgl_lahir)):'' ?>
-                        <span style="float:right">(<?= isset($data_pasien[0]->sex)?$data_pasien[0]->sex:'' ?>)</p>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-        
-       
-    </table>
-    <table border="1" width="100%" cellpadding="5px" style="margin-top:0px">
+        </header>
+        <div style="border-bottom: 1px solid black;"></div>
+        <div style="border-bottom: 4px solid black;margin-top:2px"></div>
+    <table border="0" width="100%" cellpadding="5px" style="margin-top:0px">
     
        <tr>
             <td colspan="4">
-                <h3><center>SURAT KETERANGAN KEMATIAN</center></h3>
-                <p>Nomor :  <?= isset($data->question1)?$data->question1:'' ?></p>
-                <p>Yang bertanda tangan dibawah ini Direktur Rumah Sakit Umum daerah sijunjung dengan ini menerangkan bawah :</p>
+                 <center>
+                    <H2><span style="font-size:14px;font-weight:bold;">SURAT KETERANGAN KEMATIAN</span></H2><br>
+                    <span style="font-size:10px;">Nomor :     /UGD/RSUD-ASM/   /20</span>
+                    
+                </center>
+                <p>Yang bertanda tangan dibawah ini, Direktur Rumah Sakit Umum Daerah Ahmad Syafii Maarif dengan ini menyatakan bahwa ; :</p>
                 <table border="0" width="100%" cellpadding="5px" style="margin-top:0px">
                     
                     <tr>
                         <td width="30%">Nama</td>
-                        <td width="70%">: <?= isset($data->question3->text1)?$data->question3->text1:'' ?></td>
+                        <td width="70%">: <?= isset($data_pasien[0]->nama)?$data_pasien[0]->nama:'' ?></td>
                     </tr>
                     <tr>
-                        <td width="30%">Umur</td>
-                        <td width="70%">: <?= isset($data->question3->text2)?$data->question3->text2:'' ?></td>
+                        <td width="30%">Tempat/tanggal lahir</td>
+                        <td width="70%">: <?= isset($data_pasien[0]->tgl_lahir)?date('d-m-Y',strtotime($data_pasien[0]->tgl_lahir)):'' ?></td>
                     </tr>
                     <tr>
                         <td width="30%">Jenis kelamin</td>
-                        <td width="70%">: <?= isset($data->question3->text3)?$data->question3->text3:'' ?></td>
+                        <td width="70%">: <?= isset($data_pasien[0]->sex)?$data_pasien[0]->sex:'' ?></td>
                     </tr>
                     <tr>
                         <td width="30%">Pekerjaan</td>
-                        <td width="70%">: <?= isset($data->question3->text4)?$data->question3->text4:'' ?></td>
+                        <td width="70%">: <?= isset($data_pasien[0]->pekerjaan)?$data_pasien[0]->pekerjaan:'' ?></td>
                     </tr>
                     <tr>
                         <td width="30%">Alamat</td>
-                        <td width="70%">: <?= isset($data->question3->text5)?$data->question3->text5:'' ?></td>
+                        <td width="70%">: <?= isset($data_pasien[0]->alamat)?$data_pasien[0]->alamat:'' ?></td>
                     </tr>
                     <tr>
                         <td width="30%">No.RM</td>
@@ -103,7 +82,22 @@ $data = isset($sur_kematian->formjson)?json_decode($sur_kematian->formjson):'';
                         <td width="70%">: <?= isset($data->question5->text3)?$data->question5->text3:'' ?></td>
                     </tr>
                 </table>
-                <p>Demikianlah surat keterangan ini diberikan untuk dapat dipergunakan sepertlunya.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                  <p>Penanggung Jawab Pasien ;</p>
+                <table border="0" width="100%" cellpadding="5px" style="margin-top:0px">
+                    <tr>
+                        <td width="30%">Nama</td>
+                        <td width="70%">: <?= isset($data->question1->text1)?$data->question1->text1:'' ?></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">Tempat/Tanggal Lahir</td>
+                        <td width="70%">: <?= isset($data->question1->text2)?$data->question1->text2:'' ?></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">Hubungan</td>
+                        <td width="70%">: <?= isset($data->question1->text3)?$data->question1->text3:'' ?></td>
+                    </tr>
+                </table>
+                <p>Demikianlah surat keterangan kematian ini dibuat dengan sebenar-benarnya dan sebagai bukti keterangan yang sah untuk digunakan sebagaimana mestinya..</p><br><br><br><br><br><br><br><br><br>
                 <div style="display: flex; justify-content: space-between; width: 100%;">
                            
                             <div style="width: 100%; text-align: right;">

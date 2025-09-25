@@ -242,13 +242,13 @@ if ($role_id == 1) {
                     <label>No Antrian : </label>
                     <input type="text" name="no_antri" value="<?php echo isset($data_tindakan_pasien_farmasi[0]->no_antri)?$data_tindakan_pasien_farmasi[0]->no_antri:''; ?>"></input>
                     
-                    <?php 
+                    <!-- <?php 
                         if(substr($no_register, 0, 2) == 'RJ'){ ?>
                         <input type="checkbox" id="konsultasi" name="konsultasi" value="1" <?php echo isset($data_tindakan_pasien_farmasi[0]->konsul)? $data_tindakan_pasien_farmasi[0]->konsul == "1" ? "checked":'':'' ?>>
                         <label for="konsultasi">Melakukan Tindakan Konsultasi Obat</label><br>
                       <?php  }
                     ?>
-                   
+                    -->
                    
                     <?php 
                     

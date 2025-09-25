@@ -15,8 +15,8 @@ class Antrol extends Secure_area
 		$this->clients = new Client([
 			'verify' => false,
 		]);
-		// $this->endpoint = 'http://192.168.1.139:8000/';
-		$this->endpoint = 'http://localhost:8000/';
+		$this->endpoint = 'http://192.168.1.139:8000/';
+		// $this->endpoint = 'http://localhost:8000/';
 		$this->load->library('vclaim');
 	}
 

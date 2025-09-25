@@ -31,8 +31,8 @@ class Rjcregistrasi extends Secure_area
 			'verify' => false,
 			// 'curl'=>[CURLOPT_SSL_VERIFYPEER=>false,CURLOPT_SSL_VERIFYHOST=>false,CURLOPT_SSL_CIPHER_LIST=>'DEFAULT@SECLEVEL=1']
 		]);
-		// $this->endpoint = 'http://192.168.1.139:8000/';
-		$this->endpoint = 'http://localhost:8000/';
+		$this->endpoint = 'http://192.168.1.139:8000/';
+		// $this->endpoint = 'http://localhost:8000/';
 
 		// $this->load->constant();		
 	}

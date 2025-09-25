@@ -705,7 +705,8 @@ function makebadge(flag)
 
     function getpasienbaru() {
         $.ajax({
-            url: `http://localhost:8000/adminantrian/v2/getantrianadmisi`,
+            // url: `http://localhost:8000/adminantrian/v2/getantrianadmisi`,
+            url: `http://192.168.1.139:8000/adminantrian/v2/getantrianadmisi`,
             type: 'GET',
             dataType: 'json',
             success: function(response) {

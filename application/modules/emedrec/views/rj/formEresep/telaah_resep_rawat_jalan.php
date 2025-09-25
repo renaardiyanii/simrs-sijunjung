@@ -294,7 +294,7 @@ $result = array_chunk($resep_pasien, 15);
                                 </table><br>
 
                                 <table style="width:100%;border: 1px solid black;" width="100%" cellpadding ="3px" border="1">
-                                    <tr>
+                                    <!-- <tr>
                                          <td width="10%">
                                             <?php 
                                             if($resep_pasien[0]->konsul == '1'){ ?>
@@ -306,6 +306,16 @@ $result = array_chunk($resep_pasien, 15);
                                           
                                          </td>
                                         <td><span class="text_body">Interpretasi dan PIO resep</span></td>
+                                    </tr> -->
+                                    <tr>
+                                        <td width="10%">
+                                            <center>
+                                                <input type="checkbox" <?= !empty($telaah_obat[0]) ? 'checked' : '' ?>>
+                                            </center>
+                                        </td>
+                                        <td>
+                                            <span class="text_body">Interpretasi dan PIO resep</span>
+                                        </td>
                                     </tr>
                                 </table>
                             </td>
