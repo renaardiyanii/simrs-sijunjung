@@ -2493,15 +2493,101 @@ class Api extends CI_Controller
 		header('Access-Control-Allow-Origin: *'); // Mengizinkan semua domain
 		header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Authorization");
 		header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+
+        // Gunakan query yang sama seperti get_daftar_resep_pasien_irj dengan filter kodebooking/no_rm
         if(strlen($kode) == 20){
-            // kode booking
-            echo json_encode($this->Frmmdaftar->get_daftar_resep_pasien_by('noreservasi',$kode)->row());
+            // kode booking - cari berdasarkan noreservasi
+            $result = $this->db->query("SELECT
+                *,
+                ( SELECT no_resep FROM resep_pasien WHERE no_register = permintaan_obat.no_register GROUP BY no_resep LIMIT 1 ) AS jml_resep
+            FROM
+                permintaan_obat
+            WHERE
+                obat = '1'
+                AND left(no_register,2) = 'RJ'
+                AND idrg != 'BA00'
+                AND no_register IN (SELECT no_register FROM daftar_ulang_irj WHERE noreservasi = '".$kode."')
+            ORDER BY
+                tgl_kunjungan DESC
+            LIMIT 1")->row();
+
+            if(!$result) {
+                echo json_encode(null);
+                return;
+            }
+
+            // Generate nomor antrian berdasarkan urutan hari ini
+            $today = date('Y-m-d');
+            $antrian_today = $this->db->query("SELECT
+                ROW_NUMBER() OVER (ORDER BY tgl_kunjungan ASC, no_register ASC) as noantrian,
+                no_register
+            FROM
+                permintaan_obat
+            WHERE
+                obat = '1'
+                AND DATE(tgl_kunjungan) = '".$today."'
+                AND left(no_register,2) = 'RJ'
+                AND idrg != 'BA00'
+            ORDER BY
+                tgl_kunjungan ASC, no_register ASC")->result();
+
+            $noantrian = 1;
+            foreach($antrian_today as $row) {
+                if($row->no_register == $result->no_register) {
+                    $noantrian = $row->noantrian;
+                    break;
+                }
+            }
+
+            $result->noantrian = $noantrian;
+            echo json_encode($result);
         }else{
-            // no rm
-            echo json_encode($this->Frmmdaftar->get_daftar_resep_pasien_by('norm',$kode)->row());
+            // no rm - cari berdasarkan norm
+            $result = $this->db->query("SELECT
+                *,
+                ( SELECT no_resep FROM resep_pasien WHERE no_register = permintaan_obat.no_register GROUP BY no_resep LIMIT 1 ) AS jml_resep
+            FROM
+                permintaan_obat
+            WHERE
+                obat = '1'
+                AND left(no_register,2) = 'RJ'
+                AND idrg != 'BA00'
+                AND no_cm = '$kode'
+            ORDER BY
+                tgl_kunjungan DESC
+            LIMIT 1")->row();
 
+            if(!$result) {
+                echo json_encode(null);
+                return;
+            }
+
+            // Generate nomor antrian berdasarkan urutan hari ini
+            $today = date('Y-m-d');
+            $antrian_today = $this->db->query("SELECT
+                ROW_NUMBER() OVER (ORDER BY tgl_kunjungan ASC, no_register ASC) as noantrian,
+                no_register
+            FROM
+                permintaan_obat
+            WHERE
+                obat = '1'
+                AND DATE(tgl_kunjungan) = '".$today."'
+                AND left(no_register,2) = 'RJ'
+                AND idrg != 'BA00'
+            ORDER BY
+                tgl_kunjungan ASC, no_register ASC")->result();
+
+            $noantrian = 1;
+            foreach($antrian_today as $row) {
+                if($row->no_register == $result->no_register) {
+                    $noantrian = $row->noantrian;
+                    break;
+                }
+            }
+
+            $result->noantrian = $noantrian;
+            echo json_encode($result);
         }
-
     }
 
 	public function pasienbaru_newnonjkn()

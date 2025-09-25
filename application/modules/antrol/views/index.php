@@ -367,30 +367,110 @@ function tambah_antrean_onsite()
     location.href=`${baseurl}antrol/onsite`;
 }
 
-function batalantrian(data)
+function batalantrian(data, useAdmisiEndpoint = false)
 {
-    let base64 = btoa(JSON.stringify(data));
-    $.ajax({
-        url: `${baseurl}/antrol/batalantrean?patient=${base64}`,
-        type: 'GET',
-        dataType: 'json',
-        success: function(response) {
-            Swal.fire({
-                title: response.metadata.code === 200?"Berhasil!":'Gagal',
-                text: response.metadata.message,
-                icon: response.metadata.code === 200?"success":'error'
-            });
-        },
-        error:function(xhr, status, error) {
-            Swal.fire({
-                title: 'Gagal',
-                text: 'Hubungi tim it',
-                icon:'error'
+    if (useAdmisiEndpoint) {
+        // Panggil endpoint batalantrianadmisi untuk admisi
+        $.ajax({
+            url: `${baseurl}/antrol/batalantrianadmisi`,
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                id: data.id || data.kodebooking,
+                loket: data.loket || 'ADMISI',
+                no_antrian: data.no_antrian || data.angkaantrean
+            },
+            success: function(response) {
+                Swal.fire({
+                    title: response.success ? "Berhasil!" : 'Gagal',
+                    text: response.message,
+                    icon: response.success ? "success" : 'error'
+                }).then(function() {
+                    if (response.success) {
+                        // Refresh data atau reload halaman jika diperlukan
+                        location.reload();
+                    }
+                });
+            },
+            error: function(xhr, status, error) {
+                Swal.fire({
+                    title: 'Gagal',
+                    text: 'Terjadi kesalahan sistem: ' + error,
+                    icon: 'error'
+                });
+            }
+        });
+    } else {
+        // Panggil endpoint lama (batalantrean)
+        let base64 = btoa(JSON.stringify(data));
+        $.ajax({
+            url: `${baseurl}/antrol/batalantrean?patient=${base64}`,
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                Swal.fire({
+                    title: response.metadata.code === 200?"Berhasil!":'Gagal',
+                    text: response.metadata.message,
+                    icon: response.metadata.code === 200?"success":'error'
+                });
+            },
+            error:function(xhr, status, error) {
+                Swal.fire({
+                    title: 'Gagal',
+                    text: 'Hubungi tim it',
+                    icon:'error'
+                });
+            }
+        });
+    }
+}
+
+// Fungsi khusus untuk skip antrian admisi
+function batalantrianadmisi(data)
+{
+    // Konfirmasi sebelum skip antrian
+    Swal.fire({
+        title: 'Konfirmasi Skip Antrian',
+        text: 'Antrian akan di-skip dan dapat dilihat di dashboard. Yakin melanjutkan?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, Skip',
+        cancelButtonText: 'Batal'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Langsung panggil endpoint batalantrianadmisi
+            $.ajax({
+                url: `${baseurl}/antrol/batalantrianadmisi`,
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    id: data.id || data.kodebooking,
+                    loket: 'ADMISI',
+                    no_antrian: data.no_antrian || data.angkaantrean
+                },
+                success: function(response) {
+                    Swal.fire({
+                        title: response.success ? "Berhasil!" : 'Gagal',
+                        text: response.message,
+                        icon: response.success ? "success" : 'error'
+                    }).then(function() {
+                        if (response.success) {
+                            // Refresh data
+                            // location.reload();
+                        }
+                    });
+                },
+                error: function(xhr, status, error) {
+                    Swal.fire({
+                        title: 'Gagal',
+                        text: 'Terjadi kesalahan sistem: ' + error,
+                        icon: 'error'
+                    });
+                }
             });
         }
     });
 }
-
 
 function lihattaskid(data)
 {
@@ -1382,7 +1462,7 @@ function makebadge(flag)
                 const dataStr = $(this).attr('data-antrian');
                 const data = JSON.parse(dataStr);
                 console.log('Batal button clicked, data:', data);
-                batalantrian(data);
+                batalantrian(data,true);
             } catch (error) {
                 console.error('Error parsing button data:', error);
                 alert('Error: Gagal memuat data antrian');

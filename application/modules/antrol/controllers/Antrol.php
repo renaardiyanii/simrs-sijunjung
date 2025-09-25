@@ -1355,6 +1355,91 @@ class Antrol extends Secure_area
 		}
 	}
 
+	public function batalantrianadmisi()
+	{
+		header('Content-Type: application/json; charset=utf-8');
+
+		if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Method not allowed'
+			]);
+			return;
+		}
+
+		$id = $this->input->post('id');
+		$loket = $this->input->post('loket');
+		$no_antrian = $this->input->post('no_antrian');
+
+		// Debug log untuk melihat parameter yang diterima
+		error_log("batalantrianadmisi received params - id: $id, loket: $loket, no_antrian: $no_antrian");
+
+		if (!$id) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Parameter ID tidak boleh kosong'
+			]);
+			return;
+		}
+
+		try {
+			$this->clients = new Client(['verify' => false]);
+
+			$posting = [
+				'id' => $id,
+				'loket' => $loket ?: 'ADMISI',
+				'no_antrian' => $no_antrian ?: '',
+				'status' => 'skip' // Status untuk skip antrian admisi, akan ditampilkan di dashboard
+			];
+
+			// Debug log untuk melihat data yang akan dikirim ke API
+			error_log("Sending to API for skip antrian admisi: " . json_encode($posting));
+
+			// Gunakan endpoint yang sama dengan panggilantrian karena strukturnya mirip
+			$response = $this->clients->post(
+				$this->endpoint . 'adminantrian/v2/panggilantrian',
+				[
+					'headers' => ['Content-Type' => 'application/json'],
+					'json' => $posting
+				]
+			)->getBody()->getContents();
+
+			// Debug log untuk melihat response dari API
+			error_log("API Response for skip antrian admisi: " . $response);
+
+			$result = json_decode($response, true);
+
+			// Debug log untuk melihat hasil decode
+			error_log("Decoded result for skip antrian admisi: " . json_encode($result));
+
+			if ($result && isset($result['metadata']) && $result['metadata']['code'] == 200) {
+				echo json_encode([
+					'success' => true,
+					'message' => 'Antrian berhasil di-skip',
+					'data' => [
+						'id' => $id,
+						'loket' => $posting['loket'],
+						'no_antrian' => $posting['no_antrian'],
+						'status' => 'skip'
+					],
+					'api_response' => $result // Tambahkan response API untuk debug
+				]);
+			} else {
+				echo json_encode([
+					'success' => false,
+					'message' => $result['metadata']['message'] ?? 'Gagal men-skip antrian',
+					'api_response' => $result // Tambahkan response API untuk debug
+				]);
+			}
+
+		} catch (Exception $e) {
+			echo json_encode([
+				'success' => false,
+				'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+			]);
+		}
+	}
+
 	public function updatestatusantrian()
 	{
 		header('Content-Type: application/json; charset=utf-8');

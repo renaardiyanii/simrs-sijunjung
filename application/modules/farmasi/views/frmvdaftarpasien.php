@@ -120,6 +120,15 @@ h2 {
                         </span>
                     </div>
                 </div> -->
+                <div class="mr-2">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-success" onclick="openDashboardAntrian()">
+                                <i class="fas fa-tachometer-alt me-2"></i>Dashboard Antrian Farmasi
+                            </button>
+                        </span>
+                    </div>
+                </div>
                 <div class="">
                     <div class="input-group">
                         <span class="input-group-btn">
@@ -323,14 +332,22 @@ $(document).ready(function() {
                         </span>`;
                     } else if (data.checkin === '1') {
                         // Sudah dipanggil tapi belum selesai
-                        tombolPanggil = `<button onclick="selesaiAntrianFarmasi('${data.no_register}','${nomorAntrian}','${data.nama}')" class="btn btn-info btn-xs" title="Selesai Pelayanan">
-                            <i class="fa fa-check"></i> Selesai
-                        </button>`;
+                        tombolPanggil = `
+                            <button onclick="panggilAntrianFarmasi('${data.no_register}','${nomorAntrian}','${data.nama}')" class="btn btn-success btn-xs" title="Panggil Antrian">
+                                <i class="fa fa-volume-up"></i> Panggil
+                            </button><br>
+                            <button onclick="selesaiAntrianFarmasi('${data.no_register}','${nomorAntrian}','${data.nama}')" class="btn btn-info btn-xs mt-1" title="Selesai Pelayanan">
+                                <i class="fa fa-check"></i> Selesai
+                            </button>`;
                     } else {
                         // Belum dipanggil
-                        tombolPanggil = `<button onclick="panggilAntrianFarmasi('${data.no_register}','${nomorAntrian}','${data.nama}')" class="btn btn-success btn-xs" title="Panggil Antrian">
-                            <i class="fa fa-volume-up"></i> Panggil
-                        </button>`;
+                        tombolPanggil = `
+                            <button onclick="panggilAntrianFarmasi('${data.no_register}','${nomorAntrian}','${data.nama}')" class="btn btn-success btn-xs" title="Panggil Antrian">
+                                <i class="fa fa-volume-up"></i> Panggil
+                            </button><br>
+                            <button class="btn btn-secondary btn-xs mt-1 disabled" title="Panggil terlebih dahulu">
+                                <i class="fa fa-check"></i> Selesai
+                            </button>`;
                     }
 
                     return `<strong>${nomorAntrian}</strong><br>${tombolPanggil}`;
@@ -525,9 +542,169 @@ function selesai(noreg) {
     });
 }
 
+// Fungsi untuk memainkan chime/ding sound seperti di bandara
+function playAirportChime(volume = 1.0) {
+    // Create audio context
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    // Create oscillator for the chime sound
+    const oscillator1 = audioContext.createOscillator();
+    const oscillator2 = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    // Connect the nodes
+    oscillator1.connect(gainNode);
+    oscillator2.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    // Set frequencies for two-tone chime (C and G notes)
+    oscillator1.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+    oscillator2.frequency.setValueAtTime(783.99, audioContext.currentTime); // G5
+
+    // Set volume
+    gainNode.gain.setValueAtTime(volume * 0.3, audioContext.currentTime);
+
+    // Create envelope for natural sound
+    gainNode.gain.exponentialRampToValueAtTime(volume * 0.1, audioContext.currentTime + 0.1);
+    gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 1.5);
+
+    // Start and stop the oscillators
+    oscillator1.start(audioContext.currentTime);
+    oscillator2.start(audioContext.currentTime);
+    oscillator1.stop(audioContext.currentTime + 1.5);
+    oscillator2.stop(audioContext.currentTime + 1.5);
+
+    return 1500; // Return duration in milliseconds
+}
+
+// Fungsi untuk mengatur suara Indonesia yang natural
+function setIndonesianVoice(utterance) {
+    const voices = speechSynthesis.getVoices();
+
+    // Priority order for Indonesian voices
+    const preferredVoices = [
+        'id-ID', 'Indonesian', 'Bahasa Indonesia',
+        'id_ID', 'id', 'Google Indonesian'
+    ];
+
+    let selectedVoice = null;
+
+    // First try to find exact Indonesian voice
+    for (const preferredName of preferredVoices) {
+        selectedVoice = voices.find(voice =>
+            voice.lang.toLowerCase().includes('id') ||
+            voice.name.toLowerCase().includes(preferredName.toLowerCase())
+        );
+        if (selectedVoice) break;
+    }
+
+    // If no Indonesian voice, try to find a female voice (usually clearer)
+    if (!selectedVoice) {
+        selectedVoice = voices.find(voice =>
+            voice.name.toLowerCase().includes('female') ||
+            voice.name.toLowerCase().includes('woman')
+        );
+    }
+
+    // Use default voice if available
+    if (!selectedVoice && voices.length > 0) {
+        selectedVoice = voices[0];
+    }
+
+    if (selectedVoice) {
+        utterance.voice = selectedVoice;
+        console.log('Selected voice:', selectedVoice.name, selectedVoice.lang);
+    }
+}
+
+// Fungsi untuk konversi angka ke bahasa Indonesia
+function convertNumberToIndonesian(numberString) {
+    const number = parseInt(numberString);
+
+    if (number === 0) return 'nol';
+    if (number < 10) return ['nol', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan'][number];
+    if (number < 100) {
+        const tens = Math.floor(number / 10);
+        const ones = number % 10;
+        const tensWord = ['', '', 'dua puluh', 'tiga puluh', 'empat puluh', 'lima puluh', 'enam puluh', 'tujuh puluh', 'delapan puluh', 'sembilan puluh'][tens];
+        if (number < 20) {
+            const teens = ['sepuluh', 'sebelas', 'dua belas', 'tiga belas', 'empat belas', 'lima belas', 'enam belas', 'tujuh belas', 'delapan belas', 'sembilan belas'];
+            return teens[number - 10];
+        }
+        if (ones === 0) return tensWord;
+        const onesWord = ['', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan'][ones];
+        return `${tensWord} ${onesWord}`;
+    }
+    if (number < 1000) {
+        const hundreds = Math.floor(number / 100);
+        const remainder = number % 100;
+        const hundredsWord = hundreds === 1 ? 'seratus' : `${convertNumberToIndonesian(hundreds.toString())} ratus`;
+        if (remainder === 0) return hundredsWord;
+        return `${hundredsWord} ${convertNumberToIndonesian(remainder.toString())}`;
+    }
+
+    // For numbers >= 1000, fall back to digit-by-digit
+    return numberString.split('').map(digit => ['nol', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan'][parseInt(digit)]).join(' ');
+}
+
+// Fungsi untuk Text-to-Speech announcement dengan aksen Indonesia yang natural
+function playQueueAnnouncement(queueNumber, loket) {
+    if ('speechSynthesis' in window) {
+        // Get volume default to 100%
+        const volumeLevel = 1.0;
+
+        // Play airport chime first
+        const chimeDuration = playAirportChime(volumeLevel);
+
+        // Wait for chime to finish, then play announcement
+        setTimeout(() => {
+            // Split queue number for better pronunciation
+            const queueParts = queueNumber.split('-');
+            const letter = queueParts[0]; // F
+            const number = queueParts[1]; // 001
+
+            // Convert number to natural Indonesian pronunciation
+            const numberWords = convertNumberToIndonesian(number);
+
+            // Natural Indonesian announcement with airport-style intro
+            const text = `Perhatian, nomor antrian ${letter} ${numberWords}, silakan menuju ke loket ${loket}.`;
+
+            const utterance = new SpeechSynthesisUtterance(text);
+
+            // Set Indonesian language and voice parameters
+            utterance.lang = 'id-ID';
+            utterance.rate = 0.8; // Slightly slower for clarity
+            utterance.pitch = 1.0; // Standard pitch
+            utterance.volume = volumeLevel;
+
+            // Wait for voices to load and select best Indonesian voice
+            if (speechSynthesis.getVoices().length === 0) {
+                speechSynthesis.addEventListener('voiceschanged', function() {
+                    setIndonesianVoice(utterance);
+                    speechSynthesis.speak(utterance);
+                }, {
+                    once: true
+                });
+            } else {
+                setIndonesianVoice(utterance);
+                speechSynthesis.speak(utterance);
+            }
+
+            console.log(`Farmasi Announcement: "${text}"`);
+        }, chimeDuration + 200); // Small pause after chime
+    }
+}
+
 // Fungsi untuk memanggil antrian farmasi
 function panggilAntrianFarmasi(no_register, no_antrian, nama_pasien) {
     if (confirm('Apakah Anda yakin ingin memanggil antrian ' + no_antrian + ' (' + nama_pasien + ')?')) {
+        // Play announcement sound first
+        playQueueAnnouncement(no_antrian, 'FARMASI');
+
+        // Disable tombol panggil untuk mencegah double click
+        const panggilBtn = $(`button[onclick*="panggilAntrianFarmasi('${no_register}"]`);
+        panggilBtn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+
         $.ajax({
             type: 'POST',
             url: '<?php echo base_url('antrol/panggil_antrian_farmasi'); ?>',
@@ -540,22 +717,62 @@ function panggilAntrianFarmasi(no_register, no_antrian, nama_pasien) {
             success: function(response) {
                 if (response.success) {
                     Swal.fire('Berhasil!', response.message, 'success');
-                    // Refresh table data
-                    // location.reload();
+
+                    // Update tombol secara real-time tanpa refresh
+                    updateTombolStatus(no_register, no_antrian, nama_pasien, 'dipanggil');
                 } else {
                     Swal.fire('Error!', response.message, 'error');
+                    // Kembalikan tombol jika error
+                    panggilBtn.prop('disabled', false).html('<i class="fa fa-volume-up"></i> Panggil');
                 }
             },
             error: function(xhr, status, error) {
                 Swal.fire('Error!', 'Terjadi kesalahan sistem: ' + error, 'error');
+                // Kembalikan tombol jika error
+                panggilBtn.prop('disabled', false).html('<i class="fa fa-volume-up"></i> Panggil');
             }
         });
+    }
+}
+
+// Fungsi untuk update tombol status secara real-time
+function updateTombolStatus(no_register, no_antrian, nama_pasien, status) {
+    // Cari cell yang berisi tombol untuk no_register ini
+    const targetCell = $(`td`).filter(function() {
+        return $(this).html().includes(no_antrian) && $(this).html().includes('panggilAntrianFarmasi');
+    });
+
+    if (targetCell.length > 0) {
+        let newButtonHtml = '';
+
+        if (status === 'dipanggil') {
+            // Status sudah dipanggil - tombol panggil aktif, tombol selesai aktif
+            newButtonHtml = `
+                <strong>${no_antrian}</strong><br>
+                <button onclick="panggilAntrianFarmasi('${no_register}','${no_antrian}','${nama_pasien}')" class="btn btn-success btn-xs" title="Panggil Antrian">
+                    <i class="fa fa-volume-up"></i> Panggil
+                </button><br>
+                <button onclick="selesaiAntrianFarmasi('${no_register}','${no_antrian}','${nama_pasien}')" class="btn btn-info btn-xs mt-1" title="Selesai Pelayanan">
+                    <i class="fa fa-check"></i> Selesai
+                </button>`;
+        } else if (status === 'selesai') {
+            // Status sudah selesai
+            newButtonHtml = `<strong>${no_antrian}</strong><br><span class="btn btn-secondary btn-xs disabled">
+                <i class="fa fa-check"></i> Selesai
+            </span>`;
+        }
+
+        targetCell.html(newButtonHtml);
     }
 }
 
 // Fungsi untuk menyelesaikan antrian farmasi
 function selesaiAntrianFarmasi(no_register, no_antrian, nama_pasien) {
     if (confirm('Apakah Anda yakin ingin menyelesaikan antrian ' + no_antrian + ' (' + nama_pasien + ')?')) {
+        // Disable tombol selesai untuk mencegah double click
+        const selesaiBtn = $(`button[onclick*="selesaiAntrianFarmasi('${no_register}"]`);
+        selesaiBtn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+
         $.ajax({
             type: 'POST',
             url: '<?php echo base_url('antrol/selesai_antrian_farmasi'); ?>',
@@ -568,17 +785,27 @@ function selesaiAntrianFarmasi(no_register, no_antrian, nama_pasien) {
             success: function(response) {
                 if (response.success) {
                     Swal.fire('Berhasil!', response.message, 'success');
-                    // Refresh table data
-                    location.reload();
+
+                    // Update tombol secara real-time tanpa refresh
+                    updateTombolStatus(no_register, no_antrian, nama_pasien, 'selesai');
                 } else {
                     Swal.fire('Error!', response.message, 'error');
+                    // Kembalikan tombol jika error
+                    selesaiBtn.prop('disabled', false).html('<i class="fa fa-check"></i> Selesai');
                 }
             },
             error: function(xhr, status, error) {
                 Swal.fire('Error!', 'Terjadi kesalahan sistem: ' + error, 'error');
+                // Kembalikan tombol jika error
+                selesaiBtn.prop('disabled', false).html('<i class="fa fa-check"></i> Selesai');
             }
         });
     }
+}
+
+// Fungsi untuk membuka Dashboard Antrian Farmasi
+function openDashboardAntrian() {
+    window.open('<?php echo base_url('antrol/dashboard_antrian_farmasi'); ?>', '_blank');
 }
 
 // <button class="btn btn-primary btn-sm" onclick="selesai('${data.no_register}')">Selesai</button>

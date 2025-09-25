@@ -247,19 +247,12 @@
             gap: 0.5rem;
         }
 
-        .queue-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .queue-item {
+        .queue-count {
             background: rgba(99, 126, 234, 0.1);
             border: 2px solid rgba(99, 126, 234, 0.2);
             border-radius: 8px;
             padding: 0.8rem;
-            margin-bottom: 0.5rem;
-            text-align: left;
+            text-align: center;
             font-size: clamp(0.8rem, 2vw, 1rem);
             font-weight: 600;
             color: var(--primary-color);
@@ -267,20 +260,39 @@
             animation: slideInUp 0.6s ease-out;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
         }
 
-        .doctor-card.latest-call .queue-item {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.3);
-            color: white;
-        }
-
-        .queue-item:hover {
+        .queue-count:hover {
             background: rgba(99, 126, 234, 0.15);
             border-color: var(--primary-color);
             transform: scale(1.02);
         }
+
+        .count-number {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .count-label {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .doctor-card.latest-call .queue-count {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .doctor-card.latest-call .count-number {
+            color: white;
+        }
+
+        .doctor-card.latest-call .count-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
 
         @keyframes slideInUp {
             from {
@@ -425,36 +437,8 @@
             const patientNorm = hasPatient ? doctorData.pasiendilayani.norm : '';
             const isLatestCall = doctorData.is_latest_call || false;
 
-            // Build queue list
-            let queueListHtml = '';
-            if (doctorData.pasien && doctorData.pasien.length > 0) {
-                doctorData.pasien.slice(0, 5).forEach((patient, idx) => {
-                    queueListHtml += `
-                        <li class="queue-item" style="animation-delay: ${idx * 0.1}s">
-                            <i class="fas fa-user me-2"></i>
-                            <div>
-                                <strong>${patient.nama}</strong>
-                                <small class="d-block">RM: ${patient.norm}</small>
-                            </div>
-                        </li>
-                    `;
-                });
-                if (doctorData.pasien.length > 5) {
-                    queueListHtml += `
-                        <li class="queue-item" style="opacity: 0.7;">
-                            <i class="fas fa-ellipsis-h me-2"></i>
-                            <div><small>Dan ${doctorData.pasien.length - 5} lainnya...</small></div>
-                        </li>
-                    `;
-                }
-            } else {
-                queueListHtml = `
-                    <li class="empty-queue">
-                        <i class="fas fa-hourglass-half me-2"></i>
-                        Tidak ada antrian
-                    </li>
-                `;
-            }
+            // Hanya tampilkan counting antrian, tidak tampilkan daftar pasien
+            const queueCount = doctorData.pasien ? doctorData.pasien.length : 0;
 
             // Build patient info section
             let patientInfoHtml = '';
@@ -498,13 +482,11 @@
                         </div>
 
                         <div class="queue-section">
-                            <h4 class="queue-title">
-                                <i class="fas fa-list-ol me-2"></i>
-                                Antrian (${doctorData.pasien ? doctorData.pasien.length : 0})
-                            </h4>
-                            <ul class="queue-list">
-                                ${queueListHtml}
-                            </ul>
+                            <div class="queue-count">
+                                <i class="fas fa-users me-2"></i>
+                                <span class="count-number">${queueCount}</span>
+                                <span class="count-label">Antrian Menunggu</span>
+                            </div>
                         </div>
                     </div>
                 </div>
