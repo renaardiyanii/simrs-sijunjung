@@ -1000,6 +1000,7 @@ from dokter_poli a where a.id_dokter='$id_dokter'");
 			// 'asal_rujukan'=>$data['asal_rujukan'],
 			'kode_faskes_perujuk'=>$data['kode_ppk'],
 			'diagnosa'=>$data['diagnosa'],
+			'katarak'=>$data['katarak'],
 		];
 		$bpjssep = [
 			// 'asalrujukan'=>$data['asal_rujukan'],

@@ -498,6 +498,14 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-group row" id="div-katarak" style="display: none;">
+                        <label class="col-sm-3 control-label col-form-label">Katarak</label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" id="katarak_checkbox" value="1">
+                            <label for="katarak_checkbox">Ya, pasien mengalami katarak</label>
+                            <input type="hidden" name="katarak" id="katarak_hidden" value="1">
+                        </div>
+                    </div>
                     <div class="form-group row" id="div-suratkontrol">
                         <p class="col-sm-3 control-label col-form-label">Nomor Surat Kontrol</p>
                         <input type="text" class="form-control col-sm-8" name="nosurat_skdp_sep" id="nosurat_skdp_sep">

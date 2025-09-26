@@ -80,6 +80,70 @@ h2 {
     margin-right: 1em;
     margin-bottom: 1em;
 }
+
+/* Modal Surat Kontrol Responsive - Override existing styles */
+.modal_suratkontrol .modal-dialog {
+    max-width: 500px !important;
+    width: auto !important;
+    margin: 1.75rem auto !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+.modal_suratkontrol .modal-content {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 0.3rem !important;
+    overflow: visible !important;
+    border: 1px solid rgba(0,0,0,.2) !important;
+}
+
+.modal_suratkontrol .modal-header {
+    padding: 1rem !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+}
+
+.modal_suratkontrol .modal-header img {
+    max-width: 80px !important;
+    height: auto !important;
+}
+
+.modal_suratkontrol .modal-body {
+    padding: 1rem !important;
+}
+
+.modal_suratkontrol .form-group {
+    margin-bottom: 1rem !important;
+}
+
+.modal_suratkontrol .modal-footer {
+    padding: 1rem !important;
+    border-top: 1px solid #dee2e6 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
+.modal_suratkontrol .close {
+    padding: 1rem !important;
+    margin: -1rem -1rem -1rem auto !important;
+    opacity: 1 !important;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+    .modal_suratkontrol .modal-dialog {
+        max-width: 90% !important;
+        margin: 0.5rem !important;
+    }
+
+    .modal_suratkontrol .modal-header img {
+        max-width: 60px !important;
+    }
+}
 </style>
 <script src="<?php echo base_url('assets/form/sweetalert2@11.js') ?>"></script>
 
@@ -238,6 +302,62 @@ h2 {
 </div>
 <?php echo form_close();?>
 
+<!-- Modal untuk Perbarui Surat Kontrol -->
+<div class="modal fade modal_suratkontrol" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-md">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<img class="pull-left" src="<?php echo site_url('assets/images/logos/logo_bpjs.png'); ?>" width="120"></img>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			</div>
+			<div class="modal-body">
+				<h4 class="text-center text-bold" id="title-suratkontrol">PEMBUATAN SURAT KONTROL</h4>
+
+				<div class="formbuatsurkon">
+					<div class="form-group row">
+						<label class="col-sm-3 control-label col-form-label">No.SEP</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="no_sep_surat_bikin">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-sm-3 control-label col-form-label">Tgl Rencana Kontrol</label>
+						<div class="col-sm-8">
+							<input type="date" class="form-control" id="tgl_surat_bikin" onchange="ambilpolikontrol(this.value)">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-sm-3 control-label col-form-label">Poli Kontrol</label>
+						<div class="col-sm-8">
+							<div class="form-inline" style="width:100%;">
+								<select id="poli_suratkontrol_bikin" class="form-control select2" style="width: 100%"  onchange="ambildoktersuratkontrol(this.value)">
+									<option value="">-- Pilih Poliklinik --</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-sm-3 control-label col-form-label">Dokter Surat Kontrol</label>
+						<div class="col-sm-8">
+							<div class="form-inline" style="width:100%;">
+								<select id="dpjp_suratkontrol_bikin" class="form-control select2" style="width: 100%" name="dpjp_suratkontrol_bikin" >
+									<option value="">-- Pilih Dokter --</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer" id="footer-suratkontrol">
+				<button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary waves-effect text-left" id="buat-suratkontrol" onclick="buatsuratkontrol()" >Buat Surat Kontrol</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 <script>
 var table;
@@ -359,20 +479,23 @@ $(document).ready(function() {
                 var button = '';
                 if (parseInt(data.jml_resep) && data.wkt_telaah_obat != null && data.waktu_selesai_farmasi == null) {
                     button = `
+                        <button class="btn btn-warning btn-sm mt-1" onclick="perbaruiSuratKontrolFarmasi('${data.no_sep}')">Perbarui Surat Kontrol</button>
                         <button class="btn btn-primary btn-sm mt-1" onclick="resep('${data.no_register}')">Resep</button>
                         <button class="btn btn-primary btn-sm mt-1" onclick="telaah('${data.no_register}')">Telaah Obat</button>
                          <button class="btn btn-danger btn-sm mt-1"  onclick="selesai('${data.no_register}')">Selesai</button>
                         <button class="btn btn-info btn-sm mt-1" onclick="create_sep('${data.no_register}')">Cetak SEP</button>`;
-                
+
                     } else if(parseInt(data.jml_resep) && data.wkt_telaah_obat != null && data.waktu_selesai_farmasi != null) {
                     button = `
+                        <button class="btn btn-warning btn-sm mt-1" onclick="perbaruiSuratKontrolFarmasi('${data.no_sep}')">Perbarui Surat Kontrol</button>
                         <button class="btn btn-primary btn-sm mt-1"  onclick="resep('${data.no_register}')">Resep</button>
                         <button class="btn btn-primary btn-sm mt-1"  onclick="telaah('${data.no_register}')">Telaah Obat</button>
                         <button class="btn btn-primary btn-sm mt-1"  onclick="selesai('${data.no_register}')">Selesai</button>
                         <button class="btn btn-info btn-sm mt-1" onclick="create_sep('${data.no_register}')">Cetak SEP</button>`;
-                
+
                     }else{
                          button = `
+                        <button class="btn btn-warning btn-sm mt-1" onclick="perbaruiSuratKontrolFarmasi('${data.no_sep}')">Perbarui Surat Kontrol</button>
                         <button class="btn btn-primary btn-sm mt-1"  onclick="resep('${data.no_register}')">Resep</button>
                         <button class="btn btn-danger btn-sm mt-1"  onclick="telaah('${data.no_register}')">Telaah Obat</button>
                         <button class="btn btn-danger btn-sm mt-1"  onclick="selesai('${data.no_register}')">Selesai</button>
@@ -806,6 +929,154 @@ function selesaiAntrianFarmasi(no_register, no_antrian, nama_pasien) {
 // Fungsi untuk membuka Dashboard Antrian Farmasi
 function openDashboardAntrian() {
     window.open('<?php echo base_url('antrol/dashboard_antrian_farmasi'); ?>', '_blank');
+}
+
+// Fungsi untuk perbarui surat kontrol
+function perbaruiSuratKontrolFarmasi(no_sep) {
+    // Ambil data pasien berdasarkan no_register
+    showModalPerbaruiSuratKontrol(no_sep);
+    
+}
+
+// Fungsi untuk menampilkan modal perbarui surat kontrol
+function showModalPerbaruiSuratKontrol(no_sep) {
+    $("#no_sep_surat_bikin").val(no_sep);
+    $("#title-suratkontrol").html("PERBARUI SURAT KONTROL");
+
+    // Ambil data surat kontrol yang sudah ada
+    $.ajax({
+        url: `<?php echo base_url('irj/rjcregistrasi/get_suratkontrol/'); ?>${no_sep}`,
+        beforeSend: function () { },
+        success: function (v) {
+            $("#tgl_surat_bikin").val(v.tgl_rencana_kontrol);
+            ambilpolikontrol(v.tgl_rencana_kontrol);
+            $("#footer-suratkontrol").html(`
+                <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal">Close</button>
+                <button type="button" id="perbarui-suratkontrol" class="btn btn-primary waves-effect text-left" onclick="perbaruiSuratKontrol('${v.no_surat}')" >Perbarui Surat Kontrol</button>
+            `);
+        },
+        error: function (xhr) {
+            // Jika belum ada surat kontrol, tampilkan form kosong
+            $("#footer-suratkontrol").html(`
+                <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary waves-effect text-left" onclick="buatsuratkontrol()" >Buat Surat Kontrol</button>
+            `);
+        },
+        complete: function () { },
+    });
+
+    $(".modal_suratkontrol").modal("toggle");
+}
+
+// Fungsi untuk perbarui surat kontrol
+function perbaruiSuratKontrol(surat) {
+    $.ajax({
+        method: "POST",
+        type: "JSON",
+        data: {
+            jenissurat: "2",
+            noSEP: $("#no_sep_surat_bikin").val(),
+            kodeDokter: $("#dpjp_suratkontrol_bikin").val().split("-")[0],
+            poliKontrol: $("#poli_suratkontrol_bikin").val(),
+            tglRencanaKontrol: $("#tgl_surat_bikin").val(),
+            user: "FARMASI",
+            nama_dokter: $("#dpjp_suratkontrol_bikin").val().split("-")[1],
+            noSuratKontrol: surat,
+        },
+        url: `<?php echo base_url('bpjs/rencanakontrol/update_rencana_kontrol'); ?>`,
+        beforeSend: function () {
+            $("#perbarui-suratkontrol").prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+        },
+        success: function (data) {
+            if (data.metaData.code === "200") {
+                Swal.fire("Berhasil!", "Surat Kontrol berhasil diperbarui", "success");
+                $(".modal_suratkontrol").modal("hide");
+            } else {
+                Swal.fire("Peringatan!", data.metaData.message, "warning");
+            }
+        },
+        error: function (xhr) {
+            Swal.fire("Peringatan!", "Hubungi Admin IT", "warning");
+        },
+        complete: function () {
+            $("#perbarui-suratkontrol").prop('disabled', false).html('Perbarui Surat Kontrol');
+        },
+    });
+}
+
+// Fungsi untuk ambil poli kontrol (copy dari reference)
+function ambilpolikontrol(tgl) {
+    $.ajax({
+        url: `<?php echo base_url('bpjs/rencanakontrol/data_poli'); ?>?jnskontrol=2&nomor=${$("#no_sep_surat_bikin").val()}&tglrencanakontrol=${tgl}`,
+        beforeSend: function () { },
+        success: function (data) {
+            let html = "";
+            if (data.metaData.code === "200") {
+                data.response.list.map((e) => {
+                    html += `<option value="${e.kodePoli}">${e.namaPoli}</option>`;
+                });
+                $("#poli_suratkontrol_bikin").empty();
+                $("#poli_suratkontrol_bikin").append('<option value="">Silahkan Pilih Poliklinik..</option>');
+                $("#poli_suratkontrol_bikin").append(html);
+                return;
+            }
+            Swal.fire("Peringatan!", data.metaData.message, "warning");
+        },
+        error: function (xhr) { },
+        complete: function () { },
+    });
+}
+
+// Fungsi untuk ambil dokter surat kontrol (copy dari reference)
+function ambildoktersuratkontrol(kodepoli) {
+    $.ajax({
+        url: `<?php echo base_url('bpjs/rencanakontrol/data_dokter'); ?>?jnskontrol=2&poli=${kodepoli}&tglrencanakontrol=${$("#tgl_surat_bikin").val()}`,
+        beforeSend: function () { },
+        success: function (data) {
+            let html = "";
+            if (data.metaData.code === "200") {
+                data.response.list.map((e) => {
+                    html += `<option value="${e.kodeDokter}-${e.namaDokter}">${e.namaDokter} (${e.jadwalPraktek})</option>`;
+                });
+                $("#dpjp_suratkontrol_bikin").empty();
+                $("#dpjp_suratkontrol_bikin").append('<option value="">Silahkan Pilih Dokter</option>');
+                $("#dpjp_suratkontrol_bikin").append(html);
+            }
+        },
+        error: function (xhr) { },
+        complete: function () { },
+    });
+}
+
+// Fungsi untuk buat surat kontrol (copy dari reference)
+function buatsuratkontrol() {
+    $.ajax({
+        method: "POST",
+        type: "JSON",
+        data: {
+            sep: $("#no_sep_surat_bikin").val(),
+            dokter: $("#dpjp_suratkontrol_bikin").val().split("-")[0],
+            poli: "A -" + $("#poli_suratkontrol_bikin").val(),
+            tglrencanakontrol: $("#tgl_surat_bikin").val(),
+            user: "FARMASI",
+            nama_dokter: $("#dpjp_suratkontrol_bikin").val().split("-")[1],
+        },
+        url: `<?php echo base_url('bpjs/rencanakontrol/insert_surat_kontrol'); ?>`,
+        beforeSend: function () { },
+        success: function (data) {
+            if (data.metaData.code === "200") {
+                Swal.fire("Berhasil!", `No. Surat Kontrol Berhasil dibuat: ${data.response.noSuratKontrol}`, "success");
+                window.open(`<?php echo base_url('bpjs/rencanakontrol/cetak_surkon_spri'); ?>?data=${data.response.noSuratKontrol}&nokartu=${data.response.noKartu}`, '_blank');
+                $(".modal_suratkontrol").modal("hide");
+            } else {
+                Swal.fire("Peringatan!", data.metaData.message, "warning");
+            }
+        },
+        error: function (xhr) {
+            Swal.fire("Peringatan!", "Hubungi Admin IT", "warning");
+        },
+        complete: function () { },
+    });
 }
 
 // <button class="btn btn-primary btn-sm" onclick="selesai('${data.no_register}')">Selesai</button>

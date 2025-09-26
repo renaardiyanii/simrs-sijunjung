@@ -6327,6 +6327,8 @@ class Rjcregistrasi extends Secure_area
 		}else{
 			$data['asal_rujukan'] = '';
 		}
+		// Ensure katarak field is properly set
+		$data['katarak'] = isset($data['katarak']) ? $data['katarak'] : '0';
 		$update = $this->rjmregistrasi->update_daftar_ulang_irj_sep_igd($data);
 		echo json_encode(['code'=>200]);
 	}

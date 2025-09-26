@@ -33,6 +33,9 @@ class Sep extends Secure_area {
 			$jnsPelayanan = '1';
 		}else{
 			$data = $this->mbpjs->get_bpjs_sep($no_register)->result_array()[0];
+			// Get katarak value from daftar_ulang_irj table
+			$katarak_data = $this->db->select('katarak')->where('no_register', $no_register)->get('daftar_ulang_irj')->row();
+			$data['katarak'] = $katarak_data ? $katarak_data->katarak : '0';
 			$jnsPelayanan = '2';
 		}
 		$no_cm = $this->mbpjs->get_pasien_no_medrec($data['no_medrec']);

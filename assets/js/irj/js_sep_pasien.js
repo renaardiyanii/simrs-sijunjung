@@ -224,7 +224,19 @@ $(function () {
                 <button type="button" class="dropdown-item" onclick='showmodalspri(${JSON.stringify(
                   rows
                 )})'>Buat SPRI</button>
-    
+
+                <button type="button" class="dropdown-item" onclick='showmodalskdppascarawatinap(${JSON.stringify(
+                  rows
+                )})'>Buat SKDP Pasca Rawat Inap</button>
+
+                <button type="button" class="dropdown-item" onclick='editshowmodalskdppascarawatinap(${JSON.stringify(
+                  rows
+                )})'>Edit SKDP Pasca Rawat Inap</button>
+
+                <button type="button" class="dropdown-item" onclick='hapusskdppascarawatinap(${JSON.stringify(
+                  rows
+                )})'>Hapus SKDP Pasca Rawat Inap</button>
+
 
                 <button type="button" class="dropdown-item" onclick='perbaruishowmodalspri(${JSON.stringify(
                   rows
@@ -515,6 +527,13 @@ function pengajuanbackdatefinger(data) {
 }
 
 function buat_sep_pasien_irj() {
+  // Handle katarak checkbox value
+  if ($("#katarak_checkbox").is(":checked")) {
+    $("#katarak_hidden").val("1");
+  } else {
+    $("#katarak_hidden").val("0");
+  }
+
   let data = $("#buat_sep_irj").serialize();
   $.ajax({
     method: 'POST',
@@ -846,6 +865,12 @@ function buatsepirj(data) {
         beforeSend: function () { },
         success: function (s) {
           if (s.poli_bpjs !== null || s.poli_bpjs != '') {
+            // Check if poli is mata (BH00) to show katarak checkbox
+            if (s.poli_bpjs === 'MAT' || v.id_poli === 'BH00') {
+              $("#div-katarak").show();
+            } else {
+              $("#div-katarak").hide();
+            }
             $.ajax({
               // check
               url: `${baseurl}bpjs/referensi/dokter_dpjp?pelayanan=2&spesialis=${s.poli_bpjs}`,
@@ -934,8 +959,35 @@ function showmodalsuratkontrol(data) {
     data.no_sep ? data.no_sep : $("#" + data.no_register).val()
   );
   $("#title-suratkontrol").html("PEMBUATAN Surat Kontrol");
+  // Restore original label for regular surat kontrol
+  $("label[for='no_sep_surat_bikin'], .modal_suratkontrol .form-group:first-child label").text("No.SEP");
+
+  // Restore original onchange function for regular surat kontrol
+  $("#tgl_surat_bikin").attr('onchange', 'ambilpolikontrol(this.value)');
+
   $("#footer-suratkontrol").html(`
         <button type="button" class="btn btn-primary waves-effect text-left" id="buat-suratkontrol" onclick="buatsuratkontrol()" >Buat Surat Kontrol</button>
+    `);
+  $("#tgl_surat_bikin").val("");
+
+  $(".modal_suratkontrol").modal("toggle");
+}
+
+function showmodalskdppascarawatinap(data) {
+  // Set the SEP number for SKDP Pasca Rawat Inap
+  const sepNumber = data.no_sep ? data.no_sep : $("#" + data.no_register).val();
+  $("#no_sep_surat_bikin").val(sepNumber);
+
+  $("#title-suratkontrol").html("PEMBUATAN SKDP PASCA RAWAT INAP");
+  // Keep original label for creating new SKDP (uses SEP)
+  $("label[for='no_sep_surat_bikin'], .modal_suratkontrol .form-group:first-child label").text("No.SEP");
+
+  // Change the date input onchange function to use SKDP specific function
+  $("#tgl_surat_bikin").attr('onchange', `ambilpolikontrolpascarawatinap('${sepNumber}', this.value)`);
+
+  $("#footer-suratkontrol").html(`
+        <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary waves-effect text-left" id="buat-skdp-pascarawatinap" onclick="buatskdppascarawatinap()" >Buat SKDP Pasca Rawat Inap</button>
     `);
   $("#tgl_surat_bikin").val("");
 
@@ -976,6 +1028,12 @@ function perbaruishowmodalsuratkontrol(data) {
     success: function (v) {
       $("#tgl_surat_bikin").val(v.tgl_rencana_kontrol);
       $("#title-suratkontrol").html("Edit Surat Kontrol");
+      // Restore original label for regular surat kontrol edit
+      $("label[for='no_sep_surat_bikin'], .modal_suratkontrol .form-group:first-child label").text("No.SEP");
+
+      // Restore original onchange function for regular surat kontrol edit
+      $("#tgl_surat_bikin").attr('onchange', 'ambilpolikontrol(this.value)');
+
       $("#footer-suratkontrol").html(`
 				<button type="button" id="edit-suratkontrol" class="btn btn-primary waves-effect text-left" onclick="editsuratkontrol('${data.no_surat}')" >Edit Surat Kontrol</button>
             `);
@@ -987,11 +1045,73 @@ function perbaruishowmodalsuratkontrol(data) {
   $(".modal_suratkontrol").modal("toggle");
 }
 
+function editshowmodalskdppascarawatinap(data) {
+  console.log(data);
+  // Use no_sep to get SKDP data from bpjs_suratkontrol table
+  $.ajax({
+    url: `${baseurl}/irj/rjcregistrasi/get_suratkontrol/${data.no_sep}`,
+    beforeSend: function () { },
+    success: function (v) {
+      if (v && v.surat_kontrol) {
+        // Set the surat kontrol number in the field
+        $("#no_sep_surat_bikin").val(v.surat_kontrol);
+        $("#tgl_surat_bikin").val(v.tgl_rencana_kontrol);
+
+        // Change the date input onchange function to use SKDP specific function
+        $("#tgl_surat_bikin").attr('onchange', `ambilpolikontrolpascarawatinap('${data.no_sep}', this.value)`);
+
+        // Load initial poli data
+        ambilpolikontrolpascarawatinap(data.no_sep,v.tgl_rencana_kontrol);
+
+        $("#title-suratkontrol").html("Edit SKDP Pasca Rawat Inap");
+        // Change the label to show "No. Surat Kontrol" instead of "No.SEP"
+        $("label[for='no_sep_surat_bikin'], .modal_suratkontrol .form-group:first-child label").text("No. Surat Kontrol");
+        $("#footer-suratkontrol").html(`
+          <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal">Close</button>
+          <button type="button" id="edit-skdp-pascarawatinap" class="btn btn-primary waves-effect text-left" onclick="editskdppascarawatinap('${data.no_sep}','${v.surat_kontrol}')" >Edit SKDP Pasca Rawat Inap</button>
+        `);
+        $("#buat-suratkontrol").hide();
+      } else {
+        swal("Error!", "Data SKDP tidak ditemukan atau belum ada SKDP yang dibuat sebelumnya", "error");
+      }
+    },
+    error: function (xhr) {
+      swal("Error!", "Data SKDP tidak ditemukan atau belum ada SKDP yang dibuat sebelumnya", "error");
+    },
+    complete: function () { },
+  });
+  $(".modal_suratkontrol").modal("toggle");
+}
+
 function ambilpolikontrol(tgl) {
   $.ajax({
     url: `${baseurl}/bpjs/rencanakontrol/data_poli?jnskontrol=2&nomor=${$(
       "#no_sep_surat_bikin"
     ).val()}&tglrencanakontrol=${tgl}`,
+    beforeSend: function () { },
+    success: function (data) {
+      let html = "";
+      if (data.metaData.code === "200") {
+        data.response.list.map((e) => {
+          html += `<option value="${e.kodePoli}">${e.namaPoli}</option>`;
+        });
+        $("#poli_suratkontrol_bikin").empty();
+        $("#poli_suratkontrol_bikin").append(
+          '<option value="">Silahkan Pilih Poliklinik..</option>'
+        );
+        $("#poli_suratkontrol_bikin").append(html);
+        return;
+      }
+      new swal("Peringatan!", data.metaData.message, "warning");
+    },
+    error: function (xhr) { },
+    complete: function () { },
+  });
+}
+
+function ambilpolikontrolpascarawatinap(nosep,tgl) {
+  $.ajax({
+    url: `${baseurl}/bpjs/rencanakontrol/data_poli?jnskontrol=2&nomor=${nosep}&tglrencanakontrol=${tgl}`,
     beforeSend: function () { },
     success: function (data) {
       let html = "";
@@ -1121,6 +1241,46 @@ function buatsuratkontrol() {
         table.ajax.reload();
       } else {
         // Notify(`No. Surat Kontrol Gagal dibuat: ${data.metaData.message}`, null, null, 'error');
+        swal("Peringatan!", data.metaData.message, "warning");
+      }
+    },
+    error: function (xhr) {
+      swal("Peringatan!", "Hubungi Admin IT", "warning");
+    },
+    complete: function () { },
+  });
+}
+
+function buatskdppascarawatinap() {
+  $.ajax({
+    method: "POST",
+    type: "JSON",
+    data: {
+      sep: $("#no_sep_surat_bikin").val(),
+      dokter: $("#dpjp_suratkontrol_bikin").val().split("-")[0],
+      poli: "A -" + $("#poli_suratkontrol_bikin").val(),
+      tglrencanakontrol: $("#tgl_surat_bikin").val(),
+      user: "ADMIN",
+      nama_dokter: $("#dpjp_suratkontrol_bikin").val().split("-")[1],
+    },
+    url: `${baseurl}/bpjs/rencanakontrol/insert_surat_kontrol`,
+    beforeSend: function () { },
+    success: function (data) {
+      let html = "";
+      if (data.metaData.code === "200") {
+        Notify(
+          `No. SKDP Pasca Rawat Inap Berhasil dibuat: ${data.response.noSuratKontrol}`,
+          null,
+          null,
+          "success"
+        );
+        location.href =
+          baseurl +
+          `/bpjs/rencanakontrol/cetak_surkon_spri?data=${data.response.noSuratKontrol}&nokartu=${data.response.noKartu}`;
+        $(".modal_suratkontrol").modal("hide");
+        table.ajax.reload();
+        tableiri.ajax.reload();
+      } else {
         swal("Peringatan!", data.metaData.message, "warning");
       }
     },
@@ -1261,6 +1421,45 @@ function editsuratkontrol(surat) {
   });
 }
 
+function editskdppascarawatinap(nosep,surat) {
+  $.ajax({
+    method: "POST",
+    type: "JSON",
+    data: {
+      jenissurat: "2",
+      noSuratKontrol: surat,
+      noSEP:nosep,
+      kodeDokter: $("#dpjp_suratkontrol_bikin").val().split("-")[0],
+      poliKontrol: $("#poli_suratkontrol_bikin").val(),
+      tglRencanaKontrol: $("#tgl_surat_bikin").val(),
+      user: "ADMIN",
+      nama_dokter: $("#dpjp_suratkontrol_bikin").val().split("-")[1],
+    },
+    url: `${baseurl}/bpjs/rencanakontrol/update_rencana_kontrol`,
+    beforeSend: function () {
+      $("#edit-skdp-pascarawatinap").prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+    },
+    success: function (data) {
+      let html = "";
+      console.log(data);
+      if (data.metaData.code === "200") {
+        swal("Berhasil!", "No. SKDP Pasca Rawat Inap Berhasil diupdate", "success");
+        table.ajax.reload();
+        tableiri.ajax.reload();
+        $(".modal_suratkontrol").modal("hide");
+      } else {
+        swal("Peringatan!", data.metaData.message, "warning");
+      }
+    },
+    error: function (xhr) {
+      swal("Peringatan!", "Hubungi Admin IT", "warning");
+    },
+    complete: function () {
+      $("#edit-skdp-pascarawatinap").prop('disabled', false).html('Edit SKDP Pasca Rawat Inap');
+    },
+  });
+}
+
 function cetaksuratkontrolrs(data) {
   window.open(
     `${baseurl}/emedrec/C_emedrec/cetak_surat_kontrol_new/${data.no_cm}/${data.no_register}`,
@@ -1332,3 +1531,56 @@ function hapussuratkontrol(data) {
     complete: function () { },
   });
 }
+
+function hapusskdppascarawatinap(data) {
+  // Get SKDP data using same endpoint as edit function
+  $.ajax({
+    url: `${baseurl}/irj/rjcregistrasi/get_suratkontrol/${data.no_sep}`,
+    beforeSend: function () { },
+    success: function (v) {
+      if (v && v.surat_kontrol) {
+        // Show confirmation dialog
+        swal({
+          title: "Hapus SKDP Pasca Rawat Inap?",
+          text: `No. Surat Kontrol: ${v.surat_kontrol}`,
+          type: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#DD6B55",
+          confirmButtonText: "Ya, Hapus!",
+          cancelButtonText: "Batal",
+          closeOnConfirm: false
+        }, function() {
+          // Call deletion using same pattern as hapussuratkontrol
+          $.ajax({
+            method: "POST",
+            type: "JSON",
+            data: {
+              user: "ADMIN",
+              noSuratKontrol: v.surat_kontrol,
+            },
+            url: `${baseurl}/bpjs/rencanakontrol/hapus_rencana_kontrol`,
+            beforeSend: function () { },
+            success: function (data) {
+              console.log(data);
+              if (data.metaData.code === "200") {
+                swal("Berhasil!", "SKDP Pasca Rawat Inap berhasil dihapus", "success");
+                tableiri.ajax.reload();
+              } else {
+                swal("Peringatan!", data.metaData.message, "warning");
+              }
+            },
+            error: function (xhr) {
+              swal("Peringatan!", "Hubungi Admin IT", "warning");
+            }
+          });
+        });
+      } else {
+        swal("Peringatan!", "Data SKDP tidak ditemukan atau belum ada SKDP yang dibuat sebelumnya", "warning");
+      }
+    },
+    error: function (xhr) {
+      swal("Peringatan!", "Hubungi Admin IT", "warning");
+    }
+  });
+}
+
